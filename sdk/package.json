@@ -9,7 +9,6 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui-pro": "file:../../../nativescript-ui-debug-dev-pro.tgz",
 		"nativescript-unit-test-runner": "^0.3.2",
 		"nativescript-angular": "0.0.38"
 	},
