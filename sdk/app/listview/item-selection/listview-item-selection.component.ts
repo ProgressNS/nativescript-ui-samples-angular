@@ -4,14 +4,10 @@ import {Component} from "angular2/core";
     selector: "my-app",
     template: `
 <GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefresh()">
+    <RadListView row="1" [items]="myItems" selectionBehavior="Press" (itemSelected)="onItemSelected()">
         <template listItemTemplate #item="item">
-            <StackLayout height="80" backgroundColor="Green"><Label [text]='item.name'></Label></StackLayout>
+            <StackLayout><Label [text]='item.name'></Label></StackLayout>
         </template>
-            <GridLayout *listItemSwipeTemplate columns="auto, *, auto">
-                <Button col="0" text="Left button" backgroundColor="Blue"></Button>
-                <Button col="2" text="Right button" backgroundColor="Red"></Button>
-            </GridLayout>
     </RadListView>
 </GridLayout>
 `
@@ -37,7 +33,7 @@ export class AppComponent {
         this._items = value;
     }
     
-    public onPullToRefresh(args){
-        console.log("Pull to refresh fired");
+    public onItemSelected(args){
+        console.log("Item selected ");
     }
 }
