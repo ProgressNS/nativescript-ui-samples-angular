@@ -4,14 +4,10 @@ import {Component} from "angular2/core";
     selector: "my-app",
     template: `
 <GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefresh()">
+    <RadListView row="1" [items]="myItems" loadOnDemandMode="Auto" (loadMoreDataRequested)="onLoadOnDemandRequested()">
         <template listItemTemplate #item="item">
             <StackLayout height="80" backgroundColor="Green"><Label [text]='item.name'></Label></StackLayout>
         </template>
-            <GridLayout *listItemSwipeTemplate columns="auto, *, auto">
-                <Button col="0" text="Left button" backgroundColor="Blue"></Button>
-                <Button col="2" text="Right button" backgroundColor="Red"></Button>
-            </GridLayout>
     </RadListView>
 </GridLayout>
 `
@@ -22,7 +18,7 @@ export class AppComponent {
     constructor() {
         this._items = new Array();
 
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 20; i++) {
             this._items.push({
                 name: "Item" + i
             });
@@ -37,7 +33,8 @@ export class AppComponent {
         this._items = value;
     }
     
-    public onPullToRefresh(args){
-        console.log("Pull to refresh fired");
+    public onLoadOnDemandRequested(args){
+        console.log("Load on demand fired");
+        
     }
 }
