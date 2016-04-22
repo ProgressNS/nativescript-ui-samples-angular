@@ -10,7 +10,8 @@
 	},
 	"dependencies": {
 		"nativescript-unit-test-runner": "^0.3.2",
-		"nativescript-angular": "0.0.38"
+		"nativescript-angular": "0.0.38",
+		"nativescript-telerik-ui-pro": "file:../../nativescript-ui-debug-dev-pro.tgz"
 	},
 	"devDependencies": {
 		"chai": "^3.5.0",
