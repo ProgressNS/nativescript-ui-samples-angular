@@ -1,35 +1,31 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
+import {ObservableArray} from "data/observable-array";
+import {DataItem} from "../dataItem";
+import {DataItemService} from "../dataItem.service";
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
+var namesAndEmails = require("../../listview/NamesAndEmails.json")
 
 @Component({
     selector: "my-app",
-    template: `
-<GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" itemReorder="true">
-        <template listItemTemplate #item="item">
-            <StackLayout><Label [text]='item.name'></Label></StackLayout>
-        </template>
-    </RadListView>
-</GridLayout>
-`
+    providers: [DataItemService],
+    templateUrl: 'listview/item-reorder/listview-item-reorder.component.html',
+    styleUrls: ["listview/item-reorder/listview-item-reorder.component.css"]
 })
-export class AppComponent {
-    private _items;
+export class AppComponent implements OnInit {
+    private _dataItems: ObservableArray<DataItem>;
 
-    constructor() {
-        this._items = new Array();
-
-        for (var i = 0; i < 100; i++) {
-            this._items.push({
-                name: "Item" + i
-            });
-        }
+    constructor(private _dataItemService: DataItemService) {
     }
 
-    get myItems() {
-        return this._items;
+    get dataItems() {
+        return this._dataItems;
     }
 
-    set myItems(value) {
-        this._items = value;
+    ngOnInit() {
+        this._dataItems = new ObservableArray(this._dataItemService.getPersonsDataItems(namesAndEmails.names.length));
+    }
+
+    public onItemReordered(args: listViewModule.ListViewEventData) {
+        console.log("Item reordered. Old index: " + args.itemIndex + " " + "new index: " + args.data.targetIndex);
     }
 }

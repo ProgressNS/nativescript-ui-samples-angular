@@ -1,0 +1,15 @@
+<GridLayout orientation="vertical" rows="auto, *, auto">
+    <!--[itemReordered]="onItemReordered($event)"-->
+    <RadListView row="1" [items]="dataItems" itemReorder="true" (itemReordered)="onItemReordered($event)">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Vertical" />
+        </lv:RadListView.listViewLayout>
+        <template listItemTemplate #item="item">
+            <GridLayout class="listItemGridLayout">
+                <StackLayout orientation="vertical" col="0" verticalAlignment="center">
+                    <Label class="nameLabel" [text]="item.itemName"></Label>
+                </StackLayout>
+            </GridLayout>
+        </template>
+    </RadListView>
+</GridLayout>
