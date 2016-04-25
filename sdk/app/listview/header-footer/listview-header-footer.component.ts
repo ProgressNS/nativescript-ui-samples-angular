@@ -1,5 +1,5 @@
 import {Component} from "angular2/core";
-
+// >> angular-listview-header-footer
 @Component({
     selector: "my-app",
     template: `
@@ -18,6 +18,7 @@ import {Component} from "angular2/core";
 </GridLayout>
 `
 })
+// << angular-listview-header-footer
 export class AppComponent {
     private _items;
 
