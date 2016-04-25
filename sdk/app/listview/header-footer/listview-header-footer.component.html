@@ -1,0 +1,16 @@
+<GridLayout rows="auto, *">
+    <RadListView row="1" [items]="dataItems">
+        <template listItemTemplate #item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.itemName"></Label>
+                <Label class="descriptionLabel" [text]="item.itemDescription"></Label>
+            </StackLayout>
+        </template>
+        <StackLayout *listViewHeader class="headerStackLayout">
+            <Label text="This is the list header"></Label>
+        </StackLayout>
+        <StackLayout *listViewFooter class="footerStackLayout">
+            <Label text="This is the list footer"></Label>
+        </StackLayout>
+    </RadListView>
+</GridLayout>

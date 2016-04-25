@@ -1,41 +1,25 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
+import {ObservableArray} from "data/observable-array";
+import {DataItem} from "../dataItem";
+import {DataItemService} from "../dataItem.service";
 
 @Component({
     selector: "my-app",
-    template: `
-<GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems">
-        <template listItemTemplate #item="item">
-            <StackLayout><Label [text]='item.name'></Label></StackLayout>
-        </template>
-        <StackLayout *listViewHeader backgroundColor="red">
-            <Label text="This is the list header"></Label>
-        </StackLayout>
-        <StackLayout *listViewFooter backgroundColor="blue">
-            <Label text="This is the list footer"></Label>
-        </StackLayout>
-    </RadListView>
-</GridLayout>
-`
+    providers: [DataItemService],
+    templateUrl: 'listview/header-footer/listview-header-footer.component.html',
+    styleUrls: ["listview/header-footer/listview-header-footer.component.css"]
 })
-export class AppComponent {
-    private _items;
+export class AppComponent implements OnInit {
+    private _dataItems: ObservableArray<DataItem>;
 
-    constructor() {
-        this._items = new Array();
-
-        for (var i = 0; i < 100; i++) {
-            this._items.push({
-                name: "Item" + i
-            });
-        }
+    constructor(private _dataItemService: DataItemService) {
     }
 
-    get myItems() {
-        return this._items;
+    get dataItems() {
+        return this._dataItems;
     }
 
-    set myItems(value) {
-        this._items = value;
+    ngOnInit() {
+        this._dataItems = new ObservableArray(this._dataItemService.getIdenticalDataItems(10));
     }
 }
