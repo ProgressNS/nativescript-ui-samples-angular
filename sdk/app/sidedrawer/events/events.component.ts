@@ -28,10 +28,11 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
         </StackLayout>
       </StackLayout>
         </template>
-      <StackLayout *drawerMain>
+        <template drawerMain>
+      <StackLayout>
         <Label text="Drawer notification: " cssClass="drawerContentText"></Label>
-        
       </StackLayout>
+      </template>
     </RadSideDrawer>
 `,
 })

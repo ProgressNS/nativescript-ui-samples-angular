@@ -27,8 +27,9 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
           <Label text="Drafts" cssClass="drawerSectionItem"></Label>
         </StackLayout>
       </StackLayout>
-        </template>      
-      <StackLayout *drawerMain> 
+        </template>
+        <template drawerMain>    
+      <StackLayout> 
           <Button text="Fade Transition" (tap)="onFadeTransitionTap()" cssClass="drawerContentButton"></Button>
           <Button text="Push Transition" (tap)="onPushTransitionTap()" cssClass="drawerContentButton"></Button>
           <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" cssClass="drawerContentButton"></Button>
@@ -38,6 +39,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
           <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" cssClass="drawerContentButton"></Button>
           <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" cssClass="drawerContentButton"></Button>
       </StackLayout>
+      </template>
     </RadSideDrawer>
 `,
 })

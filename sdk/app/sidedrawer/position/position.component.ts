@@ -28,13 +28,15 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
         </StackLayout>
       </StackLayout>
         </template>
-      <StackLayout *drawerMain>
+        <template drawerMain>
+      <StackLayout>
         <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom." textWrap="true"></Label>
         <Button text="Left" (tap)="onLeftLocationTap()" cssClass="drawerContentButton"></Button>
         <Button text="Top" (tap)="onTopLocationTap()" cssClass="drawerContentButton"></Button>
         <Button text="Right" (tap)="onRightLocationTap()" cssClass="drawerContentButton"></Button>
         <Button text="Bottom" (tap)="onBottomLocationTap()" cssClass="drawerContentButton"></Button>
       </StackLayout>
+      </template>
     </RadSideDrawer>
 `,
 })
