@@ -30,7 +30,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
         </template>
         <template drawerMain>
       <StackLayout>
-        <Label text="Drawer notification: " cssClass="drawerContentText"></Label>
+        <Button text="OPEN DRAWER" cssClass="drawerContentText" (tap)=openDrawer()></Button>
       </StackLayout>
       </template>
     </RadSideDrawer>
@@ -46,10 +46,10 @@ export class AppComponent {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
+    }
+    
+    public openDrawer(){
+        this.drawer.showDrawer();
     }
     
      public onDrawerOpening() {

@@ -29,7 +29,10 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
       </StackLayout>
         </template>
         <template drawerMain>
+        <StackLayout>
         <Label text="SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer." textWrap="true"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        </StackLayout>
         </template>
     </RadSideDrawer>
 `,
@@ -43,10 +46,10 @@ export class AppComponent {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
+    }
+    
+    public openDrawer(){
+        this.drawer.showDrawer();
     }
 
 }
