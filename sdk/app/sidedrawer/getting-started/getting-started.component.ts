@@ -9,28 +9,35 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
+    styleUrls: ['sidedrawer/getting-started/getting-started.component.css'],
     template: `
     <RadSideDrawer #drawer>
         <template drawerSide>
-            <StackLayout cssClass="drawerContent">
-        <StackLayout cssClass="headerContent">
+            <StackLayout class="drawerContent">
+        <StackLayout class="headerContent">
           <Label text="Navigation Menu"></Label>
         </StackLayout>
         <StackLayout cssClass="drawerMenuContent">
-          <Label text="Primary" cssClass="drawerSectionHeader"></Label>
-          <Label text="Social" cssClass="drawerSectionItem"></Label>
-          <Label text="Promotions" cssClass="drawerSectionItem"></Label>
-          <Label text="Labels" cssClass="drawerSectionHeader"></Label>
-          <Label text="Important" cssClass="drawerSectionItem"></Label>
-          <Label text="Starred" cssClass="drawerSectionItem"></Label>
-          <Label text="Sent Mail" cssClass="drawerSectionItem"></Label>
-          <Label text="Drafts" cssClass="drawerSectionItem"></Label>
+          <Label text="Primary" class="drawerSectionHeader"></Label>
+          <Label text="Social" class="drawerSectionItem"></Label>
+          <Label text="Promotions" class="drawerSectionItem"></Label>
+          <Label text="Labels" class="drawerSectionHeader"></Label>
+          <Label text="Important" class="drawerSectionItem"></Label>
+          <Label text="Starred" class="drawerSectionItem"></Label>
+          <Label text="Sent Mail" class="drawerSectionItem"></Label>
+          <Label text="Drafts" class="drawerSectionItem"></Label>
         </StackLayout>
       </StackLayout>
         </template>
-        <Label *drawerMain text="SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer." textWrap="true"></Label>
+        <template drawerMain>
+        <StackLayout>
+        <Label text="SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer." textWrap="true"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        </StackLayout>
+        </template>
     </RadSideDrawer>
-`,
+`
+
 })
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {
@@ -41,10 +48,10 @@ export class AppComponent {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
+    }
+    
+    public openDrawer(){
+        this.drawer.showDrawer();
     }
 
 }
