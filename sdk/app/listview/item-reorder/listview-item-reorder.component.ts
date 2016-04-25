@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray(this._dataItemService.getPersonsDataItems(namesAndEmails.names.length));
+        this._dataItems = new ObservableArray(this._dataItemService.getPersonsDataItems());
     }
 
     public onItemReordered(args: listViewModule.ListViewEventData) {

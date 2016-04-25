@@ -23,10 +23,19 @@ export class DataItemService {
         return result;
     }
     
-    getPersonsDataItems(size: number): DataItem[] {
+    getPersonsDataItems(): DataItem[] {
         var result = new Array<DataItem>();
-        for (var i = 0; i < size; i++) {
+        for (var i = 0; i < namesAndEmails.names.length; i++) {
             result.push(new DataItem(i, namesAndEmails.names[i], "This is item description"));
+        }
+        
+        return result;
+    }
+    
+    getNameEmailDataItems(): DataItem[] {
+        var result = new Array<DataItem>();
+        for (var i = 0; i < namesAndEmails.names.length; i++) {
+            result.push(new DataItem(i, namesAndEmails.names[i], namesAndEmails.emails[i]));
         }
         
         return result;
