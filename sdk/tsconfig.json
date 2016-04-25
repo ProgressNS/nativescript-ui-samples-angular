@@ -9,6 +9,7 @@
         "watch": false,
         "noLib": false,
         "preserveConstEnums": true,
+        "emitDecoratorMetadata": true,
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
         "experimentalDecorators": true
