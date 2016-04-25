@@ -9,22 +9,23 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
+    styleUrls: ['sidedrawer/getting-started/getting-started.component.css'],
     template: `
     <RadSideDrawer #drawer>
         <template drawerSide>
-            <StackLayout cssClass="drawerContent">
-        <StackLayout cssClass="headerContent">
+            <StackLayout class="drawerContent">
+        <StackLayout class="headerContent">
           <Label text="Navigation Menu"></Label>
         </StackLayout>
         <StackLayout cssClass="drawerMenuContent">
-          <Label text="Primary" cssClass="drawerSectionHeader"></Label>
-          <Label text="Social" cssClass="drawerSectionItem"></Label>
-          <Label text="Promotions" cssClass="drawerSectionItem"></Label>
-          <Label text="Labels" cssClass="drawerSectionHeader"></Label>
-          <Label text="Important" cssClass="drawerSectionItem"></Label>
-          <Label text="Starred" cssClass="drawerSectionItem"></Label>
-          <Label text="Sent Mail" cssClass="drawerSectionItem"></Label>
-          <Label text="Drafts" cssClass="drawerSectionItem"></Label>
+          <Label text="Primary" class="drawerSectionHeader"></Label>
+          <Label text="Social" class="drawerSectionItem"></Label>
+          <Label text="Promotions" class="drawerSectionItem"></Label>
+          <Label text="Labels" class="drawerSectionHeader"></Label>
+          <Label text="Important" class="drawerSectionItem"></Label>
+          <Label text="Starred" class="drawerSectionItem"></Label>
+          <Label text="Sent Mail" class="drawerSectionItem"></Label>
+          <Label text="Drafts" class="drawerSectionItem"></Label>
         </StackLayout>
       </StackLayout>
         </template>
@@ -35,7 +36,8 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
         </StackLayout>
         </template>
     </RadSideDrawer>
-`,
+`
+
 })
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {
