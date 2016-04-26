@@ -1,0 +1,28 @@
+<RadSideDrawer #drawer drawerLocation="{{pos}}">
+    <template drawerSide>
+        <StackLayout style="background-color: gray;">
+            <StackLayout style=" padding:10;text-align: center;">
+                <Label text="Navigation Menu"></Label>
+            </StackLayout>
+            <StackLayout style="background-color: gray;">
+                <Label text="Primary" style="padding: 10px;background-color:lightgray;"></Label>
+                <Label text="Social" style="padding: 10px;"></Label>
+                <Label text="Promotions" style="padding: 10px;"></Label>
+                <Label text="Labels" style="padding:10px;background-color: lightgray;"></Label>
+                <Label text="Important" style="padding: 10px;"></Label>
+                <Label text="Starred" style="padding: 10px;"></Label>
+                <Label text="Sent Mail" style="padding: 10px;"></Label>
+                <Label text="Drafts" style="padding: 10px;"></Label>
+            </StackLayout>
+       </StackLayout>
+    </template>
+    <template drawerMain>
+        <StackLayout>
+            <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom." textWrap="true"></Label>
+            <Button text="Left" (tap)="onLeftLocationTap()" cssClass="drawerContentButton"></Button>
+            <Button text="Top" (tap)="onTopLocationTap()" cssClass="drawerContentButton"></Button>
+            <Button text="Right" (tap)="onRightLocationTap()" cssClass="drawerContentButton"></Button>
+            <Button text="Bottom" (tap)="onBottomLocationTap()" cssClass="drawerContentButton"></Button>
+      </StackLayout>
+    </template>
+</RadSideDrawer>

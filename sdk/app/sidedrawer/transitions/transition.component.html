@@ -1,0 +1,31 @@
+<RadSideDrawer #drawer [transition]="sideDrawerTransition">
+    <template drawerSide>
+        <StackLayout style="background-color: gray;">
+            <StackLayout style=" padding:10;text-align: center;">
+                <Label text="Navigation Menu"></Label>
+            </StackLayout>
+            <StackLayout style="background-color: gray;">
+                <Label text="Primary" style="padding: 10px;background-color:lightgray;"></Label>
+                <Label text="Social" style="padding: 10px;"></Label>
+                <Label text="Promotions" style="padding: 10px;"></Label>
+                <Label text="Labels" style="padding:10px;background-color: lightgray;"></Label>
+                <Label text="Important" style="padding: 10px;"></Label>
+                <Label text="Starred" style="padding: 10px;"></Label>
+                <Label text="Sent Mail" style="padding: 10px;"></Label>
+                <Label text="Drafts" style="padding: 10px;"></Label>
+            </StackLayout>
+       </StackLayout>
+    </template>
+    <template drawerMain>    
+        <StackLayout> 
+            <Button text="Fade Transition" (tap)="onFadeTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="Push Transition" (tap)="onPushTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" cssClass="drawerContentButton"></Button>
+            <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" cssClass="drawerContentButton"></Button>
+        </StackLayout>
+    </template>
+</RadSideDrawer>
