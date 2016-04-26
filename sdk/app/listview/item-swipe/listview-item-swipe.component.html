@@ -1,0 +1,23 @@
+<GridLayout rows="auto, *">
+    <RadListView row="1" id="listView" [items]="dataItems" itemSwipe="true" selectionBehavior="None" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+        (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"  (itemTap)="onItemClick($event)">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Vertical" />
+        </lv:RadListView.listViewLayout>
+        <template listItemTemplate #item="item">
+            <StackLayout orientation="vertical" style="background-color: white;" paddingLeft="5">
+                <Label fontSize="20" [text]="item.name" marginBottom="8"></Label>
+                <Label fontSize="14" [text]="item.title" style="font-weight: bold;"></Label>
+                <Label fontSize="12" [text]="item.text"></Label>
+            </StackLayout>
+        </template>
+        <GridLayout *listItemSwipeTemplate columns="auto, *, auto" backgroundColor="White">
+            <StackLayout id="mark-view" col="0" style="background-color: blue;" (tap)="onLeftSwipeClick($event)" padding="16">
+                <Label text="mark" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout id="delete-view" col="2" style="background-color: red;" (tap)="onRightSwipeClick($event)" padding="16">
+                <Label text="delete" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+        </GridLayout>
+    </RadListView>
+</GridLayout>

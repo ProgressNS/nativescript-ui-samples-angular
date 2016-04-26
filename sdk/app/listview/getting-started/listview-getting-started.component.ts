@@ -6,7 +6,7 @@ import {DataItemService} from "../dataItem.service";
 @Component({
     selector: "my-app",
     providers: [DataItemService],
-    templateUrl: 'listview/getting-started/listview-getting-started.component.html',
+    templateUrl: "listview/getting-started/listview-getting-started.component.html",
     styleUrls: ["listview/getting-started/listview-getting-started.component.css"]
 })
 export class AppComponent implements OnInit {
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    get dataItems() {
+    get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
 

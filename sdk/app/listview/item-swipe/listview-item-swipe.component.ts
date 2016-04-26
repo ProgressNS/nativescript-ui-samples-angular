@@ -1,43 +1,73 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
+import {ObservableArray} from "data/observable-array";
+import {DataItem} from "../dataItem";
+import {Person} from "../Person";
+import {DataItemService} from "../dataItem.service";
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import * as FrameModule from "ui/frame";
+var posts = require("../../listview/posts.json")
 
 @Component({
     selector: "my-app",
-    template: `
-<GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" itemSwipe="true" (itemSwipeProgressStarted)="onSwipeProgressStarted($event)">
-        <template listItemTemplate #item="item">
-            <StackLayout height="80" backgroundColor="Green"><Label [text]='item.name'></Label></StackLayout>
-        </template>
-            <GridLayout *listItemSwipeTemplate columns="auto, *, auto">
-                <Button col="0" text="Left button" backgroundColor="Blue"></Button>
-                <Button col="2" text="Right button" backgroundColor="Red"></Button>
-            </GridLayout>
-    </RadListView>
-</GridLayout>
-`
+    providers: [DataItemService],
+    templateUrl: "listview/item-swipe/listview-item-swipe.component.html",
+    styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
 })
 export class AppComponent {
-    private _items;
+    private _dataItems: ObservableArray<Person>;
+    private _selectedItems: string;
 
-    constructor() {
-        this._items = new Array();
+    constructor(private _dataItemService: DataItemService) {
+    }
 
-        for (var i = 0; i < 100; i++) {
-            this._items.push({
-                name: "Item" + i
-            });
+    get dataItems(): ObservableArray<Person> {
+        return this._dataItems;
+    }
+
+    ngOnInit() {
+        this._dataItems = new ObservableArray(this._dataItemService.getPersonPosts());
+    }
+
+    public onCellSwiping(args: listViewModule.ListViewEventData) {
+        var swipeLimits = args.data.swipeLimits;
+        var currentItemView = args.object;
+        var currentView;
+
+        if (args.data.x > 200) {
+            console.log("Notify perform left action");
+        } else if (args.data.x < -200) {
+            console.log("Notify perform right action");
         }
     }
 
-    get myItems() {
-        return this._items;
+    public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
+        var swipeLimits = args.data.swipeLimits;
+        var listview = FrameModule.topmost().currentPage.getViewById("listView");
+
+        swipeLimits.threshold = listview.getMeasuredWidth();
+        swipeLimits.left = listview.getMeasuredWidth();
+        swipeLimits.right = listview.getMeasuredWidth();
     }
 
-    set myItems(value) {
-        this._items = value;
+    public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
+        if (args.data.x > 200) {
+            console.log("Perform left action");
+        } else if (args.data.x < -200) {
+            console.log("Perform right action");
+        }
     }
-    
-    public onSwipeProgressStarted(args){
-        console.log("Swipe progress started")
+
+    public onItemClick(args: listViewModule.ListViewEventData) {
+        var listView = <listViewModule.RadListView>FrameModule.topmost().currentPage.getViewById("listView");
+        listView.notifySwipeToExecuteFinished();
+        console.log("Item click: " + args.itemIndex);
+    }
+
+    public onLeftSwipeClick(args) {
+        console.log("Left swipe click");
+    }
+
+    public onRightSwipeClick(args) {
+        console.log("Right swipe click");
     }
 }

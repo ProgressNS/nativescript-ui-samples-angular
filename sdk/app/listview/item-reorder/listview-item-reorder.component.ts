@@ -8,7 +8,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
 @Component({
     selector: "my-app",
     providers: [DataItemService],
-    templateUrl: 'listview/item-reorder/listview-item-reorder.component.html',
+    templateUrl: "listview/item-reorder/listview-item-reorder.component.html",
     styleUrls: ["listview/item-reorder/listview-item-reorder.component.css"]
 })
 export class AppComponent implements OnInit {
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    get dataItems() {
+    get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
 
