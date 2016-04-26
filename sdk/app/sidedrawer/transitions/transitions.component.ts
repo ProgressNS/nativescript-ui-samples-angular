@@ -11,6 +11,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'sidedrawer/transition/transition.component.html'
 })
+// >> sidedrawer-angular-transition-definition
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {
     }
@@ -18,7 +19,7 @@ export class AppComponent {
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
     public sideDrawerTransition = new sideDrawerModule.PushTransition();
-
+// << sidedrawer-angular-transition-definition
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         const sideDrawerItem = new ActionItem();
