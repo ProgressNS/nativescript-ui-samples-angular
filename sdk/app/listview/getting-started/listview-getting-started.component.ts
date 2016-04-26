@@ -9,6 +9,7 @@ import {DataItemService} from "../dataItem.service";
     templateUrl: "listview/getting-started/listview-getting-started.component.html",
     styleUrls: ["listview/getting-started/listview-getting-started.component.css"]
 })
+// >> listview-getting-started-angular
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -23,3 +24,4 @@ export class AppComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getDataItems());
     }
 }
+// << listview-getting-started-angular
