@@ -28,6 +28,7 @@ export class AppComponent {
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getNameEmailDataItems());
+        this._selectedItems = "No Selected items.";
     }
 
     public onItemSelected(args: listViewModule.ListViewEventData) {
@@ -61,7 +62,7 @@ export class AppComponent {
 
             this._selectedItems = selectedTitles;
         } else {
-            this._selectedItems = null;
+            this._selectedItems = "No Selected items.";
         }
 
         console.log("Item deselected.");
