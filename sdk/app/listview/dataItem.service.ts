@@ -1,7 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {DATAITEMS} from "./mock-dataItems";
 import {DataItem} from "./dataItem";
-import {Person} from "./Person";
 var namesAndEmails = require("../listview/NamesAndEmails.json")
 var posts = require("../listview/posts.json")
 

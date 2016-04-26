@@ -1,7 +1,6 @@
 import {Component, OnInit} from "angular2/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
-import {Person} from "../Person";
 import {DataItemService} from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import * as FrameModule from "ui/frame";
