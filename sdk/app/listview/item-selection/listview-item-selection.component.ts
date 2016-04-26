@@ -1,39 +1,69 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
+import {ObservableArray} from "data/observable-array";
+import {DataItem} from "../dataItem";
+import {DataItemService} from "../dataItem.service";
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
+var namesAndEmails = require("../../listview/NamesAndEmails.json")
 
 @Component({
     selector: "my-app",
-    template: `
-<GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" selectionBehavior="Press" (itemSelected)="onItemSelected()">
-        <template listItemTemplate #item="item">
-            <StackLayout><Label [text]='item.name'></Label></StackLayout>
-        </template>
-    </RadListView>
-</GridLayout>
-`
+    providers: [DataItemService],
+    templateUrl: 'listview/item-selection/listview-item-selection.component.html',
+    styleUrls: ["listview/item-selection/listview-item-selection.component.css"]
 })
 export class AppComponent {
-    private _items;
+    private _dataItems: ObservableArray<DataItem>;
+    private _selectedItems: string;
 
-    constructor() {
-        this._items = new Array();
+    constructor(private _dataItemService: DataItemService) {
+    }
 
-        for (var i = 0; i < 100; i++) {
-            this._items.push({
-                name: "Item" + i
-            });
+    get dataItems() {
+        return this._dataItems;
+    }
+
+    get selectedItems(): string {
+        return this._selectedItems;
+    }
+
+    ngOnInit() {
+        this._dataItems = new ObservableArray(this._dataItemService.getNameEmailDataItems());
+    }
+
+    public onItemSelected(args: listViewModule.ListViewEventData) {
+        var listview = args.object as listViewModule.RadListView;
+        var selectedItems = listview.getSelectedItems();
+        var selectedTitles = "Selected items: ";
+        for (var i = 0; i < selectedItems.length; i++) {
+            selectedTitles += selectedItems[i].itemName;
+
+            if (i < selectedItems.length - 1) {
+                selectedTitles += ", ";
+            }
         }
+
+        this._selectedItems = selectedTitles;
+        console.log("Item selected.");
     }
 
-    get myItems() {
-        return this._items;
-    }
+    public onItemDeselected(args: listViewModule.ListViewEventData) {
+        var listview = args.object as listViewModule.RadListView;
+        var selectedItems = listview.getSelectedItems();
+        if (selectedItems.length > 0) {
+            var selectedTitles = "Selected items: ";
+            for (var i = 0; i < selectedItems.length; i++) {
+                selectedTitles += selectedItems[i].itemName;
 
-    set myItems(value) {
-        this._items = value;
-    }
-    
-    public onItemSelected(args){
-        console.log("Item selected ");
+                if (i < selectedItems.length - 1) {
+                    selectedTitles += ", ";
+                }
+            }
+
+            this._selectedItems = selectedTitles;
+        } else {
+            this._selectedItems = null;
+        }
+
+        console.log("Item deselected.");
     }
 }

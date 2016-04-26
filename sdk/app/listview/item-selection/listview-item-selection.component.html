@@ -1,0 +1,14 @@
+<GridLayout rows="auto, *" rows="auto, *, auto">
+    <RadListView row="1" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical" />
+        </lv:RadListView.listViewLayout>
+        <template listItemTemplate #item="item">
+             <StackLayout class="listItemStackLayout" orientation="vertical">
+                    <Label class="nameLabel" [text]="item.itemName"></Label>
+                    <Label class="descriptionLabel" [text]="item.itemDescription"></Label>
+            </StackLayout>
+        </template>
+    </RadListView>
+    <Label *ngIf="selectedItems" [text]="selectedItems" textWrap="true" row="2"></Label>
+</GridLayout>
