@@ -6,7 +6,7 @@ import {DataItemService} from "../dataItem.service";
 @Component({
     selector: "my-app",
     providers: [DataItemService],
-    templateUrl: 'listview/header-footer/listview-header-footer.component.html',
+    templateUrl: "listview/header-footer/listview-header-footer.component.html",
     styleUrls: ["listview/header-footer/listview-header-footer.component.css"]
 })
 export class AppComponent implements OnInit {
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    get dataItems() {
+    get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
 
