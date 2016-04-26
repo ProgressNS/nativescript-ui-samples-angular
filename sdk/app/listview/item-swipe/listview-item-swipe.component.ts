@@ -1,7 +1,6 @@
 import {Component, OnInit} from "angular2/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
-import {Person} from "../Person";
 import {DataItemService} from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import * as FrameModule from "ui/frame";
@@ -14,18 +13,18 @@ var posts = require("../../listview/posts.json")
     styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
 })
 export class AppComponent {
-    private _dataItems: ObservableArray<Person>;
+    private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 
     constructor(private _dataItemService: DataItemService) {
     }
 
-    get dataItems(): ObservableArray<Person> {
+    get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray(this._dataItemService.getPersonPosts());
+        this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
     public onCellSwiping(args: listViewModule.ListViewEventData) {

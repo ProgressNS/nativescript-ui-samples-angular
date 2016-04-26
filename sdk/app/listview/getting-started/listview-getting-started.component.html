@@ -1,10 +1,12 @@
+<!-- >> listview-getting-started-angular-xml -->
 <GridLayout rows="auto, *">
     <RadListView row="1" [items]="dataItems">
         <template listItemTemplate #item="item">
             <StackLayout orientation="vertical">
-                <Label class="nameLabel" [text]="item.itemName"></Label>
-                <Label class="descriptionLabel" [text]="item.itemDescription"></Label>
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </template>
     </RadListView>
 </GridLayout>
+<!-- << listview-getting-started-angular-xml -->
