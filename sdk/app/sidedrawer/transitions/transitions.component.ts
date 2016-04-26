@@ -9,39 +9,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    template: `
-    <RadSideDrawer #drawer [transition]="sideDrawerTransition">
-        <template drawerSide>
-        <StackLayout cssClass="drawerContent">
-        <StackLayout cssClass="headerContent">
-          <Label text="Navigation Menu"></Label>
-        </StackLayout>
-        <StackLayout cssClass="drawerMenuContent">
-          <Label text="Primary" cssClass="drawerSectionHeader"></Label>
-          <Label text="Social" cssClass="drawerSectionItem"></Label>
-          <Label text="Promotions" cssClass="drawerSectionItem"></Label>
-          <Label text="Labels" cssClass="drawerSectionHeader"></Label>
-          <Label text="Important" cssClass="drawerSectionItem"></Label>
-          <Label text="Starred" cssClass="drawerSectionItem"></Label>
-          <Label text="Sent Mail" cssClass="drawerSectionItem"></Label>
-          <Label text="Drafts" cssClass="drawerSectionItem"></Label>
-        </StackLayout>
-      </StackLayout>
-        </template>
-        <template drawerMain>    
-      <StackLayout> 
-          <Button text="Fade Transition" (tap)="onFadeTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="Push Transition" (tap)="onPushTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" cssClass="drawerContentButton"></Button>
-          <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" cssClass="drawerContentButton"></Button>
-      </StackLayout>
-      </template>
-    </RadSideDrawer>
-`,
+    templateUrl: 'sidedrawer/transition/transition.component.html'
 })
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {

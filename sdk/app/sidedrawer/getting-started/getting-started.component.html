@@ -1,0 +1,25 @@
+<RadSideDrawer #drawer>
+    <template drawerSide>
+        <StackLayout style="background-color: gray;">
+            <StackLayout style=" padding:10;text-align: center;">
+                <Label text="Navigation Menu"></Label>
+            </StackLayout>
+            <StackLayout style="background-color: gray;">
+                <Label text="Primary" style="padding: 10px;background-color:lightgray;"></Label>
+                <Label text="Social" style="padding: 10px;"></Label>
+                <Label text="Promotions" style="padding: 10px;"></Label>
+                <Label text="Labels" style="padding:10px;background-color: lightgray;"></Label>
+                <Label text="Important" style="padding: 10px;"></Label>
+                <Label text="Starred" style="padding: 10px;"></Label>
+                <Label text="Sent Mail" style="padding: 10px;"></Label>
+                <Label text="Drafts" style="padding: 10px;"></Label>
+            </StackLayout>
+       </StackLayout>
+    </template>
+    <template drawerMain>
+        <StackLayout>
+            <Label text="SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer." textWrap="true"></Label>
+            <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        </StackLayout>
+   </template>
+</RadSideDrawer>
