@@ -6,6 +6,7 @@ import {ActionItem} from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
+// >> sidedrawer-angular-callbacks-definition
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
@@ -42,6 +43,5 @@ export class AppComponent {
     public onDrawerClosed() {
          console.log("Drawer closed");
     }
-    
-   
 }
+// << sidedrawer-angular-callbacks-definition
