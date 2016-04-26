@@ -32,10 +32,10 @@ export class AppComponent {
 
     public onItemSelected(args: listViewModule.ListViewEventData) {
         var listview = args.object as listViewModule.RadListView;
-        var selectedItems = listview.getSelectedItems();
+        var selectedItems = listview.getSelectedItems() as Array<DataItem>;
         var selectedTitles = "Selected items: ";
         for (var i = 0; i < selectedItems.length; i++) {
-            selectedTitles += selectedItems[i].itemName;
+            selectedTitles += selectedItems[i].name;
 
             if (i < selectedItems.length - 1) {
                 selectedTitles += ", ";
@@ -48,11 +48,11 @@ export class AppComponent {
 
     public onItemDeselected(args: listViewModule.ListViewEventData) {
         var listview = args.object as listViewModule.RadListView;
-        var selectedItems = listview.getSelectedItems();
+        var selectedItems = listview.getSelectedItems() as Array<DataItem>;
         if (selectedItems.length > 0) {
             var selectedTitles = "Selected items: ";
             for (var i = 0; i < selectedItems.length; i++) {
-                selectedTitles += selectedItems[i].itemName;
+                selectedTitles += selectedItems[i].name;
 
                 if (i < selectedItems.length - 1) {
                     selectedTitles += ", ";
