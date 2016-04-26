@@ -11,7 +11,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
     templateUrl: "listview/item-selection/listview-item-selection.component.html",
     styleUrls: ["listview/item-selection/listview-item-selection.component.css"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 
