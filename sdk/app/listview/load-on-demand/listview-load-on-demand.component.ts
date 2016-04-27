@@ -3,7 +3,7 @@ import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import * as Application from "application";
-import *as Timer  from "timer";
+import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
@@ -36,8 +36,9 @@ export class AppComponent implements OnInit {
                     listView.loadOnDemandMode = listViewModule.ListViewLoadOnDemandMode[listViewModule.ListViewLoadOnDemandMode.None];
                     break;
                 }
+
                 var imageUri = Application.android ? posts.images[i].toLowerCase() : posts.images[i];
-                that.get()._dataItems.push(new DataItem(i ,posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
+                that.get()._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
                 that.get()._numberOfAddedItems++;
             }
 
@@ -52,8 +53,7 @@ export class AppComponent implements OnInit {
         for (var i = 0; i < posts.names.length - 15; i++) {
             this._numberOfAddedItems++;
             if (Application.android) {
-                var item = new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase());
-                this._dataItems.push(item);
+                this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
             }
             else {
                 this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));

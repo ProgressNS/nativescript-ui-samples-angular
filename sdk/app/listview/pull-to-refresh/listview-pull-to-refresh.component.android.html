@@ -1,0 +1,19 @@
+<GridLayout orientation="vertical" rows="auto, *">
+    <RadListView row="1" [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Vertical" />
+        </lv:RadListView.listViewLayout>
+        <template listItemTemplate #item="item">
+            <StackLayout class="itemTemplateStackLayout" orientation="vertical">
+                <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
+                    <FrescoDrawee height="100" width="80" [imageUri]="item.image"></FrescoDrawee>
+                    <StackLayout class="labelsStackLayout" orientation="vertical">
+                        <Label class="labelName" [text]="item.name"></Label>
+                        <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        <Label class="labelText" [text]="item.text" textWrap="true"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </template>
+    </RadListView>
+</GridLayout>

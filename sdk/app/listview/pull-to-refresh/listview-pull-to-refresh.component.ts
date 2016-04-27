@@ -1,43 +1,60 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
+import {ObservableArray} from "data/observable-array";
+import {DataItem} from "../dataItem";
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import * as Application from "application";
+import * as Timer  from "timer";
+var posts = require("../../listview/posts.json")
 
 @Component({
     selector: "my-app",
-    template: `
-<GridLayout rows="auto, *">
-    <RadListView row="1" [items]="myItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefresh()">
-        <template listItemTemplate #item="item">
-            <StackLayout height="80" backgroundColor="Green"><Label [text]='item.name'></Label></StackLayout>
-        </template>
-            <GridLayout *listItemSwipeTemplate columns="auto, *, auto">
-                <Button col="0" text="Left button" backgroundColor="Blue"></Button>
-                <Button col="2" text="Right button" backgroundColor="Red"></Button>
-            </GridLayout>
-    </RadListView>
-</GridLayout>
-`
+    templateUrl: "listview/pull-to-refresh/listview-pull-to-refresh.component.html",
+    styleUrls: ["listview/pull-to-refresh/listview-pull-to-refresh.component.css"]
 })
-export class AppComponent {
-    private _items;
+export class AppComponent implements OnInit {
+    private _dataItems: ObservableArray<DataItem>;
+    private _numberOfAddedItems;
 
     constructor() {
-        this._items = new Array();
+    }
 
-        for (var i = 0; i < 100; i++) {
-            this._items.push({
-                name: "Item" + i
-            });
+    get dataItems(): ObservableArray<DataItem> {
+        return this._dataItems;
+    }
+
+    ngOnInit() {
+        this.initDataItems();
+    }
+
+    public onPullToRefreshInitiated(args: listViewModule.ListViewEventData) {
+        var that = new WeakRef(this);
+        Timer.setTimeout(function () {
+            var initialNumberOfItems = that.get()._numberOfAddedItems;
+            for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
+                if (i > posts.names.length - 1) {
+                    break;
+                }
+                var imageUri = Application.android ? posts.images[i].toLowerCase() : posts.images[i];
+
+                that.get()._dataItems.splice(0, 0, new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
+                that.get()._numberOfAddedItems++;
+            }
+            var listView = args.object;
+            listView.notifyPullToRefreshFinished();
+        }, 1000);
+    }
+
+    private initDataItems() {
+        this._dataItems = new ObservableArray<DataItem>();
+        this._numberOfAddedItems = 0;
+        for (var i = 0; i < posts.names.length - 15; i++) {
+            this._numberOfAddedItems++;
+            if (Application.android) {
+                this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
+            }
+            else {
+                this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+            }
         }
-    }
-
-    get myItems() {
-        return this._items;
-    }
-
-    set myItems(value) {
-        this._items = value;
-    }
-    
-    public onPullToRefresh(args){
-        console.log("Pull to refresh fired");
     }
 }
