@@ -12,8 +12,7 @@
         "emitDecoratorMetadata": true,
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "experimentalDecorators": true
     },
     "filesGlob": [
         "./**/*.ts",
