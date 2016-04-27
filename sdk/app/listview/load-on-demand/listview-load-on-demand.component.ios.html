@@ -1,5 +1,7 @@
 <GridLayout>
+      <!-- >> angular-listview-load-on-demand -->
     <RadListView [items]="dataItems" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+     <!-- << angular-listview-load-on-demand -->
         <lv:RadListView.listViewLayout>
             <lv:ListViewLinearLayout scrollDirection="Vertical" />
         </lv:RadListView.listViewLayout>
