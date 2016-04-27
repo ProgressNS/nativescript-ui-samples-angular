@@ -5,18 +5,18 @@
             <lv:ListViewLinearLayout scrollDirection="Vertical" />
         </lv:RadListView.listViewLayout>
         <template listItemTemplate #item="item">
-            <StackLayout orientation="vertical" style="background-color: white;" paddingLeft="5">
-                <Label fontSize="20" [text]="item.name" marginBottom="8"></Label>
-                <Label fontSize="14" [text]="item.title" style="font-weight: bold;"></Label>
-                <Label fontSize="12" [text]="item.text"></Label>
+            <StackLayout class="listItemStackLayout" orientation="vertical">
+                <Label class="labelName" [text]="item.name"></Label>
+                <Label class="labelTitle" [text]="item.title"></Label>
+                <Label class="labelText" [text]="item.text"></Label>
             </StackLayout>
         </template>
-        <GridLayout *listItemSwipeTemplate columns="auto, *, auto" backgroundColor="White">
-            <StackLayout id="mark-view" col="0" style="background-color: blue;" (tap)="onLeftSwipeClick($event)" padding="16">
-                <Label text="mark" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"></Label>
+        <GridLayout *listItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
+            <StackLayout id="mark-view" class="markViewStackLayout" col="0" (tap)="onLeftSwipeClick($event)">
+                <Label text="mark" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
-            <StackLayout id="delete-view" col="2" style="background-color: red;" (tap)="onRightSwipeClick($event)" padding="16">
-                <Label text="delete" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout id="delete-view" class="deleteViewStackLayout" col="2" (tap)="onRightSwipeClick($event)">
+                <Label text="delete" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
         </GridLayout>
     </RadListView>
