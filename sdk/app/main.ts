@@ -1,15 +1,26 @@
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 import {nativeScriptBootstrap} from "nativescript-angular/application";
+import elementRegistry = require('nativescript-angular/element-registry');
+import {FrescoDrawee} from "fresco/fresco";
+var application = require("application");
 
-//import {AppComponent} from "./listview/getting-started/listview-getting-started.component";
-//import {AppComponent} from "./listview/header-footer/listview-header-footer.component";
-//import {AppComponent} from "./listview/item-reorder/listview-item-reorder.component";
-//import {AppComponent} from "./listview/item-selection/listview-item-selection.component";
-//import {AppComponent} from "./listview/item-swipe/listview-item-swipe.component";
-import {AppComponent} from "./listview/load-on-demand/listview-load-on-demand.component";
+// SideDrawer components and providers
+import {AppComponent} from "./sidedrawer/getting-started/getting-started.component";
+import {SIDEDRAWER_PROVIDERS} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
-import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular/listview-directives'
+// ListView components and providers
+//import {AppComponent} from "./listview/load-on-demand/listview-load-on-demand.component";
+//import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular/listview-directives';
 
+//import applicationAngular = require("nativescript-angular/application");
+//applicationAngular.cssFile = "./app.css";
 
-// TODO: This will be the starting point for the application main view (component)
-nativeScriptBootstrap(AppComponent, LISTVIEW_PROVIDERS);
+if (application.android) {
+    application.onLaunch = function (intent) {
+        com.facebook.drawee.backends.pipeline.Fresco.initialize(application.android.context);
+    };
+}
+
+elementRegistry.registerElement("FrescoDrawee", () => FrescoDrawee);
+//nativeScriptBootstrap(AppComponent, LISTVIEW_PROVIDERS);
+nativeScriptBootstrap(AppComponent, SIDEDRAWER_PROVIDERS);
