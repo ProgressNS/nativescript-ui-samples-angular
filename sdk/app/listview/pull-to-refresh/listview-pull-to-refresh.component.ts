@@ -11,6 +11,7 @@ var posts = require("../../listview/posts.json")
     templateUrl: "listview/pull-to-refresh/listview-pull-to-refresh.component.html",
     styleUrls: ["listview/pull-to-refresh/listview-pull-to-refresh.component.css"]
 })
+// >> angular-listview-pull-to-refresh-code
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
@@ -58,3 +59,4 @@ export class AppComponent implements OnInit {
         }
     }
 }
+// << angular-listview-pull-to-refresh-code

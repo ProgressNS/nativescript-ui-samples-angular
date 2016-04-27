@@ -11,6 +11,7 @@ var posts = require("../../listview/posts.json")
     templateUrl: "listview/load-on-demand/listview-load-on-demand.component.html",
     styleUrls: ["listview/load-on-demand/listview-load-on-demand.component.css"]
 })
+// >> angular-listview-load-on-demand-code
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
@@ -61,3 +62,4 @@ export class AppComponent implements OnInit {
         }
     }
 }
+// << angular-listview-load-on-demand-code
