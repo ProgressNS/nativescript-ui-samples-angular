@@ -1,7 +1,6 @@
 import {Component, OnInit} from "angular2/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
-import {DataItemService} from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import * as Application from "application";
 import *as Timer  from "timer";
@@ -9,7 +8,6 @@ var posts = require("../../listview/posts.json")
 
 @Component({
     selector: "my-app",
-    providers: [DataItemService],
     templateUrl: "listview/load-on-demand/listview-load-on-demand.component.html",
     styleUrls: ["listview/load-on-demand/listview-load-on-demand.component.css"]
 })
@@ -17,7 +15,7 @@ export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
 
-    constructor(private _dataItemService: DataItemService) {
+    constructor() {
     }
 
     get dataItems(): ObservableArray<DataItem> {
@@ -25,9 +23,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        //this._dataItems = new ObservableArray(this._dataItemService.getIdenticalDataItems(10));
         this.initDataItems();
-        console.log("dateItems: " + this._dataItems.length);
     }
 
     public onLoadMoreItemsRequested(args: listViewModule.ListViewEventData) {
