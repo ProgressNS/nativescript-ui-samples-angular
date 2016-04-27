@@ -11,14 +11,15 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'sidedrawer/position/position.component.html'
 })
+// >> sidedrawer-angular-position-code
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
-    public pos:string = "Left";
-
+    public location:string = "Left";
+// << sidedrawer-angular-position-code
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         const sideDrawerItem = new ActionItem();
@@ -44,7 +45,7 @@ export class AppComponent {
     }
 
     private setDrawerLocation(location: string) {
-        this.pos = location;
+        this.location = location;
         this.drawer.showDrawer();
     }
 }

@@ -12,6 +12,7 @@ var posts = require("../../listview/posts.json")
     templateUrl: "listview/item-swipe/listview-item-swipe.component.html",
     styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
 })
+// >> angular-listview-item-swipe-component
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
@@ -70,3 +71,4 @@ export class AppComponent implements OnInit {
         console.log("Right swipe click");
     }
 }
+// << angular-listview-item-swipe-component

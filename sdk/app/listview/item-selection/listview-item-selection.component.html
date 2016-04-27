@@ -1,5 +1,7 @@
 <GridLayout rows="auto, *" rows="auto, *, auto">
+    <!-- >> angular-listview-selection -->
     <RadListView row="1" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
+        <!-- << angular-listview-selection -->
         <lv:RadListView.listViewLayout>
             <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical" />
         </lv:RadListView.listViewLayout>
