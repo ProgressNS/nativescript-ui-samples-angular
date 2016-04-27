@@ -11,6 +11,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
     templateUrl: "listview/item-reorder/listview-item-reorder.component.html",
     styleUrls: ["listview/item-reorder/listview-item-reorder.component.css"]
 })
+// >> angular-listview-reorder-component
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -29,3 +30,4 @@ export class AppComponent implements OnInit {
         console.log("Item reordered. Old index: " + args.itemIndex + " " + "new index: " + args.data.targetIndex);
     }
 }
+// << angular-listview-reorder-component

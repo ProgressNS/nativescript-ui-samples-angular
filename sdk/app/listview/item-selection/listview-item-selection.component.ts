@@ -11,6 +11,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
     templateUrl: "listview/item-selection/listview-item-selection.component.html",
     styleUrls: ["listview/item-selection/listview-item-selection.component.css"]
 })
+// >> angular-listview-selection-component
 export class AppComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
@@ -68,3 +69,4 @@ export class AppComponent implements OnInit {
         console.log("Item deselected.");
     }
 }
+// << angular-listview-selection-component
