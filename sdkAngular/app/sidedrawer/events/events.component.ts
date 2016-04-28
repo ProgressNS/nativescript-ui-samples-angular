@@ -10,7 +10,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/evets/events.component.html'
+    templateUrl: 'sidedrawer/events/events.component.html'
 })
 export class AppComponent {
     constructor(@Inject(Page) private page: Page) {
