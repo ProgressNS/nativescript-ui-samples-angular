@@ -1,9 +1,9 @@
 <GridLayout>
       <!-- >> angular-listview-load-on-demand -->
-    <RadListView [items]="dataItems" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+    <RadListView [items]="dataItems" loadOnDemandMode="Manual" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
      <!-- << angular-listview-load-on-demand -->
         <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="120"/>
         </lv:RadListView.listViewLayout>
         <template listItemTemplate #item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
@@ -17,5 +17,12 @@
                 </StackLayout>
             </StackLayout>
         </template>
+        <!-- >> listview-load-on-demand-custom-view -->
+        <template loadOnDemandItemTemplate>
+            <GridLayout class="loadOnDemandItemGridLayout">
+                     <Label text="Load More" horizontalAlignment="center" verticalAlignment="center"></Label>
+            </GridLayout>
+        </template>
+        <!-- << listview-load-on-demand-custom-view -->
     </RadListView>
 </GridLayout>
