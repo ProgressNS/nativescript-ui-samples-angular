@@ -9,7 +9,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/transition/transition.component.html'
+    templateUrl: 'sidedrawer/transitions/transitions.component.html'
 })
 // >> sidedrawer-angular-transition-definition
 export class AppComponent {
@@ -22,10 +22,10 @@ export class AppComponent {
 // << sidedrawer-angular-transition-definition
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
+    }
+    
+   public openDrawer(){
+        this.drawer.showDrawer();
     }
     
      public onFadeTransitionTap(args) {

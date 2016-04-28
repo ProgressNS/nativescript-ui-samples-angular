@@ -19,15 +19,16 @@
        </StackLayout>
     </template>
     <template drawerMain>    
-        <StackLayout> 
-            <Button text="Fade Transition" (tap)="onFadeTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="Push Transition" (tap)="onPushTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" cssClass="drawerContentButton"></Button>
-            <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" cssClass="drawerContentButton"></Button>
+        <StackLayout style="background-color:white;"> 
+            <Button text="OPEN DRAWER" (tap)="openDrawer()" style="horizontal-align:center;"></Button>
+            <Button text="Fade Transition" (tap)="onFadeTransitionTap()"></Button>
+            <Button text="Push Transition" (tap)="onPushTransitionTap()"></Button>
+            <Button text="Reveal Transition" (tap)="onRevealTransitionTap()"></Button>
+            <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()"></Button>
+            <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()"></Button>
+            <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()"></Button>
+            <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()"></Button>
+            <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()"></Button>
         </StackLayout>
     </template>
 </RadSideDrawer>

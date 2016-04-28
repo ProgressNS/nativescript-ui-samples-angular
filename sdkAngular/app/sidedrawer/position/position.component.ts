@@ -22,10 +22,6 @@ export class AppComponent {
 // << sidedrawer-angular-position-code
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
     }
     
     public onRightLocationTap(args) {
