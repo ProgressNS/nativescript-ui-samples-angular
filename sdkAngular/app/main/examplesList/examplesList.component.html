@@ -1,0 +1,10 @@
+<RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
+    <lv:RadListView.listViewLayout>
+        <lv:ListViewLinearLayout scrollDirection="Vertical" />
+    </lv:RadListView.listViewLayout>
+    <template listItemTemplate #item="item">
+            <StackLayout>
+                <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
+            </StackLayout>
+        </template>
+</RadListView>
