@@ -1,12 +1,12 @@
 {
-    "name": "tns-template-hello-world",
+    "name": "nativescript-ui-angular2",
     "main": "main.js",
-    "version": "1.6.0",
+    "version": "1.0.0",
     "author": {
         "name": "Telerik",
         "email": "support@telerik.com"
     },
-    "description": "Nativescript hello-world project template",
+    "description": "Nativescript project that shows the NativeScript UI with Angular2",
     "license": "Apache-2.0",
     "keywords": [
         "telerik",
@@ -15,16 +15,17 @@
         "{N}",
         "tns",
         "appbuilder",
-        "template"
+        "template",
+        "angular2"
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/NativeScript/template-hello-world.git"
+        "url": "git@github.com/telerik/nativescript-ui-samples-angular.git"
     },
     "bugs": {
-        "url": "https://github.com/NativeScript/template-hello-world/issues"
+        "url": "https://github.com/telerik/nativescript-ui-samples-angular/issues"
     },
-    "homepage": "https://github.com/NativeScript/template-hello-world",
+    "homepage": "https://github.com/telerik/nativescript-ui-samples-angular",
     "android": {
         "v8Flags": "--expose_gc"
     },
