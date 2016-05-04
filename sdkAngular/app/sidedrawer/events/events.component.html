@@ -1,7 +1,12 @@
-<!-- >> angular-sidedrawer-callbacks -->
-<RadSideDrawer #drawer (drawerOpening)="onDrawerOpening()" (drawerOpened)="onDrawerOpened()" (drawerClosing)="onDrawerClosing()" (drawerClosed)="onDrawerClosed()">
-<!-- << angular-sidedrawer-callbacks -->  
-    <template drawerSide>
+<StackLayout>
+    <!-- >> angular-sidedrawer-callbacks -->
+    <RadSideDrawer #drawer (drawerOpening)="onDrawerOpening()" (drawerOpened)="onDrawerOpened()" (drawerClosing)="onDrawerClosing()"
+        (drawerClosed)="onDrawerClosed()">
+        <!-- << angular-sidedrawer-callbacks -->
+        <RadSideDrawer.drawerTransition>
+            <RadSideDrawer:RevealTransition/>
+        </RadSideDrawer.drawerTransition>
+        <template drawerSide>
         <StackLayout style="background-color: gray;">
             <StackLayout style=" padding:10;text-align: center;">
                 <Label text="Navigation Menu"></Label>
@@ -18,9 +23,12 @@
             </StackLayout>
        </StackLayout>
     </template>
-    <template drawerMain>
+        <template drawerMain>
         <StackLayout>
             <Button text="OPEN DRAWER" cssClass="drawerContentText" (tap)=openDrawer()></Button>
+            <Label text="Drawer notification: " cssClass="drawerContentText"></Label>
+            <Label [text]="currentNotification" cssClass="drawerContentText"></Label>
         </StackLayout>
     </template>
-</RadSideDrawer>
+    </RadSideDrawer>
+<StackLayout>
