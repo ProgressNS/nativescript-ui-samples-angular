@@ -4,7 +4,7 @@ import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 
 @Component({
-    selector: "my-app",
+    selector: "listview-header-footer",
     providers: [DataItemService],
     templateUrl: "listview/header-footer/listview-header-footer.component.html",
     styleUrls: ["listview/header-footer/listview-header-footer.component.css"]

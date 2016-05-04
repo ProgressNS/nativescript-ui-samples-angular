@@ -6,7 +6,7 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
 var namesAndEmails = require("../../listview/NamesAndEmails.json")
 
 @Component({
-    selector: "my-app",
+    selector: "listview-item-selection",
     providers: [DataItemService],
     templateUrl: "listview/item-selection/listview-item-selection.component.html",
     styleUrls: ["listview/item-selection/listview-item-selection.component.css"]

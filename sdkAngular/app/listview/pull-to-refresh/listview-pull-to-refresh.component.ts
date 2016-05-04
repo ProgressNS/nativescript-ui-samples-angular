@@ -7,7 +7,7 @@ import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
-    selector: "my-app",
+    selector: "listview-pull-to-refresh",
     templateUrl: "listview/pull-to-refresh/listview-pull-to-refresh.component.html",
     styleUrls: ["listview/pull-to-refresh/listview-pull-to-refresh.component.css"]
 })

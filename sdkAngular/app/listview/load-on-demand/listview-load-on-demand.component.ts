@@ -7,7 +7,7 @@ import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
-    selector: "my-app",
+    selector: "listview-load-on-demand",
     templateUrl: "listview/load-on-demand/listview-load-on-demand.component.html",
     styleUrls: ["listview/load-on-demand/listview-load-on-demand.component.css"]
 })

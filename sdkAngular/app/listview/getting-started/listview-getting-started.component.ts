@@ -4,7 +4,7 @@ import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 
 @Component({
-    selector: "my-app",
+    selector: "listview-getting-started",
     providers: [DataItemService],
     templateUrl: "listview/getting-started/listview-getting-started.component.html",
     styleUrls: ["listview/getting-started/listview-getting-started.component.css"]

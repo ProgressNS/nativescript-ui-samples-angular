@@ -7,7 +7,7 @@ import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
 @Component({
-    selector: "my-app",
+    selector: "sidedrawer-getting-started",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'sidedrawer/getting-started/getting-started.component.html'
 })

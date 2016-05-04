@@ -7,7 +7,7 @@ import * as FrameModule from "ui/frame";
 var posts = require("../../listview/posts.json")
 
 @Component({
-    selector: "my-app",
+    selector: "listview-item-swipe",
     providers: [DataItemService],
     templateUrl: "listview/item-swipe/listview-item-swipe.component.html",
     styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
