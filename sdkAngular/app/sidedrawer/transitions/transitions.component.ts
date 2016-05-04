@@ -22,10 +22,10 @@ export class AppComponent {
 // << sidedrawer-angular-transition-definition
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        const sideDrawerItem = new ActionItem();
-        sideDrawerItem.text = "OPEN";
-        sideDrawerItem.on("tap", () => this.drawer.toggleDrawerState());
-        this.page.actionBar.actionItems.addItem(sideDrawerItem);
+    }
+    
+   public openDrawer(){
+        this.drawer.showDrawer();
     }
     
      public onFadeTransitionTap(args) {
