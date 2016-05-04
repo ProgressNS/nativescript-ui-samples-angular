@@ -1,5 +1,5 @@
 <GridLayout rows="auto, *">
-   <!-- >> angular-listview-header-footer -->
+    <!-- >> angular-listview-header-footer -->
     <RadListView row="1" [items]="dataItems">
         <template listItemTemplate #item="item">
             <StackLayout orientation="vertical">
@@ -7,12 +7,16 @@
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </template>
-        <StackLayout *listViewHeader class="headerStackLayout">
-            <Label text="This is the list header"></Label>
-        </StackLayout>
-        <StackLayout *listViewFooter class="footerStackLayout">
-            <Label text="This is the list footer"></Label>
-        </StackLayout>
+        <template listViewHeader>
+            <GridLayout class="headerStackLayout">
+                <Label text="This is the list header"></Label>
+            </GridLayout>
+        </template>
+        <template listViewFooter>
+            <GridLayout class="footerStackLayout">
+                <Label text="This is the list footer"></Label>
+            </GridLayout>
+        </template>
     </RadListView>
     <!-- << angular-listview-header-footer -->
 </GridLayout>
