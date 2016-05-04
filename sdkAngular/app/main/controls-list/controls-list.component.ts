@@ -4,25 +4,21 @@ import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import { Router, RouteParams } from "angular2/router";
 
-
 @Component({
-    selector: "examples",
-    templateUrl: "main/examplesList/examplesList.component.html",
-    styleUrls: ["main/examplesList/examplesList.component.css"]
+    selector: "controls",
+    templateUrl: "main/controls-list/controls-list.component.html",
+    styleUrls: ["main/controls-list/controls-list.component.css"]
 })
-export class ExamplesListComponent implements OnInit {
+export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;
     private _hasBack;
 
-    constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService) {
+    constructor(private _router: Router, private _exampleItemsService: ExampleItemService) {
 
     }
 
     ngOnInit() {
-        var parentTitle = this._routeParams.get('parentTitle');
-        var tappedTitle = this._routeParams.get('tappedTitle');
-        this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle);
-
+        this._currentExample = this._exampleItemsService.getParentExampleItem(0);
     }
 
     public get currentExample(): ExampleItem {
@@ -36,6 +32,6 @@ export class ExamplesListComponent implements OnInit {
     public onNavigationItemTap(args) {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
-        this._router.navigate([tappedItem.path]);
+        this._router.navigate(["Examples", { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title }]);
     }
 }

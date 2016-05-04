@@ -9,7 +9,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/transition/transition.component.html'
+    templateUrl: 'sidedrawer/transitions/transitions.component.html'
 })
 // >> sidedrawer-angular-transition-definition
 export class AppComponent {

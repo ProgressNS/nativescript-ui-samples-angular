@@ -6,10 +6,10 @@
     font-size: 14;
 }
 
-.headerStackLayout {
+.headerGridLayout {
     background-color: #65a565;
 }
 
-.footerStackLayout {
+.footerGridLayout {
     background-color: #7fff7f;
 }

@@ -7,7 +7,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
         "path": "main/controlsList",
         "subItems": [
             {
-                "title": "RadListView",
+                "title": "ListView",
                 "componenetName": "ExamplesListComponent",
                 "path": "main/examplesList",
                 "subItems": [
@@ -56,32 +56,32 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 ]
             },
             {
-                "title": "RadSideDrawer",
+                "title": "SideDrawer",
                 "componenetName": "ExamplesListComponent",
                 "path": "main/controlsList",
                 "subItems": [
                     {
                         "title": "Getting Started",
                         "componenetName": "AppComponent",
-                        "path": "sidedrawer/getting-started",
+                        "path": "SideDrawerGettingStarted",
                         "subItems": []
                     },
                     {
                         "title": "Events",
                         "componenetName": "AppComponent",
-                        "path": "sidedrawer/events",
+                        "path": "SideDrawerEvents",
                         "subItems": []
                     },
                     {
                         "title": "Position",
                         "componenetName": "AppComponent",
-                        "path": "sidedrawer/position",
+                        "path": "SideDrawerPosition",
                         "subItems": []
                     },
                     {
                         "title": "Transitions",
                         "componenetName": "AppComponent",
-                        "path": "sidedrawer/transitions",
+                        "path": "SideDrawerTransitions",
                         "subItems": []
                     }
                 ]

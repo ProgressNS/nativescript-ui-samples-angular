@@ -1,10 +1,10 @@
-import { Component, OnInit } from "angular2/core";
+import { Component } from "angular2/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItemService } from "./exampleItemService.service";
 import { RouteConfig } from "angular2/router";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
-import { ControlsListComponent } from "./controlsList/controlsList.component";
-import { ExamplesListComponent } from "./examplesList/examplesList.component";
+import { ControlsListComponent } from "./controls-list/controls-list.component";
+import { ExamplesListComponent } from "./examples-list/examples-list.component";
 import * as ListViewGettingStarted from "../listview/getting-started/listview-getting-started.component";
 import * as ListViewHeaderFooter from "../listview/header-footer/listview-header-footer.component";
 import * as ListViewItemReorder from "../listview/item-reorder/listview-item-reorder.component";
@@ -13,18 +13,9 @@ import * as ListViewItemSwipe from "../listview/item-swipe/listview-item-swipe.c
 import * as ListViewLoadOnDemand from "../listview/load-on-demand/listview-load-on-demand.component";
 import * as ListViewPullToRefresh from "../listview/pull-to-refresh/listview-pull-to-refresh.component";
 import * as SideDrawerGettingStarted from "../sidedrawer/getting-started/getting-started.component";
-
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-// import { ExamplesListComponent } from "./examplesList/examplesList.component";
-//import { LISTVIEW_PROVIDERS } from 'nativescript-telerik-ui-pro/listview/angular/listview-directives';
+import * as SideDrawerEvents from "../sidedrawer/events/events.component";
+import * as SideDrawerPosition from "../sidedrawer/position/position.component";
+import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.component";
 
 @Component({
   selector: "main",
@@ -43,9 +34,10 @@ import * as SideDrawerGettingStarted from "../sidedrawer/getting-started/getting
   { path: "/listview-load-on-demand", component: ListViewLoadOnDemand.AppComponent, name: "ListViewLoadOnDemand" },
   { path: "/listview-pull-to-refresh", component: ListViewPullToRefresh.AppComponent, name: "ListViewPullToRefresh" },
   { path: "/sidedrawer-getting-started", component: SideDrawerGettingStarted.AppComponent, name: "SideDrawerGettingStarted" },
+  { path: "/sidedrawer-events", component: SideDrawerEvents.AppComponent, name: "SideDrawerEvents" },
+  { path: "/sidedrawer-position", component: SideDrawerPosition.AppComponent, name: "SideDrawerPosition" },
+  { path: "/sidedrawer-transitions", component: SideDrawerTransitions.AppComponent, name: "SideDrawerTransitions" },
 ])
-export class MainComponent implements OnInit {
-    ngOnInit() {
-       
-    }
+export class MainComponent {
+
 }
