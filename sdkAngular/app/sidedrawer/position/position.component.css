@@ -1,0 +1,13 @@
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+
+.mainContent{
+    background-color: white;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
+}

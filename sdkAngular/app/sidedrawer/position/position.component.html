@@ -1,5 +1,5 @@
 <!-- >> angular-sidedrawer-location -->
-<RadSideDrawer #drawer drawerLocation="{{location}}">
+<RadSideDrawer #drawer [drawerLocation]="location">
 <!-- << angular-sidedrawer-location -->
     <template drawerSide>
         <StackLayout style="background-color: gray;">
@@ -19,12 +19,13 @@
        </StackLayout>
     </template>
     <template drawerMain>
-        <StackLayout>
-            <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom." textWrap="true"></Label>
-            <Button text="Left" (tap)="onLeftLocationTap()" cssClass="drawerContentButton"></Button>
-            <Button text="Top" (tap)="onTopLocationTap()" cssClass="drawerContentButton"></Button>
-            <Button text="Right" (tap)="onRightLocationTap()" cssClass="drawerContentButton"></Button>
-            <Button text="Bottom" (tap)="onBottomLocationTap()" cssClass="drawerContentButton"></Button>
+        <StackLayout class="mainContent">
+            <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom." 
+                   textWrap="true" class="drawerContentText"></Label>
+            <Button text="Left" (tap)="onLeftLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Top" (tap)="onTopLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Right" (tap)="onRightLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Bottom" (tap)="onBottomLocationTap()" class="drawerContentButton"></Button>
       </StackLayout>
     </template>
 </RadSideDrawer>
