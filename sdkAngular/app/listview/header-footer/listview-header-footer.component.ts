@@ -9,7 +9,7 @@ import {DataItemService} from "../dataItem.service";
     templateUrl: "listview/header-footer/listview-header-footer.component.html",
     styleUrls: ["listview/header-footer/listview-header-footer.component.css"]
 })
-export class AppComponent implements OnInit {
+export class ListViewHeaderFooterComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {
