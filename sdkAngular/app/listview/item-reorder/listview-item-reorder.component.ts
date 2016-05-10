@@ -12,7 +12,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
     styleUrls: ["listview/item-reorder/listview-item-reorder.component.css"]
 })
 // >> angular-listview-reorder-component
-export class AppComponent implements OnInit {
+export class ListViewItemReorderComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {

@@ -12,7 +12,7 @@ var namesAndEmails = require("../../listview/NamesAndEmails.json")
     styleUrls: ["listview/item-selection/listview-item-selection.component.css"]
 })
 // >> angular-listview-selection-component
-export class AppComponent implements OnInit {
+export class ListViewItemSelectionComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 

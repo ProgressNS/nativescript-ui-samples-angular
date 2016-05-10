@@ -13,7 +13,7 @@ var posts = require("../../listview/posts.json")
     styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
 })
 // >> angular-listview-item-swipe-component
-export class AppComponent implements OnInit {
+export class ListViewItemSwipeComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 
