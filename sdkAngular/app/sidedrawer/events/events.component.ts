@@ -1,21 +1,22 @@
-import {Component, ElementRef, ViewChild, Inject, OnInit} from "angular2/core";
-import {View} from "ui/core/view";
-import {RadSideDrawer} from "nativescript-telerik-ui-pro/sidedrawer";
-import {Page} from "ui/page";
-import {ActionItem} from "ui/action-bar";
+import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "angular2/core";
+import { View } from "ui/core/view";
+import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+import { Page } from "ui/page";
+import { ActionItem } from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
-import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
+import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective } from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
 // >> sidedrawer-angular-callbacks-definition
 @Component({
     selector: "sidedrawer-events",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/events/events.component.html'
+    templateUrl: 'sidedrawer/events/events.component.html',
+    styleUrls: ['sidedrawer/events/events.component.css']
 })
-export class AppComponent implements OnInit {
+export class SidedrawerEventsComponent implements OnInit {
     private _currentNotification: string;
 
-    constructor(@Inject(Page) private page: Page) {
+    constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -23,11 +24,13 @@ export class AppComponent implements OnInit {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        this._changeDetectionRef.detectChanges();
     }
-    
+
     ngOnInit() {
-        //this._currentNotification = "";
     }
+
+    public sideDrawerTransition = new sideDrawerModule.PushTransition();
 
     public get currentNotification(): string {
         return this._currentNotification;
