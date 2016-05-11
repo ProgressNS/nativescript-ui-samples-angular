@@ -1,21 +1,21 @@
 <!-- >> angular-sidedrawer-getting-started -->
 <RadSideDrawer #drawer>
     <template drawerSide>
-        <StackLayout style="background-color: gray;">
-            <StackLayout style=" padding:10;text-align: center;">
+        <StackLayout class="sideStackLayout">
+            <StackLayout class="sideTitleStackLayout">
                 <Label text="Navigation Menu"></Label>
             </StackLayout>
-            <StackLayout style="background-color: gray;">
-                <Label text="Primary" style="padding: 10px;background-color:lightgray;"></Label>
-                <Label text="Social" style="padding: 10px;"></Label>
-                <Label text="Promotions" style="padding: 10px;"></Label>
-                <Label text="Labels" style="padding:10px;background-color: lightgray;"></Label>
-                <Label text="Important" style="padding: 10px;"></Label>
-                <Label text="Starred" style="padding: 10px;"></Label>
-                <Label text="Sent Mail" style="padding: 10px;"></Label>
-                <Label text="Drafts" style="padding: 10px;"></Label>
+            <StackLayout class="sideStackLayout">
+                <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Social" class="sideLabel"></Label>
+                <Label text="Promotions" class="sideLabel"></Label>
+                <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Important" class="sideLabel"></Label>
+                <Label text="Starred" class="sideLabel"></Label>
+                <Label text="Sent Mail" class="sideLabel"></Label>
+                <Label text="Drafts" class="sideLabel"></Label>
             </StackLayout>
-       </StackLayout>
+        </StackLayout>
     </template>
     <template drawerMain>
         <StackLayout>
