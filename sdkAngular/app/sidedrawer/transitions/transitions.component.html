@@ -1,6 +1,6 @@
 <!-- >> angular-sidedrawer-transitions -->
 <RadSideDrawer #drawer [transition]="sideDrawerTransition">
-<!-- << angular-sidedrawer-transitions -->
+    <!-- << angular-sidedrawer-transitions -->
     <template drawerSide>
         <StackLayout style="background-color: gray;">
             <StackLayout style=" padding:10;text-align: center;">
@@ -18,17 +18,19 @@
             </StackLayout>
        </StackLayout>
     </template>
-    <template drawerMain>    
-        <StackLayout style="background-color:white;"> 
-            <Button text="OPEN DRAWER" (tap)="openDrawer()" style="horizontal-align:center;"></Button>
-            <Button text="Fade Transition" (tap)="onFadeTransitionTap()"></Button>
-            <Button text="Push Transition" (tap)="onPushTransitionTap()"></Button>
-            <Button text="Reveal Transition" (tap)="onRevealTransitionTap()"></Button>
-            <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()"></Button>
-            <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()"></Button>
-            <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()"></Button>
-            <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()"></Button>
-            <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()"></Button>
-        </StackLayout>
+    <template drawerMain>
+        <ScrollView>
+            <StackLayout class="mainStackLayout"> 
+                <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
+                <Button text="Fade Transition" (tap)="onFadeTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="Push Transition" (tap)="onPushTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" class="drawerContentButton"></Button>
+                <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" class="drawerContentButton"></Button>
+            </StackLayout>
+        </ScrollView>
     </template>
 </RadSideDrawer>
