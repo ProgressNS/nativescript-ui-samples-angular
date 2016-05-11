@@ -3,6 +3,26 @@
 }
 
 .drawerContentButton {
+    margin: 10 10 0 10;
+}
+
+.mainContentlabel {
     margin: 10;
-    horizontal-align: left;
+}
+
+.sideStackLayout {
+    background-color: gray;
+}
+
+.sideTitleStackLayout {
+    padding: 10;
+    text-align: center;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
 }
