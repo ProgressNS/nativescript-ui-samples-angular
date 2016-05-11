@@ -11,7 +11,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'sidedrawer/getting-started/getting-started.component.html'
 })
-export class AppComponent {
+export class SidedrawerGettingStartedComponent {
     constructor(@Inject(Page) private page: Page) {
     }
 

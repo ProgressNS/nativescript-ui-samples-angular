@@ -12,7 +12,7 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
     templateUrl: 'sidedrawer/transitions/transitions.component.html'
 })
 // >> sidedrawer-angular-transition-definition
-export class AppComponent {
+export class SidedrawerPositionComponent {
     constructor(@Inject(Page) private page: Page) {
     }
 

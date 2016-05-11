@@ -15,23 +15,23 @@ import * as ProxyModule from"ui/core/proxy";
     styleUrls: ["sidedrawer/position/position.component.css"]
 })
 // >> sidedrawer-angular-position-code
-export class AppComponent extends DependencyObservableModule.DependencyObservable implements OnInit {
+export class SidedrawerPositionComponent extends DependencyObservableModule.DependencyObservable implements OnInit {
     private static selectedLocationIndexProperty = new DependencyObservableModule.Property(
         "selectedLocationIndex",
-        "AppComponent",
+        "SidedrawerPositionComponent",
         new ProxyModule.PropertyMetadata(
             undefined,
             DependencyObservableModule.PropertyMetadataSettings.None,
-            AppComponent.onSelectedLocationIndexPropertyChanged));
+            SidedrawerPositionComponent.onSelectedLocationIndexPropertyChanged));
     private static locationsProperty = new DependencyObservableModule.Property(
         "locations",
-        "AppComponent",
+        "SidedrawerPositionComponent",
         new ProxyModule.PropertyMetadata(
             undefined,
             DependencyObservableModule.PropertyMetadataSettings.None));
     private static currentLocationroperty = new DependencyObservableModule.Property(
         "currentLocation",
-        "AppComponent",
+        "SidedrawerPositionComponent",
         new ProxyModule.PropertyMetadata(
             undefined,
             DependencyObservableModule.PropertyMetadataSettings.None));
@@ -55,31 +55,31 @@ export class AppComponent extends DependencyObservableModule.DependencyObservabl
     }
 
     get selectedLocationIndex(): number {
-        return this._getValue(AppComponent.selectedLocationIndexProperty);
+        return this._getValue(SidedrawerPositionComponent.selectedLocationIndexProperty);
     }
 
     set selectedLocationIndex(value: number) {
-        this._setValue(AppComponent.selectedLocationIndexProperty, value);
+        this._setValue(SidedrawerPositionComponent.selectedLocationIndexProperty, value);
     }
 
     get locations(): ObservableArray<SideDrawerLocation> {
-        return this._getValue(AppComponent.locationsProperty);
+        return this._getValue(SidedrawerPositionComponent.locationsProperty);
     }
 
     set locations(value: ObservableArray<SideDrawerLocation>) {
-        this._setValue(AppComponent.locationsProperty, value);
+        this._setValue(SidedrawerPositionComponent.locationsProperty, value);
     }
 
     get currentLocation(): SideDrawerLocation {
-        return this._getValue(AppComponent.currentLocationroperty);
+        return this._getValue(SidedrawerPositionComponent.currentLocationroperty);
     }
 
     set currentLocation(value: SideDrawerLocation) {
-        this._setValue(AppComponent.currentLocationroperty, value);
+        this._setValue(SidedrawerPositionComponent.currentLocationroperty, value);
     }
 
     private static onSelectedLocationIndexPropertyChanged(args) {
-        var drawee: AppComponent = args.object;
+        var drawee: SidedrawerPositionComponent = args.object;
         drawee.onSelectedLocationIndexChanged(args);
     }
 

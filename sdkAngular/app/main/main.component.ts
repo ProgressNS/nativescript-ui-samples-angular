@@ -33,10 +33,10 @@ import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.co
   { path: "/listview-item-swipe", component: ListViewItemSwipe.ListViewItemSwipeComponent, name: "ListViewItemSwipe" },
   { path: "/listview-load-on-demand", component: ListViewLoadOnDemand.ListViewLoadOnDemandComponent, name: "ListViewLoadOnDemand" },
   { path: "/listview-pull-to-refresh", component: ListViewPullToRefresh.ListViewPullToRefreshComponent, name: "ListViewPullToRefresh" },
-  { path: "/sidedrawer-getting-started", component: SideDrawerGettingStarted.AppComponent, name: "SideDrawerGettingStarted" },
-  { path: "/sidedrawer-events", component: SideDrawerEvents.AppComponent, name: "SideDrawerEvents" },
-  { path: "/sidedrawer-position", component: SideDrawerPosition.AppComponent, name: "SideDrawerPosition" },
-  { path: "/sidedrawer-transitions", component: SideDrawerTransitions.AppComponent, name: "SideDrawerTransitions" },
+  { path: "/sidedrawer-getting-started", component: SideDrawerGettingStarted.SidedrawerGettingStartedComponent, name: "SideDrawerGettingStarted" },
+  { path: "/sidedrawer-events", component: SideDrawerEvents.SidedrawerEventsComponent, name: "SideDrawerEvents" },
+  { path: "/sidedrawer-position", component: SideDrawerPosition.SidedrawerPositionComponent, name: "SideDrawerPosition" },
+  { path: "/sidedrawer-transitions", component: SideDrawerTransitions.SidedrawerPositionComponent, name: "SideDrawerTransitions" },
 ])
 export class MainComponent {
 
