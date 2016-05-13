@@ -13,7 +13,7 @@ if (applicationModule.android) {
         com.facebook.drawee.backends.pipeline.Fresco.initialize(applicationModule.android.context);
     };
 }
-// << (hide)
 elementRegistry.registerElement("FrescoDrawee", () => FrescoDrawee);
+// << (hide)
 nativeScriptBootstrap(MainComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS]);
 // << using-global-directives
