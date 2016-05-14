@@ -5,9 +5,10 @@ import { ExampleItemService } from "../exampleItemService.service";
 import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
+    moduleId: module.id,
     selector: "controls",
-    templateUrl: "./main/controls-list/controls-list.component.html",
-    styleUrls: ["./main/controls-list/controls-list.component.css"]
+    templateUrl: "controls-list.component.html",
+    styleUrls: ["controls-list.component.css"]
 })
 export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;
@@ -30,7 +31,7 @@ export class ControlsListComponent implements OnInit {
     }
 
     public onNavigationItemTap(args) {
-        var itemIndex = args.index;
+        var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigate(["Examples", { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title }]);
     }
