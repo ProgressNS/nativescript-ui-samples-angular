@@ -32,7 +32,7 @@ export class ExamplesListComponent implements OnInit {
     }
 
     public onNavigationItemTap(args) {
-        var itemIndex = args.itemIndex;
+        var itemIndex = args.index;
         var tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigate([tappedItem.path]);
     }

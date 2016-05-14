@@ -1,12 +1,9 @@
 <GridLayout rows="auto, *">
-    <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
-        <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout scrollDirection="Vertical" />
-        </lv:RadListView.listViewLayout>
-        <template listItemTemplate #item="item">
-            <StackLayout>
+    <ListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
+        <template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout [class.odd]="odd" [class.even]="even">
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
             </StackLayout>
         </template>
-    </RadListView>
+    </ListView>
 </GridLayout>
