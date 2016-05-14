@@ -5,7 +5,7 @@
         <lv:RadListView.listViewLayout>
             <lv:ListViewLinearLayout scrollDirection="Vertical" />
         </lv:RadListView.listViewLayout>
-        <template listItemTemplate #item="item">
+        <template listItemTemplate let-item="item">
             <StackLayout class="listItemStackLayout" orientation="vertical">
                 <Label class="labelName" [text]="item.name"></Label>
                 <Label class="labelTitle" [text]="item.title"></Label>

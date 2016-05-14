@@ -1,8 +1,8 @@
-import { Component, OnInit } from "angular2/core";
+import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import { Router, RouteParams } from "angular2/router";
+import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
     selector: "examples",

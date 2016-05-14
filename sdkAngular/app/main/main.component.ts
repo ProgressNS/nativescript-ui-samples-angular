@@ -1,7 +1,7 @@
-import { Component } from "angular2/core";
+import { Component } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItemService } from "./exampleItemService.service";
-import { RouteConfig } from "angular2/router";
+import { RouteConfig } from "@angular/router-deprecated";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
 import { ControlsListComponent } from "./controls-list/controls-list.component";
 import { ExamplesListComponent } from "./examples-list/examples-list.component";
@@ -23,7 +23,7 @@ import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.co
   providers: [NS_ROUTER_PROVIDERS, ExampleItemService],
   template: "<page-router-outlet></page-router-outlet>"
 })
-@RouteConfig([
+ @RouteConfig([
   { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
   { path: "/examples", component: ExamplesListComponent, name: "Examples" },
   { path: "/listview-getting-started", component: ListViewGettingStarted.ListViewGettingStartedComponent, name: "ListviewGettingStarted" },
@@ -41,3 +41,39 @@ import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.co
 export class MainComponent {
 
 }
+
+
+// Migration to Angular 2 RC1 'Router'
+
+//import { Component, OnInit } from "@angular/core";
+// import { Routes, Router, ROUTER_PROVIDERS } from "@angular/router";
+// @Component({
+//   selector: "main",
+//   directives: [NS_ROUTER_DIRECTIVES],
+//   providers: [ROUTER_PROVIDERS, NS_ROUTER_PROVIDERS, ExampleItemService],
+//   template: "<page-router-outlet></page-router-outlet>"
+// })
+// @Routes([
+//   { path: "/controls", component: ControlsListComponent },
+//   { path: "/examples", component: ExamplesListComponent },
+//   { path: "/listview-getting-started", component: ListViewGettingStarted.ListViewGettingStartedComponent },
+//   { path: "/listview-header-footer", component: ListViewHeaderFooter.ListViewHeaderFooterComponent },
+//   { path: "/listview-item-reorder", component: ListViewItemReorder.ListViewItemReorderComponent },
+//   { path: "/listview-item-selection", component: ListViewItemSelection.ListViewItemSelectionComponent },
+//   { path: "/listview-item-swipe", component: ListViewItemSwipe.ListViewItemSwipeComponent },
+//   { path: "/listview-load-on-demand", component: ListViewLoadOnDemand.ListViewLoadOnDemandComponent },
+//   { path: "/listview-pull-to-refresh", component: ListViewPullToRefresh.ListViewPullToRefreshComponent },
+//   { path: "/sidedrawer-getting-started", component: SideDrawerGettingStarted.SidedrawerGettingStartedComponent },
+//   { path: "/sidedrawer-events", component: SideDrawerEvents.SidedrawerEventsComponent },
+//   { path: "/sidedrawer-position", component: SideDrawerPosition.SidedrawerPositionComponent },
+//   { path: "/sidedrawer-transitions", component: SideDrawerTransitions.SidedrawerPositionComponent },
+// ])
+// export class MainComponent implements OnInit {
+//   constructor(private router: Router) {
+
+//   }
+  
+//   ngOnInit() {
+//     this.router.navigate(['/controls']);
+//   }
+// }

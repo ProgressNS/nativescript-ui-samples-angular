@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/core';
+import {Injectable} from '@angular/core';
 import {DATAITEMS} from "./mock-dataItems";
 import {DataItem} from "./dataItem";
 var namesAndEmails = require("../listview/NamesAndEmails.json")

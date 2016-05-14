@@ -5,7 +5,7 @@
         <lv:RadListView.listViewLayout>
             <lv:ListViewLinearLayout scrollDirection="Vertical" />
         </lv:RadListView.listViewLayout>
-        <template listItemTemplate #item="item">
+        <template listItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
                 <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
                     <Image [src]="item.image" stretch="aspectFit" height="100" width="100"></Image>

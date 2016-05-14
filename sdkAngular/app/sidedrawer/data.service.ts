@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 import { LOCATIONS } from "./mock-data";
 import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
 

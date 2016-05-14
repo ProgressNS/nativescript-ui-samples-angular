@@ -1,13 +1,14 @@
-import { Component, OnInit } from "angular2/core";
+import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import { Router, RouteParams } from "angular2/router";
+import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
+    moduleId: module.id,
     selector: "controls",
-    templateUrl: "main/controls-list/controls-list.component.html",
-    styleUrls: ["main/controls-list/controls-list.component.css"]
+    templateUrl: "controls-list.component.html",
+    styleUrls: ["controls-list.component.css"]
 })
 export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;

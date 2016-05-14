@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "angular2/core";
+import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "ui/page";
