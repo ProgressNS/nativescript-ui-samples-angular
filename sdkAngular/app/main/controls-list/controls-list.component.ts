@@ -11,7 +11,6 @@ import { Router, RouteParams } from "@angular/router-deprecated";
 })
 export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;
-    private _hasBack;
 
     constructor(private _router: Router, private _exampleItemsService: ExampleItemService) {
 
