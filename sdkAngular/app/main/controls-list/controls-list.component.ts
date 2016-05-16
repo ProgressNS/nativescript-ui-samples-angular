@@ -5,10 +5,9 @@ import { ExampleItemService } from "../exampleItemService.service";
 import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
-    moduleId: module.id,
     selector: "controls",
-    templateUrl: "controls-list.component.html",
-    styleUrls: ["controls-list.component.css"]
+    templateUrl: "main/controls-list/controls-list.component.html",
+    styleUrls: ["main/controls-list/controls-list.component.css"]
 })
 export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;
