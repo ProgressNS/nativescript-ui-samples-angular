@@ -3,11 +3,11 @@ import {ExampleItem} from './exampleItem';
 export var EXAMPLEITEMS: ExampleItem[] = [
     {
         "title": "SDK Examples",
-        "path": "navigation/controlsList",
+        "path": "Controls",
         "subItems": [
             {
                 "title": "ListView",
-                "path": "navigation/examplesList",
+                "path": "Examples",
                 "subItems": [
                     {
                         "title": "Getting Started",
@@ -48,7 +48,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "SideDrawer",
-                "path": "navigation/controlsList",
+                "path": "Examples",
                 "subItems": [
                     {
                         "title": "Getting Started",
