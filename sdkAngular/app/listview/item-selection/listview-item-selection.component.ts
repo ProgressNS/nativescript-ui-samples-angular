@@ -6,10 +6,11 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
 var namesAndEmails = require("../../listview/NamesAndEmails.json")
 
 @Component({
+    moduleId: module.id,
     selector: "listview-item-selection",
     providers: [DataItemService],
-    templateUrl: "listview/item-selection/listview-item-selection.component.html",
-    styleUrls: ["listview/item-selection/listview-item-selection.component.css"]
+    templateUrl: "listview-item-selection.component.html",
+    styleUrls: ["listview-item-selection.component.css"]
 })
 // >> angular-listview-selection-component
 export class ListViewItemSelectionComponent implements OnInit {

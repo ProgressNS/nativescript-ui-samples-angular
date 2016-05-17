@@ -4,10 +4,11 @@ import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 
 @Component({
+    moduleId: module.id,
     selector: "listview-getting-started",
     providers: [DataItemService],
-    templateUrl: "listview/getting-started/listview-getting-started.component.html",
-    styleUrls: ["listview/getting-started/listview-getting-started.component.css"]
+    templateUrl: "listview-getting-started.component.html",
+    styleUrls: ["listview-getting-started.component.css"]
 })
 // >> listview-getting-started-angular
 export class ListViewGettingStartedComponent implements OnInit {

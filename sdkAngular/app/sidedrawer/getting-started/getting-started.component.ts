@@ -8,10 +8,11 @@ import * as ObservableModule from "data/observable";
 import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective } from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
 @Component({
+    moduleId: module.id,
     selector: "sidedrawer-getting-started",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/getting-started/getting-started.component.html',
-    styleUrls: ['sidedrawer/getting-started/getting-started.component.css']
+    templateUrl: 'getting-started.component.html',
+    styleUrls: ['getting-started.component.css']
 })
 export class SidedrawerGettingStartedComponent extends ObservableModule.Observable implements OnInit {
     constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {

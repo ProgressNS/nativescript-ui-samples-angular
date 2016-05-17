@@ -7,10 +7,11 @@ import * as FrameModule from "ui/frame";
 var posts = require("../../listview/posts.json")
 
 @Component({
+    moduleId: module.id,
     selector: "listview-item-swipe",
     providers: [DataItemService],
-    templateUrl: "listview/item-swipe/listview-item-swipe.component.html",
-    styleUrls: ["listview/item-swipe/listview-item-swipe.component.css"]
+    templateUrl: "listview-item-swipe.component.html",
+    styleUrls: ["listview-item-swipe.component.css"]
 })
 // >> angular-listview-item-swipe-component
 export class ListViewItemSwipeComponent implements OnInit {

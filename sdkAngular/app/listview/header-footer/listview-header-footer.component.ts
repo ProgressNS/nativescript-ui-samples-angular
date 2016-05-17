@@ -4,10 +4,11 @@ import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 
 @Component({
+    moduleId: module.id,
     selector: "listview-header-footer",
     providers: [DataItemService],
-    templateUrl: "listview/header-footer/listview-header-footer.component.html",
-    styleUrls: ["listview/header-footer/listview-header-footer.component.css"]
+    templateUrl: "listview-header-footer.component.html",
+    styleUrls: ["listview-header-footer.component.css"]
 })
 export class ListViewHeaderFooterComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;

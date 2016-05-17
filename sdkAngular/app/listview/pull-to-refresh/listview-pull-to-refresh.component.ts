@@ -7,9 +7,10 @@ import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
+    moduleId: module.id,
     selector: "listview-pull-to-refresh",
-    templateUrl: "listview/pull-to-refresh/listview-pull-to-refresh.component.html",
-    styleUrls: ["listview/pull-to-refresh/listview-pull-to-refresh.component.css"]
+    templateUrl: "listview-pull-to-refresh.component.html",
+    styleUrls: ["listview-pull-to-refresh.component.css"]
 })
 // >> angular-listview-pull-to-refresh-code
 export class ListViewPullToRefreshComponent implements OnInit {

@@ -6,9 +6,10 @@ import { Router, RouteParams } from "@angular/router-deprecated";
 import * as FrameModule from "ui/frame";
 
 @Component({
+    moduleId: module.id,
     selector: "examples",
-    templateUrl: "navigation/examples-list/examples-list.component.html",
-    styleUrls: ["navigation/examples-list/examples-list.component.css"]
+    templateUrl: "examples-list.component.html",
+    styleUrls: ["examples-list.component.css"]
 })
 export class ExamplesListComponent implements OnInit {
     private _currentExample: ExampleItem;
@@ -36,7 +37,7 @@ export class ExamplesListComponent implements OnInit {
         var tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigate([tappedItem.path]);
     }
-    
+
     public onNavigationButtonTap() {
         FrameModule.topmost().goBack();
     }

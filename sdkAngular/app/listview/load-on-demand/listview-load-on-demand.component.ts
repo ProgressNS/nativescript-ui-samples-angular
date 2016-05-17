@@ -7,9 +7,10 @@ import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
+    moduleId: module.id,
     selector: "listview-load-on-demand",
-    templateUrl: "listview/load-on-demand/listview-load-on-demand.component.html",
-    styleUrls: ["listview/load-on-demand/listview-load-on-demand.component.css"]
+    templateUrl: "listview-load-on-demand.component.html",
+    styleUrls: ["listview-load-on-demand.component.css"]
 })
 // >> angular-listview-load-on-demand-code
 export class ListViewLoadOnDemandComponent implements OnInit {

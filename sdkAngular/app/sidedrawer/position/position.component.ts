@@ -8,11 +8,12 @@ import * as DependencyObservableModule from "ui/core/dependency-observable";
 import * as ProxyModule from"ui/core/proxy";
 
 @Component({
+    moduleId: module.id,
     selector: "sidedrawer-position",
     providers: [DataService],
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/position/position.component.html',
-    styleUrls: ["sidedrawer/position/position.component.css"]
+    templateUrl: 'position.component.html',
+    styleUrls: ["position.component.css"]
 })
 // >> sidedrawer-angular-position-code
 export class SidedrawerPositionComponent extends DependencyObservableModule.DependencyObservable implements OnInit {

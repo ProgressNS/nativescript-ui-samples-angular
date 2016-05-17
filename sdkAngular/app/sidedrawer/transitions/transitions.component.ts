@@ -7,10 +7,11 @@ import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 
 @Component({
+    moduleId: module.id,
     selector: "sidedrawer-transitions",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/transitions/transitions.component.html',
-    styleUrls: ['sidedrawer/transitions/transitions.component.css']
+    templateUrl: 'transitions.component.html',
+    styleUrls: ['transitions.component.css']
 })
 // >> sidedrawer-angular-transition-definition
 export class SidedrawerPositionComponent implements OnInit {

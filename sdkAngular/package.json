@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"fresco": "file:deps/fresco-0.1.0.tgz",
-		"nativescript-angular": "0.1.2",
+		"nativescript-angular": "0.1.6",
 		"nativescript-intl": "^0.0.2",
 		"nativescript-telerik-ui-pro": "1.1.1",
 		"nativescript-unit-test-runner": "^0.3.2",

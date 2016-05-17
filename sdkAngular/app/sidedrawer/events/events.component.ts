@@ -8,10 +8,11 @@ import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTe
 
 // >> sidedrawer-angular-callbacks-definition
 @Component({
+    moduleId: module.id,
     selector: "sidedrawer-events",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/events/events.component.html',
-    styleUrls: ['sidedrawer/events/events.component.css']
+    templateUrl: 'events.component.html',
+    styleUrls: ['events.component.css']
 })
 export class SidedrawerEventsComponent implements OnInit {
     private _currentNotification: string;
