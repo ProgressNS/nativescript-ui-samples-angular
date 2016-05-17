@@ -3,6 +3,7 @@ import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import { Router, RouteParams } from "@angular/router-deprecated";
+import * as FrameModule from "ui/frame";
 
 @Component({
     selector: "examples",
@@ -34,5 +35,9 @@ export class ExamplesListComponent implements OnInit {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigate([tappedItem.path]);
+    }
+    
+    public onNavigationButtonTap() {
+        FrameModule.topmost().goBack();
     }
 }

@@ -2,7 +2,7 @@ import {ExampleItem} from './exampleItem';
 
 export var EXAMPLEITEMS: ExampleItem[] = [
     {
-        "title": "SDK Examples",
+        "title": "Angular SDK Examples",
         "path": "Controls",
         "subItems": [
             {

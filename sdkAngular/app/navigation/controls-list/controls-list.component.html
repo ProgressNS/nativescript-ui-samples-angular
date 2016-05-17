@@ -1,4 +1,5 @@
 <GridLayout rows="auto, *">
+    <ActionBar [title]="currentExample.title"></ActionBar>
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
         <template listItemTemplate let-item="item">
                 <StackLayout>
