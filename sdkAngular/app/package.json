@@ -1,6 +1,6 @@
 {
     "name": "nativescript-ui-angular2",
-    "main": "main.js",
+    "main": "app.js",
     "version": "1.0.0",
     "author": {
         "name": "Telerik",

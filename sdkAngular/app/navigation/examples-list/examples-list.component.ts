@@ -6,8 +6,8 @@ import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
     selector: "examples",
-    templateUrl: "main/examples-list/examples-list.component.html",
-    styleUrls: ["main/examples-list/examples-list.component.css"]
+    templateUrl: "navigation/examples-list/examples-list.component.html",
+    styleUrls: ["navigation/examples-list/examples-list.component.css"]
 })
 export class ExamplesListComponent implements OnInit {
     private _currentExample: ExampleItem;

@@ -18,7 +18,7 @@ import * as SideDrawerPosition from "../sidedrawer/position/position.component";
 import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.component";
 
 @Component({
-  selector: "main",
+  selector: "app",
   directives: [NS_ROUTER_DIRECTIVES],
   providers: [NS_ROUTER_PROVIDERS, ExampleItemService],
   template: "<page-router-outlet></page-router-outlet>"
@@ -38,7 +38,7 @@ import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.co
   { path: "/sidedrawer-position", component: SideDrawerPosition.SidedrawerPositionComponent, name: "SideDrawerPosition" },
   { path: "/sidedrawer-transitions", component: SideDrawerTransitions.SidedrawerPositionComponent, name: "SideDrawerTransitions" },
 ])
-export class MainComponent {
+export class AppComponent {
 
 }
 
@@ -48,7 +48,7 @@ export class MainComponent {
 //import { Component, OnInit } from "@angular/core";
 // import { Routes, Router, ROUTER_PROVIDERS } from "@angular/router";
 // @Component({
-//   selector: "main",
+//   selector: "app",
 //   directives: [NS_ROUTER_DIRECTIVES],
 //   providers: [ROUTER_PROVIDERS, NS_ROUTER_PROVIDERS, ExampleItemService],
 //   template: "<page-router-outlet></page-router-outlet>"
@@ -68,7 +68,7 @@ export class MainComponent {
 //   { path: "/sidedrawer-position", component: SideDrawerPosition.SidedrawerPositionComponent },
 //   { path: "/sidedrawer-transitions", component: SideDrawerTransitions.SidedrawerPositionComponent },
 // ])
-// export class MainComponent implements OnInit {
+// export class AppComponent implements OnInit {
 //   constructor(private router: Router) {
 
 //   }

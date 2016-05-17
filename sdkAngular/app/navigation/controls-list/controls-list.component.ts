@@ -6,8 +6,8 @@ import { Router, RouteParams } from "@angular/router-deprecated";
 
 @Component({
     selector: "controls",
-    templateUrl: "main/controls-list/controls-list.component.html",
-    styleUrls: ["main/controls-list/controls-list.component.css"]
+    templateUrl: "navigation/controls-list/controls-list.component.html",
+    styleUrls: ["navigation/controls-list/controls-list.component.css"]
 })
 export class ControlsListComponent implements OnInit {
     private _currentExample: ExampleItem;

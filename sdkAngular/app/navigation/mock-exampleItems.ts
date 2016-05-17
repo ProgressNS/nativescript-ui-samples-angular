@@ -3,53 +3,44 @@ import {ExampleItem} from './exampleItem';
 export var EXAMPLEITEMS: ExampleItem[] = [
     {
         "title": "SDK Examples",
-        "componenetName": "ControlsListComponent",
-        "path": "main/controlsList",
+        "path": "navigation/controlsList",
         "subItems": [
             {
                 "title": "ListView",
-                "componenetName": "ExamplesListComponent",
-                "path": "main/examplesList",
+                "path": "navigation/examplesList",
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "componenetName": "AppComponent",
                         "path": "ListviewGettingStarted",
                         "subItems": []
                     },
                     {
                         "title": "Header Footer",
-                        "componenetName": "AppComponent",
                         "path": "ListviewHeaderFooter",
                         "subItems": []
                     },
                     {
                         "title": "Item Reorder",
-                        "componenetName": "AppComponent",
                         "path": "ListviewItemReorder",
                         "subItems": []
                     },
                     {
                         "title": "Item Selection",
-                        "componenetName": "AppComponent",
                         "path": "ListviewItemSelection",
                         "subItems": []
                     },
                     {
                         "title": "Item Swipe",
-                        "componenetName": "AppComponent",
                         "path": "ListViewItemSwipe",
                         "subItems": []
                     },
                     {
                         "title": "Load on Demand",
-                        "componenetName": "AppComponent",
                         "path": "ListViewLoadOnDemand",
                         "subItems": []
                     },
                     {
                         "title": "Pull to Refresh",
-                        "componenetName": "AppComponent",
                         "path": "ListViewPullToRefresh",
                         "subItems": []
                     }
@@ -57,30 +48,25 @@ export var EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "SideDrawer",
-                "componenetName": "ExamplesListComponent",
-                "path": "main/controlsList",
+                "path": "navigation/controlsList",
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "componenetName": "AppComponent",
                         "path": "SideDrawerGettingStarted",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "componenetName": "AppComponent",
                         "path": "SideDrawerEvents",
                         "subItems": []
                     },
                     {
                         "title": "Position",
-                        "componenetName": "AppComponent",
                         "path": "SideDrawerPosition",
                         "subItems": []
                     },
                     {
                         "title": "Transitions",
-                        "componenetName": "AppComponent",
                         "path": "SideDrawerTransitions",
                         "subItems": []
                     }
