@@ -1,6 +1,6 @@
 <GridLayout rows="auto, *">
     <ActionBar [title]="currentExample.title">
-        <NavigationButton text="Go Back" icon="res://ic_arrow_back_black_24dp"  (tap)="onNavigationButtonTap()"></NavigationButton>
+        <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp"  (tap)="onNavigationButtonTap()"></NavigationButton>
     </ActionBar>
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
         <template listItemTemplate let-item="item">
