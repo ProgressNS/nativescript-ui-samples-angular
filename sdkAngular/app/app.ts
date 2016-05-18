@@ -4,6 +4,7 @@ import {FrescoDrawee} from "fresco/fresco";
 // >> using-global-directives
 import {SIDEDRAWER_PROVIDERS} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular/listview-directives';
+import {CALENDAR_PROVIDERS} from 'nativescript-telerik-ui-pro/calendar/angular/calendar-directives';
 import {AppComponent} from "./navigation/app.component";
 // >> (hide)
 import * as applicationModule from "application";
@@ -15,5 +16,5 @@ if (applicationModule.android) {
 }
 elementRegistry.registerElement("FrescoDrawee", () => FrescoDrawee);
 // << (hide)
-nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS]);
+nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS]);
 // << using-global-directives
