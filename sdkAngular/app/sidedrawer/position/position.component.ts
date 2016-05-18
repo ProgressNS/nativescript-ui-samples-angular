@@ -11,7 +11,6 @@ import * as ProxyModule from"ui/core/proxy";
     moduleId: module.id,
     selector: "sidedrawer-position",
     providers: [DataService],
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'position.component.html',
     styleUrls: ["position.component.css"]
 })

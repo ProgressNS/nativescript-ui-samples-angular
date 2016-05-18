@@ -10,7 +10,6 @@ import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTe
 @Component({
     moduleId: module.id,
     selector: "sidedrawer-getting-started",
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })

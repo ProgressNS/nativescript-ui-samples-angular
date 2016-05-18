@@ -10,7 +10,6 @@ import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTe
 @Component({
     moduleId: module.id,
     selector: "sidedrawer-events",
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'events.component.html',
     styleUrls: ['events.component.css']
 })

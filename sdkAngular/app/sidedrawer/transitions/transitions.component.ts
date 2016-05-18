@@ -9,7 +9,6 @@ import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTem
 @Component({
     moduleId: module.id,
     selector: "sidedrawer-transitions",
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'transitions.component.html',
     styleUrls: ['transitions.component.css']
 })
