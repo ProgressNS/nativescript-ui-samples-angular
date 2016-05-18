@@ -1,0 +1,10 @@
+<GridLayout rows="*, 100" orientation="vertical">
+    <RadCalendar [eventSource]="eventSource" (dateSelected)="onDateSelected($event)" row="0"></RadCalendar>
+    <ListView [items]="myItems" rowHeight="44" row="1" >
+        <template let-item="item">
+            <StackLayout class="listRow">
+                <Label [text]="item.title"></Label>      
+            </StackLayout>      
+        </template>
+    </ListView>
+</GridLayout>

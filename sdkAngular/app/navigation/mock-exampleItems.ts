@@ -80,6 +80,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Getting Started",
                         "path": "CalendarGettingStarted",
                         "subItems": []
+                    },
+                    {
+                        "title": "Populating with data",
+                        "path": "CalendarPopulatingWithData",
+                        "subItems": []
                     }
                 ]
             }]
