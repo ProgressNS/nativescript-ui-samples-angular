@@ -9,7 +9,7 @@
 		"url": "git@github.com/telerik/nativescript-ui-samples-angular.git"
 	},
 	"nativescript": {
-		"id": "org.nativescript.devenv",
+		"id": "org.nativescript.sdkAngular",
 		"tns-ios": {
 			"version": "2.0.0"
 		},
