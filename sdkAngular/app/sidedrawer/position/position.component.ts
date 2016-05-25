@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
 import { Page } from "ui/page";
 import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
-import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective } from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
+import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { ObservableArray } from "data/observable-array";
 import { DataService } from "../data.service";
 import * as DependencyObservableModule from "ui/core/dependency-observable";
@@ -11,7 +11,6 @@ import * as ProxyModule from"ui/core/proxy";
     moduleId: module.id,
     selector: "sidedrawer-position",
     providers: [DataService],
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'position.component.html',
     styleUrls: ["position.component.css"]
 })

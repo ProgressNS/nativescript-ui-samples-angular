@@ -5,12 +5,11 @@ import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import * as ObservableModule from "data/observable";
-import { RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective } from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
+import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 @Component({
     moduleId: module.id,
     selector: "sidedrawer-getting-started",
-    directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })

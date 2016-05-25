@@ -2,9 +2,9 @@ import {nativeScriptBootstrap} from "nativescript-angular/application";
 import elementRegistry = require('nativescript-angular/element-registry');
 import {FrescoDrawee} from "fresco/fresco";
 // >> using-global-directives
-import {SIDEDRAWER_PROVIDERS} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
-import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular/listview-directives';
-import {CALENDAR_PROVIDERS} from 'nativescript-telerik-ui-pro/calendar/angular/calendar-directives';
+import {SIDEDRAWER_PROVIDERS} from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular';
+import {CALENDAR_PROVIDERS} from 'nativescript-telerik-ui-pro/calendar/angular';
 import {AppComponent} from "./navigation/app.component";
 // >> (hide)
 import * as applicationModule from "application";
