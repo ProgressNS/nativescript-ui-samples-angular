@@ -4,7 +4,7 @@ import {FrescoDrawee} from "fresco/fresco";
 // >> using-global-directives
 import {SIDEDRAWER_PROVIDERS} from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui-pro/listview/angular';
-import {CALENDAR_PROVIDERS} from 'nativescript-telerik-ui-pro/calendar/angular/calendar-directives';
+import {CALENDAR_PROVIDERS} from 'nativescript-telerik-ui-pro/calendar/angular';
 import {AppComponent} from "./navigation/app.component";
 // >> (hide)
 import * as applicationModule from "application";
