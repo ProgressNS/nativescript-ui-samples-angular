@@ -4,27 +4,31 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-programatic-control",
-    templateUrl: "calendar-programatic-control.component.html"
+    selector: "calendar-view-modes",
+    templateUrl: "calendar-view-modes.component.html"
 })
-export class RadCalendarProgramaticControlComponent {
+export class RadCalendarViewModesComponent {
     
     constructor(@Inject(Page) private _page: Page) {
     }
     
-    onNavigateForwardTap() {
+    onYearTap() {
         var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.navigateForward();
+        calendar.viewMode = calendarModule.CalendarViewMode.Year;
     }
     
-    onNavigateBackTap() {
+    onMonthNamesTap() {
         var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.navigateBack();
+        calendar.viewMode = calendarModule.CalendarViewMode.MonthNames;
     }
     
-    onGoToDateTap() {
-        var date = new Date();
+    onMonthTap() { 
         var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.goToDate(date);
+        calendar.viewMode = calendarModule.CalendarViewMode.Month;
+    }
+    
+    onWeekTap() {
+        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+        calendar.viewMode = calendarModule.CalendarViewMode.Week;
     }
 }

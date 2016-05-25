@@ -90,6 +90,16 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Programatic control",
                         "path": "CalendarProgramaticControl",
                         "subItems": []
+                    },
+                    {
+                        "title": "View modes",
+                        "path": "CalendarViewModes",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Selection modes",
+                        "path": "CalendarSelectionModes",
+                        "subItems": []
                     }
                 ]
             }]
