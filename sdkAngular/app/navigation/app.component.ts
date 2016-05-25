@@ -18,6 +18,7 @@ import * as SideDrawerPosition from "../sidedrawer/position/position.component";
 import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.component";
 import * as CalendarGettingStarted from "../calendar/getting-started/calendar-getting-started.component";
 import * as CalendarPopulatingWithData from "../calendar/populating-with-data/calendar-populating-with-data.component";
+import * as CalendarProgramaticControl from "../calendar/programatic-control/calendar-programatic-control.component";
 @Component({
   selector: "app",
   directives: [NS_ROUTER_DIRECTIVES],
@@ -40,6 +41,7 @@ import * as CalendarPopulatingWithData from "../calendar/populating-with-data/ca
   { path: "/sidedrawer-transitions", component: SideDrawerTransitions.SidedrawerPositionComponent, name: "SideDrawerTransitions" },
   { path: "/calendar-getting-started", component: CalendarGettingStarted.RadCalendarGettingStartedComponent, name: "CalendarGettingStarted" },
   { path: "/calendar-populating-with-data", component: CalendarPopulatingWithData.RadCalendarPopulatingWithDataComponent, name: "CalendarPopulatingWithData" },
+  { path: "/calendar-programatic-control", component: CalendarProgramaticControl.RadCalendarProgramaticControlComponent, name: "CalendarProgramaticControl" },
 ])
 export class AppComponent {
 

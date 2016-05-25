@@ -85,6 +85,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Populating with data",
                         "path": "CalendarPopulatingWithData",
                         "subItems": []
+                    },
+                    {
+                        "title": "Programatic control",
+                        "path": "CalendarProgramaticControl",
+                        "subItems": []
                     }
                 ]
             }]
