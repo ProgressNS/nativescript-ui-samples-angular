@@ -16,7 +16,7 @@ import { ExampleComponent } from "./example/example.component";
  @RouteConfig([
   { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
   { path: "/examples", component: ExamplesListComponent, name: "Examples" },
-  { path: "/example", component: ExampleComponent, name: "Example" },
+  { path: "/example", component: ExampleComponent, name: "Example" }
 ])
 export class AppComponent {
 
