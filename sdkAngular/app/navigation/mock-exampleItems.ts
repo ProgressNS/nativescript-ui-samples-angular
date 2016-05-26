@@ -100,6 +100,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Selection modes",
                         "path": "CalendarSelectionModes",
                         "subItems": []
+                    },
+                    {
+                        "title": "Transition modes",
+                        "path": "CalendarTransitionModes",
+                        "subItems": []
                     }
                 ]
             }]

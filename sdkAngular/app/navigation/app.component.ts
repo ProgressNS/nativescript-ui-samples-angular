@@ -21,6 +21,7 @@ import * as CalendarPopulatingWithData from "../calendar/populating-with-data/ca
 import * as CalendarProgramaticControl from "../calendar/programatic-control/calendar-programatic-control.component";
 import * as CalendarViewModes from "../calendar/view-modes/calendar-view-modes.component";
 import * as CalendarSelectionModes from "../calendar/selection-modes/calendar-selection-modes.component";
+import * as CalendarTransitionModes from "../calendar/transition-modes/calendar-transition-modes.component";
 @Component({
   selector: "app",
   directives: [NS_ROUTER_DIRECTIVES],
@@ -46,6 +47,7 @@ import * as CalendarSelectionModes from "../calendar/selection-modes/calendar-se
   { path: "/calendar-programatic-control", component: CalendarProgramaticControl.RadCalendarProgramaticControlComponent, name: "CalendarProgramaticControl" },
   { path: "/calendar-view-modes", component: CalendarViewModes.RadCalendarViewModesComponent, name: "CalendarViewModes" },
   { path: "/calendar-selection-modes", component: CalendarSelectionModes.RadCalendarSelectionModesComponent, name: "CalendarSelectionModes" },
+  { path: "/calendar-transition-modes", component: CalendarTransitionModes.RadCalendarTransitionModesComponent, name: "CalendarTransitionModes" },
 ])
 export class AppComponent {
 
