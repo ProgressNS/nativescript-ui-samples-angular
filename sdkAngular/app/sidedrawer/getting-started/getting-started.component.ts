@@ -13,7 +13,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })
-export class SidedrawerGettingStartedComponent extends ObservableModule.Observable implements OnInit {
+export class SideDrawerGettingStartedComponent extends ObservableModule.Observable implements OnInit {
     constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
         super();
     }
