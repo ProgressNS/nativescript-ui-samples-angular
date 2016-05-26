@@ -12,15 +12,15 @@ import { ListViewItemSelectionComponent } from "../listview/item-selection/listv
 import { ListViewItemSwipeComponent } from "../listview/item-swipe/listview-item-swipe.component";
 import { ListViewLoadOnDemandComponent } from "../listview/load-on-demand/listview-load-on-demand.component";
 import { ListViewPullToRefreshComponent } from "../listview/pull-to-refresh/listview-pull-to-refresh.component";
-import { SidedrawerGettingStartedComponent } from "../sidedrawer/getting-started/getting-started.component";
-import { SidedrawerEventsComponent } from "../sidedrawer/events/events.component";
-import { SidedrawerPositionComponent } from "../sidedrawer/position/position.component";
-import { SidedrawerTransitionsComponent } from "../sidedrawer/transitions/transitions.component";
-import { RadCalendarGettingStartedComponent } from "../calendar/getting-started/calendar-getting-started.component";
-import { RadCalendarPopulatingWithDataComponent } from "../calendar/populating-with-data/calendar-populating-with-data.component";
-import { RadCalendarProgramaticControlComponent } from "../calendar/programatic-control/calendar-programatic-control.component";
-import { RadCalendarViewModesComponent } from "../calendar/view-modes/calendar-view-modes.component";
-import { RadCalendarSelectionModesComponent } from "../calendar/selection-modes/calendar-selection-modes.component";
+import { SideDrawerGettingStartedComponent } from "../sidedrawer/getting-started/getting-started.component";
+import { SideDrawerEventsComponent } from "../sidedrawer/events/events.component";
+import { SideDrawerPositionComponent } from "../sidedrawer/position/position.component";
+import { SideDrawerTransitionsComponent } from "../sidedrawer/transitions/transitions.component";
+import { CalendarGettingStartedComponent } from "../calendar/getting-started/calendar-getting-started.component";
+import { CalendarPopulatingWithDataComponent } from "../calendar/populating-with-data/calendar-populating-with-data.component";
+import { CalendarProgramaticControlComponent } from "../calendar/programatic-control/calendar-programatic-control.component";
+import { CalendarViewModesComponent } from "../calendar/view-modes/calendar-view-modes.component";
+import { CalendarSelectionModesComponent } from "../calendar/selection-modes/calendar-selection-modes.component";
 
 @Component({
   selector: "app",
@@ -28,7 +28,7 @@ import { RadCalendarSelectionModesComponent } from "../calendar/selection-modes/
   providers: [NS_ROUTER_PROVIDERS, ExampleItemService],
   template: "<page-router-outlet></page-router-outlet>"
 })
- @RouteConfig([
+@RouteConfig([
   { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
   { path: "/examples", component: ExamplesListComponent, name: "Examples" },
   { path: "/listview-getting-started", component: ListViewGettingStartedComponent, name: "ListviewGettingStarted" },
@@ -38,15 +38,15 @@ import { RadCalendarSelectionModesComponent } from "../calendar/selection-modes/
   { path: "/listview-item-swipe", component: ListViewItemSwipeComponent, name: "ListViewItemSwipe" },
   { path: "/listview-load-on-demand", component: ListViewLoadOnDemandComponent, name: "ListViewLoadOnDemand" },
   { path: "/listview-pull-to-refresh", component: ListViewPullToRefreshComponent, name: "ListViewPullToRefresh" },
-  { path: "/sidedrawer-getting-started", component: SidedrawerGettingStartedComponent, name: "SideDrawerGettingStarted" },
-  { path: "/sidedrawer-events", component: SidedrawerEventsComponent, name: "SideDrawerEvents" },
-  { path: "/sidedrawer-position", component: SidedrawerPositionComponent, name: "SideDrawerPosition" },
-  { path: "/sidedrawer-transitions", component: SidedrawerTransitionsComponent, name: "SideDrawerTransitions" },
-  { path: "/calendar-getting-started", component: RadCalendarGettingStartedComponent, name: "CalendarGettingStarted" },
-  { path: "/calendar-populating-with-data", component: RadCalendarPopulatingWithDataComponent, name: "CalendarPopulatingWithData" },
-  { path: "/calendar-programatic-control", component: RadCalendarProgramaticControlComponent, name: "CalendarProgramaticControl" },
-  { path: "/calendar-view-modes", component: RadCalendarViewModesComponent, name: "CalendarViewModes" },
-  { path: "/calendar-selection-modes", component: RadCalendarSelectionModesComponent, name: "CalendarSelectionModes" },
+  { path: "/sidedrawer-getting-started", component: SideDrawerGettingStartedComponent, name: "SideDrawerGettingStarted" },
+  { path: "/sidedrawer-events", component: SideDrawerEventsComponent, name: "SideDrawerEvents" },
+  { path: "/sidedrawer-position", component: SideDrawerPositionComponent, name: "SideDrawerPosition" },
+  { path: "/sidedrawer-transitions", component: SideDrawerTransitionsComponent, name: "SideDrawerTransitions" },
+  { path: "/calendar-getting-started", component: CalendarGettingStartedComponent, name: "CalendarGettingStarted" },
+  { path: "/calendar-populating-with-data", component: CalendarPopulatingWithDataComponent, name: "CalendarPopulatingWithData" },
+  { path: "/calendar-programatic-control", component: CalendarProgramaticControlComponent, name: "CalendarProgramaticControl" },
+  { path: "/calendar-view-modes", component: CalendarViewModesComponent, name: "CalendarViewModes" },
+  { path: "/calendar-selection-modes", component: CalendarSelectionModesComponent, name: "CalendarSelectionModes" }
 ])
 export class AppComponent {
 
@@ -82,7 +82,7 @@ export class AppComponent {
 //   constructor(private router: Router) {
 
 //   }
-  
+
 //   ngOnInit() {
 //     this.router.navigate(['/controls']);
 //   }
