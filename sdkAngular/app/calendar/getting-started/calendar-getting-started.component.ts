@@ -5,6 +5,6 @@ import {Component} from "@angular/core";
     selector: "calendar-getting-started",
     templateUrl: "calendar-getting-started.component.html"
 })
-export class RadCalendarGettingStartedComponent {
+export class CalendarGettingStartedComponent {
     constructor() {}
 }

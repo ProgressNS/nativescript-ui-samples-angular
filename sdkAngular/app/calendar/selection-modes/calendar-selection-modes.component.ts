@@ -7,7 +7,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-selection-modes",
     templateUrl: "calendar-selection-modes.component.html"
 })
-export class RadCalendarSelectionModesComponent {
+export class CalendarSelectionModesComponent {
     
     constructor(@Inject(Page) private _page: Page) {
     }
