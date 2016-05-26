@@ -5,22 +5,7 @@ import { RouteConfig } from "@angular/router-deprecated";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
 import { ControlsListComponent } from "./controls-list/controls-list.component";
 import { ExamplesListComponent } from "./examples-list/examples-list.component";
-import { ListViewGettingStartedComponent } from "../listview/getting-started/listview-getting-started.component";
-import { ListViewHeaderFooterComponent } from "../listview/header-footer/listview-header-footer.component";
-import { ListViewItemReorderComponent } from "../listview/item-reorder/listview-item-reorder.component";
-import { ListViewItemSelectionComponent } from "../listview/item-selection/listview-item-selection.component";
-import { ListViewItemSwipeComponent } from "../listview/item-swipe/listview-item-swipe.component";
-import { ListViewLoadOnDemandComponent } from "../listview/load-on-demand/listview-load-on-demand.component";
-import { ListViewPullToRefreshComponent } from "../listview/pull-to-refresh/listview-pull-to-refresh.component";
-import { SideDrawerGettingStartedComponent } from "../sidedrawer/getting-started/getting-started.component";
-import { SideDrawerEventsComponent } from "../sidedrawer/events/events.component";
-import { SideDrawerPositionComponent } from "../sidedrawer/position/position.component";
-import { SideDrawerTransitionsComponent } from "../sidedrawer/transitions/transitions.component";
-import { CalendarGettingStartedComponent } from "../calendar/getting-started/calendar-getting-started.component";
-import { CalendarPopulatingWithDataComponent } from "../calendar/populating-with-data/calendar-populating-with-data.component";
-import { CalendarProgramaticControlComponent } from "../calendar/programatic-control/calendar-programatic-control.component";
-import { CalendarViewModesComponent } from "../calendar/view-modes/calendar-view-modes.component";
-import { CalendarSelectionModesComponent } from "../calendar/selection-modes/calendar-selection-modes.component";
+import { ExampleComponent } from "./example/example.component";
 
 @Component({
   selector: "app",
@@ -28,25 +13,10 @@ import { CalendarSelectionModesComponent } from "../calendar/selection-modes/cal
   providers: [NS_ROUTER_PROVIDERS, ExampleItemService],
   template: "<page-router-outlet></page-router-outlet>"
 })
-@RouteConfig([
+ @RouteConfig([
   { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
   { path: "/examples", component: ExamplesListComponent, name: "Examples" },
-  { path: "/listview-getting-started", component: ListViewGettingStartedComponent, name: "ListviewGettingStarted" },
-  { path: "/listview-header-footer", component: ListViewHeaderFooterComponent, name: "ListviewHeaderFooter" },
-  { path: "/listview-item-reorder", component: ListViewItemReorderComponent, name: "ListviewItemReorder" },
-  { path: "/listview-item-selection", component: ListViewItemSelectionComponent, name: "ListviewItemSelection" },
-  { path: "/listview-item-swipe", component: ListViewItemSwipeComponent, name: "ListViewItemSwipe" },
-  { path: "/listview-load-on-demand", component: ListViewLoadOnDemandComponent, name: "ListViewLoadOnDemand" },
-  { path: "/listview-pull-to-refresh", component: ListViewPullToRefreshComponent, name: "ListViewPullToRefresh" },
-  { path: "/sidedrawer-getting-started", component: SideDrawerGettingStartedComponent, name: "SideDrawerGettingStarted" },
-  { path: "/sidedrawer-events", component: SideDrawerEventsComponent, name: "SideDrawerEvents" },
-  { path: "/sidedrawer-position", component: SideDrawerPositionComponent, name: "SideDrawerPosition" },
-  { path: "/sidedrawer-transitions", component: SideDrawerTransitionsComponent, name: "SideDrawerTransitions" },
-  { path: "/calendar-getting-started", component: CalendarGettingStartedComponent, name: "CalendarGettingStarted" },
-  { path: "/calendar-populating-with-data", component: CalendarPopulatingWithDataComponent, name: "CalendarPopulatingWithData" },
-  { path: "/calendar-programatic-control", component: CalendarProgramaticControlComponent, name: "CalendarProgramaticControl" },
-  { path: "/calendar-view-modes", component: CalendarViewModesComponent, name: "CalendarViewModes" },
-  { path: "/calendar-selection-modes", component: CalendarSelectionModesComponent, name: "CalendarSelectionModes" }
+  { path: "/example", component: ExampleComponent, name: "Example" },
 ])
 export class AppComponent {
 
@@ -82,7 +52,7 @@ export class AppComponent {
 //   constructor(private router: Router) {
 
 //   }
-
+  
 //   ngOnInit() {
 //     this.router.navigate(['/controls']);
 //   }

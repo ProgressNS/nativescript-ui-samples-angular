@@ -7,11 +7,11 @@ import * as FrameModule from "ui/frame";
 
 @Component({
     moduleId: module.id,
-    selector: "examples",
-    templateUrl: "examples-list.component.html",
-    styleUrls: ["examples-list.component.css"]
+    selector: "options",
+    templateUrl: "options.component.html",
+    styleUrls: ["options.component.css"]
 })
-export class ExamplesListComponent implements OnInit {
+export class OptionsComponent implements OnInit {
     private _currentExample: ExampleItem;
 
     constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService) {
@@ -34,7 +34,7 @@ export class ExamplesListComponent implements OnInit {
 
     public onNavigationItemTap(args) {
         var itemIndex = args.itemIndex;
-        var tappedItem = this._currentExample.subItems[itemIndex];
+        let tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigate(["Example", { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title }]);
     }
 
