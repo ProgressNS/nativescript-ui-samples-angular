@@ -3,8 +3,8 @@ import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import { Router, RouteParams } from "@angular/router-deprecated";
-import { ActionBar } from "ui/action-bar";
-import * as FrameModule from "ui/frame";
+import { StackLayout } from "ui/layouts/stack-layout";
+import * as frameModule from "ui/frame";
 
 import { ControlsListComponent } from "../controls-list/controls-list.component";
 import { ExamplesListComponent } from "../examples-list/examples-list.component";
@@ -24,7 +24,6 @@ import { CalendarPopulatingWithDataComponent } from "../../calendar/populating-w
 import { CalendarProgramaticControlComponent } from "../../calendar/programatic-control/calendar-programatic-control.component";
 import { CalendarViewModesComponent } from "../../calendar/view-modes/calendar-view-modes.component";
 import { CalendarSelectionModesComponent } from "../../calendar/selection-modes/calendar-selection-modes.component";
-import { CalendarTransitionModesComponent } from "../../calendar/transition-modes/calendar-transition-modes.component";
 
 @Component({
     moduleId: module.id,
@@ -34,11 +33,11 @@ import { CalendarTransitionModesComponent } from "../../calendar/transition-mode
 export class ExampleComponent implements OnInit {
     private _currentExample: ExampleItem;
 
-    constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService, private loader: DynamicComponentLoader) {
 
+    constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService, private loader: DynamicComponentLoader) {
     }
 
-    @ViewChild('actionBar', { read: ViewContainerRef }) actionBar: ViewContainerRef;
+    @ViewChild('labelPlaceholder', { read: ViewContainerRef }) labelPlaceholder: ViewContainerRef;
 
     ngOnInit() {
         var parentTitle = this._routeParams.get('parentTitle');
@@ -47,63 +46,61 @@ export class ExampleComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-        // Loads the current example component.
+        //Loads the current example component.
         switch (this.currentExample.path) {
             case "Controls":
-                this.loader.loadNextToLocation(ControlsListComponent, this.actionBar);
+                this.loader.loadNextToLocation(ControlsListComponent, this.labelPlaceholder);
                 break;
             case "Examples":
-                this.loader.loadNextToLocation(ExamplesListComponent, this.actionBar);
+                this.loader.loadNextToLocation(ExamplesListComponent, this.labelPlaceholder);
                 break;
             case "ListViewGettingStarted":
-                this.loader.loadNextToLocation(ListViewGettingStartedComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewGettingStartedComponent, this.labelPlaceholder);
                 break;
             case "ListViewHeaderFooter":
-                this.loader.loadNextToLocation(ListViewHeaderFooterComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewHeaderFooterComponent, this.labelPlaceholder);
                 break;
             case "ListViewItemReorder":
-                this.loader.loadNextToLocation(ListViewItemReorderComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewItemReorderComponent, this.labelPlaceholder);
                 break;
             case "ListViewItemSelection":
-                this.loader.loadNextToLocation(ListViewItemSelectionComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewItemSelectionComponent, this.labelPlaceholder);
                 break;
             case "ListViewItemSwipe":
-                this.loader.loadNextToLocation(ListViewItemSwipeComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewItemSwipeComponent, this.labelPlaceholder);
                 break;
             case "ListViewLoadOnDemand":
-                this.loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.labelPlaceholder);
                 break;
             case "ListViewPullToRefresh":
-                this.loader.loadNextToLocation(ListViewPullToRefreshComponent, this.actionBar);
+                this.loader.loadNextToLocation(ListViewPullToRefreshComponent, this.labelPlaceholder);
                 break;
             case "SideDrawerGettingStarted":
-                this.loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.actionBar);
+                this.loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.labelPlaceholder);
                 break;
             case "SideDrawerEvents":
-                this.loader.loadNextToLocation(SideDrawerEventsComponent, this.actionBar);
+                this.loader.loadNextToLocation(SideDrawerEventsComponent, this.labelPlaceholder);
                 break;
             case "SideDrawerPosition":
-                this.loader.loadNextToLocation(SideDrawerPositionComponent, this.actionBar);
+                this.loader.loadNextToLocation(SideDrawerPositionComponent, this.labelPlaceholder);
                 break;
             case "SideDrawerTransitions":
-                this.loader.loadNextToLocation(SideDrawerTransitionsComponent, this.actionBar);
+                this.loader.loadNextToLocation(SideDrawerTransitionsComponent, this.labelPlaceholder);
                 break;
             case "CalendarGettingStarted":
-                this.loader.loadNextToLocation(CalendarGettingStartedComponent, this.actionBar);
+                this.loader.loadNextToLocation(CalendarGettingStartedComponent, this.labelPlaceholder);
                 break;
             case "CalendarPopulatingWithData":
-                this.loader.loadNextToLocation(CalendarPopulatingWithDataComponent, this.actionBar);
+                this.loader.loadNextToLocation(CalendarPopulatingWithDataComponent, this.labelPlaceholder);
                 break;
             case "CalendarProgramaticControl":
-                this.loader.loadNextToLocation(CalendarProgramaticControlComponent, this.actionBar);
+                this.loader.loadNextToLocation(CalendarProgramaticControlComponent, this.labelPlaceholder);
                 break;
             case "CalendarViewModes":
-                this.loader.loadNextToLocation(CalendarViewModesComponent, this.actionBar);
+                this.loader.loadNextToLocation(CalendarViewModesComponent, this.labelPlaceholder);
                 break;
             case "CalendarSelectionModes":
-                this.loader.loadNextToLocation(CalendarSelectionModesComponent, this.actionBar);
-            case "CalendarTransitionModes":
-                this.loader.loadNextToLocation(CalendarTransitionModesComponent, this.actionBar);
+                this.loader.loadNextToLocation(CalendarSelectionModesComponent, this.labelPlaceholder);
             default:
                 return null;
         }
@@ -113,11 +110,12 @@ export class ExampleComponent implements OnInit {
         return this._currentExample;
     }
 
+
     public set currentExample(value: ExampleItem) {
         this._currentExample = value;
     }
 
     public onNavigationButtonTap() {
-        FrameModule.topmost().goBack();
+        frameModule.topmost().goBack();
     }
 }
