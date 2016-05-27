@@ -6,6 +6,7 @@ import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/
 import { ControlsListComponent } from "./controls-list/controls-list.component";
 import { ExamplesListComponent } from "./examples-list/examples-list.component";
 import { ExampleComponent } from "./example/example.component";
+import { OptionsComponent } from "./options/options.component";
 
 @Component({
   selector: "app",
@@ -16,7 +17,8 @@ import { ExampleComponent } from "./example/example.component";
  @RouteConfig([
   { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
   { path: "/examples", component: ExamplesListComponent, name: "Examples" },
-  { path: "/example", component: ExampleComponent, name: "Example" }
+  { path: "/example", component: ExampleComponent, name: "Example" },
+  { path: "/options", component: OptionsComponent, name: "Options" }
 ])
 export class AppComponent {
 
