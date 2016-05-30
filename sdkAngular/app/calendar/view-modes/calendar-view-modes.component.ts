@@ -18,41 +18,30 @@ export class CalendarViewModesComponent {
 
     constructor( @Inject(Page) private _page: Page, private _router: Router, private _optionsService: OptionsService) {
         this._page.on("loaded", this.onLoaded, this);
-        
+
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "viewMode";
             this._optionsService.paramName = this._optionsParamName;
+            this._selectedIndex = 0;
         }
     }
 
     onWeekTap() {
         this._calendar.viewMode = CalendarViewMode.Week;
-        if (applicationModule.ios) {
-            this._selectedIndex = 0;
-        }
     }
 
     onMonthTap() {
         this._calendar.viewMode = CalendarViewMode.Month;
-        if (applicationModule.ios) {
-            this._selectedIndex = 1;
-        }
     }
 
 
     onMonthNamesTap() {
         this._calendar.viewMode = CalendarViewMode.MonthNames;
-        if (applicationModule.ios) {
-            this._selectedIndex = 2;
-        }
     }
 
     onYearTap() {
         this._calendar.viewMode = CalendarViewMode.Year;
-        if (applicationModule.ios) {
-            this._selectedIndex = 3;
-        }
     }
 
     public onLoaded() {
@@ -66,15 +55,20 @@ export class CalendarViewModesComponent {
                 switch (this._optionsService.paramValue) {
                     case "Week":
                         this._calendar.viewMode = CalendarViewMode.Week;
+                        this._selectedIndex = 0;
                         break;
                     case "Month":
                         this._calendar.viewMode = CalendarViewMode.Month;
+                        this._selectedIndex = 1;
                         break;
                     case "Month names":
                         this._calendar.viewMode = CalendarViewMode.MonthNames;
+                        this._selectedIndex = 2;
                         break;
                     case "Year":
                         this._calendar.viewMode = CalendarViewMode.Year;
+                        this._selectedIndex = 3;
+                        break;
                     default:
                         break;
                 }
