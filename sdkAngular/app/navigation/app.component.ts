@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItemService } from "./exampleItemService.service";
+import { OptionsService } from "./options/options.service";
 import { RouteConfig } from "@angular/router-deprecated";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
 import { ControlsListComponent } from "./controls-list/controls-list.component";
@@ -11,7 +12,7 @@ import { OptionsComponent } from "./options/options.component";
 @Component({
   selector: "app",
   directives: [NS_ROUTER_DIRECTIVES],
-  providers: [NS_ROUTER_PROVIDERS, ExampleItemService],
+  providers: [NS_ROUTER_PROVIDERS, ExampleItemService, OptionsService],
   template: "<page-router-outlet></page-router-outlet>"
 })
  @RouteConfig([
