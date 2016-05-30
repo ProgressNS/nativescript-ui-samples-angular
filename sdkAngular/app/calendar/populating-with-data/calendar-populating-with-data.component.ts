@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {EventsService} from "../events.service";
+import {CalendarService} from "../calendar.service";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 @Component({
@@ -7,14 +7,14 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-populating-with-data",
     templateUrl: "calendar-populating-with-data.component.html",
     styleUrls: ["calendar-populating-with-data.component.css"],
-    providers: [EventsService]
+    providers: [CalendarService]
 })
 
 export class RadCalendarPopulatingWithDataComponent implements OnInit {
     private _events: Array<calendarModule.CalendarEvent>;
     private _listItems: Array<calendarModule.CalendarEvent>;
     
-    constructor(private _eventsService: EventsService) {
+    constructor(private _calendarService: CalendarService) {
         
     }
     
@@ -31,7 +31,7 @@ export class RadCalendarPopulatingWithDataComponent implements OnInit {
     }
     
     ngOnInit() {
-        this._events = this._eventsService.getCalendarEvents();
+        this._events = this._calendarService.getCalendarEvents();
     }
     
     onDateSelected(args: calendarModule.CalendarSelectionEventData) {
