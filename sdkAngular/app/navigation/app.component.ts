@@ -23,6 +23,7 @@ import * as CalendarViewModes from "../calendar/view-modes/calendar-view-modes.c
 import * as CalendarSelectionModes from "../calendar/selection-modes/calendar-selection-modes.component";
 import * as CalendarTransitionModes from "../calendar/transition-modes/calendar-transition-modes.component";
 import * as CalendarCellStyling from "../calendar/cell-styling/calendar-cell-styling.component";
+import * as CalendarEventsViewModes from "../calendar/events-view-modes/calendar-events-view-modes.component";
 
 @Component({
   selector: "app",
@@ -50,7 +51,8 @@ import * as CalendarCellStyling from "../calendar/cell-styling/calendar-cell-sty
   { path: "/calendar-view-modes", component: CalendarViewModes.RadCalendarViewModesComponent, name: "CalendarViewModes" },
   { path: "/calendar-selection-modes", component: CalendarSelectionModes.RadCalendarSelectionModesComponent, name: "CalendarSelectionModes" },
   { path: "/calendar-transition-modes", component: CalendarTransitionModes.RadCalendarTransitionModesComponent, name: "CalendarTransitionModes" },
-  { path: "/calendar-cell-styling", component: CalendarCellStyling.RadCalendarCellStylingComponent, name: "CalendarCellStyling" }
+  { path: "/calendar-cell-styling", component: CalendarCellStyling.CalendarCellStylingComponent, name: "CalendarCellStyling" },
+  { path: "/calendar-events-view-modes", component: CalendarEventsViewModes.CalendarEventsViewModes, name: "CalendarEventsViewModes" }
 ])
 export class AppComponent {
 

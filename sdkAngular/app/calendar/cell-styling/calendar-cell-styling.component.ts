@@ -9,7 +9,7 @@ import {CalendarService} from "../calendar.service";
     templateUrl: "calendar-cell-styling.component.html",
     providers:[CalendarService]
 })
-export class RadCalendarCellStylingComponent implements OnInit {
+export class CalendarCellStylingComponent implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     private _monthViewStyle: calendarModule.CalendarMonthViewStyle;
     private _weekViewStyle: calendarModule.CalendarWeekViewStyle;

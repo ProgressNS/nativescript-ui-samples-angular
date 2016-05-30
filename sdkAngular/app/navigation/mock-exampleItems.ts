@@ -110,6 +110,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Cell styling",
                         "path": "CalendarCellStyling",
                         "subItems": []
+                    },
+                    {
+                        "title": "Events view modes",
+                        "path": "CalendarEventsViewModes",
+                        "subItems": []
                     }
                 ]
             }]

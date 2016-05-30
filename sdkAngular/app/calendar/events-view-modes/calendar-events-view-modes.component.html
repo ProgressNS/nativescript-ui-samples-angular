@@ -1,0 +1,13 @@
+<GridLayout orientation="vertical" rows="*, auto">
+    <RadCalendar id="calendar" [eventSource]="eventSource" row="0"></RadCalendar>
+    <StackLayout row="1">
+        <Button text="None" (tap)="onNoneTap() "></Button>
+        <Button text="Inline " (tap)="onInlineTap() "></Button>
+        <android>
+            <Button text="Popover" (tap)="onPopoverTap() "></Button>
+        </android>
+        <ios>
+            <Button text="Popover (iPad only)" (tap)="onPopoverTap() "></Button>
+        </ios>
+    </StackLayout>
+</GridLayout>
