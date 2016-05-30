@@ -1,4 +1,4 @@
-import { Component, ViewChild, Inject } from "@angular/core";
+import { Component, Inject, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
@@ -7,24 +7,26 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-programatic-control",
     templateUrl: "calendar-programatic-control.component.html"
 })
-export class CalendarProgramaticControlComponent {
+export class CalendarProgramaticControlComponent implements OnInit {
+    private _calendar: calendarModule.RadCalendar;
     
     constructor(@Inject(Page) private _page: Page) {
     }
     
+    ngOnInit() {
+        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+    }
+    
     onNavigateForwardTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.navigateForward();
+        this._calendar.navigateForward();
     }
     
     onNavigateBackTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.navigateBack();
+        this._calendar.navigateBack();
     }
     
     onGoToDateTap() {
         var date = new Date();
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.goToDate(date);
+        this._calendar.goToDate(date);
     }
 }

@@ -24,6 +24,8 @@ import { CalendarPopulatingWithDataComponent } from "../../calendar/populating-w
 import { CalendarProgramaticControlComponent } from "../../calendar/programatic-control/calendar-programatic-control.component";
 import { CalendarViewModesComponent } from "../../calendar/view-modes/calendar-view-modes.component";
 import { CalendarSelectionModesComponent } from "../../calendar/selection-modes/calendar-selection-modes.component";
+import { CalendarCellStylingComponent } from "../../calendar/cell-styling/calendar-cell-styling.component";
+import { CalendarEventsViewModesComponent } from "../../calendar/events-view-modes/calendar-events-view-modes.component";
 
 @Component({
     moduleId: module.id,
@@ -101,6 +103,13 @@ export class ExampleComponent implements OnInit {
                 break;
             case "CalendarSelectionModes":
                 this.loader.loadNextToLocation(CalendarSelectionModesComponent, this.labelPlaceholder);
+                break;
+            case "CalendarCellStyling":
+                this.loader.loadNextToLocation(CalendarCellStylingComponent, this.labelPlaceholder);
+                break;
+            case "CalendarEventsViewModes":
+                this.loader.loadNextToLocation(CalendarEventsViewModesComponent, this.labelPlaceholder);
+                break;
             default:
                 return null;
         }
