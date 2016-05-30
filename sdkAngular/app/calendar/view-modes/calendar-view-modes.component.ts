@@ -23,7 +23,7 @@ export class CalendarViewModesComponent {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "viewMode";
             this._optionsService.paramName = this._optionsParamName;
-            this._selectedIndex = 0;
+            this._selectedIndex = 1;
         }
     }
 
