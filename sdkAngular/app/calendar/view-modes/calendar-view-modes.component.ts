@@ -1,4 +1,4 @@
-import { Component, ViewChild, Inject } from "@angular/core";
+import { Component, ViewChild, Inject, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
@@ -7,28 +7,30 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-view-modes",
     templateUrl: "calendar-view-modes.component.html"
 })
-export class RadCalendarViewModesComponent {
-    
+// >> angular-calendar-view-modes
+export class RadCalendarViewModesComponent implements OnInit {
+    private _calendar: calendarModule.RadCalendar;
     constructor(@Inject(Page) private _page: Page) {
     }
     
+    ngOnInit() {
+        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+    }
+    
     onYearTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.viewMode = calendarModule.CalendarViewMode.Year;
+        this._calendar.viewMode = calendarModule.CalendarViewMode.Year;
     }
     
     onMonthNamesTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.viewMode = calendarModule.CalendarViewMode.MonthNames;
+        this._calendar.viewMode = calendarModule.CalendarViewMode.MonthNames;
     }
     
     onMonthTap() { 
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.viewMode = calendarModule.CalendarViewMode.Month;
+        this._calendar.viewMode = calendarModule.CalendarViewMode.Month;
     }
     
     onWeekTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.viewMode = calendarModule.CalendarViewMode.Week;
+        this._calendar.viewMode = calendarModule.CalendarViewMode.Week;
     }
 }
+// << angular-calendar-view-modes

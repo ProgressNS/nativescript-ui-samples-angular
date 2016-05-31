@@ -1,4 +1,4 @@
-import { Component, Inject } from "@angular/core";
+import { Component, Inject, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
@@ -7,32 +7,34 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-selection-modes",
     templateUrl: "calendar-selection-modes.component.html"
 })
-export class RadCalendarSelectionModesComponent {
-    
+// >> angular-calendar-selection-modes
+export class RadCalendarSelectionModesComponent implements OnInit{
+    private _calendar: calendarModule.RadCalendar;
     constructor(@Inject(Page) private _page: Page) {
     }
     
+    ngOnInit() {
+        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+    }
+    
     onNoneTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.selectionMode = calendarModule.CalendarSelectionMode.None;
-        calendar.reload();
+        this._calendar.selectionMode = calendarModule.CalendarSelectionMode.None;
+        this._calendar.reload();
     }
     
     onSingleTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.selectionMode = calendarModule.CalendarSelectionMode.Single;
-        calendar.reload();
+        this._calendar.selectionMode = calendarModule.CalendarSelectionMode.Single;
+        this._calendar.reload();
     }
     
     onMultipleTap() { 
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.selectionMode = calendarModule.CalendarSelectionMode.Multiple;
-        calendar.reload();
+        this._calendar.selectionMode = calendarModule.CalendarSelectionMode.Multiple;
+        this._calendar.reload();
     }
     
     onRangeTap() {
-        var calendar:calendarModule.RadCalendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
-        calendar.selectionMode = calendarModule.CalendarSelectionMode.Range;
-        calendar.reload();
+        this._calendar.selectionMode = calendarModule.CalendarSelectionMode.Range;
+        this._calendar.reload();
     }
 }
+// << angular-calendar-selection-modes
