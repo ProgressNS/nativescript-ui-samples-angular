@@ -1,4 +1,5 @@
-import { Component, ViewChild, Inject } from "@angular/core";
+import { OptionsExampleBase } from "../../options-example-base";
+import { Component, OnInit, Inject } from "@angular/core";
 import { Router } from "@angular/router-deprecated";
 import { Page, NavigatedData } from "ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
@@ -12,18 +13,26 @@ import * as applicationModule from "application";
     templateUrl: "calendar-view-modes.component.html"
 })
 // >> angular-calendar-view-modes  
-export class CalendarViewModesComponent {
+export class CalendarViewModesComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
-    private _selectedIndex: number;
     private _calendar: RadCalendar;
+    private _viewMode;
 
-    constructor( @Inject(Page) private _page: Page, private _router: Router, private _optionsService: OptionsService) {
+    constructor( @Inject(Page) private _page: Page,
+        private _optionsService: OptionsService, private _router: Router) {
+        super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
-            this._optionsParamName = "viewMode";
+            this._optionsParamName = "eventsViewMode";
             this._optionsService.paramName = this._optionsParamName;
-            this._selectedIndex = 1;
+            this.router = _router;
+            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] };
         }
+        this._viewMode = CalendarViewMode.Month;
+    }
+    
+    get viewMode() {
+        return this._viewMode;
     }
     
     ngOnInit() {
@@ -31,56 +40,47 @@ export class CalendarViewModesComponent {
     }
 
     onWeekTap() {
-        this._calendar.viewMode = CalendarViewMode.Week;
+        this._viewMode = CalendarViewMode.Week;
     }
 
     onMonthTap() {
-        this._calendar.viewMode = CalendarViewMode.Month;
+        this._viewMode = CalendarViewMode.Month;
     }
 
 
     onMonthNamesTap() {
-        this._calendar.viewMode = CalendarViewMode.MonthNames;
+        this._viewMode = CalendarViewMode.MonthNames;
     }
 
     onYearTap() {
-        this._calendar.viewMode = CalendarViewMode.Year;
+        this._viewMode = CalendarViewMode.Year;
     }
 
     public onNavigatingTo(args) {
-        var data = args as NavigatedData;
         if (args.isBackNavigation) {
             if (this._optionsService.paramName == this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
                     case "Week":
-                        this._calendar.viewMode = CalendarViewMode.Week;
-                        this._selectedIndex = 0;
+                        this.onWeekTap();
+                        this.navigationParameters.selectedIndex = 0;
                         break;
                     case "Month":
-                        this._calendar.viewMode = CalendarViewMode.Month;
-                        this._selectedIndex = 1;
+                        this.onMonthTap();
+                        this.navigationParameters.selectedIndex = 1;
                         break;
                     case "Month names":
-                        this._calendar.viewMode = CalendarViewMode.MonthNames;
-                        this._selectedIndex = 2;
+                        this.onMonthNamesTap();
+                        this.navigationParameters.selectedIndex = 2;
                         break;
                     case "Year":
-                        this._calendar.viewMode = CalendarViewMode.Year;
-                        this._selectedIndex = 3;
+                        this.onYearTap();
+                        this.navigationParameters.selectedIndex = 3;
                         break;
                     default:
                         break;
                 }
             }
         }
-    }
-
-    public onOptionsTapped() {
-        this._router.navigate(["Options", { selectedIndex: this._selectedIndex, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] }]);
-    }
-
-    public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
     }
 }
 // << angular-calendar-view-modes

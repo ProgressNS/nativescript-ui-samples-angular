@@ -1,7 +1,8 @@
-<ActionBar title="View modes">
+<ActionBar title="Styling">
     <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
     <ActionItem text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
 </ActionBar>
 <StackLayout>
-    <RadCalendar id="calendar" [viewMode]="viewMode"></RadCalendar>
+    <RadCalendar id="calendar" [monthViewStyle]="monthViewStyle" [weekViewStyle]="weekViewStyle" [monthNamesViewStyle]="monthNamesViewStyle"
+        [yearViewStyle]="yearViewStyle" [viewMode]="viewMode"></RadCalendar>
 </StackLayout>

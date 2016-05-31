@@ -2,6 +2,10 @@ import { Component, OnInit, Inject } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import {CalendarService} from "../calendar.service";
+import * as applicationModule from "application";
+import { OptionsService } from "../../navigation/options/options.service";
+import { Router } from "@angular/router-deprecated";
+import { OptionsExampleBase } from "../../options-example-base";
 
 @Component({
     moduleId: module.id,
@@ -9,14 +13,28 @@ import {CalendarService} from "../calendar.service";
     templateUrl: "calendar-cell-styling.component.html",
     providers:[CalendarService]
 })
-export class CalendarCellStylingComponent implements OnInit {
+export class CalendarCellStylingComponent extends OptionsExampleBase implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     private _monthViewStyle: calendarModule.CalendarMonthViewStyle;
     private _weekViewStyle: calendarModule.CalendarWeekViewStyle;
     private _yearViewStyle: calendarModule.CalendarYearViewStyle;
     private _monthNamesViewStyle: calendarModule.CalendarMonthNamesViewStyle;
-    
-    constructor(@Inject(Page) private _page: Page, private _calendarService: CalendarService) {
+    private _optionsParamName: string;
+    private _viewMode;
+    constructor( @Inject(Page) private _page: Page, private _calendarService: CalendarService,
+        private _optionsService: OptionsService, private _router: Router) {
+        super();
+        if (applicationModule.ios) {
+            this._page.on("navigatingTo", this.onNavigatingTo, this);
+            this._optionsParamName = "eventsViewMode";
+            this._optionsService.paramName = this._optionsParamName;
+            this.router = _router;
+            this.navigationParameters = {
+                selectedIndex: 0, paramName: this._optionsParamName,
+                items: ["Month", "Week", "Year", "Month names"]
+            };
+        }
+        this._viewMode = calendarModule.CalendarViewMode.Month;
     }
     
     ngOnInit() {
@@ -25,6 +43,10 @@ export class CalendarCellStylingComponent implements OnInit {
         this._monthNamesViewStyle = this._calendarService.getMonthNamesViewStyle();
         this._weekViewStyle = this._calendarService.getWeekViewStyle();
         this._yearViewStyle = this._calendarService.getYearViewStyle();
+    }
+    
+    get viewMode() {
+        return this._viewMode;
     }
     
     get monthViewStyle(): calendarModule.CalendarMonthViewStyle {
@@ -44,18 +66,45 @@ export class CalendarCellStylingComponent implements OnInit {
     }
     
     onYearTap() {
-        this._calendar.viewMode = calendarModule.CalendarViewMode.Year;
+        this._viewMode = calendarModule.CalendarViewMode.Year;
     }
     
     onMonthNamesTap() { 
-        this._calendar.viewMode = calendarModule.CalendarViewMode.MonthNames;
+        this._viewMode = calendarModule.CalendarViewMode.MonthNames;
     }
     
     onMonthTap() { 
-        this._calendar.viewMode = calendarModule.CalendarViewMode.Month;
+        this._viewMode = calendarModule.CalendarViewMode.Month;
     }
     
     onWeekTap() {
-        this._calendar.viewMode = calendarModule.CalendarViewMode.Week;
+        this._viewMode = calendarModule.CalendarViewMode.Week;
+    }
+    
+     public onNavigatingTo(args) {
+        if (args.isBackNavigation) {
+            if (this._optionsService.paramName == this._optionsParamName) {
+                switch (this._optionsService.paramValue) {
+                    case "Week":
+                        this.onWeekTap();
+                        this.navigationParameters.selectedIndex = 0;
+                        break;
+                    case "Month":
+                        this.onMonthTap();
+                        this.navigationParameters.selectedIndex = 1;
+                        break;
+                    case "Month names":
+                        this.onMonthNamesTap();
+                        this.navigationParameters.selectedIndex = 2;
+                        break;
+                    case "Year":
+                        this.onYearTap();
+                        this.navigationParameters.selectedIndex = 3;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+<ActionBar title="Transition modes">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="None" android.position="popup" (tap)="onNoneTap()"></ActionItem>
+    <ActionItem text="Slide" android.position="popup" (tap)="onSlideTap()"></ActionItem>
+    <ActionItem text="Stack" android.position="popup" (tap)="onStackTap()"></ActionItem>
+    <ActionItem text="Plain" android.position="popup" (tap)="onPlainTap()"></ActionItem>
+    <ActionItem text="Free" android.position="popup" (tap)="onFreeTap()"></ActionItem>
+    <ActionItem text="Combo" android.position="popup" (tap)="onComboTap()"></ActionItem>
+    <ActionItem text="Overlap" android.position="popup" (tap)="onOverlapTap()"></ActionItem>
+</ActionBar>
+<StackLayout>
+    <RadCalendar id="calendar" [transitionMode]="transitionMode"></RadCalendar>
+</StackLayout>

@@ -1,0 +1,12 @@
+<ActionBar title="View modes">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="None" android.position="popup" (tap)="onNoneTap()"></ActionItem>
+    <ActionItem text="Single" android.position="popup" (tap)="onSingleTap()"></ActionItem>
+    <ActionItem text="Multiple" android.position="popup" (tap)="onMultipleTap()"></ActionItem>
+    <ActionItem text="Range" android.position="popup" (tap)="onRangeTap()"></ActionItem>
+</ActionBar>
+<!-- >> angular-calendar-selection-modes-html -->
+<StackLayout>
+    <RadCalendar id="calendar" [selectionMode]="selectionMode"></RadCalendar>
+</StackLayout>
+<!-- << angular-calendar-selection-modes-html -->

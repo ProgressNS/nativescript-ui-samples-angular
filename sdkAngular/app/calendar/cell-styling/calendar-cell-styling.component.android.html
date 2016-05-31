@@ -1,0 +1,12 @@
+<ActionBar title="Styling">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="Month" android.position="popup" (tap)="onMonthTap()"></ActionItem>
+    <ActionItem text="Week" android.position="popup" (tap)="onWeekTap()"></ActionItem>
+    <ActionItem text="Year" android.position="popup" (tap)="onYearTap()"></ActionItem>
+    <ActionItem text="Month names" android.position="popup" (tap)="onMonthNamesTap()"></ActionItem>
+
+</ActionBar>
+<StackLayout>
+    <RadCalendar id="calendar" [monthViewStyle]="monthViewStyle" [weekViewStyle]="weekViewStyle" [monthNamesViewStyle]="monthNamesViewStyle"
+        [yearViewStyle]="yearViewStyle" [viewMode]="viewMode"></RadCalendar>
+</StackLayout>
