@@ -7,7 +7,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-programatic-control",
     templateUrl: "calendar-programatic-control.component.html"
 })
-export class RadCalendarProgramaticControlComponent implements OnInit {
+export class CalendarProgramaticControlComponent implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     
     constructor(@Inject(Page) private _page: Page) {

@@ -13,7 +13,7 @@ import {RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-p
     styleUrls: ['transitions.component.css']
 })
 // >> sidedrawer-angular-transition-definition
-export class SidedrawerPositionComponent implements OnInit {
+export class SideDrawerTransitionsComponent implements OnInit {
     constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
     }
 

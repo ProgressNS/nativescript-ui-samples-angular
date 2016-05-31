@@ -1,0 +1,10 @@
+<ActionBar title="View modes">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="Week" android.position="popup" (tap)="onWeekTap()"></ActionItem>
+    <ActionItem text="Month" android.position="popup" (tap)="onMonthTap()"></ActionItem>
+    <ActionItem text="Month names" android.position="popup" (tap)="onMonthNamesTap()"></ActionItem>
+    <ActionItem text="Year" android.position="popup" (tap)="onYearTap()"></ActionItem>
+</ActionBar>
+<GridLayout orientation="vertical" rows="auto, *">
+    <RadCalendar id="calendar" row="1"></RadCalendar>
+</GridLayout>

@@ -10,7 +10,7 @@ import { Page } from "ui/page";
     providers: [CalendarService]
 })
 
-export class CalendarEventsViewModes implements OnInit {
+export class CalendarEventsViewModesComponent implements OnInit {
     private _events: Array<calendarModule.CalendarEvent>;
     private _calendar: calendarModule.RadCalendar;
     constructor(@Inject(Page) private _page: Page ,private _calendarService: CalendarService) {

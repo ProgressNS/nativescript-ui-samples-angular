@@ -7,7 +7,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "calendar-transition-modes",
     templateUrl: "calendar-transition-modes.component.html"
 })
-export class RadCalendarTransitionModesComponent implements OnInit {
+export class CalendarTransitionModesComponent implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     constructor(@Inject(Page) private _page: Page) {
     }

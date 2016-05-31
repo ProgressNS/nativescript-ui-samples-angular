@@ -13,7 +13,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'events.component.html',
     styleUrls: ['events.component.css']
 })
-export class SidedrawerEventsComponent implements OnInit {
+export class SideDrawerEventsComponent implements OnInit {
     private _currentNotification: string;
 
     constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {

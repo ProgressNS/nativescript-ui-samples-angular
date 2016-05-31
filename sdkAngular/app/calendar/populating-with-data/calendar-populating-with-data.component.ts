@@ -10,7 +10,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     providers: [CalendarService]
 })
 
-export class RadCalendarPopulatingWithDataComponent implements OnInit {
+export class CalendarPopulatingWithDataComponent implements OnInit {
     private _events: Array<calendarModule.CalendarEvent>;
     private _listItems: Array<calendarModule.CalendarEvent>;
     

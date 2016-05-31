@@ -21,7 +21,7 @@ export class ExamplesListComponent implements OnInit {
     ngOnInit() {
         var parentTitle = this._routeParams.get('parentTitle');
         var tappedTitle = this._routeParams.get('tappedTitle');
-        this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle);
+        this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
     }
 
     public get currentExample(): ExampleItem {
@@ -35,7 +35,7 @@ export class ExamplesListComponent implements OnInit {
     public onNavigationItemTap(args) {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
-        this._router.navigate([tappedItem.path]);
+        this._router.navigate(["Example", { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title }]);
     }
 
     public onNavigationButtonTap() {

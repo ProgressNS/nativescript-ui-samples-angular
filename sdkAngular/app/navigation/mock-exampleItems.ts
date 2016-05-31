@@ -11,22 +11,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "ListviewGettingStarted",
+                        "path": "ListViewGettingStarted",
                         "subItems": []
                     },
                     {
                         "title": "Header Footer",
-                        "path": "ListviewHeaderFooter",
+                        "path": "ListViewHeaderFooter",
                         "subItems": []
                     },
                     {
                         "title": "Item Reorder",
-                        "path": "ListviewItemReorder",
+                        "path": "ListViewItemReorder",
                         "subItems": []
                     },
                     {
                         "title": "Item Selection",
-                        "path": "ListviewItemSelection",
+                        "path": "ListViewItemSelection",
                         "subItems": []
                     },
                     {

@@ -16,5 +16,5 @@ if (applicationModule.android) {
 }
 elementRegistry.registerElement("FrescoDrawee", () => FrescoDrawee);
 // << (hide)
-nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS]);
+nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS], { startPageActionBarHidden: false });
 // << using-global-directives
