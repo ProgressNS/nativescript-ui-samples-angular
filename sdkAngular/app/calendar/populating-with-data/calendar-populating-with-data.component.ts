@@ -1,20 +1,20 @@
 import {Component, OnInit} from "@angular/core";
-import {CalendarService} from "../calendar.service";
+import {CalendarEventsService} from "../calendar-events.service";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
-
+// >> angular-calenda-populating-with-data
 @Component({
     moduleId: module.id,
     selector: "calendar-populating-with-data",
     templateUrl: "calendar-populating-with-data.component.html",
     styleUrls: ["calendar-populating-with-data.component.css"],
-    providers: [CalendarService]
+    providers: [CalendarEventsService]
 })
 
 export class CalendarPopulatingWithDataComponent implements OnInit {
     private _events: Array<calendarModule.CalendarEvent>;
     private _listItems: Array<calendarModule.CalendarEvent>;
     
-    constructor(private _calendarService: CalendarService) {
+    constructor(private _calendarService: CalendarEventsService) {
         
     }
     
@@ -41,3 +41,4 @@ export class CalendarPopulatingWithDataComponent implements OnInit {
         this.myItems = events;
     }
 }
+// << angular-calenda-populating-with-data

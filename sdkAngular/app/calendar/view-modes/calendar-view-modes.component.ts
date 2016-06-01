@@ -12,7 +12,7 @@ import * as applicationModule from "application";
     selector: "calendar-view-modes",
     templateUrl: "calendar-view-modes.component.html"
 })
-// >> angular-calendar-view-modes  
+
 export class CalendarViewModesComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
     private _calendar: RadCalendar;
@@ -83,4 +83,3 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
         }
     }
 }
-// << angular-calendar-view-modes
