@@ -6,6 +6,28 @@ export var EXAMPLEITEMS: ExampleItem[] = [
         "path": "Controls",
         "subItems": [
             {
+                "title": "Chart",
+                "path": "Examples",
+                "subItems": [
+                    {
+                        "title": "Series",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Area Series",
+                                "path": "ChartSeriesArea",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Stacked Area Series",
+                                "path": "ChartSeriesStackedArea",
+                                "subItems": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "title": "ListView",
                 "path": "Examples",
                 "subItems": [
