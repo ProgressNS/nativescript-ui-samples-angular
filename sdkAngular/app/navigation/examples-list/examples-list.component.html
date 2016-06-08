@@ -1,5 +1,5 @@
 <ActionBar [title]="currentExample.title">
-    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()" [visibility]="hasBack ? 'visible' : 'collapsed'"></NavigationButton>
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
 </ActionBar>
 <GridLayout rows="auto, *">
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">

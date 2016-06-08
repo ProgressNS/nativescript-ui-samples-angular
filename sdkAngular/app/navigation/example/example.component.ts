@@ -27,8 +27,6 @@ import { CalendarSelectionModesComponent } from "../../calendar/selection-modes/
 import { CalendarCellStylingComponent } from "../../calendar/cell-styling/calendar-cell-styling.component";
 import { CalendarEventsViewModesComponent } from "../../calendar/events-view-modes/calendar-events-view-modes.component";
 import { CalendarTransitionModesComponent } from "../../calendar/transition-modes/calendar-transition-modes.component";
-import { ChartSeriesAreaComponent } from "../../chart/series/area/chart-series-area.component";
-import { ChartSeriesStackedAreaComponent } from "../../chart/series/area/chart-stacked-series-area.component";
 
 @Component({
     moduleId: module.id,
@@ -42,7 +40,7 @@ export class ExampleComponent implements OnInit {
     constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService, private _loader: DynamicComponentLoader) {
     }
 
-    @ViewChild('exampleCompPlaceholder', { read: ViewContainerRef }) exampleCompPlaceholder: ViewContainerRef;
+    @ViewChild('layoutPlaceholder', { read: ViewContainerRef }) layoutPlaceholder: ViewContainerRef;
 
     ngOnInit() {
         var parentTitle = this._routeParams.get('parentTitle');
@@ -54,73 +52,67 @@ export class ExampleComponent implements OnInit {
         //Loads the current example component.
         switch (this.currentExample.path) {
             case "Controls":
-                this._loader.loadNextToLocation(ControlsListComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ControlsListComponent, this.layoutPlaceholder);
                 break;
             case "Examples":
-                this._loader.loadNextToLocation(ExamplesListComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ExamplesListComponent, this.layoutPlaceholder);
                 break;
             case "ListViewGettingStarted":
-                this._loader.loadNextToLocation(ListViewGettingStartedComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewGettingStartedComponent, this.layoutPlaceholder);
                 break;
             case "ListViewHeaderFooter":
-                this._loader.loadNextToLocation(ListViewHeaderFooterComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewHeaderFooterComponent, this.layoutPlaceholder);
                 break;
             case "ListViewItemReorder":
-                this._loader.loadNextToLocation(ListViewItemReorderComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewItemReorderComponent, this.layoutPlaceholder);
                 break;
             case "ListViewItemSelection":
-                this._loader.loadNextToLocation(ListViewItemSelectionComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewItemSelectionComponent, this.layoutPlaceholder);
                 break;
             case "ListViewItemSwipe":
-                this._loader.loadNextToLocation(ListViewItemSwipeComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewItemSwipeComponent, this.layoutPlaceholder);
                 break;
             case "ListViewLoadOnDemand":
-                this._loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.layoutPlaceholder);
                 break;
             case "ListViewPullToRefresh":
-                this._loader.loadNextToLocation(ListViewPullToRefreshComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewPullToRefreshComponent, this.layoutPlaceholder);
                 break;
             case "SideDrawerGettingStarted":
-                this._loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.layoutPlaceholder);
                 break;
             case "SideDrawerEvents":
-                this._loader.loadNextToLocation(SideDrawerEventsComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(SideDrawerEventsComponent, this.layoutPlaceholder);
                 break;
             case "SideDrawerPosition":
-                this._loader.loadNextToLocation(SideDrawerPositionComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(SideDrawerPositionComponent, this.layoutPlaceholder);
                 break;
             case "SideDrawerTransitions":
-                this._loader.loadNextToLocation(SideDrawerTransitionsComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(SideDrawerTransitionsComponent, this.layoutPlaceholder);
                 break;
             case "CalendarGettingStarted":
-                this._loader.loadNextToLocation(CalendarGettingStartedComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarGettingStartedComponent, this.layoutPlaceholder);
                 break;
             case "CalendarPopulatingWithData":
-                this._loader.loadNextToLocation(CalendarPopulatingWithDataComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarPopulatingWithDataComponent, this.layoutPlaceholder);
                 break;
             case "CalendarProgramaticControl":
-                this._loader.loadNextToLocation(CalendarProgramaticControlComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarProgramaticControlComponent, this.layoutPlaceholder);
                 break;
             case "CalendarViewModes":
-                this._loader.loadNextToLocation(CalendarViewModesComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarViewModesComponent, this.layoutPlaceholder);
                 break;
             case "CalendarSelectionModes":
-                this._loader.loadNextToLocation(CalendarSelectionModesComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarSelectionModesComponent, this.layoutPlaceholder);
                 break;
             case "CalendarCellStyling":
-                this._loader.loadNextToLocation(CalendarCellStylingComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarCellStylingComponent, this.layoutPlaceholder);
                 break;
             case "CalendarEventsViewModes":
-                this._loader.loadNextToLocation(CalendarEventsViewModesComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarEventsViewModesComponent, this.layoutPlaceholder);
                 break;
             case "CalendarTransitionModes":
-                this._loader.loadNextToLocation(CalendarTransitionModesComponent, this.exampleCompPlaceholder);
-                break;
-            case "ChartSeriesArea":
-                this._loader.loadNextToLocation(ChartSeriesAreaComponent, this.exampleCompPlaceholder);
-                break;
-            case "ChartSeriesStackedArea":
-                this._loader.loadNextToLocation(ChartSeriesStackedAreaComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(CalendarTransitionModesComponent, this.layoutPlaceholder);
                 break;
             default:
                 return null;

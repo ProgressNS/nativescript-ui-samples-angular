@@ -4,6 +4,7 @@ import { ExampleItemService } from "./exampleItemService.service";
 import { OptionsService } from "./options/options.service";
 import { RouteConfig } from "@angular/router-deprecated";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
+import { ControlsListComponent } from "./controls-list/controls-list.component";
 import { ExamplesListComponent } from "./examples-list/examples-list.component";
 import { ExampleComponent } from "./example/example.component";
 import { OptionsComponent } from "./options/options.component";
@@ -15,7 +16,8 @@ import { OptionsComponent } from "./options/options.component";
   template: "<page-router-outlet></page-router-outlet>"
 })
  @RouteConfig([
-  { path: "/examples", component: ExamplesListComponent, name: "Examples", useAsDefault: true },
+  { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
+  { path: "/examples", component: ExamplesListComponent, name: "Examples" },
   { path: "/example", component: ExampleComponent, name: "Example" },
   { path: "/options", component: OptionsComponent, name: "Options" }
 ])
@@ -35,6 +37,7 @@ export class AppComponent {
 //   template: "<page-router-outlet></page-router-outlet>"
 // })
 // @Routes([
+//   { path: "/controls", component: ControlsListComponent },
 //   { path: "/examples", component: ExamplesListComponent },
 //   { path: "/listview-getting-started", component: ListViewGettingStartedComponent },
 //   { path: "/listview-header-footer", component: ListViewHeaderFooterComponent },
@@ -54,6 +57,6 @@ export class AppComponent {
 //   }
   
 //   ngOnInit() {
-//     this.router.navigate(['/examples']);
+//     this.router.navigate(['/controls']);
 //   }
 // }
