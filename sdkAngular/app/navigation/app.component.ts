@@ -4,7 +4,6 @@ import { ExampleItemService } from "./exampleItemService.service";
 import { OptionsService } from "./options/options.service";
 import { RouteConfig } from "@angular/router-deprecated";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
-import { ControlsListComponent } from "./controls-list/controls-list.component";
 import { ExamplesListComponent } from "./examples-list/examples-list.component";
 import { ExampleComponent } from "./example/example.component";
 import { OptionsComponent } from "./options/options.component";
