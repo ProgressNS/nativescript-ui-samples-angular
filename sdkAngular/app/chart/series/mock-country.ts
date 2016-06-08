@@ -31,3 +31,27 @@ export var BUBBLECATEGORICALSOURCE: Country[] = [
     { Country: "Spain", Amount: 5, SecondVal: 0, ThirdVal: 0, Impact: 3 },
     { Country: "USA", Amount: 17, SecondVal: 0, ThirdVal: 0, Impact: 9 }
 ];
+
+export var FIRSTSERIES: Country[] = [
+    { Country: "Germany", Amount: 320, SecondVal: 14, ThirdVal: 24, Impact: 0 },
+    { Country: "France", Amount: 206, SecondVal: 23, ThirdVal: 25, Impact: 0 },
+    { Country: "Bulgaria", Amount: 100, SecondVal: 17, ThirdVal: 23, Impact: 0 },
+    { Country: "Spain", Amount: 25, SecondVal: 19, ThirdVal: 24, Impact: 0 },
+    { Country: "USA", Amount: 85, SecondVal: 8, ThirdVal: 21, Impact: 0 }
+];
+
+export var SECONDSERIES: Country[] = [
+    { Country: "Germany", Amount: 120, SecondVal: 14, ThirdVal: 24, Impact: 0 },
+    { Country: "France", Amount: 56, SecondVal: 23, ThirdVal: 25, Impact: 0 },
+    { Country: "Bulgaria", Amount: 300, SecondVal: 17, ThirdVal: 23, Impact: 0 },
+    { Country: "Spain", Amount: 95, SecondVal: 19, ThirdVal: 24, Impact: 0 },
+    { Country: "USA", Amount: 405, SecondVal: 8, ThirdVal: 21, Impact: 0 }
+];
+
+export var THIRDSERIES: Country[] = [
+    { Country: "Germany", Amount: 96, SecondVal: 14, ThirdVal: 24, Impact: 0 },
+    { Country: "France", Amount: 139, SecondVal: 23, ThirdVal: 25, Impact: 0 },
+    { Country: "Bulgaria", Amount: 276, SecondVal: 17, ThirdVal: 23, Impact: 0 },
+    { Country: "Spain", Amount: 300, SecondVal: 19, ThirdVal: 24, Impact: 0 },
+    { Country: "USA", Amount: 100, SecondVal: 8, ThirdVal: 21, Impact: 0 }
+];

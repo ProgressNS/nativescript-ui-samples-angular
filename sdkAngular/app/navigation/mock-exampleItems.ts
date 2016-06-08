@@ -17,6 +17,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Area Series",
                                 "path": "ChartSeriesArea",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Stacked Area Series",
+                                "path": "ChartSeriesStackedArea",
+                                "subItems": []
                             }
                         ]
                     }

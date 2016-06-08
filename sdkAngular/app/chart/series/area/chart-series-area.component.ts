@@ -12,15 +12,15 @@ import * as applicationModule from "application";
     templateUrl: 'chart-series-area.component.html'
 })
 export class ChartSeriesAreaComponent implements OnInit {
-    private _dataItems: ObservableArray<Country>;
+    private _categoricalSource: ObservableArray<Country>;
     private _deviceHeight: number;
 
     constructor(private _countryService: CountryService) {
 
     }
 
-    get dataItems(): ObservableArray<Country> {
-        return this._dataItems;
+    get categoricalSource(): ObservableArray<Country> {
+        return this._categoricalSource;
     }
 
     get deviceHeight(): number {
@@ -28,7 +28,7 @@ export class ChartSeriesAreaComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray(this._countryService.getCategoricalSource());
+        this._categoricalSource = new ObservableArray(this._countryService.getCategoricalSource());
         this._deviceHeight = platformModule.screen.mainScreen.heightPixels;
     }
 }

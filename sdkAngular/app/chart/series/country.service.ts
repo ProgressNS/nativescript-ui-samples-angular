@@ -1,22 +1,34 @@
 import { Injectable } from '@angular/core';
-import { CATEGORICALSOURCE, CATEGORICALSOURCE2, CATEGORICALSOURCE3, BUBBLECATEGORICALSOURCE } from "./mock-country";
+import * as mock from "./mock-country";
 import { Country } from "./country";
 
 @Injectable()
 export class CountryService {
     getCategoricalSource(): Country[] {
-        return CATEGORICALSOURCE;
+        return mock.CATEGORICALSOURCE;
     }
     
     getCategoricalSource2(): Country[] {
-        return CATEGORICALSOURCE2;
+        return mock.CATEGORICALSOURCE2;
     }
     
     getCategoricalSource3(): Country[] {
-        return CATEGORICALSOURCE3;
+        return mock.CATEGORICALSOURCE3;
     }
     
     getBubbleCategoricalSource(): Country[] {
-        return BUBBLECATEGORICALSOURCE;
+        return mock.BUBBLECATEGORICALSOURCE;
+    }
+    
+    getFirstSeries(): Country[] {
+        return mock.FIRSTSERIES;
+    }
+    
+    getSecondSeries(): Country[] {
+        return mock.SECONDSERIES;
+    }
+    
+    getThirdSeries(): Country[] {
+        return mock.THIRDSERIES;
     }
 }
