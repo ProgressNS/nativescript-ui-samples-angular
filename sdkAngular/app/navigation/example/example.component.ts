@@ -27,6 +27,7 @@ import { CalendarSelectionModesComponent } from "../../calendar/selection-modes/
 import { CalendarCellStylingComponent } from "../../calendar/cell-styling/calendar-cell-styling.component";
 import { CalendarEventsViewModesComponent } from "../../calendar/events-view-modes/calendar-events-view-modes.component";
 import { CalendarTransitionModesComponent } from "../../calendar/transition-modes/calendar-transition-modes.component";
+import { ChartSeriesAreaComponent } from "../../chart/series/area/chart-series-area.component";
 
 @Component({
     moduleId: module.id,
@@ -113,6 +114,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "CalendarTransitionModes":
                 this._loader.loadNextToLocation(CalendarTransitionModesComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesArea":
+                this._loader.loadNextToLocation(ChartSeriesAreaComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

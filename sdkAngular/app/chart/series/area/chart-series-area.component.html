@@ -1,0 +1,10 @@
+<!-- >> area-series -->
+<GridLayout [height]="deviceHeight">
+    <RadCartesianChart>
+        <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+        <LinearAxis cartesianVerticalAxis></LinearAxis>
+
+        <AreaSeries cartesianSeries [items]="dataItems" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    </RadCartesianChart>
+</GridLayout>
+<!-- << area-series -->
