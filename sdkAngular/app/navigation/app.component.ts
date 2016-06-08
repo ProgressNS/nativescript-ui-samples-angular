@@ -16,8 +16,7 @@ import { OptionsComponent } from "./options/options.component";
   template: "<page-router-outlet></page-router-outlet>"
 })
  @RouteConfig([
-  { path: "/controls", component: ControlsListComponent, name: "Controls", useAsDefault: true },
-  { path: "/examples", component: ExamplesListComponent, name: "Examples" },
+  { path: "/examples", component: ExamplesListComponent, name: "Examples", useAsDefault: true },
   { path: "/example", component: ExampleComponent, name: "Example" },
   { path: "/options", component: OptionsComponent, name: "Options" }
 ])
@@ -37,7 +36,6 @@ export class AppComponent {
 //   template: "<page-router-outlet></page-router-outlet>"
 // })
 // @Routes([
-//   { path: "/controls", component: ControlsListComponent },
 //   { path: "/examples", component: ExamplesListComponent },
 //   { path: "/listview-getting-started", component: ListViewGettingStartedComponent },
 //   { path: "/listview-header-footer", component: ListViewHeaderFooterComponent },
@@ -57,6 +55,6 @@ export class AppComponent {
 //   }
   
 //   ngOnInit() {
-//     this.router.navigate(['/controls']);
+//     this.router.navigate(['/examples']);
 //   }
 // }
