@@ -60,7 +60,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
         this._secondSeries = new ObservableArray(this._countryService.getSecondSeries());
         this._thirdSeries = new ObservableArray(this._countryService.getThirdSeries());
         this._deviceHeight = platformModule.screen.mainScreen.heightPixels;
-        this.set("stackMode", "None");
+        this.set("stackMode", "Stack");
     }
 
     ngAfterViewInit() {
