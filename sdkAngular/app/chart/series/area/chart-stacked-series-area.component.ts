@@ -69,26 +69,14 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
 
     onNoneStackModeSelected() {
         this.set("stackMode", "None");
-
-        if (this._chart.android) {
-            this._chart.android.requestLayout();
-        }
     }
 
     onStackModeSelected() {
         this.set("stackMode", "Stack");
-
-        if (this._chart.android) {
-            this._chart.android.requestLayout();
-        }
     }
 
     onStack100ModeSelected() {
         this.set("stackMode", "Stack100");
-
-        if (this._chart.android) {
-            this._chart.android.requestLayout();
-        }
     }
 
     // >> (hide)
