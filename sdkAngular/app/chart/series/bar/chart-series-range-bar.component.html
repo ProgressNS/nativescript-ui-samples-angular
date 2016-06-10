@@ -1,0 +1,15 @@
+<!-- >> range-bar-series -->
+<GridLayout [height]="deviceHeight">
+    <RadCartesianChart>
+        <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelSize="11"></CategoricalAxis>
+        <LinearAxis cartesianVerticalAxis horizontalLocation="Left" labelSize="11"></LinearAxis>
+
+        <RangeBarSeries cartesianSeries [items]="rangeBarSource" 
+                        showLabels="true"
+                        legendTitle="Ranges"
+                        categoryProperty="Name"
+                        lowPropertyName="Low"
+                        highPropertyName="High"></RangeBarSeries>
+    </RadCartesianChart>
+</GridLayout>
+<!-- << range-bar-series -->

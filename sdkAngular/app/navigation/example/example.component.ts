@@ -30,6 +30,7 @@ import { CalendarTransitionModesComponent } from "../../calendar/transition-mode
 import { ChartSeriesAreaComponent } from "../../chart/series/area/chart-series-area.component";
 import { ChartSeriesStackedAreaComponent } from "../../chart/series/area/chart-series-stacked-area.component";
 import { ChartSeriesBarComponent } from "../../chart/series/bar/chart-series-bar.component";
+import { ChartSeriesRangeBarComponent } from "../../chart/series/bar/chart-series-range-bar.component";
 
 @Component({
     moduleId: module.id,
@@ -125,6 +126,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesBar":
                 this._loader.loadNextToLocation(ChartSeriesBarComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesRangeBar":
+                this._loader.loadNextToLocation(ChartSeriesRangeBarComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

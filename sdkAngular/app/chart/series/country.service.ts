@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as mock from "./mock-country";
 import { Country } from "./country";
+import { Product } from "./Product";
 
 @Injectable()
 export class CountryService {
@@ -30,5 +31,9 @@ export class CountryService {
     
     getThirdSeries(): Country[] {
         return mock.THIRDSERIES;
+    }
+
+    getRangeBarSource(): Product[] {
+        return mock.RANGEBARSOURCE;
     }
 }

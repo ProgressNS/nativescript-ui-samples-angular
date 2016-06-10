@@ -1,5 +1,7 @@
 import { Country } from './country';
+import { Product } from './product';
 
+// >> categorical-source
 export var CATEGORICALSOURCE: Country[] = [
     { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24, Impact: 0 },
     { Country: "France", Amount: 13, SecondVal: 23, ThirdVal: 25, Impact: 0 },
@@ -7,6 +9,7 @@ export var CATEGORICALSOURCE: Country[] = [
     { Country: "Spain", Amount: 11, SecondVal: 19, ThirdVal: 24, Impact: 0 },
     { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21, Impact: 0 }
 ];
+// << categorical-source
 
 export var CATEGORICALSOURCE2: Country[] = [
     { Country: "Germany", Amount: 29, SecondVal: 14, ThirdVal: 24, Impact: 0 },
@@ -55,3 +58,12 @@ export var THIRDSERIES: Country[] = [
     { Country: "Spain", Amount: 300, SecondVal: 19, ThirdVal: 24, Impact: 0 },
     { Country: "USA", Amount: 100, SecondVal: 8, ThirdVal: 21, Impact: 0 }
 ];
+
+// >> range-bar-source
+export var RANGEBARSOURCE: Product[] = [
+    { Name: "Groceries", High: 30, Low: 12 },
+    { Name: "Tools", High: 135, Low: 124 },
+    { Name: "Electronics", High: 55, Low: 12 },
+    { Name: "Gardening", High: 50, Low: 29 }
+];
+// << range-bar-source 
