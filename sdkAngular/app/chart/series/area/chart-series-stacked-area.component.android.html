@@ -4,15 +4,13 @@
     <ActionItem text="Stack" android.position="popup" (tap)="onStackModeSelected()"></ActionItem>
     <ActionItem text="None" android.position="popup" (tap)="onNoneStackModeSelected()"></ActionItem>
 </ActionBar>
-<GridLayout [height]="deviceHeight">
-    <!-- >> stacked-series -->
-    <RadCartesianChart id="cartesianChart">
-        <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
-        <LinearAxis cartesianVerticalAxis></LinearAxis>
+<!-- >> stacked-series -->
+<RadCartesianChart id="cartesianChart">
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis></LinearAxis>
 
-        <AreaSeries cartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-        <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-        <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-    </RadCartesianChart>
-    <!-- << stacked-series -->
-</GridLayout>
+    <AreaSeries cartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+</RadCartesianChart>
+<!-- << stacked-series -->

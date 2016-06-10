@@ -9,7 +9,6 @@ import { RadCartesianChart, CategoricalSeries, AreaSeries } from "nativescript-t
 import { ObservableArray } from "data/observable-array";
 import { Country } from '../country';
 import { CountryService } from '../country.service';
-import * as platformModule from "platform";
 
 // >> stacked-series-binding-context
 @Component({
@@ -24,7 +23,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _firstSeries: ObservableArray<Country>;
     private _secondSeries: ObservableArray<Country>;
     private _thirdSeries: ObservableArray<Country>;
-    private _deviceHeight: number;
 
     constructor( @Inject(Page) private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _countryService: CountryService) {
@@ -50,16 +48,11 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
         return this._thirdSeries;
     }
 
-    get deviceHeight(): number {
-        return this._deviceHeight;
-    }
-
     ngOnInit() {
         this._chart = <RadCartesianChart>this._page.getViewById("cartesianChart");
         this._firstSeries = new ObservableArray(this._countryService.getFirstSeries());
         this._secondSeries = new ObservableArray(this._countryService.getSecondSeries());
         this._thirdSeries = new ObservableArray(this._countryService.getThirdSeries());
-        this._deviceHeight = platformModule.screen.mainScreen.heightPixels;
         this.set("stackMode", "Stack");
     }
 

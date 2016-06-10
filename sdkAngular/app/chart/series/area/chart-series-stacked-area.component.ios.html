@@ -2,13 +2,11 @@
     <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
     <ActionItem text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
 </ActionBar>
-<GridLayout [height]="deviceHeight">
-    <RadCartesianChart id="cartesianChart">
-        <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
-        <LinearAxis cartesianVerticalAxis></LinearAxis>
+<RadCartesianChart id="cartesianChart">
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis></LinearAxis>
 
-        <AreaSeries cartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-        <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-        <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-    </RadCartesianChart>
-</GridLayout>
+    <AreaSeries cartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+</RadCartesianChart>
