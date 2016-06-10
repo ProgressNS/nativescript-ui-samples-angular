@@ -14,9 +14,9 @@ import * as platformModule from "platform";
 // >> stacked-series-binding-context
 @Component({
     moduleId: module.id,
-    selector: "chart-stacked-series-area",
+    selector: "chart-series-stacked-area",
     providers: [CountryService],
-    templateUrl: "chart-stacked-series-area.component.html"
+    templateUrl: "chart-series-stacked-area.component.html"
 })
 export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
