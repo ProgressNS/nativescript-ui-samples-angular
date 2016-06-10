@@ -1,6 +1,6 @@
-<GridLayout rows="auto, *" rows="auto, *, auto">
+<GridLayout rows="*, auto">
     <!-- >> angular-listview-selection -->
-    <RadListView row="1" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
+    <RadListView row="0" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
         <!-- << angular-listview-selection -->
         <template listItemTemplate let-item="item">
              <StackLayout class="listItemStackLayout" orientation="vertical">
@@ -9,5 +9,5 @@
             </StackLayout>
         </template>
     </RadListView>
-    <Label [text]="selectedItems" textWrap="true" row="2"></Label>
+    <Label [text]="selectedItems" textWrap="true" row="1"></Label>
 </GridLayout>
