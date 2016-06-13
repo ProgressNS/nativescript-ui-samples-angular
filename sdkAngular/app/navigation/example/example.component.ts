@@ -6,7 +6,6 @@ import { Router, RouteParams } from "@angular/router-deprecated";
 import { StackLayout } from "ui/layouts/stack-layout";
 import * as frameModule from "ui/frame";
 
-import { ControlsListComponent } from "../controls-list/controls-list.component";
 import { ExamplesListComponent } from "../examples-list/examples-list.component";
 import { ListViewGettingStartedComponent } from "../../listview/getting-started/listview-getting-started.component";
 import { ListViewHeaderFooterComponent } from "../../listview/header-footer/listview-header-footer.component";
@@ -31,6 +30,7 @@ import { ChartSeriesAreaComponent } from "../../chart/series/area/chart-series-a
 import { ChartSeriesStackedAreaComponent } from "../../chart/series/area/chart-series-stacked-area.component";
 import { ChartSeriesBarComponent } from "../../chart/series/bar/chart-series-bar.component";
 import { ChartSeriesRangeBarComponent } from "../../chart/series/bar/chart-series-range-bar.component";
+import { ChartSeriesStackedBarComponent } from "../../chart/series/bar/chart-series-stacked-bar.component";
 
 @Component({
     moduleId: module.id,
@@ -55,9 +55,6 @@ export class ExampleComponent implements OnInit {
     ngAfterViewInit() {
         //Loads the current example component.
         switch (this.currentExample.path) {
-            case "Controls":
-                this._loader.loadNextToLocation(ControlsListComponent, this.exampleCompPlaceholder);
-                break;
             case "Examples":
                 this._loader.loadNextToLocation(ExamplesListComponent, this.exampleCompPlaceholder);
                 break;
@@ -129,6 +126,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesRangeBar":
                 this._loader.loadNextToLocation(ChartSeriesRangeBarComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesStackedBar":
+                this._loader.loadNextToLocation(ChartSeriesStackedBarComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;
