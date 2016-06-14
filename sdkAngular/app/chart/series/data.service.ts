@@ -3,33 +3,34 @@ import * as mock from "./mock-country";
 import { Country } from "./country";
 import { Product } from "./product";
 import { Person } from "./person";
+import { Currency } from './currency';
 
 @Injectable()
 export class DataService {
     getCategoricalSource(): Country[] {
         return mock.CATEGORICALSOURCE;
     }
-    
+
     getCategoricalSource2(): Country[] {
         return mock.CATEGORICALSOURCE2;
     }
-    
+
     getCategoricalSource3(): Country[] {
         return mock.CATEGORICALSOURCE3;
     }
-    
+
     getBubbleCategoricalSource(): Country[] {
         return mock.BUBBLECATEGORICALSOURCE;
     }
-    
+
     getFirstSeries(): Country[] {
         return mock.FIRSTSERIES;
     }
-    
+
     getSecondSeries(): Country[] {
         return mock.SECONDSERIES;
     }
-    
+
     getThirdSeries(): Country[] {
         return mock.THIRDSERIES;
     }
@@ -41,7 +42,7 @@ export class DataService {
     getHighDataModel(): Country[] {
         return mock.HIGHDATAMODEL;
     }
-    
+
     getMiddleDataModel(): Country[] {
         return mock.MIDDLEDATAMODEL;
     }
@@ -52,5 +53,13 @@ export class DataService {
 
     getScatterSource(): Person[] {
         return mock.SCATTERSOURCE;
+    }
+
+    getCandleStickSourceItems(): Currency[] {
+        return mock.CANDLESTICKSOURCEITEMS;
+    }
+
+    getOhlcSourceItemse(): Currency[] {
+        return mock.OHLCSOURCEITEMS;
     }
 }

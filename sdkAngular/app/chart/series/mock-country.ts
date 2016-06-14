@@ -1,6 +1,7 @@
 import { Country } from './country';
 import { Product } from './product';
 import { Person } from './person';
+import { Currency } from './currency';
 
 // >> categorical-source
 export var CATEGORICALSOURCE: Country[] = [
@@ -72,45 +73,64 @@ export var RANGEBARSOURCE: Product[] = [
 // >> bubble-data-source
 export var HIGHDATAMODEL: Country[] = [
     { Year: 2000, Amount: 15, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1456, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1866, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1900, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1700, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
-    { Year: 1600, Amount: 20, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 }, 
+    { Year: 1456, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1866, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1900, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1700, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1600, Amount: 20, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
 ];
 
 
 export var MIDDLEDATAMODEL: Country[] = [
     { Year: 1200, Amount: 15, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1156, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 1000, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 900, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 700, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1156, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 1000, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 900, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 700, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
     { Year: 600, Amount: 20, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
 ];
-    
-    
+
+
 export var LOWDATAMODEL: Country[] = [
     { Year: 200, Amount: 15, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 456, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 366, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 100, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
-    {  Year: 340, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 456, Amount: 13, Impact: 7, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 366, Amount: 25, Impact: 10, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 100, Amount: 5, Impact: 3, Country: "", SecondVal: 0, ThirdVal: 0 },
+    { Year: 340, Amount: 17, Impact: 4, Country: "", SecondVal: 0, ThirdVal: 0 },
     { Year: 135, Amount: 20, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
-]; 
+];
 // << bubble-data-source
 
 // >> scatter-data-source
 export var SCATTERSOURCE: Person[] = [
-        { Age: 20, Salary: 10000, Spendings: 4500, Savings: 5500, Impact: 1 },
-        { Age: 25, Salary: 12300, Spendings: 6500, Savings: 5200 , Impact: 7},
-        { Age: 30, Salary: 14000, Spendings: 8500, Savings: 5500 , Impact: 10},
-        { Age: 35, Salary: 18000, Spendings: 9500, Savings: 7500 , Impact: 6},
-        { Age: 40, Salary: 19520, Spendings: 15540, Savings: 3800 , Impact: 4},
-        { Age: 45, Salary: 20000, Spendings: 15500, Savings: 4500 , Impact: 2},
-        { Age: 50, Salary: 24200, Spendings: 20500, Savings: 3700 , Impact: 11},
-        { Age: 55, Salary: 24000, Spendings: 22500, Savings: 1500 , Impact: 8},
-        { Age: 60, Salary: 22000, Spendings: 22500, Savings: 500 , Impact: 1},
-        { Age: 65, Salary: 20000, Spendings: 20500, Savings: 10, Impact: 9 }
-    ];
+    { Age: 20, Salary: 10000, Spendings: 4500, Savings: 5500, Impact: 1 },
+    { Age: 25, Salary: 12300, Spendings: 6500, Savings: 5200, Impact: 7 },
+    { Age: 30, Salary: 14000, Spendings: 8500, Savings: 5500, Impact: 10 },
+    { Age: 35, Salary: 18000, Spendings: 9500, Savings: 7500, Impact: 6 },
+    { Age: 40, Salary: 19520, Spendings: 15540, Savings: 3800, Impact: 4 },
+    { Age: 45, Salary: 20000, Spendings: 15500, Savings: 4500, Impact: 2 },
+    { Age: 50, Salary: 24200, Spendings: 20500, Savings: 3700, Impact: 11 },
+    { Age: 55, Salary: 24000, Spendings: 22500, Savings: 1500, Impact: 8 },
+    { Age: 60, Salary: 22000, Spendings: 22500, Savings: 500, Impact: 1 },
+    { Age: 65, Salary: 20000, Spendings: 20500, Savings: 10, Impact: 9 }
+];
 // << scatter-data-source
+
+
+// >> candlestick-data-model
+export var CANDLESTICKSOURCEITEMS: Currency[] = [
+    { Date: "01/6/2015", Open: 100, Close: 85, Low: 50, High: 139 },
+    { Date: "27/7/2015", Open: 60, Close: 150, Low: 40, High: 159 },
+    { Date: "18/8/2015", Open: 120, Close: 81, Low: 45, High: 141 },
+    { Date: "19/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
+];
+// << candlestick-data-model
+
+// >> ohlc-data-model
+export var OHLCSOURCEITEMS: Currency[] = [
+    { Date: "20/6/2015", Open: 100, Close: 85, Low: 50, High: 139 },
+    { Date: "02/7/2015", Open: 60, Close: 150, Low: 40, High: 159 },
+    { Date: "01/8/2015", Open: 120, Close: 81, Low: 45, High: 141 },
+    { Date: "01/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
+];
+// << ohlc-data-model
