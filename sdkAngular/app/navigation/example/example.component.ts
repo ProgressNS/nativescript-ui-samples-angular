@@ -32,6 +32,7 @@ import { ChartSeriesBarComponent } from "../../chart/series/bar/chart-series-bar
 import { ChartSeriesRangeBarComponent } from "../../chart/series/bar/chart-series-range-bar.component";
 import { ChartSeriesStackedBarComponent } from "../../chart/series/bar/chart-series-stacked-bar.component";
 import { ChartSeriesBubbleComponent } from "../../chart/series/bubble/chart-series-bubble.component";
+import { ChartSeriesScatterBubbleComponent } from "../../chart/series/bubble/chart-series-scatter-bubble.component";
 
 @Component({
     moduleId: module.id,
@@ -133,6 +134,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesBubble":
                 this._loader.loadNextToLocation(ChartSeriesBubbleComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesScatterBubble":
+                this._loader.loadNextToLocation(ChartSeriesScatterBubbleComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

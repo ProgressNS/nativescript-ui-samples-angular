@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import * as mock from "./mock-country";
 import { Country } from "./country";
-import { Product } from "./Product";
+import { Product } from "./product";
+import { Person } from "./person";
 
 @Injectable()
-export class CountryService {
+export class DataService {
     getCategoricalSource(): Country[] {
         return mock.CATEGORICALSOURCE;
     }
@@ -47,5 +48,9 @@ export class CountryService {
 
     getLowDataModel(): Country[] {
         return mock.LOWDATAMODEL;
+    }
+
+    getScatterSource(): Person[] {
+        return mock.SCATTERSOURCE;
     }
 }

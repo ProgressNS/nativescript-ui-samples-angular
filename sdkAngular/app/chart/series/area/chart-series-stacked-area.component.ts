@@ -8,13 +8,13 @@ import * as applicationModule from "application";
 import { RadCartesianChart, CategoricalSeries, AreaSeries } from "nativescript-telerik-ui-pro/chart";
 import { ObservableArray } from "data/observable-array";
 import { Country } from '../country';
-import { CountryService } from '../country.service';
+import { DataService } from '../data.service';
 
 // >> stacked-series-binding-context
 @Component({
     moduleId: module.id,
     selector: "chart-series-stacked-area",
-    providers: [CountryService],
+    providers: [DataService],
     templateUrl: "chart-series-stacked-area.component.html"
 })
 export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implements OnInit {
@@ -25,7 +25,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _thirdSeries: ObservableArray<Country>;
 
     constructor( @Inject(Page) private _page: Page,
-        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _countryService: CountryService) {
+        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _countryService: DataService) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);

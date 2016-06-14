@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from '../country.service';
+import { DataService } from '../data.service';
 import { Country } from '../country';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
     selector: 'chart-series-bubble',
-    providers: [CountryService],
+    providers: [DataService],
     templateUrl: 'chart-series-bubble.component.html'
 })
 export class ChartSeriesBubbleComponent implements OnInit {
@@ -14,7 +14,7 @@ export class ChartSeriesBubbleComponent implements OnInit {
     private _middleDataModel: ObservableArray<Country>;
     private _lowDataModel: ObservableArray<Country>;
 
-    constructor(private _countryService: CountryService) {
+    constructor(private _countryService: DataService) {
 
     }
 

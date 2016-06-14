@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from '../country.service';
+import { DataService } from '../data.service';
 import { Product } from '../product';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
     selector: 'chart-series-range-bar',
-    providers: [CountryService],
+    providers: [DataService],
     templateUrl: 'chart-series-range-bar.component.html'
 })
 export class ChartSeriesRangeBarComponent implements OnInit {
     private _rangeBarSource: ObservableArray<Product>;
 
-    constructor(private _countryService: CountryService) {
+    constructor(private _countryService: DataService) {
 
     }
 
