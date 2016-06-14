@@ -36,4 +36,16 @@ export class CountryService {
     getRangeBarSource(): Product[] {
         return mock.RANGEBARSOURCE;
     }
+
+    getHighDataModel(): Country[] {
+        return mock.HIGHDATAMODEL;
+    }
+    
+    getMiddleDataModel(): Country[] {
+        return mock.MIDDLEDATAMODEL;
+    }
+
+    getLowDataModel(): Country[] {
+        return mock.LOWDATAMODEL;
+    }
 }
