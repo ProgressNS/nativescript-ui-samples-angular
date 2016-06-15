@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as mock from "./mock-country";
+import * as mock from "./mock-data";
 import { Country } from "./country";
 import { Product } from "./product";
 import { Person } from "./person";
@@ -59,7 +59,11 @@ export class DataService {
         return mock.CANDLESTICKSOURCEITEMS;
     }
 
-    getOhlcSourceItemse(): Currency[] {
+    getOhlcSourceItems(): Currency[] {
         return mock.OHLCSOURCEITEMS;
+    }
+
+    getPieSource(): Currency[] {
+        return mock.PIESOURCE;
     }
 }

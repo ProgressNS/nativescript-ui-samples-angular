@@ -21,6 +21,6 @@ export class ChartSeriesOhlcComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._ohlcSourceItems = new ObservableArray(this._countryService.getOhlcSourceItemse());
+        this._ohlcSourceItems = new ObservableArray(this._countryService.getOhlcSourceItems());
     }
 }

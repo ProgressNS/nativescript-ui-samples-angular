@@ -36,6 +36,7 @@ import { ChartSeriesScatterBubbleComponent } from "../../chart/series/bubble/cha
 import { ChartSeriesCandlestickComponent } from "../../chart/series/financial/chart-series-candlestick.component";
 import { ChartSeriesOhlcComponent } from "../../chart/series/financial/chart-series-ohlc.component";
 import { ChartSeriesLineComponent } from "../../chart/series/line/chart-series-line.component";
+import { ChartSeriesPieComponent } from "../../chart/series/pie/chart-series-pie.component";
 
 @Component({
     moduleId: module.id,
@@ -149,6 +150,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesLine":
                 this._loader.loadNextToLocation(ChartSeriesLineComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesPie":
+                this._loader.loadNextToLocation(ChartSeriesPieComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

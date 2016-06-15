@@ -2,6 +2,7 @@ import { Country } from './country';
 import { Product } from './product';
 import { Person } from './person';
 import { Currency } from './currency';
+import { Car } from './car';
 
 // >> categorical-source
 export var CATEGORICALSOURCE: Country[] = [
@@ -134,3 +135,11 @@ export var OHLCSOURCEITEMS: Currency[] = [
     { Date: "01/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
 ];
 // << ohlc-data-model
+
+export var PIESOURCE: Car[] = [
+    { Brand: "Audi", Amount: 10 },
+    { Brand: "Mercedes", Amount: 76 },
+    { Brand: "Fiat", Amount: 60 },
+    { Brand: "BMW", Amount: 24 },
+    { Brand: "Crysler", Amount: 40 }
+];
