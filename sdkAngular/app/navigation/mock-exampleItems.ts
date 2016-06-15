@@ -52,6 +52,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Candlestick series",
                                 "path": "ChartSeriesCandlestick",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Ohlc series",
+                                "path": "ChartSeriesOhlc",
+                                "subItems": []
                             }
                         ]
                     }
