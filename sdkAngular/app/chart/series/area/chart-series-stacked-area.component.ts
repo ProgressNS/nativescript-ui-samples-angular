@@ -97,4 +97,4 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     }
     // << (hide)
 }
-// >> stacked-series-binding-context
+// << stacked-series-binding-context
