@@ -4,6 +4,7 @@ import { Country } from "./country";
 import { Product } from "./product";
 import { Person } from "./person";
 import { Currency } from './currency';
+import { Car } from './car';
 
 @Injectable()
 export class DataService {
@@ -63,7 +64,7 @@ export class DataService {
         return mock.OHLCSOURCEITEMS;
     }
 
-    getPieSource(): Currency[] {
+    getPieSource(): Car[] {
         return mock.PIESOURCE;
     }
 }
