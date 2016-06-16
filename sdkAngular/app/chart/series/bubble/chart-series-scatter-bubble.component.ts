@@ -12,7 +12,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesScatterBubbleComponent implements OnInit {
     private _scatterSource: ObservableArray<Person>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -21,6 +21,6 @@ export class ChartSeriesScatterBubbleComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._scatterSource = new ObservableArray(this._countryService.getScatterSource());
+        this._scatterSource = new ObservableArray(this._dataService.getScatterSource());
     }
 }

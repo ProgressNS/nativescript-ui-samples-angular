@@ -12,7 +12,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesPieComponent implements OnInit {
     private _pieSource: ObservableArray<Car>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -21,6 +21,6 @@ export class ChartSeriesPieComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._pieSource = new ObservableArray(this._countryService.getPieSource());
+        this._pieSource = new ObservableArray(this._dataService.getPieSource());
     }
 }

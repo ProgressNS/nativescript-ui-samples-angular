@@ -12,7 +12,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesStackedBarComponent implements OnInit {
     private _categoricalSource: ObservableArray<Country>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -21,6 +21,6 @@ export class ChartSeriesStackedBarComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._categoricalSource = new ObservableArray(this._countryService.getCategoricalSource());
+        this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
     }
 }

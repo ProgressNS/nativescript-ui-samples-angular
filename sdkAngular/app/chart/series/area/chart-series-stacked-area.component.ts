@@ -25,7 +25,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _thirdSeries: ObservableArray<Country>;
 
     constructor( @Inject(Page) private _page: Page,
-        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _countryService: DataService) {
+        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
@@ -50,9 +50,9 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
 
     ngOnInit() {
         this._chart = <RadCartesianChart>this._page.getViewById("cartesianChart");
-        this._firstSeries = new ObservableArray(this._countryService.getFirstSeries());
-        this._secondSeries = new ObservableArray(this._countryService.getSecondSeries());
-        this._thirdSeries = new ObservableArray(this._countryService.getThirdSeries());
+        this._firstSeries = new ObservableArray(this._dataService.getFirstSeries());
+        this._secondSeries = new ObservableArray(this._dataService.getSecondSeries());
+        this._thirdSeries = new ObservableArray(this._dataService.getThirdSeries());
         this.set("stackMode", "Stack");
     }
 

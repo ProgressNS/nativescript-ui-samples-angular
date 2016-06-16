@@ -12,7 +12,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesRangeBarComponent implements OnInit {
     private _rangeBarSource: ObservableArray<Product>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -21,6 +21,6 @@ export class ChartSeriesRangeBarComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._rangeBarSource = new ObservableArray(this._countryService.getRangeBarSource());
+        this._rangeBarSource = new ObservableArray(this._dataService.getRangeBarSource());
     }
 }

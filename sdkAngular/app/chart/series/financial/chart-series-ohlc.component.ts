@@ -12,7 +12,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesOhlcComponent implements OnInit {
     private _ohlcSourceItems: ObservableArray<Currency>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -21,6 +21,6 @@ export class ChartSeriesOhlcComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._ohlcSourceItems = new ObservableArray(this._countryService.getOhlcSourceItems());
+        this._ohlcSourceItems = new ObservableArray(this._dataService.getOhlcSourceItems());
     }
 }

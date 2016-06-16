@@ -14,7 +14,7 @@ export class ChartSeriesBubbleComponent implements OnInit {
     private _middleDataModel: ObservableArray<Country>;
     private _lowDataModel: ObservableArray<Country>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -31,8 +31,8 @@ export class ChartSeriesBubbleComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._highDataModel = new ObservableArray(this._countryService.getHighDataModel());
-        this._middleDataModel = new ObservableArray(this._countryService.getMiddleDataModel());
-        this._lowDataModel = new ObservableArray(this._countryService.getLowDataModel());
+        this._highDataModel = new ObservableArray(this._dataService.getHighDataModel());
+        this._middleDataModel = new ObservableArray(this._dataService.getMiddleDataModel());
+        this._lowDataModel = new ObservableArray(this._dataService.getLowDataModel());
     }
 }
