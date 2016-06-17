@@ -1,8 +1,13 @@
 <!-- >> chart-angular-line-series -->
 <RadCartesianChart>
     <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <!-- >> (hide) -->
+    <!-- >> chart-line-axis -->
+    <!-- << (hide) -->
     <LinearAxis cartesianVerticalAxis></LinearAxis>
-
+    <!-- >> (hide) -->
+    <!-- << chart-line-axis -->
+    <!-- << (hide) -->
     <LineSeries cartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></LineSeries>
 </RadCartesianChart>
 <!-- << chart-angular-line-series -->
