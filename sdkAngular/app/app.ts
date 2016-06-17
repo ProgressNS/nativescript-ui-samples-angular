@@ -1,7 +1,7 @@
-import { nativeScriptBootstrap } from "nativescript-angular/application";
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
 import { FrescoDrawee } from "fresco/fresco";
 // >> using-global-directives
+import { nativeScriptBootstrap } from "nativescript-angular/application";
 import { SIDEDRAWER_PROVIDERS } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { LISTVIEW_PROVIDERS } from 'nativescript-telerik-ui-pro/listview/angular';
 import { CALENDAR_PROVIDERS } from 'nativescript-telerik-ui-pro/calendar/angular';
@@ -17,5 +17,6 @@ if (applicationModule.android) {
 }
 elementRegistryModule.registerElement("FrescoDrawee", () => FrescoDrawee);
 // << (hide)
+
 nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS, CHART_PROVIDERS], { startPageActionBarHidden: false });
 // << using-global-directives

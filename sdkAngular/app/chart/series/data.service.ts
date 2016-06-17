@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+
 import { Country } from "./country";
 import { Product } from "./product";
 import { Person } from "./person";
@@ -6,6 +6,8 @@ import { Currency } from './currency';
 import { Car } from './car';
 
 // >> chart-angular-data-service
+import { Injectable } from '@angular/core';
+
 @Injectable()
 export class DataService {
     // >> (hide)
@@ -20,7 +22,6 @@ export class DataService {
         ];
     }
     // << chart-angular-categorical-source
-
 
     getCategoricalSource2(): Country[] {
         return [
