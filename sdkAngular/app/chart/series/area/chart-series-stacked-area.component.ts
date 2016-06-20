@@ -1,6 +1,4 @@
 import { OptionsService } from "../../../navigation/options/options.service";
-
-// >> chart-angular-stacked-series-component
 import { OptionsExampleBase } from "../../../options-example-base";
 import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
 import { Router } from "@angular/router-deprecated";
@@ -27,7 +25,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     constructor( @Inject(Page) private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();
-        // >> (hide)
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "stackMode";
@@ -35,7 +32,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
             this.router = _router;
             this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Stack 100", "Stack", "None"] };
         }
-        // << (hide)
     }
 
     get firstSeries(): ObservableArray<Country> {
@@ -74,7 +70,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
         this.set("stackMode", "Stack100");
     }
 
-    // >> (hide)
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
             if (this._optionsService.paramName == this._optionsParamName) {
@@ -97,6 +92,4 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
             }
         }
     }
-    // << (hide)
 }
-// << chart-angular-stacked-series-component

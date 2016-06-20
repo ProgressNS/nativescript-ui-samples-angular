@@ -4,7 +4,6 @@
     <ActionItem text="Stack" android.position="popup" (tap)="onStackModeSelected()"></ActionItem>
     <ActionItem text="None" android.position="popup" (tap)="onNoneStackModeSelected()"></ActionItem>
 </ActionBar>
-<!-- >> chart-angular-stacked-series -->
 <RadCartesianChart id="cartesianChart">
     <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
     <LinearAxis cartesianVerticalAxis></LinearAxis>
@@ -13,4 +12,3 @@
     <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
     <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
 </RadCartesianChart>
-<!-- << chart-angular-stacked-series -->
