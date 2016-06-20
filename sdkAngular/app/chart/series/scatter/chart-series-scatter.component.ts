@@ -1,4 +1,4 @@
-//  >> chart-angular-scatter-series
+//  >> chart-angular-scatter-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Person } from '../person';
@@ -25,4 +25,4 @@ export class ChartSeriesScatterComponent implements OnInit {
         this._scatterSource = new ObservableArray(this._dataService.getScatterSource());
     }
 }
-// << chart-angular-scatter-series
+// << chart-angular-scatter-series-component

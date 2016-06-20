@@ -1,4 +1,4 @@
-// >> chart-angular-ohlc-series
+// >> chart-angular-ohlc-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Currency } from '../currency';
@@ -25,4 +25,4 @@ export class ChartSeriesOhlcComponent implements OnInit {
         this._ohlcSourceItems = new ObservableArray(this._dataService.getOhlcSourceItems());
     }
 }
-// << chart-angular-ohlc-series
+// << chart-angular-ohlc-series-component
