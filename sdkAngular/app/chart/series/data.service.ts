@@ -83,7 +83,7 @@ export class DataService {
         ];
     }
 
-    // >> chart-angularrange-bar-source
+    // >> chart-angular-range-bar-source
     getRangeBarSource(): Product[] {
         return [
             { Name: "Groceries", High: 30, Low: 12 },
@@ -92,9 +92,9 @@ export class DataService {
             { Name: "Gardening", High: 50, Low: 29 }
         ];
     }
-    // << chart-angularrange-bar-source
+    // << chart-angular-range-bar-source
 
-    // >> chart-angularbubble-data-source
+    // >> chart-angular-bubble-data-source
     getHighDataModel(): Country[] {
         return [
             { Year: 2000, Amount: 15, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
@@ -127,9 +127,9 @@ export class DataService {
             { Year: 135, Amount: 20, Impact: 1, Country: "", SecondVal: 0, ThirdVal: 0 },
         ];
     }
-    // << chart-angularbubble-data-source
+    // << chart-angular-bubble-data-source
 
-    // >> chart-angularscatter-data-source
+    // >> chart-angular-scatter-data-source
     getScatterSource(): Person[] {
         return [
             { Age: 20, Salary: 10000, Spendings: 4500, Savings: 5500, Impact: 1 },
@@ -144,9 +144,9 @@ export class DataService {
             { Age: 65, Salary: 20000, Spendings: 20500, Savings: 10, Impact: 9 }
         ];
     }
-    // << chart-angularscatter-data-source
+    // << chart-angular-scatter-data-source
 
-    // >> chart-angularcandlestick-data-model
+    // >> chart-angular-candlestick-data-model
     getCandleStickSourceItems(): Currency[] {
         return [
             { Date: "01/6/2015", Open: 100, Close: 85, Low: 50, High: 139 },
@@ -155,9 +155,9 @@ export class DataService {
             { Date: "19/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
         ];
     }
-    // << chart-angularcandlestick-data-model
+    // << chart-angular-candlestick-data-model
 
-    // >> chart-angularohlc-data-model
+    // >> chart-angular-ohlc-data-model
     getOhlcSourceItems(): Currency[] {
         return [
             { Date: "20/6/2015", Open: 100, Close: 85, Low: 50, High: 139 },
@@ -166,7 +166,7 @@ export class DataService {
             { Date: "01/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
         ];
     }
-    // << chart-angularohlc-data-model
+    // << chart-angular-ohlc-data-model
 
     getPieSource(): Car[] {
         return [
