@@ -1,16 +1,16 @@
+import { OptionsService } from "../../../navigation/options/options.service";
+
+// >> chart-angular-stacked-series-component
 import { OptionsExampleBase } from "../../../options-example-base";
 import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
 import { Router } from "@angular/router-deprecated";
-import { Page, NavigatedData } from "ui/page";
-import { OptionsService } from "../../../navigation/options/options.service";
-import { RadCalendar, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
+import { Page } from "ui/page";
 import * as applicationModule from "application";
-import { RadCartesianChart, CategoricalSeries, AreaSeries } from "nativescript-telerik-ui-pro/chart";
+import { RadCartesianChart } from "nativescript-telerik-ui-pro/chart";
 import { ObservableArray } from "data/observable-array";
 import { Country } from '../country';
 import { DataService } from '../data.service';
 
-// >> stacked-series-binding-context
 @Component({
     moduleId: module.id,
     selector: "chart-series-stacked-area",
@@ -27,6 +27,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     constructor( @Inject(Page) private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();
+        // >> (hide)
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "stackMode";
@@ -34,6 +35,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
             this.router = _router;
             this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Stack 100", "Stack", "None"] };
         }
+        // << (hide)
     }
 
     get firstSeries(): ObservableArray<Country> {
@@ -97,4 +99,4 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     }
     // << (hide)
 }
-// << stacked-series-binding-context
+// << chart-angular-stacked-series-component
