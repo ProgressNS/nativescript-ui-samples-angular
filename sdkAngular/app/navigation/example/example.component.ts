@@ -34,6 +34,11 @@ import { ChartSeriesStackedBarComponent } from "../../chart/series/bar/chart-ser
 import { ChartSeriesBubbleComponent } from "../../chart/series/bubble/chart-series-bubble.component";
 import { ChartSeriesScatterBubbleComponent } from "../../chart/series/bubble/chart-series-scatter-bubble.component";
 import { ChartSeriesCandlestickComponent } from "../../chart/series/financial/chart-series-candlestick.component";
+import { ChartSeriesOhlcComponent } from "../../chart/series/financial/chart-series-ohlc.component";
+import { ChartSeriesLineComponent } from "../../chart/series/line/chart-series-line.component";
+import { ChartSeriesPieComponent } from "../../chart/series/pie/chart-series-pie.component";
+import { ChartSeriesScatterComponent } from "../../chart/series/scatter/chart-series-scatter.component";
+import { ChartSeriesSplineComponent } from "../../chart/series/spline/chart-series-spline.component";
 
 @Component({
     moduleId: module.id,
@@ -141,6 +146,21 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesCandlestick":
                 this._loader.loadNextToLocation(ChartSeriesCandlestickComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesOhlc":
+                this._loader.loadNextToLocation(ChartSeriesOhlcComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesLine":
+                this._loader.loadNextToLocation(ChartSeriesLineComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesPie":
+                this._loader.loadNextToLocation(ChartSeriesPieComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesScatter":
+                this._loader.loadNextToLocation(ChartSeriesScatterComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartSeriesSpline":
+                this._loader.loadNextToLocation(ChartSeriesSplineComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

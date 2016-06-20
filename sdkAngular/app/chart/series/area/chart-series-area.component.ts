@@ -1,3 +1,4 @@
+// >> chart-angular-area-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Country } from '../country';
@@ -12,7 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesAreaComponent implements OnInit {
     private _categoricalSource: ObservableArray<Country>;
 
-    constructor(private _countryService: DataService) {
+    constructor(private _dataService: DataService) {
     }
 
     get categoricalSource(): ObservableArray<Country> {
@@ -20,6 +21,7 @@ export class ChartSeriesAreaComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._categoricalSource = new ObservableArray(this._countryService.getCategoricalSource());
+        this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
     }
 }
+// << chart-angular-area-series-component

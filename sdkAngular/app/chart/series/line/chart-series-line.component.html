@@ -1,0 +1,9 @@
+<!-- >> chart-angular-line-series -->
+<RadCartesianChart>
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <!-- >> chart-line-axis -->
+    <LinearAxis cartesianVerticalAxis></LinearAxis>
+    <!-- << chart-line-axis -->
+    <LineSeries cartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+</RadCartesianChart>
+<!-- << chart-angular-line-series -->

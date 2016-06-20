@@ -1,4 +1,4 @@
-// >> chart-angular-bar-series-component
+// >> chart-angular-line-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Country } from '../country';
@@ -6,11 +6,11 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-bar',
+    selector: 'chart-series-line',
     providers: [DataService],
-    templateUrl: 'chart-series-bar.component.html'
+    templateUrl: 'chart-series-line.component.html'
 })
-export class ChartSeriesBarComponent implements OnInit {
+export class ChartSeriesLineComponent implements OnInit {
     private _categoricalSource: ObservableArray<Country>;
 
     constructor(private _dataService: DataService) {
@@ -25,4 +25,4 @@ export class ChartSeriesBarComponent implements OnInit {
         this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
     }
 }
-// << chart-angular-bar-series-component
+// << chart-angular-line-series-component

@@ -1,16 +1,14 @@
+import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
 import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
 import { Router } from "@angular/router-deprecated";
-import { Page, NavigatedData } from "ui/page";
-import { OptionsService } from "../../../navigation/options/options.service";
-import { RadCalendar, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
+import { Page } from "ui/page";
 import * as applicationModule from "application";
-import { RadCartesianChart, CategoricalSeries, AreaSeries } from "nativescript-telerik-ui-pro/chart";
+import { RadCartesianChart } from "nativescript-telerik-ui-pro/chart";
 import { ObservableArray } from "data/observable-array";
 import { Country } from '../country';
 import { DataService } from '../data.service';
 
-// >> stacked-series-binding-context
 @Component({
     moduleId: module.id,
     selector: "chart-series-stacked-area",
@@ -25,7 +23,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _thirdSeries: ObservableArray<Country>;
 
     constructor( @Inject(Page) private _page: Page,
-        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _countryService: DataService) {
+        private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
@@ -50,9 +48,9 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
 
     ngOnInit() {
         this._chart = <RadCartesianChart>this._page.getViewById("cartesianChart");
-        this._firstSeries = new ObservableArray(this._countryService.getFirstSeries());
-        this._secondSeries = new ObservableArray(this._countryService.getSecondSeries());
-        this._thirdSeries = new ObservableArray(this._countryService.getThirdSeries());
+        this._firstSeries = new ObservableArray(this._dataService.getFirstSeries());
+        this._secondSeries = new ObservableArray(this._dataService.getSecondSeries());
+        this._thirdSeries = new ObservableArray(this._dataService.getThirdSeries());
         this.set("stackMode", "Stack");
     }
 
@@ -72,7 +70,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
         this.set("stackMode", "Stack100");
     }
 
-    // >> (hide)
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
             if (this._optionsService.paramName == this._optionsParamName) {
@@ -95,6 +92,4 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
             }
         }
     }
-    // << (hide)
 }
-// << stacked-series-binding-context

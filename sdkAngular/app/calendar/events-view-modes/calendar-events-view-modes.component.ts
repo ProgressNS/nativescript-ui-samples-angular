@@ -70,7 +70,7 @@ export class CalendarEventsViewModesComponent extends OptionsExampleBase impleme
                         this.navigationParameters.selectedIndex = 1;
                         break;
                     case "Popover":
-                        if (UIDevice.currentDevice().userInterfaceIdiom === UIUserInterfaceIdiomPad)) {
+                        if (UIDevice.currentDevice().userInterfaceIdiom === UIUserInterfaceIdiomPad) {
                             this.onPopoverTap();
                             this.navigationParameters.selectedIndex = 2;
                         }

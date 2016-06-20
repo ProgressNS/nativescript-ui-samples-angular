@@ -1,4 +1,4 @@
-// >> chart-angular-scatter-bubble-series-component
+//  >> chart-angular-scatter-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Person } from '../person';
@@ -6,11 +6,11 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-scatter-bubble',
+    selector: 'chart-series-scatter',
     providers: [DataService],
-    templateUrl: 'chart-series-scatter-bubble.component.html'
+    templateUrl: 'chart-series-scatter.component.html'
 })
-export class ChartSeriesScatterBubbleComponent implements OnInit {
+export class ChartSeriesScatterComponent implements OnInit {
     private _scatterSource: ObservableArray<Person>;
 
     constructor(private _dataService: DataService) {
@@ -25,4 +25,4 @@ export class ChartSeriesScatterBubbleComponent implements OnInit {
         this._scatterSource = new ObservableArray(this._dataService.getScatterSource());
     }
 }
-// << chart-angular-scatter-bubble-series-component
+// << chart-angular-scatter-series-component
