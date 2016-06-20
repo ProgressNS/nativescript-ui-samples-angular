@@ -24,15 +24,12 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
     constructor( @Inject(Page) private _page: Page, private _calendarService: CalendarStylesService,
         private _optionsService: OptionsService, private _router: Router) {
         super();
-        if (applicationModule.ios) {
+         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "eventsViewMode";
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
-            this.navigationParameters = {
-                selectedIndex: 0, paramName: this._optionsParamName,
-                items: ["Month", "Week", "Year", "Month names"]
-            };
+            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] };
         }
         this._viewMode = calendarModule.CalendarViewMode.Month;
     }
