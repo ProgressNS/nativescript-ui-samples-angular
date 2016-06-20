@@ -1,3 +1,4 @@
+// >> chart-angular-range-bar-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Product } from '../product';
@@ -24,3 +25,4 @@ export class ChartSeriesRangeBarComponent implements OnInit {
         this._rangeBarSource = new ObservableArray(this._dataService.getRangeBarSource());
     }
 }
+// << chart-angular-range-bar-series-component

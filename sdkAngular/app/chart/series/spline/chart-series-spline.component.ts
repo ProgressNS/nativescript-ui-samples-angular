@@ -1,3 +1,4 @@
+// >> chart-angular-spline-series
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Country } from '../country';
@@ -24,3 +25,4 @@ export class ChartSeriesSplineComponent implements OnInit {
         this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
     }
 }
+// << chart-angular-spline-series

@@ -1,3 +1,4 @@
+// >> chart-angular-bar-series-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Country } from '../country';
@@ -24,3 +25,4 @@ export class ChartSeriesBarComponent implements OnInit {
         this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
     }
 }
+// << chart-angular-bar-series-component
