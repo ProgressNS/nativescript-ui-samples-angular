@@ -21,6 +21,7 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _firstSeries: ObservableArray<Country>;
     private _secondSeries: ObservableArray<Country>;
     private _thirdSeries: ObservableArray<Country>;
+    private _optionsItems: Array<string>;
 
     constructor( @Inject(Page) private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
@@ -30,7 +31,8 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
             this._optionsParamName = "stackMode";
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
-            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Stack 100", "Stack", "None"] };
+            this._optionsItems = ["Stack", "Stack 100", "None"];
+            this.navigationParameters = { selectedIndex: 0, paramName: this._optionsParamName, items: this._optionsItems };
         }
     }
 
@@ -73,18 +75,16 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
             if (this._optionsService.paramName == this._optionsParamName) {
+                this.navigationParameters.selectedIndex = this._optionsItems.indexOf(this._optionsService.paramValue);
                 switch (this._optionsService.paramValue) {
                     case "Stack 100":
                         this.onStack100ModeSelected();
-                        this.navigationParameters.selectedIndex = 0;
                         break;
                     case "Stack":
                         this.onStackModeSelected();
-                        this.navigationParameters.selectedIndex = 1;
                         break;
                     case "None":
                         this.onNoneStackModeSelected();
-                        this.navigationParameters.selectedIndex = 2;
                         break;
                     default:
                         break;
