@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, ChangeDetectorRef} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
@@ -16,16 +16,29 @@ var posts = require("../../listview/posts.json")
 export class ListViewLoadOnDemandComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
+    private _layout: listViewModule.ListViewLinearLayout;
 
-    constructor() {
-    }
-
-    get dataItems(): ObservableArray<DataItem> {
-        return this._dataItems;
+    constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     ngOnInit() {
+        this.layout = new listViewModule.ListViewLinearLayout();
+        this.layout.scrollDirection = "Vertical";
+        this.layout.itemHeight = 120;
         this.initDataItems();
+        this._changeDetectionRef.detectChanges();
+    }
+
+    public get dataItems(): ObservableArray<DataItem> {
+        return this._dataItems;
+    }
+
+    public get layout(): listViewModule.ListViewLinearLayout {
+        return this._layout;
+    }
+
+    public set layout(value: listViewModule.ListViewLinearLayout) {
+        this._layout = value;
     }
 
     public onLoadMoreItemsRequested(args: listViewModule.ListViewEventData) {
