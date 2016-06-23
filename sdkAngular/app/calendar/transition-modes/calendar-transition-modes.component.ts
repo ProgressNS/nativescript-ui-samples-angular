@@ -3,7 +3,7 @@ import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import { OptionsService } from "../../navigation/options/options.service";
 import * as applicationModule from "application";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import { OptionsExampleBase } from "../../options-example-base";
 
 @Component({
@@ -85,7 +85,7 @@ export class CalendarTransitionModesComponent extends OptionsExampleBase impleme
     
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
-            if (this._optionsService.paramName == this._optionsParamName) {
+            if (this._optionsService.paramName === this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
                     case "None":
                         this.onNoneTap();

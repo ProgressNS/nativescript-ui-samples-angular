@@ -1,6 +1,6 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, Inject, OnInit } from "@angular/core";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import * as frameModule from "ui/frame";
@@ -60,7 +60,7 @@ export class CalendarSelectionModesComponent extends OptionsExampleBase implemen
     
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
-            if (this._optionsService.paramName == this._optionsParamName) {
+            if (this._optionsService.paramName === this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
                     case "None":
                         this.onNoneTap();

@@ -1,7 +1,7 @@
 import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
 import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import * as applicationModule from "application";
 import { DataService } from '../data.service';
@@ -61,7 +61,7 @@ export class ChartSeriesStackedBarComponent extends OptionsExampleBase implement
 
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
-            if (this._optionsService.paramName == this._optionsParamName) {
+            if (this._optionsService.paramName === this._optionsParamName) {
                 this.navigationParameters.selectedIndex = this._optionsItems.indexOf(this._optionsService.paramValue);
                 switch (this._optionsService.paramValue) {
                     case "Stack 100":

@@ -1,4 +1,4 @@
-<ActionBar [title]="currentExample.title" id="exampleActionBar">
+<ActionBar [title]="currentExample ? currentExample.title : 'Example'">
     <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
 </ActionBar>
 <GridLayout>

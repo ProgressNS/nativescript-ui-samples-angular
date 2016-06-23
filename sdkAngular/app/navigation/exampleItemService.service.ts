@@ -16,10 +16,10 @@ export class ExampleItemService {
         if (exampleItems) {
             for (var index = 0; index < exampleItems.length; index++) {
                 var element = exampleItems[index];
-                if (element.title == parentTitle) {
+                if (element.title === parentTitle) {
                     var parentExampleItem = element;
                     if (parentExampleItem && parentExampleItem.subItems.length >= 0) {
-                        var childItem = parentExampleItem.subItems.filter(item => item.title == subItemTitle)[0];
+                        var childItem = parentExampleItem.subItems.filter(item => item.title === subItemTitle)[0];
 
                         return childItem;
                     }

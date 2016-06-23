@@ -1,6 +1,6 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, OnInit, Inject } from "@angular/core";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import { Page, NavigatedData } from "ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
 import { RadCalendar, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
@@ -58,7 +58,7 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
 
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
-            if (this._optionsService.paramName == this._optionsParamName) {
+            if (this._optionsService.paramName === this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
                     case "Week":
                         this.onWeekTap();

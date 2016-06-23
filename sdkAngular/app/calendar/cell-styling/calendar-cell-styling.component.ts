@@ -4,7 +4,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import {CalendarStylesService} from "../calendar-styles.service";
 import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import { OptionsExampleBase } from "../../options-example-base";
 
 @Component({
@@ -80,7 +80,7 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
     
      public onNavigatingTo(args) {
         if (args.isBackNavigation) {
-            if (this._optionsService.paramName == this._optionsParamName) {
+            if (this._optionsService.paramName === this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
                     case "Week":
                         this.onWeekTap();

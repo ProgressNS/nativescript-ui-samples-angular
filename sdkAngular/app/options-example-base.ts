@@ -1,5 +1,5 @@
 import * as frameModule from "ui/frame";
-import { Router } from "@angular/router-deprecated";
+import { Router } from '@angular/router';
 import * as ObservableModule from "data/observable";
 
 export class OptionsExampleBase extends ObservableModule.Observable {
@@ -10,7 +10,8 @@ export class OptionsExampleBase extends ObservableModule.Observable {
     }
     
     public onOptionsTapped() {
-        this.router.navigate(["Options", {selectedIndex: this.navigationParameters.selectedIndex, paramName: this.navigationParameters.paramName, items: this.navigationParameters.items }]);
+        console.log(">>>>> onOptionsTapped");
+        this.router.navigate(['/options'], { queryParams: { selectedIndex: this.navigationParameters.selectedIndex, paramName: this.navigationParameters.paramName, items: this.navigationParameters.items } });
     }
     
     public onNavigationButtonTap() {

@@ -2,11 +2,10 @@ import { Component, OnInit, Inject, ViewChild, DynamicComponentLoader, ViewConta
 import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import { Router, RouteParams } from "@angular/router-deprecated";
+import { RouterConfig, ActivatedRoute, Router, ROUTER_DIRECTIVES, RouterOutletMap, Event, RouterStateSnapshot } from '@angular/router';
 import { StackLayout } from "ui/layouts/stack-layout";
 import * as frameModule from "ui/frame";
 
-import { ExamplesListComponent } from "../examples-list/examples-list.component";
 import { ListViewGettingStartedComponent } from "../../listview/getting-started/listview-getting-started.component";
 import { ListViewHeaderFooterComponent } from "../../listview/header-footer/listview-header-footer.component";
 import { ListViewItemReorderComponent } from "../../listview/item-reorder/listview-item-reorder.component";
@@ -47,25 +46,31 @@ import { ChartSeriesSplineComponent } from "../../chart/series/spline/chart-seri
 })
 export class ExampleComponent implements OnInit {
     private _currentExample: ExampleItem;
+    private _sub: any;
 
-
-    constructor(private _router: Router, private _routeParams: RouteParams, private _exampleItemsService: ExampleItemService, private _loader: DynamicComponentLoader) {
+    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService, private _loader: DynamicComponentLoader) {
     }
 
     @ViewChild('exampleCompPlaceholder', { read: ViewContainerRef }) exampleCompPlaceholder: ViewContainerRef;
 
     ngOnInit() {
-        var parentTitle = this._routeParams.get('parentTitle');
-        var tappedTitle = this._routeParams.get('tappedTitle');
-        this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
+        this._sub = this._router
+            .routerState
+            .queryParams
+            .subscribe(params => {
+                var parentTitle = params['parentTitle'];
+                var tappedTitle = params['tappedTitle'];
+                this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
+            });
+    }
+
+    ngOnDestroy() {
+        this._sub.unsubscribe();
     }
 
     ngAfterViewInit() {
         //Loads the current example component.
         switch (this.currentExample.path) {
-            case "Examples":
-                this._loader.loadNextToLocation(ExamplesListComponent, this.exampleCompPlaceholder);
-                break;
             case "ListViewGettingStarted":
                 this._loader.loadNextToLocation(ListViewGettingStartedComponent, this.exampleCompPlaceholder);
                 break;
