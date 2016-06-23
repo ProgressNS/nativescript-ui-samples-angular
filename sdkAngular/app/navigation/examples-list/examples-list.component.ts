@@ -28,6 +28,7 @@ export class ExamplesListComponent implements OnInit {
                 var parentTitle = params['parentTitle'];
                 var tappedTitle = params['tappedTitle'];
                 if (parentTitle == null && tappedTitle == null) {
+                    this.hasBack = false;
                     this._currentExample = this._exampleItemsService.getParentExampleItem(0);
                 } else {
                     this.hasBack = true;
