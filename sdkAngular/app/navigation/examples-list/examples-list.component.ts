@@ -11,7 +11,7 @@ import { RouterConfig, ActivatedRoute, CanActivate, Router, ROUTER_DIRECTIVES, R
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListComponent implements OnInit {
+export class ExamplesListDepth1Component implements OnInit {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
@@ -21,20 +21,12 @@ export class ExamplesListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._sub = this._router
-            .routerState
-            .queryParams
-            .subscribe(params => {
-                var parentTitle = params['parentTitle'];
-                var tappedTitle = params['tappedTitle'];
-                if (parentTitle == null && tappedTitle == null) {
-                    this.hasBack = false;
-                    this._currentExample = this._exampleItemsService.getParentExampleItem(0);
-                } else {
-                    this.hasBack = true;
-                    this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
-                }
-            });
+        this._sub = this._route.params.subscribe(params => {
+            var parentTitle = params['parentTitle'];
+            var tappedTitle = params['tappedTitle'];
+            this.hasBack = false;
+            this._currentExample = this._exampleItemsService.getParentExampleItem(0);
+        });
 
     }
 
@@ -61,12 +53,128 @@ export class ExamplesListComponent implements OnInit {
     public onNavigationItemTap(args) {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
-        // This supports 2 level deep ExamplesListComponent navigation. Currently angular does not allow to disable the reuse of a component
         if (tappedItem.subItems.length === 0) {
-            this._router.navigate(['/example'], { queryParams: { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title } });
+            this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
         } else {
-            this._router.navigate(['/examplesLevel2'], { queryParams: { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title } });
+            this._router.navigate(['/examples-depth-2', this._currentExample.title, tappedItem.title]);
         }
+    }
+
+    public onNavigationButtonTap() {
+        FrameModule.topmost().goBack();
+    }
+}
+
+
+@Component({
+    moduleId: module.id,
+    selector: "examples-depth-2",
+    templateUrl: "examples-list.component.html",
+    styleUrls: ["examples-list.component.css"]
+})
+export class ExamplesListDepth2Component implements OnInit {
+    private _currentExample: ExampleItem;
+    private _hasBack: boolean;
+    private _sub: any;
+
+    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
+
+    }
+
+    ngOnInit() {
+        this._sub = this._route.params.subscribe(params => {
+            var parentTitle = params['parentTitle'];
+            var tappedTitle = params['tappedTitle'];
+            this.hasBack = true;
+            this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
+        });
+
+    }
+
+    ngOnDestroy() {
+        this._sub.unsubscribe();
+    }
+
+    public get currentExample(): ExampleItem {
+        return this._currentExample;
+    }
+
+    public set currentExample(value: ExampleItem) {
+        this._currentExample = value;
+    }
+
+    public get hasBack(): boolean {
+        return this._hasBack;
+    }
+
+    public set hasBack(value: boolean) {
+        this._hasBack = value;
+    }
+
+    public onNavigationItemTap(args) {
+        var itemIndex = args.itemIndex;
+        var tappedItem = this._currentExample.subItems[itemIndex];
+        if (tappedItem.subItems.length === 0) {
+            this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
+        } else {
+            this._router.navigate(['/examples-depth-3', this._currentExample.title, tappedItem.title]);
+        }
+    }
+
+    public onNavigationButtonTap() {
+        FrameModule.topmost().goBack();
+    }
+}
+
+@Component({
+    moduleId: module.id,
+    selector: "examples-depth-3",
+    templateUrl: "examples-list.component.html",
+    styleUrls: ["examples-list.component.css"]
+})
+export class ExamplesListDepth3Component implements OnInit {
+    private _currentExample: ExampleItem;
+    private _hasBack: boolean;
+    private _sub: any;
+
+    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
+
+    }
+
+    ngOnInit() {
+        this._sub = this._route.params.subscribe(params => {
+            var parentTitle = params['parentTitle'];
+            var tappedTitle = params['tappedTitle'];
+            this.hasBack = true;
+            this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
+        });
+
+    }
+
+    ngOnDestroy() {
+        this._sub.unsubscribe();
+    }
+
+    public get currentExample(): ExampleItem {
+        return this._currentExample;
+    }
+
+    public set currentExample(value: ExampleItem) {
+        this._currentExample = value;
+    }
+
+    public get hasBack(): boolean {
+        return this._hasBack;
+    }
+
+    public set hasBack(value: boolean) {
+        this._hasBack = value;
+    }
+
+    public onNavigationItemTap(args) {
+        var itemIndex = args.itemIndex;
+        var tappedItem = this._currentExample.subItems[itemIndex];
+        this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
     }
 
     public onNavigationButtonTap() {

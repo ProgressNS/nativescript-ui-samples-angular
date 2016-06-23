@@ -1,45 +1,17 @@
 import { nsProvideRouter } from "nativescript-angular/router";
 import { RouterConfig } from '@angular/router';
-import { ExamplesListComponent } from "./examples-list/examples-list.component";
+import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./examples-list/examples-list.component";
 import { ExampleComponent } from "./example/example.component";
 import { OptionsComponent } from "./options/options.component";
 
-// const routes: RouterConfig = [
-//     { path: "/", redirectTo: "/examples", terminal: true },
-//     { path: "/examples", component: ExamplesListComponent },
-//     {
-//         path: "/example", component: ExampleComponent,
-//         children: [
-//             { path: "/", redirectTo: "options", terminal: true },
-//             { path: "/options", component: OptionsComponent }
-//         ]
-//     },
-// ];
-
-// const routes: RouterConfig = [
-//     { path: "/", redirectTo: "/examples", terminal: true },
-//     {
-//         path: "/examples", component: ExamplesListComponent,
-//         children: [
-//             {
-//                 path: "/example", component: ExampleComponent,
-//                 children: [
-//                     { path: "/", redirectTo: "options", terminal: true },
-//                     { path: "/options", component: OptionsComponent }
-//                 ]
-//             }
-//         ]
-//     }
-// ];
-
 const routes: RouterConfig = [
-    { path: "", redirectTo: "/examples", terminal: true },
-    { path: "examples", component: ExamplesListComponent },
-    { path: "examplesLevel2", component: ExamplesListComponent },
-    { path: "example", component: ExampleComponent },
+    { path: "", redirectTo: "/examples-depth-1/root/root", terminal: true },
+    { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
+    { path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component },
+    { path: "examples-depth-3/:parentTitle/:tappedTitle", component: ExamplesListDepth3Component },
+    { path: "example/:parentTitle/:tappedTitle", component: ExampleComponent },
     { path: "options", component: OptionsComponent },
 ];
-
 
 export const AppPageRouterOutletRouterProviders = [
     nsProvideRouter(routes, { enableTracing: false })

@@ -54,10 +54,7 @@ export class ExampleComponent implements OnInit {
     @ViewChild('exampleCompPlaceholder', { read: ViewContainerRef }) exampleCompPlaceholder: ViewContainerRef;
 
     ngOnInit() {
-        this._sub = this._router
-            .routerState
-            .queryParams
-            .subscribe(params => {
+        this._sub = this._route.params.subscribe(params => {
                 var parentTitle = params['parentTitle'];
                 var tappedTitle = params['tappedTitle'];
                 this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
