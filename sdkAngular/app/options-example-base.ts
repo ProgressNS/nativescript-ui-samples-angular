@@ -10,7 +10,6 @@ export class OptionsExampleBase extends ObservableModule.Observable {
     }
     
     public onOptionsTapped() {
-        console.log(">>>>> onOptionsTapped");
         this.router.navigate(['/options'], { queryParams: { selectedIndex: this.navigationParameters.selectedIndex, paramName: this.navigationParameters.paramName, items: this.navigationParameters.items } });
     }
     

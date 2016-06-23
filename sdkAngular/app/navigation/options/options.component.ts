@@ -24,7 +24,6 @@ export class OptionsComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(">>>>>>> ngOnInit");
         this._sub = this._router
             .routerState
             .queryParams
@@ -32,8 +31,6 @@ export class OptionsComponent implements OnInit {
                 this._listView = <RadListView>this._page.getViewById("optionsListView");
                 var items = params['items'];
                 this._selectedIndex = +params['selectedIndex'];
-
-                console.log(">>>>>>> ngOnInit subscribe " + items);
                 if (items) {
                     var splitItems = items.toString().split(',');
                     this._dataItems = new ObservableArray<string>(splitItems);
@@ -43,7 +40,6 @@ export class OptionsComponent implements OnInit {
     }
 
     ngOnDestroy() {
-        console.log(">>>> ngOnDestroy");
         this._sub.unsubscribe();
     }
 

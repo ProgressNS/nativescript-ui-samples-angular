@@ -67,9 +67,6 @@ export class ExamplesListComponent implements OnInit {
         } else {
             this._router.navigate(['/examplesLevel2'], { queryParams: { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title } });
         }
-
-        //this._router.navigate(['/example'], { queryParams: { parentTitle: this._currentExample.title, tappedTitle: tappedItem.title } });
-        //this._router.navigate(['/example' , "ListView", "Getting Started" ]);
     }
 
     public onNavigationButtonTap() {
