@@ -15,8 +15,10 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 })
 export class SideDrawerEventsComponent implements OnInit {
     private _currentNotification: string;
+    private _sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
 
-    constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+    constructor( @Inject(Page) private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+        this._page.on("loaded", this.onLoaded, this);
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -30,7 +32,13 @@ export class SideDrawerEventsComponent implements OnInit {
     ngOnInit() {
     }
 
-    public sideDrawerTransition = new sideDrawerModule.PushTransition();
+    public onLoaded(args) {
+        this._sideDrawerTransition = new sideDrawerModule.PushTransition();
+    }
+
+    public get sideDrawerTransition(): sideDrawerModule.DrawerTransitionBase {
+        return this._sideDrawerTransition;
+    }
 
     public get currentNotification(): string {
         return this._currentNotification;
