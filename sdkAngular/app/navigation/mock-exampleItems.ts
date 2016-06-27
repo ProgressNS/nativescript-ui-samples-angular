@@ -19,13 +19,13 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Stacked Area Series",
-                                "path": "ChartSeriesStackedArea",
+                                "title": "Range Bar series",
+                                "path": "ChartSeriesRangeBar",
                                 "subItems": []
                             },
                             {
-                                "title": "Range Bar series",
-                                "path": "ChartSeriesRangeBar",
+                                "title": "Stacked Bar series",
+                                "path": "ChartSeriesStackedBar",
                                 "subItems": []
                             },
                             {
@@ -34,8 +34,8 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Stacked Bar series",
-                                "path": "ChartSeriesStackedBar",
+                                "title": "Stacked Area Series",
+                                "path": "ChartSeriesStackedArea",
                                 "subItems": []
                             },
                             {
