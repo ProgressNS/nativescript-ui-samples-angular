@@ -33,9 +33,7 @@ export class SideDrawerTransitionsComponent implements OnInit {
     }
 
     ngOnInit() {
-
     }
-
 
     public onLoaded(args) {
         this.setDrawerTransition("PushTransition");

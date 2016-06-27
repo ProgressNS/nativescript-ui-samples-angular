@@ -10,7 +10,7 @@ const routes: RouterConfig = [
     { path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component },
     { path: "examples-depth-3/:parentTitle/:tappedTitle", component: ExamplesListDepth3Component },
     { path: "example/:parentTitle/:tappedTitle", component: ExampleComponent },
-    { path: "options", component: OptionsComponent },
+    { path: "options", component: OptionsComponent }
 ];
 
 export const AppPageRouterOutletRouterProviders = [

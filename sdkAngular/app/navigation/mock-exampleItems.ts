@@ -133,11 +133,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Events",
-                        "path": "SideDrawerEvents",
-                        "subItems": []
-                    },
-                    {
                         "title": "Position",
                         "path": "SideDrawerPosition",
                         "subItems": []
@@ -146,7 +141,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Transitions",
                         "path": "SideDrawerTransitions",
                         "subItems": []
-                    }
+                    },
+                    {
+                        "title": "Events",
+                        "path": "SideDrawerEvents",
+                        "subItems": []
+                    },
                 ]
             },
             {
