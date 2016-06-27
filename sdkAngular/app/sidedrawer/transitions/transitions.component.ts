@@ -14,17 +14,18 @@ import {RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-p
 })
 // >> sidedrawer-angular-transition-definition
 export class SideDrawerTransitionsComponent implements OnInit {
-    constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+    constructor( @Inject(Page) private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+        this._page.on("loaded", this.onLoaded, this);
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
 
     private drawer: SideDrawerType;
 
-    public sideDrawerTransition = new sideDrawerModule.PushTransition();
+    public sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
     // << sidedrawer-angular-transition-definition
 
-    public currentTransition: string = "PushTransition";
+    public currentTransition: string;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
@@ -34,6 +35,12 @@ export class SideDrawerTransitionsComponent implements OnInit {
     ngOnInit() {
 
     }
+
+
+    public onLoaded(args) {
+        this.setDrawerTransition("PushTransition");
+    }
+
 
     public openDrawer() {
         this.drawer.showDrawer();
