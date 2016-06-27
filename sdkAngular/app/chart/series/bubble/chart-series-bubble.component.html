@@ -1,6 +1,6 @@
 <!-- >> chart-angular-bubble-series -->
 <RadCartesianChart id="bubbleChart">
-    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"></CategoricalAxis>
     <LinearAxis cartesianVerticalAxis></LinearAxis>
 
     <BubbleSeries cartesianSeries [items]="highDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
