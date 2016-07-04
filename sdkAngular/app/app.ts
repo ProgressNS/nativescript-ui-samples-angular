@@ -6,7 +6,7 @@ import { LISTVIEW_PROVIDERS } from 'nativescript-telerik-ui-pro/listview/angular
 import { CALENDAR_PROVIDERS } from 'nativescript-telerik-ui-pro/calendar/angular';
 import { CHART_PROVIDERS } from 'nativescript-telerik-ui-pro/chart/angular';
 import { AppComponent } from "./navigation/app.component";
-import { AppPageRouterOutletRouterProviders } from "./navigation/app.routes";
+import { APP_ROUTER_PROVIDERS } from "./navigation/app.routes";
 // >> (hide)
 import * as frescoModule from "nativescript-fresco";
 import * as applicationModule from "application";
@@ -24,6 +24,6 @@ elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoD
 // << (hide)
 
 nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS, CHART_PROVIDERS, 
-                                        AppPageRouterOutletRouterProviders, OptionsService, ExampleItemService, NS_ROUTER_PROVIDERS, RouterOutletMap], 
+                                        APP_ROUTER_PROVIDERS, OptionsService, ExampleItemService, NS_ROUTER_PROVIDERS, RouterOutletMap], 
                                     { startPageActionBarHidden: false });
 // << using-global-directives
