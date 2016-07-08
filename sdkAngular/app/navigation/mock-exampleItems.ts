@@ -85,6 +85,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "Examples",
                         "subItems": [
                             {
+                                "title": "Pan & Zoom",
+                                "path": "ChartBehaviorsPanZoom",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Datapoint selection",
                                 "path": "ChartBehaviorsDatapointSelection",
                                 "subItems": []
