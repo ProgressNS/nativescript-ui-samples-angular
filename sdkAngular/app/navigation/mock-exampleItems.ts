@@ -79,6 +79,17 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Annotations",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Grid line",
+                                "path": "ChartAnnotationsGridLine",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             },
