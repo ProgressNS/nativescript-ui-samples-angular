@@ -15,9 +15,7 @@ export class ChartSeriesBubbleComponent implements OnInit {
     private _middleDataModel: ObservableArray<Country>;
     private _lowDataModel: ObservableArray<Country>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get highDataModel(): ObservableArray<Country> {
         return this._highDataModel;

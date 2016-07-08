@@ -13,9 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesCandlestickComponent implements OnInit {
     private _candleStickSourceItems: ObservableArray<Currency>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get candleStickSourceItems(): ObservableArray<Currency> {
         return this._candleStickSourceItems;

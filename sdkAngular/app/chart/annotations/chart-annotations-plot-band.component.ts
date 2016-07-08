@@ -13,8 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartAnnotationsPlotBandComponent implements OnInit {
     private _categoricalSource: ObservableArray<Country>;
 
-    constructor(private _dataService: DataService) {
-    }
+    constructor(private _dataService: DataService) { }
 
     get categoricalSource(): ObservableArray<Country> {
         return this._categoricalSource;

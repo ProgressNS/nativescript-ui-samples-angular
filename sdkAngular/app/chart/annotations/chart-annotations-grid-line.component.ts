@@ -13,9 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartAnnotationsGridLineComponent implements OnInit {
     private _scatterSource: ObservableArray<Person>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get scatterSource(): ObservableArray<Person> {
         return this._scatterSource;
