@@ -81,6 +81,17 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Interaction",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Datapoint selection",
+                                "path": "ChartBehaviorsDatapointSelection",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
                         "title": "Annotations",
                         "path": "Examples",
                         "subItems": [

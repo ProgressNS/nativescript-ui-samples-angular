@@ -40,6 +40,7 @@ import { ChartSeriesScatterComponent } from "../../chart/series/scatter/chart-se
 import { ChartSeriesSplineComponent } from "../../chart/series/spline/chart-series-spline.component";
 import { ChartAnnotationsGridLineComponent } from "../../chart/annotations/chart-annotations-grid-line.component";
 import { ChartAnnotationsPlotBandComponent } from "../../chart/annotations/chart-annotations-plot-band.component";
+import { ChartBehaviorsDatapointSelectionComponent } from "../../chart/behaviors/chart-behaviors-datapoint-selection.component";
 
 @Component({
     moduleId: module.id,
@@ -171,6 +172,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartAnnotationsPlotBand":
                 this._loader.loadNextToLocation(ChartAnnotationsPlotBandComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartBehaviorsDatapointSelection":
+                this._loader.loadNextToLocation(ChartBehaviorsDatapointSelectionComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

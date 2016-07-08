@@ -1,0 +1,10 @@
+<!-- >> chart-angular-grid-line-annotations -->
+<RadCartesianChart>
+    <LinearAxis cartesianVerticalAxis horizontalLocation="Left" labelTextColor="Green" labelSize="10" lineColor="Red" lineThickness="1"></LinearAxis>
+    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelTextColor="Red" labelSize="10" lineColor="Red" lineThickness="1"></CategoricalAxis>
+
+    <BarSeries cartesianSeries selectionMode="DataPoint" seriesName="Bars" legendTitle="Bar series" valueProperty="Sales" categoryProperty="Name" [items]="sourceItems"></BarSeries>
+
+    <RadLegendView cartesianLegend position="Top" title="Financial data" height="150"></RadLegendView>
+</RadCartesianChart>
+<!-- << chart-angular-grid-line-annotations -->
