@@ -85,6 +85,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "Examples",
                         "subItems": [
                             {
+                                "title": "Plot band",
+                                "path": "ChartAnnotationsPlotBand",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Grid line",
                                 "path": "ChartAnnotationsGridLine",
                                 "subItems": []

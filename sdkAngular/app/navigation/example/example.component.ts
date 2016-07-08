@@ -39,6 +39,7 @@ import { ChartSeriesPieComponent } from "../../chart/series/pie/chart-series-pie
 import { ChartSeriesScatterComponent } from "../../chart/series/scatter/chart-series-scatter.component";
 import { ChartSeriesSplineComponent } from "../../chart/series/spline/chart-series-spline.component";
 import { ChartAnnotationsGridLineComponent } from "../../chart/annotations/chart-annotations-grid-line.component";
+import { ChartAnnotationsPlotBandComponent } from "../../chart/annotations/chart-annotations-plot-band.component";
 
 @Component({
     moduleId: module.id,
@@ -167,6 +168,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartAnnotationsGridLine":
                 this._loader.loadNextToLocation(ChartAnnotationsGridLineComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAnnotationsPlotBand":
+                this._loader.loadNextToLocation(ChartAnnotationsPlotBandComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;
