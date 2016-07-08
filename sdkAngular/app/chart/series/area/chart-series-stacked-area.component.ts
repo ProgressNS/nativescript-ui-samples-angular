@@ -6,8 +6,8 @@ import { Page } from "ui/page";
 import * as applicationModule from "application";
 import { RadCartesianChart } from "nativescript-telerik-ui-pro/chart";
 import { ObservableArray } from "data/observable-array";
-import { Country } from '../country';
-import { DataService } from '../data.service';
+import { Country } from '../../data-services/country';
+import { DataService } from '../../data-services/data.service';
 
 @Component({
     moduleId: module.id,

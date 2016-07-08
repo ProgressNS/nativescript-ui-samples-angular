@@ -4,8 +4,8 @@ import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import * as applicationModule from "application";
-import { DataService } from '../data.service';
-import { Country } from '../country';
+import { DataService } from '../../data-services/data.service';
+import { Country } from '../../data-services/country';
 import { ObservableArray } from "data/observable-array";
 
 @Component({

@@ -1,7 +1,7 @@
 // >> chart-angular-range-bar-series-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Product } from '../product';
+import { DataService } from '../../data-services/data.service';
+import { Product } from '../../data-services/product';
 import { ObservableArray } from "data/observable-array";
 
 @Component({

@@ -1,7 +1,7 @@
 // >> chart-angular-scatter-bubble-series-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Person } from '../person';
+import { DataService } from '../../data-services/data.service';
+import { Person } from '../../data-services/person';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
