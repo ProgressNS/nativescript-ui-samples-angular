@@ -1,6 +1,6 @@
 <GridLayout orientation="vertical" rows="auto, *">
      <!-- >> angular-listview-pull-to-refresh -->
-    <RadListView row="1" [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" [listViewLayout]="layout">
+    <RadListView row="1" [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
      <!-- << angular-listview-pull-to-refresh -->
         <template listItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">

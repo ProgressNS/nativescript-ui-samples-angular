@@ -1,0 +1,10 @@
+<!-- >> chart-angular-pan-and-zoom -->
+<RadCartesianChart>
+    <BarSeries cartesianSeries seriesName="Bar" [items]="categoricalSource" [verticalAxis]="linearAxisZoomPan" stackMode="Stack"
+        categoryProperty="Country" valueProperty="SecondVal"></BarSeries>
+    <LineSeries cartesianSeries seriesName="Line" [items]="categoricalSource" [verticalAxis]="linearAxisZoom" stackMode="Stack"
+        categoryProperty="Country" valueProperty="Amount"></LineSeries>
+
+    <CategoricalAxis cartesianHorizontalAxis allowPan="true" allowZoom="true"></CategoricalAxis>
+</RadCartesianChart>
+<!-- << chart-angular-pan-and-zoom -->

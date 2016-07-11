@@ -1,7 +1,7 @@
 // >> chart-angular-candlestick-series-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Currency } from '../currency';
+import { DataService } from '../../data-services/data.service';
+import { Currency } from '../../data-services/currency';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
@@ -13,9 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesCandlestickComponent implements OnInit {
     private _candleStickSourceItems: ObservableArray<Currency>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get candleStickSourceItems(): ObservableArray<Currency> {
         return this._candleStickSourceItems;

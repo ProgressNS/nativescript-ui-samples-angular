@@ -79,6 +79,38 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Interaction",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Pan & Zoom",
+                                "path": "ChartBehaviorsPanZoom",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Datapoint selection",
+                                "path": "ChartBehaviorsDatapointSelection",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Annotations",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Plot band",
+                                "path": "ChartAnnotationsPlotBand",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid line",
+                                "path": "ChartAnnotationsGridLine",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             },
