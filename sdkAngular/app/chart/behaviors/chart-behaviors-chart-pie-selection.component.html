@@ -3,9 +3,9 @@
     <!-- >> angular-datapoint-selection -->
     <PieSeries pieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="0.2" showLabels="true" [items]="sourceItems"
          valueProperty="Sales" legendLabel="My pie data">
-        <PointLabelStyle labelStyle margin="15" fillColor="red"></PointLabelStyle>
+        <PointLabelStyle pieLabelStyle margin="15"></PointLabelStyle>
     </PieSeries>
     <!-- << angular-datapoint-selection -->
-    <RadLegendView pieLegend position="Top" fillColor="red"></RadLegendView>
+    <RadLegendView pieLegend position="Top"></RadLegendView>
 </RadPieChart>
 <!-- << chart-behaviors-chart-pie-selection -->
