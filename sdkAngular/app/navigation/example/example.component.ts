@@ -42,6 +42,7 @@ import { ChartAnnotationsGridLineComponent } from "../../chart/annotations/chart
 import { ChartAnnotationsPlotBandComponent } from "../../chart/annotations/chart-annotations-plot-band.component";
 import { ChartBehaviorsDatapointSelectionComponent } from "../../chart/behaviors/chart-behaviors-datapoint-selection.component";
 import { ChartBehaviorsPanZoomComponent } from "../../chart/behaviors/chart-behaviors-pan-zoom.component";
+import { ChartBehaviorsChartPieSelectionComponent } from "../../chart/behaviors/chart-behaviors-chart-pie-selection.component";
 
 @Component({
     moduleId: module.id,
@@ -179,6 +180,8 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartBehaviorsPanZoom":
                 this._loader.loadNextToLocation(ChartBehaviorsPanZoomComponent, this.exampleCompPlaceholder);
+            case "ChartBehaviorsChartPieSelection":
+                this._loader.loadNextToLocation(ChartBehaviorsChartPieSelectionComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

@@ -90,6 +90,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Pie selection",
+                                "path": "ChartBehaviorsChartPieSelection",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Datapoint selection",
                                 "path": "ChartBehaviorsDatapointSelection",
                                 "subItems": []
