@@ -1,16 +1,16 @@
-//  >> chart-angular-scatter-series-component
+// >> chart-angular-grid-line-annotations-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data-services/data.service';
-import { Person } from '../../data-services/person';
+import { DataService } from '../data-services/data.service';
+import { Person } from '../data-services/person';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-scatter',
+    selector: 'chart-annotations-grid-line',
     providers: [DataService],
-    templateUrl: 'chart-series-scatter.component.html'
+    templateUrl: 'chart-annotations-grid-line.component.html'
 })
-export class ChartSeriesScatterComponent implements OnInit {
+export class ChartAnnotationsGridLineComponent implements OnInit {
     private _scatterSource: ObservableArray<Person>;
 
     constructor(private _dataService: DataService) { }
@@ -23,4 +23,4 @@ export class ChartSeriesScatterComponent implements OnInit {
         this._scatterSource = new ObservableArray(this._dataService.getScatterSource());
     }
 }
-// << chart-angular-scatter-series-component
+// << chart-angular-grid-line-annotations-component

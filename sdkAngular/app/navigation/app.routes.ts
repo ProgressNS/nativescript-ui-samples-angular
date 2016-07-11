@@ -4,7 +4,7 @@ import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListD
 import { ExampleComponent } from "./example/example.component";
 import { OptionsComponent } from "./options/options.component";
 
-const routes: RouterConfig = [
+const ROUTES: RouterConfig = [
     { path: "", redirectTo: "/examples-depth-1/root/root", terminal: true },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
     { path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component },
@@ -13,6 +13,6 @@ const routes: RouterConfig = [
     { path: "options", component: OptionsComponent }
 ];
 
-export const AppPageRouterOutletRouterProviders = [
-    nsProvideRouter(routes, { enableTracing: false })
+export const APP_ROUTER_PROVIDERS = [
+    nsProvideRouter(ROUTES, { enableTracing: false })
 ]

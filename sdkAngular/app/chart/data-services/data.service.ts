@@ -86,10 +86,10 @@ export class DataService {
     // >> chart-angular-range-bar-source
     getRangeBarSource(): Product[] {
         return [
-            { Name: "Groceries", High: 30, Low: 12 },
-            { Name: "Tools", High: 135, Low: 124 },
-            { Name: "Electronics", High: 55, Low: 12 },
-            { Name: "Gardening", High: 50, Low: 29 }
+            { Name: "Groceries", High: 30, Low: 12, Sales: 0, Margin: 0 },
+            { Name: "Tools", High: 135, Low: 124, Sales: 0, Margin: 0 },
+            { Name: "Electronics", High: 55, Low: 12, Sales: 0, Margin: 0 },
+            { Name: "Gardening", High: 50, Low: 29, Sales: 0, Margin: 0 }
         ];
     }
     // << chart-angular-range-bar-source
@@ -177,6 +177,15 @@ export class DataService {
             { Brand: "Crysler", Amount: 40 }
         ];
     }
+
+    getSourceItems(): Product[] {
+        return [
+            { Name: "Groceries", Sales: 25, Margin: 10, High: 0, Low: 0 },
+            { Name: "Tools", Sales: 34, Margin: 20, High: 0, Low: 0 },
+            { Name: "Electronics", Sales: 15, Margin: 25, High: 0, Low: 0 },
+            { Name: "Gardening", Sales: 40, Margin: 5, High: 0, Low: 0 }
+        ];
+      }
     // << (hide)
 }
 // << chart-angular-data-service

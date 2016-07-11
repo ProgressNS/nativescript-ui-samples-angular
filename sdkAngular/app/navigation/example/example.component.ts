@@ -38,6 +38,10 @@ import { ChartSeriesLineComponent } from "../../chart/series/line/chart-series-l
 import { ChartSeriesPieComponent } from "../../chart/series/pie/chart-series-pie.component";
 import { ChartSeriesScatterComponent } from "../../chart/series/scatter/chart-series-scatter.component";
 import { ChartSeriesSplineComponent } from "../../chart/series/spline/chart-series-spline.component";
+import { ChartAnnotationsGridLineComponent } from "../../chart/annotations/chart-annotations-grid-line.component";
+import { ChartAnnotationsPlotBandComponent } from "../../chart/annotations/chart-annotations-plot-band.component";
+import { ChartBehaviorsDatapointSelectionComponent } from "../../chart/behaviors/chart-behaviors-datapoint-selection.component";
+import { ChartBehaviorsPanZoomComponent } from "../../chart/behaviors/chart-behaviors-pan-zoom.component";
 
 @Component({
     moduleId: module.id,
@@ -55,10 +59,10 @@ export class ExampleComponent implements OnInit {
 
     ngOnInit() {
         this._sub = this._route.params.subscribe(params => {
-                var parentTitle = params['parentTitle'];
-                var tappedTitle = params['tappedTitle'];
-                this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
-            });
+            var parentTitle = params['parentTitle'];
+            var tappedTitle = params['tappedTitle'];
+            this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
+        });
     }
 
     ngOnDestroy() {
@@ -163,6 +167,18 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartSeriesSpline":
                 this._loader.loadNextToLocation(ChartSeriesSplineComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAnnotationsGridLine":
+                this._loader.loadNextToLocation(ChartAnnotationsGridLineComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAnnotationsPlotBand":
+                this._loader.loadNextToLocation(ChartAnnotationsPlotBandComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartBehaviorsDatapointSelection":
+                this._loader.loadNextToLocation(ChartBehaviorsDatapointSelectionComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartBehaviorsPanZoom":
+                this._loader.loadNextToLocation(ChartBehaviorsPanZoomComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;
