@@ -6,9 +6,9 @@ import { LISTVIEW_PROVIDERS } from 'nativescript-telerik-ui-pro/listview/angular
 import { CALENDAR_PROVIDERS } from 'nativescript-telerik-ui-pro/calendar/angular';
 import { CHART_PROVIDERS } from 'nativescript-telerik-ui-pro/chart/angular';
 import { AppComponent } from "./navigation/app.component";
-import { AppPageRouterOutletRouterProviders } from "./navigation/app.routes";
+import { APP_ROUTER_PROVIDERS } from "./navigation/app.routes";
 // >> (hide)
-import { FrescoDrawee } from "fresco/fresco";
+import * as frescoModule from "nativescript-fresco";
 import * as applicationModule from "application";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
@@ -17,13 +17,13 @@ import { RouterConfig, ActivatedRoute, Router, ROUTER_DIRECTIVES, RouterOutletMa
 
 if (applicationModule.android) {
     applicationModule.onLaunch = function (intent) {
-        com.facebook.drawee.backends.pipeline.Fresco.initialize(applicationModule.android.context);
+        frescoModule.initialize();
     };
 }
-elementRegistryModule.registerElement("FrescoDrawee", () => FrescoDrawee);
+elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoDrawee);
 // << (hide)
 
 nativeScriptBootstrap(AppComponent, [LISTVIEW_PROVIDERS, SIDEDRAWER_PROVIDERS, CALENDAR_PROVIDERS, CHART_PROVIDERS, 
-                                        AppPageRouterOutletRouterProviders, OptionsService, ExampleItemService, NS_ROUTER_PROVIDERS, RouterOutletMap], 
+                                        APP_ROUTER_PROVIDERS, OptionsService, ExampleItemService, NS_ROUTER_PROVIDERS, RouterOutletMap], 
                                     { startPageActionBarHidden: false });
 // << using-global-directives
