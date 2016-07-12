@@ -95,6 +95,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Series selection",
+                                "path": "ChartBehaviorsSeriesSelection",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Datapoint selection",
                                 "path": "ChartBehaviorsDatapointSelection",
                                 "subItems": []

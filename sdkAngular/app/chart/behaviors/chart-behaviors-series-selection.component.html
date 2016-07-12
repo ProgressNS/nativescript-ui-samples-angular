@@ -1,0 +1,11 @@
+<!-- >> chart-angular-series-selection -->
+<RadCartesianChart id="SelectionChart">
+    <LinearAxis cartesianVerticalAxis horizontalLocation="Right" allowPan="true"></LinearAxis>
+    <CategoricalAxis cartesianHorizontalAxis allowPan="true" allowZoom="true"></CategoricalAxis>
+
+    <BarSeries cartesianSeries selectionMode="Series" seriesName="Bar" [items]="bubbleCategoricalSource" stackMode="Stack"
+        categoryProperty="Country" valueProperty="Impact"></BarSeries>
+    <LineSeries cartesianSeries selectionMode="Series" showLabels="true" seriesName="Line" [items]="categoricalSource" stackMode="Stack"
+        categoryProperty="Country" valueProperty="Amount"></LineSeries>
+</RadCartesianChart>
+<!-- << chart-angular-series-selection -->

@@ -43,6 +43,7 @@ import { ChartAnnotationsPlotBandComponent } from "../../chart/annotations/chart
 import { ChartBehaviorsDatapointSelectionComponent } from "../../chart/behaviors/chart-behaviors-datapoint-selection.component";
 import { ChartBehaviorsPanZoomComponent } from "../../chart/behaviors/chart-behaviors-pan-zoom.component";
 import { ChartBehaviorsChartPieSelectionComponent } from "../../chart/behaviors/chart-behaviors-chart-pie-selection.component";
+import { ChartBehaviorsSeriesSelectionComponent } from "../../chart/behaviors/chart-behaviors-series-selection.component";
 
 @Component({
     moduleId: module.id,
@@ -182,6 +183,8 @@ export class ExampleComponent implements OnInit {
                 this._loader.loadNextToLocation(ChartBehaviorsPanZoomComponent, this.exampleCompPlaceholder);
             case "ChartBehaviorsChartPieSelection":
                 this._loader.loadNextToLocation(ChartBehaviorsChartPieSelectionComponent, this.exampleCompPlaceholder);
+            case "ChartBehaviorsSeriesSelection":
+                this._loader.loadNextToLocation(ChartBehaviorsSeriesSelectionComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;
