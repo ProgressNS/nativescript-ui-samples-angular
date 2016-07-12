@@ -45,6 +45,10 @@ import { ChartBehaviorsPanZoomComponent } from "../../chart/behaviors/chart-beha
 import { ChartBehaviorsChartPieSelectionComponent } from "../../chart/behaviors/chart-behaviors-chart-pie-selection.component";
 import { ChartBehaviorsSeriesSelectionComponent } from "../../chart/behaviors/chart-behaviors-series-selection.component";
 import { ChartLegendComponent } from "../../chart/legend/chart-legend.component";
+import { ChartAxesCustomizationComponent } from "../../chart/axes/customization/chart-axes-customization.component";
+import { ChartAxesDateTimeComponent } from "../../chart/axes/date-time-axes/chart-axes-date-time.component";
+import { ChartAxesMultipleComponent } from "../../chart/axes/multiple/chart-axes-multiple.component";
+import { ChartAxesNegativeValuesComponent } from "../../chart/axes/negative-values/chart-axes-negative-values.component";
 
 @Component({
     moduleId: module.id,
@@ -182,13 +186,27 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartBehaviorsPanZoom":
                 this._loader.loadNextToLocation(ChartBehaviorsPanZoomComponent, this.exampleCompPlaceholder);
+                break;
             case "ChartBehaviorsChartPieSelection":
                 this._loader.loadNextToLocation(ChartBehaviorsChartPieSelectionComponent, this.exampleCompPlaceholder);
+                break;
             case "ChartBehaviorsSeriesSelection":
                 this._loader.loadNextToLocation(ChartBehaviorsSeriesSelectionComponent, this.exampleCompPlaceholder);
                 break;
             case "ChartLegend":
                 this._loader.loadNextToLocation(ChartLegendComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAxesCustomization":
+                this._loader.loadNextToLocation(ChartAxesCustomizationComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAxesDateTime":
+                this._loader.loadNextToLocation(ChartAxesDateTimeComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAxesMultiple":
+                this._loader.loadNextToLocation(ChartAxesMultipleComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartAxesNegativeValues":
+                this._loader.loadNextToLocation(ChartAxesNegativeValuesComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

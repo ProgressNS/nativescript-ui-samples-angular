@@ -1,0 +1,11 @@
+<!-- >> chart-angular-axes-multiple -->
+<RadCartesianChart>
+    <LinearAxis cartesianVerticalAxis horizontalLocation="Left"></LinearAxis>
+    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Down"></CategoricalAxis>
+
+    <LineSeries cartesianSeries seriesName="RateA" [items]="rateA" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <LineSeries cartesianSeries seriesName="RateB" [items]="rateB" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <LineSeries cartesianSeries seriesName="RateC" [items]="rateC" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <BarSeries cartesianSeries seriesName="Total" [items]="total" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" [verticalAxis]="barSeriesVerticalAxis"></BarSeries>
+</RadCartesianChart>
+<!-- << chart-angular-axes-multiple -->

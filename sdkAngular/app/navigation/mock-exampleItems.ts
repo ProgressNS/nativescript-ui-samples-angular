@@ -112,6 +112,32 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Axes",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Customization",
+                                "path": "ChartAxesCustomization",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple axes",
+                                "path": "ChartAxesMultiple",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Negative values",
+                                "path": "ChartAxesNegativeValues",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Date time axis",
+                                "path": "ChartAxesDateTime",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
                         "title": "Annotations",
                         "path": "Examples",
                         "subItems": [

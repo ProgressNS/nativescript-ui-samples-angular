@@ -4,6 +4,8 @@ import { Product } from "./product";
 import { Person } from "./person";
 import { Currency } from './currency';
 import { Car } from './car';
+import { Stock } from './stock';
+import { Frame } from './frame';
 
 // >> chart-angular-data-service
 import { Injectable } from '@angular/core';
@@ -185,7 +187,79 @@ export class DataService {
             { Name: "Electronics", Sales: 15, Margin: 25, High: 0, Low: 0 },
             { Name: "Gardening", Sales: 40, Margin: 5, High: 0, Low: 0 }
         ];
-      }
+    }
+
+    // >> chart-angular-ohlc-data-model
+    getDateTimeSource(): Stock[] {
+        return [
+            { TimeStamp: new Date(2015, 1, 11), Amount: 10 },
+            { TimeStamp: new Date(2015, 2, 11), Amount: 10 },
+            { TimeStamp: new Date(2015, 3, 1), Amount: 1 },
+            { TimeStamp: new Date(2015, 4, 3), Amount: 3 },
+            { TimeStamp: new Date(2015, 5, 11), Amount: 18 },
+            { TimeStamp: new Date(2015, 6, 1), Amount: 7 },
+            { TimeStamp: new Date(2015, 7, 3), Amount: 5 },
+            { TimeStamp: new Date(2015, 8, 11), Amount: 4 },
+            { TimeStamp: new Date(2015, 9, 1), Amount: 2 },
+            { TimeStamp: new Date(2015, 10, 3), Amount: 6 },
+        ];
+    }
+
+    getRateA(): Country[] {
+        return [
+            { Country: "Germany", Amount: 20, SecondVal: 14, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "France", Amount: 15, SecondVal: 23, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Bulgaria", Amount: 10, SecondVal: 9, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "USA", Amount: 0, SecondVal: 8, ThirdVal: 0, Impact: 0, Year: 0 }
+        ]
+    }
+
+    getRateB(): Country[] {
+        return [
+            { Country: "Germany", Amount: 4, SecondVal: 14, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "France", Amount: 3, SecondVal: 23, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Bulgaria", Amount: 2, SecondVal: 9, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Spain", Amount: 1, SecondVal: 19, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "USA", Amount: 0, SecondVal: 8, ThirdVal: 0, Impact: 0, Year: 0 }
+        ]
+    }
+
+    getRateC(): Country[] {
+        return [
+            { Country: "Germany", Amount: 16, SecondVal: 14, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "France", Amount: 13, SecondVal: 23, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Bulgaria", Amount: 12, SecondVal: 9, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "USA", Amount: 8, SecondVal: 8, ThirdVal: 0, Impact: 0, Year: 0 }
+        ]
+    }
+
+    getTotal(): Country[] {
+        return [
+            { Country: "Germany", Amount: 40, SecondVal: 14, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "France", Amount: 41, SecondVal: 23, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Bulgaria", Amount: 24, SecondVal: 9, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "Spain", Amount: 11, SecondVal: 19, ThirdVal: 0, Impact: 0, Year: 0 },
+            { Country: "USA", Amount: 2, SecondVal: 8, ThirdVal: 0, Impact: 0, Year: 0 }
+        ]
+    }
+
+    getNegativeValues(): Frame[] {
+        return [
+            { Period: 1, Amount: 10 },
+            { Period: 2, Amount: -10 },
+            { Period: 3, Amount: 20 },
+            { Period: 4, Amount: -20 },
+            { Period: 5, Amount: 30 },
+            { Period: 6, Amount: -30 },
+            { Period: 7, Amount: 40 },
+            { Period: 8, Amount: -40 },
+            { Period: 9, Amount: 50 },
+            { Period: 10, Amount: -50 }
+        ]
+    }
+    // << chart-angular-ohlc-data-model
     // << (hide)
 }
 // << chart-angular-data-service
