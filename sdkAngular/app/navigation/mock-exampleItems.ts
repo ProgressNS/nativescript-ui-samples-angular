@@ -81,6 +81,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Legend",
+                        "path": "ChartLegend",
+                        "subItems": []
+                    },
+                    {
                         "title": "Interaction",
                         "path": "Examples",
                         "subItems": [

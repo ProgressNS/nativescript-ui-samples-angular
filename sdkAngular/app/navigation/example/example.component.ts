@@ -44,6 +44,7 @@ import { ChartBehaviorsDatapointSelectionComponent } from "../../chart/behaviors
 import { ChartBehaviorsPanZoomComponent } from "../../chart/behaviors/chart-behaviors-pan-zoom.component";
 import { ChartBehaviorsChartPieSelectionComponent } from "../../chart/behaviors/chart-behaviors-chart-pie-selection.component";
 import { ChartBehaviorsSeriesSelectionComponent } from "../../chart/behaviors/chart-behaviors-series-selection.component";
+import { ChartLegendComponent } from "../../chart/legend/chart-legend.component";
 
 @Component({
     moduleId: module.id,
@@ -185,6 +186,9 @@ export class ExampleComponent implements OnInit {
                 this._loader.loadNextToLocation(ChartBehaviorsChartPieSelectionComponent, this.exampleCompPlaceholder);
             case "ChartBehaviorsSeriesSelection":
                 this._loader.loadNextToLocation(ChartBehaviorsSeriesSelectionComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartLegend":
+                this._loader.loadNextToLocation(ChartLegendComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;
