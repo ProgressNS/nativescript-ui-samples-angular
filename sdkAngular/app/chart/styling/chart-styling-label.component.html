@@ -1,0 +1,18 @@
+<!-- >> chart-angular-labels-styling -->
+<RadCartesianChart>
+    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelSize="10" lineColor="Red" lineThickness="3"></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis horizontalLocation="Left" labelSize="10" lineColor="Red" lineThickness="3"></LinearAxis>
+
+    <LineSeries cartesianSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country"
+        [items]="categoricalSource">
+        <PointLabelStyle lineLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White"></PointLabelStyle>
+    </LineSeries>
+
+    <LineSeries cartesianSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="SecondVal" categoryProperty="Country"
+        [items]="categoricalSource">
+        <PointLabelStyle lineLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"></PointLabelStyle>
+    </LineSeries>
+
+    <RadLegendView cartesianLegend position="Top" title="Financial data" height="150"></RadLegendView>
+</RadCartesianChart>
+<!-- << chart-angular-labels-styling -->

@@ -1,0 +1,12 @@
+<!-- >> chart-angular-grid-styling -->
+<RadCartesianChart>
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis></LinearAxis>
+
+    <BarSeries cartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+
+    <RadCartesianChartGrid cartesianGrid horizontalLinesVisible="true" verticalLinesVisible="true" horizontalStripLinesVisible="true"
+        verticalStripLinesVisible="true" verticalStrokeColor="#804d0026" horizontalStrokeColor="#ffffcc80" horizontalStrokeWidth="2"
+        verticalStrokeWidth="3" horizontalStripLineColor="#8059005c, #804d0026"></RadCartesianChartGrid>
+</RadCartesianChart>
+<!-- << chart-angular-grid-styling -->

@@ -49,6 +49,11 @@ import { ChartAxesCustomizationComponent } from "../../chart/axes/customization/
 import { ChartAxesDateTimeComponent } from "../../chart/axes/date-time-axes/chart-axes-date-time.component";
 import { ChartAxesMultipleComponent } from "../../chart/axes/multiple/chart-axes-multiple.component";
 import { ChartAxesNegativeValuesComponent } from "../../chart/axes/negative-values/chart-axes-negative-values.component";
+import { ChartStylingAxesComponent } from "../../chart/styling/chart-styling-axes.component";
+import { ChartStylingGridComponent } from "../../chart/styling/chart-styling-grid.component";
+import { ChartStylingLabelComponent } from "../../chart/styling/chart-styling-label.component";
+import { ChartStylingSelectionComponent } from "../../chart/styling/chart-styling-selection.component";
+import { ChartStylingSeriesComponent } from "../../chart/styling/chart-styling-series.component";
 
 @Component({
     moduleId: module.id,
@@ -207,6 +212,21 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ChartAxesNegativeValues":
                 this._loader.loadNextToLocation(ChartAxesNegativeValuesComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartStylingAxes":
+                this._loader.loadNextToLocation(ChartStylingAxesComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartStylingGrid":
+                this._loader.loadNextToLocation(ChartStylingGridComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartStylingLabel":
+                this._loader.loadNextToLocation(ChartStylingLabelComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartStylingSelection":
+                this._loader.loadNextToLocation(ChartStylingSelectionComponent, this.exampleCompPlaceholder);
+                break;
+            case "ChartStylingSeries":
+                this._loader.loadNextToLocation(ChartStylingSeriesComponent, this.exampleCompPlaceholder);
                 break;
             default:
                 return null;

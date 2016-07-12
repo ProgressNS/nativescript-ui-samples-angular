@@ -81,6 +81,37 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Styling",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Styling axes",
+                                "path": "ChartStylingAxes",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series",
+                                "path": "ChartStylingSeries",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling grid",
+                                "path": "ChartStylingGrid",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling labels",
+                                "path": "ChartStylingLabel",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series selection",
+                                "path": "ChartStylingSelection",
+                                "subItems": []
+                            },
+                        ]
+                    },
+                    {
                         "title": "Legend",
                         "path": "ChartLegend",
                         "subItems": []
