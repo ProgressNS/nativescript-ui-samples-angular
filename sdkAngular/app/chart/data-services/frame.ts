@@ -3,4 +3,4 @@ export class Frame {
     constructor(public Period?: number, public Amount?: number) {
     }
 }
-// << chart-angular-stock
+// << chart-angular-frame
