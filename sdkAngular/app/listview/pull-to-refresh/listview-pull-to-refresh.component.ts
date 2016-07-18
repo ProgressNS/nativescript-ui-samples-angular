@@ -16,28 +16,17 @@ var posts = require("../../listview/posts.json")
 export class ListViewPullToRefreshComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
-    private _layout: listViewModule.ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     ngOnInit() {
-        this.layout = new listViewModule.ListViewLinearLayout();
-        this.layout.scrollDirection = "Vertical";
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
     }
 
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
-    }
-
-    public get layout(): listViewModule.ListViewLinearLayout {
-        return this._layout;
-    }
-
-    public set layout(value: listViewModule.ListViewLinearLayout) {
-        this._layout = value;
     }
 
     public onPullToRefreshInitiated(args: listViewModule.ListViewEventData) {

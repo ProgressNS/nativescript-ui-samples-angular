@@ -1,0 +1,24 @@
+<!-- >> chart-angular-series-styling -->
+<RadCartesianChart>
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis></LinearAxis>
+
+    <!-- >> chart-angular-creating-series -->
+    <BarSeries cartesianSeries seriesName="Bar" [items]="categoricalSource" categoryProperty="Country" valueProperty="SecondVal" stackMode="None"></BarSeries>
+    <LineSeries cartesianSeries seriesName="Line" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount" stackMode="None"></LineSeries>
+    <SplineAreaSeries cartesianSeries seriesName="Area" [items]="categoricalSource" categoryProperty="Country" valueProperty="ThirdVal" stackMode="None"></SplineAreaSeries>
+    <!-- << chart-angular-creating-series -->
+
+    <!-- >> chart-angular-creating-palettes -->
+    <Palette cartesianPalette seriesName="Bar">
+        <PaletteEntry cartesianPaletteEntry fillColor="#80FCE49D" strokeColor="#80E2A1F8"></PaletteEntry>
+    </Palette>
+    <Palette cartesianPalette seriesName="Area">
+        <PaletteEntry cartesianPaletteEntry fillColor="#8060B3FC" strokeColor="#60B3FC"></PaletteEntry>
+    </Palette>
+    <Palette cartesianPalette seriesName="Line">
+        <PaletteEntry cartesianPaletteEntry strokeColor="#FFCF40" strokeWidth="3"></PaletteEntry>
+    </Palette>
+    <!-- << chart-angular-creating-palettes -->
+</RadCartesianChart>
+<!-- << chart-angular-series-styling -->

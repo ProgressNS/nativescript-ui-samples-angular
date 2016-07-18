@@ -1,0 +1,8 @@
+<!-- >> chart-angular-axes-negative-values -->
+<RadCartesianChart>
+    <LinearAxis cartesianVerticalAxis allowZoom="true" minimum="-50" maximum="50"></LinearAxis>
+    <CategoricalAxis cartesianHorizontalAxis allowZoom="true"></CategoricalAxis>
+
+    <SplineAreaSeries cartesianSeries seriesName="SplineArea" [items]="negativeValues" categoryProperty="Period" valueProperty="Amount"></SplineAreaSeries>
+</RadCartesianChart>
+<!-- << chart-angular-axes-negative-values -->

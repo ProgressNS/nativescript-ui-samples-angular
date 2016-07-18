@@ -1,7 +1,7 @@
 // >> chart-angular-spline-series-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Country } from '../country';
+import { DataService } from '../../data-services/data.service';
+import { Country } from '../../data-services/country';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
@@ -13,9 +13,7 @@ import { ObservableArray } from "data/observable-array";
 export class ChartSeriesSplineComponent implements OnInit {
     private _categoricalSource: ObservableArray<Country>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get categoricalSource(): ObservableArray<Country> {
         return this._categoricalSource;

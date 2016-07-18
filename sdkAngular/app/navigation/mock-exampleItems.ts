@@ -79,6 +79,110 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Styling",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Styling axes",
+                                "path": "ChartStylingAxes",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series",
+                                "path": "ChartStylingSeries",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling grid",
+                                "path": "ChartStylingGrid",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling labels",
+                                "path": "ChartStylingLabel",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series selection",
+                                "path": "ChartStylingSelection",
+                                "subItems": []
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Legend",
+                        "path": "ChartLegend",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Interaction",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Pan & Zoom",
+                                "path": "ChartBehaviorsPanZoom",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Pie selection",
+                                "path": "ChartBehaviorsChartPieSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Series selection",
+                                "path": "ChartBehaviorsSeriesSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Datapoint selection",
+                                "path": "ChartBehaviorsDatapointSelection",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Axes",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Customization",
+                                "path": "ChartAxesCustomization",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple axes",
+                                "path": "ChartAxesMultiple",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Negative values",
+                                "path": "ChartAxesNegativeValues",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Date time axis",
+                                "path": "ChartAxesDateTime",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Annotations",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Plot band",
+                                "path": "ChartAnnotationsPlotBand",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid line",
+                                "path": "ChartAnnotationsGridLine",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             },

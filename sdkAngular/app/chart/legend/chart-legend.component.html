@@ -1,0 +1,12 @@
+<!-- >> chart-legend-example -->
+<RadCartesianChart>
+    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis cartesianVerticalAxis maximum="50"></LinearAxis>
+
+    <BarSeries cartesianSeries legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
+    <LineSeries cartesianSeries legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
+    <AreaSeries cartesianSeries legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
+
+    <RadLegendView cartesianLegend position="Top" height="150"></RadLegendView>
+</RadCartesianChart>
+<!-- << chart-legend-example -->
