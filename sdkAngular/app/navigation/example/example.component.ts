@@ -10,7 +10,7 @@ import { ListViewGettingStartedComponent } from "../../listview/getting-started/
 import { ListViewHeaderFooterComponent } from "../../listview/header-footer/listview-header-footer.component";
 import { ListViewItemReorderComponent } from "../../listview/item-reorder/listview-item-reorder.component";
 import { ListViewItemSelectionComponent } from "../../listview/item-selection/listview-item-selection.component";
-import { ListViewItemSwipeComponent } from "../../listview/item-swipe/listview-item-swipe.component";
+import { ListViewSwipeExecuteComponent } from "../../listview/swipe-execute/listview-swipe-execute.component";
 import { ListViewLoadOnDemandComponent } from "../../listview/load-on-demand/listview-load-on-demand.component";
 import { ListViewPullToRefreshComponent } from "../../listview/pull-to-refresh/listview-pull-to-refresh.component";
 import { SideDrawerGettingStartedComponent } from "../../sidedrawer/getting-started/getting-started.component";
@@ -97,7 +97,7 @@ export class ExampleComponent implements OnInit {
                 this._loader.loadNextToLocation(ListViewItemSelectionComponent, this.exampleCompPlaceholder);
                 break;
             case "ListViewItemSwipe":
-                this._loader.loadNextToLocation(ListViewItemSwipeComponent, this.exampleCompPlaceholder);
+                this._loader.loadNextToLocation(ListViewSwipeExecuteComponent, this.exampleCompPlaceholder);
                 break;
             case "ListViewLoadOnDemand":
                 this._loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.exampleCompPlaceholder);

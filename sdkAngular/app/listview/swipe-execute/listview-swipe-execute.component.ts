@@ -8,13 +8,13 @@ var posts = require("../../listview/posts.json")
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-swipe",
+    selector: "listview-swipe-execute",
     providers: [DataItemService],
-    templateUrl: "listview-item-swipe.component.html",
-    styleUrls: ["listview-item-swipe.component.css"]
+    templateUrl: "listview-swipe-execute.component.html",
+    styleUrls: ["listview-swipe-execute.component.css"]
 })
 // >> angular-listview-item-swipe-component
-export class ListViewItemSwipeComponent implements OnInit {
+export class ListViewSwipeExecuteComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 

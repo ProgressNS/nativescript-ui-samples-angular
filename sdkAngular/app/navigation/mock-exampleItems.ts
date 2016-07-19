@@ -212,7 +212,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Item Swipe",
-                        "path": "ListViewItemSwipe",
+                        "path": "ListViewSwipeExecute",
                         "subItems": []
                     },
                     {
