@@ -196,8 +196,18 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Header Footer",
-                        "path": "ListViewHeaderFooter",
+                        "title": "Item Loading",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Item Animations",
+                        "path": "ListViewItemAnimations",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Item Layouts",
+                        "path": "",
                         "subItems": []
                     },
                     {
@@ -206,14 +216,30 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Item Selection",
-                        "path": "ListViewItemSelection",
+                        "title": "Item Reorder with handle",
+                        "path": "",
                         "subItems": []
                     },
                     {
-                        "title": "Item Swipe",
-                        "path": "ListViewSwipeExecute",
-                        "subItems": []
+                        "title": "Selection",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Single Selection",
+                                "path": "ListViewItemSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple Selection",
+                                "path": "",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Programatic Selection",
+                                "path": "",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Load on Demand",
@@ -221,10 +247,35 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Observable Array",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
                         "title": "Pull to Refresh",
                         "path": "ListViewPullToRefresh",
                         "subItems": []
-                    }
+                    },
+                    {
+                        "title": "Swipe to Execute",
+                        "path": "ListViewSwipeExecute",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Header and Footer",
+                        "path": "ListViewHeaderFooter",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Swipe to execute with sticky actions",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Swipe to execute with stretched content",
+                        "path": "",
+                        "subItems": []
+                    },
                 ]
             },
             {

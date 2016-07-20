@@ -1,0 +1,28 @@
+<ActionBar title="Item Animations">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="Default" android.position="popup" (tap)="onDefaultTap()"></ActionItem>
+    <ActionItem text="Fade" android.position="popup" (tap)="onFadeTap()"></ActionItem>
+    <ActionItem text="Scale" android.position="popup" (tap)="onScaleTap()"></ActionItem>
+    <ActionItem text="Slide" android.position="popup" (tap)="onSlideTap()"></ActionItem>
+</ActionBar>
+<GridLayout orientation="vertical" rows="50, *">
+    <StackLayout orientation="vertical" backgroundColor="#f8f8f8">
+        <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
+            <Button text="Add" (tap)="onAddItemClick()" ios:margin="10"></Button>
+            <Button text="Del" (tap)="onRemoveItemClick()" ios:margin="10"></Button>
+            <Button text="Update" (tap)="onUpdateItemClick()" ios:margin="10"></Button>
+            <Button text="Reset" (tap)="onResetClick()" ios:margin="10"></Button>
+        </StackLayout>
+    </StackLayout>
+    <!-- >> angular-listview-item-animations-html -->
+    <RadListView [items]="dataItems" row="1">
+        <ListViewLinearLayout radListViewLayout scrollDirection="Vertical" [itemInsertAnimation]="itemInsertAnimation" [itemDeleteAnimation]="itemDeleteAnimation"></ListViewLinearLayout>
+        <template listItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </template>
+    </RadListView>
+    <!-- << angular-listview-item-animations-html -->
+</GridLayout>

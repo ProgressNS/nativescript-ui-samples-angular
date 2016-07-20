@@ -13,6 +13,7 @@ import { ListViewItemSelectionComponent } from "../../listview/item-selection/li
 import { ListViewSwipeExecuteComponent } from "../../listview/swipe-execute/listview-swipe-execute.component";
 import { ListViewLoadOnDemandComponent } from "../../listview/load-on-demand/listview-load-on-demand.component";
 import { ListViewPullToRefreshComponent } from "../../listview/pull-to-refresh/listview-pull-to-refresh.component";
+import { ListViewItemAnimationsComponent } from "../../listview/item-animations/listview-item-animations.component";
 import { SideDrawerGettingStartedComponent } from "../../sidedrawer/getting-started/getting-started.component";
 import { SideDrawerEventsComponent } from "../../sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "../../sidedrawer/position/position.component";
@@ -101,6 +102,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListViewLoadOnDemand":
                 this._loader.loadNextToLocation(ListViewLoadOnDemandComponent, this.exampleCompPlaceholder);
+                break;
+            case "ListViewItemAnimations":
+                this._loader.loadNextToLocation(ListViewItemAnimationsComponent, this.exampleCompPlaceholder);
                 break;
             case "ListViewPullToRefresh":
                 this._loader.loadNextToLocation(ListViewPullToRefreshComponent, this.exampleCompPlaceholder);
