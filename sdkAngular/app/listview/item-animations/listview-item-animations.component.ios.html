@@ -3,7 +3,7 @@
     <ActionItem text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
 </ActionBar>
 <GridLayout orientation="vertical" rows="50, *">
-    <StackLayout orientation="vertical" backgroundColor="#f8f8f8">
+    <StackLayout orientation="vertical" class="buttonStackLayout">
         <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
             <Button text="Add" (tap)="onAddItemClick()" class="iosButton"></Button>
             <Button text="Del" (tap)="onRemoveItemClick()" class="iosButton"></Button>
