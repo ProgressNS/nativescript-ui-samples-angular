@@ -1,16 +1,14 @@
 <GridLayout>
-    <RadListView id="list-view" [items]="dataItems" marginRight="-2">
+    <RadListView [items]="dataItems">
         <ListViewGridLayout radListViewLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"></ListViewGridLayout>
         <template listItemTemplate let-item="item">
-            <GridLayout rows="*" backgroundColor="White">
-                <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
-                    <FrescoDrawee horizontalAlignment="stretch" height="250" [imageUri]="item.image" verticalAlignment="top"></FrescoDrawee>    
-                    <GridLayout verticalAlignment="bottom">
-                        <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
-                            <Label class="labelName" [text]="item.name"></Label>
-                            <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
-                        </StackLayout>
-                    </GridLayout>
+            <GridLayout class="listItemTemplateGrid">
+                <FrescoDrawee horizontalAlignment="stretch" height="250" [imageUri]="item.image" verticalAlignment="top"></FrescoDrawee>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
                 </GridLayout>
             </GridLayout>
         </template>

@@ -13,7 +13,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-layouts-grid.component.html",
     styleUrls: ["listview-item-layouts-grid.component.css"]
 })
-// >> angular-listview-item-layouts-grid-code
+// >> angular-listview-item-layouts-grid-component
 export class ListViewItemLayoutsGridComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
@@ -39,4 +39,4 @@ export class ListViewItemLayoutsGridComponent implements OnInit {
         this._layout = value;
     }
 }
-// << angular-listview-item-layouts-grid-code
+// << angular-listview-item-layouts-grid-component

@@ -1,32 +1,17 @@
-.itemTemplateStackLayout {
-    padding: 5 10 5 10;
-    background-color: #7fff7f;
+RadListView {
+    margin-right: -2;
 }
 
-.innerOtemTemplateStackLayout {
-    padding: 10;
-    background-color: #65a565;
+.listItemTemplateGrid {
+    background-color: white;
+    margin-bottom: 2;
+    margin-right: 2;
 }
 
 .labelsStackLayout {
-    margin-left: 15;
-}
-
-.labelName {
-    font-size: 20;
-    margin-bottom: 8;
-}
-
-.labelTitle {
-    font-size: 14;
-    font-weight: bold;
-}
-
-.labelText {
-    font-size: 12;
-    color: white;
-}
-
-.loadOnDemandItemGridLayout {
-    background-color: #7fff7f;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding-top: 8;
+    padding-bottom: 8;
+    padding-left: 16;
+    padding-right: 16;
 }
