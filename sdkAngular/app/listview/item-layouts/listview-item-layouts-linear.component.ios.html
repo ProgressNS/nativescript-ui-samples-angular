@@ -1,0 +1,18 @@
+<GridLayout>
+    <RadListView [items]="dataItems">
+        <!-- >> angular-listview-item-layouts-linear -->
+        <ListViewLinearLayout radListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
+        <!-- << angular-listview-item-layouts-linear -->
+        <template listItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <Image [src]="item.image" stretch="aspectFill"></Image>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </template>
+    </RadListView>
+</GridLayout>

@@ -1,0 +1,16 @@
+<GridLayout>
+    <RadListView [items]="dataItems">
+        <ListViewLinearLayout radListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
+        <template listItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <FrescoDrawee height="250" [imageUri]="item.image"></FrescoDrawee>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </template>
+    </RadListView>
+</GridLayout>
