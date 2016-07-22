@@ -207,8 +207,24 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Item Layouts",
-                        "path": "",
-                        "subItems": []
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Liner",
+                                "path": "",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid",
+                                "path": "ListViewItemLayoutsGrid",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Staggered",
+                                "path": "",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Item Reorder",

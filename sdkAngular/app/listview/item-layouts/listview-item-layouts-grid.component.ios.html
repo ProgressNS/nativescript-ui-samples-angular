@@ -1,0 +1,20 @@
+<GridLayout>
+    <RadListView id="list-view" [items]="dataItems" marginRight="-2">
+        <!-- >> listview-angular-item-layouts-grid-html -->
+        <ListViewGridLayout radListViewLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"></ListViewGridLayout>
+        <!-- << listview-angular-item-layouts-grid-html -->
+        <template listItemTemplate let-item="item">
+            <GridLayout rows="*" backgroundColor="White">
+                <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
+                    <Image [src]="item.image" stretch="aspectFill"></Image>
+                    <GridLayout verticalAlignment="bottom">
+                        <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
+                            <Label class="labelName" [text]="item.name"></Label>
+                            <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </GridLayout>
+            </GridLayout>
+        </template>
+    </RadListView>
+</GridLayout>
