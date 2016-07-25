@@ -197,7 +197,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Item Loading",
-                        "path": "",
+                        "path": "ListviewItemLoading",
                         "subItems": []
                     },
                     {

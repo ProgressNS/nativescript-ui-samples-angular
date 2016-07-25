@@ -1,0 +1,11 @@
+<!-- >> angular-angular-listview-item-loading -->
+<RadListView [items]="dataItems" (itemLoading)="onItemLoading($event)">
+    <ListViewLinearLayout radListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
+    <template listItemTemplate let-item="item">
+        <StackLayout orientation="vertical" padding="15">
+            <Label class="nameLabel" [text]="item.name"></Label>
+            <Label class="descLabel" [text]="item.description"></Label>
+        </StackLayout>
+    </template>
+</RadListView>
+<!-- << angular-angular-listview-item-loading -->
