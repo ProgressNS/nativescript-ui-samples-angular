@@ -221,7 +221,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             },
                             {
                                 "title": "Staggered",
-                                "path": "",
+                                "path": "ListviewItemLayoutsStaggered",
                                 "subItems": []
                             }
                         ]

@@ -1,0 +1,11 @@
+<RadListView [items]="staggeredItems">
+    <!-- >> angular-listview-item-layouts-staggered -->
+    <ListViewStaggeredLayout radListViewLayout scrollDirection="Vertical" spanCount="3"></ListViewStaggeredLayout>
+    <!-- << angular-listview-item-layouts-staggered -->
+    <template listItemTemplate let-item="item">
+        <StackLayout orientation="vertical" class="item-template-style">
+            <Label [text]="item.name"></Label>
+            <Label [text]="item.description"  textWrap="true"></Label>
+        </StackLayout>
+    </template>
+</RadListView>

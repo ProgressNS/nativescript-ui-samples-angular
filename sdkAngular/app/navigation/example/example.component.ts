@@ -16,6 +16,7 @@ import { ListViewPullToRefreshComponent } from "../../listview/pull-to-refresh/l
 import { ListViewItemAnimationsComponent } from "../../listview/item-animations/listview-item-animations.component";
 import { ListViewItemLayoutsGridComponent } from "../../listview/item-layouts/listview-item-layouts-grid.component";
 import { ListviewItemLayoutsLinearComponent } from "../../listview/item-layouts/listview-item-layouts-linear.component";
+import { ListviewItemLayoutsStaggeredComponent } from "../../listview/item-layouts/listview-item-layouts-staggered.component";
 import { SideDrawerGettingStartedComponent } from "../../sidedrawer/getting-started/getting-started.component";
 import { SideDrawerEventsComponent } from "../../sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "../../sidedrawer/position/position.component";
@@ -116,6 +117,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListviewItemLayoutsLinear":
                 this._loader.loadNextToLocation(ListviewItemLayoutsLinearComponent, this.exampleCompPlaceholder);
+                break;
+            case "ListviewItemLayoutsStaggered":
+                this._loader.loadNextToLocation(ListviewItemLayoutsStaggeredComponent, this.exampleCompPlaceholder);
                 break;
             case "SideDrawerGettingStarted":
                 this._loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.exampleCompPlaceholder);
