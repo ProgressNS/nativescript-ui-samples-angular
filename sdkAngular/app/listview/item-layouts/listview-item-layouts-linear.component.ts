@@ -16,7 +16,6 @@ import { DataItemService } from "../dataItem.service";
 // >> angular-listview-item-layouts-linear.component
 export class ListviewItemLayoutsLinearComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
-    private _numberOfAddedItems;
     private _layout: listViewModule.ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef, private _dataItemService: DataItemService) {
@@ -29,14 +28,6 @@ export class ListviewItemLayoutsLinearComponent implements OnInit {
 
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
-    }
-
-    public get layout(): listViewModule.ListViewLinearLayout {
-        return this._layout;
-    }
-
-    public set layout(value: listViewModule.ListViewLinearLayout) {
-        this._layout = value;
     }
 }
 // << angular-listview-item-layouts-linear.component
