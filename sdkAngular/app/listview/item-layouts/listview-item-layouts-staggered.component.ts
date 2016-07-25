@@ -1,9 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import * as Application from "application";
-import * as Timer  from "timer";
 import { DataItemService } from "../dataItem.service";
 
 @Component({
