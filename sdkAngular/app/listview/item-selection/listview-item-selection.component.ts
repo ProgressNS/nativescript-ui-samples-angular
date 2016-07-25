@@ -3,7 +3,6 @@ import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-var namesAndEmails = require("../../listview/NamesAndEmails.json")
 
 @Component({
     moduleId: module.id,
