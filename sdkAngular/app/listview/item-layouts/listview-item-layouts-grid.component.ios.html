@@ -1,8 +1,5 @@
 <GridLayout>
     <RadListView [items]="dataItems">
-        <!-- >> angular-listview-item-layouts-grid -->
-        <ListViewGridLayout radListViewLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"></ListViewGridLayout>
-        <!-- << angular-listview-item-layouts-grid -->
         <template listItemTemplate let-item="item">
             <GridLayout class="listItemTemplateGrid">
                 <Image [src]="item.image" stretch="aspectFill"></Image>
@@ -14,5 +11,9 @@
                 </GridLayout>
             </GridLayout>
         </template>
+
+        <!-- >> angular-listview-item-layouts-grid -->
+        <ListViewGridLayout radListViewLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"></ListViewGridLayout>
+        <!-- << angular-listview-item-layouts-grid -->
     </RadListView>
 </GridLayout>
