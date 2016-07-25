@@ -1,0 +1,11 @@
+.listItemStackLayout {
+    padding-left: 16;
+}
+
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 13;
+}

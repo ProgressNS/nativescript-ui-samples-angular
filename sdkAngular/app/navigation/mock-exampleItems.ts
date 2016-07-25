@@ -247,7 +247,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             },
                             {
                                 "title": "Multiple Selection",
-                                "path": "",
+                                "path": "ListviewItemSelectionMultiple",
                                 "subItems": []
                             },
                             {

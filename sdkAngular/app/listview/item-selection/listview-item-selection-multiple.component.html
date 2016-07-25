@@ -1,0 +1,13 @@
+<GridLayout rows="auto, *, auto">
+    <!-- >> angular-listview-item-selection-multiple -->
+    <RadListView [items]="dataItems" row="1" selectionBehavior="Press" multipleSelection="true">
+    <!-- << angular-listview-item-selection-multiple -->
+        <template listItemTemplate let-item="item">
+            <StackLayout class="listItemStackLayout">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </template>
+        <ListViewLinearLayout radListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
+    </RadListView>
+</GridLayout>
