@@ -233,7 +233,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Item Reorder with handle",
-                        "path": "",
+                        "path": "ListviewItemReorderHandle",
                         "subItems": []
                     },
                     {
