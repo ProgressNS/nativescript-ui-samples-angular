@@ -252,7 +252,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             },
                             {
                                 "title": "Programatic Selection",
-                                "path": "",
+                                "path": "ListviewItemSelectionProgrammatic",
                                 "subItems": []
                             }
                         ]

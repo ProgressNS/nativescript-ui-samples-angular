@@ -1,0 +1,26 @@
+.listItemStackLayout {
+    padding-left: 50;
+}
+
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.selectItemTextField {
+    background-color: white;
+    width: 60;
+    height: 30;
+}
+
+.selectItemButton {
+    margin-left: 10;
+    height: 50;
+}
+
+.selectAllButton {
+    margin-right: 10;
+}

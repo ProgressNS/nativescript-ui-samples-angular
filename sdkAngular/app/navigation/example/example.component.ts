@@ -20,6 +20,7 @@ import { ListviewItemLayoutsStaggeredComponent } from "../../listview/item-layou
 import { ListviewItemLoadingComponent } from "../../listview/item-loading/listview-item-loading.component";
 import { ListviewItemReorderHandleComponent } from "../../listview/item-reorder/listview-item-reorder-handle.component";
 import { ListviewItemSelectionMultipleComponent } from "../../listview/item-selection/listview-item-selection-multiple.component";
+import { ListviewItemSelectionProgrammaticComponent } from "../../listview/item-selection/listview-item-selection-programmatic.component";
 import { SideDrawerGettingStartedComponent } from "../../sidedrawer/getting-started/getting-started.component";
 import { SideDrawerEventsComponent } from "../../sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "../../sidedrawer/position/position.component";
@@ -132,6 +133,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListviewItemSelectionMultiple":
                 this._loader.loadNextToLocation(ListviewItemSelectionMultipleComponent, this.exampleCompPlaceholder);
+                break;
+            case "ListviewItemSelectionProgrammatic":
+                this._loader.loadNextToLocation(ListviewItemSelectionProgrammaticComponent, this.exampleCompPlaceholder);
                 break;
             case "SideDrawerGettingStarted":
                 this._loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.exampleCompPlaceholder);
