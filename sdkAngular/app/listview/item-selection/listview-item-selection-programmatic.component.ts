@@ -21,7 +21,7 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    @ViewChild('myRadListView') listView: listViewAnularModule.RadListViewComponent
+    @ViewChild('myRadListView') listView: listViewAnularModule.RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
