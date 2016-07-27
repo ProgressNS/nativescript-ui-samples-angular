@@ -105,7 +105,7 @@ export class ExampleComponent implements OnInit {
             case "ListViewItemSelection":
                 this._loader.loadNextToLocation(ListViewItemSelectionComponent, this.exampleCompPlaceholder);
                 break;
-            case "ListViewItemSwipe":
+            case "ListViewSwipeExecute":
                 this._loader.loadNextToLocation(ListViewSwipeExecuteComponent, this.exampleCompPlaceholder);
                 break;
             case "ListViewLoadOnDemand":
