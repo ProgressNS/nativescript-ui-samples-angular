@@ -7,13 +7,16 @@ import { CALENDAR_PROVIDERS } from 'nativescript-telerik-ui-pro/calendar/angular
 import { CHART_PROVIDERS } from 'nativescript-telerik-ui-pro/chart/angular';
 import { AppComponent } from "./navigation/app.component";
 import { APP_ROUTER_PROVIDERS } from "./navigation/app.routes";
+import { NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
+import { RouterConfig, ActivatedRoute, Router, ROUTER_DIRECTIVES, RouterOutletMap, Event } from '@angular/router';
+
+// Not required imports, these are used by the nativescript-samples-angular SDK examples
+import { OptionsService } from "./navigation/options/options.service";
+import { ExampleItemService } from "./navigation/exampleItemService.service";
 // >> (hide)
 import * as frescoModule from "nativescript-fresco";
 import * as applicationModule from "application";
-import { OptionsService } from "./navigation/options/options.service";
-import { ExampleItemService } from "./navigation/exampleItemService.service";
-import { NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
-import { RouterConfig, ActivatedRoute, Router, ROUTER_DIRECTIVES, RouterOutletMap, Event } from '@angular/router';
+
 
 if (applicationModule.android) {
     applicationModule.onLaunch = function (intent) {
