@@ -1,0 +1,15 @@
+.buttonsStacklayout {
+    background-color: #f8f8f8;
+}
+
+Button {
+    margin: 10;
+}
+
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}

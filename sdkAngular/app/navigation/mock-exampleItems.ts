@@ -264,7 +264,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Observable Array",
-                        "path": "",
+                        "path": "ListviewObservableArray",
                         "subItems": []
                     },
                     {
