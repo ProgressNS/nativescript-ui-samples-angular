@@ -2,7 +2,6 @@ import { Component, OnInit, Inject } from "@angular/core";
 import { Router } from '@angular/router';
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
-import { DataItemService } from "../dataItem.service";
 import { OptionsExampleBase } from "../../options-example-base";
 import { Page } from "ui/page";
 import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
@@ -13,7 +12,6 @@ import * as applicationModule from "application";
 @Component({
     moduleId: module.id,
     selector: "listview-item-animations",
-    providers: [DataItemService],
     templateUrl: "listview-item-animations.component.html",
     styleUrls: ["listview-item-animations.component.css"]
 })
@@ -23,7 +21,7 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
     private _itemDeleteAnimation: string;
     private _optionsParamName: string;
 
-    constructor( @Inject(Page) private _page: Page, private _optionsService: OptionsService, private _router: Router, private _dataItemService: DataItemService) {
+    constructor( @Inject(Page) private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
