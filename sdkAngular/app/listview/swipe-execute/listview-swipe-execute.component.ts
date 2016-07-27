@@ -4,7 +4,6 @@ import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import * as FrameModule from "ui/frame";
-var posts = require("../../listview/posts.json")
 
 @Component({
     moduleId: module.id,
