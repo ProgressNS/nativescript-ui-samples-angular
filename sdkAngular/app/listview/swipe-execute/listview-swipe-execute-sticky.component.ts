@@ -2,9 +2,9 @@ import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import * as listViewModule from "nativescript-telerik-ui-pro/listview";
 import * as FrameModule from "ui/frame";
-import utilsModule = require("utils/utils");
+import * as utilsModule from "utils/utils";
 
 @Component({
     moduleId: module.id,

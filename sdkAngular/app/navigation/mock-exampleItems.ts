@@ -289,7 +289,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Swipe to execute with stretched content",
-                        "path": "",
+                        "path": "ListviewSwipeExecuteStretch",
                         "subItems": []
                     },
                 ]
