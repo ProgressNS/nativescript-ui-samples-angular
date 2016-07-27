@@ -31,7 +31,6 @@ export class ListviewSwipeExecuteStickyComponent implements OnInit {
 
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listview = FrameModule.topmost().currentPage.getViewById("listView");
 
         swipeLimits.threshold = 60 * utilsModule.layout.getDisplayDensity();
         swipeLimits.left = 80 * utilsModule.layout.getDisplayDensity();

@@ -42,11 +42,11 @@ export class ListViewSwipeExecuteComponent implements OnInit {
 
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listview = FrameModule.topmost().currentPage.getViewById("listView");
+        var listView = FrameModule.topmost().currentPage.getViewById("listView");
 
-        swipeLimits.threshold = listview.getMeasuredWidth();
-        swipeLimits.left = listview.getMeasuredWidth();
-        swipeLimits.right = listview.getMeasuredWidth();
+        swipeLimits.threshold = listView.getMeasuredWidth();
+        swipeLimits.left = listView.getMeasuredWidth();
+        swipeLimits.right = listView.getMeasuredWidth();
     }
 
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
