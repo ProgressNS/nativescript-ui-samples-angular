@@ -64,7 +64,6 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
 
     public onAddItemClick(args: ListViewEventData) {
         var id = Math.round(Math.random() * 100);
-        console.log("onAddItemClick " + id);
         this._dataItems.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
     }
 
