@@ -284,7 +284,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Swipe to execute with sticky actions",
-                        "path": "",
+                        "path": "ListviewSwipeExecuteSticky",
                         "subItems": []
                     },
                     {
