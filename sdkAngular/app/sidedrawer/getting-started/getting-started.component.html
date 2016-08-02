@@ -1,27 +1,23 @@
 <!-- >> angular-sidedrawer-getting-started -->
 <RadSideDrawer #drawer>
-    <template drawerSide>
+    <StackLayout tkDrawerContent class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Navigation Menu"></Label>
+        </StackLayout>
         <StackLayout class="sideStackLayout">
-            <StackLayout class="sideTitleStackLayout">
-                <Label text="Navigation Menu"></Label>
-            </StackLayout>
-            <StackLayout class="sideStackLayout">
-                <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
-                <Label text="Social" class="sideLabel"></Label>
-                <Label text="Promotions" class="sideLabel"></Label>
-                <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
-                <Label text="Important" class="sideLabel"></Label>
-                <Label text="Starred" class="sideLabel"></Label>
-                <Label text="Sent Mail" class="sideLabel"></Label>
-                <Label text="Drafts" class="sideLabel"></Label>
-            </StackLayout>
+            <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Social" class="sideLabel"></Label>
+            <Label text="Promotions" class="sideLabel"></Label>
+            <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Important" class="sideLabel"></Label>
+            <Label text="Starred" class="sideLabel"></Label>
+            <Label text="Sent Mail" class="sideLabel"></Label>
+            <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
-    </template>
-    <template drawerMain>
-        <StackLayout>
-            <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-            <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-        </StackLayout>
-   </template>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+    </StackLayout>
 </RadSideDrawer>
 <!-- << angular-sidedrawer-getting-started -->

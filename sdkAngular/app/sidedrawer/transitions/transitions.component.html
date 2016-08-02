@@ -1,40 +1,36 @@
 <!-- >> angular-sidedrawer-transitions -->
 <RadSideDrawer #drawer [transition]="sideDrawerTransition">
     <!-- << angular-sidedrawer-transitions -->
-    <template drawerSide>
+    <StackLayout tkDrawerContent class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Navigation Menu"></Label>
+        </StackLayout>
         <StackLayout class="sideStackLayout">
-            <StackLayout class="sideTitleStackLayout">
-                <Label text="Navigation Menu"></Label>
+            <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Social" class="sideLabel"></Label>
+            <Label text="Promotions" class="sideLabel"></Label>
+            <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Important" class="sideLabel"></Label>
+            <Label text="Starred" class="sideLabel"></Label>
+            <Label text="Sent Mail" class="sideLabel"></Label>
+            <Label text="Drafts" class="sideLabel"></Label>
+        </StackLayout>
+    </StackLayout>
+    <ScrollView tkMainContent>
+        <StackLayout class="mainStackLayout">
+            <StackLayout orientation="horizontal">
+                <Label text="Current transition: " class="mainContentlabel"></Label>
+                <Label [text]="currentTransition" class="mainContentlabel"></Label>
             </StackLayout>
-            <StackLayout class="sideStackLayout">
-                <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
-                <Label text="Social" class="sideLabel"></Label>
-                <Label text="Promotions" class="sideLabel"></Label>
-                <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
-                <Label text="Important" class="sideLabel"></Label>
-                <Label text="Starred" class="sideLabel"></Label>
-                <Label text="Sent Mail" class="sideLabel"></Label>
-                <Label text="Drafts" class="sideLabel"></Label>
-            </StackLayout>
-       </StackLayout>
-    </template>
-    <template drawerMain>
-        <ScrollView>
-            <StackLayout class="mainStackLayout">
-                <StackLayout orientation="horizontal">
-                    <Label text="Current transition: " class="mainContentlabel"></Label>
-                    <Label [text]="currentTransition" class="mainContentlabel"></Label>
-                </StackLayout>
-                <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
-                <Button text="Fade Transition" (tap)="onFadeTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="Push Transition" (tap)="onPushTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" class="drawerContentButton"></Button>
-                <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" class="drawerContentButton"></Button>
-            </StackLayout>
-        </ScrollView>
-    </template>
+            <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
+            <Button text="Fade Transition" (tap)="onFadeTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="Push Transition" (tap)="onPushTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="ReverseSlideOut Transition" (tap)="onReverseSlideOutTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="ScaleDownPusher Transition" (tap)="onScaleDownPusherTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="ScaleUp Transition" (tap)="onScaleUpTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="SlideAlong Transition" (tap)="onSlideAlongTransitionTap()" class="drawerContentButton"></Button>
+            <Button text="SlideInOnTop Transition" (tap)="onSlideInOnTopTransitionTap()" class="drawerContentButton"></Button>
+        </StackLayout>
+    </ScrollView>
 </RadSideDrawer>
