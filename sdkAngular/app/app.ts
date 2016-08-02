@@ -17,7 +17,6 @@ import { ExampleItemService } from "./navigation/exampleItemService.service";
 import * as frescoModule from "nativescript-fresco";
 import * as applicationModule from "application";
 
-
 if (applicationModule.android) {
     applicationModule.onLaunch = function (intent) {
         frescoModule.initialize();
