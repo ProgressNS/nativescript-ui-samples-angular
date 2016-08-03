@@ -145,6 +145,7 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListviewSwipeExecuteSticky":
                 this._loader.loadNextToLocation(ListviewSwipeExecuteStickyComponent, this.exampleCompPlaceholder);
+                break;
             case "ListviewSwipeExecuteStretch":
                 this._loader.loadNextToLocation(ListviewSwipeExecuteStretchComponent, this.exampleCompPlaceholder);
                 break;
