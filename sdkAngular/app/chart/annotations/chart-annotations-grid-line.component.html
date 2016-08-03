@@ -1,4 +1,3 @@
-<!-- >> chart-angular-grid-line-annotations -->
 <RadCartesianChart>
     <LinearAxis cartesianHorizontalAxis minimum="0" maximum="80" id="hAxis"></LinearAxis>
     <LinearAxis cartesianVerticalAxis id="vAxis"></LinearAxis>
@@ -6,7 +5,7 @@
     <ScatterSeries cartesianSeries seriesName="SavingsSeries" [items]="scatterSource" xProperty="Age" yProperty="Savings"></ScatterSeries>
     <ScatterSeries cartesianSeries seriesName="SalarySeries" [items]="scatterSource" xProperty="Age" yProperty="Salary"></ScatterSeries>
     <ScatterSeries cartesianSeries seriesName="SpendingsSeries" [items]="scatterSource" xProperty="Age" yProperty="Spendings"></ScatterSeries>
-
+    <!-- >> chart-angular-grid-line-annotations -->
     <ChartGridLineAnnotation cartesianAnnotations axisId="hAxis" hidden="false" value="50" zPosition="AboveSeries" strokeWidth="1"
         strokeColor="#EB916580"></ChartGridLineAnnotation>
     <ChartGridLineAnnotation cartesianAnnotations axisId="vAxis" hidden="false" value="10000" zPosition="AboveSeries" strokeWidth="1"
@@ -15,5 +14,5 @@
         maxValue="70" fillColor="#A1FAC980" strokeColor="#A1FAC980"></ChartPlotBandAnnotation>
     <ChartPlotBandAnnotation cartesianAnnotations axisId="vAxis" hidden="false" value="20000" zPosition="AboveSeries" minValue="2500"
         maxValue="5000" fillColor="#AC74E880" strokeColor="#AC74E880"></ChartPlotBandAnnotation>
+    <!-- << chart-angular-grid-line-annotations -->
 </RadCartesianChart>
-<!-- << chart-angular-grid-line-annotations -->

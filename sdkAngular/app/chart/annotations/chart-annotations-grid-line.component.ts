@@ -1,4 +1,3 @@
-// >> chart-angular-grid-line-annotations-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data-services/data.service';
 import { Person } from '../data-services/person';
@@ -23,4 +22,3 @@ export class ChartAnnotationsGridLineComponent implements OnInit {
         this._scatterSource = new ObservableArray(this._dataService.getScatterSource());
     }
 }
-// << chart-angular-grid-line-annotations-component

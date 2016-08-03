@@ -1,11 +1,11 @@
-<!-- >> chart-angular-series-selection -->
 <RadCartesianChart>
     <LinearAxis cartesianVerticalAxis horizontalLocation="Right" allowPan="true"></LinearAxis>
     <CategoricalAxis cartesianHorizontalAxis allowPan="true" allowZoom="true"></CategoricalAxis>
 
-    <BarSeries cartesianSeries selectionMode="Series" seriesName="Bar" [items]="bubbleCategoricalSource" stackMode="Stack"
-        categoryProperty="Country" valueProperty="Impact"></BarSeries>
+    <BarSeries cartesianSeries selectionMode="Series" seriesName="Bar" [items]="bubbleCategoricalSource" stackMode="Stack" categoryProperty="Country"
+        valueProperty="Impact"></BarSeries>
+    <!-- >> chart-angular-series-selection -->
     <LineSeries cartesianSeries selectionMode="Series" showLabels="true" seriesName="Line" [items]="categoricalSource" stackMode="Stack"
         categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <!-- << chart-angular-series-selection -->Î
 </RadCartesianChart>
-<!-- << chart-angular-series-selection -->

@@ -1,4 +1,3 @@
-// >> chart-angular-series-selection-component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data-services/data.service';
 import { Country } from '../data-services/country';
@@ -30,4 +29,3 @@ export class ChartBehaviorsSeriesSelectionComponent implements OnInit {
         return this._bubbleCategoricalSource;
     }
 }
-// << chart-angular-series-selection-component

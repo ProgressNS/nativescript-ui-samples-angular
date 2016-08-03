@@ -1,10 +1,10 @@
-<!-- >> chart-angular-plot-band-annotations -->
 <RadCartesianChart id="cartesianChart">
     <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
     <LinearAxis cartesianVerticalAxis id="verBarAxis"></LinearAxis>
 
     <BarSeries cartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+    <!-- >> chart-angular-plot-band-annotations -->
     <ChartPlotBandAnnotation cartesianAnnotations axisId="verBarAxis" minValue="2" maxValue="4" zPosition="AboveSeries" strokeWidth="2"
         fillColor="#DDFFFF00" strokeColor="Red" strokeDashPattern="3,3,5,5"></ChartPlotBandAnnotation>
+    <!-- << chart-angular-plot-band-annotations -->
 </RadCartesianChart>
-<!-- << chart-angular-plot-band-annotations -->
