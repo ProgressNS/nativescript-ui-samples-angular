@@ -1,6 +1,6 @@
-<GridLayout rows="auto, *">
+<GridLayout>
     <!-- >> angular-listview-item-swipe -->
-    <RadListView row="1" id="listView" [items]="dataItems" itemSwipe="true" selectionBehavior="None" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+    <RadListView id="listView" [items]="dataItems" itemSwipe="true" selectionBehavior="None" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
         (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"  (itemTap)="onItemClick($event)">
         <template listItemTemplate let-item="item">
             <StackLayout class="listItemStackLayout" orientation="vertical">

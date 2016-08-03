@@ -1,5 +1,5 @@
-<GridLayout orientation="vertical" rows="auto, *">
-    <RadListView id="listView" [items]="dataItems" row="1" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+<GridLayout orientation="vertical">
+    <RadListView id="listView" [items]="dataItems" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
         (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressStarted)="onSwipeCellStarted($event)" itemSwipe="true">
         <template listItemTemplate let-item="item">
             <StackLayout orientation="vertical" class="listItemStackLayout">
