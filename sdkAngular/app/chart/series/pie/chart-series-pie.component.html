@@ -1,17 +1,17 @@
 <!-- >> chart-angular-pie-series -->
 <GridLayout orientation="vertical" rows="*, *">
     <RadPieChart height="300" allowAnimation="true" row="0">
-        <PieSeries pieSeries selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource" valueProperty="Amount"
+        <PieSeries tkPieSeries selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource" valueProperty="Amount"
             legendLabel="Brand"></PieSeries>
 
-        <RadLegendView pieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
+        <RadLegendView tkPieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
     </RadPieChart>
 
     <RadPieChart height="300" allowAnimation="true" row="1">
-        <DonutSeries pieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
+        <DonutSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
             [items]="pieSource" valueProperty="Amount" legendLabel="Brand"></DonutSeries>
 
-        <RadLegendView pieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
+        <RadLegendView tkPieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
     </RadPieChart>
 </GridLayout>
 <!-- << chart-angular-pie-series -->

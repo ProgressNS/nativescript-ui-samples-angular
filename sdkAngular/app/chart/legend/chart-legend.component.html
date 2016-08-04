@@ -1,12 +1,12 @@
 <!-- >> chart-legend-example -->
 <RadCartesianChart>
-    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
-    <LinearAxis cartesianVerticalAxis maximum="50"></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis maximum="50"></LinearAxis>
 
-    <BarSeries cartesianSeries legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
-    <LineSeries cartesianSeries legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
-    <AreaSeries cartesianSeries legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
+    <BarSeries tkCartesianSeries legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
+    <LineSeries tkCartesianSeries legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
+    <AreaSeries tkCartesianSeries legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
 
-    <RadLegendView cartesianLegend position="Top" height="150"></RadLegendView>
+    <RadLegendView tkCartesianLegend position="Top" height="150"></RadLegendView>
 </RadCartesianChart>
 <!-- << chart-legend-example -->

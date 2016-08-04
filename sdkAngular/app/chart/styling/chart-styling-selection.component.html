@@ -1,41 +1,41 @@
 <!-- >> chart-angular-selection-styling -->
 <RadCartesianChart seriesSelectionMode="Multiple">
-    <CategoricalAxis cartesianHorizontalAxis lineColor="Red" lineThickness="1"></CategoricalAxis>
-    <LinearAxis cartesianVerticalAxis lineColor="Blue" lineThickness="1"></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis lineColor="Red" lineThickness="1"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis lineColor="Blue" lineThickness="1"></LinearAxis>
 
-    <LineSeries cartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource" valueProperty="Amount"
+    <LineSeries tkCartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource" valueProperty="Amount"
         selectionMode="Series"></LineSeries>
-    <BarSeries cartesianSeries seriesName="myBar" categoryProperty="Country" [items]="categoricalSource" valueProperty="Amount"
+    <BarSeries tkCartesianSeries seriesName="myBar" categoryProperty="Country" [items]="categoricalSource" valueProperty="Amount"
         selectionMode="DataPoint"></BarSeries>
-    <LineSeries cartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource2" valueProperty="Amount"
+    <LineSeries tkCartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource2" valueProperty="Amount"
         selectionMode="Series"></LineSeries>
-    <BarSeries cartesianSeries seriesName="myBar" categoryProperty="Country" [items]="categoricalSource2" valueProperty="Amount"
+    <BarSeries tkCartesianSeries seriesName="myBar" categoryProperty="Country" [items]="categoricalSource2" valueProperty="Amount"
         selectionMode="DataPointMultiple"></BarSeries>
-    <LineSeries cartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource3" valueProperty="Amount"
+    <LineSeries tkCartesianSeries seriesName="myLine" categoryProperty="Country" [items]="categoricalSource3" valueProperty="Amount"
         selectionMode="Series"></LineSeries>
 
-    <Palette cartesianPalette seriesName="myLine">
-        <PaletteEntry cartesianPaletteEntry strokeWidth="5" strokeColor="Orange" fillColor="Yellow"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="5" strokeColor="Blue"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="5" strokeColor="Pink"></PaletteEntry>
+    <Palette tkCartesianPalette seriesName="myLine">
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="Orange" fillColor="Yellow"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="Blue"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="Pink"></PaletteEntry>
     </Palette>
-    <Palette cartesianPalette seriesName="myLine" seriesState="Selected">
-        <PaletteEntry cartesianPaletteEntry strokeWidth="10" strokeColor="Yellow"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="10" strokeColor="Red"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="10" strokeColor="Green"></PaletteEntry>
+    <Palette tkCartesianPalette seriesName="myLine" seriesState="Selected">
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="10" strokeColor="Yellow"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="10" strokeColor="Red"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="10" strokeColor="Green"></PaletteEntry>
     </Palette>
     <!-- >> chart-angular-styling-series-selection -->
-    <Palette cartesianPalette seriesName="myBar">
-        <PaletteEntry cartesianPaletteEntry strokeWidth="3" strokeColor="Orange" fillColor="Yellow"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="3" strokeColor="Pink" fillColor="Green"></PaletteEntry>
+    <Palette tkCartesianPalette seriesName="myBar">
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="3" strokeColor="Orange" fillColor="Yellow"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="3" strokeColor="Pink" fillColor="Green"></PaletteEntry>
     </Palette>
-    <Palette cartesianPalette seriesName="myBar" seriesState="Selected">
-        <PaletteEntry cartesianPaletteEntry strokeWidth="5" strokeColor="Yellow" fillColor="Orange"></PaletteEntry>
-        <PaletteEntry cartesianPaletteEntry strokeWidth="5" strokeColor="Green" fillColor="Pink"></PaletteEntry>
+    <Palette tkCartesianPalette seriesName="myBar" seriesState="Selected">
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="Yellow" fillColor="Orange"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="Green" fillColor="Pink"></PaletteEntry>
     </Palette>
     <!-- << chart-angular-styling-series-selection -->
 
-    <RadCartesianChartGrid cartesianGrid horizontalLinesVisible="true" verticalLinesVisible="false" verticalStripLinesVisible="false"
+    <RadCartesianChartGrid tkCartesianGrid horizontalLinesVisible="true" verticalLinesVisible="false" verticalStripLinesVisible="false"
         horizontalStrokeColor="#e5e5e5" horizontalStripLinesVisible="true" horizontalStripLineColor="#f8f8f8, #00000000"></RadCartesianChartGrid>
 </RadCartesianChart>
 

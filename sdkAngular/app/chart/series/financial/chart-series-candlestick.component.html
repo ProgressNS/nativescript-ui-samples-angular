@@ -1,9 +1,9 @@
 <!-- >> chart-angular-candlestick-series -->
 <RadCartesianChart>
-  <DateTimeCategoricalAxis cartesianHorizontalAxis dateFormat="yyyy-MM-dd" verticalLocation="Bottom"></DateTimeCategoricalAxis>
-  <LinearAxis cartesianVerticalAxis></LinearAxis>
+  <DateTimeCategoricalAxis tkCartesianHorizontalAxis dateFormat="yyyy-MM-dd" verticalLocation="Bottom"></DateTimeCategoricalAxis>
+  <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-  <CandlestickSeries cartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low"
+  <CandlestickSeries tkCartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low"
     closePropertyName="Close" [items]="candleStickSourceItems"></CandlestickSeries>
 </RadCartesianChart>
 <!-- << chart-angular-candlestick-series -->

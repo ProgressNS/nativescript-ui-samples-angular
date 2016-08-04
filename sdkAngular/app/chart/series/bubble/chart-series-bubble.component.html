@@ -1,10 +1,10 @@
 <!-- >> chart-angular-bubble-series -->
 <RadCartesianChart id="bubbleChart">
-    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"></CategoricalAxis>
-    <LinearAxis cartesianVerticalAxis></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-    <BubbleSeries cartesianSeries [items]="highDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
-    <BubbleSeries cartesianSeries [items]="middleDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
-    <BubbleSeries cartesianSeries [items]="lowDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
+    <BubbleSeries tkCartesianSeries [items]="highDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
+    <BubbleSeries tkCartesianSeries [items]="middleDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
+    <BubbleSeries tkCartesianSeries [items]="lowDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
 </RadCartesianChart>
 <!-- << chart-angular-bubble-series -->
