@@ -1,6 +1,6 @@
 <GridLayout>
     <RadListView [items]="dataItems">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <GridLayout class="listItemTemplateGrid">
                 <FrescoDrawee height="250" [imageUri]="item.image"></FrescoDrawee>
                 <GridLayout verticalAlignment="bottom">
@@ -12,6 +12,6 @@
             </GridLayout>
         </template>
 
-        <ListViewLinearLayout radListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>

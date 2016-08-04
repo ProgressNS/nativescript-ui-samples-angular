@@ -1,6 +1,6 @@
 <GridLayout>
     <RadListView id="optionsListView" selectionBehavior="Press" [items]="dataItems" (itemTap)="onItemTap($event)">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <StackLayout>
                 <Label class="titleLabel" [text]="item" textWrap="true"></Label>
             </StackLayout>

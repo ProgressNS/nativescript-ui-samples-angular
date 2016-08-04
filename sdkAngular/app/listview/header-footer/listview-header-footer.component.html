@@ -1,18 +1,18 @@
 <GridLayout>
     <!-- >> angular-listview-header-footer -->
     <RadListView [items]="dataItems">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical">
                 <Label class="nameLabel" [text]="item.name"></Label>
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </template>
-        <template listViewHeader>
+        <template tkListViewHeader>
             <GridLayout backgroundColor="#65a565">
                 <Label text="This is the list header"></Label>
             </GridLayout>
         </template>
-        <template listViewFooter>
+        <template tkListViewFooter>
             <GridLayout backgroundColor="#7fff7f">
                 <Label text="This is the list footer"></Label>
             </GridLayout>

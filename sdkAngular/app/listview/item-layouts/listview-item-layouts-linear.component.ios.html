@@ -1,6 +1,6 @@
 <GridLayout>
     <RadListView [items]="dataItems">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <GridLayout class="listItemTemplateGrid">
                 <Image [src]="item.image" stretch="aspectFill"></Image>
                 <GridLayout verticalAlignment="bottom">
@@ -13,7 +13,7 @@
         </template>
         
         <!-- >> angular-listview-item-layouts-linear -->
-        <ListViewLinearLayout radListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
         <!-- << angular-listview-item-layouts-linear -->
     </RadListView>
 </GridLayout>

@@ -1,14 +1,14 @@
 <GridLayout orientation="vertical">
     <RadListView id="listView" [items]="dataItems" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
         (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressStarted)="onSwipeCellStarted($event)" itemSwipe="true">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical" class="listItemStackLayout">
                 <Label class="labelName" [text]="item.name"></Label>
                 <Label class="labelTitle" [text]="item.title"></Label>
                 <Label class="labelText" [text]="item.text"></Label>
             </StackLayout>
         </template>
-        <GridLayout *listItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
+        <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
             <StackLayout id="mark-view" class="markViewStackLayout" col="0" (tap)="onLeftSwipeClick($event)">
                 <Label text="mark" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
