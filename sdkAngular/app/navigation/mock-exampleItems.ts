@@ -297,6 +297,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "ListviewSwipeExecuteStretch",
                         "subItems": []
                     },
+                    {
+                        "title": "Item separators",
+                        "path": "ListviewItemSeparator",
+                        "subItems": []
+                    }
                 ]
             },
             {

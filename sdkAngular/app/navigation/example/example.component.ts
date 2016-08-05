@@ -25,6 +25,7 @@ import { ListviewItemSelectionProgrammaticComponent } from "../../listview/item-
 import { ListviewObservableArrayComponent } from "../../listview/observable-array/listview-observable-array.component";
 import { ListviewSwipeExecuteStickyComponent } from "../../listview/swipe-execute/listview-swipe-execute-sticky.component";
 import { ListviewSwipeExecuteStretchComponent } from "../../listview/swipe-execute/listview-swipe-execute-stretch.component";
+import { ListviewItemSeparatorComponent } from "../../listview/item-separator/listview-item-separator.component";
 import { SideDrawerGettingStartedComponent } from "../../sidedrawer/getting-started/getting-started.component";
 import { SideDrawerEventsComponent } from "../../sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "../../sidedrawer/position/position.component";
@@ -152,6 +153,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListviewSwipeExecuteStretch":
                 this._loader.loadNextToLocation(ListviewSwipeExecuteStretchComponent, this.exampleCompPlaceholder);
+                break;
+            case "ListviewItemSeparator":
+                this._loader.loadNextToLocation(ListviewItemSeparatorComponent, this.exampleCompPlaceholder);
                 break;
             case "SideDrawerGettingStarted":
                 this._loader.loadNextToLocation(SideDrawerGettingStartedComponent, this.exampleCompPlaceholder);
