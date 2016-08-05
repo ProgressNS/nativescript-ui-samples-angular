@@ -10,6 +10,7 @@ import { ListViewGettingStartedComponent } from "../../listview/getting-started/
 import { ListViewHeaderFooterComponent } from "../../listview/header-footer/listview-header-footer.component";
 import { ListViewItemReorderComponent } from "../../listview/item-reorder/listview-item-reorder.component";
 import { ListViewItemSelectionComponent } from "../../listview/item-selection/listview-item-selection.component";
+import { ListviewSelectionStatesComponent } from "../../listview/selection-states/listview-selection-states.component";
 import { ListViewSwipeExecuteComponent } from "../../listview/swipe-execute/listview-swipe-execute.component";
 import { ListViewLoadOnDemandComponent } from "../../listview/load-on-demand/listview-load-on-demand.component";
 import { ListViewPullToRefreshComponent } from "../../listview/pull-to-refresh/listview-pull-to-refresh.component";
@@ -142,6 +143,9 @@ export class ExampleComponent implements OnInit {
                 break;
             case "ListviewItemSelectionProgrammatic":
                 this._loader.loadNextToLocation(ListviewItemSelectionProgrammaticComponent, this.exampleCompPlaceholder);
+                break;
+            case "ListviewSelectionStates":
+                this._loader.loadNextToLocation(ListviewSelectionStatesComponent, this.exampleCompPlaceholder);
                 break;
             case "ListviewSwipeExecuteSticky":
                 this._loader.loadNextToLocation(ListviewSwipeExecuteStickyComponent, this.exampleCompPlaceholder);

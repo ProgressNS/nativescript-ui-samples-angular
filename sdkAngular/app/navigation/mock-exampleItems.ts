@@ -258,6 +258,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Selection states",
+                        "path": "ListviewSelectionStates",
+                        "subItems": []
+                    },
+                    {
                         "title": "Load on Demand",
                         "path": "ListViewLoadOnDemand",
                         "subItems": []
