@@ -1,3 +1,4 @@
+// >> angular-listview-item-layouts-staggered-component
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
@@ -10,7 +11,6 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-layouts-staggered.component.html",
     styleUrls: ["listview-item-layouts-staggered.component.css"]
 })
-// >> angular-listview-item-layouts-staggered.component
 export class ListviewItemLayoutsStaggeredComponent implements OnInit {
     private _staggeredItems: ObservableArray<DataItem>;
 
@@ -26,4 +26,4 @@ export class ListviewItemLayoutsStaggeredComponent implements OnInit {
         return this._staggeredItems;
     }
 }
-// << angular-listview-item-layouts-staggered.component
+// << angular-listview-item-layouts-staggered-component

@@ -1,3 +1,4 @@
+// >> angular-listview-observable-array-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -11,7 +12,6 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
     templateUrl: "listview-observable-array.component.html",
     styleUrls: ["listview-observable-array.component.css"]
 })
-// >> angular-listview-observable-array.component
 export class ListviewObservableArrayComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -49,4 +49,4 @@ export class ListviewObservableArrayComponent implements OnInit {
         this._dataItems.splice(this._dataItems.length - 1, 1);
     }
 }
-// << angular-listview-observable-array.component
+// << angular-listview-observable-array-component

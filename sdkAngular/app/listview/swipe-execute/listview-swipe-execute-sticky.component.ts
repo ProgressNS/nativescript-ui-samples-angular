@@ -1,3 +1,4 @@
+// >> angular-listview-swipe-execute-sticky-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -13,7 +14,6 @@ import * as utilsModule from "utils/utils";
     templateUrl: "listview-swipe-execute-sticky.component.html",
     styleUrls: ["listview-swipe-execute-sticky.component.css"]
 })
-// >> angular-listview-swipe-execute-sticky.component
 export class ListviewSwipeExecuteStickyComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
@@ -61,4 +61,4 @@ export class ListviewSwipeExecuteStickyComponent implements OnInit {
         listView.notifySwipeToExecuteFinished();
     }
 }
-// << angular-listview-swipe-execute-sticky.component
+// << angular-listview-swipe-execute-sticky-component

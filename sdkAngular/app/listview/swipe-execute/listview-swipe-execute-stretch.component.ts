@@ -1,3 +1,4 @@
+// >> angular-listview-swipe-execute-stretch-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -14,7 +15,6 @@ import * as utilsModule from "utils/utils";
     templateUrl: "listview-swipe-execute-stretch.component.html",
     styleUrls: ["listview-swipe-execute-stretch.component.css"]
 })
-// >> angular-listview-swipe-execute-stretch.component
 export class ListviewSwipeExecuteStretchComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
@@ -103,4 +103,4 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
         }
     }
 }
-// << angular-listview-swipe-execute-stretch.component
+// << angular-listview-swipe-execute-stretch-component

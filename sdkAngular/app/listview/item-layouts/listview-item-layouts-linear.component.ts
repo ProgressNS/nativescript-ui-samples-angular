@@ -1,3 +1,4 @@
+// >> angular-listview-item-layouts-linear-component
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
@@ -13,7 +14,6 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-layouts-linear.component.html",
     styleUrls: ["listview-item-layouts-linear.component.css"]
 })
-// >> angular-listview-item-layouts-linear.component
 export class ListviewItemLayoutsLinearComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _layout: listViewModule.ListViewLinearLayout;
@@ -30,4 +30,4 @@ export class ListviewItemLayoutsLinearComponent implements OnInit {
         return this._dataItems;
     }
 }
-// << angular-listview-item-layouts-linear.component
+// << angular-listview-item-layouts-linear-component

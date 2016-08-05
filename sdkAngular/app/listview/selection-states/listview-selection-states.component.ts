@@ -1,4 +1,4 @@
-// >> angular-listview-selection-states.component
+// >> angular-listview-selection-states-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -38,4 +38,4 @@ export class ListviewSelectionStatesComponent implements OnInit {
     }
     // << angular-listview-howto-item-selection-events
 }
-// << angular-listview-selection-states.component
+// << angular-listview-selection-states-component

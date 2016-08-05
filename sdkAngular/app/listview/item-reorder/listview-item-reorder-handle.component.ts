@@ -1,3 +1,4 @@
+// >> angular-listview-item-reorder-handle-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -11,7 +12,6 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
     templateUrl: "listview-item-reorder-handle.component.html",
     styleUrls: ["listview-item-reorder-handle.component.css"]
 })
-// >> angular-listview-item-reorder-handle.component
 export class ListviewItemReorderHandleComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -30,4 +30,4 @@ export class ListviewItemReorderHandleComponent implements OnInit {
         console.log("Item reordered. Old index: " + args.itemIndex + " " + "new index: " + args.data.targetIndex);
     }
 }
-// << angular-listview-item-reorder-handle.component
+// << angular-listview-item-reorder-handle-component

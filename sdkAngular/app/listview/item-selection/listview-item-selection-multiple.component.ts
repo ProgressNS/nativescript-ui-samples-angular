@@ -1,3 +1,4 @@
+// >> angular-listview-item-selection-multiple-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
@@ -10,7 +11,6 @@ import {DataItemService} from "../dataItem.service";
     templateUrl: "listview-item-selection-multiple.component.html",
     styleUrls: ["listview-item-selection-multiple.component.css"]
 })
-// >> angular-listview-item-selection-multiple.component
 export class ListviewItemSelectionMultipleComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -25,4 +25,4 @@ export class ListviewItemSelectionMultipleComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getNameEmailDataItems());
     }
 }
-// << angular-listview-item-selection-multiple.component
+// << angular-listview-item-selection-multiple-component

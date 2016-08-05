@@ -26,7 +26,7 @@ export class ListviewItemLoadingComponent implements OnInit {
         return this._dataItems;
     }
     
-    // >> angular-listview-item-loading.component
+    // >> angular-listview-item-loading-component
     public onItemLoading(args) {
         if (args.itemIndex % 2 == 0) {
             args.view.backgroundColor = "#b3ecff";
@@ -39,5 +39,5 @@ export class ListviewItemLoadingComponent implements OnInit {
             args.view._subViews[1].fontSize = "14";
         }
     }
-    // << angular-listview-item-loading.component
+    // << angular-listview-item-loading-component
 }

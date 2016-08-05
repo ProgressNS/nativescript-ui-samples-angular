@@ -1,3 +1,4 @@
+// >> angular-listview-item-selection-programmatic-component
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
@@ -12,7 +13,6 @@ import listViewAnularModule = require("nativescript-telerik-ui-pro/listview/angu
     templateUrl: "listview-item-selection-programmatic.component.html",
     styleUrls: ["listview-item-selection-programmatic.component.css"]
 })
-// >> angular-listview-item-selection-programmatic.component
 export class ListviewItemSelectionProgrammaticComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _txtDeselectItemIndex: string;
@@ -63,4 +63,4 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
         this.listView.listView.deselectAll();
     }
 }
-// << angular-listview-item-selection-programmatic.component
+// << angular-listview-item-selection-programmatic-component

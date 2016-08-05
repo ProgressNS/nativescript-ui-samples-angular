@@ -1,8 +1,8 @@
 <GridLayout orientation="vertical">
-    <!-- >> angular-listview-swipe-execute-sticky.component -->
+    <!-- >> angular-listview-swipe-execute-sticky-component -->
     <RadListView id="listView" [items]="dataItems" selectionBehavior="None" (itemTap)="onItemClick($event)" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
         itemSwipe="true">
-        <!-- << angular-listview-swipe-execute-sticky.component -->
+        <!-- << angular-listview-swipe-execute-sticky-component -->
         <template tkListItemTemplate let-item="item">
             <StackLayout class="listItemStackLayout" orientation="vertical">
                 <Label class="labelName" [text]="item.name"></Label>
