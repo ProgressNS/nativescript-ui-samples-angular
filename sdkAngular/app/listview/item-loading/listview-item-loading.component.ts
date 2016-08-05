@@ -10,7 +10,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-loading.component.html",
     styleUrls: ["listview-item-loading.component.css"]
 })
-// >> angular-listview-item-loading.component
+
 export class ListviewItemLoadingComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
@@ -25,18 +25,19 @@ export class ListviewItemLoadingComponent implements OnInit {
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
-
+    
+    // >> angular-listview-item-loading.component
     public onItemLoading(args) {
-    if (args.itemIndex % 2 == 0){
-        args.view.backgroundColor="#b3ecff";
-        args.view._subViews[0].fontSize="24";
-        args.view._subViews[1].fontSize="18";   
+        if (args.itemIndex % 2 == 0) {
+            args.view.backgroundColor = "#b3ecff";
+            args.view._subViews[0].fontSize = "24";
+            args.view._subViews[1].fontSize = "18";
+        }
+        else {
+            args.view.backgroundColor = "#ccf2ff";
+            args.view._subViews[0].fontSize = "20";
+            args.view._subViews[1].fontSize = "14";
+        }
     }
-    else {
-        args.view.backgroundColor="#ccf2ff";
-        args.view._subViews[0].fontSize="20";
-        args.view._subViews[1].fontSize="14";
-    }
+    // << angular-listview-item-loading.component
 }
-}
-// << angular-listview-item-loading.component
