@@ -210,7 +210,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "Examples",
                         "subItems": [
                             {
-                                "title": "Liner",
+                                "title": "Linear",
                                 "path": "ListviewItemLayoutsLinear",
                                 "subItems": []
                             },
