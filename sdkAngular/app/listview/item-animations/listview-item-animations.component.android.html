@@ -14,9 +14,9 @@
             <Button text="Reset" (tap)="onResetClick()"></Button>
         </StackLayout>
     </StackLayout>
-    <!-- >> angular-listview-item-animations-html -->
     <RadListView [items]="dataItems" row="1">
         <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" [itemInsertAnimation]="itemInsertAnimation" [itemDeleteAnimation]="itemDeleteAnimation"></ListViewLinearLayout>
+        
         <template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical">
                 <Label class="nameLabel" [text]="item.name"></Label>
@@ -24,5 +24,4 @@
             </StackLayout>
         </template>
     </RadListView>
-    <!-- << angular-listview-item-animations-html -->
 </GridLayout>
