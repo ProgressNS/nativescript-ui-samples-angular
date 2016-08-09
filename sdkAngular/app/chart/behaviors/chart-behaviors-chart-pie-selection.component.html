@@ -2,10 +2,10 @@
 <RadPieChart>
     <!-- >> angular-datapoint-selection -->
     <PieSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="0.2" showLabels="true" [items]="sourceItems"
-         valueProperty="Sales" legendLabel="My pie data">
+         valueProperty="Sales">
         <PointLabelStyle tkPieLabelStyle margin="15"></PointLabelStyle>
     </PieSeries>
     <!-- << angular-datapoint-selection -->
-    <RadLegendView tkPieLegend position="Top"></RadLegendView>
+    <RadLegendView tkPieLegend position="Top" title="My pie data"></RadLegendView>
 </RadPieChart>
 <!-- << chart-angular-behaviors-chart-pie-selection -->
