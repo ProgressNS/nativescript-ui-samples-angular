@@ -4,7 +4,6 @@
     <RadListView [items]="dataItems" row="1" multipleSelection="true" selectionBehavior="Press" (itemSelected)="itemSelected($event)"
         (itemDeselected)="itemDeselected($event)">
         <!-- << angular-listview-howto-item-selection-events-html -->
-        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
         
         <!-- >> angular-listview-howto-item-selection-template-html-->
         <template tkListItemTemplate let-item="item">
@@ -14,5 +13,6 @@
             </StackLayout>
         </template>
         <!-- << angular-listview-howto-item-selection-template-html-->
+        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>
