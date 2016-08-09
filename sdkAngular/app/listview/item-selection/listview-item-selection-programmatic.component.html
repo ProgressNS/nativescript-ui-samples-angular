@@ -16,12 +16,12 @@
         </StackLayout>
     </GridLayout>
     <RadListView #myRadListView [items]="dataItems" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
-        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
         <template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical" class="listItemStackLayout">
                 <Label class="nameLabel" [text]="item.name"></Label>
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </template>
+        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>
