@@ -4,6 +4,7 @@ import {CalendarEvent} from 'nativescript-telerik-ui-pro/calendar'
 import { Color } from "color";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
+// >> calendar-styling-service
 @Injectable()
 export class CalendarStylesService {
     getMonthViewStyle(): calendarModule.CalendarMonthViewStyle {
@@ -268,4 +269,5 @@ export class CalendarStylesService {
         
         return monthNamesViewStyle;
     }
+    // << calendar-styling-service
 }
