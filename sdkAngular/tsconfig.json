@@ -13,11 +13,9 @@
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
         "experimentalDecorators": true
-    },
+    }, 
     "filesGlob": [
-        "./**/*.ts",
-        "!./tns_modules/**/*.ts",
-        "./../node_modules/tns-core-modules/**/*.ts"
+        "./**/*.ts"
     ],
     "exclude": [
         "node_modules",
