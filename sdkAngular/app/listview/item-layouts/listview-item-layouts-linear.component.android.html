@@ -1,0 +1,19 @@
+<GridLayout>
+    <RadListView [items]="dataItems">
+        <template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <FrescoDrawee height="250" [imageUri]="item.image"></FrescoDrawee>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </template>
+        
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+</GridLayout>

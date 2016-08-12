@@ -1,0 +1,23 @@
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.headerGridLayout {
+    background-color: #65a565;
+}
+
+.footerGridLayout {
+    background-color: #7fff7f;
+}
+
+.iosButton {
+    margin: 10
+}
+
+.buttonStackLayout {
+    background-color: #f8f8f8;
+}

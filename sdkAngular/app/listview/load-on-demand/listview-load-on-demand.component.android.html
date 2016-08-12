@@ -1,6 +1,6 @@
 <GridLayout>
     <RadListView [items]="dataItems" loadOnDemandMode="Manual" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
                 <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
                     <FrescoDrawee height="100" width="80" [imageUri]="item.image"></FrescoDrawee>

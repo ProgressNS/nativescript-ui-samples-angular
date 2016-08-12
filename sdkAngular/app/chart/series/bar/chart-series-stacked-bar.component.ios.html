@@ -3,10 +3,10 @@
     <ActionItem text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
 </ActionBar>
 <RadCartesianChart>
-    <CategoricalAxis cartesianHorizontalAxis verticalLocation="Bottom" labelSize="11"></CategoricalAxis>
-    <LinearAxis cartesianVerticalAxis horizontalLocation="Left" labelSize="11"></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelSize="11"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Left" labelSize="11"></LinearAxis>
 
-    <BarSeries cartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
-    <BarSeries cartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
-    <BarSeries cartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="categoricalSource" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></BarSeries>
 </RadCartesianChart>

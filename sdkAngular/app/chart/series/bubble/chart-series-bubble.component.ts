@@ -1,7 +1,7 @@
 // >>  chart-angular-bubble-series-component
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Country } from '../country';
+import { DataService } from '../../data-services/data.service';
+import { Country } from '../../data-services/country';
 import { ObservableArray } from "data/observable-array";
 
 @Component({
@@ -15,9 +15,7 @@ export class ChartSeriesBubbleComponent implements OnInit {
     private _middleDataModel: ObservableArray<Country>;
     private _lowDataModel: ObservableArray<Country>;
 
-    constructor(private _dataService: DataService) {
-
-    }
+    constructor(private _dataService: DataService) { }
 
     get highDataModel(): ObservableArray<Country> {
         return this._highDataModel;

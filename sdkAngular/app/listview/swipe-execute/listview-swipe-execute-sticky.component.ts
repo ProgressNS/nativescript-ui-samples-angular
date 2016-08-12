@@ -1,20 +1,20 @@
+// >> angular-listview-swipe-execute-sticky-component
 import {Component, OnInit} from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {DataItem} from "../dataItem";
 import {DataItemService} from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import * as listViewModule from "nativescript-telerik-ui-pro/listview";
 import * as FrameModule from "ui/frame";
-var posts = require("../../listview/posts.json")
+import * as utilsModule from "utils/utils";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-swipe",
+    selector: "listview-swipe-execute-sticky",
     providers: [DataItemService],
-    templateUrl: "listview-item-swipe.component.html",
-    styleUrls: ["listview-item-swipe.component.css"]
+    templateUrl: "listview-swipe-execute-sticky.component.html",
+    styleUrls: ["listview-swipe-execute-sticky.component.css"]
 })
-// >> angular-listview-item-swipe-component
-export class ListViewItemSwipeComponent implements OnInit {
+export class ListviewSwipeExecuteStickyComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _selectedItems: string;
 
@@ -29,25 +29,12 @@ export class ListViewItemSwipeComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    public onCellSwiping(args: listViewModule.ListViewEventData) {
-        var swipeLimits = args.data.swipeLimits;
-        var currentItemView = args.object;
-        var currentView;
-
-        if (args.data.x > 200) {
-            console.log("Notify perform left action");
-        } else if (args.data.x < -200) {
-            console.log("Notify perform right action");
-        }
-    }
-
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listview = FrameModule.topmost().currentPage.getViewById("listView");
 
-        swipeLimits.threshold = listview.getMeasuredWidth();
-        swipeLimits.left = listview.getMeasuredWidth();
-        swipeLimits.right = listview.getMeasuredWidth();
+        swipeLimits.threshold = 60 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.left = 80 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.right = 80 * utilsModule.layout.getDisplayDensity();
     }
 
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
@@ -65,11 +52,13 @@ export class ListViewItemSwipeComponent implements OnInit {
     }
 
     public onLeftSwipeClick(args) {
-        console.log("Left swipe click");
+        var listView = <listViewModule.RadListView>FrameModule.topmost().currentPage.getViewById("listView");
+        listView.notifySwipeToExecuteFinished();
     }
 
     public onRightSwipeClick(args) {
-        console.log("Right swipe click");
+        var listView = <listViewModule.RadListView>FrameModule.topmost().currentPage.getViewById("listView");
+        listView.notifySwipeToExecuteFinished();
     }
 }
-// << angular-listview-item-swipe-component
+// << angular-listview-swipe-execute-sticky-component

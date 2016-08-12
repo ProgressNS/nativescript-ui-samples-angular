@@ -79,6 +79,110 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Styling",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Styling axes",
+                                "path": "ChartStylingAxes",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series",
+                                "path": "ChartStylingSeries",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling grid",
+                                "path": "ChartStylingGrid",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling labels",
+                                "path": "ChartStylingLabel",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Styling series selection",
+                                "path": "ChartStylingSelection",
+                                "subItems": []
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Legend",
+                        "path": "ChartLegend",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Interaction",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Pan & Zoom",
+                                "path": "ChartBehaviorsPanZoom",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Pie selection",
+                                "path": "ChartBehaviorsChartPieSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Series selection",
+                                "path": "ChartBehaviorsSeriesSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Datapoint selection",
+                                "path": "ChartBehaviorsDatapointSelection",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Axes",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Customization",
+                                "path": "ChartAxesCustomization",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple axes",
+                                "path": "ChartAxesMultiple",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Negative values",
+                                "path": "ChartAxesNegativeValues",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Date time axis",
+                                "path": "ChartAxesDateTime",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Annotations",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Plot band",
+                                "path": "ChartAnnotationsPlotBand",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid line",
+                                "path": "ChartAnnotationsGridLine",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             },
@@ -92,9 +196,30 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Header Footer",
-                        "path": "ListViewHeaderFooter",
+                        "title": "Item Loading",
+                        "path": "ListviewItemLoading",
                         "subItems": []
+                    },
+                    {
+                        "title": "Item Layouts",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Linear",
+                                "path": "ListviewItemLayoutsLinear",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid",
+                                "path": "ListViewItemLayoutsGrid",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Staggered",
+                                "path": "ListviewItemLayoutsStaggered",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Item Reorder",
@@ -102,13 +227,34 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Item Selection",
-                        "path": "ListViewItemSelection",
+                        "title": "Item Reorder with handle",
+                        "path": "ListviewItemReorderHandle",
                         "subItems": []
                     },
                     {
-                        "title": "Item Swipe",
-                        "path": "ListViewItemSwipe",
+                        "title": "Selection",
+                        "path": "Examples",
+                        "subItems": [
+                            {
+                                "title": "Single Selection",
+                                "path": "ListViewItemSelection",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple Selection",
+                                "path": "ListviewItemSelectionMultiple",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Programatic Selection",
+                                "path": "ListviewItemSelectionProgrammatic",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Selection states",
+                        "path": "ListviewSelectionStates",
                         "subItems": []
                     },
                     {
@@ -119,6 +265,31 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Pull to Refresh",
                         "path": "ListViewPullToRefresh",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Swipe to Execute",
+                        "path": "ListViewSwipeExecute",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Header and Footer",
+                        "path": "ListViewHeaderFooter",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Swipe to execute with sticky actions",
+                        "path": "ListviewSwipeExecuteSticky",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Swipe to execute with stretched content",
+                        "path": "ListviewSwipeExecuteStretch",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Item separators",
+                        "path": "ListviewItemSeparator",
                         "subItems": []
                     }
                 ]

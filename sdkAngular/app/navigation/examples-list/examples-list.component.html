@@ -3,7 +3,7 @@
 </ActionBar>
 <GridLayout rows="auto, *">
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
             <StackLayout>
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
             </StackLayout>

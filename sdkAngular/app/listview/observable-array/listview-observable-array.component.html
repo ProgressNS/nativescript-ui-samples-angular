@@ -1,0 +1,18 @@
+<GridLayout orientation="vertical" rows="50, *">
+    <StackLayout orientation="vertical" class="buttonsStacklayout">
+        <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
+            <Button text="Add" (tap)="onAddItemClick()"></Button>
+            <Button text="Del" (tap)="onRemoveItemClick()"></Button>
+            <Button text="Update" (tap)="onUpdateItemClick()"></Button>
+            <Button text="Reset" (tap)="onResetClick()"></Button>
+        </StackLayout>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1">
+        <template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </template>
+    </RadListView>
+</GridLayout>

@@ -2,7 +2,7 @@
     <!-- >> angular-listview-selection -->
     <RadListView row="0" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
         <!-- << angular-listview-selection -->
-        <template listItemTemplate let-item="item">
+        <template tkListItemTemplate let-item="item">
              <StackLayout class="listItemStackLayout" orientation="vertical">
                     <Label class="nameLabel" [text]="item.name"></Label>
                     <Label class="descriptionLabel" [text]="item.description"></Label>

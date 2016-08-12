@@ -13,7 +13,8 @@
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
         "experimentalDecorators": true
-    }, "filesGlob": [
+    }, 
+    "filesGlob": [
         "./**/*.ts"
     ],
     "exclude": [

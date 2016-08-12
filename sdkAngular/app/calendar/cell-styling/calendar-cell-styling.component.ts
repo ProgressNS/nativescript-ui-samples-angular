@@ -34,6 +34,7 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
         this._viewMode = calendarModule.CalendarViewMode.Month;
     }
     
+    // >> calendar-styling-init
     ngOnInit() {
         this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
         this._monthViewStyle = this._calendarService.getMonthViewStyle();
@@ -41,6 +42,7 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
         this._weekViewStyle = this._calendarService.getWeekViewStyle();
         this._yearViewStyle = this._calendarService.getYearViewStyle();
     }
+    // << calendar-styling-init
     
     get viewMode() {
         return this._viewMode;

@@ -1,0 +1,12 @@
+<!-- >> chart-legend-example -->
+<RadCartesianChart>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis maximum="50"></LinearAxis>
+
+    <BarSeries tkCartesianSeries legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
+    <LineSeries tkCartesianSeries legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
+    <AreaSeries tkCartesianSeries legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
+
+    <RadLegendView tkCartesianLegend position="Top" height="150"></RadLegendView>
+</RadCartesianChart>
+<!-- << chart-legend-example -->

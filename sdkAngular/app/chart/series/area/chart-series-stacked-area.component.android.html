@@ -5,10 +5,10 @@
     <ActionItem text="None" android.position="popup" (tap)="onNoneStackModeSelected()"></ActionItem>
 </ActionBar>
 <RadCartesianChart id="cartesianChart">
-    <CategoricalAxis cartesianHorizontalAxis></CategoricalAxis>
-    <LinearAxis cartesianVerticalAxis></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-    <AreaSeries cartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-    <AreaSeries cartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
-    <AreaSeries cartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries tkCartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries tkCartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries tkCartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
 </RadCartesianChart>

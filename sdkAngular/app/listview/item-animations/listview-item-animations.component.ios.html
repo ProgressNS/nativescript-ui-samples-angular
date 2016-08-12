@@ -1,0 +1,23 @@
+<ActionBar title="Item Animations">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
+</ActionBar>
+<GridLayout orientation="vertical" rows="50, *">
+    <StackLayout orientation="vertical" class="buttonStackLayout">
+        <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
+            <Button text="Add" (tap)="onAddItemClick()" class="iosButton"></Button>
+            <Button text="Del" (tap)="onRemoveItemClick()" class="iosButton"></Button>
+            <Button text="Update" (tap)="onUpdateItemClick()" class="iosButton"></Button>
+            <Button text="Reset" (tap)="onResetClick()" class="iosButton"></Button>
+        </StackLayout>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1">
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" [itemInsertAnimation]="itemInsertAnimation" [itemDeleteAnimation]="itemDeleteAnimation"></ListViewLinearLayout>
+        <template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </template>
+    </RadListView>
+</GridLayout>

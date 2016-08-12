@@ -1,15 +1,16 @@
-<GridLayout rows="auto, *">
-    <!-- >> angular-listview-item-swipe -->
-    <RadListView row="1" id="listView" [items]="dataItems" itemSwipe="true" selectionBehavior="None" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
-        (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"  (itemTap)="onItemClick($event)">
-        <template listItemTemplate let-item="item">
+<GridLayout orientation="vertical">
+    <!-- >> angular-listview-swipe-execute-sticky-component -->
+    <RadListView id="listView" [items]="dataItems" selectionBehavior="None" (itemTap)="onItemClick($event)" (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+        itemSwipe="true">
+        <!-- << angular-listview-swipe-execute-sticky-component -->
+        <template tkListItemTemplate let-item="item">
             <StackLayout class="listItemStackLayout" orientation="vertical">
                 <Label class="labelName" [text]="item.name"></Label>
                 <Label class="labelTitle" [text]="item.title"></Label>
                 <Label class="labelText" [text]="item.text"></Label>
             </StackLayout>
         </template>
-        <GridLayout *listItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
+        <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
             <StackLayout id="mark-view" class="markViewStackLayout" col="0" (tap)="onLeftSwipeClick($event)">
                 <Label text="mark" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
@@ -18,5 +19,4 @@
             </StackLayout>
         </GridLayout>
     </RadListView>
-    <!-- << angular-listview-item-swipe -->
 </GridLayout>
