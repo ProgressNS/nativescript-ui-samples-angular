@@ -18,18 +18,3 @@ declare class UIDevice extends NSObject {
 declare class NSIndexPath extends NSObject { 
     static indexPathForItemInSection(item: number, section: number): NSIndexPath;
 }
-
-// TODO: Remove this after upgrading to the latest nativescript-fresco plugin as it already declares it
-declare module com {
-    module facebook {
-        module drawee {
-            module backends {
-                module pipeline {
-                    class Fresco {
-                        static initialize(context);
-                    }
-                }
-            }
-        }  
-    }
-}
