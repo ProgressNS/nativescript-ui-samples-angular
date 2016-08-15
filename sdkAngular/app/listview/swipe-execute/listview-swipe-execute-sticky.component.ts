@@ -9,7 +9,7 @@ import * as utilsModule from "utils/utils";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-swipe-execute-sticky",
+    selector: "tk-listview-swipe-execute-sticky",
     providers: [DataItemService],
     templateUrl: "listview-swipe-execute-sticky.component.html",
     styleUrls: ["listview-swipe-execute-sticky.component.css"]

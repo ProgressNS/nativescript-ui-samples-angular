@@ -6,7 +6,7 @@ import { LinearAxis } from "nativescript-telerik-ui-pro/chart";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-behaviors-series-selection',
+    selector: 'tk-chart-behaviors-series-selection',
     providers: [DataService],
     templateUrl: 'chart-behaviors-series-selection.component.html'
 })

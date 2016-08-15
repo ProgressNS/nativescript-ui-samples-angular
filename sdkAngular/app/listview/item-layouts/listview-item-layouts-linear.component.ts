@@ -9,7 +9,7 @@ import { DataItemService } from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-layouts-linear",
+    selector: "tk-listview-item-layouts-linear",
     providers: [DataItemService],
     templateUrl: "listview-item-layouts-linear.component.html",
     styleUrls: ["listview-item-layouts-linear.component.css"]

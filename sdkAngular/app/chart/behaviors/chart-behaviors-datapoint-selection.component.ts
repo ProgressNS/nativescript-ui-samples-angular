@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-behaviors-datapoint-selection',
+    selector: 'tk-chart-behaviors-datapoint-selection',
     providers: [DataService],
     templateUrl: 'chart-behaviors-datapoint-selection.component.html'
 })

@@ -9,7 +9,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 // >> sidedrawer-angular-callbacks-definition
 @Component({
     moduleId: module.id,
-    selector: "sidedrawer-events",
+    selector: "tk-sidedrawer-events",
     templateUrl: 'events.component.html',
     styleUrls: ['events.component.css']
 })

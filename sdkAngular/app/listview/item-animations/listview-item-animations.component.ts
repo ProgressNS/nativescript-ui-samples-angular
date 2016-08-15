@@ -11,7 +11,7 @@ import * as applicationModule from "application";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-animations",
+    selector: "tk-listview-item-animations",
     templateUrl: "listview-item-animations.component.html",
     styleUrls: ["listview-item-animations.component.css"]
 })

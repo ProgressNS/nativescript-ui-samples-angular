@@ -4,7 +4,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-programatic-control",
+    selector: "tk-calendar-programatic-control",
     templateUrl: "calendar-programatic-control.component.html"
 })
 export class CalendarProgramaticControlComponent implements OnInit {

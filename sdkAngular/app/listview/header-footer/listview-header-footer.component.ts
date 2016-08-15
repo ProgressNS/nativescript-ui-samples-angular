@@ -5,7 +5,7 @@ import {DataItemService} from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-header-footer",
+    selector: "tk-listview-header-footer",
     providers: [DataItemService],
     templateUrl: "listview-header-footer.component.html",
     styleUrls: ["listview-header-footer.component.css"]

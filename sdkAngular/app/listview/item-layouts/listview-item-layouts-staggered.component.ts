@@ -6,7 +6,7 @@ import { DataItemService } from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-layouts-staggered",
+    selector: "tk-listview-item-layouts-staggered",
     providers: [DataItemService],
     templateUrl: "listview-item-layouts-staggered.component.html",
     styleUrls: ["listview-item-layouts-staggered.component.css"]

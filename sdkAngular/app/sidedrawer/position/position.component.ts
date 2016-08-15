@@ -9,7 +9,7 @@ import * as ProxyModule from"ui/core/proxy";
 
 @Component({
     moduleId: module.id,
-    selector: "sidedrawer-position",
+    selector: "tk-sidedrawer-position",
     providers: [DataService],
     templateUrl: 'position.component.html',
     styleUrls: ["position.component.css"]

@@ -5,7 +5,7 @@ import {DataItemService} from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-getting-started",
+    selector: "tk-listview-getting-started",
     providers: [DataItemService],
     templateUrl: "listview-getting-started.component.html",
     styleUrls: ["listview-getting-started.component.css"]

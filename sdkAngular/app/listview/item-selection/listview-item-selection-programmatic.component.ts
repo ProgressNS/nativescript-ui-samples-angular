@@ -8,7 +8,7 @@ import listViewAnularModule = require("nativescript-telerik-ui-pro/listview/angu
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-selection-programmatic",
+    selector: "tk-listview-item-selection-programmatic",
     providers: [DataItemService],
     templateUrl: "listview-item-selection-programmatic.component.html",
     styleUrls: ["listview-item-selection-programmatic.component.css"]

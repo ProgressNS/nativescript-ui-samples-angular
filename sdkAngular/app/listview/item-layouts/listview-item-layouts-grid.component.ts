@@ -8,7 +8,7 @@ import { DataItemService } from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-layouts-grid",
+    selector: "tk-listview-item-layouts-grid",
     providers: [DataItemService],
     templateUrl: "listview-item-layouts-grid.component.html",
     styleUrls: ["listview-item-layouts-grid.component.css"]

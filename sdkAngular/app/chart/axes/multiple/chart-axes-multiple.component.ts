@@ -7,7 +7,7 @@ import { LinearAxis } from "nativescript-telerik-ui-pro/chart";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-axes-multiple.component',
+    selector: 'tk-chart-axes-multiple.component',
     providers: [DataService],
     templateUrl: 'chart-axes-multiple.component.html'
 })

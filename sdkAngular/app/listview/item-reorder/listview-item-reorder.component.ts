@@ -6,7 +6,7 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-reorder",
+    selector: "tk-listview-item-reorder",
     providers: [DataItemService],
     templateUrl: "listview-item-reorder.component.html",
     styleUrls: ["listview-item-reorder.component.css"]

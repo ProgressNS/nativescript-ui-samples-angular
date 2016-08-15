@@ -8,7 +8,7 @@ import { OptionsService } from "../../navigation/options/options.service";
 
 @Component({
     moduleId: module.id,
-    selector: "options",
+    selector: "tk-options",
     templateUrl: "options.component.html",
     styleUrls: ["options.component.css"]
 })

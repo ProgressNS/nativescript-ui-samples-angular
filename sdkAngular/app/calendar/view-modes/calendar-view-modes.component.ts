@@ -9,7 +9,7 @@ import * as applicationModule from "application";
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-view-modes",
+    selector: "tk-calendar-view-modes",
     templateUrl: "calendar-view-modes.component.html"
 })
 

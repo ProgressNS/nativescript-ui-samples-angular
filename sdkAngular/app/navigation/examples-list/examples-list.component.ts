@@ -7,7 +7,7 @@ import { RouterConfig, ActivatedRoute, CanActivate, Router, ROUTER_DIRECTIVES, R
 
 @Component({
     moduleId: module.id,
-    selector: "examples",
+    selector: "tk-examples",
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
@@ -68,7 +68,7 @@ export class ExamplesListDepth1Component implements OnInit {
 
 @Component({
     moduleId: module.id,
-    selector: "examples-depth-2",
+    selector: "tk-examples-depth-2",
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
@@ -128,7 +128,7 @@ export class ExamplesListDepth2Component implements OnInit {
 
 @Component({
     moduleId: module.id,
-    selector: "examples-depth-3",
+    selector: "tk-examples-depth-3",
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })

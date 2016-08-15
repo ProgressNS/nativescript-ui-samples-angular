@@ -70,7 +70,7 @@ import { ChartStylingSeriesComponent } from "../../chart/styling/chart-styling-s
 
 @Component({
     moduleId: module.id,
-    selector: "example",
+    selector: "tk-example",
     templateUrl: "example.component.html"
 })
 export class ExampleComponent implements OnInit {

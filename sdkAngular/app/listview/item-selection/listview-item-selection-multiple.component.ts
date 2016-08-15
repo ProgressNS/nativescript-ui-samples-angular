@@ -6,7 +6,7 @@ import {DataItemService} from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-selection-multiple",
+    selector: "tk-listview-item-selection-multiple",
     providers: [DataItemService],
     templateUrl: "listview-item-selection-multiple.component.html",
     styleUrls: ["listview-item-selection-multiple.component.css"]

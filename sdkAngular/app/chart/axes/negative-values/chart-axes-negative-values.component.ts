@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-axes-negative-values',
+    selector: 'tk-chart-axes-negative-values',
     providers: [DataService],
     templateUrl: 'chart-axes-negative-values.component.html'
 })

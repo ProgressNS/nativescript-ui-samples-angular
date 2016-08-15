@@ -7,7 +7,7 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-observable-array",
+    selector: "tk-listview-observable-array",
     providers: [DataItemService],
     templateUrl: "listview-observable-array.component.html",
     styleUrls: ["listview-observable-array.component.css"]

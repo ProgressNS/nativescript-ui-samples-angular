@@ -11,7 +11,7 @@ import { DataService } from '../../data-services/data.service';
 
 @Component({
     moduleId: module.id,
-    selector: "chart-series-stacked-area",
+    selector: "tk-chart-series-stacked-area",
     providers: [DataService],
     templateUrl: "chart-series-stacked-area.component.html"
 })

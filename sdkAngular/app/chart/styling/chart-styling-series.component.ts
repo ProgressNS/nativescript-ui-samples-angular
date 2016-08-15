@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-styling-series',
+    selector: 'tk-chart-styling-series',
     providers: [DataService],
     templateUrl: 'chart-styling-series.component.html'
 })

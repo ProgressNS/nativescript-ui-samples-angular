@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-axes-date-time',
+    selector: 'tk-chart-axes-date-time',
     providers: [DataService],
     templateUrl: 'chart-axes-date-time.component.html'
 })

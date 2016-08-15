@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-candlestick',
+    selector: 'tk-chart-series-candlestick',
     providers: [DataService],
     templateUrl: 'chart-series-candlestick.component.html'
 })

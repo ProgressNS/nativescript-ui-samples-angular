@@ -6,7 +6,7 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-selection",
+    selector: "tk-listview-item-selection",
     providers: [DataItemService],
     templateUrl: "listview-item-selection.component.html",
     styleUrls: ["listview-item-selection.component.css"]

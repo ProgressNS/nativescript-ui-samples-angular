@@ -5,7 +5,7 @@ import {DataItemService} from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-item-separator",
+    selector: "tk-listview-item-separator",
     providers: [DataItemService],
     templateUrl: "listview-item-separator.component.html",
     styleUrls: ["listview-item-separator.component.css"]

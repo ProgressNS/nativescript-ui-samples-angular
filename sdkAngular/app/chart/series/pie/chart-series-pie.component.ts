@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-pie',
+    selector: 'tk-chart-series-pie',
     providers: [DataService],
     templateUrl: 'chart-series-pie.component.html'
 })

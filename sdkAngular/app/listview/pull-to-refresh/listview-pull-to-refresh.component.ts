@@ -8,7 +8,7 @@ var posts = require("../../listview/posts.json")
 
 @Component({
     moduleId: module.id,
-    selector: "listview-pull-to-refresh",
+    selector: "tk-listview-pull-to-refresh",
     templateUrl: "listview-pull-to-refresh.component.html",
     styleUrls: ["listview-pull-to-refresh.component.css"]
 })

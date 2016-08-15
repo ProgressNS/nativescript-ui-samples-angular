@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-range-bar',
+    selector: 'tk-chart-series-range-bar',
     providers: [DataService],
     templateUrl: 'chart-series-range-bar.component.html'
 })

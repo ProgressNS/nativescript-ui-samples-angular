@@ -9,7 +9,7 @@ import { OptionsService } from "../../navigation/options/options.service";
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-selection-modes",
+    selector: "tk-calendar-selection-modes",
     templateUrl: "calendar-selection-modes.component.html"
 })
 

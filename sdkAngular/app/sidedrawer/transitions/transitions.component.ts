@@ -8,7 +8,7 @@ import {RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-p
 
 @Component({
     moduleId: module.id,
-    selector: "sidedrawer-transitions",
+    selector: "tk-sidedrawer-transitions",
     templateUrl: 'transitions.component.html',
     styleUrls: ['transitions.component.css']
 })

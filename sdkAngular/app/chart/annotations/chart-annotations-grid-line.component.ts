@@ -5,7 +5,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-annotations-grid-line',
+    selector: 'tk-chart-annotations-grid-line',
     providers: [DataService],
     templateUrl: 'chart-annotations-grid-line.component.html'
 })

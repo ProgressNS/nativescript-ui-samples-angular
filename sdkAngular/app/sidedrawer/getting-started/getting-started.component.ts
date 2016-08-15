@@ -9,7 +9,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 
 @Component({
     moduleId: module.id,
-    selector: "sidedrawer-getting-started",
+    selector: "tk-sidedrawer-getting-started",
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })

@@ -7,7 +7,7 @@ import { LinearAxis } from "nativescript-telerik-ui-pro/chart";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-behaviors-pan-zoom',
+    selector: 'tk-chart-behaviors-pan-zoom',
     providers: [DataService],
     templateUrl: 'chart-behaviors-pan-zoom.component.html'
 })

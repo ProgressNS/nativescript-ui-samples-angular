@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-axes-customization',
+    selector: 'tk-chart-axes-customization',
     providers: [DataService],
     templateUrl: 'chart-axes-customization.component.html'
 })

@@ -8,7 +8,7 @@ import { OptionsExampleBase } from "../../options-example-base";
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-transition-modes",
+    selector: "tk-calendar-transition-modes",
     templateUrl: "calendar-transition-modes.component.html"
 })
 export class CalendarTransitionModesComponent extends OptionsExampleBase implements OnInit {

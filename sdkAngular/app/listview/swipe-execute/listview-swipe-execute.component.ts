@@ -7,7 +7,7 @@ import * as FrameModule from "ui/frame";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-swipe-execute",
+    selector: "tk-listview-swipe-execute",
     providers: [DataItemService],
     templateUrl: "listview-swipe-execute.component.html",
     styleUrls: ["listview-swipe-execute.component.css"]

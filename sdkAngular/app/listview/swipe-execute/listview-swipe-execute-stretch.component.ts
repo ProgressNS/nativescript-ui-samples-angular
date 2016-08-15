@@ -10,7 +10,7 @@ import * as utilsModule from "utils/utils";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-swipe-execute-stretch",
+    selector: "tk-listview-swipe-execute-stretch",
     providers: [DataItemService],
     templateUrl: "listview-swipe-execute-stretch.component.html",
     styleUrls: ["listview-swipe-execute-stretch.component.css"]

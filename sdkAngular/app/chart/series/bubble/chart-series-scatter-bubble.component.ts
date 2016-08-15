@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-scatter-bubble',
+    selector: 'tk-chart-series-scatter-bubble',
     providers: [DataService],
     templateUrl: 'chart-series-scatter-bubble.component.html'
 })

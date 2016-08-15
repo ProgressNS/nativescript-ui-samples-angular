@@ -4,7 +4,7 @@ import { ExampleItemService } from "./exampleItemService.service";
 import { NS_ROUTER_DIRECTIVES } from "nativescript-angular/router";
 
 @Component({
-  selector: "app",
+  selector: "tk-app",
   directives: [NS_ROUTER_DIRECTIVES],
   template: "<page-router-outlet></page-router-outlet>"
 })

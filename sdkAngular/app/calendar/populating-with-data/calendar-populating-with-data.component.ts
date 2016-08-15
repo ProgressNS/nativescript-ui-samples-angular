@@ -4,7 +4,7 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 // >> angular-calenda-populating-with-data
 @Component({
     moduleId: module.id,
-    selector: "calendar-populating-with-data",
+    selector: "tk-calendar-populating-with-data",
     templateUrl: "calendar-populating-with-data.component.html",
     styleUrls: ["calendar-populating-with-data.component.css"],
     providers: [CalendarEventsService]

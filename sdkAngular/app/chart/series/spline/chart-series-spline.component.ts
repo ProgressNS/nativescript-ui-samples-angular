@@ -6,7 +6,7 @@ import { ObservableArray } from "data/observable-array";
 
 @Component({
     moduleId: module.id,
-    selector: 'chart-series-spline',
+    selector: 'tk-chart-series-spline',
     providers: [DataService],
     templateUrl: 'chart-series-spline.component.html'
 })

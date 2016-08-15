@@ -7,7 +7,7 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 
 @Component({
     moduleId: module.id,
-    selector: "listview-selection-states",
+    selector: "tk-listview-selection-states",
     providers: [DataItemService],
     templateUrl: "listview-selection-states.component.html",
     styleUrls: ["listview-selection-states.component.css"]

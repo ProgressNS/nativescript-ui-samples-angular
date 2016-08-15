@@ -9,7 +9,7 @@ import { OptionsExampleBase } from "../../options-example-base";
 
 @Component({
     moduleId: module.id,
-    selector: "calendar-cell-styling",
+    selector: "tk-calendar-cell-styling",
     templateUrl: "calendar-cell-styling.component.html",
     providers:[CalendarStylesService]
 })
