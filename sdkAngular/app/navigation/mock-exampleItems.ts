@@ -1,4 +1,4 @@
-import {ExampleItem} from './exampleItem';
+import { ExampleItem } from './exampleItem';
 
 export var EXAMPLEITEMS: ExampleItem[] = [
     {

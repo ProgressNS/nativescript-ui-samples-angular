@@ -4,7 +4,7 @@ import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
-import * as ObservableModule from "data/observable";
+import { Observable } from "data/observable";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 @Component({
@@ -13,7 +13,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })
-export class SideDrawerGettingStartedComponent extends ObservableModule.Observable implements OnInit {
+export class SideDrawerGettingStartedComponent extends Observable implements OnInit {
     constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
         super();
     }

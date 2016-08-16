@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import * as FrameModule from "ui/frame";
+import * as frameModule from "ui/frame";
 import { RouterConfig, ActivatedRoute, CanActivate, Router, ROUTER_DIRECTIVES, RouterOutletMap, Event } from '@angular/router';
 
 @Component({
@@ -61,7 +61,7 @@ export class ExamplesListDepth1Component implements OnInit {
     }
 
     public onNavigationButtonTap() {
-        FrameModule.topmost().goBack();
+        frameModule.topmost().goBack();
     }
 }
 
@@ -122,7 +122,7 @@ export class ExamplesListDepth2Component implements OnInit {
     }
 
     public onNavigationButtonTap() {
-        FrameModule.topmost().goBack();
+        frameModule.topmost().goBack();
     }
 }
 
@@ -178,6 +178,6 @@ export class ExamplesListDepth3Component implements OnInit {
     }
 
     public onNavigationButtonTap() {
-        FrameModule.topmost().goBack();
+        frameModule.topmost().goBack();
     }
 }

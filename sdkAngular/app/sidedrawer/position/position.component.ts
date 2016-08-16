@@ -4,8 +4,8 @@ import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { ObservableArray } from "data/observable-array";
 import { DataService } from "../data.service";
-import * as DependencyObservableModule from "ui/core/dependency-observable";
-import * as ProxyModule from"ui/core/proxy";
+import { DependencyObservable, Property, PropertyMetadataSettings } from "ui/core/dependency-observable";
+import { PropertyMetadata } from"ui/core/proxy";
 
 @Component({
     moduleId: module.id,
@@ -15,26 +15,26 @@ import * as ProxyModule from"ui/core/proxy";
     styleUrls: ["position.component.css"]
 })
 // >> sidedrawer-angular-position-code
-export class SideDrawerPositionComponent extends DependencyObservableModule.DependencyObservable implements OnInit {
-    private static selectedLocationIndexProperty = new DependencyObservableModule.Property(
+export class SideDrawerPositionComponent extends DependencyObservable implements OnInit {
+    private static selectedLocationIndexProperty = new Property(
         "selectedLocationIndex",
         "SidedrawerPositionComponent",
-        new ProxyModule.PropertyMetadata(
+        new PropertyMetadata(
             undefined,
-            DependencyObservableModule.PropertyMetadataSettings.None,
+            PropertyMetadataSettings.None,
             SideDrawerPositionComponent.onSelectedLocationIndexPropertyChanged));
-    private static locationsProperty = new DependencyObservableModule.Property(
+    private static locationsProperty = new Property(
         "locations",
         "SidedrawerPositionComponent",
-        new ProxyModule.PropertyMetadata(
+        new PropertyMetadata(
             undefined,
-            DependencyObservableModule.PropertyMetadataSettings.None));
-    private static currentLocationroperty = new DependencyObservableModule.Property(
+            PropertyMetadataSettings.None));
+    private static currentLocationroperty = new Property(
         "currentLocation",
         "SidedrawerPositionComponent",
-        new ProxyModule.PropertyMetadata(
+        new PropertyMetadata(
             undefined,
-            DependencyObservableModule.PropertyMetadataSettings.None));
+            PropertyMetadataSettings.None));
 
     constructor( @Inject(Page) private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
         super();

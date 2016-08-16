@@ -1,8 +1,8 @@
 import * as frameModule from "ui/frame";
 import { Router } from '@angular/router';
-import * as ObservableModule from "data/observable";
+import { Observable } from "data/observable";
 
-export class OptionsExampleBase extends ObservableModule.Observable {
+export class OptionsExampleBase extends Observable {
     protected navigationParameters;
     protected router: Router;
     constructor() {

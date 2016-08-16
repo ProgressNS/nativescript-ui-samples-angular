@@ -1,7 +1,7 @@
-import {Component, OnInit, ChangeDetectorRef} from "@angular/core";
-import {ObservableArray} from "data/observable-array";
-import {DataItem} from "../dataItem";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
+import { ObservableArray } from "data/observable-array";
+import { DataItem } from "../dataItem";
+import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 import * as Application from "application";
 import * as Timer  from "timer";
 var posts = require("../../listview/posts.json")
@@ -29,7 +29,7 @@ export class ListViewPullToRefreshComponent implements OnInit {
         return this._dataItems;
     }
 
-    public onPullToRefreshInitiated(args: listViewModule.ListViewEventData) {
+    public onPullToRefreshInitiated(args: ListViewEventData) {
         var that = new WeakRef(this);
         Timer.setTimeout(function () {
             var initialNumberOfItems = that.get()._numberOfAddedItems;

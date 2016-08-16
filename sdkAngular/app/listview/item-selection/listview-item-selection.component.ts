@@ -1,8 +1,8 @@
-import {Component, OnInit} from "@angular/core";
-import {ObservableArray} from "data/observable-array";
-import {DataItem} from "../dataItem";
-import {DataItemService} from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import { Component, OnInit } from "@angular/core";
+import { ObservableArray } from "data/observable-array";
+import { DataItem } from "../dataItem";
+import { DataItemService } from "../dataItem.service";
+import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 
 @Component({
     moduleId: module.id,
@@ -32,8 +32,8 @@ export class ListViewItemSelectionComponent implements OnInit {
         this._selectedItems = "No Selected items.";
     }
 
-    public onItemSelected(args: listViewModule.ListViewEventData) {
-        var listview = args.object as listViewModule.RadListView;
+    public onItemSelected(args: ListViewEventData) {
+        var listview = args.object as RadListView;
         var selectedItems = listview.getSelectedItems() as Array<DataItem>;
         var selectedTitles = "Selected items: ";
         for (var i = 0; i < selectedItems.length; i++) {
@@ -48,8 +48,8 @@ export class ListViewItemSelectionComponent implements OnInit {
         console.log("Item selected.");
     }
 
-    public onItemDeselected(args: listViewModule.ListViewEventData) {
-        var listview = args.object as listViewModule.RadListView;
+    public onItemDeselected(args: ListViewEventData) {
+        var listview = args.object as RadListView;
         var selectedItems = listview.getSelectedItems() as Array<DataItem>;
         if (selectedItems.length > 0) {
             var selectedTitles = "Selected items: ";

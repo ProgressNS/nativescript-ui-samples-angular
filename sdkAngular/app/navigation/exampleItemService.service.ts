@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {EXAMPLEITEMS} from "./mock-exampleItems";
-import {ExampleItem} from "./exampleItem";
+import { Injectable } from '@angular/core';
+import { EXAMPLEITEMS } from "./mock-exampleItems";
+import { ExampleItem } from "./exampleItem";
 
 @Injectable()
 export class ExampleItemService {

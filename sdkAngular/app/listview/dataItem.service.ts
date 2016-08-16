@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {DATAITEMS} from "./mock-dataItems";
-import {DataItem} from "./dataItem";
+import { Injectable } from '@angular/core';
+import { DATAITEMS } from "./mock-dataItems";
+import { DataItem } from "./dataItem";
 var namesAndEmails = require("../listview/NamesAndEmails.json")
 var posts = require("../listview/posts.json")
 var listItems = require("../listview/item-layouts/listItems.json")

@@ -1,7 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {ObservableArray} from "data/observable-array";
-import {DataItem} from "../dataItem";
-import {DataItemService} from "../dataItem.service";
+import { Component, OnInit } from "@angular/core";
+import { ObservableArray } from "data/observable-array";
+import { DataItem } from "../dataItem";
+import { DataItemService } from "../dataItem.service";
 
 @Component({
     moduleId: module.id,

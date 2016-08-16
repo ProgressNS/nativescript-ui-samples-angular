@@ -1,10 +1,10 @@
-import {Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef} from "@angular/core";
-import {View} from "ui/core/view";
-import {RadSideDrawer} from "nativescript-telerik-ui-pro/sidedrawer";
-import {Page} from "ui/page";
-import {ActionItem} from "ui/action-bar";
-import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
-import {RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
+import { View } from "ui/core/view";
+import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+import { Page } from "ui/page";
+import { ActionItem } from "ui/action-bar";
+import { FadeTransition, DrawerTransitionBase, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 @Component({
     moduleId: module.id,
@@ -22,7 +22,7 @@ export class SideDrawerTransitionsComponent implements OnInit {
 
     private drawer: SideDrawerType;
 
-    public sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
+    public sideDrawerTransition: DrawerTransitionBase;
     // << sidedrawer-angular-transition-definition
 
     public currentTransition: string;
@@ -83,28 +83,28 @@ export class SideDrawerTransitionsComponent implements OnInit {
     private setDrawerTransition(currentTransitionStr: string) {
         switch (currentTransitionStr) {
             case "FadeTransition":
-                this.sideDrawerTransition = new sideDrawerModule.FadeTransition();
+                this.sideDrawerTransition = new FadeTransition();
                 break;
             case "PushTransition":
-                this.sideDrawerTransition = new sideDrawerModule.PushTransition();
+                this.sideDrawerTransition = new PushTransition();
                 break;
             case "RevealTransition":
-                this.sideDrawerTransition = new sideDrawerModule.RevealTransition();
+                this.sideDrawerTransition = new RevealTransition();
                 break;
             case "ReverseSlideOutTransition":
-                this.sideDrawerTransition = new sideDrawerModule.ReverseSlideOutTransition();
+                this.sideDrawerTransition = new ReverseSlideOutTransition();
                 break;
             case "ScaleDownPusherTransition":
-                this.sideDrawerTransition = new sideDrawerModule.ScaleDownPusherTransition();
+                this.sideDrawerTransition = new ScaleDownPusherTransition();
                 break;
             case "ScaleUpTransition":
-                this.sideDrawerTransition = new sideDrawerModule.ScaleUpTransition();
+                this.sideDrawerTransition = new ScaleUpTransition();
                 break;
             case "SlideAlongTransition":
-                this.sideDrawerTransition = new sideDrawerModule.SlideAlongTransition();
+                this.sideDrawerTransition = new SlideAlongTransition();
                 break;
             case "SlideInOnTopTransition":
-                this.sideDrawerTransition = new sideDrawerModule.SlideInOnTopTransition();
+                this.sideDrawerTransition = new SlideInOnTopTransition();
                 break;
         }
 

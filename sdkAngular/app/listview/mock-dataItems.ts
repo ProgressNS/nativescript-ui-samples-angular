@@ -1,4 +1,4 @@
-import {DataItem} from './dataItem';
+import { DataItem } from './dataItem';
 
 export var DATAITEMS: DataItem[] = [
     { "id": 1, "name": "Item 1", "description":"This is item description.", "title": "This is item Title", "text": "This is item Text",  "image": "This is item Image", "selected": false },

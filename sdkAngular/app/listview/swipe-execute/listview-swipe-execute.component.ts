@@ -1,9 +1,9 @@
-import {Component, OnInit} from "@angular/core";
-import {ObservableArray} from "data/observable-array";
-import {DataItem} from "../dataItem";
-import {DataItemService} from "../dataItem.service";
+import { Component, OnInit } from "@angular/core";
+import { ObservableArray } from "data/observable-array";
+import { DataItem } from "../dataItem";
+import { DataItemService } from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import * as FrameModule from "ui/frame";
+import * as frameModule from "ui/frame";
 
 @Component({
     moduleId: module.id,
@@ -42,7 +42,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
 
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = FrameModule.topmost().currentPage.getViewById("listView");
+        var listView = frameModule.topmost().currentPage.getViewById("listView");
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();
@@ -58,7 +58,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
     }
 
     public onItemClick(args: listViewModule.ListViewEventData) {
-        var listView = <listViewModule.RadListView>FrameModule.topmost().currentPage.getViewById("listView");
+        var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
         listView.notifySwipeToExecuteFinished();
         console.log("Item click: " + args.itemIndex);
     }
