@@ -1,5 +1,5 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import { Component, Inject, OnInit } from "@angular/core";
+import { Component, Injectable, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
@@ -12,13 +12,13 @@ import { OptionsService } from "../../navigation/options/options.service";
     selector: "tk-calendar-selection-modes",
     templateUrl: "calendar-selection-modes.component.html"
 })
-
+@Injectable()
 // >> angular-calendar-selection-modes  
 export class CalendarSelectionModesComponent extends OptionsExampleBase implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     private _optionsParamName: string;
     private _selectionMode;
-    constructor( @Inject(Page) private _page: Page, private _router: Router, private _optionsService: OptionsService) {
+    constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);

@@ -1,5 +1,5 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page, NavigatedData } from "ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
@@ -12,13 +12,13 @@ import * as applicationModule from "application";
     selector: "tk-calendar-view-modes",
     templateUrl: "calendar-view-modes.component.html"
 })
-
+@Injectable()
 export class CalendarViewModesComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
     private _calendar: RadCalendar;
     private _viewMode;
 
-    constructor( @Inject(Page) private _page: Page,
+    constructor(private _page: Page,
         private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {

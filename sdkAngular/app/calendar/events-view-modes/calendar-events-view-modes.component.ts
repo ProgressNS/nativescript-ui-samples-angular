@@ -1,5 +1,5 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import {Component, OnInit, Inject} from "@angular/core";
+import {Component, OnInit, Injectable} from "@angular/core";
 import { Router } from '@angular/router';
 import {CalendarEventsService} from "../calendar-events.service";
 import { OptionsService } from "../../navigation/options/options.service";
@@ -13,13 +13,13 @@ import * as applicationModule from "application";
     templateUrl: "calendar-events-view-modes.component.html",
     providers: [CalendarEventsService]
 })
-
+@Injectable()
 export class CalendarEventsViewModesComponent extends OptionsExampleBase implements OnInit {
     private _events: Array<calendarModule.CalendarEvent>;
     private _calendar: calendarModule.RadCalendar;
     private _optionsParamName: string;
     private _eventsViewMode;
-    constructor( @Inject(Page) private _page: Page, private _calendarService: CalendarEventsService,
+    constructor(private _page: Page, private _calendarService: CalendarEventsService,
         private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {            

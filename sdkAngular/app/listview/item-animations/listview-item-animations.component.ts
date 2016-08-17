@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
 import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
@@ -15,13 +15,14 @@ import * as applicationModule from "application";
     templateUrl: "listview-item-animations.component.html",
     styleUrls: ["listview-item-animations.component.css"]
 })
+@Injectable()
 export class ListViewItemAnimationsComponent extends OptionsExampleBase implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _itemInsertAnimation: string;
     private _itemDeleteAnimation: string;
     private _optionsParamName: string;
 
-    constructor( @Inject(Page) private _page: Page, private _optionsService: OptionsService, private _router: Router) {
+    constructor(private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);

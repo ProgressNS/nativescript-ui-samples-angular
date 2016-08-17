@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from "@angular/core";
+import { Component, Injectable, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
@@ -7,10 +7,11 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
     selector: "tk-calendar-programatic-control",
     templateUrl: "calendar-programatic-control.component.html"
 })
+@Injectable()
 export class CalendarProgramaticControlComponent implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     
-    constructor(@Inject(Page) private _page: Page) {
+    constructor(private _page: Page) {
     }
     
     ngOnInit() {

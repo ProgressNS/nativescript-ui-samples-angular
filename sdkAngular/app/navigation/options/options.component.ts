@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import * as frameModule from "ui/frame";
@@ -12,13 +12,14 @@ import { OptionsService } from "../../navigation/options/options.service";
     templateUrl: "options.component.html",
     styleUrls: ["options.component.css"]
 })
+@Injectable()
 export class OptionsComponent implements OnInit {
     private _dataItems: ObservableArray<string>;
     private _listView: RadListView;
     private _sub: any;
     private _selectedIndex: number = -1;
 
-    constructor( @Inject(Page) private _page, private _router: Router, private _optionsService: OptionsService) {
+    constructor(private _page, private _router: Router, private _optionsService: OptionsService) {
         this._page.on("loaded", this.onLoaded, this);
         this._dataItems = new ObservableArray<string>();
     }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
 import { Page } from "ui/page";
 import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
@@ -14,6 +14,7 @@ import { PropertyMetadata } from"ui/core/proxy";
     templateUrl: 'position.component.html',
     styleUrls: ["position.component.css"]
 })
+@Injectable()
 // >> sidedrawer-angular-position-code
 export class SideDrawerPositionComponent extends DependencyObservable implements OnInit {
     private static selectedLocationIndexProperty = new Property(
@@ -36,7 +37,7 @@ export class SideDrawerPositionComponent extends DependencyObservable implements
             undefined,
             PropertyMetadataSettings.None));
 
-    constructor( @Inject(Page) private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
+    constructor(private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
         super();
     }
 

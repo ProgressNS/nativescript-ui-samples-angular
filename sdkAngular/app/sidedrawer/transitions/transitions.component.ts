@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "ui/page";
@@ -12,9 +12,10 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'transitions.component.html',
     styleUrls: ['transitions.component.css']
 })
+@Injectable()
 // >> sidedrawer-angular-transition-definition
 export class SideDrawerTransitionsComponent implements OnInit {
-    constructor( @Inject(Page) private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+    constructor(private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
         this._page.on("loaded", this.onLoaded, this);
     }
 

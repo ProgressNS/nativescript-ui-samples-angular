@@ -1,6 +1,6 @@
 import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
-import { Component, OnInit, Inject, ChangeDetectorRef } from "@angular/core";
+import { Component, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import * as applicationModule from "application";
@@ -14,6 +14,7 @@ import { ObservableArray } from "data/observable-array";
     providers: [DataService],
     templateUrl: 'chart-series-stacked-bar.component.html'
 })
+@Injectable()
 export class ChartSeriesStackedBarComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
 
@@ -21,7 +22,7 @@ export class ChartSeriesStackedBarComponent extends OptionsExampleBase implement
     private _optionsItems: Array<string>;
 
 
-    constructor( @Inject(Page) private _page: Page,
+    constructor(private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();
         if (applicationModule.ios) {

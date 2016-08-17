@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Inject, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "ui/page";
@@ -13,8 +13,9 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })
+@Injectable()
 export class SideDrawerGettingStartedComponent extends Observable implements OnInit {
-    constructor( @Inject(Page) private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
+    constructor(private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
         super();
     }
 

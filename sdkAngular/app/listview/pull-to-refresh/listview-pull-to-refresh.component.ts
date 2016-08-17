@@ -3,7 +3,7 @@ import { ObservableArray } from "data/observable-array";
 import { DataItem } from "../dataItem";
 import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 import * as Application from "application";
-import * as Timer  from "timer";
+import * as timerModule  from "timer";
 var posts = require("../../listview/posts.json")
 
 @Component({
@@ -31,7 +31,7 @@ export class ListViewPullToRefreshComponent implements OnInit {
 
     public onPullToRefreshInitiated(args: ListViewEventData) {
         var that = new WeakRef(this);
-        Timer.setTimeout(function () {
+        timerModule.setTimeout(function () {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
             for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length - 1) {

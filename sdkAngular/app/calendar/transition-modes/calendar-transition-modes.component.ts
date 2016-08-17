@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from "@angular/core";
+import { Component, Injectable, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import { OptionsService } from "../../navigation/options/options.service";
@@ -11,11 +11,12 @@ import { OptionsExampleBase } from "../../options-example-base";
     selector: "tk-calendar-transition-modes",
     templateUrl: "calendar-transition-modes.component.html"
 })
+@Injectable()
 export class CalendarTransitionModesComponent extends OptionsExampleBase implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     private _optionsParamName: string;
     private _transitionMode;
-    constructor( @Inject(Page) private _page: Page, private _optionsService: OptionsService, private _router: Router) {
+    constructor(private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {            
             this._page.on("navigatingTo", this.onNavigatingTo, this);

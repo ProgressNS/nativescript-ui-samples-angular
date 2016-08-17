@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { Page } from "ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import {CalendarStylesService} from "../calendar-styles.service";
@@ -13,6 +13,7 @@ import { OptionsExampleBase } from "../../options-example-base";
     templateUrl: "calendar-cell-styling.component.html",
     providers:[CalendarStylesService]
 })
+@Injectable()
 export class CalendarCellStylingComponent extends OptionsExampleBase implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     private _monthViewStyle: calendarModule.CalendarMonthViewStyle;
@@ -21,7 +22,7 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
     private _monthNamesViewStyle: calendarModule.CalendarMonthNamesViewStyle;
     private _optionsParamName: string;
     private _viewMode;
-    constructor( @Inject(Page) private _page: Page, private _calendarService: CalendarStylesService,
+    constructor(private _page: Page, private _calendarService: CalendarStylesService,
         private _optionsService: OptionsService, private _router: Router) {
         super();
          if (applicationModule.ios) {
