@@ -19,7 +19,7 @@ export class OptionsComponent implements OnInit {
     private _sub: any;
     private _selectedIndex: number = -1;
 
-    constructor(private _page, private _router: Router, private _optionsService: OptionsService) {
+    constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
         this._page.on("loaded", this.onLoaded, this);
         this._dataItems = new ObservableArray<string>();
     }
