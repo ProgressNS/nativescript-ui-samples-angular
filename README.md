@@ -1,5 +1,5 @@
 # Welcome
-This repository contains the source code of the UI for NativeScript samples application demonstrating the Angular 2.0 directives. The repository does not contain the source code of UI for NativeScript itself but rather uses the npm package of [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui-pro.svg)](https://www.npmjs.com/package/nativescript-telerik-ui-pro) `nativescript-telerik-ui-pro` or [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui.svg)](https://www.npmjs.com/package/nativescript-telerik-ui) `nativescript-telerik-ui`.
+This repository contains the source code of the UI for NativeScript samples application demonstrating the Angular 2.0 directives. The repository does not contain the source code of UI for NativeScript itself but rather uses the npm package of  `nativescript-telerik-ui-pro` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui-pro.svg)](https://www.npmjs.com/package/nativescript-telerik-ui-pro) or `nativescript-telerik-ui` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui.svg)](https://www.npmjs.com/package/nativescript-telerik-ui).
 
 The `master` branch contains code currently under development and is not meant to be used with the officially released version of NativeScript UI.
 
