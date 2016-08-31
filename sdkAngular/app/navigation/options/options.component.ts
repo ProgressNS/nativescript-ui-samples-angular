@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
-import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Router } from '@angular/router';
 import * as frameModule from "ui/frame";
 import { Page } from "ui/page";
 import { RadListView } from "nativescript-telerik-ui-pro/listview";

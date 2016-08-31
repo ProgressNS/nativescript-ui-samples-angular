@@ -1,13 +1,22 @@
 import { Component } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
-import { ExampleItemService } from "./exampleItemService.service";
-import { NS_ROUTER_DIRECTIVES } from "nativescript-angular/router";
+import { RouterConfig } from '@angular/router';
+import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./examples-list/examples-list.component";
+import { ExampleComponent } from "./example/example.component";
+import { OptionsComponent } from "./options/options.component";
 
 @Component({
   selector: "tk-app",
-  directives: [NS_ROUTER_DIRECTIVES],
   template: "<page-router-outlet></page-router-outlet>"
 })
 export class AppComponent {
 
 }
+
+export const APP_ROUTES: RouterConfig = [
+    { path: "", redirectTo: "/examples-depth-1/root/root", terminal: true },
+    { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
+    { path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component },
+    { path: "examples-depth-3/:parentTitle/:tappedTitle", component: ExamplesListDepth3Component },
+    { path: "example/:parentTitle/:tappedTitle", component: ExampleComponent },
+    { path: "options", component: OptionsComponent }
+];
