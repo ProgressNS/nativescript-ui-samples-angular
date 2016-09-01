@@ -15,67 +15,67 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Bar series",
-                                "path": "ChartSeriesBar",
+                                "path": "ChartSeriesBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Range Bar series",
-                                "path": "ChartSeriesRangeBar",
+                                "path": "ChartSeriesRangeBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Stacked Bar series",
-                                "path": "ChartSeriesStackedBar",
+                                "path": "ChartSeriesStackedBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Area Series",
-                                "path": "ChartSeriesArea",
+                                "path": "ChartSeriesAreaComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Stacked Area Series",
-                                "path": "ChartSeriesStackedArea",
+                                "path": "ChartSeriesStackedAreaComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Line series",
-                                "path": "ChartSeriesLine",
+                                "path": "ChartSeriesLineComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Spline series",
-                                "path": "ChartSeriesSpline",
+                                "path": "ChartSeriesSplineComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Bubble series",
-                                "path": "ChartSeriesBubble",
+                                "path": "ChartSeriesBubbleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Scatter Bubble series",
-                                "path": "ChartSeriesScatterBubble",
+                                "path": "ChartSeriesScatterBubbleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Candlestick series",
-                                "path": "ChartSeriesCandlestick",
+                                "path": "ChartSeriesCandlestickComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Ohlc series",
-                                "path": "ChartSeriesOhlc",
+                                "path": "ChartSeriesOhlcComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Pie series",
-                                "path": "ChartSeriesPie",
+                                "path": "ChartSeriesPieComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Scatter series",
-                                "path": "ChartSeriesScatter",
+                                "path": "ChartSeriesScatterComponent",
                                 "subItems": []
                             }
                         ]
@@ -86,34 +86,34 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Styling axes",
-                                "path": "ChartStylingAxes",
+                                "path": "ChartStylingAxesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling series",
-                                "path": "ChartStylingSeries",
+                                "path": "ChartStylingSeriesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling grid",
-                                "path": "ChartStylingGrid",
+                                "path": "ChartStylingGridComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling labels",
-                                "path": "ChartStylingLabel",
+                                "path": "ChartStylingLabelComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling series selection",
-                                "path": "ChartStylingSelection",
+                                "path": "ChartStylingSelectionComponent",
                                 "subItems": []
                             },
                         ]
                     },
                     {
                         "title": "Legend",
-                        "path": "ChartLegend",
+                        "path": "ChartLegendComponent",
                         "subItems": []
                     },
                     {
@@ -122,22 +122,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Pan & Zoom",
-                                "path": "ChartBehaviorsPanZoom",
+                                "path": "ChartBehaviorsPanZoomComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Pie selection",
-                                "path": "ChartBehaviorsChartPieSelection",
+                                "path": "ChartBehaviorsChartPieSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Series selection",
-                                "path": "ChartBehaviorsSeriesSelection",
+                                "path": "ChartBehaviorsSeriesSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Datapoint selection",
-                                "path": "ChartBehaviorsDatapointSelection",
+                                "path": "ChartBehaviorsDatapointSelectionComponent",
                                 "subItems": []
                             }
                         ]
@@ -148,22 +148,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Customization",
-                                "path": "ChartAxesCustomization",
+                                "path": "ChartAxesCustomizationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Multiple axes",
-                                "path": "ChartAxesMultiple",
+                                "path": "ChartAxesMultipleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Negative values",
-                                "path": "ChartAxesNegativeValues",
+                                "path": "ChartAxesNegativeValuesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Date time axis",
-                                "path": "ChartAxesDateTime",
+                                "path": "ChartAxesDateTimeComponent",
                                 "subItems": []
                             }
                         ]
@@ -174,12 +174,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Plot band",
-                                "path": "ChartAnnotationsPlotBand",
+                                "path": "ChartAnnotationsPlotBandComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Grid line",
-                                "path": "ChartAnnotationsGridLine",
+                                "path": "ChartAnnotationsGridLineComponent",
                                 "subItems": []
                             }
                         ]
@@ -192,12 +192,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "ListViewGettingStarted",
+                        "path": "ListViewGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item Loading",
-                        "path": "ListviewItemLoading",
+                        "path": "ListviewItemLoadingComponent",
                         "subItems": []
                     },
                     {
@@ -206,29 +206,29 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Linear",
-                                "path": "ListviewItemLayoutsLinear",
+                                "path": "ListviewItemLayoutsLinearComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Grid",
-                                "path": "ListViewItemLayoutsGrid",
+                                "path": "ListViewItemLayoutsGridComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Staggered",
-                                "path": "ListviewItemLayoutsStaggered",
+                                "path": "ListviewItemLayoutsStaggeredComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Item Reorder",
-                        "path": "ListViewItemReorder",
+                        "path": "ListViewItemReorderComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item Reorder with handle",
-                        "path": "ListviewItemReorderHandle",
+                        "path": "ListviewItemReorderHandleComponent",
                         "subItems": []
                     },
                     {
@@ -237,59 +237,59 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Single Selection",
-                                "path": "ListViewItemSelection",
+                                "path": "ListViewItemSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Multiple Selection",
-                                "path": "ListviewItemSelectionMultiple",
+                                "path": "ListviewItemSelectionMultipleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Programatic Selection",
-                                "path": "ListviewItemSelectionProgrammatic",
+                                "path": "ListviewItemSelectionProgrammaticComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Selection states",
-                        "path": "ListviewSelectionStates",
+                        "path": "ListviewSelectionStatesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Load on Demand",
-                        "path": "ListViewLoadOnDemand",
+                        "path": "ListViewLoadOnDemandComponent",
                         "subItems": []
                     },
                     {
                         "title": "Pull to Refresh",
-                        "path": "ListViewPullToRefresh",
+                        "path": "ListViewPullToRefreshComponent",
                         "subItems": []
                     },
                     {
                         "title": "Swipe to Execute",
-                        "path": "ListViewSwipeExecute",
+                        "path": "ListViewSwipeExecuteComponent",
                         "subItems": []
                     },
                     {
                         "title": "Header and Footer",
-                        "path": "ListViewHeaderFooter",
+                        "path": "ListViewHeaderFooterComponent",
                         "subItems": []
                     },
                     {
                         "title": "Swipe to execute with sticky actions",
-                        "path": "ListviewSwipeExecuteSticky",
+                        "path": "ListviewSwipeExecuteStickyComponent",
                         "subItems": []
                     },
                     {
                         "title": "Swipe to execute with stretched content",
-                        "path": "ListviewSwipeExecuteStretch",
+                        "path": "ListviewSwipeExecuteStretchComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item separators",
-                        "path": "ListviewItemSeparator",
+                        "path": "ListviewItemSeparatorComponent",
                         "subItems": []
                     }
                 ]
@@ -300,22 +300,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "SideDrawerGettingStarted",
+                        "path": "SideDrawerGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Position",
-                        "path": "SideDrawerPosition",
+                        "path": "SideDrawerPositionComponent",
                         "subItems": []
                     },
                     {
                         "title": "Transitions",
-                        "path": "SideDrawerTransitions",
+                        "path": "SideDrawerTransitionsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "SideDrawerEvents",
+                        "path": "SideDrawerEventsComponent",
                         "subItems": []
                     },
                 ]
@@ -326,42 +326,42 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "CalendarGettingStarted",
+                        "path": "CalendarGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Populating with data",
-                        "path": "CalendarPopulatingWithData",
+                        "path": "CalendarPopulatingWithDataComponent",
                         "subItems": []
                     },
                     {
                         "title": "Programatic control",
-                        "path": "CalendarProgramaticControl",
+                        "path": "CalendarProgramaticControlComponent",
                         "subItems": []
                     },
                     {
                         "title": "View modes",
-                        "path": "CalendarViewModes",
+                        "path": "CalendarViewModesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Selection modes",
-                        "path": "CalendarSelectionModes",
+                        "path": "CalendarSelectionModesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Transition modes",
-                        "path": "CalendarTransitionModes",
+                        "path": "CalendarTransitionModesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Cell styling",
-                        "path": "CalendarCellStyling",
+                        "path": "CalendarCellStylingComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events view modes",
-                        "path": "CalendarEventsViewModes",
+                        "path": "CalendarEventsViewModesComponent",
                         "subItems": []
                     }
                 ]

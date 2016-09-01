@@ -33,7 +33,7 @@ export class ExampleComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-        this._loader.loadNextToLocation(this._exampleItemsService.getComponentByName(this.currentExample.path + "Component"), this.exampleCompPlaceholder);
+        this._loader.loadNextToLocation(this._exampleItemsService.getComponentByName(this.currentExample.path), this.exampleCompPlaceholder);
     }
 
     public get currentExample(): ExampleItem {
