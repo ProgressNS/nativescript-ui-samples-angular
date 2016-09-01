@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import * as frameModule from "ui/frame";
-import { RouterConfig, ActivatedRoute, CanActivate, Router, ROUTER_DIRECTIVES, RouterOutletMap, Event } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,

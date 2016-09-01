@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { EXAMPLEITEMS } from "./mock-exampleItems";
 import { ExampleItem } from "./exampleItem";
+import { AppExampleComponents } from "./appExamples";
 
 @Injectable()
 export class ExampleItemService {
@@ -26,7 +27,7 @@ export class ExampleItemService {
                 }
                 else {
                     if (element.subItems.length >= 0) {
-                        var result =  this.getChildExampleItem(parentTitle, subItemTitle, element.subItems);
+                        var result = this.getChildExampleItem(parentTitle, subItemTitle, element.subItems);
                         if (result) {
                             return result;
                         }
@@ -34,5 +35,22 @@ export class ExampleItemService {
                 }
             }
         }
+    }
+
+    checkName(wordToCompare: string) {
+        return function (value: any) {
+            if (value.name == wordToCompare) {
+                return value;
+            }
+        }
+    }
+
+    getComponentByName(name: string): any {
+        var result = AppExampleComponents.filter(this.checkName(name));
+        if (result.length == 1) {
+            return result[0];
+        }
+
+        throw new Error("No Component named '" + name + "' found.");
     }
 }
