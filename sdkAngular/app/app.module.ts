@@ -1,10 +1,10 @@
 import { NativeScriptModule, platformNativeScriptDynamic } from "nativescript-angular/platform";
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
 // >> using-global-directives
-import { SIDEDRAWER_PROVIDERS, SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-import { LISTVIEW_PROVIDERS, LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui-pro/listview/angular';
-import { CALENDAR_PROVIDERS, CALENDAR_DIRECTIVES } from 'nativescript-telerik-ui-pro/calendar/angular';
-import { CHART_PROVIDERS, CHART_DIRECTIVES } from 'nativescript-telerik-ui-pro/chart/angular';
+import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui-pro/listview/angular';
+import { CALENDAR_DIRECTIVES } from 'nativescript-telerik-ui-pro/calendar/angular';
+import { CHART_DIRECTIVES } from 'nativescript-telerik-ui-pro/chart/angular';
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples
 import { NativeScriptRouterModule } from "nativescript-angular/router";
