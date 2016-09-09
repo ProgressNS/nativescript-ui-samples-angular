@@ -4,8 +4,9 @@
 <GridLayout rows="auto, *">
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
         <template tkListItemTemplate let-item="item">
-            <StackLayout>
+            <StackLayout class="itemStackLayout">
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
+                <StackLayout height="0.5" backgroundColor="#404040"></StackLayout>
             </StackLayout>
         </template>
     </RadListView>
