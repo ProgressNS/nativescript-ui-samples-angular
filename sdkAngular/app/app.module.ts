@@ -10,13 +10,14 @@ import { CHART_DIRECTIVES } from 'nativescript-telerik-ui-pro/chart/angular';
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule } from "@angular/core";
-import { AppComponent, APP_ROUTES } from "./navigation/app.component";
+import { AppComponent, createRouteEntryArray, APP_ROUTES } from "./navigation/app.component";
 import { AppExampleComponents } from "./navigation/appExamples";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
 import { ExampleComponent } from "./navigation/example/example.component";
 import { OptionsComponent } from "./navigation/options/options.component";
+import { COMMON_DIRECTIVES } from './navigation/directives';
 
 // >> (hide)
 import * as applicationModule from "application";
@@ -28,6 +29,7 @@ if (applicationModule.android) {
     };
 }
 elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoDrawee);
+createRouteEntryArray(AppExampleComponents);
 // << (hide)
 
 @NgModule({
@@ -39,6 +41,7 @@ elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoD
         SIDEDRAWER_DIRECTIVES,
         CALENDAR_DIRECTIVES,
         CHART_DIRECTIVES,
+        COMMON_DIRECTIVES,
         AppComponent,
         ExamplesListDepth1Component,
         ExamplesListDepth2Component,

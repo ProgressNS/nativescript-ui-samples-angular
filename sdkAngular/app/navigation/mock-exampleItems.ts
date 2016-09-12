@@ -3,15 +3,15 @@ import { ExampleItem } from './exampleItem';
 export var EXAMPLEITEMS: ExampleItem[] = [
     {
         "title": "Angular SDK Examples",
-        "path": "Controls",
+        "path": "",
         "subItems": [
             {
                 "title": "Chart",
-                "path": "Examples",
+                "path": "",
                 "subItems": [
                     {
                         "title": "Series",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Bar series",
@@ -82,7 +82,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Styling",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Styling axes",
@@ -118,7 +118,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Interaction",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Pan & Zoom",
@@ -144,7 +144,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Axes",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Customization",
@@ -170,7 +170,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Annotations",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Plot band",
@@ -188,7 +188,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "ListView",
-                "path": "Examples",
+                "path": "",
                 "subItems": [
                     {
                         "title": "Getting Started",
@@ -202,7 +202,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Item Layouts",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Linear",
@@ -233,7 +233,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Selection",
-                        "path": "Examples",
+                        "path": "",
                         "subItems": [
                             {
                                 "title": "Single Selection",
@@ -296,7 +296,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "SideDrawer",
-                "path": "Examples",
+                "path": "",
                 "subItems": [
                     {
                         "title": "Getting Started",
@@ -322,7 +322,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "Calendar",
-                "path": "Examples",
+                "path": "",
                 "subItems": [
                     {
                         "title": "Getting Started",

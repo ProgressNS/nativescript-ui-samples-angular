@@ -26,7 +26,6 @@ export class ExamplesListDepth1Component implements OnInit {
             this.hasBack = false;
             this._currentExample = this._exampleItemsService.getParentExampleItem(0);
         });
-
     }
 
     ngOnDestroy() {
@@ -53,7 +52,7 @@ export class ExamplesListDepth1Component implements OnInit {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
         if (tappedItem.subItems.length === 0) {
-            this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
+            this._router.navigateByUrl(tappedItem.path);
         } else {
             this._router.navigate(['/examples-depth-2', this._currentExample.title, tappedItem.title]);
         }
@@ -114,7 +113,7 @@ export class ExamplesListDepth2Component implements OnInit {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
         if (tappedItem.subItems.length === 0) {
-            this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
+            this._router.navigateByUrl(tappedItem.path);
         } else {
             this._router.navigate(['/examples-depth-3', this._currentExample.title, tappedItem.title]);
         }
@@ -173,7 +172,7 @@ export class ExamplesListDepth3Component implements OnInit {
     public onNavigationItemTap(args) {
         var itemIndex = args.itemIndex;
         var tappedItem = this._currentExample.subItems[itemIndex];
-        this._router.navigate(['/example', this._currentExample.title, tappedItem.title ]);
+        this._router.navigateByUrl(tappedItem.path);
     }
 
     public onNavigationButtonTap() {

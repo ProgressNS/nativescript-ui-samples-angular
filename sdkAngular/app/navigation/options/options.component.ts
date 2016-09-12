@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import * as frameModule from "ui/frame";
 import { Page } from "ui/page";
 import { RadListView } from "nativescript-telerik-ui-pro/listview";
@@ -19,17 +19,16 @@ export class OptionsComponent implements OnInit {
     private _sub: any;
     private _selectedIndex: number = -1;
 
-    constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
+    constructor(private _page: Page, private _route: ActivatedRoute, private _optionsService: OptionsService) {
         this._page.on("loaded", this.onLoaded, this);
         this._dataItems = new ObservableArray<string>();
     }
 
     ngOnInit() {
-        this._sub = this._router
-            .routerState
-            .queryParams
-            .subscribe(params => {
-                this._listView = <RadListView>this._page.getViewById("optionsListView");
+        this._sub = this._route.queryParams.subscribe(
+             (params: any) => 
+             {
+                 this._listView = <RadListView>this._page.getViewById("optionsListView");
                 var items = params['items'];
                 this._selectedIndex = +params['selectedIndex'];
                 if (items) {
@@ -37,7 +36,8 @@ export class OptionsComponent implements OnInit {
                     this._dataItems = new ObservableArray<string>(splitItems);
                     this.tryUpdateListViewSelection();
                 }
-            });
+             }
+         );
     }
 
     ngOnDestroy() {
