@@ -1,12 +1,14 @@
-<RadListView [items]="staggeredItems" exampleTitle toggleNavButton>
-    <template tkListItemTemplate let-item="item">
-        <StackLayout orientation="vertical" class="item-template-style">
-            <Label [text]="item.name"></Label>
-            <Label [text]="item.description" textWrap="true"></Label>
-        </StackLayout>
-    </template>
+<GridLayout exampleTitle toggleNavButton>
+    <RadListView [items]="staggeredItems">
+        <template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" class="item-template-style">
+                <Label [text]="item.name"></Label>
+                <Label [text]="item.description" textWrap="true"></Label>
+            </StackLayout>
+        </template>
 
-    <!-- >> angular-listview-item-layouts-staggered -->
-    <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical" spanCount="3"></ListViewStaggeredLayout>
-    <!-- << angular-listview-item-layouts-staggered -->
-</RadListView>
+        <!-- >> angular-listview-item-layouts-staggered -->
+        <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical" spanCount="3"></ListViewStaggeredLayout>
+        <!-- << angular-listview-item-layouts-staggered -->
+    </RadListView>
+</GridLayout>
