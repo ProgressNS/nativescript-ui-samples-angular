@@ -45,6 +45,14 @@ export class ExampleItemService {
         }
     }
 
+    checkPath(wordToCompare: string) {
+        return function (value: ExampleItem) {
+            if (value.path == wordToCompare) {
+                return value;
+            }
+        }
+    }
+
     getComponentByName(name: string): any {
         var result = AppExampleComponents.filter(this.checkName(name));
         if (result.length == 1) {
@@ -52,5 +60,26 @@ export class ExampleItemService {
         }
 
         throw new Error("No Component named '" + name + "' found.");
+    }
+
+    getExampleItemByComponent(sourceArray: ExampleItem[], componentName: string): ExampleItem {
+        if (sourceArray) {
+            var that = this;
+            var resultArray = sourceArray.filter(e => {
+                return e.path.localeCompare(componentName) === 0;
+            });
+
+            if (resultArray.length == 1) {
+                return resultArray[0];
+            } else {
+                for (var index = 0; index < sourceArray.length; index++) {
+                    var element = sourceArray[index];
+                    var resultItem = this.getExampleItemByComponent(element.subItems, componentName);
+                    if (resultItem) {
+                        return resultItem;
+                    }
+                }
+            }
+        }
     }
 }
