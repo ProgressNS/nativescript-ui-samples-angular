@@ -1,10 +1,9 @@
-import { Component, OnInit, Inject, ViewChild, DynamicComponentLoader, ViewContainerRef, ComponentRef } from "@angular/core";
+import { Component, OnInit, Inject, ViewChild, ViewContainerRef, ComponentRef } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { StackLayout } from "ui/layouts/stack-layout";
 import * as frameModule from "ui/frame";
-import { AppExampleComponents } from "../appExamples";
 
 @Component({
     moduleId: module.id,
@@ -15,7 +14,7 @@ export class ExampleComponent implements OnInit {
     private _currentExample: ExampleItem;
     private _sub: any;
 
-    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService, private _loader: DynamicComponentLoader) {
+    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
     }
 
     @ViewChild('exampleCompPlaceholder', { read: ViewContainerRef }) exampleCompPlaceholder: ViewContainerRef;
@@ -30,10 +29,6 @@ export class ExampleComponent implements OnInit {
 
     ngOnDestroy() {
         this._sub.unsubscribe();
-    }
-
-    ngAfterViewInit() {
-        this._loader.loadNextToLocation(this._exampleItemsService.getComponentByName(this.currentExample.path), this.exampleCompPlaceholder);
     }
 
     public get currentExample(): ExampleItem {
