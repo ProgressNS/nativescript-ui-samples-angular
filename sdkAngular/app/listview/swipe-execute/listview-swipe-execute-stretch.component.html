@@ -1,4 +1,4 @@
-<GridLayout orientation="vertical" exampleTitle toggleNavButton>
+<GridLayout orientation="vertical" tkExampleTitle tkToggleNavButton>
     <RadListView id="listView" [items]="dataItems" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
         (itemSwipeProgressChanged)="onCellSwiping($event)" (itemSwipeProgressStarted)="onSwipeCellStarted($event)" itemSwipe="true">
         <template tkListItemTemplate let-item="item">

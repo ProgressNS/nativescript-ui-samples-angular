@@ -7,10 +7,10 @@ import { RouterExtensions } from 'nativescript-angular/router';
 import app = require("application");
 
 @Directive({
-    selector: "[toggleNavButton]"
+    selector: "[tkToggleNavButton]"
 })
 
-export class ToggleNavButtonDirective {
+export class TKToggleNavButtonDirective {
     constructor(route: ActivatedRoute, page: Page, private routerExtensions: RouterExtensions) {
         let navigationButton = this.createNavigationButton();
         if (app.android) {

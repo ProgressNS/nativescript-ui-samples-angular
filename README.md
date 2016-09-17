@@ -25,3 +25,9 @@ Steps to run the sample:
 ## Release notes
 For more information about releases, features and breaking changes you can check out the release notes section in the online documentation:
 [Telerik UI for NativeScript release notes](http://docs.telerik.com/devtools/nativescript-ui/release-notes)
+
+## Enable codelyzer
+The project takes advantage of the [codelyzer](https://www.npmjs.com/package/codelyzer) library and its set of tslint rules for static code analysis of the NativeScript + Angular 2 TypeScript project. In order to enable the codelyzer in Visual Studio Code you need to:
+
+- Install tslint extension in VS code IDE by running the `ext install tslint`
+- Add the `"tslint.rulesDirectory": "./node_modules/codelyzer"` to your Visual Studio Code "User Settings" (settings.json)
