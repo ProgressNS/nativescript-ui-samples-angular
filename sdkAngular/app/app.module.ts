@@ -28,7 +28,6 @@ if (applicationModule.android) {
         frescoModule.initialize();
     };
 }
-elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoDrawee);
 createRouteEntryArray(AppExampleComponents);
 // << (hide)
 
