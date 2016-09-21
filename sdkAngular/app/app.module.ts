@@ -22,13 +22,13 @@ import { COMMON_DIRECTIVES } from './navigation/directives';
 // >> (hide)
 import * as applicationModule from "application";
 import * as frescoModule from "nativescript-fresco";
+import { NSFRESCO_DIRECTIVES } from "nativescript-fresco/angular";
 
 if (applicationModule.android) {
     applicationModule.onLaunch = function (intent) {
         frescoModule.initialize();
     };
 }
-elementRegistryModule.registerElement("FrescoDrawee", () => frescoModule.FrescoDrawee);
 createRouteEntryArray(AppExampleComponents);
 // << (hide)
 
@@ -42,6 +42,7 @@ createRouteEntryArray(AppExampleComponents);
         CALENDAR_DIRECTIVES,
         CHART_DIRECTIVES,
         COMMON_DIRECTIVES,
+        NSFRESCO_DIRECTIVES,
         AppComponent,
         ExamplesListDepth1Component,
         ExamplesListDepth2Component,
