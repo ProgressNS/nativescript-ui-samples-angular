@@ -291,7 +291,23 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Item separators",
                         "path": "ListviewItemSeparatorComponent",
                         "subItems": []
-                    }
+                    },
+                    {
+                        "title": "Scroll to index",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "In vertical direction",
+                                "path": "ListviewScrollToIndexVerticalComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "In horizontal direction",
+                                "path": "ListviewScrollToIndexHorizontalComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
                 ]
             },
             {
