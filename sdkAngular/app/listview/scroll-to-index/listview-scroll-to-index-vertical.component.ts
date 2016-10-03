@@ -36,7 +36,13 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
         this.set("myScrollPosition", this._options[selectedIndex]);
     }
 
+    // >> angular-listview-scroll-to-index
     @ViewChild('myRadListView') listViewComponent: listViewAnularModule.RadListViewComponent;
+
+    public onTap() {
+        this.listViewComponent.listView.scrollToIndex(50);
+    }
+    // << angular-listview-scroll-to-index
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
@@ -44,10 +50,6 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getIdenticalDataItems(100));
-    }
-
-    public onTap() {
-        this.listViewComponent.listView.scrollToIndex(50);
     }
 
     public onNavigatingTo(args) {
