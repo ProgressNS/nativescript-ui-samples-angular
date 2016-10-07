@@ -381,6 +381,62 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     }
                 ]
+            },
+            {
+                "title": "DataForm",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting Started",
+                        "path": "DataFormGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Properties adjustment",
+                        "path": "DataFormAdjustmentComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Editor",
+                        "path": "DataFormEditorsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Validators",
+                        "path": "DataFormValidationComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Commit Modes",
+                        "path": "DataFormCommitModesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Groups",
+                        "path": "DataFormGroupsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Events",
+                        "path": "DataFormEventsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Styling",
+                        "path": "DataFormStylingComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Runtime updates",
+                        "path": "DataFormRuntimeUpdatesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Platform adjustments",
+                        "path": "DataFormPlatformSpecificsComponent",
+                        "subItems": []
+                    }
+                ]
             }]
     }
 ]
