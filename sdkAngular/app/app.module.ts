@@ -16,7 +16,6 @@ import { AppExampleComponents } from "./navigation/appExamples";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
-import { ExampleComponent } from "./navigation/example/example.component";
 import { OptionsComponent } from "./navigation/options/options.component";
 import { COMMON_DIRECTIVES } from './navigation/directives';
 
@@ -50,7 +49,6 @@ createRouteEntryArray(AppExampleComponents);
         ExamplesListDepth2Component,
         ExamplesListDepth3Component,
         AppExampleComponents,
-        ExampleComponent,
         OptionsComponent
     ],
     imports: [
