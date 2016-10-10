@@ -8,10 +8,11 @@ The `release` branch is the default one and is tested with the latest NativeScri
 ##Overview
 The UI for NativeScript samples app resides in the **sdkAngular** folder at root repository level. The folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/angular/tutorial/ng-chapter-0.html). The source code of the samples resides in the folders named after each component available in **UI for NativeScript**. The currently available components are:
 
-- Chart
 - Calendar
-- SideDrawer
+- Chart
+- DataForm
 - ListView
+- SideDrawer
 
 ## Running **UI for NativeScript** sample app
 Make sure you are using NativeScript 2.0+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
