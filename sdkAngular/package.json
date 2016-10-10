@@ -29,7 +29,7 @@
     "nativescript-angular": "1.0.0",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.2",
-    "nativescript-telerik-ui-pro": "file:../../../../../../Volumes/distributions/NativeScript/nativescript-ui/development/nativescript-ui-debug-dev-pro.tgz",
+    "nativescript-telerik-ui-pro": "1.4.1",
     "nativescript-unit-test-runner": "^0.3.2",
     "punycode": "1.3.2",
     "querystring": "0.2.0",
