@@ -1,3 +1,18 @@
-<GridLayout tkExampleTitle tkToggleNavButton>
-    
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <Label margin="12" id="myLabel" [text]="eventsText" row="0"></Label>
+    <!-- >> angular-dataform-commit-cancel -->
+    <RadDataForm [source]="person" marginTop="50" row="1" (groupExpanded)="dfGroupExpanded($event)" (groupCollapsed)="dfGroupCollapsed($event)"
+        (propertyCommit)="dfPropertyCommit($event)" (propertyCommitted)="dfPropertyCommitted($event)">
+        <!-- << angular-dataform-commit-cancel -->
+        <TKPropertyGroup tkDataFormGroups collapsible="true" name="Main Info">
+            <TKEntityProperty tkPropertyGroupProperties name="name"></TKEntityProperty>
+            <TKEntityProperty tkPropertyGroupProperties name="age"></TKEntityProperty>
+            <TKEntityProperty tkPropertyGroupProperties name="email"></TKEntityProperty>
+        </TKPropertyGroup>
+        <TKPropertyGroup tkDataFormGroups collapsible="true" name="Address">
+            <TKEntityProperty tkPropertyGroupProperties name="city"></TKEntityProperty>
+            <TKEntityProperty tkPropertyGroupProperties name="street"></TKEntityProperty>
+            <TKEntityProperty tkPropertyGroupProperties name="streetNumber"></TKEntityProperty>
+        </TKPropertyGroup>
+    </RadDataForm>
 </GridLayout>

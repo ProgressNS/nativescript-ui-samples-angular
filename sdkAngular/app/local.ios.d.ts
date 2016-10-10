@@ -18,3 +18,14 @@ declare class UIDevice extends NSObject {
 declare class NSIndexPath extends NSObject { 
     static indexPathForItemInSection(item: number, section: number): NSIndexPath;
 }
+
+declare class NSDateFormatter {
+    static alloc(): NSDateFormatter; // inherited from NSObject
+    init(): NSDateFormatter; // inherited from NSObject
+    dateFormat: any;
+}
+
+declare class TKSolidFill {
+    static solidFillWithColor(color: string): TKSolidFill; // inherited from NSObject
+    dateFormat: any;
+}

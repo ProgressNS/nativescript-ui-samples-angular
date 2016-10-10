@@ -6,3 +6,12 @@ export class User {
     constructor() {
     }
 }
+
+export class AdvancedUser extends User {
+    public phoneNumber: string = "";
+    public id: number = null;
+
+    constructor() {
+        super();
+    }
+}
