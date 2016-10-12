@@ -17,3 +17,15 @@ export class Person {
     }
 }
 // << angular-dataform-person
+
+export class PersonBase {
+    public name: string;
+    public age: number;
+    public birthDate: string;
+
+    constructor(name, age, birthDate) {
+        this.name = name;
+        this.age = age;
+        this.birthDate = birthDate;
+    }
+}

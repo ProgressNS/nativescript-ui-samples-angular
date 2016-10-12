@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import * as applicationModule from "application";
 import * as imageSourceModule from "image-source";
 import { Color } from "color";
-import { Person } from "../data-services/person";
+import { PersonBase } from "../data-services/person";
 
 @Component({
     moduleId: module.id,
@@ -10,16 +10,16 @@ import { Person } from "../data-services/person";
     templateUrl: "dataform-platform-specifics.component.html"
 })
 export class DataFormPlatformSpecificsComponent implements OnInit {
-    private _person: Person;
+    private _person: PersonBase;
 
     constructor() {
     }
 
     ngOnInit() {
-        this._person = new Person("John", 23, "john@company.com", "New York", "5th Avenue", 11);
+        this._person = new PersonBase("John", 23, "1993-05-16");
     }
 
-    get person(): Person {
+    get person(): PersonBase {
         return this._person;
     }
 
