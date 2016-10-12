@@ -25,9 +25,9 @@ import * as frescoModule from "nativescript-fresco";
 import { NSFRESCO_DIRECTIVES } from "nativescript-fresco/angular";
 
 if (applicationModule.android) {
-    applicationModule.onLaunch = function (intent) {
+    applicationModule.on("launch", () => {
         frescoModule.initialize();
-    };
+    });
 }
 createRouteEntryArray(AppExampleComponents);
 // << (hide)
