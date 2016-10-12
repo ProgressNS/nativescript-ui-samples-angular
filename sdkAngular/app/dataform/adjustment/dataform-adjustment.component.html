@@ -1,16 +1,18 @@
 <RadDataForm [source]="person" tkExampleTitle tkToggleNavButton>
-    <TKEntityProperty tkDataFormProperty name="name" displayName="Name" index="0"></TKEntityProperty>
-    <TKEntityProperty tkDataFormProperty name="age" displayName="Age" index="1">
-        <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
-    </TKEntityProperty>
-    <TKEntityProperty tkDataFormProperty name="email" displayName="E-Mail" index="2">
-        <TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
-    </TKEntityProperty>
-    <TKEntityProperty tkDataFormProperty name="city" displayName="City" index="3" valuesProvider="New York, Washington, Los Angeles">
-        <TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
-    </TKEntityProperty>
-    <TKEntityProperty tkDataFormProperty name="street" displayName="Street Name" index="4"></TKEntityProperty>
-    <TKEntityProperty tkDataFormProperty name="streetNumber" displayName="Street Number" index="5">
-        <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
-    </TKEntityProperty>
+	<!-- >> angular-dataform-adjustment-html -->
+	<TKEntityProperty tkDataFormProperty name="name" displayName="Name" index="0"></TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="age" displayName="Age" index="1">
+		<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="email" displayName="E-Mail" index="2">
+		<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="city" displayName="City" index="3" valuesProvider="New York, Washington, Los Angeles">
+		<TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="street" displayName="Street Name" index="4"></TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="streetNumber" displayName="Street Number" index="5">
+		<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+	</TKEntityProperty>
+	<!-- << angular-dataform-adjustment-html -->
 </RadDataForm>

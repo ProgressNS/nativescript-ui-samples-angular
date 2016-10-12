@@ -21,7 +21,9 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
         this._counter = 0;
     }
 
+    // >> angular-runtime-viewchild-code
     @ViewChild('myRuntimeDataFormComp') myRuntimeDataFormComp: dataformAngularModule.RadDataFormComponent;
+    // << angular-runtime-viewchild-code
 
     get person(): Person {
         return this._person;
@@ -93,17 +95,21 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
         property.hidden = value;
     }
 
+    // >> angular-dataform-editors-code
     public changeEditor() {
         var property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("age");
         var propertyEditor = new PropertyEditor();
         propertyEditor.type = "Slider";
         property.editor = propertyEditor;
     }
+    // << angular-dataform-editors-code
 
+    // >> angular-dataform-getting-started-runtime-change
     public changeEditorFill() {
         var property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
         property.editor.style.fillColor = "LightBlue";
     }
+    // << angular-dataform-getting-started-runtime-change
 
     public changeEditorStroke() {
         var property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
@@ -121,10 +127,12 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
         group.titleStyle.labelTextSize = 20;
     }
 
+    // >> angular-dataform-groups-code
     public changeGroupLabelTextColor() {
         var group = this.myRuntimeDataFormComp.dataForm.getGroupByName("Main Info");
         group.titleStyle.labelTextColor = "Blue";
     }
+    // << angular-dataform-groups-code
 
     public changeGroupName() {
         var group = this.myRuntimeDataFormComp.dataForm.getGroupByName("Main Info");

@@ -1,3 +1,4 @@
+// >> angular-dataform-person
 export class Person {
     public name: string;
     public age: number;
@@ -15,3 +16,4 @@ export class Person {
         this.streetNumber = streetNumber;
     }
 }
+// << angular-dataform-person
