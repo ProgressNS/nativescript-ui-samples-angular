@@ -37,7 +37,7 @@
     "nativescript-angular": "next",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "1.4.1",
+    "nativescript-telerik-ui-pro": "next",
     "nativescript-unit-test-runner": "^0.3.2"
   },
   "devDependencies": {
