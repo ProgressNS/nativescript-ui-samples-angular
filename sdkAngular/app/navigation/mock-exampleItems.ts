@@ -201,6 +201,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Item Animations",
+                        "path": "ListViewItemAnimationsComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Item Layouts",
                         "path": "",
                         "subItems": [
@@ -260,6 +265,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Load on Demand",
                         "path": "ListViewLoadOnDemandComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Observable Array",
+                        "path": "ListviewObservableArrayComponent",
                         "subItems": []
                     },
                     {
