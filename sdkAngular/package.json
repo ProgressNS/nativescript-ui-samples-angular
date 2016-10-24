@@ -11,28 +11,28 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-android": {
-      "version": "next"
+      "version": "2.4.0-next-2016-10-19-1286"
     },
     "tns-ios": {
-      "version": "next"
+      "version": "2.4.0-2016-9-28-1"
     }
   },
   "dependencies": {
-    "@angular/common": "~2.1.0",
-    "@angular/compiler": "~2.1.0",
-    "@angular/core": "~2.1.0",
-    "@angular/forms": "~2.1.0",
-    "@angular/http": "~2.1.0",
-    "@angular/platform-browser": "~2.1.0",
-    "@angular/platform-browser-dynamic": "~2.1.0",
-    "@angular/router": "~3.1.0",
+    "@angular/common": "~2.1.1",
+    "@angular/compiler": "~2.1.1",
+    "@angular/core": "~2.1.1",
+    "@angular/forms": "~2.1.1",
+    "@angular/http": "~2.1.1",
+    "@angular/platform-browser": "~2.1.1",
+    "@angular/platform-browser-dynamic": "~2.1.1",
+    "@angular/router": "~3.1.1",
     "rxjs": "5.0.0-beta.12",
     "url": "0.10.3",
     "tns-core-modules": "next",
     "nativescript-angular": "next",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "1.4.1",
+    "nativescript-telerik-ui-pro": "next",
     "nativescript-unit-test-runner": "^0.3.2"
   },
   "devDependencies": {
