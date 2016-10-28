@@ -95,6 +95,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Styling Pie Chart series",
+                                "path": "ChartStylingPieSeriesComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Styling grid",
                                 "path": "ChartStylingGridComponent",
                                 "subItems": []
