@@ -1,4 +1,3 @@
-// >> chart-angular-styling-pie-series.component
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data-services/data.service';
 import { Car } from '../data-services/car';
@@ -23,4 +22,3 @@ export class ChartStylingPieSeriesComponent implements OnInit {
         this._pieSource = new ObservableArray(this._dataService.getPieSource());
     }
 }
-// << chart-angular-styling-pie-series.component

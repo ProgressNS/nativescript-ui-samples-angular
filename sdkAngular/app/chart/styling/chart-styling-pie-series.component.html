@@ -1,5 +1,4 @@
 <GridLayout orientation="vertical" rows="*, *" tkExampleTitle tkToggleNavButton>
-	<!-- >> chart-angular-styling-pie-series -->
 	<RadPieChart height="300" allowAnimation="true" row="0">
 		<PieSeries tkPieSeries seriesName="myPieSeries" selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource"
 			valueProperty="Amount" legendLabel="Brand"></PieSeries>
@@ -14,7 +13,6 @@
 
 		<RadLegendView tkPieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
 	</RadPieChart>
-	<!-- << chart-angular-styling-pie-series -->
 
 	<RadPieChart height="300" allowAnimation="true" row="1">
 		<DonutSeries tkPieSeries seriesName="myDonutSeries" selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4"
