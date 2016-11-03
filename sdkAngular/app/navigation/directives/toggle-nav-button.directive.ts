@@ -13,9 +13,7 @@ import app = require("application");
 export class TKToggleNavButtonDirective {
     constructor(route: ActivatedRoute, page: Page, private routerExtensions: RouterExtensions) {
         let navigationButton = this.createNavigationButton();
-        if (app.android) {
-            page.actionBar.navigationButton = navigationButton;
-        }
+        page.actionBar.navigationButton = navigationButton;
     }
 
     createNavigationButton(): NavigationButton {
@@ -27,6 +25,8 @@ export class TKToggleNavButtonDirective {
             navigationButton.on("tap", (args: EventData) => {
                 this.routerExtensions.backToPreviousPage();
             });
+        } else {
+            navigationButton.text = "Back";
         }
 
         return navigationButton;
