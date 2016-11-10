@@ -1,0 +1,52 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="person" row="1">
+	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Main Info" hidden="false">
+		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
+
+		<TKEntityProperty tkPropertyGroupProperties name="name" index="0" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="age" index="0" columnIndex="1">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="email" index="1" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+
+	<!-- >> angular-dataform-grid-layout-html -->
+	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Address" hidden="false">
+
+		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
+
+		<TKEntityProperty tkPropertyGroupProperties name="city" index="0" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="country" index="0" columnIndex="1">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="street" index="1" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="streetNumber" index="1" columnIndex="1">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+	<!-- << angular-dataform-grid-layout-html -->
+
+	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Bank Info" hidden="false">
+		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
+
+		<TKEntityProperty tkPropertyGroupProperties name="bankName" index="0" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="bankId" index="1" columnIndex="0">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="bankVerificationCode" index="0" columnIndex="1">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="bankExpirationDate" index="1" columnIndex="1">
+			<TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+</RadDataForm>

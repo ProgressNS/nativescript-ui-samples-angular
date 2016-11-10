@@ -450,6 +450,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Platform adjustments",
                         "path": "DataFormPlatformSpecificsComponent",
                         "subItems": []
+                    },
+                     {
+                        "title": "Layouts",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Stack",
+                                "path": "DataformStackLayoutComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid",
+                                "path": "DataformGridLayoutComponent",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             }]
