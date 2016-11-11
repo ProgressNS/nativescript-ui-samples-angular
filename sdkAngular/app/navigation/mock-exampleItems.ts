@@ -471,7 +471,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
-                    }
+                    },
+                    {
+                        "title": "Image Labels",
+                        "path": "DataformImageLabelsComponent",
+                        "subItems": []
+                    },
                 ]
             }]
     }
