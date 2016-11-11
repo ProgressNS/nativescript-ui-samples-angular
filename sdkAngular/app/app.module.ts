@@ -63,8 +63,7 @@ createRouteEntryArray(AppExampleComponents);
     ],
     providers: [
         OptionsService,
-        ExampleItemService,
-
+        ExampleItemService
     ]
 })
 class AppModule { 

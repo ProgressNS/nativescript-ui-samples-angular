@@ -407,6 +407,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Getting Started JSON",
+                        "path": "DataformGettingStartedJsonComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Properties adjustment",
                         "path": "DataFormAdjustmentComponent",
                         "subItems": []
