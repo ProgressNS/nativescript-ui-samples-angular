@@ -1,3 +1,4 @@
+<!-- >> angular-dataform-grid-layout-html -->
 <RadDataForm tkExampleTitle tkToggleNavButton [source]="person" row="1">
 	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Main Info" hidden="false">
 		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
@@ -12,8 +13,7 @@
 			<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
 		</TKEntityProperty>
 	</TKPropertyGroup>
-
-	<!-- >> angular-dataform-grid-layout-html -->
+	<!-- >> (hide) -->
 	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Address" hidden="false">
 
 		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
@@ -31,8 +31,6 @@
 			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
 		</TKEntityProperty>
 	</TKPropertyGroup>
-	<!-- << angular-dataform-grid-layout-html -->
-
 	<TKPropertyGroup tkDataFormGroups collapsible="true" name="Bank Info" hidden="false">
 		<TKDataFormGridLayout tkPropertyGroupLayout></TKDataFormGridLayout>
 
@@ -49,4 +47,6 @@
 			<TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
 		</TKEntityProperty>
 	</TKPropertyGroup>
+	 <!-- << (hide) -->
 </RadDataForm>
+<!-- << angular-dataform-grid-layout-html -->
