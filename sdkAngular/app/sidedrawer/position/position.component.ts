@@ -39,6 +39,13 @@ export class SideDrawerPositionComponent extends DependencyObservable implements
 
     constructor(private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
         super();
+        this.page.on("loaded", this.onLoaded, this);
+    }
+
+    public onLoaded() {
+        if (this.drawer.android) {
+            this.drawer.android.setDrawerCloseThreshold(20);
+        }
     }
 
     ngOnInit() {
