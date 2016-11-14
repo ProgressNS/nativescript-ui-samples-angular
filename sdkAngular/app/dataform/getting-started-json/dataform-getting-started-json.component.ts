@@ -10,7 +10,6 @@ import * as fileSystemModule from "file-system";
 })
 export class DataformGettingStartedJsonComponent implements OnInit {
     private _person: Person;
-    private _personMetadata;
 
     constructor() {
     }
