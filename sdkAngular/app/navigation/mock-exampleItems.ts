@@ -224,11 +224,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "path": "ListViewItemLayoutsGridComponent",
                                 "subItems": []
                             },
-                            {
-                                "title": "Staggered",
-                                "path": "ListviewItemLayoutsStaggeredComponent",
-                                "subItems": []
-                            }
+                            // {
+                            //     "title": "Staggered",
+                            //     "path": "ListviewItemLayoutsStaggeredComponent",
+                            //     "subItems": []
+                            // }
                         ]
                     },
                     {
