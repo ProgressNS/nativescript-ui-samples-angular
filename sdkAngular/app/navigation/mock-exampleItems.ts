@@ -402,12 +402,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "path": "",
                 "subItems": [
                     {
-                        "title": "Getting Started",
+                        "title": "Getting started",
                         "path": "DataFormGettingStartedComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Getting Started JSON",
+                        "title": "Getting started JSON",
                         "path": "DataformGettingStartedJsonComponent",
                         "subItems": []
                     },
@@ -422,7 +422,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Editor",
+                        "title": "Editors",
                         "path": "DataFormEditorsComponent",
                         "subItems": []
                     },
@@ -466,6 +466,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "DataFormPlatformSpecificsComponent",
                         "subItems": []
                     },
+                    {
+                        "title": "Image Labels",
+                        "path": "DataformImageLabelsComponent",
+                        "subItems": []
+                    },
                      {
                         "title": "Layouts",
                         "path": "",
@@ -481,12 +486,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
-                    },
-                    {
-                        "title": "Image Labels",
-                        "path": "DataformImageLabelsComponent",
-                        "subItems": []
-                    },
+                    }
                 ]
             }]
     }
