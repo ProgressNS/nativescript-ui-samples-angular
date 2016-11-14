@@ -452,6 +452,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Styling Advanced",
+                        "path": "DataformStylingAdvancedComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Runtime updates",
                         "path": "DataFormRuntimeUpdatesComponent",
                         "subItems": []
