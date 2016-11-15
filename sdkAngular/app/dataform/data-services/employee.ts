@@ -1,4 +1,4 @@
-// >> angular-dataform-person
+// >> angular-dataform-employee
 export class Employee {
     public name: string;
     public phone: string;
@@ -12,3 +12,4 @@ export class Employee {
         this.employeeId = employeeId;
     }
 }
+// << angular-dataform-employee
