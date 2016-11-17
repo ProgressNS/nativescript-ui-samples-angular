@@ -1,0 +1,9 @@
+<RadDataForm tkExampleTitle tkToggleNavButton  (editorUpdate)="onEditorUpdate($event)" (groupUpdate)="onGroupUpdate($event)" [source]="person">
+    <TKPropertyGroup tkDataFormGroups name="INFO" collapsible="true">
+        <TKEntityProperty tkPropertyGroupProperties name="name"></TKEntityProperty>
+        <TKEntityProperty tkPropertyGroupProperties name="age"></TKEntityProperty>
+        <TKEntityProperty tkPropertyGroupProperties name="birthDate">
+            <TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+    </TKPropertyGroup>
+</RadDataForm>

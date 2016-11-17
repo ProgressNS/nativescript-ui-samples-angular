@@ -3,10 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 import { Page } from "ui/page";
 
 @Directive({
-    selector: "[exampleTitle]"
+    selector: "[tkExampleTitle]"
 })
 
-export class ExampleTitleDirective {
+export class TKExampleTitleDirective {
      constructor(route: ActivatedRoute, page:Page) {
         page.actionBar.title = route.snapshot.data["title"];
     }

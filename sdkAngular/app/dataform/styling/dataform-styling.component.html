@@ -1,0 +1,34 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="person">
+	<TKPropertyGroup tkDataFormGroups name="Main Info" hidden="false">
+		<TKGroupTitleStyle tkPropertyGroupTitleStyle fillColor="#6A1B9A" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif"
+			labelFontStyle="Bold" labelTextColor="White"></TKGroupTitleStyle>
+		<!-- >> angular-dataform-styling-html -->
+		<TKEntityProperty tkPropertyGroupProperties name="name">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#6A1B9A" strokeWidth="2" fillColor="#E040FB" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelTextColor="#6A1B9A"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+		<!-- << angular-dataform-styling-html -->
+		<TKEntityProperty tkPropertyGroupProperties name="age">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="email">
+			<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+	<TKPropertyGroup tkDataFormGroups name="Address" hidden="false">
+		<TKGroupTitleStyle tkPropertyGroupTitleStyle fillColor="#6A1B9A" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif"
+			labelFontStyle="Bold" labelTextColor="White"></TKGroupTitleStyle>
+		<TKEntityProperty tkPropertyGroupProperties name="city">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="street">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="streetNumber">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+</RadDataForm>

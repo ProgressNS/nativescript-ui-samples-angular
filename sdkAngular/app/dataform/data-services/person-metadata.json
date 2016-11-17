@@ -1,0 +1,43 @@
+{
+  "isReadOnly": false,
+  "commitMode": "immediate",
+  "validationMode": "immediate",
+  "propertyAnnotations":
+  [
+    {
+      "name": "name",
+      "displayName": "Name",
+      "index": 0
+    },
+    {
+      "name": "age",
+      "displayName": "Age",
+      "index": 1,
+      "editor": "Number"
+    },
+    {
+      "name": "email",
+      "displayName": "E-Mail",
+      "index": 2,
+      "editor": "Email"
+    },
+    {
+      "name": "city",
+      "displayName": "City",
+      "index": 3,
+      "editor": "Picker",
+      "valuesProvider": ["New York", "Washington", "Los Angeles"]
+    },
+    {
+      "name": "street",
+      "displayName": "Street Name",
+      "index": 4
+    },
+    {
+      "name": "streetNumber",
+      "displayName": "Street Number",
+      "index": 5,
+      "editor": "Number"
+    }
+  ]
+}

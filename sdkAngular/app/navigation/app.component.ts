@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { Routes } from '@angular/router';
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./examples-list/examples-list.component";
-import { ExampleComponent } from "./example/example.component";
 import { OptionsComponent } from "./options/options.component";
 import { ExampleItem } from "./exampleItem";
 import { ExampleItemService } from "./exampleItemService.service";

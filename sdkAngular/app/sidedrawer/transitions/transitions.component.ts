@@ -77,10 +77,6 @@ export class SideDrawerTransitionsComponent implements OnInit {
         this.setDrawerTransition("SlideInOnTopTransition");
     }
 
-    public openSideDrawer() {
-        this.drawer.showDrawer();
-    }
-
     private setDrawerTransition(currentTransitionStr: string) {
         switch (currentTransitionStr) {
             case "FadeTransition":

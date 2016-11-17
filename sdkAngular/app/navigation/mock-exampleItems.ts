@@ -95,6 +95,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Styling Pie Chart series",
+                                "path": "ChartStylingPieSeriesComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Styling grid",
                                 "path": "ChartStylingGridComponent",
                                 "subItems": []
@@ -201,6 +206,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Item Animations",
+                        "path": "ListViewItemAnimationsComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Item Layouts",
                         "path": "",
                         "subItems": [
@@ -214,11 +224,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "path": "ListViewItemLayoutsGridComponent",
                                 "subItems": []
                             },
-                            {
-                                "title": "Staggered",
-                                "path": "ListviewItemLayoutsStaggeredComponent",
-                                "subItems": []
-                            }
+                            // {
+                            //     "title": "Staggered",
+                            //     "path": "ListviewItemLayoutsStaggeredComponent",
+                            //     "subItems": []
+                            // }
                         ]
                     },
                     {
@@ -263,6 +273,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Observable Array",
+                        "path": "ListviewObservableArrayComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Pull to Refresh",
                         "path": "ListViewPullToRefreshComponent",
                         "subItems": []
@@ -291,7 +306,23 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Item separators",
                         "path": "ListviewItemSeparatorComponent",
                         "subItems": []
-                    }
+                    },
+                    {
+                        "title": "Scroll to index",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "In vertical direction",
+                                "path": "ListviewScrollToIndexVerticalComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "In horizontal direction",
+                                "path": "ListviewScrollToIndexHorizontalComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
                 ]
             },
             {
@@ -363,6 +394,98 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Events view modes",
                         "path": "CalendarEventsViewModesComponent",
                         "subItems": []
+                    }
+                ]
+            },
+            {
+                "title": "DataForm",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting started",
+                        "path": "DataFormGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Getting started JSON",
+                        "path": "DataformGettingStartedJsonComponent",
+                        "subItems": []
+                    },
+                                        {
+                        "title": "Properties",
+                        "path": "DataFormAdjustmentComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Properties JSON",
+                        "path": "DataformPropertiesJsonComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Editors",
+                        "path": "DataFormEditorsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Validators",
+                        "path": "DataFormValidationComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Commit Modes",
+                        "path": "DataFormCommitModesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Groups",
+                        "path": "DataFormGroupsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Events",
+                        "path": "DataFormEventsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Styling",
+                        "path": "DataFormStylingComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Styling Advanced",
+                        "path": "DataformStylingAdvancedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Runtime updates",
+                        "path": "DataFormRuntimeUpdatesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Platform adjustments",
+                        "path": "DataFormPlatformSpecificsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Image Labels",
+                        "path": "DataformImageLabelsComponent",
+                        "subItems": []
+                    },
+                     {
+                        "title": "Layouts",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Stack",
+                                "path": "DataformStackLayoutComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid",
+                                "path": "DataformGridLayoutComponent",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             }]

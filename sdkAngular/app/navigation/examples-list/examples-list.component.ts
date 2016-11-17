@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import * as frameModule from "ui/frame";
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth1Component implements OnInit {
+export class ExamplesListDepth1Component implements OnInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
@@ -70,7 +70,7 @@ export class ExamplesListDepth1Component implements OnInit {
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth2Component implements OnInit {
+export class ExamplesListDepth2Component implements OnInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
@@ -130,7 +130,7 @@ export class ExamplesListDepth2Component implements OnInit {
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth3Component implements OnInit {
+export class ExamplesListDepth3Component implements OnInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;

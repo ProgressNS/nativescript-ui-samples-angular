@@ -1,0 +1,34 @@
+<RadDataForm [source]="ticketOrder" tkExampleTitle tkToggleNavButton>
+	<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="0" [valuesProvider]="movies">
+		<TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="date" index="1">
+		<TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="time" index="2">
+		<TKPropertyEditor tkEntityPropertyEditor type="TimePicker"></TKPropertyEditor>
+	</TKEntityProperty>
+	<!-- >> angular-dataform-editors-html -->
+	<TKEntityProperty tkDataFormProperty name="type" displayName="Type" index="3" valuesProvider="2D, 3D">
+		<TKPropertyEditor tkEntityPropertyEditor type="SegmentedEditor"></TKPropertyEditor>
+	</TKEntityProperty>
+	<!-- << angular-dataform-editors-html -->
+	<TKEntityProperty tkDataFormProperty name="price" index="4" readOnly="true">
+		<TKPropertyEditor tkEntityPropertyEditor type="Decimal"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="numberOfTickets" displayName="Number of Tickets" index="5">
+		<TKPropertyEditor tkEntityPropertyEditor type="Stepper"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="contactName" displayName="Contact Name" index="6">
+		<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="contactPhone" displayName="Contact Phone" index="7">
+		<TKPropertyEditor tkEntityPropertyEditor type="Phone"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="contactEmail" displayName="Contact Email" index="8">
+		<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I Agree with Terms" index="9">
+		<TKPropertyEditor tkEntityPropertyEditor type="Switch"></TKPropertyEditor>
+	</TKEntityProperty>
+</RadDataForm>

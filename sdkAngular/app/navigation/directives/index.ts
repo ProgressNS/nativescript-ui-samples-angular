@@ -1,7 +1,7 @@
-import { ExampleTitleDirective } from "./example.directive"
-import { ToggleNavButtonDirective } from "./toggle-nav-button.directive"
+import { TKExampleTitleDirective } from "./example.directive"
+import { TKToggleNavButtonDirective } from "./toggle-nav-button.directive"
 
 export const COMMON_DIRECTIVES = [
-    ExampleTitleDirective,
-    ToggleNavButtonDirective
+    TKExampleTitleDirective,
+    TKToggleNavButtonDirective
 ]
