@@ -32,7 +32,7 @@
     "nativescript-angular": "1.1.3",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "1.5.1",
+    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-release/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "nativescript-unit-test-runner": "^0.3.2"
   },
   "devDependencies": {
