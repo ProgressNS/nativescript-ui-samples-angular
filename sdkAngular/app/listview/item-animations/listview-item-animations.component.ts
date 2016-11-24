@@ -21,6 +21,7 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
     private _itemInsertAnimation: string;
     private _itemDeleteAnimation: string;
     private _optionsParamName: string;
+    private _itemsCount;
 
     constructor(private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
@@ -38,6 +39,7 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
     }
 
     ngOnInit() {
+        this._itemsCount = 0;
         this._dataItems = new ObservableArray<DataItem>();
     }
 
@@ -62,19 +64,19 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
     }
 
     public onAddItemClick(args: ListViewEventData) {
-        var id = Math.round(Math.random() * 100);
-        this._dataItems.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
+        this._dataItems.push(new DataItem(this._itemsCount, "This is a new item: " + this._itemsCount, "This is the new item's description."));
+        this._itemsCount++;
     }
 
     public onResetClick(args: ListViewEventData) {
         while (this._dataItems.length) {
             this._dataItems.pop();
         }
+        this._itemsCount = 0;
     }
 
     public onUpdateItemClick(args: ListViewEventData) {
         for (var index = 0; index < this._dataItems.length; index++) {
-            this._dataItems.getItem(index).id = Math.random() * 100;
             this._dataItems.getItem(index).name = "This is an updated item";
             this._dataItems.getItem(index).description = "This is the updated item's description.";
         }
