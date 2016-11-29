@@ -411,7 +411,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "DataformGettingStartedJsonComponent",
                         "subItems": []
                     },
-                                        {
+                    {
                         "title": "Properties",
                         "path": "DataFormAdjustmentComponent",
                         "subItems": []
@@ -427,9 +427,20 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Validators",
-                        "path": "DataFormValidationComponent",
-                        "subItems": []
+                        "title": "Validation",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Validators",
+                                "path": "DataFormValidationComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Check 'Validation State'",
+                                "path": "DataformCheckErrorsComponent",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Commit Modes",
@@ -471,7 +482,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "DataformImageLabelsComponent",
                         "subItems": []
                     },
-                     {
+                    {
                         "title": "Layouts",
                         "path": "",
                         "subItems": [
