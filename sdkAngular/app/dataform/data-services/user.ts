@@ -9,7 +9,7 @@ export class User {
 
 export class AdvancedUser extends User {
     public phoneNumber: string = "";
-    public id: number = null;
+    public id: number = 0;
 
     constructor() {
         super();
