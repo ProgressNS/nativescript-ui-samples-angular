@@ -1,0 +1,56 @@
+.listItemStackLayout {
+    background-color: white;
+    padding-left: 5;
+}
+
+.labelName {
+    font-size: 20;
+    margin-bottom: 8;
+}
+
+.labelTitle {
+    font-size: 14;
+    font-weight: bold;
+}
+
+.labelText {
+    font-size: 12;
+}
+
+.swipeTemplateStackLayout {
+    background-color: green;
+}
+
+.markStackLayout {
+    background-color: #0099ff;
+    padding: 16;
+}
+
+.archiveStackLayout {
+    background-color: #ffcc99;
+    padding: 16;
+}
+
+.unreadStackLayout {
+    background-color: #ff3300;
+    padding: 16;
+}
+
+.deleteStackLayout {
+    background-color: red;
+    padding: 16;
+}
+
+.readStackLayout {
+    background-color: #ff66ff;
+    padding: 16;
+}
+
+.forwardStackLayout {
+    background-color: #9966ff;
+    padding: 16;
+}
+
+.swipetemplateLabel {
+    size: 20;
+}

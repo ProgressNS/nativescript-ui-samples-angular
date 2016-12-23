@@ -288,6 +288,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Swipe actions",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Getting Started",
+                                "path": "ListViewSwipeActionsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Animated thresholds",
+                                "path": "ListViewSwipeActionsThresholdsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple actions",
+                                "path": "ListViewSwipeActionsMultipleComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
                         "title": "Header and Footer",
                         "path": "ListViewHeaderFooterComponent",
                         "subItems": []
