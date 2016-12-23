@@ -15,7 +15,7 @@
                 <Label class="labelText" [text]="item.text"></Label>
             </StackLayout>
         </template>
-        <!-- >> listview-swipe-actions-multiple-template-xml -->
+        <!-- >> angular-listview-swipe-actions-multiple-template-html -->
             <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="swipeTemplateStackLayout">
                 <GridLayout columns="*, *, *" col="0" id="left-stack">
                     <StackLayout col="0" class="markStackLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
@@ -40,6 +40,6 @@
                     </StackLayout>
                 </GridLayout>
             </GridLayout>
-        <!-- << listview-swipe-actions-multiple-template-xml -->
+        <!-- << angular-listview-swipe-actions-multiple-template-html -->
     </RadListView>
 </GridLayout>

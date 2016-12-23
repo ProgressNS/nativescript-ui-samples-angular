@@ -31,7 +31,7 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    // >> listview-swipe-action-multiple
+    // >> angular-listview-swipe-action-multiple
     public onCellSwiping(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         var swipeView = args['swipeView'];
@@ -56,15 +56,15 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
             View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
         }
     }
-    // << listview-swipe-action-multiple
+    // << angular-listview-swipe-action-multiple
 
-    // >> listview-swipe-action-multiple-limits
+    // >> angular-listview-swipe-action-multiple-limits
     public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         swipeLimits.threshold = args['mainView'].getMeasuredWidth() * 0.2; // 20% of whole width
         swipeLimits.left = swipeLimits.right = args['mainView'].getMeasuredWidth() * 0.7 //70% of whole width
     }
-    // << listview-swipe-action-multiple-limits
+    // << angular-listview-swipe-action-multiple-limits
 
     public onSwipeCellFinished(args: ListViewEventData) {
         if (args.data.x > 200) {
