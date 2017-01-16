@@ -28,7 +28,7 @@
     "@angular/router": "3.4.3",
     "rxjs": "5.0.1",
     "tns-core-modules": "2.4.4",
-    "nativescript-angular": "http://nsbuild01.telerik.com:8080/build/job/nativescript-angular-stable/lastSuccessfulBuild/artifact/nativescript-angular/nativescript-angular-1.4.1.tgz",
+    "nativescript-angular": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/nativescript-angular-stable/lastSuccessfulBuild/artifact/out/nativescript-angular.tgz",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
     "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
