@@ -11,28 +11,28 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-android": {
-      "version": "next"
+      "version": "2.4.1"
     },
     "tns-ios": {
-      "version": "next"
+      "version": "2.4.1"
     }
   },
   "dependencies": {
-    "@angular/common": "2.1.2",
-    "@angular/compiler": "2.1.2",
-    "@angular/core": "2.1.2",
-    "@angular/forms": "2.1.2",
-    "@angular/http": "2.1.2",
-    "@angular/platform-browser": "2.1.2",
-    "@angular/platform-browser-dynamic": "2.1.2",
-    "@angular/router": "~3.1.1",
-    "rxjs": "5.0.0-beta.12",
-    "url": "0.10.3",
-    "tns-core-modules": "next",
-    "nativescript-angular": "next",
+    "@angular/common": "2.4.3",
+    "@angular/compiler": "2.4.3",
+    "@angular/core": "2.4.3",
+    "@angular/forms": "2.4.3",
+    "@angular/http": "2.4.3",
+    "@angular/platform-browser": "2.4.3",
+    "@angular/platform-browser-dynamic": "2.4.3",
+    "@angular/router": "3.4.3",
+    "rxjs": "5.0.1",
+    "tns-core-modules": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-modules-stable/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz",
+    "tns-core-modules-widgets": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-core-modules-widgets-master/lastSuccessfulBuild/artifact/dist/tns-core-modules-widgets.tgz",
+    "nativescript-angular": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/nativescript-angular-stable/lastSuccessfulBuild/artifact/out/nativescript-angular.tgz",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "1.4.1",
+    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "nativescript-unit-test-runner": "^0.3.2"
   },
   "devDependencies": {
@@ -51,6 +51,6 @@
     "mocha": "^2.4.5",
     "nativescript-dev-typescript": "^0.3.1",
     "tslint": "^3.14.0",
-    "typescript": "^2.0.3"
+    "typescript": "2.1.5"
   }
 }

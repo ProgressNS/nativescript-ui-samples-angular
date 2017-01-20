@@ -1,0 +1,14 @@
+<RadDataForm [source]="settings" tkExampleTitle tkToggleNavButton (editorUpdate)="dfEditorUpdate($event)">
+	<TKEntityProperty tkDataFormProperty name="onlyOnWiFi" index="0">
+		<TKPropertyEditor tkEntityPropertyEditor type="Switch"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="networkLimit" index="1">
+		<TKPropertyEditor tkEntityPropertyEditor type="Stepper"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="networkPreference" index="2" [valuesProvider]="prefModes">
+		<TKPropertyEditor tkEntityPropertyEditor type="SegmentedEditor"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="appVolume" index="3">
+		<TKPropertyEditor tkEntityPropertyEditor type="Slider"></TKPropertyEditor>
+	</TKEntityProperty>
+</RadDataForm>

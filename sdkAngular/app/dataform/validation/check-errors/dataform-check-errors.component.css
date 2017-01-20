@@ -1,0 +1,11 @@
+.label {
+    margin-left: 20;
+    margin-top: 20;
+    margin-bottom: 20;
+    font-size: 18;
+}
+
+.labelBold {
+    margin: 20;
+    font-weight: bold;
+}

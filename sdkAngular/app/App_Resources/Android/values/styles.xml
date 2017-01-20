@@ -31,6 +31,18 @@
     <style name="AppTheme" parent="AppThemeBase">
     </style>
 
+    <style name="BrandedSwitchControl" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/ns_color_accent_custom</item>
+        <item name="android:colorControlActivated">@color/ns_color_accent_custom</item>
+        <item name="colorSwitchThumbNormal">@color/ns_color_primary_custom</item>
+        <item name="android:colorForeground">@color/ns_color_primary_secondary</item>
+    </style>
+
+    <style name="BrandedSwitchText" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">#ffa000</item>
+        <item name="android:textSize">9dp</item>
+    </style>
+
     <!-- theme for actioon-bar -->
     <style name="NativeScriptToolbarStyleBase" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/ns_primary</item>

@@ -15,7 +15,7 @@ export class DataFormEventsComponent implements OnInit {
     ngOnInit() {
         this._person = new Person("John", 23, "john@company.com", "New York", "5th Avenue", 11);
 
-        this._eventsText = "defaultText";
+        this._eventsText = "LastEvent: NONE";
     }
 
     // >> angular-dataform-commit-cancel

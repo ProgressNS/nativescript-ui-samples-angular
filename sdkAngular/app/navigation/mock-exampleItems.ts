@@ -224,11 +224,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "path": "ListViewItemLayoutsGridComponent",
                                 "subItems": []
                             },
-                            {
-                                "title": "Staggered",
-                                "path": "ListviewItemLayoutsStaggeredComponent",
-                                "subItems": []
-                            }
+                            // {
+                            //     "title": "Staggered",
+                            //     "path": "ListviewItemLayoutsStaggeredComponent",
+                            //     "subItems": []
+                            // }
                         ]
                     },
                     {
@@ -286,6 +286,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Swipe to Execute",
                         "path": "ListViewSwipeExecuteComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Swipe actions",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Getting Started",
+                                "path": "ListViewSwipeActionsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Animated thresholds",
+                                "path": "ListViewSwipeActionsThresholdsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple actions",
+                                "path": "ListViewSwipeActionsMultipleComponent",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Header and Footer",
@@ -402,24 +423,56 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "path": "",
                 "subItems": [
                     {
-                        "title": "Getting Started",
+                        "title": "Getting started",
                         "path": "DataFormGettingStartedComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Properties adjustment",
+                        "title": "Getting started JSON",
+                        "path": "DataformGettingStartedJsonComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Properties",
                         "path": "DataFormAdjustmentComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Editor",
-                        "path": "DataFormEditorsComponent",
+                        "title": "Properties JSON",
+                        "path": "DataformPropertiesJsonComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Validators",
-                        "path": "DataFormValidationComponent",
-                        "subItems": []
+                        "title": "Editors",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Common",
+                                "path": "DataFormEditorsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "AutoComplete",
+                                "path": "DataFormaAutoCompleteComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Validation",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Validators",
+                                "path": "DataFormValidationComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Check 'Validation State'",
+                                "path": "DataformCheckErrorsComponent",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Commit Modes",
@@ -442,6 +495,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Styling Advanced",
+                        "path": "DataformStylingAdvancedComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Runtime updates",
                         "path": "DataFormRuntimeUpdatesComponent",
                         "subItems": []
@@ -450,6 +508,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Platform adjustments",
                         "path": "DataFormPlatformSpecificsComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Image Labels",
+                        "path": "DataformImageLabelsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Layouts",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Stack",
+                                "path": "DataformStackLayoutComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grid",
+                                "path": "DataformGridLayoutComponent",
+                                "subItems": []
+                            }
+                        ]
                     }
                 ]
             }]
