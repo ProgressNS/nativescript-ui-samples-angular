@@ -22,7 +22,7 @@ import { COMMON_DIRECTIVES } from './navigation/directives';
 // >> (hide)
 import * as applicationModule from "application";
 import * as frescoModule from "nativescript-fresco";
-import { NSFRESCO_DIRECTIVES } from "nativescript-fresco/angular";
+import { TNSFrescoModule } from "nativescript-fresco/angular";
 
 if (applicationModule.android) {
     applicationModule.on("launch", () => {
@@ -43,7 +43,6 @@ createRouteEntryArray(AppExampleComponents);
         CHART_DIRECTIVES,
         DATAFORM_DIRECTIVES,
         COMMON_DIRECTIVES,
-        NSFRESCO_DIRECTIVES,
         AppComponent,
         ExamplesListDepth1Component,
         ExamplesListDepth2Component,
@@ -53,6 +52,7 @@ createRouteEntryArray(AppExampleComponents);
     ],
     imports: [
         NativeScriptModule,
+        TNSFrescoModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(APP_ROUTES)
