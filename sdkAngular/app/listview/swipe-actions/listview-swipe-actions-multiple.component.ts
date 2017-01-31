@@ -17,6 +17,9 @@ import { layout } from "utils/utils";
 export class ListViewSwipeActionsMultipleComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private animationApplied = false;
+    private leftItem: View;
+    private rightItem: View;
+    private mainView: View;
 
     constructor(private _dataItemService: DataItemService) {
     }
@@ -35,25 +38,44 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
     public onCellSwiping(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         var swipeView = args['swipeView'];
-        var mainView = args['mainView'];
-        var leftItem = swipeView.getViewById('left-stack');
-        var rightItem = swipeView.getViewById('right-stack');
+        this.mainView = args['mainView'];
+        this.leftItem = swipeView.getViewById('left-stack');
+        this.rightItem = swipeView.getViewById('right-stack');
 
         if (args.data.x > 0) {
             var leftDimensions = View.measureChild(
-                leftItem.parent,
-                leftItem,
+                this.leftItem.parent,
+                this.leftItem,
                 layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
-                layout.makeMeasureSpec(mainView.getMeasuredHeight(), layout.EXACTLY));
-            View.layoutChild(leftItem.parent, leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+                layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
+            View.layoutChild(this.leftItem.parent, this.leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+            this.hideOtherSwipeTemplateView("left");
         } else {
             var rightDimensions = View.measureChild(
-                rightItem.parent,
-                rightItem,
+                this.rightItem.parent,
+                this.rightItem,
                 layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
-                layout.makeMeasureSpec(mainView.getMeasuredHeight(), layout.EXACTLY));
+                layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
 
-            View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+            View.layoutChild(this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, this.mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+            this.hideOtherSwipeTemplateView("right");
+        }
+    }
+
+    private hideOtherSwipeTemplateView(currentSwipeView: string) {
+        switch (currentSwipeView) {
+            case "left":
+                if (this.rightItem.getActualSize().width != 0) {
+                    View.layoutChild(this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth(), 0, this.mainView.getMeasuredWidth(), 0);
+                }
+                break;
+            case "right":
+                if (this.leftItem.getActualSize().width != 0) {
+                    View.layoutChild(this.leftItem.parent, this.leftItem, 0, 0, 0, 0);
+                }
+                break;
+            default:
+                break;
         }
     }
     // << angular-listview-swipe-action-multiple
@@ -62,7 +84,7 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
     public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         swipeLimits.threshold = args['mainView'].getMeasuredWidth() * 0.2; // 20% of whole width
-        swipeLimits.left = swipeLimits.right = args['mainView'].getMeasuredWidth() * 0.7 //70% of whole width
+        swipeLimits.left = swipeLimits.right = args['mainView'].getMeasuredWidth() * 0.65 // 65% of whole width
     }
     // << angular-listview-swipe-action-multiple-limits
 
