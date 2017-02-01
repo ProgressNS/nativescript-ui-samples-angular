@@ -1,4 +1,4 @@
-.listItemStackLayout {
+.listItemGridLayout {
     background-color: white;
     padding-left: 5;
 }
@@ -17,40 +17,40 @@
     font-size: 12;
 }
 
-.swipeTemplateStackLayout {
-    background-color: green;
-}
-
-.markStackLayout {
+.markGridLayout {
     background-color: #0099ff;
     padding: 16;
 }
 
-.archiveStackLayout {
+.archiveGridLayout {
     background-color: #ffcc99;
     padding: 16;
 }
 
-.unreadStackLayout {
+.unreadGridLayout {
     background-color: #ff3300;
     padding: 16;
 }
 
-.deleteStackLayout {
+.deleteGridLayout {
     background-color: red;
     padding: 16;
 }
 
-.readStackLayout {
+.readGridLayout {
     background-color: #ff66ff;
     padding: 16;
 }
 
-.forwardStackLayout {
+.forwardGridLayout {
     background-color: #9966ff;
     padding: 16;
 }
 
 .swipetemplateLabel {
-    size: 20;
+    font-size: 15;
 }
+
+ .listItemStackLayout {
+    background-color: white;		
+ }

@@ -16,28 +16,28 @@
             </StackLayout>
         </template>
         <!-- >> angular-listview-swipe-actions-multiple-template-html -->
-            <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="swipeTemplateStackLayout">
+            <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto">
                 <GridLayout columns="*, *, *" col="0" id="left-stack">
-                    <StackLayout col="0" class="markStackLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
+                    <GridLayout col="0" class="markGridLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
                         <Label text="mark" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
-                    <StackLayout col="1" class="archiveStackLayout" (tap)="onLeftSwipeClick($event)" id="btnArchive">
+                    </GridLayout>
+                    <GridLayout col="1" class="archiveGridLayout" (tap)="onLeftSwipeClick($event)" id="btnArchive">
                         <Label text="archive" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
-                    <StackLayout col="2" class="unreadStackLayout" (tap)="onLeftSwipeClick($event)" id="btnUnread">
+                    </GridLayout>
+                    <GridLayout col="2" class="unreadGridLayout" (tap)="onLeftSwipeClick($event)" id="btnUnread">
                         <Label text="unread" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
+                    </GridLayout>
                 </GridLayout>
                 <GridLayout columns="*, *, *" col="2" id="right-stack">
-                    <StackLayout col="0" class="deleteStackLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
+                    <GridLayout col="0" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
                         <Label text="delete" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
-                    <StackLayout col="1" class="readStackLayout" (tap)="onRightSwipeClick($event)" id="btnRead">
+                    </GridLayout>
+                    <GridLayout col="1" class="readGridLayout" (tap)="onRightSwipeClick($event)" id="btnRead">
                         <Label text="read" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
-                    <StackLayout col="2" class="forwardStackLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                    </GridLayout>
+                    <GridLayout col="2" class="forwardGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
                         <Label text="forward" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                    </StackLayout>
+                    </GridLayout>
                 </GridLayout>
             </GridLayout>
         <!-- << angular-listview-swipe-actions-multiple-template-html -->
