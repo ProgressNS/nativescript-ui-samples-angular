@@ -1,0 +1,11 @@
+<!-- >> angular-dataform-autocomplete-html -->
+<RadDataForm [source]="booking" tkExampleTitle tkToggleNavButton>
+	<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
+		<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
+	</TKEntityProperty>
+
+	<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
+		<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
+	</TKEntityProperty>
+</RadDataForm>
+<!-- << angular-dataform-autocomplete-html -->
