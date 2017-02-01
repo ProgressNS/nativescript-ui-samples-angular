@@ -32,8 +32,7 @@
     "nativescript-telerik-ui-pro": "1.6.0",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.0.1",
-    "tns-core-modules": "2.5.0",
-    "tns-core-modules-widgets": "2.5.0"
+    "tns-core-modules": "2.5.0"
   },
   "devDependencies": {
     "zone.js": "^0.6.21",
