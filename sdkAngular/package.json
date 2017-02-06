@@ -29,7 +29,7 @@
     "nativescript-angular": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/nativescript-angular-stable/lastSuccessfulBuild/artifact/out/nativescript-angular.tgz",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-pro.tgz",
+    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.0.1",
     "tns-core-modules": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-modules-stable/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz",
