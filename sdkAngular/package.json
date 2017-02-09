@@ -35,7 +35,6 @@
     "tns-core-modules": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-modules-stable/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz"
   },
   "devDependencies": {
-    "zone.js": "^0.6.21",
     "babel-traverse": "6.10.4",
     "babel-types": "6.10.2",
     "babylon": "6.8.1",
@@ -48,8 +47,10 @@
     "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
     "mocha": "^2.4.5",
+    "nativescript-dev-android-snapshot": "0.0.6",
     "nativescript-dev-typescript": "^0.3.1",
     "tslint": "^3.14.0",
-    "typescript": "2.1.5"
+    "typescript": "2.1.5",
+    "zone.js": "^0.6.21"
   }
 }
