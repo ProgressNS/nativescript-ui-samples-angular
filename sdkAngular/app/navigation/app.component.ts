@@ -6,6 +6,7 @@ import { ExampleItem } from "./exampleItem";
 import { ExampleItemService } from "./exampleItemService.service";
 import { AppExampleComponents } from "./appExamples";
 import { EXAMPLEITEMS } from "./mock-exampleItems";
+import { SecondSideDrawerOverNavigationComponent } from "../sidedrawer/over-navigation/second-page/second-over-navigation.component";
 
 @Component({
   selector: "tk-app",
@@ -22,13 +23,13 @@ export function createRouteEntryArray(components) {
   APP_ROUTES.push({ path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component });
   APP_ROUTES.push({ path: "examples-depth-3/:parentTitle/:tappedTitle", component: ExamplesListDepth3Component });
   APP_ROUTES.push({ path: "options", component: OptionsComponent });
+  APP_ROUTES.push({ path: "side-drawer-over-nav-second-page", component: SecondSideDrawerOverNavigationComponent });
 
   for (let component of components) {
     var exampleItem = service.getExampleItemByComponent(EXAMPLEITEMS, component.name);
-    if (!exampleItem) {
-      throw new Error("No ExampleItem named '" + component.name + "' found.");
+    if (exampleItem) {
+      APP_ROUTES.push({ path: exampleItem.path, component: component, data: { title: exampleItem.title } });
     }
-    APP_ROUTES.push({ path: exampleItem.path, component: component, data: { title: exampleItem.title } });
   }
 }
 

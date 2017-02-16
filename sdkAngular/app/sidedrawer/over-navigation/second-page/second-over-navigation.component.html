@@ -1,4 +1,7 @@
-<!-- >> angular-sidedrawer-over-navigation-html -->
+<ActionBar title="Inner Page">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+</ActionBar>
+
 <RadSideDrawer tkDrawerPageSideDrawer showOverNavigation="true" tkExampleTitle tkToggleNavButton>
 	 <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
@@ -20,6 +23,4 @@
 <StackLayout tkMainContent>
     <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
     <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-    <Button text="Go to next page" (tap)=goToSecondPage()></Button>
 </StackLayout>
-<!-- << angular-sidedrawer-over-navigation-html -->
