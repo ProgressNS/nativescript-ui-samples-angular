@@ -1,11 +1,14 @@
 import { NativeScriptModule, platformNativeScriptDynamic } from "nativescript-angular/platform";
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
+import { PAGE_FACTORY, PageFactory, PageFactoryOptions } from "nativescript-angular/platform-providers";
 // >> using-global-directives
 import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui-pro/listview/angular';
 import { CALENDAR_DIRECTIVES } from 'nativescript-telerik-ui-pro/calendar/angular';
 import { CHART_DIRECTIVES } from 'nativescript-telerik-ui-pro/chart/angular';
 import { DATAFORM_DIRECTIVES } from 'nativescript-telerik-ui-pro/dataform/angular';
+
+import { DrawerPage } from "nativescript-telerik-ui-pro/sidedrawer/drawerpage";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples
 import { NativeScriptRouterModule } from "nativescript-angular/router";
@@ -31,6 +34,14 @@ if (applicationModule.android) {
 }
 createRouteEntryArray(AppExampleComponents);
 // << (hide)
+
+const customPageFactoryProvider = {
+    provide: PAGE_FACTORY,
+    useValue: (opts: PageFactoryOptions) => {
+        const page = new DrawerPage();
+        return page;
+    }
+};
 
 @NgModule({
     bootstrap: [
@@ -70,5 +81,5 @@ class AppModule {
 
 }
 
-platformNativeScriptDynamic().bootstrapModule(AppModule);
+platformNativeScriptDynamic(undefined, [customPageFactoryProvider]).bootstrapModule(AppModule);
 // << using-global-directives

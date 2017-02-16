@@ -1,0 +1,21 @@
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+
+.sideStackLayout {
+    background-color: gray;
+}
+
+.sideTitleStackLayout {
+    padding: 10;
+    text-align: center;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
+}

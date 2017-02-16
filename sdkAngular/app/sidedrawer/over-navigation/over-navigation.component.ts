@@ -9,12 +9,12 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 
 @Component({
     moduleId: module.id,
-    selector: "tk-sidedrawer-getting-started",
-    templateUrl: 'getting-started.component.html',
-    styleUrls: ['getting-started.component.css']
+    selector: "tk-sidedrawer-over-navigation",
+    templateUrl: 'over-navigation.component.html',
+    styleUrls: ['over-navigation.component.css']
 })
 @Injectable()
-export class SideDrawerGettingStartedComponent extends Observable implements OnInit {
+export class SideDrawerOverNavigationComponent extends Observable implements OnInit {
     constructor(private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
         super();
     }
