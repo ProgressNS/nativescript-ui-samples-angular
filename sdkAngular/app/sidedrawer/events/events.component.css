@@ -1,6 +1,16 @@
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
 .drawerContentText {
     font-size: 13;
     padding: 10;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
 }
 
 .sideStackLayout {

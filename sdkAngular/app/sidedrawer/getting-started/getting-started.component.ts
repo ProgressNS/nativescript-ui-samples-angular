@@ -38,4 +38,7 @@ export class SideDrawerGettingStartedComponent implements OnInit {
         this.drawer.showDrawer();
     }
 
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
 }

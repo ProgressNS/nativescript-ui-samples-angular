@@ -39,6 +39,10 @@ export class SideDrawerOverNavigationComponent implements OnInit {
         this.drawer.showDrawer();
     }
 
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
+
     public goToSecondPage() {
         this.drawer.showDrawer();
         this._router.navigateByUrl("side-drawer-over-nav-second-page");

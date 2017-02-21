@@ -15,96 +15,88 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 @Injectable()
 // >> sidedrawer-angular-transition-definition
 export class SideDrawerTransitionsComponent implements OnInit {
-    constructor(private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
-        this._page.on("loaded", this.onLoaded, this);
+    private _sideDrawerTransition: DrawerTransitionBase;
+
+    constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
 
     private drawer: SideDrawerType;
 
-    public sideDrawerTransition: DrawerTransitionBase;
-    // << sidedrawer-angular-transition-definition
 
     public currentTransition: string;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        this.sideDrawerTransition = new PushTransition();
         this._changeDetectionRef.detectChanges();
     }
 
     ngOnInit() {
     }
 
-    public onLoaded(args) {
-        this.setDrawerTransition("PushTransition");
+    get sideDrawerTransition(): DrawerTransitionBase {
+        return this._sideDrawerTransition;
     }
 
+    set sideDrawerTransition(value: DrawerTransitionBase) {
+        this._sideDrawerTransition = value;
+    }
 
-    public openDrawer() {
+    // >> (hide)
+
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
+    public onFadeTransitionTap(args) {
+        this.sideDrawerTransition = new FadeTransition();
+        this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onFadeTransitionTap(args) {
-        this.setDrawerTransition("FadeTransition");
-    }
-
     public onPushTransitionTap(args) {
-        this.setDrawerTransition("PushTransition");
+        this.sideDrawerTransition = new PushTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onRevealTransitionTap(args) {
-        this.setDrawerTransition("RevealTransition");
+        this.sideDrawerTransition = new RevealTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onReverseSlideOutTransitionTap(args) {
-        this.setDrawerTransition("ReverseSlideOutTransition");
+        this.sideDrawerTransition = new ReverseSlideOutTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onScaleDownPusherTransitionTap(args) {
-        this.setDrawerTransition("ScaleDownPusherTransition");
+        this.sideDrawerTransition = new ScaleDownPusherTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onScaleUpTransitionTap(args) {
-        this.setDrawerTransition("ScaleUpTransition");
+        this.sideDrawerTransition = new ScaleUpTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onSlideAlongTransitionTap(args) {
-        this.setDrawerTransition("SlideAlongTransition");
+        this.sideDrawerTransition = new SlideAlongTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
 
     public onSlideInOnTopTransitionTap(args) {
-        this.setDrawerTransition("SlideInOnTopTransition");
+        this.sideDrawerTransition = new SlideInOnTopTransition();
+        this._changeDetectionRef.detectChanges();
+        this.drawer.showDrawer();
     }
-
-    private setDrawerTransition(currentTransitionStr: string) {
-        switch (currentTransitionStr) {
-            case "FadeTransition":
-                this.sideDrawerTransition = new FadeTransition();
-                break;
-            case "PushTransition":
-                this.sideDrawerTransition = new PushTransition();
-                break;
-            case "RevealTransition":
-                this.sideDrawerTransition = new RevealTransition();
-                break;
-            case "ReverseSlideOutTransition":
-                this.sideDrawerTransition = new ReverseSlideOutTransition();
-                break;
-            case "ScaleDownPusherTransition":
-                this.sideDrawerTransition = new ScaleDownPusherTransition();
-                break;
-            case "ScaleUpTransition":
-                this.sideDrawerTransition = new ScaleUpTransition();
-                break;
-            case "SlideAlongTransition":
-                this.sideDrawerTransition = new SlideAlongTransition();
-                break;
-            case "SlideInOnTopTransition":
-                this.sideDrawerTransition = new SlideInOnTopTransition();
-                break;
-        }
-
-        this.currentTransition = currentTransitionStr;
-    }
+    // << (hide)
 }
+// << sidedrawer-angular-transition-definition
+

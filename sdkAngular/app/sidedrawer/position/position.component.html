@@ -15,14 +15,20 @@
                 <Label text="Starred" class="sideLabel"></Label>
                 <Label text="Sent Mail" class="sideLabel"></Label>
                 <Label text="Drafts" class="sideLabel"></Label>
+                <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
             </StackLayout>
         </ScrollView>
     </StackLayout>
     <StackLayout tkMainContent class="mainContent">
-        <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom."
+        <ScrollView>
+            <StackLayout>
+                <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom."
             textWrap="true" class="drawerContentText"></Label>
-        <Button text="Open" (tap)="onOpenDrawerTap()" class="drawerContentButton"></Button>
-        <Label text="Position:" class="drawerContentText"></Label>
-        <ListPicker [items]="locations" [(ngModel)]="selectedLocationIndex"></ListPicker>
+                <Button text="Left" (tap)="onLeftLocationTap()" class="drawerContentButton"></Button>
+                <Button text="Top" (tap)="onTopLocationTap()" class="drawerContentButton"></Button>
+                <Button text="Right" (tap)="onRightLocationTap()" class="drawerContentButton"></Button>
+                <Button text="Bottom" (tap)="onBottomLocationTap()" class="drawerContentButton"></Button>
+            </StackLayout>
+          </ScrollView>
     </StackLayout>
 </RadSideDrawer>

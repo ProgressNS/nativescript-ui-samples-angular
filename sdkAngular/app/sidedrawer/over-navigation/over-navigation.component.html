@@ -14,11 +14,12 @@
             <Label text="Sent Mail" class="sideLabel"></Label>
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
+        <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
     </StackLayout>
     <StackLayout tkMainContent>
         <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-        <Button text="Go to next page" (tap)=goToSecondPage()></Button>
+        <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
+        <Button text="Go to next page" (tap)="goToSecondPage()" class="drawerContentButton"></Button>
     </StackLayout>
 </RadSideDrawer>
 <!-- << angular-sidedrawer-over-navigation-html -->

@@ -15,14 +15,10 @@
             <Label text="Sent Mail" class="sideLabel"></Label>
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
+        <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
     </StackLayout>
     <ScrollView tkMainContent>
         <StackLayout class="mainStackLayout">
-            <StackLayout orientation="horizontal">
-                <Label text="Current transition: " class="mainContentlabel"></Label>
-                <Label [text]="currentTransition" class="mainContentlabel"></Label>
-            </StackLayout>
-            <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
             <Button text="Fade Transition" (tap)="onFadeTransitionTap()" class="drawerContentButton"></Button>
             <Button text="Push Transition" (tap)="onPushTransitionTap()" class="drawerContentButton"></Button>
             <Button text="Reveal Transition" (tap)="onRevealTransitionTap()" class="drawerContentButton"></Button>

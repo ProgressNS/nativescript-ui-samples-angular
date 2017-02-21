@@ -18,8 +18,7 @@ export class SideDrawerEventsComponent implements OnInit {
     private _currentNotification: string;
     private _sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
 
-    constructor(private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
-        this._page.on("loaded", this.onLoaded, this);
+    constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -27,14 +26,11 @@ export class SideDrawerEventsComponent implements OnInit {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        this._sideDrawerTransition = new sideDrawerModule.PushTransition();
         this._changeDetectionRef.detectChanges();
     }
 
     ngOnInit() {
-    }
-
-    public onLoaded(args) {
-        this._sideDrawerTransition = new sideDrawerModule.PushTransition();
     }
 
     public get sideDrawerTransition(): sideDrawerModule.DrawerTransitionBase {
@@ -47,6 +43,10 @@ export class SideDrawerEventsComponent implements OnInit {
 
     public openDrawer() {
         this.drawer.showDrawer();
+    }
+
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
     }
 
     public onDrawerOpening() {

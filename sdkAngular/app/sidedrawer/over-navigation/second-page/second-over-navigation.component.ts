@@ -40,6 +40,10 @@ export class SecondSideDrawerOverNavigationComponent {
         this.drawer.showDrawer();
     }
 
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
+
     public onNavigationButtonTap() {
         frameModule.topmost().goBack();
     }
