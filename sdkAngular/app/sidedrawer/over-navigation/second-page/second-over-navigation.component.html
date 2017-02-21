@@ -2,8 +2,8 @@
     <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
 </ActionBar>
 
-<RadSideDrawer tkDrawerPageSideDrawer showOverNavigation="true">
-	 <StackLayout tkDrawerContent class="sideStackLayout">
+<RadSideDrawer showOverNavigation="true">
+    <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
         </StackLayout>
@@ -18,9 +18,8 @@
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
     </StackLayout>
+    <StackLayout tkMainContent>
+        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+    </StackLayout>
 </RadSideDrawer>
-
-<StackLayout tkMainContent>
-    <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-    <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-</StackLayout>

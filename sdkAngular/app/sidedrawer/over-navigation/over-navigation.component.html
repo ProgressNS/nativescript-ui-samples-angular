@@ -1,6 +1,6 @@
 <!-- >> angular-sidedrawer-over-navigation-html -->
-<RadSideDrawer tkDrawerPageSideDrawer showOverNavigation="true" tkExampleTitle tkToggleNavButton>
-	 <StackLayout tkDrawerContent class="sideStackLayout">
+<RadSideDrawer showOverNavigation="true" tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
         </StackLayout>
@@ -15,11 +15,10 @@
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
     </StackLayout>
+    <StackLayout tkMainContent>
+        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        <Button text="Go to next page" (tap)=goToSecondPage()></Button>
+    </StackLayout>
 </RadSideDrawer>
-
-<StackLayout tkMainContent>
-    <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-    <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-    <Button text="Go to next page" (tap)=goToSecondPage()></Button>
-</StackLayout>
 <!-- << angular-sidedrawer-over-navigation-html -->
