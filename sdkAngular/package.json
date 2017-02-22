@@ -11,10 +11,10 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-android": {
-      "version": "2.4.1"
+      "version": "2.5.0"
     },
     "tns-ios": {
-      "version": "2.4.1"
+      "version": "2.5.0"
     }
   },
   "dependencies": {
@@ -33,11 +33,9 @@
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.0.1",
     "tns-core-modules": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-modules-stable/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz",
-    "tns-core-modules-widgets": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-core-modules-widgets-master/lastSuccessfulBuild/artifact/dist/tns-core-modules-widgets.tgz",
-    "tns-ios": "^2.6.0-2017-1-17-1"
+    "tns-core-modules-widgets": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-core-modules-widgets-master/lastSuccessfulBuild/artifact/dist/tns-core-modules-widgets.tgz"
   },
   "devDependencies": {
-    "zone.js": "^0.6.21",
     "babel-traverse": "6.10.4",
     "babel-types": "6.10.2",
     "babylon": "6.8.1",
@@ -50,8 +48,10 @@
     "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
     "mocha": "^2.4.5",
+    "nativescript-dev-android-snapshot": "0.0.6",
     "nativescript-dev-typescript": "^0.3.1",
     "tslint": "^3.14.0",
-    "typescript": "2.1.5"
+    "typescript": "2.1.5",
+    "zone.js": "^0.6.21"
   }
 }

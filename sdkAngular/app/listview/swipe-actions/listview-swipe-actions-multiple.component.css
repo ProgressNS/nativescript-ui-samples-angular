@@ -1,4 +1,4 @@
-.listItemGridLayout {
+.listItemStackLayout {
     background-color: white;
     padding-left: 5;
 }
@@ -50,7 +50,3 @@
 .swipetemplateLabel {
     font-size: 15;
 }
-
- .listItemStackLayout {
-    background-color: white;		
- }
