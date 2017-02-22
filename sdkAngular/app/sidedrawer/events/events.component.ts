@@ -50,22 +50,18 @@ export class SideDrawerEventsComponent implements OnInit {
     }
 
     public onDrawerOpening() {
-        console.log("Drawer opening");
         this._currentNotification = "Drawer opening";
     }
 
     public onDrawerOpened() {
-        console.log("Drawer opened");
         this._currentNotification = "Drawer opened";
     }
 
     public onDrawerClosing() {
-        console.log("Drawer closing");
         this._currentNotification = "Drawer closing";
     }
 
     public onDrawerClosed() {
-        console.log("Drawer closed");
         this._currentNotification = "Drawer closed";
     }
 }
