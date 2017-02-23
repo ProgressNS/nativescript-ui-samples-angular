@@ -1,9 +1,9 @@
 import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "tns-core-modules/ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
-import { Page } from "tns-core-modules/ui/page";
-import { ActionItem } from "tns-core-modules/ui/action-bar";
-import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
+import { Page } from "ui/page";
+import { ActionItem } from "ui/action-bar";
+import { DrawerTransitionBase, PushTransition } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 // >> sidedrawer-angular-callbacks-definition
@@ -16,7 +16,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
 @Injectable()
 export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
     private _currentNotification: string;
-    private _sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
+    private _sideDrawerTransition: DrawerTransitionBase;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
@@ -33,7 +33,7 @@ export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
     ngOnInit() {
     }
 
-    public get sideDrawerTransition(): sideDrawerModule.DrawerTransitionBase {
+    public get sideDrawerTransition(): DrawerTransitionBase {
         return this._sideDrawerTransition;
     }
 

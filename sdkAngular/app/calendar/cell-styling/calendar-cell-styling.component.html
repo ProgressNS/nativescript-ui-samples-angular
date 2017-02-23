@@ -1,0 +1,17 @@
+<ActionBar title="Styling">
+        <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+
+        <ActionItem *ifAndroid text="Month" android.position="popup" (tap)="onMonthTap()"></ActionItem>
+        <ActionItem *ifAndroid text="Week" android.position="popup" (tap)="onWeekTap()"></ActionItem>
+        <ActionItem *ifAndroid text="Year" android.position="popup" (tap)="onYearTap()"></ActionItem>
+        <ActionItem *ifAndroid text="Month names" android.position="popup" (tap)="onMonthNamesTap()"></ActionItem>
+
+        <ActionItem *ifIOS text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
+</ActionBar>
+
+<!-- >> angular-calendar-styling-html -->
+<StackLayout>
+        <RadCalendar id="calendar" [monthViewStyle]="monthViewStyle" [weekViewStyle]="weekViewStyle" [monthNamesViewStyle]="monthNamesViewStyle"
+                [yearViewStyle]="yearViewStyle" [viewMode]="viewMode"></RadCalendar>
+</StackLayout>
+<!-- << angular-calendar-styling-html -->

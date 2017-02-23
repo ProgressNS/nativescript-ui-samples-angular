@@ -3,8 +3,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview/angular");
-import listViewAngularModule = require("nativescript-telerik-ui-pro/listview/angular");
+import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
 
 @Component({
     moduleId: module.id,
@@ -21,7 +20,7 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    @ViewChild('myRadListView') listView: listViewAngularModule.RadListViewComponent;
+    @ViewChild('myRadListView') listView: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;

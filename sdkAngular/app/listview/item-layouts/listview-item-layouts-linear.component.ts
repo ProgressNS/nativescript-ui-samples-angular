@@ -2,9 +2,9 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import * as Application from "tns-core-modules/application";
-import * as Timer  from "tns-core-modules/timer";
+import { ListViewLinearLayout } from "nativescript-telerik-ui-pro/listview";
+import * as Application from "application";
+import * as Timer  from "timer";
 import { DataItemService } from "../dataItem.service";
 
 @Component({
@@ -16,7 +16,7 @@ import { DataItemService } from "../dataItem.service";
 })
 export class ListviewItemLayoutsLinearComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
-    private _layout: listViewModule.ListViewLinearLayout;
+    private _layout: ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef, private _dataItemService: DataItemService) {
     }

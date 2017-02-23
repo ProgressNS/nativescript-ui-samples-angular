@@ -1,20 +1,19 @@
-
 import { Injectable } from '@angular/core';
 import { CalendarEvent } from 'nativescript-telerik-ui-pro/calendar' 
-import { Color } from "tns-core-modules/color";
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import { Color } from "color";
+import { CalendarMonthViewStyle, DayCellStyle, CellStyle, CalendarWeekViewStyle, CalendarYearViewStyle, MonthCellStyle, CalendarMonthNamesViewStyle } from "nativescript-telerik-ui-pro/calendar";
 
 // >> calendar-styling-service
 @Injectable()
 export class CalendarStylesService {
-    getMonthViewStyle(): calendarModule.CalendarMonthViewStyle {
-        var monthViewStyle = new calendarModule.CalendarMonthViewStyle();
+    getMonthViewStyle(): CalendarMonthViewStyle {
+        var monthViewStyle = new CalendarMonthViewStyle();
         monthViewStyle.backgroundColor = "Gray";
         monthViewStyle.showTitle = true;
         monthViewStyle.showWeekNumbers = true;
         monthViewStyle.showDayNames = true;
        
-        var todayCellStyle = new calendarModule.DayCellStyle();
+        var todayCellStyle = new DayCellStyle();
         todayCellStyle.cellBackgroundColor = "#66bbae";
         todayCellStyle.cellBorderWidth = 2;
         todayCellStyle.cellBorderColor = "#f1e8ca";
@@ -24,7 +23,7 @@ export class CalendarStylesService {
         todayCellStyle.cellTextSize = 14;
         monthViewStyle.todayCellStyle = todayCellStyle;
         
-        var dayCellStyle = new calendarModule.DayCellStyle();
+        var dayCellStyle = new DayCellStyle();
         dayCellStyle.showEventsText = true;
         dayCellStyle.eventTextColor = "White";
         dayCellStyle.eventFontName = "Times New Roman";
@@ -42,7 +41,7 @@ export class CalendarStylesService {
         dayCellStyle.cellTextSize = 10;
         monthViewStyle.dayCellStyle = dayCellStyle;
         
-        var weekendCellStyle = new calendarModule.DayCellStyle();
+        var weekendCellStyle = new DayCellStyle();
         weekendCellStyle.eventTextColor = "BlueViolet";
         weekendCellStyle.eventFontName = "Times New Roman";
         weekendCellStyle.eventFontStyle = "BoldItalic";
@@ -59,7 +58,7 @@ export class CalendarStylesService {
         weekendCellStyle.cellTextSize = 12;
         monthViewStyle.weekendCellStyle = weekendCellStyle;
         
-        var selectedCellStyle = new calendarModule.DayCellStyle();
+        var selectedCellStyle = new DayCellStyle();
         selectedCellStyle.eventTextColor = "Blue";
         selectedCellStyle.eventFontName = "Times New Roman";
         selectedCellStyle.eventFontStyle = "Bold";
@@ -76,7 +75,7 @@ export class CalendarStylesService {
         selectedCellStyle.cellTextSize = 18;
         monthViewStyle.selectedDayCellStyle = selectedCellStyle;
         
-        var weekNumberCellStyle = new calendarModule.CellStyle();
+        var weekNumberCellStyle = new CellStyle();
         weekNumberCellStyle.cellBackgroundColor = "#bbcbdb";
         weekNumberCellStyle.cellBorderWidth = 1;
         weekNumberCellStyle.cellBorderColor = "#f1e8ca";
@@ -86,7 +85,7 @@ export class CalendarStylesService {
         weekNumberCellStyle.cellTextSize = 8;
         monthViewStyle.weekNumberCellStyle = weekNumberCellStyle;
         
-        var dayNameCellStyle = new calendarModule.CellStyle();
+        var dayNameCellStyle = new CellStyle();
         dayNameCellStyle.cellBackgroundColor = "#f1e8ca";
         dayNameCellStyle.cellBorderWidth = 1;
         dayNameCellStyle.cellBorderColor = "#745151";
@@ -96,7 +95,7 @@ export class CalendarStylesService {
         dayNameCellStyle.cellTextSize = 10;
         monthViewStyle.dayNameCellStyle = dayNameCellStyle;
         
-        var titleCellStyle = new calendarModule.DayCellStyle();
+        var titleCellStyle = new DayCellStyle();
         titleCellStyle.cellBackgroundColor = "#bbcbdb";
         titleCellStyle.cellBorderWidth = 1;
         titleCellStyle.cellBorderColor = "#745151";
@@ -109,14 +108,14 @@ export class CalendarStylesService {
         return monthViewStyle;
     }
     
-    getWeekViewStyle(): calendarModule.CalendarWeekViewStyle {
-        var weekViewStyle = new calendarModule.CalendarWeekViewStyle();
+    getWeekViewStyle(): CalendarWeekViewStyle {
+        var weekViewStyle = new CalendarWeekViewStyle();
         weekViewStyle.backgroundColor = "#dd855c";
         weekViewStyle.showTitle = true;
         weekViewStyle.showWeekNumbers = true;
         weekViewStyle.showDayNames = true;
         
-        var todayCellStyle = new calendarModule.DayCellStyle();
+        var todayCellStyle = new DayCellStyle();
         todayCellStyle.cellBackgroundColor = "#dd855c";
         todayCellStyle.cellBorderWidth = 1;
         todayCellStyle.cellBorderColor = "#f1e8ca";
@@ -126,7 +125,7 @@ export class CalendarStylesService {
         todayCellStyle.cellTextSize = 14;
         weekViewStyle.todayCellStyle = todayCellStyle;
         
-        var dayCellStyle = new calendarModule.DayCellStyle();
+        var dayCellStyle = new DayCellStyle();
         dayCellStyle.showEventsText = true;
         dayCellStyle.eventTextColor = "White";
         dayCellStyle.eventFontName = "Times New Roman";
@@ -144,7 +143,7 @@ export class CalendarStylesService {
         dayCellStyle.cellTextSize = 10;
         weekViewStyle.dayCellStyle = dayCellStyle;
         
-        var weekendCellStyle = new calendarModule.DayCellStyle();
+        var weekendCellStyle = new DayCellStyle();
         weekendCellStyle.eventTextColor = "BlueViolet";
         weekendCellStyle.eventFontName = "Times New Roman";
         weekendCellStyle.eventFontStyle = "BoldItalic";
@@ -161,7 +160,7 @@ export class CalendarStylesService {
         weekendCellStyle.cellTextSize = 12;
         weekViewStyle.weekendCellStyle = weekendCellStyle;
         
-        var selectedCellStyle = new calendarModule.DayCellStyle();
+        var selectedCellStyle = new DayCellStyle();
         selectedCellStyle.eventTextColor = "Blue";
         selectedCellStyle.eventFontName = "Times New Roman";
         selectedCellStyle.eventFontStyle = "Bold";
@@ -178,7 +177,7 @@ export class CalendarStylesService {
         selectedCellStyle.cellTextSize = 18;
         weekViewStyle.selectedDayCellStyle = selectedCellStyle;
         
-        var weekNumberCellStyle = new calendarModule.CellStyle();
+        var weekNumberCellStyle = new CellStyle();
         weekNumberCellStyle.cellBackgroundColor = "#bbcbdb";
         weekNumberCellStyle.cellBorderWidth = 2;
         weekNumberCellStyle.cellBorderColor = "#745151";
@@ -188,7 +187,7 @@ export class CalendarStylesService {
         weekNumberCellStyle.cellTextSize = 8;
         weekViewStyle.weekNumberCellStyle = weekNumberCellStyle;
         
-        var dayNameCellStyle = new calendarModule.CellStyle();
+        var dayNameCellStyle = new CellStyle();
         dayNameCellStyle.cellBackgroundColor = "#bbcbdb";
         dayNameCellStyle.cellBorderWidth = 1;
         dayNameCellStyle.cellBorderColor = "#f1e8ca";
@@ -198,7 +197,7 @@ export class CalendarStylesService {
         dayNameCellStyle.cellTextSize = 10;
         weekViewStyle.dayNameCellStyle = dayNameCellStyle;
         
-        var titleCellStyle = new calendarModule.DayCellStyle();
+        var titleCellStyle = new DayCellStyle();
         titleCellStyle.cellBackgroundColor = "#dd855c";
         titleCellStyle.cellBorderWidth = 1;
         titleCellStyle.cellBorderColor = "#f1e8ca";
@@ -211,10 +210,10 @@ export class CalendarStylesService {
         return weekViewStyle;
     }
     
-    getYearViewStyle(): calendarModule.CalendarYearViewStyle {
-        var yearViewStyle = new calendarModule.CalendarYearViewStyle();
+    getYearViewStyle(): CalendarYearViewStyle {
+        var yearViewStyle = new CalendarYearViewStyle();
         
-        var titleCellStyle = new calendarModule.DayCellStyle();
+        var titleCellStyle = new DayCellStyle();
         titleCellStyle.cellBackgroundColor = "#dd855c";
         titleCellStyle.cellBorderWidth = 2;
         titleCellStyle.cellBorderColor = "#f1e8ca";
@@ -224,7 +223,7 @@ export class CalendarStylesService {
         titleCellStyle.cellTextSize = 18;
         yearViewStyle.titleCellStyle = titleCellStyle;
         
-        var monthCellStyle = new calendarModule.MonthCellStyle();
+        var monthCellStyle = new MonthCellStyle();
         monthCellStyle.weekendTextColor = "#dd855c";
         monthCellStyle.todayTextColor = "Black";
         monthCellStyle.dayTextColor = "#745151";
@@ -244,10 +243,10 @@ export class CalendarStylesService {
         return yearViewStyle;
     }
     
-    getMonthNamesViewStyle(): calendarModule.CalendarMonthNamesViewStyle {
-        var monthNamesViewStyle = new calendarModule.CalendarMonthNamesViewStyle();
+    getMonthNamesViewStyle(): CalendarMonthNamesViewStyle {
+        var monthNamesViewStyle = new CalendarMonthNamesViewStyle();
         
-        var titleCellStyle = new calendarModule.DayCellStyle();
+        var titleCellStyle = new DayCellStyle();
         titleCellStyle.cellBackgroundColor = "#dd855c";
         titleCellStyle.cellBorderWidth = 2;
         titleCellStyle.cellBorderColor = "#f1e8ca";
@@ -257,7 +256,7 @@ export class CalendarStylesService {
         titleCellStyle.cellTextSize = 18;
         monthNamesViewStyle.titleCellStyle = titleCellStyle;
         
-        var monthNameCellStyle = new calendarModule.CellStyle();
+        var monthNameCellStyle = new CellStyle();
         monthNameCellStyle.cellBackgroundColor = "#9ebd9e";
         monthNameCellStyle.cellBorderWidth = 2;
         monthNameCellStyle.cellBorderColor = "#f1e8ca";

@@ -2,7 +2,8 @@
     <RadListView [items]="dataItems">
         <ng-template tkListItemTemplate let-item="item">
             <GridLayout class="listItemTemplateGrid">
-                <FrescoDrawee height="250" [imageUri]="item.image"></FrescoDrawee>
+                <Image *ifIOS [src]="item.image" stretch="aspectFill"></Image>
+                <FrescoDrawee *ifAndroid height="250" [imageUri]="item.image"></FrescoDrawee>
                 <GridLayout verticalAlignment="bottom">
                     <StackLayout class="labelsStackLayout">
                         <Label [text]="item.title"></Label>

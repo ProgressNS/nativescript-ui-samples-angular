@@ -1,6 +1,6 @@
 import { Component, Injectable, OnInit } from "@angular/core";
-import { Page } from "tns-core-modules/ui/page";
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import { Page } from "ui/page";
+import { RadCalendar} from "nativescript-telerik-ui-pro/calendar";
 
 @Component({
     moduleId: module.id,
@@ -9,13 +9,13 @@ import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 })
 @Injectable()
 export class CalendarProgrammaticControlComponent implements OnInit {
-    private _calendar: calendarModule.RadCalendar;
+    private _calendar: RadCalendar;
     
     constructor(private _page: Page) {
     }
     
     ngOnInit() {
-        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+        this._calendar = <RadCalendar>this._page.getViewById("calendar");
     }
     
     onNavigateForwardTap() {

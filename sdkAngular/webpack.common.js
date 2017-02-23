@@ -12,24 +12,24 @@ module.exports = function (platform, destinationApp) {
         destinationApp = nsWebpack.getAppPath(platform);
     }
     var entry = {};
-    // Discover entry module from package.json
+    //Discover entry module from package.json
     entry.bundle = "./" + nsWebpack.getEntryModule();
     //Vendor entry with third party libraries.
     entry.vendor = "./vendor";
-    // app.css bundle
+    //app.css bundle
     entry["app.css"] = "./app.css";
 
     var plugins = [
         new ExtractTextPlugin("app.css"),
-        // Vendor libs go to the vendor.js chunk
+        //Vendor libs go to the vendor.js chunk
         new webpack.optimize.CommonsChunkPlugin({
             name: ["vendor"]
         }),
-        // Define useful constants like TNS_WEBPACK
+        //Define useful constants like TNS_WEBPACK
         new webpack.DefinePlugin({
             "global.TNS_WEBPACK": "true",
         }),
-        // Copy assets to out dir. Add your own globs as needed.
+        //Copy assets to out dir. Add your own globs as needed.
         new CopyWebpackPlugin([
             { from: "app.css" },
             { from: "css/**" },
@@ -38,13 +38,13 @@ module.exports = function (platform, destinationApp) {
             { from: "**/*.png" },
             { from: "**/*.xml" },
         ], { ignore: ["App_Resources/**"] }),
-        // Generate a bundle starter script and activate it in package.json
+        //Generate a bundle starter script and activate it in package.json
         new nsWebpack.GenerateBundleStarterPlugin([
             "./vendor",
             "./bundle",
         ]),
 
-        // Angular AOT compiler
+        //Angular AOT compiler
         new AotPlugin({
             tsConfigPath: "tsconfig.aot.json",
             entryModule: path.resolve(__dirname, "app/app.module#AppModule"),
@@ -58,7 +58,7 @@ module.exports = function (platform, destinationApp) {
             minimize: true
         }));
 
-        // Work around an Android issue by setting compress = false
+        //Work around an Android issue by setting compress = false
         var compress = platform !== "android";
         plugins.push(new webpack.optimize.UglifyJsPlugin({
             mangle: {
@@ -79,7 +79,7 @@ module.exports = function (platform, destinationApp) {
             filename: "[name].js",
         },
         resolve: {
-            // Resolve platform-specific modules like module.android.js
+            //Resolve platform-specific modules like module.android.js
             extensions: [
                 "." + platform + ".ts",
                 "." + platform + ".js",
@@ -89,14 +89,14 @@ module.exports = function (platform, destinationApp) {
                 ".js",
                 ".css",
             ],
-            // Resolve {N} system modules from tns-core-modules
+            //Resolve {N} system modules from tns-core-modules
             modules: [
                 "node_modules/tns-core-modules",
-                "node_modules",
+                "node_modules"
             ]
         },
         node: {
-            // Disable node shims that conflict with NativeScript
+            //Disable node shims that conflict with NativeScript
             "http": false,
             "timers": false,
             "setImmediate": false,
@@ -141,7 +141,7 @@ module.exports = function (platform, destinationApp) {
                     loaders: [
                         "raw-loader",
                         "resolve-url-loader",
-                        "sass-loader",
+                        "sass-loader"
                     ]
                 },
             ]

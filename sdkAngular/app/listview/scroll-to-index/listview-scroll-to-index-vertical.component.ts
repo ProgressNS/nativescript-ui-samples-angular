@@ -8,7 +8,7 @@ import * as applicationModule from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import listViewAngularModule = require("nativescript-telerik-ui-pro/listview/angular");
+import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
 
 @Component({
     moduleId: module.id,
@@ -37,7 +37,7 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
     }
 
     // >> angular-listview-scroll-to-index
-    @ViewChild('myRadListView') listViewComponent: listViewAngularModule.RadListViewComponent;
+    @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
 
     public onTap() {
         this.listViewComponent.listView.scrollToIndex(50);
