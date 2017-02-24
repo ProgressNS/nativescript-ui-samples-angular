@@ -1,9 +1,15 @@
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
 .mainStackLayout {
     background-color: white;
 }
 
 .drawerContentButton {
-    margin: 10 10 0 10;
+    margin: 10;
+    horizontal-align: left;
 }
 
 .mainContentlabel {
@@ -15,8 +21,9 @@
 }
 
 .sideTitleStackLayout {
-    padding: 10;
+    height: 56;
     text-align: center;
+    vertical-align: center;
 }
 
 .sideLabel {

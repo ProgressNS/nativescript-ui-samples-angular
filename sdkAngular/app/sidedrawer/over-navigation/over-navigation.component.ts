@@ -1,17 +1,18 @@
 import { Component, ViewChild, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
-    selector: "tk-sidedrawer-getting-started",
-    templateUrl: 'getting-started.component.html',
-    styleUrls: ['getting-started.component.css']
+    selector: "tk-sidedrawer-over-navigation",
+    templateUrl: 'over-navigation.component.html',
+    styleUrls: ['over-navigation.component.css']
 })
-export class SideDrawerGettingStartedComponent implements OnInit {
+export class SideDrawerOverNavigationComponent implements OnInit {
     private _mainContentText: string;
 
-    constructor(private _changeDetectionRef: ChangeDetectorRef) {
+    constructor(private _router: Router, private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -40,5 +41,10 @@ export class SideDrawerGettingStartedComponent implements OnInit {
 
     public onCloseDrawerTap() {
        this.drawer.closeDrawer();
+    }
+
+    public goToSecondPage() {
+        this.drawer.showDrawer();
+        this._router.navigateByUrl("side-drawer-over-nav-second-page");
     }
 }

@@ -1,5 +1,8 @@
-<!-- >> angular-sidedrawer-getting-started -->
-<RadSideDrawer tkExampleTitle tkToggleNavButton>
+<ActionBar title="Inner Page">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+</ActionBar>
+
+<RadSideDrawer showOverNavigation="true">
     <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
@@ -21,4 +24,3 @@
         <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
     </StackLayout>
 </RadSideDrawer>
-<!-- << angular-sidedrawer-getting-started -->

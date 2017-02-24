@@ -16,9 +16,10 @@
             <Label text="Sent Mail" class="sideLabel"></Label>
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
+        <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
     </StackLayout>
     <StackLayout tkMainContent>
-        <Button text="OPEN DRAWER" class="drawerContentText" (tap)=openDrawer()></Button>
+        <Button text="OPEN DRAWER" class="drawerContentButton" (tap)=openDrawer()></Button>
         <Label text="Drawer notification: " class="drawerContentText"></Label>
         <Label [text]="currentNotification" class="drawerContentText"></Label>
     </StackLayout>
