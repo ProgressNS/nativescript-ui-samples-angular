@@ -63,7 +63,7 @@ module.exports = function (platform, destinationApp) {
         var compress = platform !== "android";
         plugins.push(new webpack.optimize.UglifyJsPlugin({
             mangle: {
-                except: nsWebpack.uglifyMangleExcludes,
+                except: [...nsWebpack.uglifyMangleExcludes, "org.nativescript.sdkAngular.MainActivity"],
             },
             compress: compress,
         }));
