@@ -23,3 +23,5 @@ if (global.TNS_WEBPACK) {
         }
     };
 }
+
+require("./main-activity.android");
