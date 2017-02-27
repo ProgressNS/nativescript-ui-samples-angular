@@ -37,6 +37,7 @@ module.exports = function (platform, destinationApp) {
             { from: "**/*.jpg" },
             { from: "**/*.png" },
             { from: "**/*.xml" },
+            { from: "**/*.json" },
         ], { ignore: ["App_Resources/**"] }),
         //Generate a bundle starter script and activate it in package.json
         new nsWebpack.GenerateBundleStarterPlugin([
