@@ -11,8 +11,8 @@ import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/datafo
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { AppComponent, createRouteEntryArray, APP_ROUTES } from "./navigation/app.component";
-import { AppExampleComponents } from "./navigation/appExamples";
+import { AppComponent } from "./navigation/app.component";
+import { APP_ROUTES, EXAMPLES_COMPONENTS } from "./app.routes";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
@@ -29,7 +29,6 @@ if (applicationModule.android) {
         frescoModule.initialize();
     });
 }
-createRouteEntryArray(AppExampleComponents);
 // << (hide)
 
 @NgModule({
@@ -39,11 +38,9 @@ createRouteEntryArray(AppExampleComponents);
     declarations: [
         COMMON_DIRECTIVES,
         AppComponent,
-        ExamplesListDepth1Component,
-        ExamplesListDepth2Component,
-        ExamplesListDepth3Component,
-        AppExampleComponents,
-        OptionsComponent
+        ExamplesListDepthComponents,
+        OptionsComponent,
+        EXAMPLES_COMPONENTS,
     ],
     imports: [
         NativeScriptModule,
