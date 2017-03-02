@@ -44,7 +44,6 @@ export class SideDrawerOverNavigationComponent implements OnInit {
     }
 
     public goToSecondPage() {
-        this.drawer.showDrawer();
         this._router.navigateByUrl("side-drawer-over-nav-second-page");
     }
 }
