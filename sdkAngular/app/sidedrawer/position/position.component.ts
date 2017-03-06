@@ -16,29 +16,10 @@ import { PropertyMetadata } from"ui/core/proxy";
 })
 @Injectable()
 // >> sidedrawer-angular-position-code
-export class SideDrawerPositionComponent extends DependencyObservable implements OnInit {
-    private static selectedLocationIndexProperty = new Property(
-        "selectedLocationIndex",
-        "SidedrawerPositionComponent",
-        new PropertyMetadata(
-            undefined,
-            PropertyMetadataSettings.None,
-            SideDrawerPositionComponent.onSelectedLocationIndexPropertyChanged));
-    private static locationsProperty = new Property(
-        "locations",
-        "SidedrawerPositionComponent",
-        new PropertyMetadata(
-            undefined,
-            PropertyMetadataSettings.None));
-    private static currentLocationroperty = new Property(
-        "currentLocation",
-        "SidedrawerPositionComponent",
-        new PropertyMetadata(
-            undefined,
-            PropertyMetadataSettings.None));
+export class SideDrawerPositionComponent implements OnInit {
+    private _currentLocation : SideDrawerLocation;
 
     constructor(private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
-        super();
         this.page.on("loaded", this.onLoaded, this);
     }
 
@@ -49,53 +30,56 @@ export class SideDrawerPositionComponent extends DependencyObservable implements
     }
 
     ngOnInit() {
-        this.locations = new ObservableArray(this._dataService.getDrawerLocations());
         this.currentLocation = SideDrawerLocation.Left;
-        this.selectedLocationIndex = 0;
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
-    // << sidedrawer-angular-position-code
+
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         this._changeDetectionRef.detectChanges();
     }
 
-    get selectedLocationIndex(): number {
-        return this._getValue(SideDrawerPositionComponent.selectedLocationIndexProperty);
-    }
-
-    set selectedLocationIndex(value: number) {
-        this._setValue(SideDrawerPositionComponent.selectedLocationIndexProperty, value);
-    }
-
-    get locations(): ObservableArray<SideDrawerLocation> {
-        return this._getValue(SideDrawerPositionComponent.locationsProperty);
-    }
-
-    set locations(value: ObservableArray<SideDrawerLocation>) {
-        this._setValue(SideDrawerPositionComponent.locationsProperty, value);
-    }
-
     get currentLocation(): SideDrawerLocation {
-        return this._getValue(SideDrawerPositionComponent.currentLocationroperty);
+        return this._currentLocation;
     }
 
     set currentLocation(value: SideDrawerLocation) {
-        this._setValue(SideDrawerPositionComponent.currentLocationroperty, value);
+        this._currentLocation = value;
     }
-
-    private static onSelectedLocationIndexPropertyChanged(args) {
-        var drawee: SideDrawerPositionComponent = args.object;
-        drawee.onSelectedLocationIndexChanged(args);
+    // >> (hide)
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
     }
-
-    private onSelectedLocationIndexChanged(args) {
-        this.currentLocation = this.locations.getItem(this.selectedLocationIndex);
-    }
-
-    public onOpenDrawerTap() {
+    
+    public onRightLocationTap() {
+        this.currentLocation = SideDrawerLocation.Right;
+        this._changeDetectionRef.detectChanges();
+        
         this.drawer.showDrawer();
     }
+
+    public onLeftLocationTap() {
+        this.currentLocation = SideDrawerLocation.Left;
+        this._changeDetectionRef.detectChanges();
+        
+        this.drawer.showDrawer();
+    }
+
+    public onBottomLocationTap() {
+        this.currentLocation = SideDrawerLocation.Bottom;
+        this._changeDetectionRef.detectChanges();
+        
+        this.drawer.showDrawer();
+    }
+
+    public onTopLocationTap() {
+        this.currentLocation = SideDrawerLocation.Top;
+        this._changeDetectionRef.detectChanges();
+        
+        this.drawer.showDrawer();
+    }
+    // << (hide)
 }
+// << sidedrawer-angular-position-code
