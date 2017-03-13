@@ -473,7 +473,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Check 'Validation State'",
+                                "title": "Check Validation State",
                                 "path": "DataformCheckErrorsComponent",
                                 "subItems": []
                             }
