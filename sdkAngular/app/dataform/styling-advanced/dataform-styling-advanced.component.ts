@@ -117,6 +117,9 @@ export class DataformStylingAdvancedComponent implements OnInit {
 
     public editorSetupSwitchIOS(editor) {
         var coreEditor = <UISwitch>editor.editor;
+        if (coreEditor.tintColor == colorLight.ios) {
+            return;
+        }
         coreEditor.tintColor = colorLight.ios;
         coreEditor.onTintColor = colorLight.ios;
         coreEditor.thumbTintColor = colorDark.ios;
