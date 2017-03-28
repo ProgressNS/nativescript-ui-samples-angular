@@ -1,9 +1,9 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
-import * as Application from "application";
-import * as timerModule  from "timer";
+import * as Application from "tns-core-modules/application";
+import * as timerModule  from "tns-core-modules/timer";
 var posts = require("../../listview/posts.json")
 
 @Component({

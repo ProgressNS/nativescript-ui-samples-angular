@@ -1,8 +1,8 @@
 import { Component, Injectable, OnInit } from "@angular/core";
-import { Page } from "ui/page";
+import { Page } from "tns-core-modules/ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import { OptionsService } from "../../navigation/options/options.service";
-import * as applicationModule from "application";
+import * as applicationModule from "tns-core-modules/application";
 import { Router } from '@angular/router';
 import { OptionsExampleBase } from "../../options-example-base";
 

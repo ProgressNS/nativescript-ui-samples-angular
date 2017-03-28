@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Person } from "../data-services/person";
-import fs = require("file-system");
-import * as fileSystemModule from "file-system";
+import fs = require("tns-core-modules/file-system");
+import * as fileSystemModule from "tns-core-modules/file-system";
 
 @Component({
     moduleId: module.id,

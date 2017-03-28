@@ -1,12 +1,12 @@
 // >> angular-listview-swipe-execute-stretch-component
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView }  from "nativescript-telerik-ui-pro/listview";
-import { View } from 'ui/core/view';
-import * as frameModule from "ui/frame";
-import * as utilsModule from "utils/utils";
+import { View } from "tns-core-modules/ui/core/view";
+import * as frameModule from "tns-core-modules/ui/frame";
+import * as utilsModule from "tns-core-modules/utils/utils";
 
 @Component({
     moduleId: module.id,
@@ -32,7 +32,7 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
 
     public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = frameModule.topmost().currentPage.getViewById("listView");
+        var listView = frameModule.topmost().currentPage.getViewById("listView") as View;
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();

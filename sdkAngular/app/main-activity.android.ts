@@ -1,4 +1,4 @@
-import { setActivityCallbacks, AndroidActivityCallbacks } from "ui/frame";
+import { setActivityCallbacks, AndroidActivityCallbacks } from "tns-core-modules/ui/frame";
 
 @JavaProxy("org.nativescript.sdkAngular.MainActivity")
 class Activity extends android.support.v7.app.AppCompatActivity {

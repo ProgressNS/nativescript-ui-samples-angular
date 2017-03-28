@@ -1,14 +1,14 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, OnInit, Injectable, ViewChild } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page, NavigatedData } from "ui/page";
+import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
-import * as frameModule from "ui/frame";
-import * as applicationModule from "application";
-import { ObservableArray } from "data/observable-array";
+import * as frameModule from "tns-core-modules/ui/frame";
+import * as applicationModule from "tns-core-modules/application";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import listViewAnularModule = require("nativescript-telerik-ui-pro/listview/angular");
+import * as listViewAngularModule from "nativescript-telerik-ui-pro/listview/angular";
 
 @Component({
     moduleId: module.id,
@@ -37,7 +37,7 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
 
     }
 
-    @ViewChild('myRadListView') listViewComponent: listViewAnularModule.RadListViewComponent;
+    @ViewChild('myRadListView') listViewComponent: listViewAngularModule.RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;

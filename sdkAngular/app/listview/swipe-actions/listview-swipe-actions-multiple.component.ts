@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
-import { View } from "ui/core/view";
-import { layout } from "utils/utils";
+import { View } from "tns-core-modules/ui/core/view";
+import { layout } from "tns-core-modules/utils/utils";
 
 @Component({
     moduleId: module.id,
@@ -44,20 +44,20 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
 
         if (args.data.x > 0) {
             var leftDimensions = View.measureChild(
-                this.leftItem.parent,
+                <View>this.leftItem.parent,
                 this.leftItem,
                 layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
                 layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
-            View.layoutChild(this.leftItem.parent, this.leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+            View.layoutChild(<View>this.leftItem.parent, this.leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
             this.hideOtherSwipeTemplateView("left");
         } else {
             var rightDimensions = View.measureChild(
-                this.rightItem.parent,
+                <View>this.rightItem.parent,
                 this.rightItem,
                 layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
                 layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
 
-            View.layoutChild(this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, this.mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+            View.layoutChild(<View>this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, this.mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
             this.hideOtherSwipeTemplateView("right");
         }
     }
@@ -66,12 +66,12 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
         switch (currentSwipeView) {
             case "left":
                 if (this.rightItem.getActualSize().width != 0) {
-                    View.layoutChild(this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth(), 0, this.mainView.getMeasuredWidth(), 0);
+                    View.layoutChild(<View>this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth(), 0, this.mainView.getMeasuredWidth(), 0);
                 }
                 break;
             case "right":
                 if (this.leftItem.getActualSize().width != 0) {
-                    View.layoutChild(this.leftItem.parent, this.leftItem, 0, 0, 0, 0);
+                    View.layoutChild(<View>this.leftItem.parent, this.leftItem, 0, 0, 0, 0);
                 }
                 break;
             default:

@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Settings } from "../data-services/settings";
-import * as applicationModule from "application";
-import { Color } from "color";
-import * as viewModule from "ui/core/view";
+import * as applicationModule from "tns-core-modules/application";
+import { Color } from "tns-core-modules/color";
+import * as viewModule from "tns-core-modules/ui/core/view";
 
 @Component({
     moduleId: module.id,
@@ -97,7 +97,7 @@ export class DataformStylingAdvancedComponent implements OnInit {
         radioGroup.setDividerDrawable(segmentDivider);
 
         var segmentItemResourceId = androidContext.getResources().getIdentifier("df_segment_item", "drawable", androidContext.getPackageName());
-        var segmentTextColorResourceId = androidContext.getResources().getIdentifier("df_segment_text_color", "color", androidContext.getPackageName());
+        var segmentTextColorResourceId = androidContext.getResources().getIdentifier("df_segment_text_color", "tns-core-modules/color", androidContext.getPackageName());
 
         editor.setCustomizeButtons(new com.telerik.android.common.Procedure<android.widget.RadioButton>({
             apply(argument) {

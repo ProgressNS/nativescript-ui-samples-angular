@@ -2,11 +2,11 @@ import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
 import { Component, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page } from "ui/page";
-import * as applicationModule from "application";
+import { Page } from "tns-core-modules/ui/page";
+import * as applicationModule from "tns-core-modules/application";
 import { DataService } from '../../data-services/data.service';
 import { Country } from '../../data-services/country';
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 
 @Component({
     moduleId: module.id,

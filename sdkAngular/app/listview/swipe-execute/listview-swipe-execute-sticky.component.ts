@@ -1,11 +1,11 @@
 // >> angular-listview-swipe-execute-sticky-component
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
-import * as frameModule from "ui/frame";
-import * as utilsModule from "utils/utils";
+import * as frameModule from "tns-core-modules/ui/frame";
+import * as utilsModule from "tns-core-modules/utils/utils";
 
 @Component({
     moduleId: module.id,

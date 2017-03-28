@@ -1,8 +1,8 @@
 import { Component, OnInit, Injectable } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
-import * as frameModule from "ui/frame";
-import { Page } from "ui/page";
+import * as frameModule from "tns-core-modules/ui/frame";
+import { Page } from "tns-core-modules/ui/page";
 import { RadListView } from "nativescript-telerik-ui-pro/listview";
 import { OptionsService } from "../../navigation/options/options.service";
 

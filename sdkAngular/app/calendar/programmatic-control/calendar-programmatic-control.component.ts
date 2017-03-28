@@ -1,14 +1,14 @@
 import { Component, Injectable, OnInit } from "@angular/core";
-import { Page } from "ui/page";
+import { Page } from "tns-core-modules/ui/page";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 @Component({
     moduleId: module.id,
-    selector: "tk-calendar-programatic-control",
-    templateUrl: "calendar-programatic-control.component.html"
+    selector: "tk-calendar-programmatic-control",
+    templateUrl: "calendar-programmatic-control.component.html"
 })
 @Injectable()
-export class CalendarProgramaticControlComponent implements OnInit {
+export class CalendarProgrammaticControlComponent implements OnInit {
     private _calendar: calendarModule.RadCalendar;
     
     constructor(private _page: Page) {

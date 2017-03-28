@@ -1,11 +1,11 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page, NavigatedData } from "ui/page";
+import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
 import { RadCalendar, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
-import * as frameModule from "ui/frame";
-import * as applicationModule from "application";
+import * as frameModule from "tns-core-modules/ui/frame";
+import * as applicationModule from "tns-core-modules/application";
 
 @Component({
     moduleId: module.id,

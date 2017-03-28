@@ -1,8 +1,8 @@
 import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
-import { View } from "ui/core/view";
+import { View } from "tns-core-modules/ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
-import { Page } from "ui/page";
-import { ActionItem } from "ui/action-bar";
+import { Page } from "tns-core-modules/ui/page";
+import { ActionItem } from "tns-core-modules/ui/action-bar";
 import { FadeTransition, DrawerTransitionBase, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
