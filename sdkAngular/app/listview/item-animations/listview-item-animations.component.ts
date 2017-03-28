@@ -1,12 +1,12 @@
 import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { OptionsExampleBase } from "../../options-example-base";
-import { Page } from "ui/page";
+import { Page } from "tns-core-modules/ui/page";
 import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 import { OptionsService } from "../../navigation/options/options.service";
-import * as applicationModule from "application";
+import * as applicationModule from "tns-core-modules/application";
 
 
 @Component({

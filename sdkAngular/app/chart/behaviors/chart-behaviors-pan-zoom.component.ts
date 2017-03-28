@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data-services/data.service';
 import { Country } from '../data-services/country';
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { LinearAxis } from "nativescript-telerik-ui-pro/chart";
 
 @Component({

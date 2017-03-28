@@ -12,7 +12,18 @@
         "emitDecoratorMetadata": true,
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
     },
     "filesGlob": [
         "./**/*.ts"

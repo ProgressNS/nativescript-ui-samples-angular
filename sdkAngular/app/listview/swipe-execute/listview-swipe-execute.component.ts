@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import * as frameModule from "ui/frame";
+import * as frameModule from "tns-core-modules/ui/frame";
+import { View } from "tns-core-modules/ui/core/view";
 
 @Component({
     moduleId: module.id,
@@ -42,7 +43,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
 
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = frameModule.topmost().currentPage.getViewById("listView");
+        var listView = frameModule.topmost().currentPage.getViewById("listView") as View;
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import * as applicationModule from "application";
-import * as imageSourceModule from "image-source";
-import { Color } from "color";
+import * as applicationModule from "tns-core-modules/application";
+import * as imageSourceModule from "tns-core-modules/image-source";
+import { Color } from "tns-core-modules/color";
 import { PersonBase } from "../data-services/person";
 
 @Component({

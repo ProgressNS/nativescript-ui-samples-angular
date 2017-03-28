@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data-services/data.service';
 import { Stock } from '../../data-services/stock';
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 
 @Component({
     moduleId: module.id,

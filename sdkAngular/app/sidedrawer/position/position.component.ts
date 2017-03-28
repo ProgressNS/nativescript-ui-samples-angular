@@ -1,11 +1,10 @@
 import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
-import { Page } from "ui/page";
+import { Page } from "tns-core-modules/ui/page";
 import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataService } from "../data.service";
-import { DependencyObservable, Property, PropertyMetadataSettings } from "ui/core/dependency-observable";
-import { PropertyMetadata } from"ui/core/proxy";
+import { DependencyObservable, Property, PropertyMetadataSettings } from "tns-core-modules/ui/core/dependency-observable";
 
 @Component({
     moduleId: module.id,

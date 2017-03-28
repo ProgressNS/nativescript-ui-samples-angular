@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { ActivatedRoute, Router } from '@angular/router';
-import * as frameModule from "ui/frame";
+import * as frameModule from "tns-core-modules/ui/frame";
 
 @Component({
     moduleId: module.id,

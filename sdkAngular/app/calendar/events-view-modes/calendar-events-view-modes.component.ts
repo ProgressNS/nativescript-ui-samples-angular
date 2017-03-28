@@ -1,11 +1,11 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import {Component, OnInit, Injectable} from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import {CalendarEventsService} from "../calendar-events.service";
+import { CalendarEventsService } from "../calendar-events.service";
 import { OptionsService } from "../../navigation/options/options.service";
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
-import { Page } from "ui/page";
-import * as applicationModule from "application";
+import { Page } from "tns-core-modules/ui/page";
+import * as applicationModule from "tns-core-modules/application";
 
 @Component({
     moduleId: module.id,

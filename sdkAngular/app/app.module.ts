@@ -1,4 +1,5 @@
-import { NativeScriptModule, platformNativeScriptDynamic } from "nativescript-angular/platform";
+import { platformNativeScriptDynamic } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import * as elementRegistryModule from 'nativescript-angular/element-registry';
 // >> using-global-directives
 import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui-pro/sidedrawer/angular";
@@ -20,7 +21,7 @@ import { OptionsComponent } from "./navigation/options/options.component";
 import { COMMON_DIRECTIVES } from './navigation/directives';
 
 // >> (hide)
-import * as applicationModule from "application";
+import * as applicationModule from "tns-core-modules/application";
 import * as frescoModule from "nativescript-fresco";
 import { TNSFrescoModule } from "nativescript-fresco/angular";
 
@@ -66,7 +67,7 @@ createRouteEntryArray(AppExampleComponents);
         ExampleItemService
     ]
 })
-class AppModule { 
+class AppModule {
 
 }
 
