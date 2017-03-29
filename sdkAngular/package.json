@@ -18,21 +18,21 @@
     }
   },
   "dependencies": {
-    "@angular/common": "~2.4.3",
-    "@angular/compiler": "~2.4.3",
-    "@angular/core": "~2.4.3",
-    "@angular/forms": "~2.4.3",
-    "@angular/http": "~2.4.3",
-    "@angular/platform-browser": "~2.4.3",
-    "@angular/platform-browser-dynamic": "~2.4.3",
-    "@angular/router": "~3.4.3",
-    "nativescript-angular": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/nativescript-angular-stable/lastSuccessfulBuild/artifact/out/nativescript-angular.tgz",
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/http": "~4.0.0",
+    "@angular/platform-browser": "~4.0.0",
+    "@angular/platform-browser-dynamic": "~4.0.0",
+    "@angular/router": "~4.0.0",
+    "nativescript-angular": "rc",
     "nativescript-fresco": "^1.0.11",
     "nativescript-intl": "^0.0.4",
     "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "nativescript-unit-test-runner": "^0.3.2",
-    "rxjs": "~5.0.1",
-    "tns-core-modules": "internal-preview"
+    "rxjs": "^5.0.1",
+    "tns-core-modules": "rc"
   },
   "devDependencies": {
     "babel-traverse": "6.10.4",
@@ -51,7 +51,7 @@
     "nativescript-dev-android-snapshot": "~0.0.6",
     "nativescript-dev-typescript": "^0.3.1",
     "tslint": "^3.14.0",
-    "typescript": "2.1.5",
+    "typescript": "~2.2.1",
     "zone.js": "^0.6.21"
   }
 }

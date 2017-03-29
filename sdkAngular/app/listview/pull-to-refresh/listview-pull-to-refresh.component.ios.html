@@ -2,7 +2,7 @@
      <!-- >> angular-listview-pull-to-refresh -->
     <RadListView [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
      <!-- << angular-listview-pull-to-refresh -->
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
                 <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
                     <Image [src]="item.image" stretch="aspectFit" height="100" width="100"></Image>
@@ -13,6 +13,6 @@
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
-        </template>
+        </ng-template>
     </RadListView>
 </GridLayout>

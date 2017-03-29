@@ -1,9 +1,9 @@
 <GridLayout tkExampleTitle tkToggleNavButton>
     <RadListView id="optionsListView" selectionBehavior="Press" [items]="dataItems" (itemTap)="onItemTap($event)">
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout>
                 <Label class="titleLabel" [text]="item" textWrap="true"></Label>
             </StackLayout>
-        </template>
+        </ng-template>
     </RadListView>
 </GridLayout>

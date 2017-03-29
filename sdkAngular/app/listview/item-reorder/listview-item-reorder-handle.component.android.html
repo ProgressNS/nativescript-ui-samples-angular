@@ -3,7 +3,7 @@
 
     <RadListView (itemReordered)="onItemReordered($event)" [items]="dataItems" row="1" itemReorder="true" reorderMode="Drag">
         <!-- >> angular-listview-item-reorder-handle -->
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <GridLayout class="listItemGridLayout" columns="*, auto">
                 <StackLayout orientation="vertical" col="0" verticalAlignment="center">
                     <Label class="nameLabel" [text]="item.name"></Label>
@@ -12,7 +12,7 @@
                     <Image src="res://reorder_icon" class="handleImage" stretch="none" verticalAlignment="stretch"></Image>
                 </ReorderHandle>
             </GridLayout>
-        </template>
+        </ng-template>
         <!-- << angular-listview-item-reorder-handle -->
     </RadListView>
 </GridLayout>

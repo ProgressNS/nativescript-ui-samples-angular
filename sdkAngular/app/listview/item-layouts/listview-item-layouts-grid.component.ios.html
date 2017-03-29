@@ -1,6 +1,6 @@
 <GridLayout tkExampleTitle tkToggleNavButton>
     <RadListView [items]="dataItems">
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <GridLayout class="listItemTemplateGrid">
                 <Image [src]="item.image" stretch="aspectFill"></Image>
                 <GridLayout verticalAlignment="bottom">
@@ -10,7 +10,7 @@
                     </StackLayout>
                 </GridLayout>
             </GridLayout>
-        </template>
+        </ng-template>
 
         <!-- >> angular-listview-item-layouts-grid -->
         <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"></ListViewGridLayout>

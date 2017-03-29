@@ -3,11 +3,11 @@
 </ActionBar>
 <GridLayout rows="auto, *">
     <RadListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemStackLayout">
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
                 <StackLayout height="1" backgroundColor="#EEEEEE"></StackLayout>
             </StackLayout>
-        </template>
+        </ng-template>
     </RadListView>
 </GridLayout>

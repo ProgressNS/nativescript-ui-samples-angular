@@ -5,9 +5,9 @@
 <GridLayout rows="auto, *">
     <Button text="Scroll to index 50" (tap)="onTap($event)"></Button>
     <RadListView #myRadListView [items]="dataItems" [scrollPosition]="myScrollPosition" row="1">
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <Label class="labelName labelNameHorizontal" [text]="item.name"></Label>
-        </template>
+        </ng-template>
         <ListViewLinearLayout tkListViewLayout scrollDirection="Horizontal" itemWidth="80"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>

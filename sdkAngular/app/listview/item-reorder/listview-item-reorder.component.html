@@ -2,12 +2,12 @@
      <!-- >> angular-listview-reorder -->
     <RadListView row="1" [items]="dataItems" itemReorder="true" (itemReordered)="onItemReordered($event)">
      <!-- << angular-listview-reorder -->
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <GridLayout class="listItemGridLayout">
                 <StackLayout orientation="vertical" col="0">
                     <Label class="nameLabel" [text]="item.name"></Label>
                 </StackLayout>
             </GridLayout>
-        </template>
+        </ng-template>
     </RadListView>
 </GridLayout>
