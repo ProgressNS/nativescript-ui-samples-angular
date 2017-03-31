@@ -22,12 +22,12 @@ import { COMMON_DIRECTIVES } from './navigation/directives';
 
 // >> (hide)
 import * as applicationModule from "tns-core-modules/application";
-// import * as frescoModule from "nativescript-fresco";
-// import { TNSFrescoModule } from "nativescript-fresco/angular";
+import * as frescoModule from "nativescript-fresco";
+import { TNSFrescoModule } from "nativescript-fresco/angular";
 
 if (applicationModule.android) {
     applicationModule.on("launch", () => {
-        // frescoModule.initialize();
+        frescoModule.initialize();
     });
 }
 createRouteEntryArray(AppExampleComponents);
@@ -53,6 +53,7 @@ createRouteEntryArray(AppExampleComponents);
     ],
     imports: [
         NativeScriptModule,
+        TNSFrescoModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(APP_ROUTES)
