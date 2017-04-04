@@ -393,7 +393,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Programatic control",
-                        "path": "CalendarProgramaticControlComponent",
+                        "path": "CalendarProgrammaticControlComponent",
                         "subItems": []
                     },
                     {
