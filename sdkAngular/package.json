@@ -29,7 +29,7 @@
     "nativescript-angular": "rc",
     "nativescript-fresco": "rc",
     "nativescript-intl": "^0.0.4",
-    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
+    "nativescript-telerik-ui-pro": "rc",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "^5.0.1",
     "tns-core-modules": "rc"
