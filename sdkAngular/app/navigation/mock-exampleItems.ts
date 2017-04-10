@@ -387,6 +387,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Localization",
+                        "path": "CalendarLocalizationComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Populating with data",
                         "path": "CalendarPopulatingWithDataComponent",
                         "subItems": []
