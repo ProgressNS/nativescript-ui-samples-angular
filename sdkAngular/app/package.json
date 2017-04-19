@@ -3,13 +3,13 @@
     "main": "app.module.js",
     "version": "1.0.0",
     "author": {
-        "name": "Telerik",
+        "name": "Progress",
         "email": "support@telerik.com"
     },
-    "description": "Nativescript project that shows the NativeScript UI with Angular2",
+    "description": "Nativescript project that demonstrates the Progressc NativeScript UI suite with Angular",
     "license": "Apache-2.0",
     "keywords": [
-        "telerik",
+        "Progress",
         "mobile",
         "nativescript",
         "{N}",

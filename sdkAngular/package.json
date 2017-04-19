@@ -1,7 +1,7 @@
 {
   "name": "nativescript-telerik-ui-sdk-angular-examples",
   "version": "1.6.1",
-  "description": "Nativescript project that shows the NativeScript UI with Angular2",
+  "description": "Nativescript project that demonstrates the Progress NativeScript UI suite with Angular",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
   "repository": {
