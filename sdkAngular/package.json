@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
     "nativescript-angular": "rc",
-    "nativescript-fresco": "rc",
+    "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^0.0.4",
     "nativescript-telerik-ui-pro": "rc",
     "nativescript-unit-test-runner": "^0.3.2",
