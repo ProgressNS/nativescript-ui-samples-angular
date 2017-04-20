@@ -1,3 +1,4 @@
+// >> sidedrawer-getting-started-angular
 import { Component, ViewChild, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
@@ -42,3 +43,4 @@ export class SideDrawerGettingStartedComponent implements OnInit {
        this.drawer.closeDrawer();
     }
 }
+// << sidedrawer-getting-started-angular
