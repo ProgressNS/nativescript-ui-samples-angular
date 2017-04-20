@@ -398,7 +398,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Programatic control",
+                        "title": "Programmatic control",
                         "path": "CalendarProgrammaticControlComponent",
                         "subItems": []
                     },
