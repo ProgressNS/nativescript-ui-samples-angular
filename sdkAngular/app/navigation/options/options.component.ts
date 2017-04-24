@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from "@angular/core";
+import { Component, OnInit, OnDestroy, Injectable } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
 import * as frameModule from "tns-core-modules/ui/frame";
@@ -13,7 +13,7 @@ import { OptionsService } from "../../navigation/options/options.service";
     styleUrls: ["options.component.css"]
 })
 @Injectable()
-export class OptionsComponent implements OnInit {
+export class OptionsComponent implements OnInit, OnDestroy {
     private _dataItems: ObservableArray<string>;
     private _listView: RadListView;
     private _sub: any;
@@ -26,8 +26,7 @@ export class OptionsComponent implements OnInit {
 
     ngOnInit() {
         this._sub = this._route.queryParams.subscribe(
-             (params: any) => 
-             {
+             (params: any) => {
                  this._listView = <RadListView>this._page.getViewById("optionsListView");
                 var items = params['items'];
                 this._selectedIndex = +params['selectedIndex'];

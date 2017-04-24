@@ -1,6 +1,6 @@
 import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
-import { Component, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
+import { Component, AfterViewInit, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page";
 import * as applicationModule from "tns-core-modules/application";
@@ -16,7 +16,7 @@ import { DataService } from '../../data-services/data.service';
     templateUrl: "chart-series-stacked-area.component.html"
 })
 @Injectable()
-export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implements OnInit {
+export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implements AfterViewInit, OnInit {
     private _optionsParamName: string;
     private _chart: RadCartesianChart;
     private _firstSeries: ObservableArray<Country>;

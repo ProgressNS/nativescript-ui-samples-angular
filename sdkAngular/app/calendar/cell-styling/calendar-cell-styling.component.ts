@@ -11,7 +11,7 @@ import { OptionsExampleBase } from "../../options-example-base";
     moduleId: module.id,
     selector: "tk-calendar-cell-styling",
     templateUrl: "calendar-cell-styling.component.html",
-    providers:[CalendarStylesService]
+    providers: [CalendarStylesService]
 })
 @Injectable()
 export class CalendarCellStylingComponent extends OptionsExampleBase implements OnInit {

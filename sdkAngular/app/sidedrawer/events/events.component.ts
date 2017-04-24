@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "tns-core-modules/ui/core/view";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "tns-core-modules/ui/page";
@@ -14,7 +14,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     styleUrls: ['events.component.css']
 })
 @Injectable()
-export class SideDrawerEventsComponent implements OnInit {
+export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
     private _currentNotification: string;
     private _sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
 
