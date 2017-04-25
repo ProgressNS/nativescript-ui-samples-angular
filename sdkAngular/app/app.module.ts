@@ -1,6 +1,5 @@
 import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import * as elementRegistryModule from 'nativescript-angular/element-registry';
 // >> using-global-directives
 import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
