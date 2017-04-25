@@ -29,6 +29,8 @@ import { ListviewItemSeparatorComponent } from "./listview/item-separator/listvi
 import { ListviewScrollToIndexVerticalComponent } from "./listview/scroll-to-index/listview-scroll-to-index-vertical.component";
 import { ListviewScrollToIndexHorizontalComponent } from "./listview/scroll-to-index/listview-scroll-to-index-horizontal.component";
 import { SideDrawerGettingStartedComponent } from "./sidedrawer/getting-started/getting-started.component";
+import { SideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/over-navigation.component";
+import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/second-page/second-over-navigation.component";
 import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
 import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
@@ -90,7 +92,7 @@ import { DataformPropertiesJsonComponent } from "./dataform/properties-json/data
 import { DataformStylingAdvancedComponent } from "./dataform/styling-advanced/dataform-styling-advanced.component";
 
 
-export const EXAMPLES_COMPONENTS = [ ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent ];
+export const EXAMPLES_COMPONENTS = [ ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent ];
 
 export const APP_ROUTES: Routes = [
   { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
@@ -222,6 +224,20 @@ export const APP_ROUTES: Routes = [
         component: SideDrawerGettingStartedComponent,
         data: {
             "title": "Getting Started"
+        }
+    },
+    {
+        path: "SideDrawerOverNavigationComponent",
+        component: SideDrawerOverNavigationComponent,
+        data: {
+            "title": "Over Navigation"
+        }
+    },
+    {
+        path: "SecondSideDrawerOverNavigationComponent",
+        component: SecondSideDrawerOverNavigationComponent,
+        data: {
+            "title": "Over Navigation Second"
         }
     },
     {

@@ -5,8 +5,8 @@
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
                 <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
-                    <Image *ifIOS [src]="item.image" stretch="aspectFit" height="100" width="100"></Image>
-                    <FrescoDrawee *ifAndroid height="100" width="80" [imageUri]="item.image"></FrescoDrawee>
+                    <Image *tkIfIOS [src]="item.image" stretch="aspectFit" height="100" width="100"></Image>
+                    <FrescoDrawee *tkIfAndroid height="100" width="80" [imageUri]="item.image"></FrescoDrawee>
                     <StackLayout class="labelsStackLayout" orientation="vertical">
                         <Label class="labelName" [text]="item.name"></Label>
                         <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>

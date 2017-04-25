@@ -16,7 +16,7 @@ var posts = require("../../listview/posts.json")
 export class ListViewLoadOnDemandComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
-    private _layout: ListViewLinearLayout;
+    private layout: ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
