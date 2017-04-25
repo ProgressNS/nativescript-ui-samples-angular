@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
-import { View } form "ui/view";
+import { View } from "ui/view";
 import { topmost } from "ui/frame";
 import { RadListView, ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 
