@@ -10,7 +10,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/datafo
 // Not required imports, these are used by the nativescript-samples-angular SDK examples
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { AppComponent, createRouteEntryArray, APP_ROUTES } from "./navigation/app.component";
 import { AppExampleComponents } from "./navigation/appExamples";
 import { OptionsService } from "./navigation/options/options.service";
@@ -64,6 +64,9 @@ createRouteEntryArray(AppExampleComponents);
     providers: [
         OptionsService,
         ExampleItemService
+    ],
+    schemas: [
+        NO_ERRORS_SCHEMA
     ]
 })
 export class AppModule { 
