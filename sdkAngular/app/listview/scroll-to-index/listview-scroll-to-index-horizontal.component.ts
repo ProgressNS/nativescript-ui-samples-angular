@@ -23,6 +23,8 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
     private _dataItems: ObservableArray<DataItem>;
     private _options: Array<string> = ["None", "CenteredHorizontally", "Left", "Right"];
 
+    myScrollPosition: any;
+
     constructor(private _page: Page, private _dataItemService: DataItemService, private _optionsService: OptionsService, private _router: Router) {
         super();
         let selectedIndex = 2;

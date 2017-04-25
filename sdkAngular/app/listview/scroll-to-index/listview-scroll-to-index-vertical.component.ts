@@ -23,6 +23,8 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
     private _dataItems: ObservableArray<DataItem>;
     private _options: Array<string> = ["None", "Top", "CenteredVertically", "Bottom"];
 
+    myScrollPosition: any;
+
     constructor(private _page: Page, private _dataItemService: DataItemService, private _optionsService: OptionsService, private _router: Router) {
         super();
         let selectedIndex = 1;

@@ -24,6 +24,8 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     private _thirdSeries: ObservableArray<Country>;
     private _optionsItems: Array<string>;
 
+    stackMode: string;
+
     constructor(private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {
         super();

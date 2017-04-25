@@ -49,49 +49,49 @@ export class SideDrawerTransitionsComponent implements AfterViewInit, OnInit {
     public onCloseDrawerTap() {
        this.drawer.closeDrawer();
     }
-    public onFadeTransitionTap(args) {
+    public onFadeTransitionTap() {
         this.sideDrawerTransition = new FadeTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onPushTransitionTap(args) {
+    public onPushTransitionTap() {
         this.sideDrawerTransition = new PushTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onRevealTransitionTap(args) {
+    public onRevealTransitionTap() {
         this.sideDrawerTransition = new RevealTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onReverseSlideOutTransitionTap(args) {
+    public onReverseSlideOutTransitionTap() {
         this.sideDrawerTransition = new ReverseSlideOutTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onScaleDownPusherTransitionTap(args) {
+    public onScaleDownPusherTransitionTap() {
         this.sideDrawerTransition = new ScaleDownPusherTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onScaleUpTransitionTap(args) {
+    public onScaleUpTransitionTap() {
         this.sideDrawerTransition = new ScaleUpTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onSlideAlongTransitionTap(args) {
+    public onSlideAlongTransitionTap() {
         this.sideDrawerTransition = new SlideAlongTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();
     }
 
-    public onSlideInOnTopTransitionTap(args) {
+    public onSlideInOnTopTransitionTap() {
         this.sideDrawerTransition = new SlideInOnTopTransition();
         this._changeDetectionRef.detectChanges();
         this.drawer.showDrawer();

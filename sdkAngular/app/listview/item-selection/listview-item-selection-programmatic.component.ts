@@ -46,19 +46,19 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getNameEmailDataItems());
     }
 
-    public onSelectItemAtTap(args) {
+    public onSelectItemAtTap() {
         this.listView.listView.selectItemAt(Number(this.txtSelectItemIndex));
     }
 
-    public onDeselectItemAtTap(args) {
+    public onDeselectItemAtTap() {
         this.listView.listView.deselectItemAt(Number(this.txtDeselectItemIndex));
     }
 
-    public onSelectAllTap(args) {
+    public onSelectAllTap() {
         this.listView.listView.selectAll();
     }
 
-    public onDeselectAllTap(args) {
+    public onDeselectAllTap() {
         this.listView.listView.deselectAll();
     }
 }
