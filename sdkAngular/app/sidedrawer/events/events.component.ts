@@ -26,7 +26,7 @@ export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        this._sideDrawerTransition = new sideDrawerModule.PushTransition();
+        this._sideDrawerTransition = new PushTransition();
         this._changeDetectionRef.detectChanges();
     }
 

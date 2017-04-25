@@ -16,6 +16,7 @@ var posts = require("../../listview/posts.json")
 export class ListViewLoadOnDemandComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
+    private _layout: ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
@@ -25,7 +26,7 @@ export class ListViewLoadOnDemandComponent implements OnInit {
         this.layout.scrollDirection = "Vertical";
         this.layout.itemHeight = 220;
         this.initDataItems();
-        //this._changeDetectionRef.detectChanges();
+        this._changeDetectionRef.detectChanges();
     }
 
     public get dataItems(): ObservableArray<DataItem> {

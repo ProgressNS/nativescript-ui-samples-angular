@@ -179,3 +179,5 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
         frameModule.topmost().goBack();
     }
 }
+
+export const ExamplesListDepthComponents = [ ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component];

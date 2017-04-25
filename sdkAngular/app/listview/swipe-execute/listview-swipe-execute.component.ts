@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { ObservableArray } from "data/observable-array";
+import { View } form "ui/view";
+import { topmost } from "ui/frame";
+import { RadListView, ListViewEventData } from "nativescript-telerik-ui-pro/listview";
+
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { RadListView, ListViewEventData } from "nativescript-telerik-ui-pro/listview";
-import * as frameModule from "ui/frame";
 
 @Component({
     moduleId: module.id,
@@ -42,7 +44,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
 
     public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = frameModule.topmost().currentPage.getViewById("listView") as View;
+        var listView = topmost().currentPage.getViewById("listView") as View;
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();
@@ -58,7 +60,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
     }
 
     public onItemClick(args: ListViewEventData) {
-        var listView = <RadListView>frameModule.topmost().currentPage.getViewById("listView");
+        var listView = <RadListView>topmost().currentPage.getViewById("listView");
         listView.notifySwipeToExecuteFinished();
         console.log("Item click: " + args.itemIndex);
     }
