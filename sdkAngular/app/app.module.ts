@@ -1,13 +1,15 @@
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 // >> using-global-directives
+// --- The built-in 'nativescript-telerik-ui-pro' modules
 import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
 import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calendar/angular";
 import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
 import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
 
-// Not required imports, these are used by the nativescript-samples-angular SDK examples
+
+// Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
@@ -19,11 +21,11 @@ import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepthComponents } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
 import { COMMON_DIRECTIVES } from './navigation/directives';
+import { TNSFrescoModule } from "nativescript-fresco/angular";
 
 // >> (hide)
 import * as applicationModule from "tns-core-modules/application";
 import * as frescoModule from "nativescript-fresco";
-import { TNSFrescoModule } from "nativescript-fresco/angular";
 
 if (applicationModule.android) {
     applicationModule.on("launch", () => {
@@ -69,4 +71,4 @@ if (applicationModule.android) {
 })
 export class AppModule { 
 }
-// << using-global-directives
+// << using-global-directive
