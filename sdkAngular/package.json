@@ -10,10 +10,10 @@
   },
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
-    "tns-android": {
+    "tns-ios": {
       "version": "2.5.0"
     },
-    "tns-ios": {
+    "tns-android": {
       "version": "2.5.0"
     }
   },
@@ -29,7 +29,7 @@
     "nativescript-angular": "rc",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
-    "nativescript-telerik-ui-pro": "rc",
+    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-custom/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.3.0",
     "tns-core-modules": "rc",
@@ -66,9 +66,9 @@
   "scripts": {
     "ns-bundle": "ns-bundle",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
-    "start-android-bundle": "npm run ns-bundle --android --start-app",
-    "start-ios-bundle": "npm run ns-bundle --ios --start-app",
-    "build-android-bundle": "npm run ns-bundle --android --build-app",
-    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
+    "start-android-bundle": "npm install && npm run ns-bundle --android --start-app",
+    "start-ios-bundle": "npm install && npm run ns-bundle --ios --start-app",
+    "build-android-bundle": "npm install && npm run ns-bundle --android --build-app",
+    "build-ios-bundle": "npm install && npm run ns-bundle --ios --build-app"
   }
 }
