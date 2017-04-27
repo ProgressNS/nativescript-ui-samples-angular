@@ -1,6 +1,8 @@
 // >> sidedrawer-getting-started-angular
-import { Component, ViewChild, OnInit, ChangeDetectorRef } from "@angular/core";
-import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+import { Component, ViewChild, OnInit, AfterViewInit, ChangeDetectorRef } from "@angular/core";
+import { Page } from "ui/page";
+import { ActionItem } from "ui/action-bar";
+import { Observable } from "data/observable";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 @Component({
@@ -9,7 +11,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })
-export class SideDrawerGettingStartedComponent implements OnInit {
+export class SideDrawerGettingStartedComponent implements AfterViewInit, OnInit {
     private _mainContentText: string;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {

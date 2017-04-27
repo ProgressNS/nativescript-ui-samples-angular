@@ -1,23 +1,24 @@
-// >> using-global-directives
-import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
+// >> using-global-directives
 // --- The built-in 'nativescript-telerik-ui-pro' modules
-import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui-pro/listview/angular';
-import { CALENDAR_DIRECTIVES } from 'nativescript-telerik-ui-pro/calendar/angular';
-import { CHART_DIRECTIVES } from 'nativescript-telerik-ui-pro/chart/angular';
-import { DATAFORM_DIRECTIVES } from 'nativescript-telerik-ui-pro/dataform/angular';
+import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
+import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calendar/angular";
+import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
+import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
+
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
-import { NgModule } from "@angular/core";
-import { AppComponent, createRouteEntryArray, APP_ROUTES } from "./navigation/app.component";
-import { AppExampleComponents } from "./navigation/appExamples";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+
+import { AppComponent } from "./navigation/app.component";
+import { APP_ROUTES, EXAMPLES_COMPONENTS } from "./app.routes";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
-import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
+import { ExamplesListDepthComponents } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
 import { COMMON_DIRECTIVES } from './navigation/directives';
 import { TNSFrescoModule } from "nativescript-fresco/angular";
@@ -31,7 +32,6 @@ if (applicationModule.android) {
         frescoModule.initialize();
     });
 }
-createRouteEntryArray(AppExampleComponents);
 // << (hide)
 
 @NgModule({
@@ -39,22 +39,20 @@ createRouteEntryArray(AppExampleComponents);
         AppComponent
     ],
     declarations: [
-        LISTVIEW_DIRECTIVES,
-        SIDEDRAWER_DIRECTIVES,
-        CALENDAR_DIRECTIVES,
-        CHART_DIRECTIVES,
-        DATAFORM_DIRECTIVES,
         COMMON_DIRECTIVES,
         AppComponent,
-        ExamplesListDepth1Component,
-        ExamplesListDepth2Component,
-        ExamplesListDepth3Component,
-        AppExampleComponents,
-        OptionsComponent
+        ExamplesListDepthComponents,
+        OptionsComponent,
+        EXAMPLES_COMPONENTS,
     ],
     imports: [
         NativeScriptModule,
         TNSFrescoModule,
+        NativeScriptUIListViewModule,
+        NativeScriptUISideDrawerModule,
+        NativeScriptUICalendarModule,
+        NativeScriptUIChartModule,
+        NativeScriptUIDataFormModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(APP_ROUTES)
@@ -66,9 +64,11 @@ createRouteEntryArray(AppExampleComponents);
     providers: [
         OptionsService,
         ExampleItemService
+    ],
+    schemas: [
+        NO_ERRORS_SCHEMA
     ]
 })
-class AppModule { }
-
-platformNativeScriptDynamic().bootstrapModule(AppModule);
-// << using-global-directives
+export class AppModule { 
+}
+// << using-global-directive

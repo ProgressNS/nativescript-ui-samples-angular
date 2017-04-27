@@ -4,8 +4,8 @@ import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
-import viewModule = require("tns-core-modules/ui/core/view");
-import utilsModule = require("tns-core-modules/utils/utils");
+import { View } from 'ui/core/view';
+import { layout } from "utils/utils";
 
 @Component({
     moduleId: module.id,
@@ -50,20 +50,20 @@ export class ListViewSwipeActionsThresholdsComponent implements OnInit {
             this.rightThresholdPassed = true;
         }
         if (args.data.x > 0) {
-            var leftDimensions = viewModule.View.measureChild(
+            var leftDimensions = View.measureChild(
                 leftItem.parent,
                 leftItem,
-                utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
-                utilsModule.layout.makeMeasureSpec(mainView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
-            viewModule.View.layoutChild(leftItem.parent, leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+                layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
+                layout.makeMeasureSpec(mainView.getMeasuredHeight(), layout.EXACTLY));
+            View.layoutChild(leftItem.parent, leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
         } else {
-            var rightDimensions = viewModule.View.measureChild(
+            var rightDimensions = View.measureChild(
                 rightItem.parent,
                 rightItem,
-                utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
-                utilsModule.layout.makeMeasureSpec(mainView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
+                layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
+                layout.makeMeasureSpec(mainView.getMeasuredHeight(), layout.EXACTLY));
 
-            viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+            View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
         }
     }
     // << angular-listview-swipe-action-thresholds

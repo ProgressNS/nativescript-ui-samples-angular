@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ViewChild, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,7 +10,7 @@ import * as frameModule from "tns-core-modules/ui/frame";
     templateUrl: 'second-over-navigation.component.html',
     styleUrls: ['second-over-navigation.component.css']
 })
-export class SecondSideDrawerOverNavigationComponent {
+export class SecondSideDrawerOverNavigationComponent implements AfterViewInit, OnInit {
     private _mainContentText: string;
 
     constructor(private _router: Router, private _changeDetectionRef: ChangeDetectorRef) {

@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
-import { ListViewLinearLayout, ListViewEventData, RadListView, ListViewLoadOnDemandMode }from "nativescript-telerik-ui-pro/listview";
+import { ListViewLinearLayout, ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "nativescript-telerik-ui-pro/listview";
 import * as applicationModule from "tns-core-modules/application";
 import * as Timer  from "tns-core-modules/timer";
 var posts = require("../../listview/posts.json")
@@ -16,7 +16,7 @@ var posts = require("../../listview/posts.json")
 export class ListViewLoadOnDemandComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _numberOfAddedItems;
-    private _layout: ListViewLinearLayout;
+    private layout: ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
@@ -31,14 +31,6 @@ export class ListViewLoadOnDemandComponent implements OnInit {
 
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
-    }
-
-    public get layout(): ListViewLinearLayout {
-        return this._layout;
-    }
-
-    public set layout(value: ListViewLinearLayout) {
-        this._layout = value;
     }
 
     public onLoadMoreItemsRequested(args: ListViewEventData) {

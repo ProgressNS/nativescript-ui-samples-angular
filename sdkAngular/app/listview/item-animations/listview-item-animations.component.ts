@@ -63,26 +63,26 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
         this._itemDeleteAnimation = value;
     }
 
-    public onAddItemClick(args: ListViewEventData) {
+    public onAddItemClick() {
         this._dataItems.push(new DataItem(this._itemsCount, "This is a new item: " + this._itemsCount, "This is the new item's description."));
         this._itemsCount++;
     }
 
-    public onResetClick(args: ListViewEventData) {
+    public onResetClick() {
         while (this._dataItems.length) {
             this._dataItems.pop();
         }
         this._itemsCount = 0;
     }
 
-    public onUpdateItemClick(args: ListViewEventData) {
+    public onUpdateItemClick() {
         for (var index = 0; index < this._dataItems.length; index++) {
             this._dataItems.getItem(index).name = "This is an updated item";
             this._dataItems.getItem(index).description = "This is the updated item's description.";
         }
     }
 
-    public onRemoveItemClick(args: ListViewEventData) {
+    public onRemoveItemClick() {
         this._dataItems.splice(this._dataItems.length - 1, 1);
     }
 

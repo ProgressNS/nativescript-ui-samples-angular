@@ -1,10 +1,10 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, Injectable, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page } from "tns-core-modules/ui/page";
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
-import * as frameModule from "tns-core-modules/ui/frame";
-import * as applicationModule from "tns-core-modules/application";
+import { Page } from "ui/page";
+import { RadCalendar, CalendarSelectionMode } from "nativescript-telerik-ui-pro/calendar";
+import * as frameModule from "ui/frame";
+import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
 
 @Component({
@@ -15,7 +15,7 @@ import { OptionsService } from "../../navigation/options/options.service";
 @Injectable()
 // >> angular-calendar-selection-modes  
 export class CalendarSelectionModesComponent extends OptionsExampleBase implements OnInit {
-    private _calendar: calendarModule.RadCalendar;
+    private _calendar: RadCalendar;
     private _optionsParamName: string;
     private _selectionMode;
     constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
@@ -27,7 +27,7 @@ export class CalendarSelectionModesComponent extends OptionsExampleBase implemen
             this.router = _router;
             this.navigationParameters = { selectedIndex: 0, paramName: this._optionsParamName, items: ["None", "Single", "Multiple", "Range"] };
         }
-        this._selectionMode = calendarModule.CalendarSelectionMode.None;
+        this._selectionMode = CalendarSelectionMode.None;
     }
     
     get selectionMode() {
@@ -35,26 +35,26 @@ export class CalendarSelectionModesComponent extends OptionsExampleBase implemen
     }
     
     ngOnInit() {
-        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
+        this._calendar = <RadCalendar>this._page.getViewById("calendar");
     }
     
     onNoneTap() {
-        this._selectionMode = calendarModule.CalendarSelectionMode.None;
+        this._selectionMode = CalendarSelectionMode.None;
         this._calendar.reload();
     }
     
     onSingleTap() {
-        this._selectionMode = calendarModule.CalendarSelectionMode.Single;
+        this._selectionMode = CalendarSelectionMode.Single;
         this._calendar.reload();
     }
     
     onMultipleTap() { 
-        this._selectionMode = calendarModule.CalendarSelectionMode.Multiple;
+        this._selectionMode = CalendarSelectionMode.Multiple;
         this._calendar.reload();
     }
     
     onRangeTap() {
-        this._selectionMode = calendarModule.CalendarSelectionMode.Range;
+        this._selectionMode = CalendarSelectionMode.Range;
         this._calendar.reload();
     }
     

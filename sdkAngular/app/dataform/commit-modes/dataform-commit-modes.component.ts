@@ -57,11 +57,11 @@ export class DataFormCommitModesComponent implements OnInit {
         return this._isEnabled;
     }
 
-    public onLoaded(args) {
+    public onLoaded() {
         this.updateLabel();
     }
 
-    public onTap(args) {
+    public onTap() {
         this.myCommitDataFormComp.dataForm.commitAll();
     }
 

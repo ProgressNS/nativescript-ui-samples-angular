@@ -7,7 +7,7 @@ import { Page } from "tns-core-modules/ui/page";
 })
 
 export class TKExampleTitleDirective {
-     constructor(route: ActivatedRoute, page:Page) {
+     constructor(route: ActivatedRoute, page: Page) {
         page.actionBar.title = route.snapshot.data["title"];
     }
 }
