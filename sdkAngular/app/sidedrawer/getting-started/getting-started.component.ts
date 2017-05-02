@@ -4,6 +4,7 @@ import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
 import { Observable } from "data/observable";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawer } from 'nativescript-telerik-ui-pro/sidedrawer';
 
 @Component({
     moduleId: module.id,
@@ -18,7 +19,7 @@ export class SideDrawerGettingStartedComponent implements AfterViewInit, OnInit 
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;

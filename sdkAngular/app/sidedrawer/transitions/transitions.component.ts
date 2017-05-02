@@ -4,7 +4,7 @@ import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { Page } from "tns-core-modules/ui/page";
 import { ActionItem } from "tns-core-modules/ui/action-bar";
 import { FadeTransition, DrawerTransitionBase, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from 'nativescript-telerik-ui-pro/sidedrawer';
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 @Component({
     moduleId: module.id,
@@ -22,7 +22,7 @@ export class SideDrawerTransitionsComponent implements AfterViewInit, OnInit {
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
 
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
 
     public currentTransition: string;

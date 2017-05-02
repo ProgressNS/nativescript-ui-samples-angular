@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { ActivatedRoute, Router } from '@angular/router';
 import * as frameModule from "tns-core-modules/ui/frame";
 
@@ -17,7 +17,7 @@ export class SecondSideDrawerOverNavigationComponent implements AfterViewInit, O
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
