@@ -24,7 +24,6 @@ export class ListViewLoadOnDemandComponent implements OnInit {
     ngOnInit() {
         this.layout = new ListViewLinearLayout();
         this.layout.scrollDirection = "Vertical";
-        this.layout.itemHeight = 220;
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
     }
