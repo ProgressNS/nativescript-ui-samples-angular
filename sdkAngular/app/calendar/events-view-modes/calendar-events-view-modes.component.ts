@@ -16,7 +16,6 @@ import * as applicationModule from "application";
 @Injectable()
 export class CalendarEventsViewModesComponent extends OptionsExampleBase implements OnInit {
     private _events: Array<CalendarEvent>;
-    private _calendar: RadCalendar;
     private _optionsParamName: string;
     private _eventsViewMode;
     constructor(private _page: Page, private _calendarService: CalendarEventsService,
@@ -42,7 +41,6 @@ export class CalendarEventsViewModesComponent extends OptionsExampleBase impleme
     
     ngOnInit() {
         this._events = this._calendarService.getCalendarEvents();
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
     }   
     
     onNoneTap() {

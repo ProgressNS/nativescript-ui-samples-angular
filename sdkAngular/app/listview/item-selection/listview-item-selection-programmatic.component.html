@@ -15,7 +15,7 @@
             <Button (tap)="onDeselectItemAtTap()" text="Done" ios:class="iosSelectItemButton" android:class="androidSelectItemButton"></Button>
         </StackLayout>
     </GridLayout>
-    <RadListView #myRadListView [items]="dataItems" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
+    <RadListView #myRadListView [items]="dataItems" row="1" multipleSelection="true" selectionBehavior="Press">
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical" ios:class="iosListItemStackLayout" android:class="androidListItemStackLayout">
                 <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>

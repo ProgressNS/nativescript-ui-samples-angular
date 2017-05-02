@@ -1,11 +1,12 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import { Component, Injectable, OnInit } from "@angular/core";
+import { Component, Injectable, ViewChild } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "ui/page";
 import { RadCalendar, CalendarSelectionMode } from "nativescript-telerik-ui-pro/calendar";
 import * as frameModule from "ui/frame";
 import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
+import { RadCalendarComponent } from "nativescript-telerik-ui-pro/calendar/angular";
 
 @Component({
     moduleId: module.id,
@@ -14,8 +15,7 @@ import { OptionsService } from "../../navigation/options/options.service";
 })
 @Injectable()
 // >> angular-calendar-selection-modes  
-export class CalendarSelectionModesComponent extends OptionsExampleBase implements OnInit {
-    private _calendar: RadCalendar;
+export class CalendarSelectionModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
     private _selectionMode;
     constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
@@ -33,29 +33,27 @@ export class CalendarSelectionModesComponent extends OptionsExampleBase implemen
     get selectionMode() {
         return this._selectionMode;
     }
-    
-    ngOnInit() {
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
-    }
+
+    @ViewChild("myCalendar") _calendar: RadCalendarComponent;
     
     onNoneTap() {
         this._selectionMode = CalendarSelectionMode.None;
-        this._calendar.reload();
+        this._calendar.nativeElement.reload();
     }
     
     onSingleTap() {
         this._selectionMode = CalendarSelectionMode.Single;
-        this._calendar.reload();
+        this._calendar.nativeElement.reload();
     }
     
     onMultipleTap() { 
         this._selectionMode = CalendarSelectionMode.Multiple;
-        this._calendar.reload();
+        this._calendar.nativeElement.reload();
     }
     
     onRangeTap() {
         this._selectionMode = CalendarSelectionMode.Range;
-        this._calendar.reload();
+        this._calendar.nativeElement.reload();
     }
     
     public onNavigatingTo(args) {

@@ -15,7 +15,6 @@ import { OptionsExampleBase } from "../../options-example-base";
 })
 @Injectable()
 export class CalendarCellStylingComponent extends OptionsExampleBase implements OnInit {
-    private _calendar: RadCalendar;
     private _monthViewStyle: CalendarMonthViewStyle;
     private _weekViewStyle: CalendarWeekViewStyle;
     private _yearViewStyle: CalendarYearViewStyle;
@@ -37,14 +36,13 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
     
     // >> calendar-styling-init
     ngOnInit() {
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
         this._monthViewStyle = this._calendarService.getMonthViewStyle();
         this._monthNamesViewStyle = this._calendarService.getMonthNamesViewStyle();
         this._weekViewStyle = this._calendarService.getWeekViewStyle();
         this._yearViewStyle = this._calendarService.getYearViewStyle();
     }
     // << calendar-styling-init
-    
+
     get viewMode() {
         return this._viewMode;
     }

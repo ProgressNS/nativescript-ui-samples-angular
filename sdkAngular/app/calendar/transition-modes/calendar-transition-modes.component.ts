@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from "@angular/core";
+import { Component, Injectable } from "@angular/core";
 import { Page } from "ui/page";
 import { RadCalendar, CalendarTransitionMode } from "nativescript-telerik-ui-pro/calendar";
 import { OptionsService } from "../../navigation/options/options.service";
@@ -12,78 +12,75 @@ import { OptionsExampleBase } from "../../options-example-base";
     templateUrl: "calendar-transition-modes.component.html"
 })
 @Injectable()
-export class CalendarTransitionModesComponent extends OptionsExampleBase implements OnInit {
-    private _calendar: RadCalendar;
+export class CalendarTransitionModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
     private _transitionMode;
     constructor(private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
-        if (applicationModule.ios) {            
+        if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "transitionMode";
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
-            this.navigationParameters = { selectedIndex: 0, paramName: this._optionsParamName, 
-                items: ["None", "Slide", "Stack", "Flip", "Fold", "Float", "Rotate"] };
+            this.navigationParameters = {
+                selectedIndex: 0, paramName: this._optionsParamName,
+                items: ["None", "Slide", "Stack", "Flip", "Fold", "Float", "Rotate"]
+            };
         }
         this._transitionMode = CalendarTransitionMode.None;
     }
-    
+
     get transitionMode() {
         return this._transitionMode;
     }
-    
-    ngOnInit() {
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
-    }
-    
+
     // common
     onNoneTap() {
         this._transitionMode = CalendarTransitionMode.None;
     }
-    
+
     onSlideTap() {
         this._transitionMode = CalendarTransitionMode.Slide;
     }
-    
+
     onStackTap() {
         this._transitionMode = CalendarTransitionMode.Stack;
     }
-    
+
     // android
     onPlainTap() {
         this._transitionMode = CalendarTransitionMode.Plain;
     }
-    
+
     onFreeTap() {
         this._transitionMode = CalendarTransitionMode.Free;
     }
-    
+
     onComboTap() {
         this._transitionMode = CalendarTransitionMode.Combo;
     }
-    
+
     onOverlapTap() {
         this._transitionMode = CalendarTransitionMode.Overlap;
     }
-    
+
     //ios
     onFlipTap() {
         this._transitionMode = CalendarTransitionMode.Flip;
     }
-    
+
     onFoldTap() {
         this._transitionMode = CalendarTransitionMode.Fold;
     }
-    
+
     onFloatTap() {
         this._transitionMode = CalendarTransitionMode.Float;
     }
-    
+
     onRotateTap() {
         this._transitionMode = CalendarTransitionMode.Rotate;
     }
-    
+
     public onNavigatingTo(args) {
         if (args.isBackNavigation) {
             if (this._optionsService.paramName === this._optionsParamName) {
@@ -101,7 +98,7 @@ export class CalendarTransitionModesComponent extends OptionsExampleBase impleme
                         this.navigationParameters.selectedIndex = 2;
                         break;
                     case "Flip":
-                        this.onFlipTap(); 
+                        this.onFlipTap();
                         this.navigationParameters.selectedIndex = 3;
                         break;
                     case "Fold":

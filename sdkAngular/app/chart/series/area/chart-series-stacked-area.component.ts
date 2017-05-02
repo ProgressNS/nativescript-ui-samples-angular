@@ -18,7 +18,6 @@ import { DataService } from '../../data-services/data.service';
 @Injectable()
 export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implements AfterViewInit, OnInit {
     private _optionsParamName: string;
-    private _chart: RadCartesianChart;
     private _firstSeries: ObservableArray<Country>;
     private _secondSeries: ObservableArray<Country>;
     private _thirdSeries: ObservableArray<Country>;
@@ -52,7 +51,6 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     }
 
     ngOnInit() {
-        this._chart = <RadCartesianChart>this._page.getViewById("cartesianChart");
         this._firstSeries = new ObservableArray(this._dataService.getFirstSeries());
         this._secondSeries = new ObservableArray(this._dataService.getSecondSeries());
         this._thirdSeries = new ObservableArray(this._dataService.getThirdSeries());
