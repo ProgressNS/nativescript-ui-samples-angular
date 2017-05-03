@@ -70,4 +70,4 @@ if (applicationModule.android) {
 })
 export class AppModule { 
 }
-// << using-global-directive
+// << using-global-directives
