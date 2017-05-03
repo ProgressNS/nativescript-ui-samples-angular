@@ -66,9 +66,9 @@
   "scripts": {
     "ns-bundle": "ns-bundle",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
-    "start-android-bundle": "npm install && npm run ns-bundle --android --start-app",
-    "start-ios-bundle": "npm install && npm run ns-bundle --ios --start-app",
-    "build-android-bundle": "npm install && npm run ns-bundle --android --build-app",
-    "build-ios-bundle": "npm install && npm run ns-bundle --ios --build-app"
+    "start-android-bundle": "npm run ns-bundle --android --start-app",
+    "start-ios-bundle": "npm run ns-bundle --ios --start-app",
+    "build-android-bundle": "npm run ns-bundle --android --build-app",
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
   }
 }
