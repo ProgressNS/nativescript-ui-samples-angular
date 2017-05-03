@@ -1,6 +1,6 @@
 {
   "name": "nativescript-telerik-ui-sdk-angular-examples",
-  "version": "1.6.1",
+  "version": "2.0.0",
   "description": "Nativescript project that demonstrates the Progress NativeScript UI suite with Angular",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
@@ -11,10 +11,10 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.0.0"
     },
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
@@ -26,13 +26,13 @@
     "@angular/platform-browser": "~4.0.0",
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
-    "nativescript-angular": "rc",
+    "nativescript-angular": "3.0.0",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
-    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-custom/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
+    "nativescript-telerik-ui-pro": "2.0.0",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.3.0",
-    "tns-core-modules": "rc",
+    "tns-core-modules": "3.0.0",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
@@ -57,7 +57,7 @@
     "nativescript-dev-webpack": "^0.4.0",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.0.2",
-    "tns-platform-declarations": "modules-3.0.0",
+    "tns-platform-declarations": "3.0.0",
     "tslint": "^5.1.0",
     "typescript": "~2.2.2",
     "webpack": "~2.4.1",
