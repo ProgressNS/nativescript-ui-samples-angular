@@ -1,0 +1,17 @@
+<ActionBar title="Stacked Area series">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+
+    <ActionItem *tkIfAndroid text="Stack 100" android.position="popup" (tap)="onStack100ModeSelected()"></ActionItem>
+    <ActionItem *tkIfAndroid text="Stack" android.position="popup" (tap)="onStackModeSelected()"></ActionItem>
+    <ActionItem *tkIfAndroid text="None" android.position="popup" (tap)="onNoneStackModeSelected()"></ActionItem>
+
+    <ActionItem *tkIfIOS text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
+</ActionBar>
+<RadCartesianChart>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+
+    <AreaSeries tkCartesianSeries [items]="firstSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries tkCartesianSeries [items]="secondSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+    <AreaSeries tkCartesianSeries [items]="thirdSeries" [stackMode]="stackMode" categoryProperty="Country" valueProperty="Amount"></AreaSeries>
+</RadCartesianChart>

@@ -1,0 +1,13 @@
+<ActionBar title="Selection modes">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    
+    <ActionItem *tkIfAndroid text="None" android.position="popup" (tap)="onNoneTap()"></ActionItem>
+    <ActionItem *tkIfAndroid text="Single" android.position="popup" (tap)="onSingleTap()"></ActionItem>
+    <ActionItem *tkIfAndroid text="Multiple" android.position="popup" (tap)="onMultipleTap()"></ActionItem>
+    <ActionItem *tkIfAndroid text="Range" android.position="popup" (tap)="onRangeTap()"></ActionItem>
+
+    <ActionItem *tkIfIOS text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
+</ActionBar>
+<StackLayout>
+    <RadCalendar #myCalendar [selectionMode]="selectionMode"></RadCalendar>
+</StackLayout>

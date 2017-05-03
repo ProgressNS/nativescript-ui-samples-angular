@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Person } from "../data-services/person";
-import * as fileSystemModule from "tns-core-modules/file-system";
+import { knownFolders } from "file-system";
 
 @Component({
     moduleId: module.id,
@@ -14,7 +14,7 @@ export class DataformGettingStartedJsonComponent implements OnInit {
     }
 
     ngOnInit() {
-        var documents = fileSystemModule.knownFolders.currentApp();
+        var documents = knownFolders.currentApp();
         var jsonPersonFile = documents.getFile('dataform/data-services/person-model.json');
         var that = new WeakRef(this);
         jsonPersonFile.readText()

@@ -1,7 +1,8 @@
-import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page";
 import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataService } from "../data.service";
 import { DependencyObservable, Property, PropertyMetadataSettings } from "tns-core-modules/ui/core/dependency-observable";
@@ -15,7 +16,7 @@ import { DependencyObservable, Property, PropertyMetadataSettings } from "tns-co
 })
 @Injectable()
 // >> sidedrawer-angular-position-code
-export class SideDrawerPositionComponent implements OnInit {
+export class SideDrawerPositionComponent implements AfterViewInit, OnInit {
     private _currentLocation : SideDrawerLocation;
 
     constructor(private page: Page, private _dataService: DataService, private _changeDetectionRef: ChangeDetectorRef) {
@@ -33,7 +34,7 @@ export class SideDrawerPositionComponent implements OnInit {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
@@ -51,32 +52,32 @@ export class SideDrawerPositionComponent implements OnInit {
     public onCloseDrawerTap() {
        this.drawer.closeDrawer();
     }
-    
+
     public onRightLocationTap() {
         this.currentLocation = SideDrawerLocation.Right;
         this._changeDetectionRef.detectChanges();
-        
+
         this.drawer.showDrawer();
     }
 
     public onLeftLocationTap() {
         this.currentLocation = SideDrawerLocation.Left;
         this._changeDetectionRef.detectChanges();
-        
+
         this.drawer.showDrawer();
     }
 
     public onBottomLocationTap() {
         this.currentLocation = SideDrawerLocation.Bottom;
         this._changeDetectionRef.detectChanges();
-        
+
         this.drawer.showDrawer();
     }
 
     public onTopLocationTap() {
         this.currentLocation = SideDrawerLocation.Top;
         this._changeDetectionRef.detectChanges();
-        
+
         this.drawer.showDrawer();
     }
     // << (hide)

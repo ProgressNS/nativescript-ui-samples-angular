@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { ObservableArray } from "data/observable-array";
+import { View } from "ui/core/view";
+import { topmost } from "ui/frame";
+import { RadListView, ListViewEventData } from "nativescript-telerik-ui-pro/listview";
+
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import * as frameModule from "tns-core-modules/ui/frame";
-import { View } from "tns-core-modules/ui/core/view";
 
 @Component({
     moduleId: module.id,
@@ -29,7 +30,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    public onCellSwiping(args: listViewModule.ListViewEventData) {
+    public onCellSwiping(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         var currentItemView = args.object;
         var currentView;
@@ -41,16 +42,16 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         }
     }
 
-    public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
+    public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = frameModule.topmost().currentPage.getViewById("listView") as View;
+        var listView = topmost().currentPage.getViewById("listView") as View;
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();
         swipeLimits.right = listView.getMeasuredWidth();
     }
 
-    public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
+    public onSwipeCellFinished(args: ListViewEventData) {
         if (args.data.x > 200) {
             console.log("Perform left action");
         } else if (args.data.x < -200) {
@@ -58,8 +59,8 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         }
     }
 
-    public onItemClick(args: listViewModule.ListViewEventData) {
-        var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
+    public onItemClick(args: ListViewEventData) {
+        var listView = <RadListView>topmost().currentPage.getViewById("listView");
         listView.notifySwipeToExecuteFinished();
         console.log("Item click: " + args.itemIndex);
     }

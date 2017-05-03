@@ -1,9 +1,9 @@
-import { Component, OnInit, Injectable } from "@angular/core";
+import { Component, OnInit, OnDestroy, Injectable, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
 import * as frameModule from "tns-core-modules/ui/frame";
 import { Page } from "tns-core-modules/ui/page";
-import { RadListView } from "nativescript-telerik-ui-pro/listview";
+import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
 import { OptionsService } from "../../navigation/options/options.service";
 
 @Component({
@@ -13,22 +13,20 @@ import { OptionsService } from "../../navigation/options/options.service";
     styleUrls: ["options.component.css"]
 })
 @Injectable()
-export class OptionsComponent implements OnInit {
+export class OptionsComponent implements OnInit, OnDestroy {
     private _dataItems: ObservableArray<string>;
-    private _listView: RadListView;
     private _sub: any;
     private _selectedIndex: number = -1;
 
     constructor(private _page: Page, private _route: ActivatedRoute, private _optionsService: OptionsService) {
-        this._page.on("loaded", this.onLoaded, this);
         this._dataItems = new ObservableArray<string>();
     }
 
+    @ViewChild("optionsListView") _listView: RadListViewComponent;
+
     ngOnInit() {
         this._sub = this._route.queryParams.subscribe(
-             (params: any) => 
-             {
-                 this._listView = <RadListView>this._page.getViewById("optionsListView");
+            (params: any) => {
                 var items = params['items'];
                 this._selectedIndex = +params['selectedIndex'];
                 if (items) {
@@ -36,8 +34,8 @@ export class OptionsComponent implements OnInit {
                     this._dataItems = new ObservableArray<string>(splitItems);
                     this.tryUpdateListViewSelection();
                 }
-             }
-         );
+            }
+        );
     }
 
     ngOnDestroy() {
@@ -45,13 +43,12 @@ export class OptionsComponent implements OnInit {
     }
 
     public onLoaded() {
-        this._listView = <RadListView>this._page.getViewById("optionsListView");
         this.tryUpdateListViewSelection();
     }
 
     private tryUpdateListViewSelection() {
-        if (this._selectedIndex >= 0 && this._listView) {
-            this._listView.selectItemAt(this._selectedIndex);
+        if (this._selectedIndex >= 0 && this._listView && this._listView.nativeElement) {
+            this._listView.nativeElement.selectItemAt(this._selectedIndex);
         }
     }
 
@@ -61,7 +58,7 @@ export class OptionsComponent implements OnInit {
 
 
     public onItemTap(args) {
-        var selectedItems = this._listView.getSelectedItems() as Array<string>;
+        var selectedItems = this._listView.nativeElement.getSelectedItems() as Array<string>;
         this._optionsService.paramValue = selectedItems[0];
         frameModule.topmost().goBack();
     }

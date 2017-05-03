@@ -1,5 +1,4 @@
 {
-    "version": "2.0.3",
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
@@ -15,7 +14,8 @@
         "experimentalDecorators": true,
         "lib": [
             "es6",
-            "dom"
+            "dom",
+            "es2015.iterable"
         ],
         "baseUrl": ".",
         "paths": {
@@ -30,6 +30,7 @@
     ],
     "exclude": [
         "node_modules",
-        "platforms"
+        "platforms",
+        "**/*.aot.ts"
     ]
 }

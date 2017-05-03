@@ -8,7 +8,7 @@ import * as applicationModule from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import * as listViewAngularModule from "nativescript-telerik-ui-pro/listview/angular";
+import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
 
 @Component({
     moduleId: module.id,
@@ -22,6 +22,8 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
     private _optionsParamName: string;
     private _dataItems: ObservableArray<DataItem>;
     private _options: Array<string> = ["None", "CenteredHorizontally", "Left", "Right"];
+
+    myScrollPosition: any;
 
     constructor(private _page: Page, private _dataItemService: DataItemService, private _optionsService: OptionsService, private _router: Router) {
         super();
@@ -37,7 +39,7 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
 
     }
 
-    @ViewChild('myRadListView') listViewComponent: listViewAngularModule.RadListViewComponent;
+    @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;

@@ -1,8 +1,8 @@
 import { Component, OnInit, Injectable } from "@angular/core";
-import { Page } from "tns-core-modules/ui/page";
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import { Page } from "ui/page";
+import { RadCalendar, CalendarMonthViewStyle, CalendarWeekViewStyle, CalendarYearViewStyle, CalendarMonthNamesViewStyle, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
 import { CalendarStylesService } from "../calendar-styles.service";
-import * as applicationModule from "tns-core-modules/application";
+import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
 import { Router } from '@angular/router';
 import { OptionsExampleBase } from "../../options-example-base";
@@ -11,15 +11,14 @@ import { OptionsExampleBase } from "../../options-example-base";
     moduleId: module.id,
     selector: "tk-calendar-cell-styling",
     templateUrl: "calendar-cell-styling.component.html",
-    providers:[CalendarStylesService]
+    providers: [CalendarStylesService]
 })
 @Injectable()
 export class CalendarCellStylingComponent extends OptionsExampleBase implements OnInit {
-    private _calendar: calendarModule.RadCalendar;
-    private _monthViewStyle: calendarModule.CalendarMonthViewStyle;
-    private _weekViewStyle: calendarModule.CalendarWeekViewStyle;
-    private _yearViewStyle: calendarModule.CalendarYearViewStyle;
-    private _monthNamesViewStyle: calendarModule.CalendarMonthNamesViewStyle;
+    private _monthViewStyle: CalendarMonthViewStyle;
+    private _weekViewStyle: CalendarWeekViewStyle;
+    private _yearViewStyle: CalendarYearViewStyle;
+    private _monthNamesViewStyle: CalendarMonthNamesViewStyle;
     private _optionsParamName: string;
     private _viewMode;
     constructor(private _page: Page, private _calendarService: CalendarStylesService,
@@ -32,53 +31,52 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
             this.router = _router;
             this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] };
         }
-        this._viewMode = calendarModule.CalendarViewMode.Month;
+        this._viewMode = CalendarViewMode.Month;
     }
     
     // >> calendar-styling-init
     ngOnInit() {
-        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
         this._monthViewStyle = this._calendarService.getMonthViewStyle();
         this._monthNamesViewStyle = this._calendarService.getMonthNamesViewStyle();
         this._weekViewStyle = this._calendarService.getWeekViewStyle();
         this._yearViewStyle = this._calendarService.getYearViewStyle();
     }
     // << calendar-styling-init
-    
+
     get viewMode() {
         return this._viewMode;
     }
     
-    get monthViewStyle(): calendarModule.CalendarMonthViewStyle {
+    get monthViewStyle(): CalendarMonthViewStyle {
         return this._monthViewStyle;
     }
     
-    get monthNamesViewStyle(): calendarModule.CalendarMonthNamesViewStyle {
+    get monthNamesViewStyle(): CalendarMonthNamesViewStyle {
         return this._monthNamesViewStyle;
     }
     
-    get yearViewStyle(): calendarModule.CalendarYearViewStyle {
+    get yearViewStyle(): CalendarYearViewStyle {
         return this._yearViewStyle;
     }
     
-    get weekViewStyle(): calendarModule.CalendarWeekViewStyle {
+    get weekViewStyle(): CalendarWeekViewStyle {
         return this._weekViewStyle;
     }
     
     onYearTap() {
-        this._viewMode = calendarModule.CalendarViewMode.Year;
+        this._viewMode = CalendarViewMode.Year;
     }
     
     onMonthNamesTap() { 
-        this._viewMode = calendarModule.CalendarViewMode.MonthNames;
+        this._viewMode = CalendarViewMode.MonthNames;
     }
     
     onMonthTap() { 
-        this._viewMode = calendarModule.CalendarViewMode.Month;
+        this._viewMode = CalendarViewMode.Month;
     }
     
     onWeekTap() {
-        this._viewMode = calendarModule.CalendarViewMode.Week;
+        this._viewMode = CalendarViewMode.Week;
     }
     
      public onNavigatingTo(args) {

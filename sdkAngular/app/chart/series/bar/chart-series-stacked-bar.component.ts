@@ -1,6 +1,6 @@
 import { OptionsService } from "../../../navigation/options/options.service";
 import { OptionsExampleBase } from "../../../options-example-base";
-import { Component, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
+import { Component, AfterViewInit, OnInit, Injectable, ChangeDetectorRef } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page";
 import * as applicationModule from "tns-core-modules/application";
@@ -15,12 +15,13 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
     templateUrl: 'chart-series-stacked-bar.component.html'
 })
 @Injectable()
-export class ChartSeriesStackedBarComponent extends OptionsExampleBase implements OnInit {
+export class ChartSeriesStackedBarComponent extends OptionsExampleBase implements AfterViewInit, OnInit {
     private _optionsParamName: string;
 
     private _categoricalSource: ObservableArray<Country>;
     private _optionsItems: Array<string>;
 
+    stackMode: string;
 
     constructor(private _page: Page,
         private _optionsService: OptionsService, private _router: Router, private _changeDetectionRef: ChangeDetectorRef, private _dataService: DataService) {

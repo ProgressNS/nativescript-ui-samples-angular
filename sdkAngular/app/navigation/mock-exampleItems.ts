@@ -256,7 +256,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Programatic Selection",
+                                "title": "Programmatic Selection",
                                 "path": "ListviewItemSelectionProgrammaticComponent",
                                 "subItems": []
                             }
@@ -284,8 +284,24 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Swipe to Execute",
-                        "path": "ListViewSwipeExecuteComponent",
-                        "subItems": []
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Getting started",
+                                "path": "ListViewSwipeExecuteComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Swipe to execute with sticky actions",
+                                "path": "ListviewSwipeExecuteStickyComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Swipe to execute with stretched content",
+                                "path": "ListviewSwipeExecuteStretchComponent",
+                                "subItems": []
+                            },
+                        ]
                     },
                     {
                         "title": "Swipe actions",
@@ -311,16 +327,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Header and Footer",
                         "path": "ListViewHeaderFooterComponent",
-                        "subItems": []
-                    },
-                    {
-                        "title": "Swipe to execute with sticky actions",
-                        "path": "ListviewSwipeExecuteStickyComponent",
-                        "subItems": []
-                    },
-                    {
-                        "title": "Swipe to execute with stretched content",
-                        "path": "ListviewSwipeExecuteStretchComponent",
                         "subItems": []
                     },
                     {
@@ -397,7 +403,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Programatic control",
+                        "title": "Programmatic control",
                         "path": "CalendarProgrammaticControlComponent",
                         "subItems": []
                     },

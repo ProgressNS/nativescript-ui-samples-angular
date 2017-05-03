@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { EXAMPLEITEMS } from "./mock-exampleItems";
 import { ExampleItem } from "./exampleItem";
-import { AppExampleComponents } from "./appExamples";
+import { EXAMPLES_COMPONENTS } from "../app.routes";
 
 @Injectable()
 export class ExampleItemService {
@@ -54,7 +54,7 @@ export class ExampleItemService {
     }
 
     getComponentByName(name: string): any {
-        var result = AppExampleComponents.filter(this.checkName(name));
+        var result = EXAMPLES_COMPONENTS.filter(this.checkName(name));
         if (result.length == 1) {
             return result[0];
         }

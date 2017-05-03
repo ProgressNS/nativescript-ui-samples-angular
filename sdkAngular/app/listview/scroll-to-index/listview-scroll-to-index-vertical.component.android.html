@@ -1,9 +1,0 @@
-<GridLayout rows="auto, *" tkExampleTitle tkToggleNavButton>
-    <Button text="Scroll to index 50" (tap)="onTap($event)"></Button>
-    <RadListView #myRadListView [items]="dataItems" [scrollPosition]="myScrollPosition" row="1">
-        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemHeight="50"></ListViewLinearLayout>
-        <ng-template tkListItemTemplate let-item="item">
-            <Label class="labelName" [text]="item.name"></Label>
-        </ng-template>
-    </RadListView>
-</GridLayout>

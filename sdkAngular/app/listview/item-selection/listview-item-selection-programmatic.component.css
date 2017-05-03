@@ -1,0 +1,54 @@
+/* ios styles */
+.iosListItemStackLayout {
+    padding-left: 50;
+}
+
+.iosNameLabel {
+    font-size: 20
+}
+
+.iosDescriptionLabel {
+    font-size: 14;
+}
+
+.iosSelectItemTextField {
+    background-color: white;
+    width: 60;
+    height: 30;
+}
+
+.iosSelectItemButton {
+    margin-left: 10;
+    height: 50;
+}
+
+.iosSelectAllButton {
+    margin-right: 10;
+}
+
+/* Android styles */
+.androidListItemStackLayout {
+    padding-left: 16;
+}
+
+.androidNameLabel {
+    font-size: 20
+}
+
+.androidDescriptionLabel {
+    font-size: 14;
+}
+
+.androidSelectItemTextField {
+    width: 60;
+    height: 50;
+}
+
+.androidSelectItemButton {
+    margin-left: 10;
+    height: 50;
+}
+
+.androidSelectAllButton {
+    margin-right: 10;
+}

@@ -13,9 +13,8 @@ import * as applicationModule from "tns-core-modules/application";
     templateUrl: "calendar-view-modes.component.html"
 })
 @Injectable()
-export class CalendarViewModesComponent extends OptionsExampleBase implements OnInit {
+export class CalendarViewModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
-    private _calendar: RadCalendar;
     private _viewMode;
 
     constructor(private _page: Page,
@@ -34,11 +33,7 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
     get viewMode() {
         return this._viewMode;
     }
-    
-    ngOnInit() {
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
-    }
-
+   
     onWeekTap() {
         this._viewMode = CalendarViewMode.Week;
     }
@@ -46,7 +41,6 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
     onMonthTap() {
         this._viewMode = CalendarViewMode.Month;
     }
-
 
     onMonthNamesTap() {
         this._viewMode = CalendarViewMode.MonthNames;

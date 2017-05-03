@@ -26,7 +26,7 @@ export class DataformCheckErrorsComponent implements OnInit {
         return this._user;
     }
 
-    public checkErrors(args) {
+    public checkErrors() {
         var hasErrors = this.dataFormComp.dataForm.hasValidationErrors();
         this.resultLabel.nativeElement.text = hasErrors;
     }
