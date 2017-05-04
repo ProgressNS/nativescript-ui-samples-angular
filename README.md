@@ -28,7 +28,7 @@ Steps to run the sample:
 
 ## Release notes
 For more information about releases, features and breaking changes you can check out the release notes section in the online documentation:
-[Telerik Progress NativeScript UI release notes](http://docs.telerik.com/devtools/nativescript-ui/release-notes)
+[Progress NativeScript UI release notes](http://docs.telerik.com/devtools/nativescript-ui/release-notes)
 
 ## Enable codelyzer
 The project takes advantage of the [codelyzer](https://www.npmjs.com/package/codelyzer) library and its set of tslint rules for static code analysis of the Angular TypeScript projects. In order to enable the codelyzer in Visual Studio Code you need to:
