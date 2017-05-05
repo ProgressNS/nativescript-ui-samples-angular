@@ -23,7 +23,7 @@
         "url": "git@github.com/telerik/nativescript-ui-samples-angular.git"
     },
     "bugs": {
-        "url": "https://github.com/telerik/nativescript-ui-samples-angular/issues"
+        "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
     },
     "homepage": "https://github.com/telerik/nativescript-ui-samples-angular",
     "android": {
