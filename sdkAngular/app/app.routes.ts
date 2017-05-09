@@ -680,7 +680,7 @@ export const APP_ROUTES: Routes = [
         path: "DataformCheckErrorsComponent",
         component: DataformCheckErrorsComponent,
         data: {
-            "title": "Check 'Validation State'"
+            "title": "Check Validation State"
         }
     },
     {
