@@ -110,11 +110,6 @@ export class DataformStylingAdvancedComponent implements OnInit {
         }));
     }
 
-    public editorSetupSliderAndroid(editor) {
-        editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
-        editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
-    }
-
     public editorSetupSwitchIOS(editor) {
         var coreEditor = <UISwitch>editor.editor;
         if (coreEditor.tintColor == colorLight.ios) {
@@ -149,11 +144,18 @@ export class DataformStylingAdvancedComponent implements OnInit {
         coreEditor.tintColor = colorDark.ios;
     }
 
+    // >> angular-dataform-styling-advanced
+    public editorSetupSliderAndroid(editor) {
+        editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
+        editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
+    }
+
     public editorSetupSliderIOS(editor) {
         var coreEditor = <UISlider>editor.editor;
         coreEditor.tintColor = colorLight.ios;
         coreEditor.thumbTintColor = colorDark.ios;
     }
+    // << angular-dataform-styling-advanced
 }
 
 
