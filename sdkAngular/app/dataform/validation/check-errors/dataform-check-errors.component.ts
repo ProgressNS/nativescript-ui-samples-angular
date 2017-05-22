@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { AdvancedUser } from "../../data-services/user";
 import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular";
-import { Label } from "ui/label";
+import { Label } from "tns-core-modules/ui/label";
 
 @Component({
     moduleId: module.id,
@@ -26,7 +26,7 @@ export class DataformCheckErrorsComponent implements OnInit {
         return this._user;
     }
 
-    public checkErrors(args) {
+    public checkErrors() {
         var hasErrors = this.dataFormComp.dataForm.hasValidationErrors();
         this.resultLabel.nativeElement.text = hasErrors;
     }

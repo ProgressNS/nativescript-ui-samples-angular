@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { CommitMode } from "nativescript-telerik-ui-pro/dataform";
 import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular";
-import { SegmentedBarItem, SelectedIndexChangedEventData } from "ui/segmented-bar";
+import { SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 import { User } from "../data-services/user";
-import * as timerModule from "timer";
+import * as timerModule from "tns-core-modules/timer";
 
 @Component({
     moduleId: module.id,
@@ -57,11 +57,11 @@ export class DataFormCommitModesComponent implements OnInit {
         return this._isEnabled;
     }
 
-    public onLoaded(args) {
+    public onLoaded() {
         this.updateLabel();
     }
 
-    public onTap(args) {
+    public onTap() {
         this.myCommitDataFormComp.dataForm.commitAll();
     }
 

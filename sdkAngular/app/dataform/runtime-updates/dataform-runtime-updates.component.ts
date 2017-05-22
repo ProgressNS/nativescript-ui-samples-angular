@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { Button } from "ui/button";
+import { Button } from "tns-core-modules/ui/button";
 import * as dataformAngularModule from "nativescript-telerik-ui-pro/dataform/angular";
 import { PropertyEditor } from "nativescript-telerik-ui-pro/dataform";
 import { Person } from "../data-services/person";
@@ -107,14 +107,14 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
     // >> angular-dataform-getting-started-runtime-change
     public changeEditorFill() {
         var property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
-        property.editor.style.fillColor = "LightBlue";
+        property.editor.propertyEditorStyle.fillColor = "LightBlue";
     }
     // << angular-dataform-getting-started-runtime-change
 
     public changeEditorStroke() {
         var property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
-        property.editor.style.strokeWidth = 4;
-        property.editor.style.strokeColor = "Yellow";
+        property.editor.propertyEditorStyle.strokeWidth = 4;
+        property.editor.propertyEditorStyle.strokeColor = "Yellow";
     }
 
     public changeGroupCollapsible(value) {

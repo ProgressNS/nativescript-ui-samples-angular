@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Settings } from "../data-services/settings";
-import * as applicationModule from "application";
-import { Color } from "color";
-import * as viewModule from "ui/core/view";
+import * as applicationModule from "tns-core-modules/application";
+import { Color } from "tns-core-modules/color";
+import * as viewModule from "tns-core-modules/ui/core/view";
 
 @Component({
     moduleId: module.id,
@@ -110,13 +110,11 @@ export class DataformStylingAdvancedComponent implements OnInit {
         }));
     }
 
-    public editorSetupSliderAndroid(editor) {
-        editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
-        editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
-    }
-
     public editorSetupSwitchIOS(editor) {
         var coreEditor = <UISwitch>editor.editor;
+        if (coreEditor.tintColor == colorLight.ios) {
+            return;
+        }
         coreEditor.tintColor = colorLight.ios;
         coreEditor.onTintColor = colorLight.ios;
         coreEditor.thumbTintColor = colorDark.ios;
@@ -146,11 +144,18 @@ export class DataformStylingAdvancedComponent implements OnInit {
         coreEditor.tintColor = colorDark.ios;
     }
 
+    // >> angular-dataform-styling-advanced
+    public editorSetupSliderAndroid(editor) {
+        editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
+        editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
+    }
+
     public editorSetupSliderIOS(editor) {
         var coreEditor = <UISlider>editor.editor;
         coreEditor.tintColor = colorLight.ios;
         coreEditor.thumbTintColor = colorDark.ios;
     }
+    // << angular-dataform-styling-advanced
 }
 
 

@@ -1,6 +1,6 @@
-import * as frameModule from "ui/frame";
+import * as frameModule from "tns-core-modules/ui/frame";
 import { Router } from '@angular/router';
-import { Observable } from "data/observable";
+import { Observable } from "tns-core-modules/data/observable";
 
 export class OptionsExampleBase extends Observable {
     protected navigationParameters;

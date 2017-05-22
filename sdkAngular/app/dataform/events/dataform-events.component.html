@@ -1,5 +1,5 @@
 <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
-    <Label margin="12" id="myLabel" [text]="eventsText" row="0"></Label>
+    <Label margin="12" [text]="eventsText" row="0"></Label>
     <!-- >> angular-dataform-commit-cancel-html -->
     <RadDataForm [source]="person" marginTop="50" row="1" (groupExpanded)="dfGroupExpanded($event)" (groupCollapsed)="dfGroupCollapsed($event)"
         (propertyCommit)="dfPropertyCommit($event)" (propertyCommitted)="dfPropertyCommitted($event)">

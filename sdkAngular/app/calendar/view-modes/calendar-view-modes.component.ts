@@ -1,11 +1,11 @@
 import { OptionsExampleBase } from "../../options-example-base";
 import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page, NavigatedData } from "ui/page";
+import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
 import { RadCalendar, CalendarViewMode } from "nativescript-telerik-ui-pro/calendar";
-import * as frameModule from "ui/frame";
-import * as applicationModule from "application";
+import * as frameModule from "tns-core-modules/ui/frame";
+import * as applicationModule from "tns-core-modules/application";
 
 @Component({
     moduleId: module.id,
@@ -13,9 +13,8 @@ import * as applicationModule from "application";
     templateUrl: "calendar-view-modes.component.html"
 })
 @Injectable()
-export class CalendarViewModesComponent extends OptionsExampleBase implements OnInit {
+export class CalendarViewModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
-    private _calendar: RadCalendar;
     private _viewMode;
 
     constructor(private _page: Page,
@@ -34,11 +33,7 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
     get viewMode() {
         return this._viewMode;
     }
-    
-    ngOnInit() {
-        this._calendar = <RadCalendar>this._page.getViewById("calendar");
-    }
-
+   
     onWeekTap() {
         this._viewMode = CalendarViewMode.Week;
     }
@@ -46,7 +41,6 @@ export class CalendarViewModesComponent extends OptionsExampleBase implements On
     onMonthTap() {
         this._viewMode = CalendarViewMode.Month;
     }
-
 
     onMonthNamesTap() {
         this._viewMode = CalendarViewMode.MonthNames;

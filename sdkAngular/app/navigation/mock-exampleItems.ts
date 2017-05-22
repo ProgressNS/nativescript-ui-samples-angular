@@ -256,7 +256,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Programatic Selection",
+                                "title": "Programmatic Selection",
                                 "path": "ListviewItemSelectionProgrammaticComponent",
                                 "subItems": []
                             }
@@ -284,8 +284,24 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Swipe to Execute",
-                        "path": "ListViewSwipeExecuteComponent",
-                        "subItems": []
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Getting started",
+                                "path": "ListViewSwipeExecuteComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Swipe to execute with sticky actions",
+                                "path": "ListviewSwipeExecuteStickyComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Swipe to execute with stretched content",
+                                "path": "ListviewSwipeExecuteStretchComponent",
+                                "subItems": []
+                            },
+                        ]
                     },
                     {
                         "title": "Swipe actions",
@@ -311,16 +327,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Header and Footer",
                         "path": "ListViewHeaderFooterComponent",
-                        "subItems": []
-                    },
-                    {
-                        "title": "Swipe to execute with sticky actions",
-                        "path": "ListviewSwipeExecuteStickyComponent",
-                        "subItems": []
-                    },
-                    {
-                        "title": "Swipe to execute with stretched content",
-                        "path": "ListviewSwipeExecuteStretchComponent",
                         "subItems": []
                     },
                     {
@@ -370,6 +376,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "SideDrawerEventsComponent",
                         "subItems": []
                     },
+                    {
+                        "title": "Drawer Over Navigation",
+                        "path": "SideDrawerOverNavigationComponent",
+                        "subItems": []
+                    }
                 ]
             },
             {
@@ -382,13 +393,18 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Localization",
+                        "path": "CalendarLocalizationComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Populating with data",
                         "path": "CalendarPopulatingWithDataComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Programatic control",
-                        "path": "CalendarProgramaticControlComponent",
+                        "title": "Programmatic control",
+                        "path": "CalendarProgrammaticControlComponent",
                         "subItems": []
                     },
                     {
@@ -468,7 +484,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Check 'Validation State'",
+                                "title": "Check Validation State",
                                 "path": "DataformCheckErrorsComponent",
                                 "subItems": []
                             }

@@ -1,5 +1,5 @@
 <RadDataForm [source]="ticketOrder" tkExampleTitle tkToggleNavButton>
-	<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="0" [valuesProvider]="movies">
+	<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="0" [converter]="movieConverter" [valuesProvider]="movieNames">
 		<TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
 	</TKEntityProperty>
 	<TKEntityProperty tkDataFormProperty name="date" index="1">

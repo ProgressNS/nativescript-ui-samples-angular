@@ -1,15 +1,15 @@
 {
     "name": "nativescript-ui-angular2",
-    "main": "app.module.js",
+    "main": "main.js",
     "version": "1.0.0",
     "author": {
-        "name": "Telerik",
+        "name": "Progress",
         "email": "support@telerik.com"
     },
-    "description": "Nativescript project that shows the NativeScript UI with Angular2",
+    "description": "Nativescript project that demonstrates the Progressc NativeScript UI suite with Angular",
     "license": "Apache-2.0",
     "keywords": [
-        "telerik",
+        "Progress",
         "mobile",
         "nativescript",
         "{N}",
@@ -23,7 +23,7 @@
         "url": "git@github.com/telerik/nativescript-ui-samples-angular.git"
     },
     "bugs": {
-        "url": "https://github.com/telerik/nativescript-ui-samples-angular/issues"
+        "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
     },
     "homepage": "https://github.com/telerik/nativescript-ui-samples-angular",
     "android": {

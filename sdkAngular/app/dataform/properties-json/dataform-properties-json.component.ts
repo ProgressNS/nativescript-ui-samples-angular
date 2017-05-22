@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Person } from "../data-services/person";
-import fs = require("file-system");
-import * as fileSystemModule from "file-system";
+import { knownFolders } from "file-system";
 
 @Component({
     moduleId: module.id,
@@ -16,7 +15,7 @@ export class DataformPropertiesJsonComponent implements OnInit {
     }
 
     ngOnInit() {
-        var documents = fs.knownFolders.currentApp();
+        var documents = knownFolders.currentApp();
         var jsonPersonFile = documents.getFile('dataform/data-services/person-model.json');
         var that = new WeakRef(this);
         jsonPersonFile.readText()

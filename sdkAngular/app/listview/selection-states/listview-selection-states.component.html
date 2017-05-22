@@ -6,13 +6,13 @@
         <!-- << angular-listview-howto-item-selection-events-html -->
         
         <!-- >> angular-listview-howto-item-selection-template-html -->
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout [backgroundColor]="item.selected ? 'red' : 'white'">
                 <Label class="nameLabel" [text]="item.name"></Label>
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
-        </template>
+        </ng-template>
         <!-- << angular-listview-howto-item-selection-template-html -->
-        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>

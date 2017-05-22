@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import * as frameModule from "ui/frame";
+import * as frameModule from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -179,3 +179,5 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
         frameModule.topmost().goBack();
     }
 }
+
+export const ExamplesListDepthComponents = [ ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component];

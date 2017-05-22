@@ -1,10 +1,9 @@
 // >> angular-listview-item-selection-programmatic-component
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { ObservableArray } from "data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import listViewModule = require("nativescript-telerik-ui-pro/listview/angular");
-import listViewAnularModule = require("nativescript-telerik-ui-pro/listview/angular");
+import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
 
 @Component({
     moduleId: module.id,
@@ -21,7 +20,7 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    @ViewChild('myRadListView') listView: listViewAnularModule.RadListViewComponent;
+    @ViewChild('myRadListView') listView: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
@@ -47,19 +46,19 @@ export class ListviewItemSelectionProgrammaticComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getNameEmailDataItems());
     }
 
-    public onSelectItemAtTap(args) {
+    public onSelectItemAtTap() {
         this.listView.listView.selectItemAt(Number(this.txtSelectItemIndex));
     }
 
-    public onDeselectItemAtTap(args) {
+    public onDeselectItemAtTap() {
         this.listView.listView.deselectItemAt(Number(this.txtDeselectItemIndex));
     }
 
-    public onSelectAllTap(args) {
+    public onSelectAllTap() {
         this.listView.listView.selectAll();
     }
 
-    public onDeselectAllTap(args) {
+    public onDeselectAllTap() {
         this.listView.listView.deselectAll();
     }
 }

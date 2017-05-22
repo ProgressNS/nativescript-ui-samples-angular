@@ -1,10 +1,9 @@
-import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
-import { View } from "ui/core/view";
-import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
+import { View } from "tns-core-modules/ui/core/view";
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
-import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { DrawerTransitionBase, PushTransition, RadSideDrawer } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 // >> sidedrawer-angular-callbacks-definition
 @Component({
@@ -14,30 +13,26 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     styleUrls: ['events.component.css']
 })
 @Injectable()
-export class SideDrawerEventsComponent implements OnInit {
+export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
     private _currentNotification: string;
-    private _sideDrawerTransition: sideDrawerModule.DrawerTransitionBase;
+    private _sideDrawerTransition: DrawerTransitionBase;
 
-    constructor(private _page: Page, private _changeDetectionRef: ChangeDetectorRef) {
-        this._page.on("loaded", this.onLoaded, this);
+    constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        this._sideDrawerTransition = new PushTransition();
         this._changeDetectionRef.detectChanges();
     }
 
     ngOnInit() {
     }
 
-    public onLoaded(args) {
-        this._sideDrawerTransition = new sideDrawerModule.PushTransition();
-    }
-
-    public get sideDrawerTransition(): sideDrawerModule.DrawerTransitionBase {
+    public get sideDrawerTransition(): DrawerTransitionBase {
         return this._sideDrawerTransition;
     }
 
@@ -49,23 +44,23 @@ export class SideDrawerEventsComponent implements OnInit {
         this.drawer.showDrawer();
     }
 
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
+
     public onDrawerOpening() {
-        console.log("Drawer opening");
         this._currentNotification = "Drawer opening";
     }
 
     public onDrawerOpened() {
-        console.log("Drawer opened");
         this._currentNotification = "Drawer opened";
     }
 
     public onDrawerClosing() {
-        console.log("Drawer closing");
         this._currentNotification = "Drawer closing";
     }
 
     public onDrawerClosed() {
-        console.log("Drawer closed");
         this._currentNotification = "Drawer closed";
     }
 }

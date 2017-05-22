@@ -1,5 +1,4 @@
 {
-    "version": "2.0.3",
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
@@ -12,13 +11,26 @@
         "emitDecoratorMetadata": true,
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitUseStrict": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "lib": [
+            "es6",
+            "dom",
+            "es2015.iterable"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
     },
     "filesGlob": [
         "./**/*.ts"
     ],
     "exclude": [
         "node_modules",
-        "platforms"
+        "platforms",
+        "**/*.aot.ts"
     ]
 }

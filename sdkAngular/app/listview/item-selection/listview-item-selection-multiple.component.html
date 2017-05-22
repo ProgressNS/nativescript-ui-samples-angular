@@ -2,12 +2,12 @@
     <!-- >> angular-listview-item-selection-multiple -->
     <RadListView [items]="dataItems" selectionBehavior="Press" multipleSelection="true">
     <!-- << angular-listview-item-selection-multiple -->
-        <template tkListItemTemplate let-item="item">
-            <StackLayout class="listItemStackLayout">
-                <Label class="nameLabel" [text]="item.name"></Label>
-                <Label class="descriptionLabel" [text]="item.description"></Label>
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout ios:class="iosListItemStackLayout" android:class="androidListItemStackLayout">
+                <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>
+                <Label ios:class="iosDescriptionLabel" android:class="androidDescriptionLabel" class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
-        </template>
-        <ListViewLinearLayout tkListViewLayout itemHeight="50" scrollDirection="Vertical"></ListViewLinearLayout>
+        </ng-template>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>

@@ -1,11 +1,10 @@
-import { Component, ElementRef, ViewChild, Injectable, OnInit, ChangeDetectorRef } from "@angular/core";
-import { View } from "ui/core/view";
-import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+// >> sidedrawer-getting-started-angular
+import { Component, ViewChild, OnInit, AfterViewInit, ChangeDetectorRef } from "@angular/core";
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
-import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import { Observable } from "data/observable";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawer } from 'nativescript-telerik-ui-pro/sidedrawer';
 
 @Component({
     moduleId: module.id,
@@ -13,14 +12,14 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-
     templateUrl: 'getting-started.component.html',
     styleUrls: ['getting-started.component.css']
 })
-@Injectable()
-export class SideDrawerGettingStartedComponent extends Observable implements OnInit {
-    constructor(private page: Page, private _changeDetectionRef: ChangeDetectorRef) {
-        super();
+export class SideDrawerGettingStartedComponent implements AfterViewInit, OnInit {
+    private _mainContentText: string;
+
+    constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
+    private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
@@ -28,12 +27,23 @@ export class SideDrawerGettingStartedComponent extends Observable implements OnI
     }
 
     ngOnInit() {
-        this.set("mainContentText", "SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component"
-            + " has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer.");
+        this.mainContentText = "SideDrawer for NativeScript can be easily setup in the HTML definition of your page by defining tkDrawerContent and tkMainContent. The component has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer.";
+    }
+
+    get mainContentText() {
+        return this._mainContentText;
+    }
+
+    set mainContentText(value: string) {
+        this._mainContentText = value;
     }
 
     public openDrawer() {
         this.drawer.showDrawer();
     }
 
+    public onCloseDrawerTap() {
+       this.drawer.closeDrawer();
+    }
 }
+// << sidedrawer-getting-started-angular

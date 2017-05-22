@@ -1,4 +1,4 @@
-<!-- >> angular-sidedrawer-getting-started -->
+<!-- >> angular-sidedrawer-getting-started-html -->
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
     <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
@@ -14,10 +14,11 @@
             <Label text="Sent Mail" class="sideLabel"></Label>
             <Label text="Drafts" class="sideLabel"></Label>
         </StackLayout>
+        <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" (tap)="onCloseDrawerTap()"></Label>
     </StackLayout>
     <StackLayout tkMainContent>
         <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
     </StackLayout>
 </RadSideDrawer>
-<!-- << angular-sidedrawer-getting-started -->
+<!-- << angular-sidedrawer-getting-started-html -->

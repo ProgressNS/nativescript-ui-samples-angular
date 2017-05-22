@@ -1,9 +1,9 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import {Component, OnInit, Injectable} from "@angular/core";
+import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import {CalendarEventsService} from "../calendar-events.service";
+import { CalendarEventsService } from "../calendar-events.service";
 import { OptionsService } from "../../navigation/options/options.service";
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import { RadCalendar, CalendarEvent, CalendarEventsViewMode } from "nativescript-telerik-ui-pro/calendar";
 import { Page } from "ui/page";
 import * as applicationModule from "application";
 
@@ -15,8 +15,7 @@ import * as applicationModule from "application";
 })
 @Injectable()
 export class CalendarEventsViewModesComponent extends OptionsExampleBase implements OnInit {
-    private _events: Array<calendarModule.CalendarEvent>;
-    private _calendar: calendarModule.RadCalendar;
+    private _events: Array<CalendarEvent>;
     private _optionsParamName: string;
     private _eventsViewMode;
     constructor(private _page: Page, private _calendarService: CalendarEventsService,
@@ -29,7 +28,7 @@ export class CalendarEventsViewModesComponent extends OptionsExampleBase impleme
             this.router = _router;
             this.navigationParameters = { selectedIndex: 0, paramName: this._optionsParamName, items: ["None", "Inline", "Popover (iPad only)"] };
         }
-        this._eventsViewMode = calendarModule.CalendarEventsViewMode.None;
+        this._eventsViewMode = CalendarEventsViewMode.None;
     }
     
     get eventSource() {
@@ -42,19 +41,18 @@ export class CalendarEventsViewModesComponent extends OptionsExampleBase impleme
     
     ngOnInit() {
         this._events = this._calendarService.getCalendarEvents();
-        this._calendar = <calendarModule.RadCalendar>this._page.getViewById("calendar");
     }   
     
     onNoneTap() {
-        this._eventsViewMode = calendarModule.CalendarEventsViewMode.None;
+        this._eventsViewMode = CalendarEventsViewMode.None;
     }
     
     onInlineTap() {
-        this._eventsViewMode = calendarModule.CalendarEventsViewMode.Inline;
+        this._eventsViewMode = CalendarEventsViewMode.Inline;
     }
     
     onPopoverTap() {       
-        this._eventsViewMode = calendarModule.CalendarEventsViewMode.Popover;
+        this._eventsViewMode = CalendarEventsViewMode.Popover;
     }
     
      public onNavigatingTo(args) {

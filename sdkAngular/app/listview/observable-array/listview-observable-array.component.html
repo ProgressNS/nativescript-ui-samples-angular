@@ -1,18 +1,18 @@
 <GridLayout orientation="vertical" rows="50, *" tkExampleTitle tkToggleNavButton>
-    <StackLayout orientation="vertical" class="buttonsStacklayout">
+    <StackLayout orientation="vertical" ios:class="iosButtonsStacklayout" android:class="androidButtonsStacklayout">
         <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
-            <Button text="Add" (tap)="onAddItemClick()"></Button>
-            <Button text="Del" (tap)="onRemoveItemClick()"></Button>
-            <Button text="Update" (tap)="onUpdateItemClick()"></Button>
-            <Button text="Reset" (tap)="onResetClick()"></Button>
+            <Button ios:class="iosButton" text="Add" (tap)="onAddItemClick()"></Button>
+            <Button ios:class="iosButton" text="Del" (tap)="onRemoveItemClick()"></Button>
+            <Button ios:class="iosButton" text="Update" (tap)="onUpdateItemClick()"></Button>
+            <Button ios:class="iosButton" text="Reset" (tap)="onResetClick()"></Button>
         </StackLayout>
     </StackLayout>
     <RadListView [items]="dataItems" row="1">
-        <template tkListItemTemplate let-item="item">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical">
-                <Label class="nameLabel" [text]="item.name"></Label>
-                <Label class="descriptionLabel" [text]="item.description"></Label>
+                <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>
+                <Label ios:class="iosDescriptionLabel" android:class="androidDescriptionLabel" [text]="item.description"></Label>
             </StackLayout>
-        </template>
+        </ng-template>
     </RadListView>
 </GridLayout>

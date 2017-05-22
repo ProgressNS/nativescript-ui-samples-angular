@@ -1,8 +1,7 @@
-import {Injectable} from '@angular/core';
-import {CalendarEvent} from 'nativescript-telerik-ui-pro/calendar' 
+import { Injectable } from '@angular/core';
 import { Color } from "color";
 // >> angular-calendar-require
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import { CalendarEvent } from 'nativescript-telerik-ui-pro/calendar' 
 // << angular-calendar-require 
 
 // >> angular-calendar-events-service
