@@ -34,7 +34,7 @@ export class AutoCompleteGettingStartedComponent {
             this._items.push(new autocompleteModule.TokenModel(this.countries[i], undefined));
         }
     }
-
+// >> (hide)
     public onSuggestSelected(args) {
         this.autocmp.autoCompleteTextView.suggestMode = "Suggest";
         this.autocmp.autoCompleteTextView.resetAutocomplete();
@@ -72,5 +72,6 @@ export class AutoCompleteGettingStartedComponent {
         this.autocmp.autoCompleteTextView.displayMode = "Tokens";
         this.autocmp.autoCompleteTextView.resetAutocomplete();
     }
+    // << (hide)
 }
 // << angular-autocomplete-getting-started

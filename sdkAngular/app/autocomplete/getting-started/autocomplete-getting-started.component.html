@@ -1,6 +1,6 @@
-<!-- >> angular-autocomplete-getting-started-html -->
 <StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
     <Label text="Select country"></Label>
+<!-- >> angular-autocomplete-getting-started-html -->
     <RadAutoCompleteTextView #autocmp [items]="dataItems" suggestMode="Suggest" displayMode="Tokens">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
             <ng-template tkSuggestionItemTemplate let-item="item">
@@ -10,6 +10,7 @@
             </ng-template>
         </SuggestionView>
     </RadAutoCompleteTextView>
+<!-- << angular-autocomplete-getting-started-html -->
     <Label text="SUGGEST MODES" marginTop="5"></Label>
     <StackLayout orientation="horizontal">
         <Button margin="5" text="Suggest" (tap)="onSuggestSelected($event)"></Button>
@@ -27,4 +28,3 @@
         <Button margin="5" text="Tokens" (tap)="onTokensSelected($event)"></Button>
     </StackLayout>
 </StackLayout>
-<!-- << angular-autocomplete-getting-started-html -->
