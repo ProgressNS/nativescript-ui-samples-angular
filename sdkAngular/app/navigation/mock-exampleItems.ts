@@ -547,6 +547,36 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     }
                 ]
-            }]
+            },
+            {
+                "title": "AutoCompleteTextView",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting started",
+                        "path": "AutocompleteGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Token Layouts",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Customization",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Events",
+                        "path": "",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Async Data Fetch",
+                        "path": "",
+                        "subItems": []
+                    }]
+            },]
     }
 ]
