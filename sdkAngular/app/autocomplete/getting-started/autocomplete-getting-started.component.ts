@@ -2,14 +2,14 @@
 import { Component, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
-import { RadAutoCompleteTextViewComponent} from "nativescript-telerik-ui-pro/autocomplete/angular";
+import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/autocomplete/angular";
 
 @Component({
     moduleId: module.id,
     selector: "tk-autocomplete-getting-started",
     templateUrl: "autocomplete-getting-started.component.html"
 })
-export class AutocompleteGettingStartedComponent {
+export class AutoCompleteGettingStartedComponent {
     private _items: ObservableArray<autocompleteModule.TokenModel>;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",

@@ -559,24 +559,24 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Token Layouts",
-                        "path": "",
+                        "path": "AutoCompleteLayoutsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Customization",
-                        "path": "",
+                        "path": "AutoCompleteCustomizationComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "",
+                        "path": "AutoCompleteEventsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Async Data Fetch",
-                        "path": "",
+                        "path": "AutoCompleteRemoteComponent",
                         "subItems": []
                     }]
-            },]
+            }]
     }
 ]

@@ -1,0 +1,19 @@
+<StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
+    <Label text="Select country:"></Label>
+    <RadAutoCompleteTextView #autocmp [items]="dataItems" suggestMode="Suggest" displayMode="Tokens" 
+                            (tokenRemoved)="onTokenRemoved($event)"
+                            (tokenAdded)="onTokenAdded($event)" 
+                            (tokenSelected)="onTokenSelected($event)">
+        <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
+            <ng-template tkSuggestionItemTemplate let-item="item">
+                <StackLayout orientation="vertical" padding="10">
+                    <Label [text]="item.text"></Label>
+                </StackLayout>
+            </ng-template>
+        </SuggestionView>
+    </RadAutoCompleteTextView>
+    <StackLayout orientation="horizontal" marginTop="5">
+        <Label text="Triggered event: "></Label>
+        <Label [text]="eventName" width="150"></Label>
+    </StackLayout>
+</StackLayout>
