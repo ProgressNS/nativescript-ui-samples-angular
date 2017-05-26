@@ -1,7 +1,8 @@
 <StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
     <Label text="Select country"></Label>
 <!-- >> angular-autocomplete-plain-mode-html -->
-    <RadAutoCompleteTextView [items]="dataItems" suggestMode="Suggest" displayMode="Plain">
+    <RadAutoCompleteTextView [items]="dataItems" suggestMode="Suggest" displayMode="Plain" showCloseButton="true"
+        closeButtonImageSrc="res://clear">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="400">
             <ng-template tkSuggestionItemTemplate let-item="item">
                 <StackLayout orientation="vertical" padding="10">
