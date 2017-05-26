@@ -609,6 +609,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         ]
                     },
                     {
+                        "title": "Suggest Mode",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Append",
+                                "path": "AutoCompleteAppendModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Suggest",
+                                "path": "AutocompleteSuggestModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Suggest & Append",
+                                "path": "AutoCompleteSuggestAppendModeComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
                         "title": "Customization",
                         "path": "AutoCompleteCustomizationComponent",
                         "subItems": []

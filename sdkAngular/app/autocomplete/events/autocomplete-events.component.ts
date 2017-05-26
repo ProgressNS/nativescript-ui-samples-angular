@@ -1,4 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
+// >> angular-autocomplete-events
+import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
 import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/autocomplete/angular";
@@ -20,8 +21,6 @@ export class AutoCompleteEventsComponent {
     constructor() {
         this.initDataItems();
     }
-
-    @ViewChild("autocmp") autocmp: RadAutoCompleteTextViewComponent;
 
     get dataItems(): ObservableArray<autocompleteModule.TokenModel> {
         return this._items;
@@ -62,9 +61,5 @@ export class AutoCompleteEventsComponent {
     public onSuggestionViewVisible(args) {
         this.eventName = "Suggestion View Visible!";
     }
-
-    public onWrapSelected(args) {
-        this.autocmp.autoCompleteTextView.layoutMode = "Wrap";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
-    }
 }
+// << angular-autocomplete-events

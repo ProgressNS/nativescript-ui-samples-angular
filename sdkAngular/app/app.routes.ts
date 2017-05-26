@@ -102,10 +102,13 @@ import { AutoCompleteContainsModeComponent } from "./autocomplete/completion-mod
 import { AutoCompleteStartsWithModeComponent } from "./autocomplete/completion-mode/autocomplete-startswith-mode.component";
 import { AutoCompletePlainModeComponent } from "./autocomplete/display-mode/autocomplete-plain-mode.component";
 import { AutoCompleteTokensModeComponent } from "./autocomplete/display-mode/autocomplete-tokens-mode.component";
+import { AutocompleteSuggestModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-mode.component";
+import { AutoCompleteAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-append-mode.component";
+import { AutoCompleteSuggestAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-append-mode.component";
 
 var excludedComponents = [ListviewItemLayoutsStaggeredComponent];
 
-export const EXAMPLES_COMPONENTS = [ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarLocalizationComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent];
+export const EXAMPLES_COMPONENTS = [ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarLocalizationComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent];
 
 export const APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
@@ -797,6 +800,27 @@ export const APP_ROUTES: Routes = [
         component: AutoCompleteLayoutsHorizontalComponent,
         data: {
             "title": "Horizontal"
+        }
+    },
+    {
+        path: "AutocompleteSuggestModeComponent",
+        component: AutocompleteSuggestModeComponent,
+        data: {
+            "title": "Suggest"
+        }
+    },
+    {
+        path: "AutoCompleteAppendModeComponent",
+        component: AutoCompleteAppendModeComponent,
+        data: {
+            "title": "Append"
+        }
+    },
+    {
+        path: "AutoCompleteSuggestAppendModeComponent",
+        component: AutoCompleteSuggestAppendModeComponent,
+        data: {
+            "title": "Suggest & Append"
         }
     },
 ];
