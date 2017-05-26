@@ -5,10 +5,10 @@ import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/au
 
 @Component({
     moduleId: module.id,
-    selector: "tk-autocomplete-layouts.component",
-    templateUrl: "autocomplete-layouts.component.html"
+    selector: "tk-autocomplete-layouts-runtime",
+    templateUrl: "autocomplete-layouts-runtime.component.html"
 })
-export class AutoCompleteLayoutsComponent {
+export class AutoCompleteLayoutsRuntimeComponent {
     private _items: ObservableArray<autocompleteModule.TokenModel>;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",

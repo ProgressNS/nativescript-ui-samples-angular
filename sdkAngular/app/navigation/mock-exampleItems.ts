@@ -573,9 +573,40 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             }]
                     },
                     {
+                        "title": "Display modes",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Tokens",
+                                "path": "AutoCompleteTokensModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Plain",
+                                "path": "AutoCompletePlainModeComponent",
+                                "subItems": []
+                            }]
+                    },
+                    {
                         "title": "Token Layouts",
-                        "path": "AutoCompleteLayoutsComponent",
-                        "subItems": []
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Switch at runtime",
+                                "path": "AutoCompleteLayoutsRuntimeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Horizontal",
+                                "path": "AutoCompleteLayoutsHorizontalComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Wrap",
+                                "path": "AutoCompleteLayoutsWrapComponent",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Customization",
