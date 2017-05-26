@@ -321,6 +321,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Multiple actions",
                                 "path": "ListViewSwipeActionsMultipleComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Disable/Enable",
+                                "path": "ListViewSwipeDisableComponent",
+                                "subItems": []
                             }
                         ]
                     },
