@@ -1,9 +1,8 @@
 <StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
-    <Label text="Select destination:"></Label>
-    <!-- >> angular-autocomplete-remote-html -->
-    <RadAutoCompleteTextView id="myACB" #autocmp [items]="dataItems" suggestMode="Suggest" displayMode="Plain" showCloseButton="true"
-        closeButtonImageSrc="res://clear">
-        <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
+    <Label text="Select country"></Label>
+<!-- >> angular-autocomplete-contains-mode-html -->
+    <RadAutoCompleteTextView [items]="dataItems" completionMode="Contains">
+        <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="400">
             <ng-template tkSuggestionItemTemplate let-item="item">
                 <StackLayout orientation="vertical" padding="10">
                     <Label [text]="item.text"></Label>
@@ -11,5 +10,5 @@
             </ng-template>
         </SuggestionView>
     </RadAutoCompleteTextView>
-    <!-- << angular-autocomplete-remote-html -->
+<!-- << angular-autocomplete-contains-mode-html -->
 </StackLayout>

@@ -558,6 +558,21 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Completion modes",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Contains",
+                                "path": "AutoCompleteContainsModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Starts with",
+                                "path": "AutoCompleteStartsWithModeComponent",
+                                "subItems": []
+                            }]
+                    },
+                    {
                         "title": "Token Layouts",
                         "path": "AutoCompleteLayoutsComponent",
                         "subItems": []

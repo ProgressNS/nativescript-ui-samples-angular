@@ -1,3 +1,4 @@
+// >> angular-autocomplete-getting-started-component
 import { Component, ViewChild, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { TokenModel } from "nativescript-telerik-ui-pro/autocomplete";
@@ -51,3 +52,4 @@ export class AutoCompleteRemoteComponent implements OnInit {
         }
     }
 }
+// << angular-autocomplete-getting-started-component
