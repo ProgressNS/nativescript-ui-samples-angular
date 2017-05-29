@@ -8,6 +8,7 @@ import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calend
 import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
 import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
 import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-telerik-ui-pro/autocomplete/angular";
+import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
 import { NativeScriptRouterModule } from "nativescript-angular/router";
@@ -54,6 +55,7 @@ if (applicationModule.android) {
         NativeScriptUIChartModule,
         NativeScriptUIDataFormModule,
         NativeScriptUIAutoCompleteTextViewModule,
+        NativeScriptUIGaugesModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(APP_ROUTES)
