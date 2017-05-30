@@ -49,7 +49,7 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
     }
 
     public onNavigationItemTap(args) {
-        var itemIndex = args.itemIndex;
+        var itemIndex = args.index;
         var tappedItem = this._currentExample.subItems[itemIndex];
         if (tappedItem.subItems.length === 0) {
             this._router.navigateByUrl(tappedItem.path);
