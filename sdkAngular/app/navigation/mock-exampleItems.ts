@@ -649,6 +649,32 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "AutoCompleteRemoteComponent",
                         "subItems": []
                     }]
-            }]
+            },
+            {
+                "title": "Gauges",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting started",
+                        "path": "GaugesGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Scales",
+                        "path": "GaugesScalesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Customization",
+                        "path": "GaugesCustomizationComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Animation",
+                        "path": "GaugesAnimationsComponent",
+                        "subItems": []
+                    }]
+            },
+        ],
     }
 ]

@@ -1,0 +1,27 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <!-- >> gauges-getting-started-angular-html -->
+    <RadRadialGauge>
+        <RadialScale tkRadialGaugeScales minimum="0" maximum="6" radius="0.90">
+            <ScaleStyle tkRadialScaleStyle majorTicksCount="7" minorTicksCount="9" lineThickness="0" labelsCount="7" ticksOffset="0"></ScaleStyle>
+
+            <RadialBarIndicator tkRadialScaleIndicators minimum="0" maximum="1.2" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#dddddd"></BarIndicatorStyle>
+            </RadialBarIndicator>
+            <RadialBarIndicator tkRadialScaleIndicators minimum="1.2" maximum="2.4" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#9DCA56"></BarIndicatorStyle>
+            </RadialBarIndicator>
+            <RadialBarIndicator tkRadialScaleIndicators minimum="2.4" maximum="3.6" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#F0C44D"></BarIndicatorStyle>
+            </RadialBarIndicator>
+            <RadialBarIndicator tkRadialScaleIndicators minimum="3.6" maximum="4.8" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#E27633"></BarIndicatorStyle>
+            </RadialBarIndicator>
+            <RadialBarIndicator tkRadialScaleIndicators minimum="4.8" maximum="6" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#A7010E"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialNeedle tkRadialScaleIndicators value="2"></RadialNeedle>
+        </RadialScale>
+    </RadRadialGauge>
+    <!-- << gauges-getting-started-angular-html -->
+</GridLayout>
