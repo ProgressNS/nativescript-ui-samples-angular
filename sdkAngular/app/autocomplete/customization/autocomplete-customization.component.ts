@@ -21,8 +21,6 @@ export class AutoCompleteCustomizationComponent {
         this.initDataItems();
     }
 
-    @ViewChild("autocmp") autocmp: RadAutoCompleteTextViewComponent;
-
     get dataItems(): ObservableArray<autocompleteModule.TokenModel> {
         return this._items;
     }
@@ -36,15 +34,5 @@ export class AutoCompleteCustomizationComponent {
                 this._items.push(new autocompleteModule.TokenModel(data.items[i].country, ds));
             }
         }
-    }
-
-    public onHorizontalSelected(args) {
-        this.autocmp.autoCompleteTextView.layoutMode = "Horizontal";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
-    }
-
-    public onWrapSelected(args) {
-        this.autocmp.autoCompleteTextView.layoutMode = "Wrap";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
     }
 }

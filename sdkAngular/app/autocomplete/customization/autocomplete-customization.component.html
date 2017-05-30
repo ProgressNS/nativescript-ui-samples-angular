@@ -1,6 +1,6 @@
 <StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
     <Label text="Select countries:"></Label>
-    <RadAutoCompleteTextView #autocmp [items]="dataItems" suggestMode="Suggest" displayMode="Tokens">
+    <RadAutoCompleteTextView [items]="dataItems" suggestMode="Suggest" displayMode="Tokens">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
             <ng-template tkSuggestionItemTemplate let-item="item">
                 <StackLayout orientation="horizontal" padding="5">
