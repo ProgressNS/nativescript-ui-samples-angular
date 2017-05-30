@@ -1,3 +1,5 @@
 /* >> gauges-customization.component-angular-css */
-
+.gauge {
+    margin: 10;
+}
 /* << gauges-customization.component-angular-css */
