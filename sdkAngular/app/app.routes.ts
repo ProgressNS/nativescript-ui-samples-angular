@@ -106,11 +106,14 @@ import { AutoCompleteTokensModeComponent } from "./autocomplete/display-mode/aut
 import { AutocompleteSuggestModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-mode.component";
 import { AutoCompleteAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-append-mode.component";
 import { AutoCompleteSuggestAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-append-mode.component";
+import { GaugesGettingStartedComponent } from "./gauges/getting-started/gauges-getting-started.component";
+import { GaugesAnimationsComponent } from "./gauges/animations/gauges-animations.component";
+import { GaugesCustomizationComponent } from "./gauges/customization/gauges-customization.component";
+import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [ListviewItemLayoutsStaggeredComponent];
 
-export const EXAMPLES_COMPONENTS = [ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarLocalizationComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent, ListViewSwipeDisableComponent];
-
+export const EXAMPLES_COMPONENTS = [ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewSwipeExecuteComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewSwipeExecuteStickyComponent, ListviewSwipeExecuteStretchComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarLocalizationComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent];
 export const APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -830,6 +833,33 @@ export const APP_ROUTES: Routes = [
         data: {
             "title": "Disable/Enable"
         }
+    },
+    {
+        path: "GaugesGettingStartedComponent",
+        component: GaugesGettingStartedComponent,
+        data: {
+            "title": "Getting Started"
+        }
+    },
+    {
+        path: "GaugesAnimationsComponent",
+        component: GaugesAnimationsComponent,
+        data: {
+            "title": "Animations"
+        }
+    },
+    {
+        path: "GaugesCustomizationComponent",
+        component: GaugesCustomizationComponent,
+        data: {
+            "title": "Customization"
+        }
+    },
+    {
+        path: "GaugesScalesComponent",
+        component: GaugesScalesComponent,
+        data: {
+            "title": "Scales"
+        }
     }
 ];
-
