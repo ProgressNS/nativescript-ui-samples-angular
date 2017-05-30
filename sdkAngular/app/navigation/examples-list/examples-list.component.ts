@@ -3,6 +3,7 @@ import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import * as frameModule from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
+import { ListViewEventData } from 'nativescript-telerik-ui-pro/listview';
 
 @Component({
     moduleId: module.id,
@@ -48,7 +49,7 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
         this._hasBack = value;
     }
 
-    public onNavigationItemTap(args) {
+    public onNavigationItemTap(args: ListViewEventData) {
         var itemIndex = args.index;
         var tappedItem = this._currentExample.subItems[itemIndex];
         if (tappedItem.subItems.length === 0) {
@@ -109,8 +110,8 @@ export class ExamplesListDepth2Component implements OnInit, OnDestroy {
         this._hasBack = value;
     }
 
-    public onNavigationItemTap(args) {
-        var itemIndex = args.itemIndex;
+    public onNavigationItemTap(args: ListViewEventData) {
+        var itemIndex = args.index;
         var tappedItem = this._currentExample.subItems[itemIndex];
         if (tappedItem.subItems.length === 0) {
             this._router.navigateByUrl(tappedItem.path);
@@ -169,8 +170,8 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
         this._hasBack = value;
     }
 
-    public onNavigationItemTap(args) {
-        var itemIndex = args.itemIndex;
+    public onNavigationItemTap(args: ListViewEventData) {
+        var itemIndex = args.index;
         var tappedItem = this._currentExample.subItems[itemIndex];
         this._router.navigateByUrl(tappedItem.path);
     }
