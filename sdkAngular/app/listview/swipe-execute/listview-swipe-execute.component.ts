@@ -62,7 +62,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
     public onItemClick(args: ListViewEventData) {
         var listView = <RadListView>topmost().currentPage.getViewById("listView");
         listView.notifySwipeToExecuteFinished();
-        console.log("Item click: " + args.itemIndex);
+        console.log("Item click: " + args.index);
     }
 
     public onLeftSwipeClick(args) {

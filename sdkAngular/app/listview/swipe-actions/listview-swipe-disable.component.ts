@@ -2,8 +2,9 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
+import { ListViewEventData, SwipeActionsEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
+import {View } from 'tns-core-modules/ui/core/view';
 
 @Component({
     moduleId: module.id,
@@ -37,10 +38,9 @@ export class ListViewSwipeDisableComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    public onCellSwiping(args: ListViewEventData) {
+    public onCellSwiping(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var currentItemView = args.object;
-        var currentView;
+        var currentItemView = args.swipeView;
 
         if (args.data.x > 200) {
             console.log("Notify perform left action");
@@ -49,17 +49,17 @@ export class ListViewSwipeDisableComponent implements OnInit {
         }
     }
 
-    public onSwipeCellStarted(args: ListViewEventData) {
+    public onSwipeCellStarted(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var swipeView = args['object'];
-        var leftItem = swipeView.getViewById('mark-view');
-        var rightItem = swipeView.getViewById('delete-view');
+        var swipeView = args.swipeView;
+        var leftItem = swipeView.getViewById<View>('mark-view');
+        var rightItem = swipeView.getViewById<View>('delete-view');
         swipeLimits.left = leftItem.getMeasuredWidth();
         swipeLimits.right = rightItem.getMeasuredWidth();
         swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
     }
 
-    public onSwipeCellFinished(args: ListViewEventData) {
+    public onSwipeCellFinished(args: SwipeActionsEventData) {
     }
 
     public onLeftSwipeClick(args: ListViewEventData) {

@@ -48,7 +48,7 @@ export class ListviewSwipeExecuteStickyComponent implements OnInit {
     public onItemClick(args: ListViewEventData) {
         var listView = <RadListView>frameModule.topmost().currentPage.getViewById("listView");
         listView.notifySwipeToExecuteFinished();
-        console.log("Item click: " + args.itemIndex);
+        console.log("Item click: " + args.index);
     }
 
     public onLeftSwipeClick(args) {
