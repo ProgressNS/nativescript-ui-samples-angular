@@ -1,3 +1,4 @@
+// >> gauges-animations.component-angular
 import { Component, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
 import { RadialNeedle } from "nativescript-telerik-ui-pro/gauges";
 
@@ -34,3 +35,4 @@ export class GaugesAnimationsComponent implements AfterViewInit {
         this._needle.value = 160;
     }
 }
+// << gauges-animations.component-angular

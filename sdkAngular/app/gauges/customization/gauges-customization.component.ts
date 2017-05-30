@@ -1,4 +1,5 @@
-import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from "@angular/core";
+// >> gauges-customization.component-angular
+import { Component, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
 import { RadialScale, RadialBarIndicator } from "nativescript-telerik-ui-pro/gauges";
 
 @Component({
@@ -22,5 +23,5 @@ export class GaugesCustomizationComponent implements AfterViewInit {
             }
         }
     }
-
 }
+// << gauges-customization.component-angular

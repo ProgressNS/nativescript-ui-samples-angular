@@ -1,3 +1,4 @@
+// >> gauges-scales-add-scales-angular
 import { Component } from "@angular/core";
 
 @Component({
@@ -9,3 +10,4 @@ import { Component } from "@angular/core";
 export class GaugesScalesComponent  {
     constructor() { }
 }
+// << gauges-scales-add-scales-angular
