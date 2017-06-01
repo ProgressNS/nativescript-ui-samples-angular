@@ -1,4 +1,3 @@
-// >> angular-autocomplete-events
 import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
@@ -16,10 +15,18 @@ export class AutoCompleteEventsComponent {
         "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
         "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
         "Vatican City", "Chad", "China", "Chile"];
-    private _eventName: string;
+    private _currentEventNumber: number;
+    private _eventsText: string;
+    private _eventName1: string;
+    private _eventName2: string;
+    private _eventName3: string;
+    private _eventName4: string;
+    private _eventName5: string;
 
     constructor() {
         this.initDataItems();
+        this._currentEventNumber = 0;
+        this.updateEventsText();
     }
 
     get dataItems(): ObservableArray<autocompleteModule.TokenModel> {
@@ -34,32 +41,85 @@ export class AutoCompleteEventsComponent {
         }
     }
 
-    get eventName(): string {
-        return this._eventName;
+    get eventsText(): string {
+        return this._eventsText;
     }
 
-    set eventName(value: string) {
-        this._eventName = value;
+    get eventName1(): string {
+        return this._eventName1;
     }
 
+    get eventName2(): string {
+        return this._eventName2;
+    }
+
+    get eventName3(): string {
+        return this._eventName3;
+    }
+
+    get eventName4(): string {
+        return this._eventName4;
+    }
+
+    get eventName5(): string {
+        return this._eventName5;
+    }
+
+    // >> angular-autocomplete-events
     public onTokenAdded(args) {
-        this.eventName = "Token Added!";
+        this.logEvent("Added Token: " + args.token.text);
     }
 
     public onTokenRemoved(args) {
-        this.eventName = "Token Removed!";
+        this.logEvent("Removed Token: " + args.token.text);
     }
 
     public onTokenSelected(args) {
-        this.eventName = "Token Selected!";
+        this.logEvent("Selected Token: " + args.token.text);
     }
 
     public onTokenDeselected(args) {
-        this.eventName = "Token Deselected!";
+        this.logEvent("Deselected Token: " + args.token.text);
     }
 
-    public onSuggestionViewVisible(args) {
-        this.eventName = "Suggestion View Visible!";
+    public onDidAutoComplete(args) {
+        this.logEvent("DidAutoComplete with text: " + args.text);
+    }
+
+    public onSuggestionViewBecameVisible(args) {
+        this.logEvent("Suggestion View Became Visible");
+    }
+    // << angular-autocomplete-events
+
+    private updateEventsText(): void {
+        var text;
+        if(this._currentEventNumber > 5) {
+            text = "Latest 5 fired events:";
+        } else if(this._currentEventNumber == 0) {
+            text = "Events will appear here:";
+        } else if(this._currentEventNumber == 1) {
+            text = "Fired event:";
+        } else {
+            text = "Fired events:";
+        }
+        this._eventsText = text;
+    }
+
+    private logEvent(eventText: string) {
+        this._currentEventNumber++;
+        this.updateEventsText();
+        switch(this._currentEventNumber) {
+            case 1: this._eventName1 = eventText; return;
+            case 2: this._eventName2 = eventText; return;
+            case 3: this._eventName3 = eventText; return;
+            case 4: this._eventName4 = eventText; return;
+            case 5: this._eventName5 = eventText; return;
+            default:
+                this._eventName1 = this.eventName2;
+                this._eventName2 = this.eventName3;
+                this._eventName3 = this.eventName4;
+                this._eventName4 = this.eventName5;
+                this._eventName5 = eventText;
+        }
     }
 }
-// << angular-autocomplete-events
