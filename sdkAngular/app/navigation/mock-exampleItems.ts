@@ -648,6 +648,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Async Data Fetch",
                         "path": "AutoCompleteRemoteComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Read Only",
+                        "path": "AutoCompleteReadOnlyComponent",
+                        "subItems": []
                     }]
             },
             {

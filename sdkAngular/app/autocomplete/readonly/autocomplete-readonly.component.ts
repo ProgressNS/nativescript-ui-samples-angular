@@ -5,10 +5,10 @@ import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/au
 
 @Component({
     moduleId: module.id,
-    selector: "tk-autocomplete-layouts-runtime",
-    templateUrl: "autocomplete-layouts-runtime.component.html"
+    selector: "tk-autocomplete-readonly",
+    templateUrl: "autocomplete-readonly.component.html"
 })
-export class AutoCompleteLayoutsRuntimeComponent {
+export class AutoCompleteReadOnlyComponent {
     private _items: ObservableArray<TokenModel>;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
@@ -20,7 +20,8 @@ export class AutoCompleteLayoutsRuntimeComponent {
         this.initDataItems();
     }
 
-    @ViewChild("autocmp") autocmp: RadAutoCompleteTextViewComponent;
+    @ViewChild("autoToken") autoToken: RadAutoCompleteTextViewComponent;
+    @ViewChild("autoPlain") autoPlain: RadAutoCompleteTextViewComponent;
 
     get dataItems(): ObservableArray<TokenModel> {
         return this._items;
@@ -34,13 +35,13 @@ export class AutoCompleteLayoutsRuntimeComponent {
         }
     }
 
-    public onHorizontalSelected(args) {
-        this.autocmp.autoCompleteTextView.layoutMode = "Horizontal";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
+    public onSetTrue(args) {
+        this.autoToken.autoCompleteTextView.readOnly = true;
+        this.autoPlain.autoCompleteTextView.readOnly = true;
     }
 
-    public onWrapSelected(args) {
-        this.autocmp.autoCompleteTextView.layoutMode = "Wrap";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
+    public onSetFalse(args) {
+        this.autoToken.autoCompleteTextView.readOnly = false;
+        this.autoPlain.autoCompleteTextView.readOnly = false;
     }
 }

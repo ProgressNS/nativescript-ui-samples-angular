@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
+import { TokenModel } from "nativescript-telerik-ui-pro/autocomplete";
 import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/autocomplete/angular";
 
 @Component({
@@ -9,7 +9,7 @@ import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/au
     templateUrl: "autocomplete-events.component.html"
 })
 export class AutoCompleteEventsComponent {
-    private _items: ObservableArray<autocompleteModule.TokenModel>;
+    private _items: ObservableArray<TokenModel>;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
         "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
@@ -29,15 +29,15 @@ export class AutoCompleteEventsComponent {
         this.updateEventsText();
     }
 
-    get dataItems(): ObservableArray<autocompleteModule.TokenModel> {
+    get dataItems(): ObservableArray<TokenModel> {
         return this._items;
     }
 
     private initDataItems() {
-        this._items = new ObservableArray<autocompleteModule.TokenModel>();
+        this._items = new ObservableArray<TokenModel>();
 
         for (var i = 0; i < this.countries.length; i++) {
-            this._items.push(new autocompleteModule.TokenModel(this.countries[i], undefined));
+            this._items.push(new TokenModel(this.countries[i], undefined));
         }
     }
 
