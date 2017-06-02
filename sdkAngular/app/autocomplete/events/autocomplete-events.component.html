@@ -2,9 +2,10 @@
     <Label text="Select country:"></Label>
     <!-- >> angular-autocomplete-events-html -->
     <RadAutoCompleteTextView [items]="dataItems" suggestMode="Suggest" displayMode="Tokens" 
-                             (tokenRemoved)="onTokenRemoved($event)"
-                             (tokenAdded)="onTokenAdded($event)" 
-                             (tokenSelected)="onTokenSelected($event)">
+                             (suggestionViewBecameVisible)="onSuggestionViewBecameVisible($event)"
+                             (didAutoComplete)="onDidAutoComplete($event)"
+                             (tokenAdded)="onTokenAdded($event)" (tokenRemoved)="onTokenRemoved($event)"
+                             (tokenSelected)="onTokenSelected($event)" (tokenDeselected)="onTokenDeselected($event)">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
             <ng-template tkSuggestionItemTemplate let-item="item">
                 <StackLayout orientation="vertical" padding="10">
@@ -14,8 +15,12 @@
         </SuggestionView>
     </RadAutoCompleteTextView>
     <!-- << angular-autocomplete-events-html -->
-    <StackLayout orientation="horizontal" marginTop="5">
-        <Label text="Triggered event: "></Label>
-        <Label [text]="eventName" width="150"></Label>
-    </StackLayout>
+        <StackLayout orientation="vertical" marginTop="5">
+            <Label marginBottom="12" [text]="eventsText"></Label>
+            <Label [text]="eventName1"></Label>
+            <Label [text]="eventName2"></Label>
+            <Label [text]="eventName3"></Label>
+            <Label [text]="eventName4"></Label>
+            <Label [text]="eventName5"></Label>
+        </StackLayout>
 </StackLayout>
