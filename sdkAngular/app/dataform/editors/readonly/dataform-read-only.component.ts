@@ -33,7 +33,6 @@ export class DataformReadOnlyComponent implements OnInit {
             this._fromProviders.push(data.airports[i].FIELD2 + ", " + data.airports[i].FIELD5);
         }
         this.isReadOnly = true;
-        this.updateStatusText();
     }
 
 
@@ -43,6 +42,7 @@ export class DataformReadOnlyComponent implements OnInit {
 
     set isReadOnly(value: boolean) {
         this._isReadOnly = value;
+        this.updateStatusText();
     }
 
     get currentStatus(): string {
@@ -76,7 +76,6 @@ export class DataformReadOnlyComponent implements OnInit {
 
     public onEnableDisable(args) {
         this.isReadOnly = !this.isReadOnly;
-        this.updateStatusText();
     }
 }
 
