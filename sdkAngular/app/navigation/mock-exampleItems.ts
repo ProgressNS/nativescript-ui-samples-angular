@@ -550,7 +550,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
-                    }
+                    },
+                    {
+                        "title": "Read Only",
+                        "path": "DataformReadOnlyComponent",
+                        "subItems": []
+                    },
                 ]
             },
             {
