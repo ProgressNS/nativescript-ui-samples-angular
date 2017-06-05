@@ -16,6 +16,7 @@ import {View } from 'tns-core-modules/ui/core/view';
 export class ListViewSwipeDisableComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _enabled: boolean = true;
+    private _currentStatus: string;
 
     constructor(private _dataItemService: DataItemService) {
     }
@@ -30,12 +31,22 @@ export class ListViewSwipeDisableComponent implements OnInit {
 
     set enabled(value: boolean) {
         this._enabled = value;
+        this.updateStatusText();
+    }
+
+    get currentStatus(): string {
+        return this._currentStatus;
+    }
+
+    set currentStatus(value: string) {
+        this._currentStatus = value;
     }
 
     @ViewChild("myListView") listViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
+        this.enabled = true;
     }
 
     public onCellSwiping(args: SwipeActionsEventData) {
@@ -78,5 +89,9 @@ export class ListViewSwipeDisableComponent implements OnInit {
 
     public onItemSwiping(args) {
         args.returnValue = this.enabled;
+    }
+
+    private updateStatusText() {
+        this.currentStatus = !this.enabled ? "Enable" : "Disable";
     }
 }
