@@ -1,0 +1,20 @@
+<GridLayout rows="auto, *" tkExampleTitle tkToggleNavButton>
+	<Button text="Change styles" (tap)="onSet($event)"></Button>
+	<RadDataForm #myDataForm row="1" [source]="person">
+		<TKEntityProperty tkDataFormProperty name="name">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text">
+				<TKPropertyEditorStyle tkPropertyEditorStyle labelFontStyle="red"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkDataFormProperty name="age">
+			<TKPropertyEditor tkEntityPropertyEditor type="Decimal">
+				<TKPropertyEditorStyle tkPropertyEditorStyle labelTextColor="green"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkDataFormProperty name="birthDate">
+			<TKPropertyEditor tkEntityPropertyEditor type="DatePicker">
+				<TKPropertyEditorStyle tkPropertyEditorStyle labelTextColor="blue"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+	</RadDataForm>
+</GridLayout>

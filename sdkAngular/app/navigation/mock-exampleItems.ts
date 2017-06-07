@@ -523,7 +523,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Advanced",
                                 "path": "DataformStylingAdvancedComponent",
                                 "subItems": []
-                            }
+                            },
+                            {
+                                "title": "At runtime",
+                                "path": "DataformEditorStyleComponent",
+                                "subItems": []
+                            },
                         ]
                     },
                     {
