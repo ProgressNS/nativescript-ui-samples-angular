@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Person } from "../data-services/person";
+import { Person } from "../../data-services/person";
 
 @Component({
     moduleId: module.id,

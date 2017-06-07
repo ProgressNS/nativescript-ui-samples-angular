@@ -85,14 +85,14 @@ import { DataformGettingStartedJsonComponent } from "./dataform/getting-started-
 import { DataFormGroupsComponent } from "./dataform/groups/dataform-groups.component";
 import { DataFormPlatformSpecificsComponent } from "./dataform/platform-specifics/dataform-platform-specifics.component";
 import { DataFormRuntimeUpdatesComponent } from "./dataform/runtime-updates/dataform-runtime-updates.component";
-import { DataFormStylingComponent } from "./dataform/styling/dataform-styling.component";
+import { DataFormStylingComponent } from "./dataform/styling/common/dataform-styling.component";
 import { DataFormValidationComponent } from "./dataform/validation/dataform-validation.component";
 import { DataformCheckErrorsComponent } from "./dataform/validation/check-errors/dataform-check-errors.component";
 import { DataformGridLayoutComponent } from "./dataform/layouts/dataform-grid-layout.component";
 import { DataformStackLayoutComponent } from "./dataform/layouts/dataform-stack-layout.component";
 import { DataformImageLabelsComponent } from "./dataform/image-labels/dataform-image-labels.component";
 import { DataformPropertiesJsonComponent } from "./dataform/properties-json/dataform-properties-json.component";
-import { DataformStylingAdvancedComponent } from "./dataform/styling-advanced/dataform-styling-advanced.component";
+import { DataformStylingAdvancedComponent } from "./dataform/styling/advanced/dataform-styling-advanced.component";
 import { AutoCompleteGettingStartedComponent } from "./autocomplete/getting-started/autocomplete-getting-started.component";
 import { AutoCompleteLayoutsRuntimeComponent } from "./autocomplete/layouts/autocomplete-layouts-runtime.component";
 import { AutoCompleteLayoutsWrapComponent } from "./autocomplete/layouts/autocomplete-layouts-wrap.component";
