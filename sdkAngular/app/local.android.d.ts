@@ -38,4 +38,54 @@ declare module android {
         class Intent {
         }
     }
+
+    module graphics {
+        module PorterDuff {
+            class Mode {
+                static SRC_IN;
+            }
+
+        }
+        class PorterDuffColorFilter {
+            constructor(arg1, arg2);
+
+        }
+        module drawable {
+            class GradientDrawable {
+                setStroke(width, stroke);
+            }
+        }
+    }
+    module view {
+        module View {
+            class OnClickListener{
+                constructor(impl);
+            }
+        }
+        class View {
+            constructor(context);
+            setOnClickListener(listener);
+        }
+    }
+    module widget {
+
+        class LinearLayout {
+            labelView();
+            decreaseView();
+            increaseView();
+            static SHOW_DIVIDER_MIDDLE;
+        }
+        class RadioGroup {
+            setBackgroundColor(arg);
+            setPadding(l, t, r, b);
+            setShowDividers(arg);
+            setDividerDrawable(arg);
+        }
+
+        class Button extends view.View {
+        }
+
+        class RadioButton {
+        }
+    }
 }

@@ -29,3 +29,41 @@ declare class TKSolidFill {
     static solidFillWithColor(color: string): TKSolidFill; // inherited from NSObject
     dateFormat: any;
 }
+
+declare class UIButton {
+    static buttonWithType(type);
+}
+
+declare const enum UIButtonType {
+    Custom = 0,
+    System = 1
+}
+
+declare const enum UIControlContentHorizontalAlignment {
+    Center = 0,
+    Left = 1,
+    Right = 2,
+    Fill = 3
+}
+
+declare const enum UIControlEvents {
+    TouchDown = 1,
+    TouchUpInside = 64
+}
+
+declare const enum UIControlState {
+    Normal = 0,
+    Highlighted = 1,
+    Disabled = 2,
+    Selected = 4
+}
+
+declare class UIView {
+    static class();
+}
+
+declare module interop {        
+    var types: {
+        "void": any;
+    }
+}

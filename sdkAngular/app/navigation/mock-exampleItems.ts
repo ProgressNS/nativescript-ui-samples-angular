@@ -476,6 +476,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "AutoComplete",
                                 "path": "DataFormaAutoCompleteComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Custom Editors",
+                                "path": "DataformCustomEditorsComponent",
+                                "subItems": []
                             }
                         ]
                     },
