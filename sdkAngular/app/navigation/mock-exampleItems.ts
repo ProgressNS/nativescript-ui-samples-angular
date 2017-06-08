@@ -572,6 +572,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "path": "DataformReadOnlyComponent",
                         "subItems": []
                     },
+                    {
+                        "title": "Value Providers",
+                        "path": "DataFormValueProvidersComponent",
+                        "subItems": []
+                    }
                 ]
             },
             {
