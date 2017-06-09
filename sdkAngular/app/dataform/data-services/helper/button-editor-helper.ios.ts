@@ -1,3 +1,4 @@
+// >> dataform-button-editor-helper-ios
 import { CustomPropertyEditor } from "nativescript-telerik-ui-pro/dataform";
 
 export class ButtonEditorHelper extends NSObject 
@@ -20,3 +21,4 @@ export class ButtonEditorHelper extends NSObject
         "handleTap:": { returns: interop.types.void, params: [ UIView.class() ] }
     };
 }
+// << dataform-button-editor-helper-ios

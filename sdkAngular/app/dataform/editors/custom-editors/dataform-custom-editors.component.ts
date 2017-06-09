@@ -1,3 +1,4 @@
+// >> dataform-custom-editors-component
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { PersonBase } from "../../data-services/person";
 import { ButtonEditorHelper } from "../../data-services/helper";
@@ -78,3 +79,4 @@ export class DataformCustomEditorsComponent implements OnInit, AfterViewInit {
         editor.notifyValueChanged();
     }
 }
+// << dataform-custom-editors-component
