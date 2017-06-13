@@ -13,13 +13,14 @@
             <Label text="Starred" class="sideLabel"></Label>
             <Label text="Sent Mail" class="sideLabel"></Label>
             <Label text="Drafts" class="sideLabel"></Label>
+            <Button text="Go to next page" (tap)="goToSecondPage()" class="mainContentButton drawerContentButton"></Button>
         </StackLayout>
-        <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
+        <Button text="Close Drawer" (tap)="onCloseDrawerTap()" class="mainContentButton drawerContentButton"></Button>
     </StackLayout>
     <StackLayout tkMainContent>
-        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-        <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
-        <Button text="Go to next page" (tap)="goToSecondPage()" class="drawerContentButton"></Button>
+        <Label [text]="mainContentText" textWrap="true" class="mainContentText"></Label>
+        <Button text="OPEN DRAWER" (tap)="openDrawer()" class="mainContentButton"></Button>
+        <Button text="Go to next page" (tap)="goToSecondPage()" class="mainContentButton"></Button>
     </StackLayout>
 </RadSideDrawer>
 <!-- << angular-sidedrawer-over-navigation-html -->
