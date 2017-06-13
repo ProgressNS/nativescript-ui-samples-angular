@@ -49,6 +49,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Spline Area series",
+                                "path": "ChartSeriesSplineAreaComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Bubble series",
                                 "path": "ChartSeriesBubbleComponent",
                                 "subItems": []
