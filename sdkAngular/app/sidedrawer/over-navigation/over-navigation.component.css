@@ -3,14 +3,18 @@ button {
     horizontal-align: center;
 }
 
-.drawerContentText {
+.mainContentText {
     font-size: 13;
     padding: 10;
 }
 
-.drawerContentButton {
+.mainContentButton {
     margin: 10;
     horizontal-align: left;
+}
+
+.drawerContentButton {
+    color: white;
 }
 
 .sideStackLayout {
