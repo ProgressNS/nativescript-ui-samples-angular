@@ -581,6 +581,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Value Providers",
                         "path": "DataFormValueProvidersComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Scrollable Form",
+                        "path": "DataFormScrollingComponent",
+                        "subItems": []
                     }
                 ]
             },
