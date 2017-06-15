@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Booking } from "../../data-services/booking";
+import { MovieConverter } from "../../data-services/movie-converter";
 var data = require("../../data-services/airports.json")
 
 @Component({
@@ -15,6 +16,7 @@ export class DataformReadOnlyComponent implements OnInit {
     private _movieNames: Array<String>;
     private _isReadOnly: boolean;
     private _currentStatus: string;
+    private _movieConverter: MovieConverter;
 
     constructor() { }
 
@@ -28,6 +30,7 @@ export class DataformReadOnlyComponent implements OnInit {
 
     ngOnInit() {
         this._booking = new TicketOrder();
+        this._movieConverter = new MovieConverter(this.movies);
 
         for (var i = 0; i < data.airports.length; i++) {
             this._fromProviders.push(data.airports[i].FIELD2 + ", " + data.airports[i].FIELD5);
@@ -68,6 +71,10 @@ export class DataformReadOnlyComponent implements OnInit {
             this._movieNames = this.movies.map((value: Movie) => value.name);
         }
         return this._movieNames;
+    }
+
+    get movieConverter() {
+        return this._movieConverter;
     }
 
     private updateStatusText() {
