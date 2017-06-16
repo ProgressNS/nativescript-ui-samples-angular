@@ -46,16 +46,6 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
         console.log("Item click: " + args.index);
     }
 
-    public onLeftSwipeClick(args: EventData) {
-        var listView = args.object as RadListView;
-        listView.notifySwipeToExecuteFinished();
-    }
-
-    public onRightSwipeClick(args: EventData) {
-        var listView = args.object as RadListView;
-        listView.notifySwipeToExecuteFinished();
-    }
-
     public onCellSwiping(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
         var currentItemView = args.swipeView;

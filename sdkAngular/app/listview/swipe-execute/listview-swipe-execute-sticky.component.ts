@@ -6,7 +6,6 @@ import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView, SwipeActionsEventData } from "nativescript-telerik-ui-pro/listview";
 import * as frameModule from "tns-core-modules/ui/frame";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import * as utilsModule from "tns-core-modules/utils/utils";
 
 @Component({
