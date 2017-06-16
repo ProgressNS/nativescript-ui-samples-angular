@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { View } from "ui/core/view";
 import { topmost } from "ui/frame";
-import { RadListView, ListViewEventData } from "nativescript-telerik-ui-pro/listview";
+import { RadListView, ListViewEventData, SwipeActionsEventData } from "nativescript-telerik-ui-pro/listview";
 
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
@@ -30,7 +30,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    public onCellSwiping(args: ListViewEventData) {
+    public onCellSwiping(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
         var currentItemView = args.object;
         var currentView;
@@ -42,7 +42,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         }
     }
 
-    public onSwipeCellStarted(args: ListViewEventData) {
+    public onSwipeCellStarted(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
         var listView = topmost().currentPage.getViewById("listView") as View;
 
@@ -51,7 +51,7 @@ export class ListViewSwipeExecuteComponent implements OnInit {
         swipeLimits.right = listView.getMeasuredWidth();
     }
 
-    public onSwipeCellFinished(args: ListViewEventData) {
+    public onSwipeCellFinished(args: SwipeActionsEventData) {
         if (args.data.x > 200) {
             console.log("Perform left action");
         } else if (args.data.x < -200) {

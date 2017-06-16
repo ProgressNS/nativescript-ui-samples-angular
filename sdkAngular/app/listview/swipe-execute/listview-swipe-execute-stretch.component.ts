@@ -7,6 +7,7 @@ import { ListViewEventData, RadListView, SwipeActionsEventData }  from "nativesc
 import { View } from "tns-core-modules/ui/core/view";
 import * as frameModule from "tns-core-modules/ui/frame";
 import * as utilsModule from "tns-core-modules/utils/utils";
+import { EventData } from "tns-core-modules/data/observable";
 
 @Component({
     moduleId: module.id,
@@ -45,13 +46,13 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
         console.log("Item click: " + args.index);
     }
 
-    public onLeftSwipeClick(args) {
-        var listView = args.object;
+    public onLeftSwipeClick(args: EventData) {
+        var listView = args.object as RadListView;
         listView.notifySwipeToExecuteFinished();
     }
 
-    public onRightSwipeClick(args) {
-        var listView = args.object;
+    public onRightSwipeClick(args: EventData) {
+        var listView = args.object as RadListView;
         listView.notifySwipeToExecuteFinished();
     }
 
