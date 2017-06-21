@@ -1,20 +1,21 @@
-.typeLabel {
+/* >> listview-multiple-templates-angular-css */
+.nameLabel {
     font-size: 20;
     margin: 5;
 }
 
-.nameLabel {
+.typeLabel {
     font-size: 17;
+    margin: 5;
+}
+
+.middleLabel{
     margin: 0 5 0 5;
 }
 
 .descriptionLabel {
     font-size: 14;
     margin: 5
-}
-
-.descriptionLabel {
-    font-size: 14;
 }
 
 .yellowText {
@@ -48,3 +49,4 @@
 .yellowStackLayout {
     background-color: yellow;
 }
+/* << listview-multiple-templates-angular-css */
