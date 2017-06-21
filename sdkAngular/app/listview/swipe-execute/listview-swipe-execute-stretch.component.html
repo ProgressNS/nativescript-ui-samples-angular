@@ -9,10 +9,10 @@
             </StackLayout>
         </ng-template>
         <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="listItemSwipeGridLayout">
-            <StackLayout id="mark-view" class="markViewStackLayout" col="0" (tap)="onLeftSwipeClick($event)">
+            <StackLayout id="mark-view" class="markViewStackLayout" col="0">
                 <Label text="mark" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
-            <StackLayout id="delete-view" class="deleteViewStackLayout" col="2" (tap)="onRightSwipeClick($event)">
+            <StackLayout id="delete-view" class="deleteViewStackLayout" col="2">
                 <Label text="delete" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
         </GridLayout>

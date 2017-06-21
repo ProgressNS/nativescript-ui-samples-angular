@@ -28,12 +28,12 @@ export class ListviewSelectionStatesComponent implements OnInit {
 
      // >> angular-listview-howto-item-selection-events
     public itemSelected(args: ListViewEventData) {
-        var item = this.dataItems.getItem(args.itemIndex);
+        var item = this.dataItems.getItem(args.index);
         item.selected = true;
     }
 
     public itemDeselected(args: ListViewEventData) {
-        var item = this.dataItems.getItem(args.itemIndex);
+        var item = this.dataItems.getItem(args.index);
         item.selected = false;
     }
     // << angular-listview-howto-item-selection-events

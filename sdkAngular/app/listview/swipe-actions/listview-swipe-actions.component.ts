@@ -4,6 +4,7 @@ import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
+import { View } from 'tns-core-modules/ui/core/view';
 
 @Component({
     moduleId: module.id,
@@ -46,8 +47,8 @@ export class ListViewSwipeActionsComponent implements OnInit {
     public onSwipeCellStarted(args: ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         var swipeView = args['object'];
-        var leftItem = swipeView.getViewById('mark-view');
-        var rightItem = swipeView.getViewById('delete-view');
+        var leftItem = swipeView.getViewById<View>('mark-view');
+        var rightItem = swipeView.getViewById<View>('delete-view');
         swipeLimits.left = leftItem.getMeasuredWidth();
         swipeLimits.right = rightItem.getMeasuredWidth();
         swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
