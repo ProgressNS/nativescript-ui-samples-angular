@@ -3,8 +3,6 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 
-var data = require("./items.json")
-
 @Component({
     moduleId: module.id,
     selector: "tk-listview-multiple-templates",
@@ -26,9 +24,20 @@ export class ListviewMultipleTemplatesComponent implements OnInit {
     ngOnInit() {
         this._dataItems = new ObservableArray();
         this._templateSelector = this.templateSelectorFunction;
-        for (var i = 0; i < data.items.length; i++) {
-            this._dataItems.push(new DataItem(i, data.items[i].name, data.items[i].description, undefined, undefined, undefined, undefined, data.items[i].type));
+        let itemsCount = 50;
+        for (var i = 0; i <= itemsCount; i++) {
+            this._dataItems.push(new DataItem(i, "Item " + i, "This is item description", undefined, undefined, undefined, undefined, this.getType(i, itemsCount)));
         }
+    }
+
+    private getType(index: number, end: number): string {
+        let lastDigit = index % 10;
+        let type = index == 0 ? "start" : index == end ? "end" : undefined;
+        if (!type) {
+            type = lastDigit == 0 ? "default" : lastDigit <= 3 ? "red" : lastDigit <= 6 ? "blue" : lastDigit <= 9 ? "green" : "default";
+        }
+
+        return type;
     }
 
     get templateSelector(): (item: DataItem, index: number, items: any) => string {
@@ -36,7 +45,7 @@ export class ListviewMultipleTemplatesComponent implements OnInit {
     }
 
     set templateSelector(value: (item: DataItem, index: number, items: any) => string) {
-        this._templateSelector =  value;
+        this._templateSelector = value;
     }
 
     public templateSelectorFunction = (item: DataItem, index: number, items: any) => {
