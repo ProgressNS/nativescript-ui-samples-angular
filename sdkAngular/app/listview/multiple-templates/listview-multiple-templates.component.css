@@ -1,0 +1,50 @@
+.typeLabel {
+    font-size: 20;
+    margin: 5;
+}
+
+.nameLabel {
+    font-size: 17;
+    margin: 0 5 0 5;
+}
+
+.descriptionLabel {
+    font-size: 14;
+    margin: 5
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.yellowText {
+  color: yellow;  
+}
+
+.whiteText {
+  color: wheat;  
+}
+
+.blackText {
+  color: black;  
+}
+
+.blackStackLayout {
+    background-color: black;
+}
+
+.redStackLayout {
+    background-color: red;
+}
+
+.greenStackLayout {
+    background-color: green;
+}
+
+.blueStackLayout {
+    background-color: blue;
+}
+
+.yellowStackLayout {
+    background-color: yellow;
+}

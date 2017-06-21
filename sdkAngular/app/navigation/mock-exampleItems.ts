@@ -206,6 +206,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Multiple Item Templates",
+                        "path": "ListviewMultipleTemplatesComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Item Loading",
                         "path": "ListviewItemLoadingComponent",
                         "subItems": []
