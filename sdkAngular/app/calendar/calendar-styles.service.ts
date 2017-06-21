@@ -12,6 +12,9 @@ export class CalendarStylesService {
         monthViewStyle.showTitle = true;
         monthViewStyle.showWeekNumbers = true;
         monthViewStyle.showDayNames = true;
+        monthViewStyle.selectionShape = "Round";
+        monthViewStyle.selectionShapeSize = 15;
+        monthViewStyle.selectionShapeColor = "Red";
        
         var todayCellStyle = new DayCellStyle();
         todayCellStyle.cellBackgroundColor = "#66bbae";

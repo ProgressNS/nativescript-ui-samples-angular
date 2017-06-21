@@ -326,6 +326,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Multiple actions",
                                 "path": "ListViewSwipeActionsMultipleComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Disable/Enable",
+                                "path": "ListViewSwipeDisableComponent",
+                                "subItems": []
                             }
                         ]
                     },
@@ -476,6 +481,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "AutoComplete",
                                 "path": "DataFormaAutoCompleteComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Custom Editors",
+                                "path": "DataformCustomEditorsComponent",
+                                "subItems": []
                             }
                         ]
                     },
@@ -513,12 +523,23 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Styling",
                         "path": "DataFormStylingComponent",
-                        "subItems": []
-                    },
-                    {
-                        "title": "Styling Advanced",
-                        "path": "DataformStylingAdvancedComponent",
-                        "subItems": []
+                        "subItems": [
+                            {
+                                "title": "Common",
+                                "path": "DataFormStylingComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Advanced",
+                                "path": "DataformStylingAdvancedComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "At runtime",
+                                "path": "DataformEditorStyleComponent",
+                                "subItems": []
+                            },
+                        ]
                     },
                     {
                         "title": "Runtime updates",
@@ -550,8 +571,151 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             }
                         ]
+                    },
+                    {
+                        "title": "Read Only",
+                        "path": "DataformReadOnlyComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Value Providers",
+                        "path": "DataFormValueProvidersComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Scrollable Form",
+                        "path": "DataFormScrollingComponent",
+                        "subItems": []
                     }
                 ]
-            }]
+            },
+            {
+                "title": "AutoCompleteTextView",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting started",
+                        "path": "AutocompleteGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Completion modes",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Contains",
+                                "path": "AutoCompleteContainsModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Starts with",
+                                "path": "AutoCompleteStartsWithModeComponent",
+                                "subItems": []
+                            }]
+                    },
+                    {
+                        "title": "Display modes",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Tokens",
+                                "path": "AutoCompleteTokensModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Plain",
+                                "path": "AutoCompletePlainModeComponent",
+                                "subItems": []
+                            }]
+                    },
+                    {
+                        "title": "Token Layouts",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Switch at runtime",
+                                "path": "AutoCompleteLayoutsRuntimeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Horizontal",
+                                "path": "AutoCompleteLayoutsHorizontalComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Wrap",
+                                "path": "AutoCompleteLayoutsWrapComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Suggest Mode",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Append",
+                                "path": "AutoCompleteAppendModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Suggest",
+                                "path": "AutocompleteSuggestModeComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Suggest & Append",
+                                "path": "AutoCompleteSuggestAppendModeComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Customization",
+                        "path": "AutoCompleteCustomizationComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Events",
+                        "path": "AutoCompleteEventsComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Async Data Fetch",
+                        "path": "AutoCompleteRemoteComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Read Only",
+                        "path": "AutoCompleteReadOnlyComponent",
+                        "subItems": []
+                    }]
+            },
+            {
+                "title": "Gauges",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Getting started",
+                        "path": "GaugesGettingStartedComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Scales",
+                        "path": "GaugesScalesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Customization",
+                        "path": "GaugesCustomizationComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Animation",
+                        "path": "GaugesAnimationsComponent",
+                        "subItems": []
+                    }]
+            },
+        ],
     }
 ]

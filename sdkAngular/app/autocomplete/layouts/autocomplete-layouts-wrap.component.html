@@ -1,0 +1,14 @@
+<StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
+    <Label text="Select country"></Label>
+<!-- >> angular-autocomplete-layouts-wrap-html -->
+    <RadAutoCompleteTextView [items]="dataItems" layoutMode="Wrap" displayMode="Tokens">
+        <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
+            <ng-template tkSuggestionItemTemplate let-item="item">
+                <StackLayout orientation="vertical" padding="10">
+                    <Label [text]="item.text"></Label>
+                </StackLayout>
+            </ng-template>
+        </SuggestionView>
+    </RadAutoCompleteTextView>
+<!-- << angular-autocomplete-layouts-wrap-html -->
+</StackLayout>

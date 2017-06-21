@@ -1,0 +1,33 @@
+<ScrollView tkExampleTitle tkToggleNavButton>
+    <StackLayout>
+        <RadDataForm #myScrollingDataForm [source]="user" commitMode="Manual">
+                <TKEntityProperty tkDataFormProperty name="firstName" index="0"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="lastName" index="1"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="username" index="2"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="password" index="3">
+                    <TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+                </TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="email" index="4">
+                    <TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+                </TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="birthDate" index="5">
+                    <TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+                </TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="gender" index="6"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="company" index="7"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="webSite" index="8"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="phone" index="9"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="country" index="10"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="city" index="11"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="streetName" index="12"></TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="streetNumber" index="13">
+                    <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+                </TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="postalCode" index="14">
+                    <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+                </TKEntityProperty>
+                <TKEntityProperty tkDataFormProperty name="additionalInfo" index="15"></TKEntityProperty>
+        </RadDataForm>
+        <Button text="register" (tap)="onTap()" horizontalAlignment="stretch"></Button>
+    </StackLayout>
+</ScrollView>

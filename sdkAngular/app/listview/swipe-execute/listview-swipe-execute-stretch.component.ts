@@ -3,10 +3,11 @@ import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewEventData, RadListView }  from "nativescript-telerik-ui-pro/listview";
+import { ListViewEventData, RadListView, SwipeActionsEventData }  from "nativescript-telerik-ui-pro/listview";
 import { View } from "tns-core-modules/ui/core/view";
 import * as frameModule from "tns-core-modules/ui/frame";
 import * as utilsModule from "tns-core-modules/utils/utils";
+import { EventData } from "tns-core-modules/data/observable";
 
 @Component({
     moduleId: module.id,
@@ -30,9 +31,9 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
     }
 
-    public onSwipeCellStarted(args: ListViewEventData) {
+    public onSwipeCellStarted(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var listView = frameModule.topmost().currentPage.getViewById("listView") as View;
+        var listView = args.object;
 
         swipeLimits.threshold = listView.getMeasuredWidth();
         swipeLimits.left = listView.getMeasuredWidth();
@@ -40,24 +41,14 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
     }
 
     public onItemClick(args: ListViewEventData) {
-        var listView = <RadListView>frameModule.topmost().currentPage.getViewById("listView");
+        var listView = args.object;
         listView.notifySwipeToExecuteFinished();
-        console.log("Item click: " + args.itemIndex);
+        console.log("Item click: " + args.index);
     }
 
-    public onLeftSwipeClick(args) {
-        var listView = <RadListView>frameModule.topmost().currentPage.getViewById("listView");
-        listView.notifySwipeToExecuteFinished();
-    }
-
-    public onRightSwipeClick(args) {
-        var listView = <RadListView>frameModule.topmost().currentPage.getViewById("listView");
-        listView.notifySwipeToExecuteFinished();
-    }
-
-    public onCellSwiping(args: ListViewEventData) {
+    public onCellSwiping(args: SwipeActionsEventData) {
         var swipeLimits = args.data.swipeLimits;
-        var currentItemView = args.object;
+        var currentItemView = args.swipeView;
         var currentView;
         if (args.data.x >= 0) {
             currentView = currentItemView.getViewById("mark-view");
@@ -84,16 +75,16 @@ export class ListviewSwipeExecuteStretchComponent implements OnInit {
         }
     }
 
-    public onSwipeCellFinished(args: ListViewEventData) {
+    public onSwipeCellFinished(args: SwipeActionsEventData) {
         if (args.data.x < 0) {
-            var currentItemView = args.object;
-            var deleteView = currentItemView.getViewById("delete-view");
+            var currentItemView = args.swipeView;
+            var deleteView = currentItemView.getViewById<View>("delete-view");
             var dimensions = View.measureChild(
-                deleteView.parent,
+                <View>deleteView.parent,
                 deleteView,
                 utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
                 utilsModule.layout.makeMeasureSpec(deleteView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
-            View.layoutChild(deleteView.parent, deleteView, currentItemView.getMeasuredWidth(), 0, currentItemView.getMeasuredWidth(), dimensions.measuredHeight);
+            View.layoutChild(<View>deleteView.parent, deleteView, currentItemView.getMeasuredWidth(), 0, currentItemView.getMeasuredWidth(), dimensions.measuredHeight);
         }
 
         if (args.data.x > 200) {

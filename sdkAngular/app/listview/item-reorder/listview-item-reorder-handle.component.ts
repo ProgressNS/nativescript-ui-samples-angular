@@ -27,7 +27,7 @@ export class ListviewItemReorderHandleComponent implements OnInit {
     }
 
     public onItemReordered(args: ListViewEventData) {
-        console.log("Item reordered. Old index: " + args.itemIndex + " " + "new index: " + args.data.targetIndex);
+        console.log("Item reordered. Old index: " + args.index + " " + "new index: " + args.data.targetIndex);
     }
 }
 // << angular-listview-item-reorder-handle-component
