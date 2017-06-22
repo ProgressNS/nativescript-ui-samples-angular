@@ -365,6 +365,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             }
                         ]
                     },
+                    {
+                        "title": "Scroll Events",
+                        "path": "ListViewScrollEventsComponent",
+                        "subItems": []
+                    },
                 ]
             },
             {

@@ -1,0 +1,14 @@
+<GridLayout rows="auto, auto, *" tkExampleTitle tkToggleNavButton>
+    <Label text="Scroll events"></Label>
+    <Label id="lblState" [text]="stateText" row="1"></Label>
+    <!-- >> angular-listview-scroll-events-html -->
+    <RadListView [items]="dataItems" row="2" (scrolled)="onScrolled($event)" (scrollStarted)="onScrollStarted($event)" (scrollEnded)="onScrollEnded($event)">
+    <!-- << angular-listview-scroll-events-html -->
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout>
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
