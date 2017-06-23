@@ -36,11 +36,9 @@ export class AutoCompleteLayoutsRuntimeComponent {
 
     public onHorizontalSelected(args) {
         this.autocmp.autoCompleteTextView.layoutMode = "Horizontal";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
     }
 
     public onWrapSelected(args) {
         this.autocmp.autoCompleteTextView.layoutMode = "Wrap";
-        this.autocmp.autoCompleteTextView.resetAutocomplete();
     }
 }
