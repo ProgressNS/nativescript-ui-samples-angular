@@ -31,6 +31,9 @@ module.exports = env => {
     const rules = getRules();
     const plugins = getPlugins(platform, env);
     const extensions = getExtensions(platform);
+    const nativeExtendModules = [
+        join(__dirname, "app/main-activity.android.js"),
+    ];
 
     const config = {
         context: resolve("./app"),
@@ -68,7 +71,10 @@ module.exports = env => {
             projectRoot: __dirname,
             webpackConfig: config,
             targetArchs: ["arm", "arm64", "ia32"],
-            tnsJavaClassesOptions: { packages: ["tns-core-modules" ], modules: [join(__dirname, "app/main-activity.android.js")] },
+            tnsJavaClassesOptions: {
+                packages: ["tns-core-modules"],
+                modules: nativeExtendModules,
+            },
             useLibs: false
         }));
     }
