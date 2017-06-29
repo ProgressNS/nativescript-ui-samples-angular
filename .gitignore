@@ -41,6 +41,7 @@ Build/intermediates
 
 #NativeScript
 platforms/
+hooks/
 lib/
 frameworks/
 /samples/app/tns_modules
