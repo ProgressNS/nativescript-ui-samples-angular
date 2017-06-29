@@ -31,7 +31,8 @@ module.exports = env => {
     const rules = getRules();
     const plugins = getPlugins(platform, env);
     const extensions = getExtensions(platform);
-    const nativeExtendModules = [
+
+    const nativeClassExtenders = [
         join(__dirname, "app/main-activity.android.js"),
     ];
 
@@ -77,7 +78,7 @@ module.exports = env => {
             targetArchs: ["arm", "arm64", "ia32"],
             tnsJavaClassesOptions: {
                 packages: ["tns-core-modules"],
-                modules: nativeExtendModules,
+                modules: nativeClassExtenders,
             },
             useLibs: false
         }));
@@ -207,8 +208,17 @@ function getPlugins(platform, env) {
         plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
 
         // Work around an Android issue by setting compress = false
-	const mangle =  { except: [...nsWebpack.uglifyMangleExcludes, "org.nativescript.sdkAngular.MainActivity", "MainActivity"] };
         const compress = platform !== "android";
+
+        const mangle =  {
+            except: [
+                ...nsWebpack.uglifyMangleExcludes,
+                "org.nativescript.sdkAngular.MainActivity",
+                "MainActivity",
+                "AutoCompleteAdapter"
+            ]
+        };
+
         plugins.push(new webpack.optimize.UglifyJsPlugin({
             mangle,
             compress,
