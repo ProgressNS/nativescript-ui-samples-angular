@@ -10,6 +10,7 @@ import { RadialNeedle } from "nativescript-telerik-ui-pro/gauges";
 })
 export class GaugesAnimationsComponent implements AfterViewInit {
     private _needle: RadialNeedle;
+    public values = [60, 80, 120, 160];
 
     constructor() { }
 
@@ -19,20 +20,8 @@ export class GaugesAnimationsComponent implements AfterViewInit {
 
     @ViewChild("needle") needleElement: ElementRef;
 
-    public on60Tapped() {
-        this._needle.value = 60;
-    }
-
-    public on80Tapped() {
-        this._needle.value = 80;
-    }
-
-    public on120Tapped() {
-        this._needle.value = 120;
-    }
-
-    public on160Tapped() {
-        this._needle.value = 160;
+    public onValueChange(value: number) {
+        this._needle.value = value;
     }
 }
 // << gauges-animations.component-angular

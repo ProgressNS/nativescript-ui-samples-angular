@@ -26,9 +26,10 @@
     <!-- << gauges-animations.component-angular-html -->
 
     <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
-        <Button text="60" (tap)="on60Tapped($event)" verticalAlignment="center"></Button>
-        <Button text="80" (tap)="on80Tapped($event)" verticalAlignment="center"></Button>
-        <Button text="120" (tap)="on120Tapped($event)" verticalAlignment="center"></Button>
-        <Button text="160" (tap)="on160Tapped($event)" verticalAlignment="center"></Button>
+        <Button *ngFor="let value of values"
+            [text]="value"
+            (tap)="onValueChange(value)"
+            verticalAlignment="center"
+        ></Button>
     </StackLayout>
 </GridLayout>
