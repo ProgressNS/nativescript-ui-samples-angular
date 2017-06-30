@@ -14,6 +14,7 @@ import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/a
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { AppComponent } from "./navigation/app.component";
 import { APP_ROUTES, EXAMPLES_COMPONENTS } from "./app.routes";
@@ -48,6 +49,7 @@ if (applicationModule.android) {
     ],
     imports: [
         NativeScriptModule,
+        CommonModule,
         TNSFrescoModule,
         NativeScriptUIListViewModule,
         NativeScriptUISideDrawerModule,
