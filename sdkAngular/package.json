@@ -11,10 +11,10 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-ios": {
-      "version": "3.1.0"
+      "version": "next"
     },
     "tns-android": {
-      "version": "3.1.0"
+      "version": "next"
     }
   },
   "dependencies": {
@@ -32,12 +32,12 @@
     "nativescript-telerik-ui-pro": "3.0.0",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.3.0",
-    "tns-core-modules": "3.1.0",
+    "tns-core-modules": "next",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
     "@angular/compiler-cli": "~4.0.0",
-    "@ngtools/webpack": "1.4.2",
+    "@ngtools/webpack": "~1.4.0",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
     "babylon": "6.17.0",
@@ -52,26 +52,26 @@
     "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
     "mocha": "^3.3.0",
-    "nativescript-css-loader": "0.26.1",
+    "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-typescript": "^0.5.0",
-    "nativescript-dev-webpack": "~0.7.1",
+    "nativescript-dev-webpack": "next",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.0.2",
     "tns-platform-declarations": "~3.1.0",
     "tslint": "^5.1.0",
-    "typescript": "~2.2.2",
-    "webpack": "~2.4.1",
-    "webpack-sources": "~0.2.3",
-    "webpack-bundle-analyzer": "^2.8.2"
+    "typescript": "~2.3.4",
+    "webpack": "~3.0.0",
+    "webpack-bundle-analyzer": "^2.8.2",
+    "webpack-sources": "~1.0.1"
   },
   "scripts": {
     "ns-bundle": "ns-bundle",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
-    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
-    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install",
     "start-android-bundle": "npm run ns-bundle --android --run-app",
     "start-ios-bundle": "npm run ns-bundle --ios --run-app",
     "build-android-bundle": "npm run ns-bundle --android --build-app",
-    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app",
+    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
+    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install"
   }
 }
