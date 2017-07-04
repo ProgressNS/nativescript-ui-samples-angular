@@ -33,7 +33,7 @@ module.exports = env => {
     const extensions = getExtensions(platform);
 
     const nativeClassExtenders = [
-        join(__dirname, "app/main-activity.android.js"),
+        join(__dirname, "app/main-activity.android.ts"),
     ];
 
     const config = {
