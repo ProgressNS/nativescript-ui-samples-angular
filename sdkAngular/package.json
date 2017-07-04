@@ -26,7 +26,7 @@
     "@angular/platform-browser": "~4.0.0",
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
-    "nativescript-angular": "~3.1.0",
+    "nativescript-angular": "next",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
     "nativescript-telerik-ui-pro": "next",
@@ -67,11 +67,11 @@
   "scripts": {
     "ns-bundle": "ns-bundle",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
+    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
+    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install",
     "start-android-bundle": "npm run ns-bundle --android --run-app",
     "start-ios-bundle": "npm run ns-bundle --ios --run-app",
     "build-android-bundle": "npm run ns-bundle --android --build-app",
-    "build-ios-bundle": "npm run ns-bundle --ios --build-app",
-    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
-    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install"
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
   }
 }
