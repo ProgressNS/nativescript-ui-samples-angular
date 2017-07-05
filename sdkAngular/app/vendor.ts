@@ -19,4 +19,3 @@ require("nativescript-telerik-ui-pro/dataform/angular");
 require("nativescript-telerik-ui-pro/gauges/angular");
 require("nativescript-telerik-ui-pro/listview/angular");
 require("nativescript-telerik-ui-pro/sidedrawer/angular");
-
