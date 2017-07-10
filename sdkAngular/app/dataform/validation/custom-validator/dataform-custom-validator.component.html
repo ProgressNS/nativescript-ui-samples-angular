@@ -1,0 +1,11 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="user">
+	<TKEntityProperty tkDataFormProperty name="username" index="0">
+		<ExactTextValidator tkEntityPropertyValidators></ExactTextValidator>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="password" index="1">
+		<TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="email" displayName="E-mail" index="2">
+		<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+	</TKEntityProperty>
+</RadDataForm>

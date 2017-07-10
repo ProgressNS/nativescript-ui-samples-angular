@@ -509,6 +509,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Custom Validator",
+                                "path": "DataFormCustomValidatorComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Check Validation State",
                                 "path": "DataformCheckErrorsComponent",
                                 "subItems": []
