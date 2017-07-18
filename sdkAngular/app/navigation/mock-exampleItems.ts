@@ -333,7 +333,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Disable/Enable",
+                                "title": "Disable\\Enable",
                                 "path": "ListViewSwipeDisableComponent",
                                 "subItems": []
                             }

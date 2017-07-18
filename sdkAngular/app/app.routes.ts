@@ -883,7 +883,7 @@ export const APP_ROUTES: Routes = [
         path: "ListViewSwipeDisableComponent",
         component: ListViewSwipeDisableComponent,
         data: {
-            "title": "Disable/Enable"
+            "title": "Disable\\Enable"
         }
     },
     {
