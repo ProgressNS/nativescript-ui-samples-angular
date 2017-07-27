@@ -293,27 +293,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Swipe to Execute",
-                        "path": "",
-                        "subItems": [
-                            {
-                                "title": "Getting started",
-                                "path": "ListViewSwipeExecuteComponent",
-                                "subItems": []
-                            },
-                            {
-                                "title": "Swipe to execute with sticky actions",
-                                "path": "ListviewSwipeExecuteStickyComponent",
-                                "subItems": []
-                            },
-                            {
-                                "title": "Swipe to execute with stretched content",
-                                "path": "ListviewSwipeExecuteStretchComponent",
-                                "subItems": []
-                            },
-                        ]
-                    },
-                    {
                         "title": "Swipe actions",
                         "path": "",
                         "subItems": [
