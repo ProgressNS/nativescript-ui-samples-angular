@@ -1,5 +1,6 @@
 import { PropertyValidator } from "nativescript-telerik-ui-pro/dataform";
 
+// >> angular-dataform-custom-validator
 export class ExactTextValidator extends PropertyValidator {
     constructor() {
         super();
@@ -10,3 +11,4 @@ export class ExactTextValidator extends PropertyValidator {
         return value.toLowerCase() == "admin1";
     }
 }
+// << angular-dataform-custom-validator

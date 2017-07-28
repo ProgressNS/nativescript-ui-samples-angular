@@ -488,13 +488,33 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Custom Validator",
-                                "path": "DataFormCustomValidatorComponent",
+                                "title": "Validation Modes",
+                                "path": "DataFormValidationModesComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Validation Events",
+                                "path": "DataFormValidationEventsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Async Validation",
+                                "path": "DataFormAsyncValidationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Check Validation State",
                                 "path": "DataformCheckErrorsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Custom Validator",
+                                "path": "DataFormCustomValidatorComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Custom Validation",
+                                "path": "DataFormCustomValidationComponent",
                                 "subItems": []
                             }
                         ]

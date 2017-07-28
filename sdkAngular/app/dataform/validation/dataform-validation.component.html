@@ -5,8 +5,12 @@
 	</TKEntityProperty>
 	<!-- >> angular-dataform-validation-html -->
 	<TKEntityProperty tkDataFormProperty name="password" index="1">
-		<TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
-		<TKMinimumLengthValidator tkEntityPropertyValidators errorMessage="Password must be at least 6 characters long." length="6"></TKMinimumLengthValidator>
+		<TKPropertyEditor tkEntityPropertyEditor type="Password">
+		</TKPropertyEditor>
+		<TKMinimumLengthValidator tkEntityPropertyValidators
+			errorMessage="Password must be at least 6 characters long."
+			length="6">
+		</TKMinimumLengthValidator>
 	</TKEntityProperty>
 	<!-- << angular-dataform-validation-html -->
 	<TKEntityProperty tkDataFormProperty name="email" displayName="E-mail" index="2">

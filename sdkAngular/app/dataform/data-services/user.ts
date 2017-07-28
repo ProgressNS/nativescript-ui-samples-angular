@@ -1,9 +1,24 @@
-export class User {
+export class BaseUser {
     public username: string = "";
     public password: string = "";
+
+    constructor() {
+    }
+}
+
+export class User extends BaseUser {
     public email: string = "";
 
     constructor() {
+        super();
+    }
+}
+
+export class RegisteringUser extends BaseUser {
+    public password2: string = "";
+
+    constructor() {
+        super();
     }
 }
 
