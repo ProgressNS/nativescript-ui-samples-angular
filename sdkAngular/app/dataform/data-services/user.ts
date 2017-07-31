@@ -25,6 +25,8 @@ export class RegisteringUser extends BaseUser {
 export class AdvancedUser extends User {
     public phoneNumber: string = "";
     public id: number = 0;
+    public pin: string = "";
+    public agreeTerms: boolean = false;
 
     constructor() {
         super();

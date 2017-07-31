@@ -25,4 +25,12 @@
 		<TKPhoneValidator tkEntityPropertyValidators errorMessage="Incorrect phone number"></TKPhoneValidator>
 		<TKPropertyEditor tkEntityPropertyEditor type="Phone"></TKPropertyEditor>
 	</TKEntityProperty>
+	<!-- >> angular-dataform-validation-regex-html -->
+	<TKEntityProperty tkDataFormProperty name="pin" displayName="Enter PIN" index="5">
+		<TKRegExValidator tkEntityPropertyValidators regEx="\d{4}" errorMessage="PIN number should contain 4 digits."></TKRegExValidator>
+	</TKEntityProperty>
+	<!-- << angular-dataform-validation-regex-html -->
+	<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I agree with terms" index="6">
+		<TKIsTrueValidator tkEntityPropertyValidators errorMessage="You must agree with the terms."></TKIsTrueValidator>
+	</TKEntityProperty>
 </RadDataForm>

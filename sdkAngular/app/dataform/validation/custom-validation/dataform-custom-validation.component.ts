@@ -29,6 +29,7 @@ export class DataFormCustomValidationComponent implements OnInit {
 
     @ViewChild('myCustomValidationDataForm') myCustomDataFormComp: RadDataFormComponent;
 
+// >> angular-dataform-custom-validation
     public onTap() {
         var isValid = true;
 
@@ -68,4 +69,5 @@ export class DataFormCustomValidationComponent implements OnInit {
 
         }
     }
+// << angular-dataform-custom-validation
 }
