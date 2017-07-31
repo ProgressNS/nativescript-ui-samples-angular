@@ -498,6 +498,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Validators JSON",
+                                "path": "DataFormValidationMetadataComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Async Validation",
                                 "path": "DataFormAsyncValidationComponent",
                                 "subItems": []
