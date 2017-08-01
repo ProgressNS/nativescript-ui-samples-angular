@@ -5,8 +5,12 @@
 	</TKEntityProperty>
 	<!-- >> angular-dataform-validation-html -->
 	<TKEntityProperty tkDataFormProperty name="password" index="1">
-		<TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
-		<TKMinimumLengthValidator tkEntityPropertyValidators errorMessage="Password must be at least 6 characters long." length="6"></TKMinimumLengthValidator>
+		<TKPropertyEditor tkEntityPropertyEditor type="Password">
+		</TKPropertyEditor>
+		<TKMinimumLengthValidator tkEntityPropertyValidators
+			errorMessage="Password must be at least 6 characters long."
+			length="6">
+		</TKMinimumLengthValidator>
 	</TKEntityProperty>
 	<!-- << angular-dataform-validation-html -->
 	<TKEntityProperty tkDataFormProperty name="email" displayName="E-mail" index="2">
@@ -20,5 +24,13 @@
 	<TKEntityProperty tkDataFormProperty name="phoneNumber" displayName="Phone Number" index="4">
 		<TKPhoneValidator tkEntityPropertyValidators errorMessage="Incorrect phone number"></TKPhoneValidator>
 		<TKPropertyEditor tkEntityPropertyEditor type="Phone"></TKPropertyEditor>
+	</TKEntityProperty>
+	<!-- >> angular-dataform-validation-regex-html -->
+	<TKEntityProperty tkDataFormProperty name="pin" displayName="Enter PIN" index="5">
+		<TKRegExValidator tkEntityPropertyValidators regEx="\d{4}" errorMessage="PIN number should contain 4 digits."></TKRegExValidator>
+	</TKEntityProperty>
+	<!-- << angular-dataform-validation-regex-html -->
+	<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I agree with terms" index="6">
+		<TKIsTrueValidator tkEntityPropertyValidators errorMessage="You must agree with the terms."></TKIsTrueValidator>
 	</TKEntityProperty>
 </RadDataForm>

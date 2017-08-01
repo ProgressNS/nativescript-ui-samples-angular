@@ -1,0 +1,17 @@
+<GridLayout rows="auto, auto, *"  tkExampleTitle tkToggleNavButton>
+    <Label [text]="text" textWrap="true" margin="12"></Label>
+    <ActivityIndicator row="1" id="myIndicator" [busy]="isBusy"></ActivityIndicator>
+    <RadDataForm #myAsyncDataForm row="2" [source]="user"
+        validationMode="OnLostFocus" 
+        commitMode="Manual"
+        (propertyValidate)="onPropertyValidate($event)" 
+        (propertyValidated)="onPropertyValidated($event)">
+        <TKEntityProperty tkDataFormProperty name="username" index="0"></TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="password" index="1">
+            <TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="email" index="2">
+            <TKPropertyEditor type="Email"></TKPropertyEditor>
+        </TKEntityProperty>
+    </RadDataForm>
+</GridLayout>

@@ -1,7 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { User } from "../../data-services/user";
+// >> angular-dataform-custom-validator-register
 import { ExactTextValidator } from "../../data-services/exact-text-validator";
 import { registerElement } from "nativescript-angular/element-registry";
+
+registerElement("ExactTextValidator", () => <any>ExactTextValidator);
+// << angular-dataform-custom-validator-register
 
 @Component({
     moduleId: module.id,
@@ -22,4 +26,3 @@ export class DataFormCustomValidatorComponent implements OnInit {
         return this._user;
     }
 }
-registerElement("ExactTextValidator", () => <any>ExactTextValidator);

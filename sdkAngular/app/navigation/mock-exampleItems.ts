@@ -293,27 +293,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Swipe to Execute",
-                        "path": "",
-                        "subItems": [
-                            {
-                                "title": "Getting started",
-                                "path": "ListViewSwipeExecuteComponent",
-                                "subItems": []
-                            },
-                            {
-                                "title": "Swipe to execute with sticky actions",
-                                "path": "ListviewSwipeExecuteStickyComponent",
-                                "subItems": []
-                            },
-                            {
-                                "title": "Swipe to execute with stretched content",
-                                "path": "ListviewSwipeExecuteStretchComponent",
-                                "subItems": []
-                            },
-                        ]
-                    },
-                    {
                         "title": "Swipe actions",
                         "path": "",
                         "subItems": [
@@ -509,13 +488,38 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
-                                "title": "Custom Validator",
-                                "path": "DataFormCustomValidatorComponent",
+                                "title": "Validation Modes",
+                                "path": "DataFormValidationModesComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Validation Events",
+                                "path": "DataFormValidationEventsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Validators JSON",
+                                "path": "DataFormValidationMetadataComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Async Validation",
+                                "path": "DataFormAsyncValidationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Check Validation State",
                                 "path": "DataformCheckErrorsComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Custom Validator",
+                                "path": "DataFormCustomValidatorComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Custom Validation",
+                                "path": "DataFormCustomValidationComponent",
                                 "subItems": []
                             }
                         ]
