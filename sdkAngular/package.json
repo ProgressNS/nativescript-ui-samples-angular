@@ -36,7 +36,7 @@
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "~4.0.0",
+    "@angular/compiler-cli": "^4.3.2",
     "@ngtools/webpack": "~1.5.3",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
