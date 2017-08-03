@@ -29,6 +29,7 @@
 			<TKRegExValidator tkEntityPropertyValidators regEx="\d{4}" errorMessage="PIN number should contain 4 digits."></TKRegExValidator>
 		</TKEntityProperty>
 		<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I agree with terms" index="6">
+			<TKPropertyEditor tkEntityPropertyEditor type="Switch"></TKPropertyEditor>
 			<TKIsTrueValidator tkEntityPropertyValidators errorMessage="You must agree with the terms."></TKIsTrueValidator>
 		</TKEntityProperty>
 	</RadDataForm>
