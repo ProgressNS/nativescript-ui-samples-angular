@@ -1,11 +1,14 @@
-<!-- >> angular-dataform-autocomplete-html -->
-<RadDataForm [source]="booking" tkExampleTitle tkToggleNavButton>
-	<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
-		<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
-	</TKEntityProperty>
+<GridLayout rows="auto, *">
+	<Button text="check values" (tap)="checkValues($event)"></Button>
+	<!-- >> angular-dataform-autocomplete-html -->
+	<RadDataForm #dataform row="1" [source]="booking" tkExampleTitle tkToggleNavButton (propertyCommitted)="onPropertyCommitted($event)">
+		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
+			<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
+		</TKEntityProperty>
 
-	<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
-		<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
-	</TKEntityProperty>
-</RadDataForm>
-<!-- << angular-dataform-autocomplete-html -->
+		<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
+			<TKPropertyEditor tkEntityPropertyEditor type="AutoCompleteInline"></TKPropertyEditor>
+		</TKEntityProperty>
+	</RadDataForm>
+	<!-- << angular-dataform-autocomplete-html -->
+</GridLayout>
