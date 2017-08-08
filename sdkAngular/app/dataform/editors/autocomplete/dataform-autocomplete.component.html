@@ -1,5 +1,5 @@
 <GridLayout rows="auto, *">
-	<Button text="check values" (tap)="checkValues($event)"></Button>
+	<Button text="check values" (tap)="checkValues()"></Button>
 	<!-- >> angular-dataform-autocomplete-html -->
 	<RadDataForm #dataform row="1" [source]="booking" tkExampleTitle tkToggleNavButton (propertyCommitted)="onPropertyCommitted($event)">
 		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
