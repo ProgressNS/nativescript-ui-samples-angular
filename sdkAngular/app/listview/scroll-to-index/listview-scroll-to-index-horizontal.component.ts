@@ -21,22 +21,19 @@ import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angul
 export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
     private _dataItems: ObservableArray<DataItem>;
-    private _options: Array<string> = ["None", "CenteredHorizontally", "Left", "Right"];
+    private _options: Array<string> = ["Auto", "Start", "Center", "End"];
 
     myScrollPosition: any;
 
     constructor(private _page: Page, private _dataItemService: DataItemService, private _optionsService: OptionsService, private _router: Router) {
         super();
         let selectedIndex = 2;
-        if (applicationModule.ios) {
-            this._page.on("navigatingTo", this.onNavigatingTo, this);
-            this._optionsParamName = "scrollDirection";
-            this._optionsService.paramName = this._optionsParamName;
-            this.router = _router;
-            this.navigationParameters = { selectedIndex: selectedIndex, paramName: this._optionsParamName, items: this._options };
-        }
-                this.set("myScrollPosition", this._options[selectedIndex]);
-
+        this._page.on("navigatingTo", this.onNavigatingTo, this);
+        this._optionsParamName = "scrollDirection";
+        this._optionsService.paramName = this._optionsParamName;
+        this.router = _router;
+        this.navigationParameters = { selectedIndex: selectedIndex, paramName: this._optionsParamName, items: this._options };
+        this.set("myScrollPosition", this._options[selectedIndex]);
     }
 
     @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
@@ -50,7 +47,7 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
     }
 
     public onTap() {
-        this.listViewComponent.listView.scrollToIndex(50);
+        this.listViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
     }
 
     public onNavigatingTo(args) {
@@ -77,6 +74,12 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
                         break;
                 }
             }
+        }
+    }
+
+    public onOptionsTapped(args: any) {
+        if (applicationModule.android) {
+            this.set('myScrollPosition', args.object.text);
         }
     }
 }
