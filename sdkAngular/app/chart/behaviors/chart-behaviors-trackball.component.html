@@ -1,0 +1,9 @@
+<GridLayout rows="auto, *">
+    <Label text="Tap and hold on a given datapoint to display the Trackball. Drag across datapoints to update the Trackball position." textWrap="true"></Label>
+    <RadCartesianChart row="1" tkExampleTitle tkToggleNavButton>
+        <DateTimeCategoricalAxis tkCartesianHorizontalAxis dateFormat="yyyy-MM-dd" verticalLocation="Bottom"></DateTimeCategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+        <Trackball tkCartesianTrackball></Trackball>
+        <CandlestickSeries tkCartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close" [items]="candleStickSourceItems"></CandlestickSeries>
+    </RadCartesianChart>
+</GridLayout>

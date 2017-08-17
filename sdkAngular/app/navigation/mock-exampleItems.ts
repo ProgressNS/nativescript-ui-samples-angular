@@ -141,6 +141,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Trackball",
+                                "path": "ChartBehaviorsTrackballComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Series selection",
                                 "path": "ChartBehaviorsSeriesSelectionComponent",
                                 "subItems": []
