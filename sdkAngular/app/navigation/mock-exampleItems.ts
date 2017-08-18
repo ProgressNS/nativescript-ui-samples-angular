@@ -477,6 +477,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Labels",
+                                "path": "DataFormLabelsComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "Custom Editors",
                                 "path": "DataformCustomEditorsComponent",
                                 "subItems": []
