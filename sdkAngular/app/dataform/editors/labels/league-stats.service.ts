@@ -14,10 +14,10 @@ export class LeagueStatsService {
             new ChampionsLeagueStat("2010-2011", "Barcelona", "Manchester United", "Lionel Messi (12)\nMario Gómez (8)\nSamuel Eto'o (8)"),
             new ChampionsLeagueStat("2011-2012", "Chelsea", "Bayern Munich", "Lionel Messi (14)\nMario Gómez (12)\nCristiano Ronaldo (10)"),
             new ChampionsLeagueStat("2012-2013", "Bayern Munich", "Borussia Dortmund", "Christiano Ronaldo (12)\nRobert Lewandowski (10)\nBurak Yılmaz (8)"),
-            new ChampionsLeagueStat("2013-2014", "Read Madrid", "Atlético Madrid", "Christiano Ronaldo (17)\nZlatan Ibrahimović (10)\nDiego Costa (8)"),
+            new ChampionsLeagueStat("2013-2014", "Real Madrid", "Atlético Madrid", "Christiano Ronaldo (17)\nZlatan Ibrahimović (10)\nDiego Costa (8)"),
             new ChampionsLeagueStat("2014-2015", "Barcelona", "Juventus", "Neymar (10)\nCristiano Ronaldo (10)\nLionel Messi (10)"),
-            new ChampionsLeagueStat("2015-2016", "Read Madrid", "Atlético Madrid", "Christiano Ronaldo (16)\nRobert Lewandowski (9)\nLuis Suárez( 8)"),
-            new ChampionsLeagueStat("2016-2017", "Read Madrid", "Juventus", "Christiano Ronaldo (12)\nLionel Messi (9)\nEdinson Cavani (8)"),
+            new ChampionsLeagueStat("2015-2016", "Real Madrid", "Atlético Madrid", "Christiano Ronaldo (16)\nRobert Lewandowski (9)\nLuis Suárez (8)"),
+            new ChampionsLeagueStat("2016-2017", "Real Madrid", "Juventus", "Christiano Ronaldo (12)\nLionel Messi (9)\nEdinson Cavani (8)"),
         ];
     }
 
