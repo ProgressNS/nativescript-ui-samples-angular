@@ -4,14 +4,14 @@
         <PieSeries tkPieSeries selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource" valueProperty="Amount"
             legendLabel="Brand"></PieSeries>
 
-        <RadLegendView tkPieLegend position="Right" offsetOrigin="TopRight" width="110"></RadLegendView>
+        <RadLegendView tkPieLegend position="Right" title="Brands" offsetOrigin="TopRight" width="110" enableSelection="true"></RadLegendView>
     </RadPieChart>
 
     <RadPieChart height="300" allowAnimation="true" row="1">
         <DonutSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
             [items]="pieSource" valueProperty="Amount" legendLabel="Brand"></DonutSeries>
 
-        <RadLegendView tkPieLegend position="Right" offsetOrigin="TopRight" width="110"></RadLegendView>
+        <RadLegendView tkPieLegend position="Right" title="Brands" offsetOrigin="TopRight" width="110" enableSelection="true"></RadLegendView>
     </RadPieChart>
 </GridLayout>
 <!-- << chart-angular-pie-series -->
