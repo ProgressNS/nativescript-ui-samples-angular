@@ -206,10 +206,10 @@ export const APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListviewItemLayoutsLinearComponent",
-        component: ListviewItemLayoutsLinearComponent,
+        path: "ListviewItemLoadingComponent",
+        component: ListviewItemLoadingComponent,
         data: {
-            "title": "Linear"
+            "title": "Item Loading"
         }
     },
     {
