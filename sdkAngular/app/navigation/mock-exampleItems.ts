@@ -243,7 +243,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                             //     "title": "Staggered",
                             //     "path": "ListviewItemLayoutsStaggeredComponent",
                             //     "subItems": []
-                            // }
+                            // },
+                            {
+                                "title": "Change at runtime",
+                                "path": "ListviewItemLayoutsRuntimeComponent",
+                                "subItems": []
+                            }
                         ]
                     },
                     {
