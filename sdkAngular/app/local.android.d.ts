@@ -81,6 +81,10 @@ declare module android {
             setShowDividers(arg);
             setDividerDrawable(arg);
         }
+        class SeekBar {
+            getThumb();
+            getProgressDrawable();
+        }
 
         class Button extends view.View {
         }

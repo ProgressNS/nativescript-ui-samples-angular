@@ -13,7 +13,7 @@ export class DataformImageLabelsComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._employee = new Employee("", "", "1988-05-05", null);
+        this._employee = new Employee(null, null, null, null);
     }
 
     get employee(): Employee {

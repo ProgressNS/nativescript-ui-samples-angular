@@ -1,6 +1,7 @@
 import { PropertyConverter } from "nativescript-telerik-ui-pro/dataform";
 import { Movie } from "./movie";
 
+// >> angular-dataform-converters-code
 export class MovieConverter implements PropertyConverter {
     constructor(private _movies: Array<Movie>) { }
     
@@ -12,3 +13,4 @@ export class MovieConverter implements PropertyConverter {
         return this._movies.filter((movie: Movie) => movie.name == name)[0].id;
     }
 }
+// << angular-dataform-converters-code
