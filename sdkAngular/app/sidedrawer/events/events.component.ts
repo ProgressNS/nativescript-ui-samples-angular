@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, Ch
 import { View } from "tns-core-modules/ui/core/view";
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
-import { DrawerTransitionBase, PushTransition, RadSideDrawer } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { DrawerTransitionBase, PushTransition, RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-telerik-ui-pro/sidedrawer';
 import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 
 // >> sidedrawer-angular-callbacks-definition
@@ -48,20 +48,24 @@ export class SideDrawerEventsComponent implements AfterViewInit, OnInit {
        this.drawer.closeDrawer();
     }
 
-    public onDrawerOpening() {
+    public onDrawerOpening(args: DrawerStateChangingEventArgs) {
         this._currentNotification = "Drawer opening";
     }
 
-    public onDrawerOpened() {
+    public onDrawerOpened(args: DrawerStateChangedEventArgs) {
         this._currentNotification = "Drawer opened";
     }
 
-    public onDrawerClosing() {
+    public onDrawerClosing(args: DrawerStateChangingEventArgs) {
         this._currentNotification = "Drawer closing";
     }
 
-    public onDrawerClosed() {
+    public onDrawerClosed(args: DrawerStateChangedEventArgs) {
         this._currentNotification = "Drawer closed";
+    }
+
+    public onDrawerPan(args: DrawerStateChangedEventArgs) {
+        this._currentNotification = "Drawer pan";
     }
 }
 // << sidedrawer-angular-callbacks-definition
