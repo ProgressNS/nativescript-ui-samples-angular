@@ -15,6 +15,10 @@ declare class UIDevice extends NSObject {
     userInterfaceIdiom: UIUserInterfaceIdiom;
 }
 
+declare class UIEdgeInsets {
+    constructor(insets: any);
+}
+
 declare class NSIndexPath extends NSObject { 
     static indexPathForItemInSection(item: number, section: number): NSIndexPath;
 }

@@ -569,6 +569,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "subItems": []
                             },
                             {
+                                "title": "Editor Background",
+                                "path": "DataFormEditorBackgroundComponent",
+                                "subItems": []
+                            },
+                            {
                                 "title": "At runtime",
                                 "path": "DataformEditorStyleComponent",
                                 "subItems": []
