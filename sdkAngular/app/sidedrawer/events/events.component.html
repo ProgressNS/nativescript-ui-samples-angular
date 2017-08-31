@@ -1,6 +1,10 @@
 <!-- >> angular-sidedrawer-callbacks -->
-<RadSideDrawer (drawerOpening)="onDrawerOpening()" (drawerOpened)="onDrawerOpened($event)" (drawerClosing)="onDrawerClosing($event)"
-    (drawerClosed)="onDrawerClosed($event)" (drawerPan)="onDrawerPan($event)" [transition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
+<RadSideDrawer (drawerOpening)="onDrawerOpening($event)" 
+               (drawerOpened)="onDrawerOpened($event)" 
+               (drawerClosing)="onDrawerClosing($event)"
+               (drawerClosed)="onDrawerClosed($event)" 
+               (drawerPan)="onDrawerPan($event)" 
+               [transition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
     <!-- << angular-sidedrawer-callbacks -->
     <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
