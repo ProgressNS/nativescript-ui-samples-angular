@@ -1,0 +1,22 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="employee" (editorUpdate)="dfEditorUpdate($event)">
+    <TKEntityProperty tkDataFormProperty name="name" index="0">
+        <TKPropertyEditor tkEntityPropertyEditor type="Text">
+            <TKPropertyEditorStyle tkPropertyEditorStyle labelPosition="Top" separatorColor="Transparent"></TKPropertyEditorStyle>
+        </TKPropertyEditor>
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="phone" index="1">
+        <TKPropertyEditor tkEntityPropertyEditor type="Phone">
+            <TKPropertyEditorStyle tkPropertyEditorStyle labelPosition="Top" separatorColor="Transparent"></TKPropertyEditorStyle>
+        </TKPropertyEditor>
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="birthDate" index="2">
+        <TKPropertyEditor tkEntityPropertyEditor type="DatePicker">
+            <TKPropertyEditorStyle tkPropertyEditorStyle labelPosition="Top" separatorColor="Transparent"></TKPropertyEditorStyle>
+        </TKPropertyEditor>
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="employeeId" index="3">
+        <TKPropertyEditor tkEntityPropertyEditor type="Number">
+            <TKPropertyEditorStyle tkPropertyEditorStyle labelPosition="Top" separatorColor="Transparent"></TKPropertyEditorStyle>
+        </TKPropertyEditor>
+    </TKEntityProperty>
+</RadDataForm>

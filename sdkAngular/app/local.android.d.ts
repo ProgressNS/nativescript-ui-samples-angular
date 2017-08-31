@@ -53,6 +53,8 @@ declare module android {
         module drawable {
             class GradientDrawable {
                 setStroke(width, stroke);
+                setCornerRadius(radius);
+                setColor(color);
             }
         }
     }
