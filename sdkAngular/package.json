@@ -11,21 +11,21 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-ios": {
-      "version": "3.2.0-2017-7-28-1"
+      "version": "next"
     },
     "tns-android": {
       "version": "next"
     }
   },
   "dependencies": {
-    "@angular/common": "^4.3.2",
-    "@angular/compiler": "^4.3.2",
-    "@angular/core": "^4.3.2",
-    "@angular/forms": "^4.3.2",
-    "@angular/http": "^4.3.2",
-    "@angular/platform-browser": "^4.3.2",
-    "@angular/platform-browser-dynamic": "^4.3.2",
-    "@angular/router": "^4.3.2",
+    "@angular/common": "4.3.2",
+    "@angular/compiler": "4.3.2",
+    "@angular/core": "4.3.2",
+    "@angular/forms": "4.3.2",
+    "@angular/http": "4.3.2",
+    "@angular/platform-browser": "4.3.2",
+    "@angular/platform-browser-dynamic": "4.3.2",
+    "@angular/router": "4.3.2",
     "nativescript-angular": "next",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
