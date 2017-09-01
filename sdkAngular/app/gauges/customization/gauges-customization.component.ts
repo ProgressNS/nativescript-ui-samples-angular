@@ -24,4 +24,4 @@ export class GaugesCustomizationComponent implements AfterViewInit {
         }
     }
 }
-// << gauges-customization.component-angular
+// << gauges-customization-angular
