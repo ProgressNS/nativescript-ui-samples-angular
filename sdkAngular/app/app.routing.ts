@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
@@ -35,15 +36,6 @@ import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navig
 import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
 import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
-import { CalendarGettingStartedComponent } from "./calendar/getting-started/calendar-getting-started.component";
-import { CalendarLocalizationComponent } from "./calendar/calendar-localization/calendar-localization.component";
-import { CalendarPopulatingWithDataComponent } from "./calendar/populating-with-data/calendar-populating-with-data.component";
-import { CalendarProgrammaticControlComponent } from "./calendar/programmatic-control/calendar-programmatic-control.component";
-import { CalendarViewModesComponent } from "./calendar/view-modes/calendar-view-modes.component";
-import { CalendarSelectionModesComponent } from "./calendar/selection-modes/calendar-selection-modes.component";
-import { CalendarCellStylingComponent } from "./calendar/cell-styling/calendar-cell-styling.component";
-import { CalendarEventsViewModesComponent } from "./calendar/events-view-modes/calendar-events-view-modes.component";
-import { CalendarTransitionModesComponent } from "./calendar/transition-modes/calendar-transition-modes.component";
 import { ChartSeriesAreaComponent } from "./chart/series/area/chart-series-area.component";
 import { ChartSeriesStackedAreaComponent } from "./chart/series/area/chart-series-stacked-area.component";
 import { ChartSeriesBarComponent } from "./chart/series/bar/chart-series-bar.component";
@@ -129,8 +121,8 @@ import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, CalendarGettingStartedComponent, CalendarLocalizationComponent, CalendarPopulatingWithDataComponent, CalendarProgrammaticControlComponent, CalendarViewModesComponent, CalendarSelectionModesComponent, CalendarCellStylingComponent, CalendarEventsViewModesComponent, CalendarTransitionModesComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartBehaviorsTrackballComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, AutoCompleteReadOnlyComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, ChartSeriesSplineAreaComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
-export const APP_ROUTES: Routes = [
+export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartBehaviorsTrackballComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, AutoCompleteReadOnlyComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, ChartSeriesSplineAreaComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
+let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
     { path: "examples-depth-2/:parentTitle/:tappedTitle", component: ExamplesListDepth2Component },
@@ -299,63 +291,63 @@ export const APP_ROUTES: Routes = [
     },
     {
         path: "CalendarGettingStartedComponent",
-        component: CalendarGettingStartedComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Getting Started"
         }
     },
     {
         path: "CalendarLocalizationComponent",
-        component: CalendarLocalizationComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Localization"
         }
     },
     {
         path: "CalendarPopulatingWithDataComponent",
-        component: CalendarPopulatingWithDataComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Populating with data"
         }
     },
     {
         path: "CalendarProgrammaticControlComponent",
-        component: CalendarProgrammaticControlComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Programmatic control"
         }
     },
     {
         path: "CalendarViewModesComponent",
-        component: CalendarViewModesComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "View modes"
         }
     },
     {
         path: "CalendarSelectionModesComponent",
-        component: CalendarSelectionModesComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Selection modes"
         }
     },
     {
         path: "CalendarCellStylingComponent",
-        component: CalendarCellStylingComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Cell styling"
         }
     },
     {
         path: "CalendarEventsViewModesComponent",
-        component: CalendarEventsViewModesComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Events view modes"
         }
     },
     {
         path: "CalendarTransitionModesComponent",
-        component: CalendarTransitionModesComponent,
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Transition modes"
         }
@@ -998,3 +990,5 @@ export const APP_ROUTES: Routes = [
         }
     }
 ];
+
+export const routing = NativeScriptRouterModule.forRoot(APP_ROUTES);

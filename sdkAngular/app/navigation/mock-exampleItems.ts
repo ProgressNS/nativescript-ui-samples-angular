@@ -398,47 +398,47 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "CalendarGettingStartedComponent",
+                        "path": "CalendarGettingStartedComponent/getting-started",
                         "subItems": []
                     },
                     {
                         "title": "Localization",
-                        "path": "CalendarLocalizationComponent",
+                        "path": "CalendarLocalizationComponent/localization",
                         "subItems": []
                     },
                     {
                         "title": "Populating with data",
-                        "path": "CalendarPopulatingWithDataComponent",
+                        "path": "CalendarPopulatingWithDataComponent/populating",
                         "subItems": []
                     },
                     {
                         "title": "Programmatic control",
-                        "path": "CalendarProgrammaticControlComponent",
+                        "path": "CalendarProgrammaticControlComponent/programmatic",
                         "subItems": []
                     },
                     {
                         "title": "View modes",
-                        "path": "CalendarViewModesComponent",
+                        "path": "CalendarViewModesComponent/view-modes",
                         "subItems": []
                     },
                     {
                         "title": "Selection modes",
-                        "path": "CalendarSelectionModesComponent",
+                        "path": "CalendarSelectionModesComponent/selection-modes",
                         "subItems": []
                     },
                     {
                         "title": "Transition modes",
-                        "path": "CalendarTransitionModesComponent",
+                        "path": "CalendarTransitionModesComponent/transition-modes",
                         "subItems": []
                     },
                     {
                         "title": "Cell styling",
-                        "path": "CalendarCellStylingComponent",
+                        "path": "CalendarCellStylingComponent/cell-styling",
                         "subItems": []
                     },
                     {
                         "title": "Events view modes",
-                        "path": "CalendarEventsViewModesComponent",
+                        "path": "CalendarEventsViewModesComponent/events-view-modes",
                         "subItems": []
                     }
                 ]
