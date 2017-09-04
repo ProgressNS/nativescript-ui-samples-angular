@@ -449,22 +449,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting started",
-                        "path": "DataFormGettingStartedComponent/",
+                        "path": "DataFormGettingStartedComponent/DataFormGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Getting started JSON",
-                        "path": "DataformGettingStartedJsonComponent/",
+                        "path": "DataformGettingStartedJsonComponent/DataformGettingStartedJsonComponent",
                         "subItems": []
                     },
                     {
                         "title": "Properties",
-                        "path": "DataFormAdjustmentComponent/",
+                        "path": "DataFormAdjustmentComponent/DataFormAdjustmentComponent",
                         "subItems": []
                     },
                     {
                         "title": "Properties JSON",
-                        "path": "DataformPropertiesJsonComponent/",
+                        "path": "DataformPropertiesJsonComponent/DataformPropertiesJsonComponent",
                         "subItems": []
                     },
                     {
@@ -473,22 +473,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Common",
-                                "path": "DataFormEditorsComponent/",
+                                "path": "DataFormEditorsComponent/DataFormEditorsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "AutoComplete",
-                                "path": "DataFormaAutoCompleteComponent/",
+                                "path": "DataFormaAutoCompleteComponent/DataFormaAutoCompleteComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Labels",
-                                "path": "DataFormLabelsComponent/",
+                                "path": "DataFormLabelsComponent/DataFormLabelsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Custom Editors",
-                                "path": "DataformCustomEditorsComponent/",
+                                "path": "DataformCustomEditorsComponent/DataformCustomEditorsComponent",
                                 "subItems": []
                             }
                         ]
@@ -499,100 +499,100 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Validators",
-                                "path": "DataFormValidationComponent/",
+                                "path": "DataFormValidationComponent/DataFormValidationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Validation Modes",
-                                "path": "DataFormValidationModesComponent/",
+                                "path": "DataFormValidationModesComponent/DataFormValidationModesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Validation Events",
-                                "path": "DataFormValidationEventsComponent/",
+                                "path": "DataFormValidationEventsComponent/DataFormValidationEventsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Validators JSON",
-                                "path": "DataFormValidationMetadataComponent/",
+                                "path": "DataFormValidationMetadataComponent/DataFormValidationMetadataComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Async Validation",
-                                "path": "DataFormAsyncValidationComponent/",
+                                "path": "DataFormAsyncValidationComponent/DataFormAsyncValidationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Check Validation State",
-                                "path": "DataformCheckErrorsComponent/",
+                                "path": "DataformCheckErrorsComponent/DataformCheckErrorsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Custom Validator",
-                                "path": "DataFormCustomValidatorComponent/",
+                                "path": "DataFormCustomValidatorComponent/DataFormCustomValidatorComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Custom Validation",
-                                "path": "DataFormCustomValidationComponent/",
+                                "path": "DataFormCustomValidationComponent/DataFormCustomValidationComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Commit Modes",
-                        "path": "DataFormCommitModesComponent/",
+                        "path": "DataFormCommitModesComponent/DataFormCommitModesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Groups",
-                        "path": "DataFormGroupsComponent/",
+                        "path": "DataFormGroupsComponent/DataFormGroupsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "DataFormEventsComponent/",
+                        "path": "DataFormEventsComponent/DataFormEventsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Styling",
-                        "path": "DataFormStylingComponent/",
+                        "path": "DataFormStylingComponent/DataFormStylingComponent",
                         "subItems": [
                             {
                                 "title": "Common",
-                                "path": "DataFormStylingComponent/",
+                                "path": "DataFormStylingComponent/DataFormStylingComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Advanced",
-                                "path": "DataformStylingAdvancedComponent/",
+                                "path": "DataformStylingAdvancedComponent/DataformStylingAdvancedComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Editor Background",
-                                "path": "DataFormEditorBackgroundComponent/",
+                                "path": "DataFormEditorBackgroundComponent/DataFormEditorBackgroundComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "At runtime",
-                                "path": "DataformEditorStyleComponent/",
+                                "path": "DataformEditorStyleComponent/DataformEditorStyleComponent",
                                 "subItems": []
                             },
                         ]
                     },
                     {
                         "title": "Runtime updates",
-                        "path": "DataFormRuntimeUpdatesComponent/",
+                        "path": "DataFormRuntimeUpdatesComponent/DataFormRuntimeUpdatesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Platform adjustments",
-                        "path": "DataFormPlatformSpecificsComponent/",
+                        "path": "DataFormPlatformSpecificsComponent/DataFormPlatformSpecificsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Image Labels",
-                        "path": "DataformImageLabelsComponent/",
+                        "path": "DataformImageLabelsComponent/DataformImageLabelsComponent",
                         "subItems": []
                     },
                     {
@@ -601,29 +601,29 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Stack",
-                                "path": "DataformStackLayoutComponent/",
+                                "path": "DataformStackLayoutComponent/DataformStackLayoutComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Grid",
-                                "path": "DataformGridLayoutComponent/",
+                                "path": "DataformGridLayoutComponent/DataformGridLayoutComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Read Only",
-                        "path": "DataformReadOnlyComponent/",
+                        "path": "DataformReadOnlyComponent/DataformReadOnlyComponent",
                         "subItems": []
                     },
                     {
                         "title": "Value Providers",
-                        "path": "DataFormValueProvidersComponent/",
+                        "path": "DataFormValueProvidersComponent/DataFormValueProvidersComponent",
                         "subItems": []
                     },
                     {
                         "title": "Scrollable Form",
-                        "path": "DataFormScrollingComponent/",
+                        "path": "DataFormScrollingComponent/DataFormScrollingComponent",
                         "subItems": []
                     }
                 ]

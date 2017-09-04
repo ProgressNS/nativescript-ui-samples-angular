@@ -4,8 +4,6 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 // --- The built-in 'nativescript-telerik-ui-pro' modules
 import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
-import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
-import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
 import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
@@ -52,8 +50,6 @@ if (applicationModule.android) {
         TNSFrescoModule,
         NativeScriptUIListViewModule,
         NativeScriptUISideDrawerModule,
-        NativeScriptUIChartModule,
-        NativeScriptUIDataFormModule,
         NativeScriptUIGaugesModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,

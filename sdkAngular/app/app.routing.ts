@@ -36,37 +36,6 @@ import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navig
 import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
 import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
-import { DataFormAdjustmentComponent } from "./dataform/adjustment/dataform-adjustment.component";
-import { DataFormCommitModesComponent } from "./dataform/commit-modes/dataform-commit-modes.component";
-import { DataFormEditorsComponent } from "./dataform/editors/dataform-editors.component";
-import { DataFormaAutoCompleteComponent } from "./dataform/editors/autocomplete/dataform-autocomplete.component";
-import { DataFormLabelsComponent } from "./dataform/editors/labels/dataform-labels.component";
-import { DataformReadOnlyComponent } from "./dataform/editors/readonly/dataform-read-only.component";
-import { DataformCustomEditorsComponent } from "./dataform/editors/custom-editors/dataform-custom-editors.component";
-import { DataFormEventsComponent } from "./dataform/events/dataform-events.component";
-import { DataFormGettingStartedComponent } from "./dataform/getting-started/dataform-getting-started.component";
-import { DataformGettingStartedJsonComponent } from "./dataform/getting-started-json/dataform-getting-started-json.component";
-import { DataFormGroupsComponent } from "./dataform/groups/dataform-groups.component";
-import { DataFormPlatformSpecificsComponent } from "./dataform/platform-specifics/dataform-platform-specifics.component";
-import { DataFormRuntimeUpdatesComponent } from "./dataform/runtime-updates/dataform-runtime-updates.component";
-import { DataFormStylingComponent } from "./dataform/styling/common/dataform-styling.component";
-import { DataformEditorStyleComponent } from "./dataform/styling/editor-style/dataform-editor-style.component";
-import { DataFormValidationComponent } from "./dataform/validation/dataform-validation.component";
-import { DataFormCustomValidatorComponent } from "./dataform/validation/custom-validator/dataform-custom-validator.component";
-import { DataFormValueProvidersComponent } from "./dataform/value-providers/dataform-value-providers.component";
-import { DataformCheckErrorsComponent } from "./dataform/validation/check-errors/dataform-check-errors.component";
-import { DataformGridLayoutComponent } from "./dataform/layouts/dataform-grid-layout.component";
-import { DataformStackLayoutComponent } from "./dataform/layouts/dataform-stack-layout.component";
-import { DataformImageLabelsComponent } from "./dataform/image-labels/dataform-image-labels.component";
-import { DataformPropertiesJsonComponent } from "./dataform/properties-json/dataform-properties-json.component";
-import { DataformStylingAdvancedComponent } from "./dataform/styling/advanced/dataform-styling-advanced.component";
-import { DataFormEditorBackgroundComponent } from "./dataform/styling/editor-background/dataform-editor-background.component";
-import { DataFormScrollingComponent } from "./dataform/scrolling/dataform-scrolling.component";
-import { DataFormValidationModesComponent } from "./dataform/validation/validation-modes/dataform-validation-modes.component";
-import { DataFormAsyncValidationComponent } from "./dataform/validation/async-validation/dataform-async-validation.component";
-import { DataFormValidationEventsComponent } from "./dataform/validation/validation-events/dataform-validation-events.component";
-import { DataFormCustomValidationComponent } from "./dataform/validation/custom-validation/dataform-custom-validation.component";
-import { DataFormValidationMetadataComponent } from "./dataform/validation/metadata/dataform-validation-metadata.component";
 import { GaugesGettingStartedComponent } from "./gauges/getting-started/gauges-getting-started.component";
 import { GaugesAnimationsComponent } from "./gauges/animations/gauges-animations.component";
 import { GaugesCustomizationComponent } from "./gauges/customization/gauges-customization.component";
@@ -74,7 +43,7 @@ import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
+export const EXAMPLES_COMPONENTS = [ListViewItemAnimationsComponent, ListviewObservableArrayComponent, ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, ListviewMultipleTemplatesComponent, ListviewItemLayoutsRuntimeComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -545,133 +514,133 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "DataFormAdjustmentComponent",
-        component: DataFormAdjustmentComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Properties"
         }
     },
     {
         path: "DataFormCommitModesComponent",
-        component: DataFormCommitModesComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Commit Modes"
         }
     },
     {
         path: "DataFormEditorsComponent",
-        component: DataFormEditorsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Common"
         }
     },
     {
         path: "DataFormLabelsComponent",
-        component: DataFormLabelsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Labels"
         }
     },
     {
         path: "DataFormEventsComponent",
-        component: DataFormEventsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Events"
         }
     },
     {
         path: "DataFormGettingStartedComponent",
-        component: DataFormGettingStartedComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Getting started"
         }
     },
     {
         path: "DataFormGroupsComponent",
-        component: DataFormGroupsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Groups"
         }
     },
     {
         path: "DataFormPlatformSpecificsComponent",
-        component: DataFormPlatformSpecificsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Platform adjustments"
         }
     },
     {
         path: "DataFormRuntimeUpdatesComponent",
-        component: DataFormRuntimeUpdatesComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Runtime updates"
         }
     },
     {
         path: "DataFormStylingComponent",
-        component: DataFormStylingComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Styling"
         }
     },
     {
         path: "DataFormValidationComponent",
-        component: DataFormValidationComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Validators"
         }
     },
     {
         path: "DataFormCustomValidationComponent",
-        component: DataFormCustomValidationComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Custom Validation"
         }
     },
     {
         path: "DataFormValidationModesComponent",
-        component: DataFormValidationModesComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Validation Modes"
         }
     },
     {
         path: "DataFormValidationEventsComponent",
-        component: DataFormValidationEventsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Validation Events"
         }
     },
     {
         path: "DataFormValidationMetadataComponent",
-        component: DataFormValidationMetadataComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Validators JSON"
         }
     },
     {
         path: "DataFormAsyncValidationComponent",
-        component: DataFormAsyncValidationComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Async Validation"
         }
     },
     {
         path: "DataFormCustomValidatorComponent",
-        component: DataFormCustomValidatorComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Custom Validator"
         }
     },
     {
         path: "DataFormValueProvidersComponent",
-        component: DataFormValueProvidersComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Value Providers"
         }
     },
     {
         path: "DataFormScrollingComponent",
-        component: DataFormScrollingComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Scrollable Form"
         }
@@ -699,63 +668,63 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "DataformGridLayoutComponent",
-        component: DataformGridLayoutComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Grid"
         }
     },
     {
         path: "DataformStackLayoutComponent",
-        component: DataformStackLayoutComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Stack"
         }
     },
     {
         path: "DataformGettingStartedJsonComponent",
-        component: DataformGettingStartedJsonComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Getting started JSON"
         }
     },
     {
         path: "DataformImageLabelsComponent",
-        component: DataformImageLabelsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Image Labels"
         }
     },
     {
         path: "DataformPropertiesJsonComponent",
-        component: DataformPropertiesJsonComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Properties JSON"
         }
     },
     {
         path: "DataformStylingAdvancedComponent",
-        component: DataformStylingAdvancedComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Styling Advanced"
         }
     },
     {
         path: "DataFormEditorBackgroundComponent",
-        component: DataFormEditorBackgroundComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Editor Background"
         }
     },
     {
         path: "DataformCheckErrorsComponent",
-        component: DataformCheckErrorsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Check Validation State"
         }
     },
     {
         path: "DataFormaAutoCompleteComponent",
-        component: DataFormaAutoCompleteComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "AutoComplete"
         }
@@ -923,21 +892,21 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "DataformReadOnlyComponent",
-        component: DataformReadOnlyComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Read Only"
         }
     },
     {
         path: "DataformEditorStyleComponent",
-        component: DataformEditorStyleComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "At runtime"
         }
     },
     {
         path: "DataformCustomEditorsComponent",
-        component: DataformCustomEditorsComponent,
+        loadChildren: './dataform/dataform-examples.module#DataFormExamplesModule',
         data: {
             "title": "Custom Editors"
         }
