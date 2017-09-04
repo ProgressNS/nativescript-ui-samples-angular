@@ -15,72 +15,72 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Bar series",
-                                "path": "ChartSeriesBarComponent/series-bar",
+                                "path": "ChartSeriesBarComponent/ChartSeriesBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Range Bar series",
-                                "path": "ChartSeriesRangeBarComponent/series-range-bar",
+                                "path": "ChartSeriesRangeBarComponent/ChartSeriesRangeBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Stacked Bar series",
-                                "path": "ChartSeriesStackedBarComponent/series-stacked-bar",
+                                "path": "ChartSeriesStackedBarComponent/ChartSeriesStackedBarComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Area Series",
-                                "path": "ChartSeriesAreaComponent/series-area",
+                                "path": "ChartSeriesAreaComponent/ChartSeriesAreaComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Stacked Area Series",
-                                "path": "ChartSeriesStackedAreaComponent/series-stacked-area",
+                                "path": "ChartSeriesStackedAreaComponent/ChartSeriesStackedAreaComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Line series",
-                                "path": "ChartSeriesLineComponent/series-line",
+                                "path": "ChartSeriesLineComponent/ChartSeriesLineComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Spline series",
-                                "path": "ChartSeriesSplineComponent/series-spline",
+                                "path": "ChartSeriesSplineComponent/ChartSeriesSplineComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Spline Area series",
-                                "path": "ChartSeriesSplineAreaComponent/series-spline-area",
+                                "path": "ChartSeriesSplineAreaComponent/ChartSeriesSplineAreaComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Bubble series",
-                                "path": "ChartSeriesBubbleComponent/series-bubble",
+                                "path": "ChartSeriesBubbleComponent/ChartSeriesBubbleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Scatter Bubble series",
-                                "path": "ChartSeriesScatterBubbleComponent/series-scatter-bubble",
+                                "path": "ChartSeriesScatterBubbleComponent/ChartSeriesScatterBubbleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Candlestick series",
-                                "path": "ChartSeriesCandlestickComponent/series-candlestick",
+                                "path": "ChartSeriesCandlestickComponent/ChartSeriesCandlestickComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Ohlc series",
-                                "path": "ChartSeriesOhlcComponent/series-ohlc",
+                                "path": "ChartSeriesOhlcComponent/ChartSeriesOhlcComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Pie series",
-                                "path": "ChartSeriesPieComponent/series-pie",
+                                "path": "ChartSeriesPieComponent/ChartSeriesPieComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Scatter series",
-                                "path": "ChartSeriesScatterComponent/series-scatter",
+                                "path": "ChartSeriesScatterComponent/ChartSeriesScatterComponent",
                                 "subItems": []
                             }
                         ]
@@ -91,39 +91,39 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Styling axes",
-                                "path": "ChartStylingAxesComponent/styling-axis",
+                                "path": "ChartStylingAxesComponent/ChartStylingAxesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling series",
-                                "path": "ChartStylingSeriesComponent/styling-series",
+                                "path": "ChartStylingSeriesComponent/ChartStylingSeriesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling Pie Chart series",
-                                "path": "ChartStylingPieSeriesComponent/styling-pie-series",
+                                "path": "ChartStylingPieSeriesComponent/ChartStylingPieSeriesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling grid",
-                                "path": "ChartStylingGridComponent/styling-grid",
+                                "path": "ChartStylingGridComponent/ChartStylingGridComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling labels",
-                                "path": "ChartStylingLabelComponent/styling-label",
+                                "path": "ChartStylingLabelComponent/ChartStylingLabelComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Styling series selection",
-                                "path": "ChartStylingSelectionComponent/styling-selection",
+                                "path": "ChartStylingSelectionComponent/ChartStylingSelectionComponent",
                                 "subItems": []
                             },
                         ]
                     },
                     {
                         "title": "Legend",
-                        "path": "ChartLegendComponent/legend",
+                        "path": "ChartLegendComponent/ChartLegendComponent",
                         "subItems": []
                     },
                     {
@@ -132,27 +132,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Pan & Zoom",
-                                "path": "ChartBehaviorsPanZoomComponent/pan-zoom",
+                                "path": "ChartBehaviorsPanZoomComponent/ChartBehaviorsPanZoomComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Pie selection",
-                                "path": "ChartBehaviorsChartPieSelectionComponent/pie-selection",
+                                "path": "ChartBehaviorsChartPieSelectionComponent/ChartBehaviorsChartPieSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Trackball",
-                                "path": "ChartBehaviorsTrackballComponent/trackball",
+                                "path": "ChartBehaviorsTrackballComponent/ChartBehaviorsTrackballComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Series selection",
-                                "path": "ChartBehaviorsSeriesSelectionComponent/series-selection",
+                                "path": "ChartBehaviorsSeriesSelectionComponent/ChartBehaviorsSeriesSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Datapoint selection",
-                                "path": "ChartBehaviorsDatapointSelectionComponent/datapoint-selection",
+                                "path": "ChartBehaviorsDatapointSelectionComponent/ChartBehaviorsDatapointSelectionComponent",
                                 "subItems": []
                             }
                         ]
@@ -163,22 +163,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Customization",
-                                "path": "ChartAxesCustomizationComponent/axis-customization",
+                                "path": "ChartAxesCustomizationComponent/ChartAxesCustomizationComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Multiple axes",
-                                "path": "ChartAxesMultipleComponent/axis-multiple",
+                                "path": "ChartAxesMultipleComponent/ChartAxesMultipleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Negative values",
-                                "path": "ChartAxesNegativeValuesComponent/axis-negative",
+                                "path": "ChartAxesNegativeValuesComponent/ChartAxesNegativeValuesComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Date time axis",
-                                "path": "ChartAxesDateTimeComponent/axis-datetime",
+                                "path": "ChartAxesDateTimeComponent/ChartAxesDateTimeComponent",
                                 "subItems": []
                             }
                         ]
@@ -189,12 +189,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Plot band",
-                                "path": "ChartAnnotationsPlotBandComponent/plot-band",
+                                "path": "ChartAnnotationsPlotBandComponent/ChartAnnotationsPlotBandComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Grid line",
-                                "path": "ChartAnnotationsGridLineComponent/grid-lines",
+                                "path": "ChartAnnotationsGridLineComponent/ChartAnnotationsGridLineComponent",
                                 "subItems": []
                             }
                         ]
@@ -634,7 +634,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting started",
-                        "path": "AutocompleteGettingStartedComponent/getting-started",
+                        "path": "AutoCompleteGettingStartedComponent/AutoCompleteGettingStartedComponent",
                         "subItems": []
                     },
                     {
@@ -643,12 +643,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Contains",
-                                "path": "AutoCompleteContainsModeComponent/contains",
+                                "path": "AutoCompleteContainsModeComponent/AutoCompleteContainsModeComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Starts with",
-                                "path": "AutoCompleteStartsWithModeComponent/starts-with",
+                                "path": "AutoCompleteStartsWithModeComponent/AutoCompleteStartsWithModeComponent",
                                 "subItems": []
                             }]
                     },
@@ -658,12 +658,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Tokens",
-                                "path": "AutoCompleteTokensModeComponent/tokens-mode",
+                                "path": "AutoCompleteTokensModeComponent/AutoCompleteTokensModeComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Plain",
-                                "path": "AutoCompletePlainModeComponent/plain-mode",
+                                "path": "AutoCompletePlainModeComponent/AutoCompletePlainModeComponent",
                                 "subItems": []
                             }]
                     },
@@ -673,17 +673,17 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Switch at runtime",
-                                "path": "AutoCompleteLayoutsRuntimeComponent/layouts-runtime",
+                                "path": "AutoCompleteLayoutsRuntimeComponent/AutoCompleteLayoutsRuntimeComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Horizontal",
-                                "path": "AutoCompleteLayoutsHorizontalComponent/layouts-horizontal",
+                                "path": "AutoCompleteLayoutsHorizontalComponent/AutoCompleteLayoutsHorizontalComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Wrap",
-                                "path": "AutoCompleteLayoutsWrapComponent/layouts-wrap",
+                                "path": "AutoCompleteLayoutsWrapComponent/AutoCompleteLayoutsWrapComponent",
                                 "subItems": []
                             }
                         ]
@@ -694,39 +694,39 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Append",
-                                "path": "AutoCompleteAppendModeComponent/append-mode",
+                                "path": "AutoCompleteAppendModeComponent/AutoCompleteAppendModeComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Suggest",
-                                "path": "AutocompleteSuggestModeComponent/suggest-mode",
+                                "path": "AutocompleteSuggestModeComponent/AutocompleteSuggestModeComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Suggest & Append",
-                                "path": "AutoCompleteSuggestAppendModeComponent/append-suggest-mode",
+                                "path": "AutoCompleteSuggestAppendModeComponent/AutoCompleteSuggestAppendModeComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Customization",
-                        "path": "AutoCompleteCustomizationComponent/customization",
+                        "path": "AutoCompleteCustomizationComponent/AutoCompleteCustomizationComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "AutoCompleteEventsComponent/events",
+                        "path": "AutoCompleteEventsComponent/AutoCompleteEventsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Async Data Fetch",
-                        "path": "AutoCompleteRemoteComponent/remote-data",
+                        "path": "AutoCompleteRemoteComponent/AutoCompleteRemoteComponent",
                         "subItems": []
                     },
                     {
                         "title": "Read Only",
-                        "path": "AutoCompleteReadOnlyComponent/read-only",
+                        "path": "AutoCompleteReadOnlyComponent/AutoCompleteReadOnlyComponent",
                         "subItems": []
                     }]
             },

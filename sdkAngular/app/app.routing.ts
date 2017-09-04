@@ -751,7 +751,7 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "AutocompleteGettingStartedComponent",
+        path: "AutoCompleteGettingStartedComponent",
         loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Getting started"

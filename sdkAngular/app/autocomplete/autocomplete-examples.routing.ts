@@ -18,19 +18,19 @@ import { AutoCompleteSuggestAppendModeComponent } from './suggest-mode/autocompl
 import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-suggest-mode.component';
 
 export const routes: Routes = [
-  { path: 'contains', component: AutoCompleteContainsModeComponent },
-  { path: 'starts-with', component: AutoCompleteStartsWithModeComponent },
-  { path: 'customization', component: AutoCompleteCustomizationComponent },
-  { path: 'plain-mode', component: AutoCompletePlainModeComponent },
-  { path: 'tokens-mode', component: AutoCompleteTokensModeComponent },
-  { path: 'events', component: AutoCompleteEventsComponent },
-  { path: 'getting-started', component: AutoCompleteGettingStartedComponent },
-  { path: 'layouts-horizontal', component: AutoCompleteLayoutsHorizontalComponent },
-  { path: 'layouts-runtime', component: AutoCompleteLayoutsRuntimeComponent },
-  { path: 'layouts-wrap', component: AutoCompleteLayoutsWrapComponent },
-  { path: 'read-only', component: AutoCompleteReadOnlyComponent },
-  { path: 'remote-data', component: AutoCompleteRemoteComponent },
-  { path: 'append-mode', component: AutoCompleteAppendModeComponent },
-  { path: 'append-suggest-mode', component: AutoCompleteSuggestAppendModeComponent },
-  { path: 'suggest-mode', component: AutocompleteSuggestModeComponent }
+  { path: 'AutoCompleteContainsModeComponent', component: AutoCompleteContainsModeComponent },
+  { path: 'AutoCompleteStartsWithModeComponent', component: AutoCompleteStartsWithModeComponent },
+  { path: 'AutoCompleteCustomizationComponent', component: AutoCompleteCustomizationComponent },
+  { path: 'AutoCompletePlainModeComponent', component: AutoCompletePlainModeComponent },
+  { path: 'AutoCompleteTokensModeComponent', component: AutoCompleteTokensModeComponent },
+  { path: 'AutoCompleteEventsComponent', component: AutoCompleteEventsComponent },
+  { path: 'AutoCompleteGettingStartedComponent', component: AutoCompleteGettingStartedComponent },
+  { path: 'AutoCompleteLayoutsHorizontalComponent', component: AutoCompleteLayoutsHorizontalComponent },
+  { path: 'AutoCompleteLayoutsRuntimeComponent', component: AutoCompleteLayoutsRuntimeComponent },
+  { path: 'AutoCompleteLayoutsWrapComponent', component: AutoCompleteLayoutsWrapComponent },
+  { path: 'AutoCompleteReadOnlyComponent', component: AutoCompleteReadOnlyComponent },
+  { path: 'AutoCompleteRemoteComponent', component: AutoCompleteRemoteComponent },
+  { path: 'AutoCompleteAppendModeComponent', component: AutoCompleteAppendModeComponent },
+  { path: 'AutoCompleteSuggestAppendModeComponent', component: AutoCompleteSuggestAppendModeComponent },
+  { path: 'AutocompleteSuggestModeComponent', component: AutocompleteSuggestModeComponent }
 ];
