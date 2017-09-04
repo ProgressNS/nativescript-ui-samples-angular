@@ -80,7 +80,8 @@ export class ListviewScrollToIndexHorizontalComponent extends OptionsExampleBase
     public onOptionsTapped(args: any) {
         if (applicationModule.android) {
             this.set('myScrollPosition', args.object.text);
+        } else {
+            super.onOptionsTapped(args);
         }
-        super.onOptionsTapped(args);
     }
 }

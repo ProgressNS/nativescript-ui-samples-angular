@@ -84,7 +84,8 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
     public onOptionsTapped(args: any) {
         if (applicationModule.android) {
             this.set('myScrollPosition', args.object.text);
+        } else {
+            super.onOptionsTapped(args);
         }
-        super.onOptionsTapped(args);
     }
 }
