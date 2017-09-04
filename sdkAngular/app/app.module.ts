@@ -6,7 +6,6 @@ import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/side
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
 import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
 import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
-import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-telerik-ui-pro/autocomplete/angular";
 import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
@@ -55,7 +54,6 @@ if (applicationModule.android) {
         NativeScriptUISideDrawerModule,
         NativeScriptUIChartModule,
         NativeScriptUIDataFormModule,
-        NativeScriptUIAutoCompleteTextViewModule,
         NativeScriptUIGaugesModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,

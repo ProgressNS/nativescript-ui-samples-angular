@@ -634,7 +634,7 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting started",
-                        "path": "AutocompleteGettingStartedComponent",
+                        "path": "AutocompleteGettingStartedComponent/getting-started",
                         "subItems": []
                     },
                     {
@@ -643,12 +643,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Contains",
-                                "path": "AutoCompleteContainsModeComponent",
+                                "path": "AutoCompleteContainsModeComponent/contains",
                                 "subItems": []
                             },
                             {
                                 "title": "Starts with",
-                                "path": "AutoCompleteStartsWithModeComponent",
+                                "path": "AutoCompleteStartsWithModeComponent/starts-with",
                                 "subItems": []
                             }]
                     },
@@ -658,12 +658,12 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Tokens",
-                                "path": "AutoCompleteTokensModeComponent",
+                                "path": "AutoCompleteTokensModeComponent/tokens-mode",
                                 "subItems": []
                             },
                             {
                                 "title": "Plain",
-                                "path": "AutoCompletePlainModeComponent",
+                                "path": "AutoCompletePlainModeComponent/plain-mode",
                                 "subItems": []
                             }]
                     },
@@ -673,17 +673,17 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Switch at runtime",
-                                "path": "AutoCompleteLayoutsRuntimeComponent",
+                                "path": "AutoCompleteLayoutsRuntimeComponent/layouts-runtime",
                                 "subItems": []
                             },
                             {
                                 "title": "Horizontal",
-                                "path": "AutoCompleteLayoutsHorizontalComponent",
+                                "path": "AutoCompleteLayoutsHorizontalComponent/layouts-horizontal",
                                 "subItems": []
                             },
                             {
                                 "title": "Wrap",
-                                "path": "AutoCompleteLayoutsWrapComponent",
+                                "path": "AutoCompleteLayoutsWrapComponent/layouts-wrap",
                                 "subItems": []
                             }
                         ]
@@ -694,39 +694,39 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Append",
-                                "path": "AutoCompleteAppendModeComponent",
+                                "path": "AutoCompleteAppendModeComponent/append-mode",
                                 "subItems": []
                             },
                             {
                                 "title": "Suggest",
-                                "path": "AutocompleteSuggestModeComponent",
+                                "path": "AutocompleteSuggestModeComponent/suggest-mode",
                                 "subItems": []
                             },
                             {
                                 "title": "Suggest & Append",
-                                "path": "AutoCompleteSuggestAppendModeComponent",
+                                "path": "AutoCompleteSuggestAppendModeComponent/append-suggest-mode",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Customization",
-                        "path": "AutoCompleteCustomizationComponent",
+                        "path": "AutoCompleteCustomizationComponent/customization",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "AutoCompleteEventsComponent",
+                        "path": "AutoCompleteEventsComponent/events",
                         "subItems": []
                     },
                     {
                         "title": "Async Data Fetch",
-                        "path": "AutoCompleteRemoteComponent",
+                        "path": "AutoCompleteRemoteComponent/remote-data",
                         "subItems": []
                     },
                     {
                         "title": "Read Only",
-                        "path": "AutoCompleteReadOnlyComponent",
+                        "path": "AutoCompleteReadOnlyComponent/read-only",
                         "subItems": []
                     }]
             },

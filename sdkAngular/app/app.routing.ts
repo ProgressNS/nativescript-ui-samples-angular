@@ -99,21 +99,6 @@ import { DataFormAsyncValidationComponent } from "./dataform/validation/async-va
 import { DataFormValidationEventsComponent } from "./dataform/validation/validation-events/dataform-validation-events.component";
 import { DataFormCustomValidationComponent } from "./dataform/validation/custom-validation/dataform-custom-validation.component";
 import { DataFormValidationMetadataComponent } from "./dataform/validation/metadata/dataform-validation-metadata.component";
-import { AutoCompleteGettingStartedComponent } from "./autocomplete/getting-started/autocomplete-getting-started.component";
-import { AutoCompleteLayoutsRuntimeComponent } from "./autocomplete/layouts/autocomplete-layouts-runtime.component";
-import { AutoCompleteLayoutsWrapComponent } from "./autocomplete/layouts/autocomplete-layouts-wrap.component";
-import { AutoCompleteLayoutsHorizontalComponent } from "./autocomplete/layouts/autocomplete-layouts-horizontal.component";
-import { AutoCompleteRemoteComponent } from "./autocomplete/remote-data-fetch/autocomplete-remote.component";
-import { AutoCompleteCustomizationComponent } from "./autocomplete/customization/autocomplete-customization.component";
-import { AutoCompleteEventsComponent } from "./autocomplete/events/autocomplete-events.component";
-import { AutoCompleteContainsModeComponent } from "./autocomplete/completion-mode/autocomplete-contains-mode.component";
-import { AutoCompleteStartsWithModeComponent } from "./autocomplete/completion-mode/autocomplete-startswith-mode.component";
-import { AutoCompletePlainModeComponent } from "./autocomplete/display-mode/autocomplete-plain-mode.component";
-import { AutoCompleteTokensModeComponent } from "./autocomplete/display-mode/autocomplete-tokens-mode.component";
-import { AutocompleteSuggestModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-mode.component";
-import { AutoCompleteAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-append-mode.component";
-import { AutoCompleteSuggestAppendModeComponent } from "./autocomplete/suggest-mode/autocomplete-suggest-append-mode.component";
-import { AutoCompleteReadOnlyComponent } from "./autocomplete/readonly/autocomplete-readonly.component";
 import { GaugesGettingStartedComponent } from "./gauges/getting-started/gauges-getting-started.component";
 import { GaugesAnimationsComponent } from "./gauges/animations/gauges-animations.component";
 import { GaugesCustomizationComponent } from "./gauges/customization/gauges-customization.component";
@@ -121,7 +106,7 @@ import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartBehaviorsTrackballComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, AutoCompleteGettingStartedComponent, AutoCompleteLayoutsRuntimeComponent, AutoCompleteRemoteComponent, AutoCompleteCustomizationComponent, AutoCompleteEventsComponent, AutoCompleteContainsModeComponent, AutoCompleteStartsWithModeComponent, AutoCompletePlainModeComponent, AutoCompleteTokensModeComponent, AutoCompleteLayoutsWrapComponent, AutoCompleteLayoutsHorizontalComponent, AutocompleteSuggestModeComponent, AutoCompleteAppendModeComponent, AutoCompleteSuggestAppendModeComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, AutoCompleteReadOnlyComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, ChartSeriesSplineAreaComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
+export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartBehaviorsTrackballComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, ChartSeriesSplineAreaComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -830,98 +815,98 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "AutocompleteGettingStartedComponent",
-        component: AutoCompleteGettingStartedComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Getting started"
         }
     },
     {
         path: "AutoCompleteLayoutsRuntimeComponent",
-        component: AutoCompleteLayoutsRuntimeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Switch at runtime"
         }
     },
     {
         path: "AutoCompleteRemoteComponent",
-        component: AutoCompleteRemoteComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Async Data Fetch"
         }
     },
     {
         path: "AutoCompleteCustomizationComponent",
-        component: AutoCompleteCustomizationComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Customization"
         }
     },
     {
         path: "AutoCompleteEventsComponent",
-        component: AutoCompleteEventsComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Events"
         }
     },
     {
         path: "AutoCompleteContainsModeComponent",
-        component: AutoCompleteContainsModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Contains"
         }
     },
     {
         path: "AutoCompleteStartsWithModeComponent",
-        component: AutoCompleteStartsWithModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Starts with"
         }
     },
     {
         path: "AutoCompleteTokensModeComponent",
-        component: AutoCompleteTokensModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Tokens"
         }
     },
     {
         path: "AutoCompletePlainModeComponent",
-        component: AutoCompletePlainModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Plain"
         }
     },
     {
         path: "AutoCompleteLayoutsWrapComponent",
-        component: AutoCompleteLayoutsWrapComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Wrap"
         }
     },
     {
         path: "AutoCompleteLayoutsHorizontalComponent",
-        component: AutoCompleteLayoutsHorizontalComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Horizontal"
         }
     },
     {
         path: "AutocompleteSuggestModeComponent",
-        component: AutocompleteSuggestModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Suggest"
         }
     },
     {
         path: "AutoCompleteAppendModeComponent",
-        component: AutoCompleteAppendModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Append"
         }
     },
     {
         path: "AutoCompleteSuggestAppendModeComponent",
-        component: AutoCompleteSuggestAppendModeComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Suggest & Append"
         }
@@ -963,7 +948,7 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "AutoCompleteReadOnlyComponent",
-        component: AutoCompleteReadOnlyComponent,
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',        
         data: {
             "title": "Read Only"
         }
