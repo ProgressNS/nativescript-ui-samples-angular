@@ -36,38 +36,6 @@ import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navig
 import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
 import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
-import { ChartSeriesAreaComponent } from "./chart/series/area/chart-series-area.component";
-import { ChartSeriesStackedAreaComponent } from "./chart/series/area/chart-series-stacked-area.component";
-import { ChartSeriesBarComponent } from "./chart/series/bar/chart-series-bar.component";
-import { ChartSeriesRangeBarComponent } from "./chart/series/bar/chart-series-range-bar.component";
-import { ChartSeriesStackedBarComponent } from "./chart/series/bar/chart-series-stacked-bar.component";
-import { ChartSeriesBubbleComponent } from "./chart/series/bubble/chart-series-bubble.component";
-import { ChartSeriesScatterBubbleComponent } from "./chart/series/bubble/chart-series-scatter-bubble.component";
-import { ChartSeriesCandlestickComponent } from "./chart/series/financial/chart-series-candlestick.component";
-import { ChartSeriesOhlcComponent } from "./chart/series/financial/chart-series-ohlc.component";
-import { ChartSeriesLineComponent } from "./chart/series/line/chart-series-line.component";
-import { ChartSeriesPieComponent } from "./chart/series/pie/chart-series-pie.component";
-import { ChartSeriesScatterComponent } from "./chart/series/scatter/chart-series-scatter.component";
-import { ChartSeriesSplineComponent } from "./chart/series/spline/chart-series-spline.component";
-import { ChartSeriesSplineAreaComponent } from "./chart/series/spline/chart-series-spline-area.component";
-import { ChartAnnotationsGridLineComponent } from "./chart/annotations/chart-annotations-grid-line.component";
-import { ChartAnnotationsPlotBandComponent } from "./chart/annotations/chart-annotations-plot-band.component";
-import { ChartBehaviorsDatapointSelectionComponent } from "./chart/behaviors/chart-behaviors-datapoint-selection.component";
-import { ChartBehaviorsPanZoomComponent } from "./chart/behaviors/chart-behaviors-pan-zoom.component";
-import { ChartBehaviorsChartPieSelectionComponent } from "./chart/behaviors/chart-behaviors-chart-pie-selection.component";
-import { ChartBehaviorsSeriesSelectionComponent } from "./chart/behaviors/chart-behaviors-series-selection.component";
-import { ChartBehaviorsTrackballComponent } from "./chart/behaviors/chart-behaviors-trackball.component";
-import { ChartLegendComponent } from "./chart/legend/chart-legend.component";
-import { ChartAxesCustomizationComponent } from "./chart/axes/customization/chart-axes-customization.component";
-import { ChartAxesDateTimeComponent } from "./chart/axes/date-time-axes/chart-axes-date-time.component";
-import { ChartAxesMultipleComponent } from "./chart/axes/multiple/chart-axes-multiple.component";
-import { ChartAxesNegativeValuesComponent } from "./chart/axes/negative-values/chart-axes-negative-values.component";
-import { ChartStylingAxesComponent } from "./chart/styling/chart-styling-axes.component";
-import { ChartStylingGridComponent } from "./chart/styling/chart-styling-grid.component";
-import { ChartStylingLabelComponent } from "./chart/styling/chart-styling-label.component";
-import { ChartStylingSelectionComponent } from "./chart/styling/chart-styling-selection.component";
-import { ChartStylingSeriesComponent } from "./chart/styling/chart-styling-series.component";
-import { ChartStylingPieSeriesComponent } from "./chart/styling/chart-styling-pie-series.component";
 import { DataFormAdjustmentComponent } from "./dataform/adjustment/dataform-adjustment.component";
 import { DataFormCommitModesComponent } from "./dataform/commit-modes/dataform-commit-modes.component";
 import { DataFormEditorsComponent } from "./dataform/editors/dataform-editors.component";
@@ -106,7 +74,7 @@ import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ChartSeriesAreaComponent, ChartSeriesStackedAreaComponent, ChartSeriesBarComponent, ChartSeriesRangeBarComponent, ChartSeriesStackedBarComponent, ChartSeriesBubbleComponent, ChartSeriesScatterBubbleComponent, ChartSeriesCandlestickComponent, ChartSeriesOhlcComponent, ChartSeriesLineComponent, ChartSeriesPieComponent, ChartSeriesScatterComponent, ChartSeriesSplineComponent, ChartAnnotationsGridLineComponent, ChartAnnotationsPlotBandComponent, ChartBehaviorsDatapointSelectionComponent, ChartBehaviorsPanZoomComponent, ChartBehaviorsChartPieSelectionComponent, ChartBehaviorsSeriesSelectionComponent, ChartBehaviorsTrackballComponent, ChartLegendComponent, ChartAxesCustomizationComponent, ChartAxesDateTimeComponent, ChartAxesMultipleComponent, ChartAxesNegativeValuesComponent, ChartStylingAxesComponent, ChartStylingGridComponent, ChartStylingLabelComponent, ChartStylingSelectionComponent, ChartStylingSeriesComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, ChartStylingPieSeriesComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, ChartSeriesSplineAreaComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
+export const EXAMPLES_COMPONENTS = [ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, DataFormAdjustmentComponent, DataFormCommitModesComponent, DataFormEditorsComponent, DataFormEventsComponent, DataFormGettingStartedComponent, DataFormGroupsComponent, DataFormPlatformSpecificsComponent, DataFormRuntimeUpdatesComponent, DataFormStylingComponent, DataFormValidationComponent, ListviewObservableArrayComponent, ListViewItemAnimationsComponent, DataformGridLayoutComponent, DataformStackLayoutComponent, DataformGettingStartedJsonComponent, DataformImageLabelsComponent, DataformPropertiesJsonComponent, DataformStylingAdvancedComponent, DataformCheckErrorsComponent, DataFormaAutoCompleteComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, DataformReadOnlyComponent, DataformEditorStyleComponent, DataformCustomEditorsComponent, DataFormValueProvidersComponent, DataFormScrollingComponent, ListviewMultipleTemplatesComponent, DataFormCustomValidatorComponent, DataFormCustomValidationComponent, DataFormAsyncValidationComponent, DataFormValidationModesComponent, DataFormValidationEventsComponent, DataFormValidationMetadataComponent, DataFormLabelsComponent, ListviewItemLayoutsRuntimeComponent, DataFormEditorBackgroundComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -339,217 +307,217 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ChartSeriesAreaComponent",
-        component: ChartSeriesAreaComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Area Series"
         }
     },
     {
         path: "ChartSeriesStackedAreaComponent",
-        component: ChartSeriesStackedAreaComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Stacked Area Series"
         }
     },
     {
         path: "ChartSeriesBarComponent",
-        component: ChartSeriesBarComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Bar series"
         }
     },
     {
         path: "ChartSeriesRangeBarComponent",
-        component: ChartSeriesRangeBarComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Range Bar series"
         }
     },
     {
         path: "ChartSeriesStackedBarComponent",
-        component: ChartSeriesStackedBarComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Stacked Bar series"
         }
     },
     {
         path: "ChartSeriesBubbleComponent",
-        component: ChartSeriesBubbleComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Bubble series"
         }
     },
     {
         path: "ChartSeriesScatterBubbleComponent",
-        component: ChartSeriesScatterBubbleComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Scatter Bubble series"
         }
     },
     {
         path: "ChartSeriesCandlestickComponent",
-        component: ChartSeriesCandlestickComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Candlestick series"
         }
     },
     {
         path: "ChartSeriesOhlcComponent",
-        component: ChartSeriesOhlcComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Ohlc series"
         }
     },
     {
         path: "ChartSeriesLineComponent",
-        component: ChartSeriesLineComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Line series"
         }
     },
     {
         path: "ChartSeriesPieComponent",
-        component: ChartSeriesPieComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Pie series"
         }
     },
     {
         path: "ChartSeriesScatterComponent",
-        component: ChartSeriesScatterComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Scatter series"
         }
     },
     {
         path: "ChartSeriesSplineComponent",
-        component: ChartSeriesSplineComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Spline series"
         }
     },
     {
         path: "ChartSeriesSplineAreaComponent",
-        component: ChartSeriesSplineAreaComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Spline Area series"
         }
     },
     {
         path: "ChartAnnotationsGridLineComponent",
-        component: ChartAnnotationsGridLineComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Grid line"
         }
     },
     {
         path: "ChartAnnotationsPlotBandComponent",
-        component: ChartAnnotationsPlotBandComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Plot band"
         }
     },
     {
         path: "ChartBehaviorsDatapointSelectionComponent",
-        component: ChartBehaviorsDatapointSelectionComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Datapoint selection"
         }
     },
     {
         path: "ChartBehaviorsPanZoomComponent",
-        component: ChartBehaviorsPanZoomComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Pan & Zoom"
         }
     },
     {
         path: "ChartBehaviorsChartPieSelectionComponent",
-        component: ChartBehaviorsChartPieSelectionComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Pie selection"
         }
     },
     {
         path: "ChartBehaviorsSeriesSelectionComponent",
-        component: ChartBehaviorsSeriesSelectionComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Series selection"
         }
     },
     {
         path: "ChartBehaviorsTrackballComponent",
-        component: ChartBehaviorsTrackballComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Trackball"
         }
     },
     {
         path: "ChartLegendComponent",
-        component: ChartLegendComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Legend"
         }
     },
     {
         path: "ChartAxesCustomizationComponent",
-        component: ChartAxesCustomizationComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Customization"
         }
     },
     {
         path: "ChartAxesDateTimeComponent",
-        component: ChartAxesDateTimeComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Date time axis"
         }
     },
     {
         path: "ChartAxesMultipleComponent",
-        component: ChartAxesMultipleComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Multiple axes"
         }
     },
     {
         path: "ChartAxesNegativeValuesComponent",
-        component: ChartAxesNegativeValuesComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Negative values"
         }
     },
     {
         path: "ChartStylingAxesComponent",
-        component: ChartStylingAxesComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling axes"
         }
     },
     {
         path: "ChartStylingGridComponent",
-        component: ChartStylingGridComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling grid"
         }
     },
     {
         path: "ChartStylingLabelComponent",
-        component: ChartStylingLabelComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling labels"
         }
     },
     {
         path: "ChartStylingSelectionComponent",
-        component: ChartStylingSelectionComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling series selection"
         }
     },
     {
         path: "ChartStylingSeriesComponent",
-        component: ChartStylingSeriesComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling series"
         }
@@ -724,7 +692,7 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ChartStylingPieSeriesComponent",
-        component: ChartStylingPieSeriesComponent,
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling Pie Chart series"
         }
