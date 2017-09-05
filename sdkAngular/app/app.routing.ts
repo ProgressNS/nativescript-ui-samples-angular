@@ -4,16 +4,8 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
 
-import { SideDrawerGettingStartedComponent } from "./sidedrawer/getting-started/getting-started.component";
-import { SideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/over-navigation.component";
-import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/second-page/second-over-navigation.component";
-import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
-import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
-import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
-
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -141,42 +133,42 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "SideDrawerGettingStartedComponent",
-        component: SideDrawerGettingStartedComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Getting Started"
         }
     },
     {
         path: "SideDrawerOverNavigationComponent",
-        component: SideDrawerOverNavigationComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Over Navigation"
         }
     },
     {
         path: "SecondSideDrawerOverNavigationComponent",
-        component: SecondSideDrawerOverNavigationComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Over Navigation Second"
         }
     },
     {
         path: "SideDrawerEventsComponent",
-        component: SideDrawerEventsComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Events"
         }
     },
     {
         path: "SideDrawerPositionComponent",
-        component: SideDrawerPositionComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Position"
         }
     },
     {
         path: "SideDrawerTransitionsComponent",
-        component: SideDrawerTransitionsComponent,
+        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {
             "title": "Transitions"
         }

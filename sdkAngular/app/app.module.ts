@@ -1,8 +1,15 @@
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 // >> using-global-directives
-// --- The built-in 'nativescript-telerik-ui-pro' modules
-import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+// --- The built-in 'nativescript-telerik-ui-pro' modules, if you are not using 'lazy' loading, uncomment and import the below modules into the 'imports' of the first ngModule (AppModule) of the app. 
+// import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+// import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
+// import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calendar/angular";
+// import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
+// import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
+// import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-telerik-ui-pro/autocomplete/angular";
+// import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/angular";
+
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
@@ -12,7 +19,7 @@ import { NgModule, NO_ERRORS_SCHEMA, NgModuleFactoryLoader } from "@angular/core
 import { CommonModule } from "@angular/common";
 
 import { AppComponent } from "./navigation/app.component";
-import { routing, EXAMPLES_COMPONENTS } from "./app.routing";
+import { routing } from "./app.routing";
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepthComponents } from "./navigation/examples-list/examples-list.component";
@@ -40,7 +47,6 @@ if (applicationModule.android) {
         AppComponent,
         ExamplesListDepthComponents,
         OptionsComponent,
-        EXAMPLES_COMPONENTS,
     ],
     imports: [
         NativeScriptModule,
@@ -48,7 +54,6 @@ if (applicationModule.android) {
         CommonDirectivesModule,
         TNSFrescoModule,
         NativeScriptUIListViewModule,
-        NativeScriptUISideDrawerModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         routing

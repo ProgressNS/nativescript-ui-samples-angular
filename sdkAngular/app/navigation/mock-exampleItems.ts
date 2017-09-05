@@ -367,27 +367,27 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "SideDrawerGettingStartedComponent/",
+                        "path": "SideDrawerGettingStartedComponent/SideDrawerGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Position",
-                        "path": "SideDrawerPositionComponent/",
+                        "path": "SideDrawerPositionComponent/SideDrawerPositionComponent",
                         "subItems": []
                     },
                     {
                         "title": "Transitions",
-                        "path": "SideDrawerTransitionsComponent/",
+                        "path": "SideDrawerTransitionsComponent/SideDrawerTransitionsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Events",
-                        "path": "SideDrawerEventsComponent/",
+                        "path": "SideDrawerEventsComponent/SideDrawerEventsComponent",
                         "subItems": []
                     },
                     {
                         "title": "Drawer Over Navigation",
-                        "path": "SideDrawerOverNavigationComponent/",
+                        "path": "SideDrawerOverNavigationComponent/SideDrawerOverNavigationComponent",
                         "subItems": []
                     }
                 ]
