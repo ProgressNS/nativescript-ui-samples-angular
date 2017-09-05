@@ -49,7 +49,6 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
     ],
     declarations: [
         DataFormAdjustmentComponent,
-        DataFormAdjustmentComponent,
         DataFormCommitModesComponent,
         DataFormaAutoCompleteComponent,
         DataformCustomEditorsComponent,
