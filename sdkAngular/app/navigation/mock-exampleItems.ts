@@ -736,22 +736,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting started",
-                        "path": "GaugesGettingStartedComponent/",
+                        "path": "GaugesGettingStartedComponent/GaugesGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Scales",
-                        "path": "GaugesScalesComponent/",
+                        "path": "GaugesScalesComponent/GaugesScalesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Customization",
-                        "path": "GaugesCustomizationComponent/",
+                        "path": "GaugesCustomizationComponent/GaugesCustomizationComponent",
                         "subItems": []
                     },
                     {
                         "title": "Animation",
-                        "path": "GaugesAnimationsComponent/",
+                        "path": "GaugesAnimationsComponent/GaugesAnimationsComponent",
                         "subItems": []
                     }]
             },

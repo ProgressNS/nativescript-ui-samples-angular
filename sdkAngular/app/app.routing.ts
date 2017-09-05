@@ -36,14 +36,10 @@ import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navig
 import { SideDrawerEventsComponent } from "./sidedrawer/events/events.component";
 import { SideDrawerPositionComponent } from "./sidedrawer/position/position.component";
 import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transitions.component";
-import { GaugesGettingStartedComponent } from "./gauges/getting-started/gauges-getting-started.component";
-import { GaugesAnimationsComponent } from "./gauges/animations/gauges-animations.component";
-import { GaugesCustomizationComponent } from "./gauges/customization/gauges-customization.component";
-import { GaugesScalesComponent } from "./gauges/scales/gauges-scales.component";
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListViewItemAnimationsComponent, ListviewObservableArrayComponent, ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, GaugesGettingStartedComponent, GaugesAnimationsComponent, GaugesCustomizationComponent, GaugesScalesComponent, ListviewMultipleTemplatesComponent, ListviewItemLayoutsRuntimeComponent];
+export const EXAMPLES_COMPONENTS = [ListViewItemAnimationsComponent, ListviewObservableArrayComponent, ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, ListviewMultipleTemplatesComponent, ListviewItemLayoutsRuntimeComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -857,28 +853,28 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "GaugesGettingStartedComponent",
-        component: GaugesGettingStartedComponent,
+        loadChildren: './gauges/gauges-examples.module#GaugesExamplesModule',
         data: {
             "title": "Getting Started"
         }
     },
     {
         path: "GaugesAnimationsComponent",
-        component: GaugesAnimationsComponent,
+        loadChildren: './gauges/gauges-examples.module#GaugesExamplesModule',
         data: {
             "title": "Animations"
         }
     },
     {
         path: "GaugesCustomizationComponent",
-        component: GaugesCustomizationComponent,
+        loadChildren: './gauges/gauges-examples.module#GaugesExamplesModule',
         data: {
             "title": "Customization"
         }
     },
     {
         path: "GaugesScalesComponent",
-        component: GaugesScalesComponent,
+        loadChildren: './gauges/gauges-examples.module#GaugesExamplesModule',
         data: {
             "title": "Scales"
         }
