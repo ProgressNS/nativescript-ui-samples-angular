@@ -12,7 +12,7 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
     templateUrl: "listview-item-reorder-handle.component.html",
     styleUrls: ["listview-item-reorder-handle.component.css"]
 })
-export class ListviewItemReorderHandleComponent implements OnInit {
+export class ListViewItemReorderHandleComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {

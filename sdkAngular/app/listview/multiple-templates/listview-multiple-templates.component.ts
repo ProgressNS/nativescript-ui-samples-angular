@@ -11,7 +11,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-multiple-templates.component.html",
     styleUrls: ["listview-multiple-templates.component.css"]
 })
-export class ListviewMultipleTemplatesComponent implements OnInit {
+export class ListViewMultipleTemplatesComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _templateSelector: (item: DataItem, index: number, items: any) => string;
 

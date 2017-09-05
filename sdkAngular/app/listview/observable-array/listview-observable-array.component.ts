@@ -12,7 +12,7 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
     templateUrl: "listview-observable-array.component.html",
     styleUrls: ["listview-observable-array.component.css"]
 })
-export class ListviewObservableArrayComponent implements OnInit {
+export class ListViewObservableArrayComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {

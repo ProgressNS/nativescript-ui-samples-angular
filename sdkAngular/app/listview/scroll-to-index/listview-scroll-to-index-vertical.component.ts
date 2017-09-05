@@ -18,7 +18,7 @@ import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angul
     styleUrls: ["listview-scroll-to-index.component.css"]
 })
 @Injectable()
-export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase implements OnInit {
+export class ListViewScrollToIndexVerticalComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
     private _dataItems: ObservableArray<DataItem>;
     private _options: Array<string> = ["Auto", "Start", "Center", "End"];
