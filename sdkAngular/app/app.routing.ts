@@ -4,32 +4,6 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListDepth3Component } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
 
-import { ListViewGettingStartedComponent } from "./listview/getting-started/listview-getting-started.component";
-import { ListviewMultipleTemplatesComponent } from "./listview/multiple-templates/listview-multiple-templates.component";
-import { ListViewHeaderFooterComponent } from "./listview/header-footer/listview-header-footer.component";
-import { ListViewItemReorderComponent } from "./listview/item-reorder/listview-item-reorder.component";
-import { ListViewItemSelectionComponent } from "./listview/item-selection/listview-item-selection.component";
-import { ListviewSelectionStatesComponent } from "./listview/selection-states/listview-selection-states.component";
-import { ListViewLoadOnDemandComponent } from "./listview/load-on-demand/listview-load-on-demand.component";
-import { ListViewPullToRefreshComponent } from "./listview/pull-to-refresh/listview-pull-to-refresh.component";
-import { ListViewItemAnimationsComponent } from "./listview/item-animations/listview-item-animations.component";
-import { ListViewItemLayoutsGridComponent } from "./listview/item-layouts/listview-item-layouts-grid.component";
-import { ListviewItemLayoutsLinearComponent } from "./listview/item-layouts/listview-item-layouts-linear.component";
-import { ListviewItemLayoutsStaggeredComponent } from "./listview/item-layouts/listview-item-layouts-staggered.component";
-import { ListviewItemLayoutsRuntimeComponent } from "./listview/item-layouts/listview-item-layouts-runtime.component";
-import { ListviewItemLoadingComponent } from "./listview/item-loading/listview-item-loading.component";
-import { ListviewItemReorderHandleComponent } from "./listview/item-reorder/listview-item-reorder-handle.component";
-import { ListviewItemSelectionMultipleComponent } from "./listview/item-selection/listview-item-selection-multiple.component";
-import { ListviewItemSelectionProgrammaticComponent } from "./listview/item-selection/listview-item-selection-programmatic.component";
-import { ListviewObservableArrayComponent } from "./listview/observable-array/listview-observable-array.component";
-import { ListViewSwipeActionsComponent } from "./listview/swipe-actions/listview-swipe-actions.component";
-import { ListViewSwipeActionsMultipleComponent } from "./listview/swipe-actions/listview-swipe-actions-multiple.component";
-import { ListViewSwipeActionsThresholdsComponent } from "./listview/swipe-actions/listview-swipe-actions-thresholds.component";
-import { ListViewSwipeDisableComponent } from "./listview/swipe-actions/listview-swipe-disable.component";
-import { ListviewItemSeparatorComponent } from "./listview/item-separator/listview-item-separator.component";
-import { ListviewScrollToIndexVerticalComponent } from "./listview/scroll-to-index/listview-scroll-to-index-vertical.component";
-import { ListviewScrollToIndexHorizontalComponent } from "./listview/scroll-to-index/listview-scroll-to-index-horizontal.component";
-import { ListViewScrollEventsComponent } from "./listview/scroll-events/listview-scroll-events.component";
 import { SideDrawerGettingStartedComponent } from "./sidedrawer/getting-started/getting-started.component";
 import { SideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/over-navigation.component";
 import { SecondSideDrawerOverNavigationComponent } from "./sidedrawer/over-navigation/second-page/second-over-navigation.component";
@@ -39,7 +13,7 @@ import { SideDrawerTransitionsComponent } from "./sidedrawer/transitions/transit
 
 var excludedComponents = [];
 
-export const EXAMPLES_COMPONENTS = [ListViewItemAnimationsComponent, ListviewObservableArrayComponent, ListviewItemLayoutsStaggeredComponent, ListViewGettingStartedComponent, ListViewHeaderFooterComponent, ListViewItemReorderComponent, ListViewItemSelectionComponent, ListviewSelectionStatesComponent, ListViewLoadOnDemandComponent, ListViewPullToRefreshComponent, ListViewItemLayoutsGridComponent, ListviewItemLayoutsLinearComponent, ListviewItemLoadingComponent, ListviewItemReorderHandleComponent, ListviewItemSelectionMultipleComponent, ListviewItemSelectionProgrammaticComponent, ListviewItemSeparatorComponent, SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent, ListviewScrollToIndexVerticalComponent, ListViewScrollEventsComponent, ListviewScrollToIndexHorizontalComponent, ListViewSwipeActionsComponent, ListViewSwipeActionsMultipleComponent, ListViewSwipeActionsThresholdsComponent, ListviewItemLayoutsStaggeredComponent, ListViewSwipeDisableComponent, ListviewMultipleTemplatesComponent, ListviewItemLayoutsRuntimeComponent];
+export const EXAMPLES_COMPONENTS = [SideDrawerGettingStartedComponent, SideDrawerOverNavigationComponent, SecondSideDrawerOverNavigationComponent, SideDrawerEventsComponent, SideDrawerPositionComponent, SideDrawerTransitionsComponent];
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
@@ -48,119 +22,119 @@ let APP_ROUTES: Routes = [
     { path: "options", component: OptionsComponent },
     {
         path: "ListviewMultipleTemplatesComponent",
-        component: ListviewMultipleTemplatesComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Multiple Item Templates"
         }
     },
     {
         path: "ListViewGettingStartedComponent",
-        component: ListViewGettingStartedComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Getting Started"
         }
     },
     {
         path: "ListViewHeaderFooterComponent",
-        component: ListViewHeaderFooterComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Header and Footer"
         }
     },
     {
         path: "ListViewItemReorderComponent",
-        component: ListViewItemReorderComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Reorder"
         }
     },
     {
         path: "ListViewItemSelectionComponent",
-        component: ListViewItemSelectionComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Single Selection"
         }
     },
     {
         path: "ListviewSelectionStatesComponent",
-        component: ListviewSelectionStatesComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Selection states"
         }
     },
     {
         path: "ListViewLoadOnDemandComponent",
-        component: ListViewLoadOnDemandComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Load on Demand"
         }
     },
     {
         path: "ListViewPullToRefreshComponent",
-        component: ListViewPullToRefreshComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Pull to Refresh"
         }
     },
     {
         path: "ListViewItemLayoutsGridComponent",
-        component: ListViewItemLayoutsGridComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Grid"
         }
     },
     {
         path: "ListviewItemLayoutsLinearComponent",
-        component: ListviewItemLayoutsLinearComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Linear"
         }
     },
     {
         path: "ListviewItemLoadingComponent",
-        component: ListviewItemLoadingComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Loading"
         }
     },
     {
         path: "ListviewItemLayoutsStaggeredComponent",
-        component: ListviewItemLayoutsStaggeredComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Staggered"
         }
     },
     {
         path: "ListviewItemLayoutsRuntimeComponent",
-        component: ListviewItemLayoutsRuntimeComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Change at runtime"
         }
     },
     {
         path: "ListviewItemReorderHandleComponent",
-        component: ListviewItemReorderHandleComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Reorder with handle"
         }
     },
     {
         path: "ListviewItemSelectionMultipleComponent",
-        component: ListviewItemSelectionMultipleComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Multiple Selection"
         }
     },
     {
         path: "ListviewItemSelectionProgrammaticComponent",
-        component: ListviewItemSelectionProgrammaticComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Programmatic Selection"
         }
     },
     {
         path: "ListviewItemSeparatorComponent",
-        component: ListviewItemSeparatorComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item separators"
         }
@@ -489,21 +463,21 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ListviewScrollToIndexVerticalComponent",
-        component: ListviewScrollToIndexVerticalComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "In vertical direction"
         }
     },
     {
         path: "ListviewScrollToIndexHorizontalComponent",
-        component: ListviewScrollToIndexHorizontalComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "In horizontal direction"
         }
     },
     {
         path: "ListViewScrollEventsComponent",
-        component: ListViewScrollEventsComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Scroll Events"
         }
@@ -643,14 +617,14 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ListviewObservableArrayComponent",
-        component: ListviewObservableArrayComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Observable Array"
         }
     },
     {
         path: "ListViewItemAnimationsComponent",
-        component: ListViewItemAnimationsComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Animations"
         }
@@ -727,21 +701,21 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ListViewSwipeActionsComponent",
-        component: ListViewSwipeActionsComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Getting Started"
         }
     },
     {
         path: "ListViewSwipeActionsMultipleComponent",
-        component: ListViewSwipeActionsMultipleComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Multiple actions"
         }
     },
     {
         path: "ListViewSwipeActionsThresholdsComponent",
-        component: ListViewSwipeActionsThresholdsComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Animated thresholds"
         }
@@ -846,7 +820,7 @@ let APP_ROUTES: Routes = [
     },
     {
         path: "ListViewSwipeDisableComponent",
-        component: ListViewSwipeDisableComponent,
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Disable\\Enable"
         }

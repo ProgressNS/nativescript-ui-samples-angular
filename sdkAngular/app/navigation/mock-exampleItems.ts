@@ -207,22 +207,22 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": [
                     {
                         "title": "Getting Started",
-                        "path": "ListViewGettingStartedComponent/",
+                        "path": "ListViewGettingStartedComponent/ListViewGettingStartedComponent",
                         "subItems": []
                     },
                     {
                         "title": "Multiple Item Templates",
-                        "path": "ListviewMultipleTemplatesComponent/",
+                        "path": "ListviewMultipleTemplatesComponent/ListviewMultipleTemplatesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item Loading",
-                        "path": "ListviewItemLoadingComponent/",
+                        "path": "ListviewItemLoadingComponent/ListviewItemLoadingComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item Animations",
-                        "path": "ListViewItemAnimationsComponent/",
+                        "path": "ListViewItemAnimationsComponent/ListViewItemAnimationsComponent",
                         "subItems": []
                     },
                     {
@@ -231,34 +231,34 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Linear",
-                                "path": "ListviewItemLayoutsLinearComponent/",
+                                "path": "ListviewItemLayoutsLinearComponent/ListviewItemLayoutsLinearComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Grid",
-                                "path": "ListViewItemLayoutsGridComponent/",
+                                "path": "ListViewItemLayoutsGridComponent/ListViewItemLayoutsGridComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Staggered",
-                                "path": "ListviewItemLayoutsStaggeredComponent/",
+                                "path": "ListviewItemLayoutsStaggeredComponent/ListviewItemLayoutsStaggeredComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Change at runtime",
-                                "path": "ListviewItemLayoutsRuntimeComponent/",
+                                "path": "ListviewItemLayoutsRuntimeComponent/ListviewItemLayoutsRuntimeComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Item Reorder",
-                        "path": "ListViewItemReorderComponent/",
+                        "path": "ListViewItemReorderComponent/ListViewItemReorderComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item Reorder with handle",
-                        "path": "ListviewItemReorderHandleComponent/",
+                        "path": "ListviewItemReorderHandleComponent/ListviewItemReorderHandleComponent",
                         "subItems": []
                     },
                     {
@@ -267,39 +267,39 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Single Selection",
-                                "path": "ListViewItemSelectionComponent/",
+                                "path": "ListViewItemSelectionComponent/ListViewItemSelectionComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Multiple Selection",
-                                "path": "ListviewItemSelectionMultipleComponent/",
+                                "path": "ListviewItemSelectionMultipleComponent/ListviewItemSelectionMultipleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Programmatic Selection",
-                                "path": "ListviewItemSelectionProgrammaticComponent/",
+                                "path": "ListviewItemSelectionProgrammaticComponent/ListviewItemSelectionProgrammaticComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Selection states",
-                        "path": "ListviewSelectionStatesComponent/",
+                        "path": "ListviewSelectionStatesComponent/ListviewSelectionStatesComponent",
                         "subItems": []
                     },
                     {
                         "title": "Load on Demand",
-                        "path": "ListViewLoadOnDemandComponent/",
+                        "path": "ListViewLoadOnDemandComponent/ListViewLoadOnDemandComponent",
                         "subItems": []
                     },
                     {
                         "title": "Observable Array",
-                        "path": "ListviewObservableArrayComponent/",
+                        "path": "ListviewObservableArrayComponent/ListviewObservableArrayComponent",
                         "subItems": []
                     },
                     {
                         "title": "Pull to Refresh",
-                        "path": "ListViewPullToRefreshComponent/",
+                        "path": "ListViewPullToRefreshComponent/ListViewPullToRefreshComponent",
                         "subItems": []
                     },
                     {
@@ -308,34 +308,34 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "Getting Started",
-                                "path": "ListViewSwipeActionsComponent/",
+                                "path": "ListViewSwipeActionsComponent/ListViewSwipeActionsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Animated thresholds",
-                                "path": "ListViewSwipeActionsThresholdsComponent/",
+                                "path": "ListViewSwipeActionsThresholdsComponent/ListViewSwipeActionsThresholdsComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Multiple actions",
-                                "path": "ListViewSwipeActionsMultipleComponent/",
+                                "path": "ListViewSwipeActionsMultipleComponent/ListViewSwipeActionsMultipleComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "Disable\\Enable",
-                                "path": "ListViewSwipeDisableComponent/",
+                                "path": "ListViewSwipeDisableComponent/ListViewSwipeDisableComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Header and Footer",
-                        "path": "ListViewHeaderFooterComponent/",
+                        "path": "ListViewHeaderFooterComponent/ListViewHeaderFooterComponent",
                         "subItems": []
                     },
                     {
                         "title": "Item separators",
-                        "path": "ListviewItemSeparatorComponent/",
+                        "path": "ListviewItemSeparatorComponent/ListviewItemSeparatorComponent",
                         "subItems": []
                     },
                     {
@@ -344,19 +344,19 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": [
                             {
                                 "title": "In vertical direction",
-                                "path": "ListviewScrollToIndexVerticalComponent/",
+                                "path": "ListviewScrollToIndexVerticalComponent/ListviewScrollToIndexVerticalComponent",
                                 "subItems": []
                             },
                             {
                                 "title": "In horizontal direction",
-                                "path": "ListviewScrollToIndexHorizontalComponent/",
+                                "path": "ListviewScrollToIndexHorizontalComponent/ListviewScrollToIndexHorizontalComponent",
                                 "subItems": []
                             }
                         ]
                     },
                     {
                         "title": "Scroll Events",
-                        "path": "ListViewScrollEventsComponent/",
+                        "path": "ListViewScrollEventsComponent/ListViewScrollEventsComponent",
                         "subItems": []
                     },
                 ]
