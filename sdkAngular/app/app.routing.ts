@@ -21,7 +21,7 @@ let APP_ROUTES: Routes = [
     { path: "examples-depth-3/:parentTitle/:tappedTitle", component: ExamplesListDepth3Component },
     { path: "options", component: OptionsComponent },
     {
-        path: "ListviewMultipleTemplatesComponent",
+        path: "ListViewMultipleTemplatesComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Multiple Item Templates"
@@ -56,7 +56,7 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListviewSelectionStatesComponent",
+        path: "ListViewSelectionStatesComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Selection states"
@@ -84,56 +84,56 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListviewItemLayoutsLinearComponent",
+        path: "ListViewItemLayoutsLinearComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Linear"
         }
     },
     {
-        path: "ListviewItemLoadingComponent",
+        path: "ListViewItemLoadingComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Loading"
         }
     },
     {
-        path: "ListviewItemLayoutsStaggeredComponent",
+        path: "ListViewItemLayoutsStaggeredComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Staggered"
         }
     },
     {
-        path: "ListviewItemLayoutsRuntimeComponent",
+        path: "ListViewItemLayoutsRuntimeComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Change at runtime"
         }
     },
     {
-        path: "ListviewItemReorderHandleComponent",
+        path: "ListViewItemReorderHandleComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item Reorder with handle"
         }
     },
     {
-        path: "ListviewItemSelectionMultipleComponent",
+        path: "ListViewItemSelectionMultipleComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Multiple Selection"
         }
     },
     {
-        path: "ListviewItemSelectionProgrammaticComponent",
+        path: "ListViewItemSelectionProgrammaticComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Programmatic Selection"
         }
     },
     {
-        path: "ListviewItemSeparatorComponent",
+        path: "ListViewItemSeparatorComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item separators"
@@ -462,14 +462,14 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListviewScrollToIndexVerticalComponent",
+        path: "ListViewScrollToIndexVerticalComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "In vertical direction"
         }
     },
     {
-        path: "ListviewScrollToIndexHorizontalComponent",
+        path: "ListViewScrollToIndexHorizontalComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "In horizontal direction"
@@ -616,7 +616,7 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListviewObservableArrayComponent",
+        path: "ListViewObservableArrayComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Observable Array"

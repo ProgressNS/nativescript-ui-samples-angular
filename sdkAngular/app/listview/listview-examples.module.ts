@@ -8,24 +8,24 @@ import { ListViewGettingStartedComponent } from './getting-started/listview-gett
 import { ListViewHeaderFooterComponent } from './header-footer/listview-header-footer.component';
 import { ListViewItemAnimationsComponent } from './item-animations/listview-item-animations.component';
 import { ListViewItemLayoutsGridComponent } from './item-layouts/listview-item-layouts-grid.component';
-import { ListviewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
-import { ListviewItemLayoutsRuntimeComponent } from './item-layouts/listview-item-layouts-runtime.component';
-import { ListviewItemLayoutsStaggeredComponent } from './item-layouts/listview-item-layouts-staggered.component';
-import { ListviewItemLoadingComponent } from './item-loading/listview-item-loading.component';
+import { ListViewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
+import { ListViewItemLayoutsRuntimeComponent } from './item-layouts/listview-item-layouts-runtime.component';
+import { ListViewItemLayoutsStaggeredComponent } from './item-layouts/listview-item-layouts-staggered.component';
+import { ListViewItemLoadingComponent } from './item-loading/listview-item-loading.component';
 import { ListViewItemReorderComponent } from './item-reorder/listview-item-reorder.component';
-import { ListviewItemReorderHandleComponent } from './item-reorder/listview-item-reorder-handle.component';
-import { ListviewItemSelectionMultipleComponent } from './item-selection/listview-item-selection-multiple.component';
-import { ListviewItemSelectionProgrammaticComponent } from './item-selection/listview-item-selection-programmatic.component';
+import { ListViewItemReorderHandleComponent } from './item-reorder/listview-item-reorder-handle.component';
+import { ListViewItemSelectionMultipleComponent } from './item-selection/listview-item-selection-multiple.component';
+import { ListViewItemSelectionProgrammaticComponent } from './item-selection/listview-item-selection-programmatic.component';
 import { ListViewItemSelectionComponent } from './item-selection/listview-item-selection.component';
-import { ListviewItemSeparatorComponent } from './item-separator/listview-item-separator.component';
+import { ListViewItemSeparatorComponent } from './item-separator/listview-item-separator.component';
 import { ListViewLoadOnDemandComponent } from './load-on-demand/listview-load-on-demand.component';
-import { ListviewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
-import { ListviewObservableArrayComponent } from './observable-array/listview-observable-array.component';
+import { ListViewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
+import { ListViewObservableArrayComponent } from './observable-array/listview-observable-array.component';
 import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-to-refresh.component';
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
-import { ListviewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
-import { ListviewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
-import { ListviewSelectionStatesComponent } from './selection-states/listview-selection-states.component';
+import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
+import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
+import { ListViewSelectionStatesComponent } from './selection-states/listview-selection-states.component';
 import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-swipe-actions-multiple.component';
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
 import { ListViewSwipeActionsComponent } from './swipe-actions/listview-swipe-actions.component';
@@ -47,24 +47,24 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewHeaderFooterComponent,
         ListViewItemAnimationsComponent,
         ListViewItemLayoutsGridComponent,
-        ListviewItemLayoutsLinearComponent,
-        ListviewItemLayoutsRuntimeComponent,
-        ListviewItemLayoutsStaggeredComponent,
-        ListviewItemLoadingComponent,
+        ListViewItemLayoutsLinearComponent,
+        ListViewItemLayoutsRuntimeComponent,
+        ListViewItemLayoutsStaggeredComponent,
+        ListViewItemLoadingComponent,
         ListViewItemReorderComponent,
-        ListviewItemReorderHandleComponent,
-        ListviewItemSelectionMultipleComponent,
-        ListviewItemSelectionProgrammaticComponent,
+        ListViewItemReorderHandleComponent,
+        ListViewItemSelectionMultipleComponent,
+        ListViewItemSelectionProgrammaticComponent,
         ListViewItemSelectionComponent,
-        ListviewItemSeparatorComponent,
+        ListViewItemSeparatorComponent,
         ListViewLoadOnDemandComponent,
-        ListviewMultipleTemplatesComponent,
-        ListviewObservableArrayComponent,
+        ListViewMultipleTemplatesComponent,
+        ListViewObservableArrayComponent,
         ListViewPullToRefreshComponent,
         ListViewScrollEventsComponent,
-        ListviewScrollToIndexHorizontalComponent,
-        ListviewScrollToIndexVerticalComponent,
-        ListviewSelectionStatesComponent,
+        ListViewScrollToIndexHorizontalComponent,
+        ListViewScrollToIndexVerticalComponent,
+        ListViewSelectionStatesComponent,
         ListViewSwipeActionsMultipleComponent,
         ListViewSwipeActionsThresholdsComponent,
         ListViewSwipeActionsComponent,

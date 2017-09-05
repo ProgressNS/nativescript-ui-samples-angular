@@ -10,7 +10,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-separator.component.html",
     styleUrls: ["listview-item-separator.component.css"]
 })
-export class ListviewItemSeparatorComponent implements OnInit {
+export class ListViewItemSeparatorComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {

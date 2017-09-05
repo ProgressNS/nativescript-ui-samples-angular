@@ -12,7 +12,7 @@ import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
     templateUrl: "listview-selection-states.component.html",
     styleUrls: ["listview-selection-states.component.css"]
 })
-export class ListviewSelectionStatesComponent implements OnInit {
+export class ListViewSelectionStatesComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {

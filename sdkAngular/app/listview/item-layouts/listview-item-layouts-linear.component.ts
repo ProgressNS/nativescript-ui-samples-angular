@@ -14,7 +14,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-layouts-linear.component.html",
     styleUrls: ["listview-item-layouts-linear.component.css"]
 })
-export class ListviewItemLayoutsLinearComponent implements OnInit {
+export class ListViewItemLayoutsLinearComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _layout: ListViewLinearLayout;
 
