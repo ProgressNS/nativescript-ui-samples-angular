@@ -10,7 +10,7 @@ export class DataFormAsyncValidationComponent implements OnInit {
     private _user: User;
     private _isBusy: boolean;
     private _text: string;
-    private _evenValidaiton: boolean;
+    private _evenValidation: boolean;
 
     constructor() {
     }
@@ -18,7 +18,7 @@ export class DataFormAsyncValidationComponent implements OnInit {
     ngOnInit() {
         this._user = new User();
         this._text = "Type a username and move to the next field.\n";
-        this._evenValidaiton = true;
+        this._evenValidation = true;
     }
 
     get user(): User {
@@ -41,14 +41,14 @@ export class DataFormAsyncValidationComponent implements OnInit {
             this._isBusy = true;
             args.returnValue = new Promise<Boolean>(resolve => {
                 setTimeout(() => {
-                    if (this._evenValidaiton) {
+                    if (this._evenValidation) {
                         args.entityProperty.errorMessage = "This username is already used.";
                         resolve(false);
                     } else {
                         resolve(true);
                     }
                     this._isBusy = false;
-                    this._evenValidaiton = !this._evenValidaiton;
+                    this._evenValidation = !this._evenValidation;
                 }, 1500);
             })
         }
