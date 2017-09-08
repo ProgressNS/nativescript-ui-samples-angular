@@ -18,10 +18,10 @@ import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angul
     styleUrls: ["listview-scroll-to-index.component.css"]
 })
 @Injectable()
-export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase implements OnInit {
+export class ListViewScrollToIndexVerticalComponent extends OptionsExampleBase implements OnInit {
     private _optionsParamName: string;
     private _dataItems: ObservableArray<DataItem>;
-    private _options: Array<string> = ["None", "Top", "CenteredVertically", "Bottom"];
+    private _options: Array<string> = ["Auto", "Start", "Center", "End"];
 
     myScrollPosition: any;
 
@@ -42,7 +42,7 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
     @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
 
     public onTap() {
-        this.listViewComponent.listView.scrollToIndex(50);
+        this.listViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
     }
     // << angular-listview-scroll-to-index
 
@@ -78,6 +78,14 @@ export class ListviewScrollToIndexVerticalComponent extends OptionsExampleBase i
                         break;
                 }
             }
+        }
+    }
+
+    public onOptionsTapped(args: any) {
+        if (applicationModule.android) {
+            this.set('myScrollPosition', args.object.text);
+        } else {
+            super.onOptionsTapped(args);
         }
     }
 }

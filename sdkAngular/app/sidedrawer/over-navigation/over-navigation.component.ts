@@ -1,7 +1,7 @@
 import { Component, ViewChild, OnInit, AfterViewInit, ChangeDetectorRef } from "@angular/core";
 import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
 import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -44,6 +44,6 @@ export class SideDrawerOverNavigationComponent implements AfterViewInit, OnInit 
     }
 
     public goToSecondPage() {
-        this._router.navigateByUrl("SecondSideDrawerOverNavigationComponent");
+        this._router.navigateByUrl("SecondSideDrawerOverNavigationComponent/SecondSideDrawerOverNavigationComponent");
     }
 }

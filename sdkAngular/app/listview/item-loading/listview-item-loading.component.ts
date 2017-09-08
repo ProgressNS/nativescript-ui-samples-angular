@@ -14,7 +14,7 @@ import { ListViewEventData } from 'nativescript-telerik-ui-pro/listview';
     styleUrls: ["listview-item-loading.component.css"]
 })
 
-export class ListviewItemLoadingComponent implements OnInit {
+export class ListViewItemLoadingComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef, private _dataItemService: DataItemService) {

@@ -1,42 +1,42 @@
 <GridLayout rows="auto, *" tkExampleTitle tkToggleNavButton>
 	<Button [text]="currentStatus" (tap)="onEnableDisable($event)"></Button>
-	<RadDataForm [source]="booking" row="1">
-		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders"
-		 [readOnly]="isReadOnly">
+	<!-- >> angular-dataform-form-readonly-html -->
+	<RadDataForm [source]="booking" row="1" [isReadOnly]="isReadOnly">
+	<!-- << angular-dataform-form-readonly-html -->
+		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
 			<TKPropertyEditor tkEntityPropertyEditor id="1" type="AutoCompleteInline"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles"
-		 [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
 			<TKPropertyEditor tkEntityPropertyEditor id="2" type="AutoCompleteInline"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="2" [converter]="movieConverter" [valuesProvider]="movieNames" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="2" [converter]="movieConverter" [valuesProvider]="movieNames">
 			<TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="date" index="3" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="date" index="3">
 			<TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="time" index="4" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="time" index="4">
 			<TKPropertyEditor tkEntityPropertyEditor type="TimePicker"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="type" displayName="Type" index="5" valuesProvider="2D, 3D" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="type" displayName="Type" index="5" valuesProvider="2D, 3D">
 			<TKPropertyEditor tkEntityPropertyEditor type="SegmentedEditor"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="price" index="6" readOnly="true" [readOnly]="isReadOnly">
-			<TKPropertyEditor tkEntityPropertyEditor type="Decimal"></TKPropertyEditor>
+		<TKEntityProperty tkDataFormProperty name="price" index="6" readOnly="true">
+			<TKPropertyEditor tkEntityPropertyEditor type="Label"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="numberOfTickets" displayName="Number of Tickets" index="7" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="numberOfTickets" displayName="Number of Tickets" index="7">
 			<TKPropertyEditor tkEntityPropertyEditor type="Stepper"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="contactName" displayName="Contact Name" index="8" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="contactName" displayName="Contact Name" index="8">
 			<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="contactPhone" displayName="Contact Phone" index="9" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="contactPhone" displayName="Contact Phone" index="9">
 			<TKPropertyEditor tkEntityPropertyEditor type="Phone"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="contactEmail" displayName="Contact Email" index="10" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="contactEmail" displayName="Contact Email" index="10">
 			<TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I Agree with Terms" index="11" [readOnly]="isReadOnly">
+		<TKEntityProperty tkDataFormProperty name="agreeTerms" displayName="I Agree with Terms" index="11">
 			<TKPropertyEditor tkEntityPropertyEditor type="Switch"></TKPropertyEditor>
 		</TKEntityProperty>
 	</RadDataForm>

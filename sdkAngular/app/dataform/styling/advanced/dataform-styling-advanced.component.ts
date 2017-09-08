@@ -3,6 +3,7 @@ import { Settings } from "../../data-services/settings";
 import * as applicationModule from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";
 import * as viewModule from "tns-core-modules/ui/core/view";
+import { EntityProperty, DataFormEventData, RadDataForm } from "nativescript-telerik-ui-pro/dataform";
 
 @Component({
     moduleId: module.id,
@@ -39,20 +40,26 @@ export class DataformStylingAdvancedComponent implements OnInit {
         this._prefModes = value;
     }
 
-    public dfEditorUpdate(data) {
+    public dfEditorUpdate(args: DataFormEventData) {
         if (applicationModule.android) {
-            switch (data.propertyName) {
-                case "onlyOnWiFi": this.editorSetupSwitchAndroid(data.editor); break;
-                case "networkLimit": this.editorSetupStepperAndroid(data.editor); break;
-                case "networkPreference": this.editorSetupSegmentedEditorAndroid(data.editor); break;
-                case "appVolume": this.editorSetupSliderAndroid(data.editor); break;
+// >> angular-dataform-styling-propertyname
+            switch (args.propertyName) {
+                case "appVolume": this.editorSetupSliderAndroid(args.editor); break;
+// << angular-dataform-styling-propertyname
+                case "onlyOnWiFi": this.editorSetupSwitchAndroid(args.editor); break;
+                case "networkLimit": this.editorSetupStepperAndroid(args.editor); break;
+                case "networkPreference": this.editorSetupSegmentedEditorAndroid(args.editor); break;
             }
         } else if (applicationModule.ios) {
-            switch (data.propertyName) {
-                case "onlyOnWiFi": this.editorSetupSwitchIOS(data.editor); break;
-                case "networkLimit": this.editorSetupStepperIOS(data.editor); break;
-                case "networkPreference": this.editorSetupSegmentedEditorIOS(data.editor); break;
-                case "appVolume": this.editorSetupSliderIOS(data.editor); break;
+// >> dataform-styling-editortype
+            var entityProperty : EntityProperty =
+                (<RadDataForm>args.object).getPropertyByName(args.propertyName);
+            switch (entityProperty.editor.type) {
+                case "Slider": this.editorSetupSliderIOS(args.editor); break;
+// << dataform-styling-editortype
+                case "Switch": this.editorSetupSwitchIOS(args.editor); break;
+                case "Stepper": this.editorSetupStepperIOS(args.editor); break;
+                case "SegmentedEditor": this.editorSetupSegmentedEditorIOS(args.editor); break;
             }
         }
     }
@@ -146,8 +153,9 @@ export class DataformStylingAdvancedComponent implements OnInit {
 
     // >> angular-dataform-styling-advanced
     public editorSetupSliderAndroid(editor) {
-        editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
-        editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
+        var coreEditor = <android.widget.SeekBar>editor.getEditorView();
+        coreEditor.getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
+        coreEditor.getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
     }
 
     public editorSetupSliderIOS(editor) {
@@ -220,6 +228,10 @@ declare module android {
             setPadding(l, t, r, b);
             setShowDividers(arg);
             setDividerDrawable(arg);
+        }
+        class SeekBar {
+            getThumb();
+            getProgressDrawable();
         }
 
         class RadioButton {

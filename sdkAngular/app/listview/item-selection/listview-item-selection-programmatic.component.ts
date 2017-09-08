@@ -12,7 +12,7 @@ import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angul
     templateUrl: "listview-item-selection-programmatic.component.html",
     styleUrls: ["listview-item-selection-programmatic.component.css"]
 })
-export class ListviewItemSelectionProgrammaticComponent implements OnInit {
+export class ListViewItemSelectionProgrammaticComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _txtDeselectItemIndex: string;
     private _txtSelectItemIndex: string;

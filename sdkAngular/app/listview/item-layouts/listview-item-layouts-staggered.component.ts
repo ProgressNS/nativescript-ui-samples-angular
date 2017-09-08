@@ -11,7 +11,7 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-item-layouts-staggered.component.html",
     styleUrls: ["listview-item-layouts-staggered.component.css"]
 })
-export class ListviewItemLayoutsStaggeredComponent implements OnInit {
+export class ListViewItemLayoutsStaggeredComponent implements OnInit {
     private _staggeredItems: ObservableArray<DataItem>;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef, private _dataItemService: DataItemService) {

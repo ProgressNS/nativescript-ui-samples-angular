@@ -1,6 +1,6 @@
-// >> dataform-button-editor-helper-ios
 import { CustomPropertyEditor } from "nativescript-telerik-ui-pro/dataform";
 
+// >> dataform-button-editor-helper-ios
 export class ButtonEditorHelper extends NSObject 
 {    
     public buttonValue: number;

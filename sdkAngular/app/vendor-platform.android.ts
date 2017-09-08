@@ -9,6 +9,7 @@
 // placed here needs to be careful about its dependencies.
 
 require("application");
+
 if (!global["__snapshot"]) {
     // In case snapshot generation is enabled these modules will get into the bundle
     // but will not be required/evaluated.
@@ -17,5 +18,6 @@ if (!global["__snapshot"]) {
 
     require("ui/frame");
     require("ui/frame/activity");
-    require("./main-activity.android.js");
+    require("./main-activity.android.ts");
 }
+

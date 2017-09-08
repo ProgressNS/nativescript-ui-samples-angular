@@ -4,7 +4,7 @@ import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
 import { ListViewEventData, SwipeActionsEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
 import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
-import {View } from 'tns-core-modules/ui/core/view';
+import { View } from 'tns-core-modules/ui/core/view';
 
 @Component({
     moduleId: module.id,

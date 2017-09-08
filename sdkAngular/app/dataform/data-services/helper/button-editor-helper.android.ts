@@ -1,6 +1,6 @@
-// >> dataform-button-editor-helper-android
 import { CustomPropertyEditor } from "nativescript-telerik-ui-pro/dataform";
 
+// >> dataform-button-editor-helper-android
 export class ButtonEditorHelper {    
     public buttonValue: number;
     public editor: CustomPropertyEditor;

@@ -1,4 +1,4 @@
-// >> gauges-customization.component-angular
+// >> gauges-customization-angular
 import { Component, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
 import { RadialScale, RadialBarIndicator } from "nativescript-telerik-ui-pro/gauges";
 
@@ -24,4 +24,4 @@ export class GaugesCustomizationComponent implements AfterViewInit {
         }
     }
 }
-// << gauges-customization.component-angular
+// << gauges-customization-angular

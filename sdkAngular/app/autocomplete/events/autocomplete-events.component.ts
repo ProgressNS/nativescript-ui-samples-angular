@@ -93,11 +93,11 @@ export class AutoCompleteEventsComponent {
 
     private updateEventsText(): void {
         var text;
-        if(this._currentEventNumber > 5) {
+        if (this._currentEventNumber > 5) {
             text = "Latest 5 fired events:";
-        } else if(this._currentEventNumber == 0) {
+        } else if (this._currentEventNumber == 0) {
             text = "Events will appear here:";
-        } else if(this._currentEventNumber == 1) {
+        } else if (this._currentEventNumber == 1) {
             text = "Fired event:";
         } else {
             text = "Fired events:";
@@ -108,7 +108,7 @@ export class AutoCompleteEventsComponent {
     private logEvent(eventText: string) {
         this._currentEventNumber++;
         this.updateEventsText();
-        switch(this._currentEventNumber) {
+        switch (this._currentEventNumber) {
             case 1: this._eventName1 = eventText; return;
             case 2: this._eventName2 = eventText; return;
             case 3: this._eventName3 = eventText; return;

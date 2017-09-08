@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EXAMPLEITEMS } from "./mock-exampleItems";
 import { ExampleItem } from "./exampleItem";
-import { EXAMPLES_COMPONENTS } from "../app.routes";
 
 @Injectable()
 export class ExampleItemService {

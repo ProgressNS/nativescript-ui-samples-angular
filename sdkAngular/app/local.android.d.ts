@@ -53,6 +53,8 @@ declare module android {
         module drawable {
             class GradientDrawable {
                 setStroke(width, stroke);
+                setCornerRadius(radius);
+                setColor(color);
             }
         }
     }
@@ -80,6 +82,10 @@ declare module android {
             setPadding(l, t, r, b);
             setShowDividers(arg);
             setDividerDrawable(arg);
+        }
+        class SeekBar {
+            getThumb();
+            getProgressDrawable();
         }
 
         class Button extends view.View {
