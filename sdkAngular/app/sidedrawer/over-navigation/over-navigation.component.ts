@@ -44,6 +44,6 @@ export class SideDrawerOverNavigationComponent implements AfterViewInit, OnInit 
     }
 
     public goToSecondPage() {
-        this._router.navigateByUrl("SecondSideDrawerOverNavigationComponent/SecondSideDrawerOverNavigationComponent");
+        this._router.navigateByUrl("SideDrawerOverNavigationComponent/SecondSideDrawerOverNavigationComponent");
     }
 }
