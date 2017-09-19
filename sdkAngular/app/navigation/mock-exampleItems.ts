@@ -728,6 +728,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Read Only",
                         "path": "AutoCompleteReadOnlyComponent/AutoCompleteReadOnlyComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Hint",
+                        "path": "AutoCompleteHintComponent/AutoCompleteHintComponent",
+                        "subItems": []
                     }]
             },
             {

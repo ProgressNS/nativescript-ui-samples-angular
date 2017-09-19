@@ -811,6 +811,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "AutoCompleteHintComponent",
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
+        data: {
+            "title": "Hint"
+        }
+    },
+    {
         path: "ListViewSwipeDisableComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {

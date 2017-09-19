@@ -19,6 +19,7 @@ import { AutoCompleteRemoteComponent } from './remote-data-fetch/autocomplete-re
 import { AutoCompleteAppendModeComponent } from './suggest-mode/autocomplete-append-mode.component';
 import { AutoCompleteSuggestAppendModeComponent } from './suggest-mode/autocomplete-suggest-append-mode.component';
 import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-suggest-mode.component';
+import { AutoCompleteHintComponent } from './hint/autocomplete-hint.component';
 
 import { routes } from './autocomplete-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -47,7 +48,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         AutoCompleteRemoteComponent,
         AutoCompleteAppendModeComponent,
         AutoCompleteSuggestAppendModeComponent,
-        AutocompleteSuggestModeComponent
+        AutocompleteSuggestModeComponent,
+        AutoCompleteHintComponent
     ]
 })
 export class AutoCompleteExamplesModule { }
