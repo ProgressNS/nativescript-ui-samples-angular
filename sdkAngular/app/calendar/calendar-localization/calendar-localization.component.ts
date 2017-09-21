@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import frameModule = require("tns-core-modules/ui/frame")
-import { RadCalendar } from "nativescript-telerik-ui-pro/calendar";
+import { RadCalendar } from "nativescript-pro-ui/calendar";
 import { Button } from "tns-core-modules/ui/button"
 
 @Component({

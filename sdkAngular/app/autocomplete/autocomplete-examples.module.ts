@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-telerik-ui-pro/autocomplete/angular";
+import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-pro-ui/autocomplete/angular";
 
 import { AutoCompleteContainsModeComponent } from './completion-mode/autocomplete-contains-mode.component';
 import { AutoCompleteStartsWithModeComponent } from './completion-mode/autocomplete-startswith-mode.component';

@@ -1,6 +1,6 @@
 import { Component, Injectable } from "@angular/core";
 import { Page } from "ui/page";
-import { RadCalendar, CalendarTransitionMode } from "nativescript-telerik-ui-pro/calendar";
+import { RadCalendar, CalendarTransitionMode } from "nativescript-pro-ui/calendar";
 import { OptionsService } from "../../navigation/options/options.service";
 import * as applicationModule from "tns-core-modules/application";
 import { Router } from '@angular/router';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CalendarEventsService } from "../calendar-events.service";
-import { RadCalendar, CalendarEvent, CalendarSelectionEventData } from "nativescript-telerik-ui-pro/calendar";
+import { RadCalendar, CalendarEvent, CalendarSelectionEventData } from "nativescript-pro-ui/calendar";
 // >> angular-calenda-populating-with-data
 @Component({
     moduleId: module.id,
