@@ -1,4 +1,4 @@
-import { SideDrawerLocation } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { SideDrawerLocation } from 'nativescript-pro-ui/sidedrawer';
 
 export var LOCATIONS: SideDrawerLocation[] = [
     SideDrawerLocation.Left,

@@ -2,8 +2,8 @@ import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, Ch
 import { View } from "tns-core-modules/ui/core/view";
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
-import { DrawerTransitionBase, PushTransition, RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-telerik-ui-pro/sidedrawer';
-import { RadSideDrawerComponent } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { DrawerTransitionBase, PushTransition, RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-pro-ui/sidedrawer';
+import { RadSideDrawerComponent } from "nativescript-pro-ui/sidedrawer/angular";
 
 // >> sidedrawer-angular-callbacks-definition
 @Component({

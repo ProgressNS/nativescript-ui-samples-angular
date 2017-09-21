@@ -1,4 +1,4 @@
-import { CustomPropertyEditor } from "nativescript-telerik-ui-pro/dataform";
+import { CustomPropertyEditor } from "nativescript-pro-ui/dataform";
 
 declare class ButtonEditorHelper {    
     public buttonValue: number;

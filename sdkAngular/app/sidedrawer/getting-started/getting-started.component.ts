@@ -3,8 +3,8 @@ import { Component, ViewChild, OnInit, AfterViewInit, ChangeDetectorRef } from "
 import { Page } from "ui/page";
 import { ActionItem } from "ui/action-bar";
 import { Observable } from "data/observable";
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-import { RadSideDrawer } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { RadSideDrawerComponent, SideDrawerType } from "nativescript-pro-ui/sidedrawer/angular";
+import { RadSideDrawer } from 'nativescript-pro-ui/sidedrawer';
 
 @Component({
     moduleId: module.id,

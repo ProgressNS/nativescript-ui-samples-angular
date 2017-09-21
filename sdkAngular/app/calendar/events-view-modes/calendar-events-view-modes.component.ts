@@ -3,7 +3,7 @@ import { Component, OnInit, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
 import { CalendarEventsService } from "../calendar-events.service";
 import { OptionsService } from "../../navigation/options/options.service";
-import { RadCalendar, CalendarEvent, CalendarEventsViewMode } from "nativescript-telerik-ui-pro/calendar";
+import { RadCalendar, CalendarEvent, CalendarEventsViewMode } from "nativescript-pro-ui/calendar";
 import { Page } from "ui/page";
 import * as applicationModule from "application";
 

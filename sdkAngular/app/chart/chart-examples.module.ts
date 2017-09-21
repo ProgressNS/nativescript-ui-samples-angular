@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
+import { NativeScriptUIChartModule } from "nativescript-pro-ui/chart/angular";
 
 import { ChartAnnotationsGridLineComponent } from './annotations/chart-annotations-grid-line.component';
 import { ChartAnnotationsPlotBandComponent } from './annotations/chart-annotations-plot-band.component';

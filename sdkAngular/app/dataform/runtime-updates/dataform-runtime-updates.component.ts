@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Button } from "tns-core-modules/ui/button";
-import * as dataformAngularModule from "nativescript-telerik-ui-pro/dataform/angular";
-import { PropertyEditor } from "nativescript-telerik-ui-pro/dataform";
+import * as dataformAngularModule from "nativescript-pro-ui/dataform/angular";
+import { PropertyEditor } from "nativescript-pro-ui/dataform";
 import { Person } from "../data-services/person";
 
 @Component({

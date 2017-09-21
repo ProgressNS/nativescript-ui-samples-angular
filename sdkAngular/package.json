@@ -29,7 +29,7 @@
     "nativescript-angular": "next",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
-    "nativescript-telerik-ui-pro": "next",
+    "nativescript-pro-ui": "next",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.3.0",
     "tns-core-modules": "next",

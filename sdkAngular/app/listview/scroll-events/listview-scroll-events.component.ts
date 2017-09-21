@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewScrollEventData } from "nativescript-telerik-ui-pro/listview";
+import { ListViewScrollEventData } from "nativescript-pro-ui/listview";
 
 @Component({
     moduleId: module.id,
