@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { BaseUser } from "../../data-services/user";
-import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular";
+import { RadDataFormComponent } from "nativescript-pro-ui/dataform/angular";
 import { alert } from "tns-core-modules/ui/dialogs";
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { PersonBase } from "../../data-services/person";
-import { FontStyles, PropertyEditor, RadDataForm } from "nativescript-telerik-ui-pro/dataform";
-import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular";
+import { FontStyles, PropertyEditor, RadDataForm } from "nativescript-pro-ui/dataform";
+import { RadDataFormComponent } from "nativescript-pro-ui/dataform/angular";
 
 @Component({
     moduleId: module.id,

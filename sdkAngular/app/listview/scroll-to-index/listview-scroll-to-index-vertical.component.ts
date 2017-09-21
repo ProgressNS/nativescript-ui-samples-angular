@@ -8,7 +8,7 @@ import * as applicationModule from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
+import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
 
 @Component({
     moduleId: module.id,
