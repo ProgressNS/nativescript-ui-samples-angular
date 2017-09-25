@@ -1,5 +1,5 @@
 # Welcome
-This repository contains the source code of the Progress NativeScript UI samples application demonstrating the Angular directives. The repository does not contain the source code of Progress NativeScript UI itself but rather uses the npm package of  `nativescript-telerik-ui-pro` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui-pro.svg)](https://www.npmjs.com/package/nativescript-telerik-ui-pro) or `nativescript-telerik-ui` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui.svg)](https://www.npmjs.com/package/nativescript-telerik-ui).
+This repository contains the source code of the Progress NativeScript UI samples application demonstrating the Angular directives. The repository does not contain the source code of Progress NativeScript UI itself but rather uses the npm package `nativescript-pro-ui` [![npm](https://img.shields.io/npm/v/nativescript-pro-ui.svg)](https://www.npmjs.com/package/nativescript-pro-ui).
 
 The `master` branch contains code currently under development and is not meant to be used with the officially released version of NativeScript UI.
 
