@@ -1,7 +1,7 @@
 import { Component, Injectable, OnInit, ViewChild } from "@angular/core";
 import { Page } from "ui/page";
-import { RadCalendar } from "nativescript-telerik-ui-pro/calendar";
-import { RadCalendarComponent } from "nativescript-telerik-ui-pro/calendar/angular";
+import { RadCalendar } from "nativescript-pro-ui/calendar";
+import { RadCalendarComponent } from "nativescript-pro-ui/calendar/angular";
 
 @Component({
     moduleId: module.id,

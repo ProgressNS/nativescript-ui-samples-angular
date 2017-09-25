@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calendar/angular";
+import { NativeScriptUICalendarModule } from "nativescript-pro-ui/calendar/angular";
 
 import { CalendarLocalizationComponent } from './calendar-localization/calendar-localization.component';
 import { CalendarCellStylingComponent } from './cell-styling/calendar-cell-styling.component';

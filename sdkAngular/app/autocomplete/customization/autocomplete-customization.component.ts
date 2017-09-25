@@ -1,7 +1,7 @@
 import { Component, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-telerik-ui-pro/autocomplete";
-import { RadAutoCompleteTextViewComponent } from "nativescript-telerik-ui-pro/autocomplete/angular";
+import { TokenModel } from "nativescript-pro-ui/autocomplete";
+import { RadAutoCompleteTextViewComponent } from "nativescript-pro-ui/autocomplete/angular";
 var data = require("./countries.json")
 
 @Component({

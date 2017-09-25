@@ -1,7 +1,7 @@
 // >> angular-autocomplete-append-mode
 import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-telerik-ui-pro/autocomplete";
+import { TokenModel } from "nativescript-pro-ui/autocomplete";
 
 @Component({
     moduleId: module.id,

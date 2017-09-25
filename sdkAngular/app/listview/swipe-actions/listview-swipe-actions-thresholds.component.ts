@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewEventData, RadListView } from "nativescript-telerik-ui-pro/listview";
-import { RadListViewComponent } from "nativescript-telerik-ui-pro/listview/angular";
+import { ListViewEventData, RadListView } from "nativescript-pro-ui/listview";
+import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
 import { View } from 'ui/core/view';
 import { layout } from "utils/utils";
 
