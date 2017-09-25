@@ -4,7 +4,7 @@ import { Component, AfterViewInit, OnInit, Injectable, ChangeDetectorRef } from 
 import { Router } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page";
 import * as applicationModule from "tns-core-modules/application";
-import { RadCartesianChart } from "nativescript-telerik-ui-pro/chart";
+import { RadCartesianChart } from "nativescript-pro-ui/chart";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Country } from '../../data-services/country';
 import { DataService } from '../../data-services/data.service';

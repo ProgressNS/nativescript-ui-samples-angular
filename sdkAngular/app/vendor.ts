@@ -12,10 +12,10 @@ require("nativescript-angular/platform-static");
 require("nativescript-angular/forms");
 require("nativescript-angular/router");
 
-require("nativescript-telerik-ui-pro/autocomplete/angular");
-require("nativescript-telerik-ui-pro/calendar/angular");
-require("nativescript-telerik-ui-pro/chart/angular");
-require("nativescript-telerik-ui-pro/dataform/angular");
-require("nativescript-telerik-ui-pro/gauges/angular");
-require("nativescript-telerik-ui-pro/listview/angular");
-require("nativescript-telerik-ui-pro/sidedrawer/angular");
+require("nativescript-pro-ui/autocomplete/angular");
+require("nativescript-pro-ui/calendar/angular");
+require("nativescript-pro-ui/chart/angular");
+require("nativescript-pro-ui/dataform/angular");
+require("nativescript-pro-ui/gauges/angular");
+require("nativescript-pro-ui/listview/angular");
+require("nativescript-pro-ui/sidedrawer/angular");

@@ -4,7 +4,7 @@ import { Color } from "tns-core-modules/color";
 import { Label } from "tns-core-modules/ui/label";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewEventData } from 'nativescript-telerik-ui-pro/listview';
+import { ListViewEventData } from 'nativescript-pro-ui/listview';
 
 @Component({
     moduleId: module.id,

@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
+import { NativeScriptUIDataFormModule } from "nativescript-pro-ui/dataform/angular";
 
 import { DataFormAdjustmentComponent } from './adjustment/dataform-adjustment.component';
 import { DataFormCommitModesComponent } from './commit-modes/dataform-commit-modes.component';

@@ -3,7 +3,7 @@ import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import * as frameModule from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
-import { ListViewEventData } from 'nativescript-telerik-ui-pro/listview';
+import { ListViewEventData } from 'nativescript-pro-ui/listview';
 
 @Component({
     moduleId: module.id,

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { ValidationMode } from "nativescript-telerik-ui-pro/dataform";
+import { ValidationMode } from "nativescript-pro-ui/dataform";
 import { User } from "../../data-services/user";
-import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular";
+import { RadDataFormComponent } from "nativescript-pro-ui/dataform/angular";
 import { SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 
 @Component({

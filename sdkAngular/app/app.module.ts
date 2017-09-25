@@ -1,16 +1,16 @@
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 // >> using-global-directives
-// --- The built-in 'nativescript-telerik-ui-pro' modules, if you are not using 'lazy' loading, uncomment and import the below modules into the 'imports' of the first ngModule (AppModule) of the app. 
-// import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
-// import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
-// import { NativeScriptUICalendarModule } from "nativescript-telerik-ui-pro/calendar/angular";
-// import { NativeScriptUIChartModule } from "nativescript-telerik-ui-pro/chart/angular";
-// import { NativeScriptUIDataFormModule } from "nativescript-telerik-ui-pro/dataform/angular";
-// import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-telerik-ui-pro/autocomplete/angular";
-// import { NativeScriptUIGaugesModule } from "nativescript-telerik-ui-pro/gauges/angular";
+// --- The built-in 'nativescript-pro-ui' modules, if you are not using 'lazy' loading, uncomment and import the below modules into the 'imports' of the first ngModule (AppModule) of the app. 
+// import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
+// import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
+// import { NativeScriptUICalendarModule } from "nativescript-pro-ui/calendar/angular";
+// import { NativeScriptUIChartModule } from "nativescript-pro-ui/chart/angular";
+// import { NativeScriptUIDataFormModule } from "nativescript-pro-ui/dataform/angular";
+// import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-pro-ui/autocomplete/angular";
+// import { NativeScriptUIGaugesModule } from "nativescript-pro-ui/gauges/angular";
 
-import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
+import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
 import { NativeScriptRouterModule, NSModuleFactoryLoader } from "nativescript-angular/router";

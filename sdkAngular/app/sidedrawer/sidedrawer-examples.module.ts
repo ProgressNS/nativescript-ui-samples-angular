@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUISideDrawerModule } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
 
 import { SideDrawerEventsComponent } from './events/events.component';
 import { SideDrawerGettingStartedComponent } from './getting-started/getting-started.component';

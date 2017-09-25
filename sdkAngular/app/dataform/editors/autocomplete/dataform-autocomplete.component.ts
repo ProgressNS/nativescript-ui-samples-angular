@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Booking } from "../../data-services/booking";
-import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-telerik-ui-pro/dataform"
-import { RadDataFormComponent } from "nativescript-telerik-ui-pro/dataform/angular"
+import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-pro-ui/dataform"
+import { RadDataFormComponent } from "nativescript-pro-ui/dataform/angular"
 var data = require("../../data-services/airports.json")
 
 @Component({

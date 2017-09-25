@@ -1,6 +1,6 @@
 // >> gauges-animations-angular
 import { Component, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
-import { RadialNeedle } from "nativescript-telerik-ui-pro/gauges";
+import { RadialNeedle } from "nativescript-pro-ui/gauges";
 
 @Component({
     moduleId: module.id,
