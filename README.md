@@ -16,6 +16,8 @@ The Progress NativeScript UI samples app resides in the **sdkAngular** folder at
 - DataForm
 - ListView
 - SideDrawer
+- Gauges
+- AutoCompleteTextView
 
 ## Running **Progress NativeScript UI** sample app
 Make sure you are using NativeScript 3.0+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
