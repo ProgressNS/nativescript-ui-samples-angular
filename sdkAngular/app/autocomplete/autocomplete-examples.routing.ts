@@ -17,6 +17,7 @@ import { AutoCompleteAppendModeComponent } from './suggest-mode/autocomplete-app
 import { AutoCompleteSuggestAppendModeComponent } from './suggest-mode/autocomplete-suggest-append-mode.component';
 import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-suggest-mode.component';
 import { AutoCompleteHintComponent } from './hint/autocomplete-hint.component';
+import { AutocompletePreselectedTokensComponent } from './preselected-tokens/autocomplete-preselected-tokens.component';
 
 export const routes: Routes = [
   { path: 'AutoCompleteContainsModeComponent', component: AutoCompleteContainsModeComponent },
@@ -34,5 +35,6 @@ export const routes: Routes = [
   { path: 'AutoCompleteAppendModeComponent', component: AutoCompleteAppendModeComponent },
   { path: 'AutoCompleteSuggestAppendModeComponent', component: AutoCompleteSuggestAppendModeComponent },
   { path: 'AutocompleteSuggestModeComponent', component: AutocompleteSuggestModeComponent },
-  { path: 'AutoCompleteHintComponent', component: AutoCompleteHintComponent }
+  { path: 'AutoCompleteHintComponent', component: AutoCompleteHintComponent },
+  { path: 'AutocompletePreselectedTokensComponent', component: AutocompletePreselectedTokensComponent }
 ];

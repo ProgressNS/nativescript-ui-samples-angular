@@ -733,6 +733,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Hint",
                         "path": "AutoCompleteHintComponent/AutoCompleteHintComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Preselected items",
+                        "path": "AutocompletePreselectedTokensComponent/AutocompletePreselectedTokensComponent",
+                        "subItems": []
                     }]
             },
             {
