@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from "@angular/core";
 import { Page } from "ui/page";
-import { RadCalendar, CalendarMonthViewStyle, CalendarWeekViewStyle, CalendarYearViewStyle, CalendarMonthNamesViewStyle, CalendarViewMode } from "nativescript-pro-ui/calendar";
+import { RadCalendar, CalendarMonthViewStyle, CalendarWeekViewStyle, CalendarYearViewStyle, CalendarMonthNamesViewStyle, CalendarViewMode, CalendarDayViewStyle } from "nativescript-pro-ui/calendar";
 import { CalendarStylesService } from "../calendar-styles.service";
 import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
@@ -18,68 +18,78 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
     private _monthViewStyle: CalendarMonthViewStyle;
     private _weekViewStyle: CalendarWeekViewStyle;
     private _yearViewStyle: CalendarYearViewStyle;
+    private _dayViewStyle: CalendarDayViewStyle;
     private _monthNamesViewStyle: CalendarMonthNamesViewStyle;
     private _optionsParamName: string;
     private _viewMode;
     constructor(private _page: Page, private _calendarService: CalendarStylesService,
         private _optionsService: OptionsService, private _router: Router) {
         super();
-         if (applicationModule.ios) {
+        if (applicationModule.ios) {
             this._page.on("navigatingTo", this.onNavigatingTo, this);
             this._optionsParamName = "eventsViewMode";
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
-            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] };
+            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year", "Day"] };
         }
         this._viewMode = CalendarViewMode.Month;
     }
-    
+
     // >> calendar-styling-init
     ngOnInit() {
         this._monthViewStyle = this._calendarService.getMonthViewStyle();
         this._monthNamesViewStyle = this._calendarService.getMonthNamesViewStyle();
         this._weekViewStyle = this._calendarService.getWeekViewStyle();
         this._yearViewStyle = this._calendarService.getYearViewStyle();
+        this._dayViewStyle = this._calendarService.getDayViewStyle();
     }
     // << calendar-styling-init
 
     get viewMode() {
         return this._viewMode;
     }
-    
+
     get monthViewStyle(): CalendarMonthViewStyle {
         return this._monthViewStyle;
     }
-    
+
     get monthNamesViewStyle(): CalendarMonthNamesViewStyle {
         return this._monthNamesViewStyle;
     }
-    
+
     get yearViewStyle(): CalendarYearViewStyle {
         return this._yearViewStyle;
     }
-    
+
     get weekViewStyle(): CalendarWeekViewStyle {
         return this._weekViewStyle;
     }
-    
+
+    get dayViewStyle(): CalendarDayViewStyle {
+        return this._dayViewStyle;
+    }
+
     onYearTap() {
         this._viewMode = CalendarViewMode.Year;
     }
-    
-    onMonthNamesTap() { 
+
+    onMonthNamesTap() {
         this._viewMode = CalendarViewMode.MonthNames;
     }
-    
-    onMonthTap() { 
+
+    onMonthTap() {
         this._viewMode = CalendarViewMode.Month;
     }
-    
+
     onWeekTap() {
         this._viewMode = CalendarViewMode.Week;
     }
-    
-     public onNavigatingTo(args) {
+
+    onDayTap() {
+        this._viewMode = CalendarViewMode.Day;
+    }
+
+    public onNavigatingTo(args) {
         if (args.isBackNavigation) {
             if (this._optionsService.paramName === this._optionsParamName) {
                 switch (this._optionsService.paramValue) {
@@ -98,6 +108,10 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
                     case "Year":
                         this.onYearTap();
                         this.navigationParameters.selectedIndex = 3;
+                        break;
+                    case "Day":
+                        this.onDayTap();
+                        this.navigationParameters.selectedIndex = 4;
                         break;
                     default:
                         break;

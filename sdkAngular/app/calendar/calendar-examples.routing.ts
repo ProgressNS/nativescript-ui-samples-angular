@@ -10,6 +10,7 @@ import { CalendarProgrammaticControlComponent } from './programmatic-control/cal
 import { CalendarSelectionModesComponent } from './selection-modes/calendar-selection-modes.component';
 import { CalendarTransitionModesComponent } from './transition-modes/calendar-transition-modes.component';
 import { CalendarViewModesComponent } from './view-modes/calendar-view-modes.component';
+import { CalendarDayViewComponent } from './day-view/calendar-day-view.component';
 
 export const routes: Routes = [
   { path: 'localization', component: CalendarLocalizationComponent },
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: 'programmatic', component: CalendarProgrammaticControlComponent },
   { path: 'selection-modes', component: CalendarSelectionModesComponent },
   { path: 'transition-modes', component: CalendarTransitionModesComponent },
-  { path: 'view-modes', component: CalendarViewModesComponent }
+  { path: 'view-modes', component: CalendarViewModesComponent },
+  { path: 'day-view', component: CalendarDayViewComponent }
 ];

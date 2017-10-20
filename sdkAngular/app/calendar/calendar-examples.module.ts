@@ -13,6 +13,7 @@ import { CalendarProgrammaticControlComponent } from './programmatic-control/cal
 import { CalendarSelectionModesComponent } from './selection-modes/calendar-selection-modes.component';
 import { CalendarTransitionModesComponent } from './transition-modes/calendar-transition-modes.component';
 import { CalendarViewModesComponent } from './view-modes/calendar-view-modes.component';
+import { CalendarDayViewComponent } from './day-view/calendar-day-view.component';
 import { routes } from './calendar-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
 
@@ -34,7 +35,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         CalendarProgrammaticControlComponent,
         CalendarSelectionModesComponent,
         CalendarTransitionModesComponent,
-        CalendarViewModesComponent
+        CalendarViewModesComponent,
+        CalendarDayViewComponent
     ]
 })
 export class CalendarExamplesModule { }

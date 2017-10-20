@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CalendarEvent } from 'nativescript-pro-ui/calendar' 
 import { Color } from "color";
-import { CalendarMonthViewStyle, DayCellStyle, CellStyle, CalendarWeekViewStyle, CalendarYearViewStyle, MonthCellStyle, CalendarMonthNamesViewStyle } from "nativescript-pro-ui/calendar";
+import { CalendarMonthViewStyle, DayCellStyle, CellStyle, CalendarWeekViewStyle, CalendarYearViewStyle, MonthCellStyle, CalendarMonthNamesViewStyle, CalendarDayViewStyle, DayEventsViewStyle, AllDayEventsViewStyle } from "nativescript-pro-ui/calendar";
 
 // >> calendar-styling-service
 @Injectable()
@@ -244,6 +244,119 @@ export class CalendarStylesService {
         yearViewStyle.monthCellStyle = monthCellStyle;
         
         return yearViewStyle;
+    }
+
+    getDayViewStyle(): CalendarDayViewStyle {
+        var dayViewStyle = new CalendarDayViewStyle();
+        dayViewStyle.backgroundColor = "#00000000";
+
+        var todayCellStyle = new DayCellStyle();
+        todayCellStyle.cellBackgroundColor = "#66bbae";
+        todayCellStyle.cellBorderWidth = 2;
+        todayCellStyle.cellBorderColor = "#f1e8ca";
+        todayCellStyle.cellTextColor = "#5b391e";
+        todayCellStyle.cellTextFontName = "Times New Roman";
+        todayCellStyle.cellTextFontStyle = "Bold";
+        todayCellStyle.cellTextSize = 14;
+        dayViewStyle.todayCellStyle = todayCellStyle;
+        
+        var dayCellStyle = new DayCellStyle();
+        dayCellStyle.showEventsText = true;
+        dayCellStyle.eventTextColor = "White";
+        dayCellStyle.eventFontName = "Times New Roman";
+        dayCellStyle.eventFontStyle = "BoldItalic";
+        dayCellStyle.eventTextSize = 8;
+        dayCellStyle.cellAlignment = "VerticalCenter";
+        dayCellStyle.cellPaddingHorizontal = 10;
+        dayCellStyle.cellPaddingVertical = 5;
+        dayCellStyle.cellBackgroundColor = "#9ebd9e";
+        dayCellStyle.cellBorderWidth = 1;
+        dayCellStyle.cellBorderColor = "#f1e8ca";
+        dayCellStyle.cellTextColor = "#745151";
+        dayCellStyle.cellTextFontName = "Times New Roman";
+        dayCellStyle.cellTextFontStyle = "Bold";
+        dayCellStyle.cellTextSize = 10;
+        dayViewStyle.dayCellStyle = dayCellStyle;
+        
+        var weekendCellStyle = new DayCellStyle();
+        weekendCellStyle.eventTextColor = "BlueViolet";
+        weekendCellStyle.eventFontName = "Times New Roman";
+        weekendCellStyle.eventFontStyle = "BoldItalic";
+        weekendCellStyle.eventTextSize = 8;
+        weekendCellStyle.cellAlignment = "VerticalCenter";
+        weekendCellStyle.cellPaddingHorizontal = 10;
+        weekendCellStyle.cellPaddingVertical = 5;
+        weekendCellStyle.cellBackgroundColor = "#dd855c";
+        weekendCellStyle.cellBorderWidth = 1;
+        weekendCellStyle.cellBorderColor = "#f1e8ca";
+        weekendCellStyle.cellTextColor = "#745151";
+        weekendCellStyle.cellTextFontName = "Times New Roman";
+        weekendCellStyle.cellTextFontStyle = "Bold";
+        weekendCellStyle.cellTextSize = 12;
+        dayViewStyle.weekendCellStyle = weekendCellStyle;
+        
+        var selectedCellStyle = new DayCellStyle();
+        selectedCellStyle.eventTextColor = "Blue";
+        selectedCellStyle.eventFontName = "Times New Roman";
+        selectedCellStyle.eventFontStyle = "Bold";
+        selectedCellStyle.eventTextSize = 8;
+        selectedCellStyle.cellAlignment = "VerticalCenter";
+        selectedCellStyle.cellPaddingHorizontal = 10;
+        selectedCellStyle.cellPaddingVertical = 5;
+        selectedCellStyle.cellBackgroundColor = "#dbcbbb";
+        selectedCellStyle.cellBorderWidth = 2;
+        selectedCellStyle.cellBorderColor = "#745151";
+        selectedCellStyle.cellTextColor = "Black";
+        selectedCellStyle.cellTextFontName = "Times New Roman";
+        selectedCellStyle.cellTextFontStyle = "Bold";
+        selectedCellStyle.cellTextSize = 18;
+        dayViewStyle.selectedDayCellStyle = selectedCellStyle;
+        
+        var weekNumberCellStyle = new CellStyle();
+        weekNumberCellStyle.cellBackgroundColor = "#bbcbdb";
+        weekNumberCellStyle.cellBorderWidth = 1;
+        weekNumberCellStyle.cellBorderColor = "#f1e8ca";
+        weekNumberCellStyle.cellTextColor = "#745151";
+        weekNumberCellStyle.cellTextFontName = "Times New Roman";
+        weekNumberCellStyle.cellTextFontStyle = "Bold";
+        weekNumberCellStyle.cellTextSize = 8;
+        dayViewStyle.weekNumberCellStyle = weekNumberCellStyle;
+        
+        var dayNameCellStyle = new CellStyle();
+        dayNameCellStyle.cellBackgroundColor = "#f1e8ca";
+        dayNameCellStyle.cellBorderWidth = 1;
+        dayNameCellStyle.cellBorderColor = "#745151";
+        dayNameCellStyle.cellTextColor = "#745151";
+        dayNameCellStyle.cellTextFontName = "Times New Roman";
+        dayNameCellStyle.cellTextFontStyle = "Bold";
+        dayNameCellStyle.cellTextSize = 10;
+        dayViewStyle.dayNameCellStyle = dayNameCellStyle;
+        
+        var titleCellStyle = new DayCellStyle();
+        titleCellStyle.cellBackgroundColor = "#bbcbdb";
+        titleCellStyle.cellBorderWidth = 1;
+        titleCellStyle.cellBorderColor = "#745151";
+        titleCellStyle.cellTextColor = "#dd855c";
+        titleCellStyle.cellTextFontName = "Times New Roman";
+        titleCellStyle.cellTextFontStyle = "Bold";
+        titleCellStyle.cellTextSize = 18;
+        dayViewStyle.titleCellStyle = titleCellStyle;
+        
+        var dayEventsViewStyle = new DayEventsViewStyle();
+        dayEventsViewStyle.backgroundColor = "#440000ff";
+        dayEventsViewStyle.timeLabelFormat = "HH:mm";
+        dayEventsViewStyle.timeLabelTextColor = "#0023ff";
+        dayEventsViewStyle.timeLabelTextSize = 12;
+        dayViewStyle.dayEventsViewStyle = dayEventsViewStyle;
+
+        var allDayEventsViewStyle = new AllDayEventsViewStyle();
+        allDayEventsViewStyle.backgroundColor = "#00ffff";
+        allDayEventsViewStyle.allDayText = "DAILY";
+        allDayEventsViewStyle.allDayTextIsVisible = true;
+        allDayEventsViewStyle.allDayTextSize = 8;
+        dayViewStyle.allDayEventsViewStyle = allDayEventsViewStyle;
+        
+        return dayViewStyle;
     }
     
     getMonthNamesViewStyle(): CalendarMonthNamesViewStyle {

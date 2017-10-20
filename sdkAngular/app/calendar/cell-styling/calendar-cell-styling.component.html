@@ -5,6 +5,7 @@
         <ActionItem *tkIfAndroid text="Week" android.position="popup" (tap)="onWeekTap()"></ActionItem>
         <ActionItem *tkIfAndroid text="Year" android.position="popup" (tap)="onYearTap()"></ActionItem>
         <ActionItem *tkIfAndroid text="Month names" android.position="popup" (tap)="onMonthNamesTap()"></ActionItem>
+        <ActionItem *tkIfAndroid text="Day" android.position="popup" (tap)="onDayTap()"></ActionItem>
 
         <ActionItem *tkIfIOS text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
 </ActionBar>
@@ -12,6 +13,6 @@
 <!-- >> angular-calendar-styling-html -->
 <StackLayout>
         <RadCalendar [monthViewStyle]="monthViewStyle" [weekViewStyle]="weekViewStyle" [monthNamesViewStyle]="monthNamesViewStyle"
-                [yearViewStyle]="yearViewStyle" [viewMode]="viewMode"></RadCalendar>
+                [yearViewStyle]="yearViewStyle" [dayViewStyle]="dayViewStyle" [viewMode]="viewMode"></RadCalendar>
 </StackLayout>
 <!-- << angular-calendar-styling-html -->

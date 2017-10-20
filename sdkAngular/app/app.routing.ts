@@ -223,6 +223,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "CalendarDayViewComponent",
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
+        data: {
+            "title": "Day view"
+        }
+    },
+    {
         path: "CalendarEventsViewModesComponent",
         loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {

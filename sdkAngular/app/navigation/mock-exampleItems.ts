@@ -440,6 +440,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Events view modes",
                         "path": "CalendarEventsViewModesComponent/events-view-modes",
                         "subItems": []
+                    },
+                    {
+                        "title": "Day view",
+                        "path": "CalendarDayViewComponent/day-view",
+                        "subItems": []
                     }
                 ]
             },
