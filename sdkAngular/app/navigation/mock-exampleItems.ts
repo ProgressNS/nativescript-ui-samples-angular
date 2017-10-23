@@ -180,6 +180,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Date time axis",
                                 "path": "ChartAxesDateTimeComponent/ChartAxesDateTimeComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Label visibility",
+                                "path": "ChartLabelVisibilityComponent/ChartLabelVisibilityComponent",
+                                "subItems": []
                             }
                         ]
                     },

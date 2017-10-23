@@ -412,6 +412,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ChartLabelVisibilityComponent",
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Label visibility"
+        }
+    },
+    {
         path: "ChartAxesMultipleComponent",
         loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {

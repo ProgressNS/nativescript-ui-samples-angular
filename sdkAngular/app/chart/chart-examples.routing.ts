@@ -7,6 +7,7 @@ import { ChartAxesCustomizationComponent } from './axes/customization/chart-axes
 import { ChartAxesDateTimeComponent } from './axes/date-time-axes/chart-axes-date-time.component';
 import { ChartAxesMultipleComponent } from './axes/multiple/chart-axes-multiple.component';
 import { ChartAxesNegativeValuesComponent } from './axes/negative-values/chart-axes-negative-values.component';
+import { ChartLabelVisibilityComponent } from './axes/label-visibility/chart-label-visibility.component';
 import { ChartBehaviorsChartPieSelectionComponent } from './behaviors/chart-behaviors-chart-pie-selection.component';
 import { ChartBehaviorsDatapointSelectionComponent } from './behaviors/chart-behaviors-datapoint-selection.component';
 import { ChartBehaviorsPanZoomComponent } from './behaviors/chart-behaviors-pan-zoom.component';
@@ -66,5 +67,6 @@ export const routes: Routes = [
   { path: 'ChartStylingLabelComponent', component: ChartStylingLabelComponent },
   { path: 'ChartStylingPieSeriesComponent', component: ChartStylingPieSeriesComponent },
   { path: 'ChartStylingSelectionComponent', component: ChartStylingSelectionComponent },
-  { path: 'ChartStylingSeriesComponent', component: ChartStylingSeriesComponent }
+  { path: 'ChartStylingSeriesComponent', component: ChartStylingSeriesComponent },
+  { path: 'ChartLabelVisibilityComponent', component: ChartLabelVisibilityComponent }
 ];
