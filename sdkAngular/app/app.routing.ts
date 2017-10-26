@@ -737,7 +737,7 @@ let APP_ROUTES: Routes = [
         path: "AutocompletePreselectedTokensComponent",
         loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
-            "title": "Getting started"
+            "title": "Preselected items"
         }
     },
     {
