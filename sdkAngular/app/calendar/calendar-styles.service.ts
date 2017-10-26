@@ -248,13 +248,16 @@ export class CalendarStylesService {
 
     getDayViewStyle(): CalendarDayViewStyle {
         var dayViewStyle = new CalendarDayViewStyle();
-        dayViewStyle.backgroundColor = "#00000000";
+        dayViewStyle.backgroundColor = "#dd855c";
+        dayViewStyle.showWeekNumbers = true;
+        dayViewStyle.showDayNames = true;
+        dayViewStyle.showTitle = true;
 
         var todayCellStyle = new DayCellStyle();
-        todayCellStyle.cellBackgroundColor = "#66bbae";
-        todayCellStyle.cellBorderWidth = 2;
+        todayCellStyle.cellBackgroundColor = "#dd855c";
+        todayCellStyle.cellBorderWidth = 1;
         todayCellStyle.cellBorderColor = "#f1e8ca";
-        todayCellStyle.cellTextColor = "#5b391e";
+        todayCellStyle.cellTextColor = "#745151";
         todayCellStyle.cellTextFontName = "Times New Roman";
         todayCellStyle.cellTextFontStyle = "Bold";
         todayCellStyle.cellTextSize = 14;
@@ -286,7 +289,7 @@ export class CalendarStylesService {
         weekendCellStyle.cellAlignment = "VerticalCenter";
         weekendCellStyle.cellPaddingHorizontal = 10;
         weekendCellStyle.cellPaddingVertical = 5;
-        weekendCellStyle.cellBackgroundColor = "#dd855c";
+        weekendCellStyle.cellBackgroundColor = "#f1e8ca";
         weekendCellStyle.cellBorderWidth = 1;
         weekendCellStyle.cellBorderColor = "#f1e8ca";
         weekendCellStyle.cellTextColor = "#745151";
@@ -303,9 +306,9 @@ export class CalendarStylesService {
         selectedCellStyle.cellAlignment = "VerticalCenter";
         selectedCellStyle.cellPaddingHorizontal = 10;
         selectedCellStyle.cellPaddingVertical = 5;
-        selectedCellStyle.cellBackgroundColor = "#dbcbbb";
+        selectedCellStyle.cellBackgroundColor = "#745151";
         selectedCellStyle.cellBorderWidth = 2;
-        selectedCellStyle.cellBorderColor = "#745151";
+        selectedCellStyle.cellBorderColor = "#f1e8ca";
         selectedCellStyle.cellTextColor = "Black";
         selectedCellStyle.cellTextFontName = "Times New Roman";
         selectedCellStyle.cellTextFontStyle = "Bold";
@@ -333,17 +336,17 @@ export class CalendarStylesService {
         dayViewStyle.dayNameCellStyle = dayNameCellStyle;
         
         var titleCellStyle = new DayCellStyle();
-        titleCellStyle.cellBackgroundColor = "#bbcbdb";
+        titleCellStyle.cellBackgroundColor = "#dd855c";
         titleCellStyle.cellBorderWidth = 1;
-        titleCellStyle.cellBorderColor = "#745151";
-        titleCellStyle.cellTextColor = "#dd855c";
+        titleCellStyle.cellBorderColor = "#f1e8ca";
+        titleCellStyle.cellTextColor = "#745151";
         titleCellStyle.cellTextFontName = "Times New Roman";
         titleCellStyle.cellTextFontStyle = "Bold";
         titleCellStyle.cellTextSize = 18;
         dayViewStyle.titleCellStyle = titleCellStyle;
         
         var dayEventsViewStyle = new DayEventsViewStyle();
-        dayEventsViewStyle.backgroundColor = "#440000ff";
+        dayEventsViewStyle.backgroundColor = "#B5B5F9";
         dayEventsViewStyle.timeLabelFormat = "HH:mm";
         dayEventsViewStyle.timeLabelTextColor = "#0023ff";
         dayEventsViewStyle.timeLabelTextSize = 12;
@@ -353,7 +356,6 @@ export class CalendarStylesService {
         allDayEventsViewStyle.backgroundColor = "#00ffff";
         allDayEventsViewStyle.allDayText = "DAILY";
         allDayEventsViewStyle.allDayTextIsVisible = true;
-        allDayEventsViewStyle.allDayTextSize = 8;
         dayViewStyle.allDayEventsViewStyle = allDayEventsViewStyle;
         
         return dayViewStyle;
