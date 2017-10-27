@@ -2,6 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
 
 import { ListViewGettingStartedComponent } from './getting-started/listview-getting-started.component';
@@ -40,6 +41,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         NativeScriptModule,        
         CommonDirectivesModule,
         NativeScriptUIListViewModule,
+        NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forChild(routes)
     ],
