@@ -1,7 +1,7 @@
 {
   "isReadOnly": false,
-  "commitMode": "immediate",
-  "validationMode": "immediate",
+  "commitMode": "Immediate",
+  "validationMode": "Immediate",
   "propertyAnnotations":
   [
     {

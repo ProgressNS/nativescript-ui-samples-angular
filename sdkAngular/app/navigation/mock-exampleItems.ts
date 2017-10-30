@@ -180,6 +180,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "Date time axis",
                                 "path": "ChartAxesDateTimeComponent/ChartAxesDateTimeComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Label visibility",
+                                "path": "ChartLabelVisibilityComponent/ChartLabelVisibilityComponent",
+                                "subItems": []
                             }
                         ]
                     },
@@ -439,6 +444,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Events view modes",
                         "path": "CalendarEventsViewModesComponent/events-view-modes",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Day view",
+                        "path": "CalendarDayViewComponent/day-view",
                         "subItems": []
                     }
                 ]
@@ -727,6 +737,16 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Read Only",
                         "path": "AutoCompleteReadOnlyComponent/AutoCompleteReadOnlyComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Hint",
+                        "path": "AutoCompleteHintComponent/AutoCompleteHintComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Preselected items",
+                        "path": "AutocompletePreselectedTokensComponent/AutocompletePreselectedTokensComponent",
                         "subItems": []
                     }]
             },

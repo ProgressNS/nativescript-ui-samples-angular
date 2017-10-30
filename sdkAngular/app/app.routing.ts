@@ -223,6 +223,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "CalendarDayViewComponent",
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
+        data: {
+            "title": "Day view"
+        }
+    },
+    {
         path: "CalendarEventsViewModesComponent",
         loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
@@ -402,6 +409,13 @@ let APP_ROUTES: Routes = [
         loadChildren: './chart/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Date time axis"
+        }
+    },
+    {
+        path: "ChartLabelVisibilityComponent",
+        loadChildren: './chart/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Label visibility"
         }
     },
     {
@@ -720,6 +734,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "AutocompletePreselectedTokensComponent",
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
+        data: {
+            "title": "Preselected items"
+        }
+    },
+    {
         path: "AutoCompleteLayoutsRuntimeComponent",
         loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
@@ -808,6 +829,13 @@ let APP_ROUTES: Routes = [
         loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
         data: {
             "title": "Suggest & Append"
+        }
+    },
+    {
+        path: "AutoCompleteHintComponent",
+        loadChildren: './autocomplete/autocomplete-examples.module#AutoCompleteExamplesModule',
+        data: {
+            "title": "Hint"
         }
     },
     {

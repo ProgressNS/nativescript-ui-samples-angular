@@ -25,15 +25,15 @@ export class CalendarViewModesComponent extends OptionsExampleBase {
             this._optionsParamName = "eventsViewMode";
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
-            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year"] };
+            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: ["Week", "Month", "Month names", "Year", "Day"] };
         }
         this._viewMode = CalendarViewMode.Month;
     }
-    
+
     get viewMode() {
         return this._viewMode;
     }
-   
+
     onWeekTap() {
         this._viewMode = CalendarViewMode.Week;
     }
@@ -48,6 +48,10 @@ export class CalendarViewModesComponent extends OptionsExampleBase {
 
     onYearTap() {
         this._viewMode = CalendarViewMode.Year;
+    }
+
+    onDayTap() {
+        this._viewMode = CalendarViewMode.Day;
     }
 
     public onNavigatingTo(args) {
@@ -69,6 +73,10 @@ export class CalendarViewModesComponent extends OptionsExampleBase {
                     case "Year":
                         this.onYearTap();
                         this.navigationParameters.selectedIndex = 3;
+                        break;
+                    case "Day":
+                        this.onDayTap();
+                        this.navigationParameters.selectedIndex = 4;
                         break;
                     default:
                         break;

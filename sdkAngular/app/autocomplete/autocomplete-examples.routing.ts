@@ -16,6 +16,8 @@ import { AutoCompleteRemoteComponent } from './remote-data-fetch/autocomplete-re
 import { AutoCompleteAppendModeComponent } from './suggest-mode/autocomplete-append-mode.component';
 import { AutoCompleteSuggestAppendModeComponent } from './suggest-mode/autocomplete-suggest-append-mode.component';
 import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-suggest-mode.component';
+import { AutoCompleteHintComponent } from './hint/autocomplete-hint.component';
+import { AutocompletePreselectedTokensComponent } from './preselected-tokens/autocomplete-preselected-tokens.component';
 
 export const routes: Routes = [
   { path: 'AutoCompleteContainsModeComponent', component: AutoCompleteContainsModeComponent },
@@ -32,5 +34,7 @@ export const routes: Routes = [
   { path: 'AutoCompleteRemoteComponent', component: AutoCompleteRemoteComponent },
   { path: 'AutoCompleteAppendModeComponent', component: AutoCompleteAppendModeComponent },
   { path: 'AutoCompleteSuggestAppendModeComponent', component: AutoCompleteSuggestAppendModeComponent },
-  { path: 'AutocompleteSuggestModeComponent', component: AutocompleteSuggestModeComponent }
+  { path: 'AutocompleteSuggestModeComponent', component: AutocompleteSuggestModeComponent },
+  { path: 'AutoCompleteHintComponent', component: AutoCompleteHintComponent },
+  { path: 'AutocompletePreselectedTokensComponent', component: AutocompletePreselectedTokensComponent }
 ];
