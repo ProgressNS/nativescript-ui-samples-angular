@@ -11,10 +11,10 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-ios": {
-      "version": "3.2.0"
+      "version": "3.3.0"
     },
     "tns-android": {
-      "version": "3.2.0"
+      "version": "3.3.0"
     }
   },
   "dependencies": {
@@ -26,13 +26,13 @@
     "@angular/platform-browser": "4.4.4",
     "@angular/platform-browser-dynamic": "4.4.4",
     "@angular/router": "4.4.4",
-    "nativescript-angular": "next",
+    "nativescript-angular": "4.4.1",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
     "nativescript-pro-ui": "next",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~5.3.0",
-    "tns-core-modules": "3.2.0",
+    "tns-core-modules": "3.3.0",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
@@ -54,10 +54,10 @@
     "mocha": "^3.3.0",
     "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-typescript": "0.5.1",
-    "nativescript-dev-webpack": "next",
+    "nativescript-dev-webpack": "0.8.0",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.0.2",
-    "tns-platform-declarations": "3.2.0",
+    "tns-platform-declarations": "3.3.0",
     "tslint": "^5.1.0",
     "tslib": "1.7.1",
     "typescript": "~2.3.2",
