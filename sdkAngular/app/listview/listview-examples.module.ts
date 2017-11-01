@@ -26,6 +26,7 @@ import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
 import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
 import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
+import { ListViewScrollToIndexInitialComponent } from './scroll-to-index/listview-scroll-to-index-initial.component';
 import { ListViewSelectionStatesComponent } from './selection-states/listview-selection-states.component';
 import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-swipe-actions-multiple.component';
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
@@ -71,7 +72,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewSwipeActionsMultipleComponent,
         ListViewSwipeActionsThresholdsComponent,
         ListViewSwipeActionsComponent,
-        ListViewSwipeDisableComponent
+        ListViewSwipeDisableComponent,
+        ListViewScrollToIndexInitialComponent
     ]
 })
 export class ListViewExamplesModule { }

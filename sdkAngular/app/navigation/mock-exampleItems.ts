@@ -356,6 +356,11 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                                 "title": "In horizontal direction",
                                 "path": "ListViewScrollToIndexHorizontalComponent/ListViewScrollToIndexHorizontalComponent",
                                 "subItems": []
+                            },
+                            {
+                                "title": "Initially scrolled",
+                                "path": "ListViewScrollToIndexInitialComponent/ListViewScrollToIndexInitialComponent",
+                                "subItems": []
                             }
                         ]
                     },
