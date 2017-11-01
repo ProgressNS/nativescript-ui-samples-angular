@@ -22,6 +22,7 @@ import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
 import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
 import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
+import { ListViewScrollToIndexInitialComponent } from './scroll-to-index/listview-scroll-to-index-initial.component';
 import { ListViewSelectionStatesComponent } from './selection-states/listview-selection-states.component';
 import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-swipe-actions-multiple.component';
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
@@ -54,5 +55,6 @@ export const routes: Routes = [
   { path: 'ListViewSwipeActionsMultipleComponent', component: ListViewSwipeActionsMultipleComponent },
   { path: 'ListViewSwipeActionsThresholdsComponent', component: ListViewSwipeActionsThresholdsComponent },
   { path: 'ListViewSwipeActionsComponent', component: ListViewSwipeActionsComponent },
-  { path: 'ListViewSwipeDisableComponent', component: ListViewSwipeDisableComponent }
+  { path: 'ListViewSwipeDisableComponent', component: ListViewSwipeDisableComponent },
+  { path: 'ListViewScrollToIndexInitialComponent', component: ListViewScrollToIndexInitialComponent }
 ];

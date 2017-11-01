@@ -482,6 +482,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewScrollToIndexInitialComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Initially scrolled"
+        }
+    },
+    {
         path: "ListViewScrollEventsComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
