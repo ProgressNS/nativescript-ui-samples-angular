@@ -1,0 +1,35 @@
+<!-- >> listview-data-operations-grouping-angular-xml -->
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button [text]="isEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping($event)"></Button>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1" #myListView [groupingFunction]="myGroupingFunc">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkListViewHeader>
+            <GridLayout backgroundColor="#65a565">
+                <Label [text]="category"></Label>
+            </GridLayout>
+        </ng-template>
+        <ng-template tkListViewFooter>
+            <GridLayout backgroundColor="#7fff7f">
+                <Label [text]="category"></Label>
+            </GridLayout>
+        </ng-template>
+        <ng-template tkListViewHeader>
+            <GridLayout backgroundColor="#65a565">
+                <Label text="This is the list header"></Label>
+            </GridLayout>
+        </ng-template>
+        <ng-template tkListViewFooter>
+            <GridLayout backgroundColor="#7fff7f">
+                <Label text="This is the list footer"></Label>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
+<!-- << listview-data-operations-grouping-angular-xml -->

@@ -27,6 +27,34 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewDataOperationsFilteringComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Filtering"
+        }
+    },
+    {
+        path: "ListViewDataOperationsSortingComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Sorting"
+        }
+    },
+    {
+        path: "ListViewDataOperationsGroupingComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Grouping"
+        }
+    },
+    {
+        path: "ListViewDataOperationsMultipleComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Multiple operations"
+        }
+    },
+    {
         path: "ListViewHeaderFooterComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {

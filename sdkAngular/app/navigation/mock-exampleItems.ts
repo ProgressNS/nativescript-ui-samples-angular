@@ -216,6 +216,32 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Data Operations",
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Filtering",
+                                "path": "ListViewDataOperationsFilteringComponent/ListViewDataOperationsFilteringComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Sorting",
+                                "path": "ListViewDataOperationsSortingComponent/ListViewDataOperationsSortingComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Grouping",
+                                "path": "ListViewDataOperationsGroupingComponent/ListViewDataOperationsGroupingComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Multiple operations",
+                                "path": "ListViewDataOperationsMultipleComponent/ListViewDataOperationsMultipleComponent",
+                                "subItems": []
+                            }
+                        ]
+                    },
+                    {
                         "title": "Multiple Item Templates",
                         "path": "ListViewMultipleTemplatesComponent/ListViewMultipleTemplatesComponent",
                         "subItems": []

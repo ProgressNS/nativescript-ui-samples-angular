@@ -28,6 +28,10 @@ import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
 import { ListViewSwipeActionsComponent } from './swipe-actions/listview-swipe-actions.component';
 import { ListViewSwipeDisableComponent } from './swipe-actions/listview-swipe-disable.component';
+import { ListViewDataOperationsFilteringComponent } from './filtering/listview-data-operations-filtering.component';
+import { ListViewDataOperationsGroupingComponent } from './grouping/listview-data-operations-grouping.component';
+import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
+import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
 
 export const routes: Routes = [
   { path: 'ListViewGettingStartedComponent', component: ListViewGettingStartedComponent },
@@ -56,5 +60,9 @@ export const routes: Routes = [
   { path: 'ListViewSwipeActionsThresholdsComponent', component: ListViewSwipeActionsThresholdsComponent },
   { path: 'ListViewSwipeActionsComponent', component: ListViewSwipeActionsComponent },
   { path: 'ListViewSwipeDisableComponent', component: ListViewSwipeDisableComponent },
-  { path: 'ListViewScrollToIndexInitialComponent', component: ListViewScrollToIndexInitialComponent }
+  { path: 'ListViewScrollToIndexInitialComponent', component: ListViewScrollToIndexInitialComponent },
+  { path: 'ListViewDataOperationsFilteringComponent', component: ListViewDataOperationsFilteringComponent },
+  { path: 'ListViewDataOperationsGroupingComponent', component: ListViewDataOperationsGroupingComponent },
+  { path: 'ListViewDataOperationsMultipleComponent', component: ListViewDataOperationsMultipleComponent },
+  { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent }
 ];
