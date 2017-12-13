@@ -294,8 +294,29 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                     },
                     {
                         "title": "Load on Demand",
-                        "path": "ListViewLoadOnDemandComponent/ListViewLoadOnDemandComponent",
-                        "subItems": []
+                        "path": "",
+                        "subItems": [
+                            {
+                                "title": "Manual with Fixed Item Size",
+                                "path": "ListViewFixedSizeManualComponent/ListViewFixedSizeManualComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Auto with Fixed Item Size",
+                                "path": "ListViewFixedSizeAutoComponent/ListViewFixedSizeAutoComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Manual with Variable Item Size",
+                                "path": "ListViewDynamicSizeManualComponent/ListViewDynamicSizeManualComponent",
+                                "subItems": []
+                            },
+                            {
+                                "title": "Auto with Variable Item Size",
+                                "path": "ListViewDynamicSizeAutoComponent/ListViewDynamicSizeAutoComponent",
+                                "subItems": []
+                            }
+                        ]
                     },
                     {
                         "title": "Observable Array",

@@ -55,13 +55,6 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListViewLoadOnDemandComponent",
-        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
-        data: {
-            "title": "Load on Demand"
-        }
-    },
-    {
         path: "ListViewPullToRefreshComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
@@ -129,6 +122,34 @@ let APP_ROUTES: Routes = [
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item separators"
+        }
+    },
+    {
+        path: "ListViewDynamicSizeAutoComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Auto with Dynamic Size"
+        }
+    },
+    {
+        path: "ListViewDynamicSizeManualComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Manual with Dynamic Size"
+        }
+    },
+    {
+        path: "ListViewFixedSizeAutoComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Auto with Fixed Size"
+        }
+    },
+    {
+        path: "ListViewFixedSizeManualComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Manual with Fixed Size"
         }
     },
     {
