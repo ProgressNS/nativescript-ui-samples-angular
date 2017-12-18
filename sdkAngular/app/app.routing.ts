@@ -128,28 +128,28 @@ let APP_ROUTES: Routes = [
         path: "ListViewDynamicSizeAutoComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Auto with Dynamic Size"
+            "title": "Auto with Variable Item Size"
         }
     },
     {
         path: "ListViewDynamicSizeManualComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Manual with Dynamic Size"
+            "title": "Manual with Variable Item Size"
         }
     },
     {
         path: "ListViewFixedSizeAutoComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Auto with Fixed Size"
+            "title": "Auto with Fixed Item Size"
         }
     },
     {
         path: "ListViewFixedSizeManualComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Manual with Fixed Size"
+            "title": "Manual with Fixed Item Size"
         }
     },
     {
