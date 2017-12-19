@@ -23,6 +23,7 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
         this.myFilteringFunc = (item: DataItem) => {
             return item.name.includes("Special Item");
         };
+        this.isEnabled = true;
     }
 
     get dataItems(): ObservableArray<DataItem> {

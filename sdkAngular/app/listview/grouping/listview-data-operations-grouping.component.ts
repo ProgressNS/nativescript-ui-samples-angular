@@ -23,6 +23,7 @@ export class ListViewDataOperationsGroupingComponent implements OnInit {
         this.myGroupingFunc = (item: DataItem) => {
             return item.category;
         };
+        this.isEnabled = true;
     }
 
     get dataItems(): ObservableArray<DataItem> {

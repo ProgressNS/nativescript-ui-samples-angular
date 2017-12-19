@@ -34,6 +34,9 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
         this.myFilteringFunc = (item: DataItem) => {
             return item.name.includes("Special Item");
         };
+        this.isFilteringEnabled = true;
+        this.isSortingEnabled = true;
+        this.isGroupingEnabled = true;
     }
 
     get dataItems(): ObservableArray<DataItem> {
