@@ -147,7 +147,6 @@ module.exports = env => {
             mangle: { except: [
                 ...nsWebpack.uglifyMangleExcludes,
                 "org.nativescript.sdkAngular.MainActivity",
-                "MainActivity",
                 "AutoCompleteAdapter",
             ]},
             compress,
