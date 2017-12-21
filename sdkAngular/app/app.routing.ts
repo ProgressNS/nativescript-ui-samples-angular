@@ -55,13 +55,6 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "ListViewLoadOnDemandComponent",
-        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
-        data: {
-            "title": "Load on Demand"
-        }
-    },
-    {
         path: "ListViewPullToRefreshComponent",
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
@@ -129,6 +122,34 @@ let APP_ROUTES: Routes = [
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Item separators"
+        }
+    },
+    {
+        path: "ListViewDynamicSizeAutoComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Auto with Variable Item Size"
+        }
+    },
+    {
+        path: "ListViewDynamicSizeManualComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Manual with Variable Item Size"
+        }
+    },
+    {
+        path: "ListViewFixedSizeAutoComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Auto with Fixed Item Size"
+        }
+    },
+    {
+        path: "ListViewFixedSizeManualComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Manual with Fixed Item Size"
         }
     },
     {
@@ -479,6 +500,13 @@ let APP_ROUTES: Routes = [
         loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "In horizontal direction"
+        }
+    },
+    {
+        path: "ListViewScrollToIndexInitialComponent",
+        loadChildren: './listview/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Initially scrolled"
         }
     },
     {

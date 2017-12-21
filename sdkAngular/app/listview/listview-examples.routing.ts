@@ -15,13 +15,17 @@ import { ListViewItemSelectionMultipleComponent } from './item-selection/listvie
 import { ListViewItemSelectionProgrammaticComponent } from './item-selection/listview-item-selection-programmatic.component';
 import { ListViewItemSelectionComponent } from './item-selection/listview-item-selection.component';
 import { ListViewItemSeparatorComponent } from './item-separator/listview-item-separator.component';
-import { ListViewLoadOnDemandComponent } from './load-on-demand/listview-load-on-demand.component';
+import { ListViewDynamicSizeAutoComponent } from './load-on-demand/dynamic-size-auto/listview-dynamic-size-auto.component';
+import { ListViewDynamicSizeManualComponent } from './load-on-demand/dynamic-size-manual/listview-dynamic-size-manual.component';
+import { ListViewFixedSizeAutoComponent } from './load-on-demand/fixed-size-auto/listview-fixed-size-auto.component';
+import { ListViewFixedSizeManualComponent } from './load-on-demand/fixed-size-manual/listview-fixed-size-manual.component';
 import { ListViewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
 import { ListViewObservableArrayComponent } from './observable-array/listview-observable-array.component';
 import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-to-refresh.component';
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
 import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
 import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
+import { ListViewScrollToIndexInitialComponent } from './scroll-to-index/listview-scroll-to-index-initial.component';
 import { ListViewSelectionStatesComponent } from './selection-states/listview-selection-states.component';
 import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-swipe-actions-multiple.component';
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
@@ -43,7 +47,10 @@ export const routes: Routes = [
   { path: 'ListViewItemSelectionProgrammaticComponent', component: ListViewItemSelectionProgrammaticComponent },
   { path: 'ListViewItemSelectionComponent', component: ListViewItemSelectionComponent },
   { path: 'ListViewItemSeparatorComponent', component: ListViewItemSeparatorComponent },
-  { path: 'ListViewLoadOnDemandComponent', component: ListViewLoadOnDemandComponent },
+  { path: 'ListViewDynamicSizeAutoComponent', component: ListViewDynamicSizeAutoComponent },
+  { path: 'ListViewDynamicSizeManualComponent', component: ListViewDynamicSizeManualComponent },
+  { path: 'ListViewFixedSizeAutoComponent', component: ListViewFixedSizeAutoComponent },
+  { path: 'ListViewFixedSizeManualComponent', component: ListViewFixedSizeManualComponent },
   { path: 'ListViewMultipleTemplatesComponent', component: ListViewMultipleTemplatesComponent },
   { path: 'ListViewObservableArrayComponent', component: ListViewObservableArrayComponent },
   { path: 'ListViewPullToRefreshComponent', component: ListViewPullToRefreshComponent },
@@ -54,5 +61,6 @@ export const routes: Routes = [
   { path: 'ListViewSwipeActionsMultipleComponent', component: ListViewSwipeActionsMultipleComponent },
   { path: 'ListViewSwipeActionsThresholdsComponent', component: ListViewSwipeActionsThresholdsComponent },
   { path: 'ListViewSwipeActionsComponent', component: ListViewSwipeActionsComponent },
-  { path: 'ListViewSwipeDisableComponent', component: ListViewSwipeDisableComponent }
+  { path: 'ListViewSwipeDisableComponent', component: ListViewSwipeDisableComponent },
+  { path: 'ListViewScrollToIndexInitialComponent', component: ListViewScrollToIndexInitialComponent }
 ];
