@@ -7,6 +7,7 @@
         "removeComments": false,
         "watch": false,
         "noLib": false,
+        "noEmitHelpers": true,
         "preserveConstEnums": true,
         "emitDecoratorMetadata": true,
         "suppressImplicitAnyIndexErrors": true,
@@ -30,7 +31,6 @@
     ],
     "exclude": [
         "node_modules",
-        "platforms",
-        "**/*.aot.ts"
+        "platforms"
     ]
 }
