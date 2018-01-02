@@ -1,0 +1,23 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button [text]="isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'" (tap)="toggleFilter($event)" ios:margin="5"></Button>
+        <Button [text]="isSortingEnabled ? 'Disable sorting' : 'Enable sorting'" (tap)="toggleSorting($event)" ios:margin="5"></Button>
+        <Button [text]="isGroupingEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping($event)" ios:margin="5"></Button>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1" #myListView 
+                    [sortingFunction]="mySortingFunc" 
+                    [filteringFunction]="myFilteringFunc"
+                    [groupingFunction]="myGroupingFunc" >
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkListViewHeader let-category="category">
+            <GridLayout backgroundColor="#65a565">
+                <Label [text]="category ? category : 'Default'" height="50"></Label>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
