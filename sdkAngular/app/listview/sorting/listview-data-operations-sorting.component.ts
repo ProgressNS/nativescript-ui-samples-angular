@@ -34,7 +34,7 @@ export class ListViewDataOperationsSortingComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray<DataItem>(this._dataItemService.getDataOperationsItemsTest());
+        this._dataItems = new ObservableArray<DataItem>(this._dataItemService.getDataOperationsItems());
     }
 
     get dataItems(): ObservableArray<DataItem> {
