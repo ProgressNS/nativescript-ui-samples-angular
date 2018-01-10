@@ -1,7 +1,7 @@
 <!-- >> listview-data-operations-sorting-angular-xml -->
 <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
     <StackLayout orientation="horizontal">
-        <Button [text]="isEnabled ? 'Disable sorting' : 'Enable sorting'" (tap)="toggleSorting($event)" ios:margin="5"></Button>
+        <Button [text]="isEnabled ? 'Disable sorting' : 'Enable sorting'" (tap)="toggleSorting()" ios:margin="5"></Button>
     </StackLayout>
     <RadListView [items]="dataItems" row="1" #myListView [sortingFunction]="mySortingFunc">
         <ng-template tkListItemTemplate let-item="item">

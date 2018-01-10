@@ -1,7 +1,7 @@
 <!-- >> listview-data-operations-grouping-angular-xml -->
 <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
     <StackLayout orientation="horizontal">
-        <Button [text]="isEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping($event)"></Button>
+        <Button [text]="isEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping()"></Button>
     </StackLayout>
     <RadListView [items]="dataItems" row="1" #myListView [groupingFunction]="myGroupingFunc">
         <ng-template tkListItemTemplate let-item="item">

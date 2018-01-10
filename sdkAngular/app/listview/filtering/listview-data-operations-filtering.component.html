@@ -1,7 +1,7 @@
 <!-- >> listview-data-operations-filtering-angular-xml -->
 <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
     <StackLayout orientation="horizontal">
-        <Button [text]="isEnabled ? 'Disable filtering' : 'Enable filtering'" (tap)="toggleFilter($event)"></Button>
+        <Button [text]="isEnabled ? 'Disable filtering' : 'Enable filtering'" (tap)="toggleFilter()"></Button>
     </StackLayout>
     <RadListView [items]="dataItems" row="1" #myListView [filteringFunction]="myFilteringFunc">
         <ng-template tkListItemTemplate let-item="item">
