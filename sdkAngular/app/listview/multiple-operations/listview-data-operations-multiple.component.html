@@ -1,8 +1,8 @@
-<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+<GridLayout tkExampleTitle tkToggleNavButton rows="*, *7">
     <StackLayout orientation="horizontal">
-        <Button [text]="isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'" (tap)="toggleFilter()" ios:margin="5"></Button>
-        <Button [text]="isSortingEnabled ? 'Disable sorting' : 'Enable sorting'" (tap)="toggleSorting()" ios:margin="5"></Button>
-        <Button [text]="isGroupingEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping()" ios:margin="5"></Button>
+        <Button width="33%" [text]="isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'" (tap)="toggleFilter()" ios:margin="5"></Button>
+        <Button width="33%" [text]="isSortingEnabled ? 'Disable sorting' : 'Enable sorting'" (tap)="toggleSorting()" ios:margin="5"></Button>
+        <Button width="33%" [text]="isGroupingEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping()" ios:margin="5"></Button>
     </StackLayout>
     <RadListView [items]="dataItems" row="1" #myListView 
                     [sortingFunction]="mySortingFunc" 
