@@ -14,10 +14,5 @@
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </ng-template>
-        <ng-template tkListViewHeader let-category="category">
-            <GridLayout backgroundColor="#65a565">
-                <Label [text]="category ? category : 'Default'" height="50"></Label>
-            </GridLayout>
-        </ng-template>
     </RadListView>
 </GridLayout>

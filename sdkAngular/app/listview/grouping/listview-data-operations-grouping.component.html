@@ -10,16 +10,6 @@
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </ng-template>
-        <ng-template tkListViewHeader let-category="category">
-            <GridLayout backgroundColor="#65a565">
-                <Label [text]="category ? category : 'Default'" height="50"></Label>
-            </GridLayout>
-        </ng-template>
-        <ng-template tkListViewFooter let-category="category">
-            <GridLayout backgroundColor="#7fff7f">
-                <Label [text]="category ? category : 'Default'" height="50"></Label>
-            </GridLayout>
-        </ng-template>
     </RadListView>
 </GridLayout>
 <!-- << listview-data-operations-grouping-angular-xml -->
