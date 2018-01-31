@@ -11,7 +11,6 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-data-operations-grouping.component.html",
     styleUrls: ["listview-data-operations-grouping.component.css"]
 })
-// >> listview-data-operations-grouping-angular
 export class ListViewDataOperationsGroupingComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _isEnabled: boolean;
@@ -20,9 +19,11 @@ export class ListViewDataOperationsGroupingComponent implements OnInit {
     @ViewChild("myListView") myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
+        // >> listview-data-operations-grouping-angular
         this.myGroupingFunc = (item: DataItem) => {
             return item.category;
         };
+        // << listview-data-operations-grouping-angular
         this.isEnabled = true;
     }
 
@@ -61,4 +62,3 @@ export class ListViewDataOperationsGroupingComponent implements OnInit {
         }
     }
 }
-// << listview-data-operations-grouping-angular

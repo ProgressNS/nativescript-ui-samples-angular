@@ -11,7 +11,6 @@ import { DataItemService } from "../dataItem.service";
     templateUrl: "listview-data-operations-filtering.component.html",
     styleUrls: ["listview-data-operations-filtering.component.css"]
 })
-// >> listview-data-operations-filtering-angular
 export class ListViewDataOperationsFilteringComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _isEnabled: boolean;
@@ -20,9 +19,11 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
     @ViewChild("myListView") myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
+        // >> listview-data-operations-filtering-angular
         this.myFilteringFunc = (item: DataItem) => {
             return item.name.includes("Special Item");
         };
+        // << listview-data-operations-filtering-angular
         this.isEnabled = true;
     }
 
@@ -32,17 +33,17 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
 
     get isEnabled() {
         return this._isEnabled;
-    }    
-    
+    }
+
     set isEnabled(value: boolean) {
         this._isEnabled = value;
     }
 
     get myFilteringFunc(): (item: any) => any {
         return this._myFilteringFunc;
-    }    
-    
-    set myFilteringFunc(value:  (item: any) => any) {
+    }
+
+    set myFilteringFunc(value: (item: any) => any) {
         this._myFilteringFunc = value;
     }
 
@@ -61,4 +62,3 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
         }
     }
 }
-// << listview-data-operations-filtering-angular

@@ -17,7 +17,6 @@ enum SortingOrder {
     templateUrl: "listview-data-operations-sorting.component.html",
     styleUrls: ["listview-data-operations-sorting.component.css"]
 })
-// >> listview-data-operations-sorting-angular
 export class ListViewDataOperationsSortingComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
     private _isEnabled: boolean;
@@ -26,10 +25,12 @@ export class ListViewDataOperationsSortingComponent implements OnInit {
     @ViewChild("myListView") myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
+        // >> listview-data-operations-sorting-angular
         this.mySortingFunc = (item: DataItem, otherItem: DataItem) => {
             var res = item.id < otherItem.id ? SortingOrder.NSOrderedAscending : item.id > otherItem.id ? SortingOrder.NSOrderedDescending : SortingOrder.NSOrderedSame;
             return res;
         };
+        // << listview-data-operations-sorting-angular
         this.isEnabled = true;
     }
 
@@ -68,4 +69,3 @@ export class ListViewDataOperationsSortingComponent implements OnInit {
         }
     }
 }
-// << listview-data-operations-sorting-angular

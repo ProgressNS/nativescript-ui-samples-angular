@@ -1,3 +1,4 @@
+// >> listview-angular-multiple-operations-code
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
@@ -69,9 +70,9 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
 
     get myFilteringFunc(): (item: any) => any {
         return this._myFilteringFunc;
-    }    
-    
-    set myFilteringFunc(value:  (item: any) => any) {
+    }
+
+    set myFilteringFunc(value: (item: any) => any) {
         this._myFilteringFunc = value;
     }
 
@@ -105,7 +106,7 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
             this.isFilteringEnabled = false;
         }
     }
-    
+
     public toggleSorting() {
         var listView = this.myListViewComponent.listView;
         if (!listView.sortingFunction) {
@@ -116,7 +117,7 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
             this.isSortingEnabled = false;
         }
     }
-    
+
     public toggleGrouping() {
         var listView = this.myListViewComponent.listView;
         if (!listView.groupingFunction) {
@@ -128,3 +129,4 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
         }
     }
 }
+// << listview-angular-multiple-operations-code
