@@ -35,6 +35,10 @@ import { ListViewSwipeActionsMultipleComponent } from './swipe-actions/listview-
 import { ListViewSwipeActionsThresholdsComponent } from './swipe-actions/listview-swipe-actions-thresholds.component';
 import { ListViewSwipeActionsComponent } from './swipe-actions/listview-swipe-actions.component';
 import { ListViewSwipeDisableComponent } from './swipe-actions/listview-swipe-disable.component';
+import { ListViewDataOperationsFilteringComponent } from './filtering/listview-data-operations-filtering.component';
+import { ListViewDataOperationsGroupingComponent } from './grouping/listview-data-operations-grouping.component';
+import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
+import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
 
 import { routes } from './listview-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -79,7 +83,11 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewSwipeActionsThresholdsComponent,
         ListViewSwipeActionsComponent,
         ListViewSwipeDisableComponent,
-        ListViewScrollToIndexInitialComponent
+        ListViewScrollToIndexInitialComponent,
+        ListViewDataOperationsFilteringComponent,
+        ListViewDataOperationsGroupingComponent,
+        ListViewDataOperationsMultipleComponent,
+        ListViewDataOperationsSortingComponent
     ]
 })
 export class ListViewExamplesModule { }
