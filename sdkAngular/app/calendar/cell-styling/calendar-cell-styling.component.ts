@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from "@angular/core";
 import { Page } from "ui/page";
-import { RadCalendar, CalendarMonthViewStyle, CalendarWeekViewStyle, CalendarYearViewStyle, CalendarMonthNamesViewStyle, CalendarViewMode, CalendarDayViewStyle } from "nativescript-pro-ui/calendar";
+import { RadCalendar, CalendarMonthViewStyle, CalendarWeekViewStyle, CalendarYearViewStyle, CalendarMonthNamesViewStyle, CalendarViewMode, CalendarDayViewStyle } from "nativescript-ui-calendar";
 import { CalendarStylesService } from "../calendar-styles.service";
 import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CalendarDayEventsService } from "../calendar-day-events.service";
-import { RadCalendar, CalendarEvent, CalendarDayViewEventSelectedData } from "nativescript-pro-ui/calendar";
+import { RadCalendar, CalendarEvent, CalendarDayViewEventSelectedData } from "nativescript-ui-calendar";
 import { alert } from "tns-core-modules/ui/dialogs";
 
 @Component({

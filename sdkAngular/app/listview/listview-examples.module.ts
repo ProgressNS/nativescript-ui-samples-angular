@@ -3,7 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
-import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
 import { ListViewGettingStartedComponent } from './getting-started/listview-getting-started.component';
 import { ListViewHeaderFooterComponent } from './header-footer/listview-header-footer.component';

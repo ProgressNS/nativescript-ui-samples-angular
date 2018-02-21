@@ -1,4 +1,4 @@
-import { SideDrawerLocation } from 'nativescript-pro-ui/sidedrawer';
+import { SideDrawerLocation } from 'nativescript-ui-sidedrawer';
 
 export var LOCATIONS: SideDrawerLocation[] = [
     SideDrawerLocation.Left,

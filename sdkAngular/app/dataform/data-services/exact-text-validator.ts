@@ -1,4 +1,4 @@
-import { PropertyValidator } from "nativescript-pro-ui/dataform";
+import { PropertyValidator } from "nativescript-ui-dataform";
 
 // >> angular-dataform-custom-validator
 export class ExactTextValidator extends PropertyValidator {

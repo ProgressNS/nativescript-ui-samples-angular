@@ -4,7 +4,7 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { OptionsExampleBase } from "../../options-example-base";
 import { Page } from "tns-core-modules/ui/page";
-import { ListViewEventData } from "nativescript-pro-ui/listview";
+import { ListViewEventData } from "nativescript-ui-listview";
 import { OptionsService } from "../../navigation/options/options.service";
 import * as applicationModule from "tns-core-modules/application";
 

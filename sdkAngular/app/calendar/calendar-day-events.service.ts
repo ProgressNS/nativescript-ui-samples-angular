@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Color } from "color";
-import { CalendarEvent } from 'nativescript-pro-ui/calendar'
+import { CalendarEvent } from 'nativescript-ui-calendar'
 
 @Injectable()
 export class CalendarDayEventsService {

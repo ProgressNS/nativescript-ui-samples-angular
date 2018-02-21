@@ -1,6 +1,6 @@
 // >> gauges-customization-angular
 import { Component, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
-import { RadialScale, RadialBarIndicator } from "nativescript-pro-ui/gauges";
+import { RadialScale, RadialBarIndicator } from "nativescript-ui-gauge";
 
 @Component({
     moduleId: module.id,

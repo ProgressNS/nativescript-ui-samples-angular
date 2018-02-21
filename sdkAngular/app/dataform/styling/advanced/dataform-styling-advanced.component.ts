@@ -3,7 +3,7 @@ import { Settings } from "../../data-services/settings";
 import * as applicationModule from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";
 import * as viewModule from "tns-core-modules/ui/core/view";
-import { EntityProperty, DataFormEventData, RadDataForm } from "nativescript-pro-ui/dataform";
+import { EntityProperty, DataFormEventData, RadDataForm } from "nativescript-ui-dataform";
 
 @Component({
     moduleId: module.id,

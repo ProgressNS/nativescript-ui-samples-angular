@@ -2,11 +2,11 @@ import { OptionsExampleBase } from "../../options-example-base";
 import { Component, Injectable, ViewChild } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "ui/page";
-import { RadCalendar, CalendarSelectionMode } from "nativescript-pro-ui/calendar";
+import { RadCalendar, CalendarSelectionMode } from "nativescript-ui-calendar";
 import * as frameModule from "ui/frame";
 import * as applicationModule from "application";
 import { OptionsService } from "../../navigation/options/options.service";
-import { RadCalendarComponent } from "nativescript-pro-ui/calendar/angular";
+import { RadCalendarComponent } from "nativescript-ui-calendar/angular";
 
 @Component({
     moduleId: module.id,
