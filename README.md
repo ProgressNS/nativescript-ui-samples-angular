@@ -16,7 +16,7 @@ The `release` branch is the default one and is tested with the latest NativeScri
 Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository. Please do not use this repository to log issues.
 
 ## Overview
-The Progress NativeScript UI samples app resides in the **sdkAngular** folder at root repository level. The folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/angular/tutorial/ng-chapter-0.html). The source code of the samples resides in the folders named after each component available in **Progress NativeScript UI**. The currently available components are:
+The Progress NativeScript UI samples app resides in the **sdkAngular** folder at root repository level. The folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/angular/tutorial/ng-chapter-0.html). The source code of the samples resides in the folders named after each component available as independent plugin. The currently available components are:
 
 - Calendar
 - Chart
