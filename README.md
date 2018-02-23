@@ -1,9 +1,16 @@
 # Welcome
-This repository contains the source code of the Progress NativeScript UI samples application demonstrating the Angular directives. The repository does not contain the source code of Progress NativeScript UI itself but rather uses the npm package `nativescript-pro-ui` [![npm](https://img.shields.io/npm/v/nativescript-pro-ui.svg)](https://www.npmjs.com/package/nativescript-pro-ui).
+This repository contains the source code of the Progress NativeScript UI samples application demonstrating the Angular directives. The repository does not contain the source code of Progress NativeScript UI itself but rather uses the npm package:
+- `nativescript-ui-chart` [![npm](https://img.shields.io/npm/v/nativescript-ui-chart.svg)](https://www.npmjs.com/package/nativescript-ui-chart)
+- `nativescript-ui-listview` [![npm](https://img.shields.io/npm/v/nativescript-ui-listview.svg)](https://www.npmjs.com/package/nativescript-ui-listview)
+- `nativescript-ui-sidedrawer` [![npm](https://img.shields.io/npm/v/nativescript-ui-sidedrawer.svg)](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
+- `nativescript-ui-calendar` [![npm](https://img.shields.io/npm/v/nativescript-ui-calendar.svg)](https://www.npmjs.com/package/nativescript-ui-calendar)
+- `nativescript-ui-autocomplete` [![npm](https://img.shields.io/npm/v/nativescript-ui-autocomplete.svg)](https://www.npmjs.com/package/nativescript-ui-autocomplete)
+- `nativescript-ui-dataform` [![npm](https://img.shields.io/npm/v/nativescript-ui-dataform.svg)](https://www.npmjs.com/package/nativescript-ui-dataform)
+- `nativescript-ui-gauge` [![npm](https://img.shields.io/npm/v/nativescript-ui-gauge.svg)](https://www.npmjs.com/package/nativescript-ui-gauge)
 
-The `master` branch contains code currently under development and is not meant to be used with the officially released version of NativeScript UI.
+The `master` branch contains code currently under development and is not meant to be used with the officially released versions of the plugins.
 
-The `release` branch is the default one and is tested with the latest NativeScript UI version available.
+The `release` branch is the default one and is tested with the latest NativeScript UI plugins available.
 
 ## Issues
 Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository. Please do not use this repository to log issues.
