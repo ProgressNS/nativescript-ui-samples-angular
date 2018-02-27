@@ -3,7 +3,7 @@ import { Employee } from "../../data-services/employee";
 import * as utilsModule from "tns-core-modules/utils/utils";
 import { ios } from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";
-import { RadDataForm, DataFormEventData } from "nativescript-pro-ui/dataform";
+import { RadDataForm, DataFormEventData } from "nativescript-ui-dataform";
 
 @Component({
     moduleId: module.id,

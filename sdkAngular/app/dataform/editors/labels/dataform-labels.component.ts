@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-pro-ui/dataform"
+import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-ui-dataform"
 import { Observable } from "tns-core-modules/data/observable";
 
 import { ChampionsLeagueStat } from "../../data-services/football-stats";

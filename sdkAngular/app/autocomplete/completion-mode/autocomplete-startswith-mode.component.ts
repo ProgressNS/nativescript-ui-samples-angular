@@ -1,7 +1,7 @@
 // >> angular-autocomplete-startswith-mode
 import { Component, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-pro-ui/autocomplete";
+import { TokenModel } from "nativescript-ui-autocomplete";
 
 @Component({
     moduleId: module.id,

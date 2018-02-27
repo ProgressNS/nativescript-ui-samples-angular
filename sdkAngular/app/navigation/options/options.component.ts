@@ -3,7 +3,7 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
 import * as frameModule from "tns-core-modules/ui/frame";
 import { Page } from "tns-core-modules/ui/page";
-import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
+import { RadListViewComponent } from "nativescript-ui-listview/angular";
 import { OptionsService } from "../../navigation/options/options.service";
 
 @Component({

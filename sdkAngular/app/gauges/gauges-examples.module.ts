@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptUIGaugesModule } from "nativescript-pro-ui/gauges/angular";
+import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 
 import { GaugesAnimationsComponent } from './animations/gauges-animations.component';
 import { GaugesCustomizationComponent } from './customization/gauges-customization.component';
@@ -17,7 +17,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
     imports: [
         NativeScriptModule,        
         CommonDirectivesModule,
-        NativeScriptUIGaugesModule,
+        NativeScriptUIGaugeModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forChild(routes)
     ],

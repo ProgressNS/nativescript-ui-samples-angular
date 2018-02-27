@@ -19,11 +19,11 @@ require("nativescript-angular/platform-static");
 require("nativescript-angular/forms");
 require("nativescript-angular/router");
 
-require("nativescript-pro-ui/autocomplete/angular");
-require("nativescript-pro-ui/calendar/angular");
-require("nativescript-pro-ui/chart/angular");
-require("nativescript-pro-ui/dataform/angular");
-require("nativescript-pro-ui/gauges/angular");
-require("nativescript-pro-ui/listview/angular");
-require("nativescript-pro-ui/sidedrawer/angular");
+require("nativescript-ui-autocomplete/angular");
+require("nativescript-ui-calendar/angular");
+require("nativescript-ui-chart/angular");
+require("nativescript-ui-dataform/angular");
+require("nativescript-ui-gauge/angular");
+require("nativescript-ui-listview/angular");
+require("nativescript-ui-sidedrawer/angular");
 

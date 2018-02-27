@@ -1,10 +1,10 @@
 import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
 import { View } from "tns-core-modules/ui/core/view";
-import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { Page } from "tns-core-modules/ui/page";
 import { ActionItem } from "tns-core-modules/ui/action-bar";
-import { FadeTransition, DrawerTransitionBase, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from 'nativescript-pro-ui/sidedrawer';
-import { RadSideDrawerComponent } from "nativescript-pro-ui/sidedrawer/angular";
+import { FadeTransition, DrawerTransitionBase, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
+import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 
 @Component({
     moduleId: module.id,

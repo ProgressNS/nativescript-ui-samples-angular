@@ -1,4 +1,4 @@
-import { PropertyConverter } from "nativescript-pro-ui/dataform";
+import { PropertyConverter } from "nativescript-ui-dataform";
 import { Movie } from "./movie";
 
 // >> angular-dataform-converters-code

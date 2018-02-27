@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CalendarEvent } from 'nativescript-pro-ui/calendar' 
+import { CalendarEvent } from 'nativescript-ui-calendar' 
 import { Color } from "color";
-import { CalendarMonthViewStyle, DayCellStyle, CellStyle, CalendarWeekViewStyle, CalendarYearViewStyle, MonthCellStyle, CalendarMonthNamesViewStyle, CalendarDayViewStyle, DayEventsViewStyle, AllDayEventsViewStyle } from "nativescript-pro-ui/calendar";
+import { CalendarMonthViewStyle, DayCellStyle, CellStyle, CalendarWeekViewStyle, CalendarYearViewStyle, MonthCellStyle, CalendarMonthNamesViewStyle, CalendarDayViewStyle, DayEventsViewStyle, AllDayEventsViewStyle } from "nativescript-ui-calendar";
 
 // >> calendar-styling-service
 @Injectable()

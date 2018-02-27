@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectorRef, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
-import { ListViewLinearLayout, ListViewGridLayout, ListViewStaggeredLayout } from "nativescript-pro-ui/listview";
-import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
+import { ListViewLinearLayout, ListViewGridLayout, ListViewStaggeredLayout } from "nativescript-ui-listview";
+import { RadListViewComponent } from "nativescript-ui-listview/angular";
 import { ios as isIOS } from "application";
 import * as Application from "application";
 import * as Timer from "timer";

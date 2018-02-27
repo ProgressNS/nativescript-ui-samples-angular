@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { ListViewEventData, RadListView } from "nativescript-pro-ui/listview";
+import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 
 @Component({
     moduleId: module.id,

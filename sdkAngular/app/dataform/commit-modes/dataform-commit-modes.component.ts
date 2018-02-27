@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { CommitMode } from "nativescript-pro-ui/dataform";
-import { RadDataFormComponent } from "nativescript-pro-ui/dataform/angular";
+import { CommitMode } from "nativescript-ui-dataform";
+import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 import { SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 import { User } from "../data-services/user";
 import * as timerModule from "tns-core-modules/timer";

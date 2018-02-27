@@ -8,10 +8,10 @@ import * as applicationModule from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";
-import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
+import { RadListViewComponent } from "nativescript-ui-listview/angular";
 import { EventData } from "tns-core-modules/data/observable";
 import { ios as isIOS } from "tns-core-modules/application";
-import { RadListView, ListViewItemSnapMode } from "nativescript-pro-ui/listview";
+import { RadListView, ListViewItemSnapMode } from "nativescript-ui-listview";
 
 @Component({
     moduleId: module.id,

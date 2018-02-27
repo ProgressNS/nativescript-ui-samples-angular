@@ -1,4 +1,4 @@
-import { CustomPropertyEditor } from "nativescript-pro-ui/dataform";
+import { CustomPropertyEditor } from "nativescript-ui-dataform";
 
 // >> dataform-button-editor-helper-ios
 export class ButtonEditorHelper extends NSObject 

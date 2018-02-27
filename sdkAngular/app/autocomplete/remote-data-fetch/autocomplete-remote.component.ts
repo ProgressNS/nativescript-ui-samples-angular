@@ -1,8 +1,8 @@
 // >> angular-autocomplete-getting-started-component
 import { Component, ViewChild, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-pro-ui/autocomplete";
-import { RadAutoCompleteTextViewComponent } from "nativescript-pro-ui/autocomplete/angular";
+import { TokenModel } from "nativescript-ui-autocomplete";
+import { RadAutoCompleteTextViewComponent } from "nativescript-ui-autocomplete/angular";
 import http = require("tns-core-modules/http");
 
 @Component({
