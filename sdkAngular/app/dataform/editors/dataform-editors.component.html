@@ -19,7 +19,11 @@
 	</TKEntityProperty>
 	<!-- << angular-dataform-property-readonly-html -->
 	<TKEntityProperty tkDataFormProperty name="numberOfTickets" displayName="Number of Tickets" index="5">
-		<TKPropertyEditor tkEntityPropertyEditor type="Stepper"></TKPropertyEditor>
+		<!-- >> angular-dataform-editor-params-xml -->
+		<TKPropertyEditor tkEntityPropertyEditor type="Stepper">
+			<TKPropertyEditorParams tKEditorParams minimum="0" maximum="100" step="2"></TKPropertyEditorParams>
+		</TKPropertyEditor>
+		<!-- << angular-dataform-editor-params-xml -->
 	</TKEntityProperty>
 	<TKEntityProperty tkDataFormProperty name="contactName" displayName="Contact Name" index="6">
 		<TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
