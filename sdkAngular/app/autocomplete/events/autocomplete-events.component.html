@@ -3,7 +3,7 @@
     <!-- >> angular-autocomplete-events-html -->
     <RadAutoCompleteTextView [items]="dataItems" suggestMode="Suggest" displayMode="Tokens" 
                              (suggestionViewBecameVisible)="onSuggestionViewBecameVisible($event)"
-                             (didAutoComplete)="onDidAutoComplete($event)"
+                             (didAutoComplete)="onDidAutoComplete($event)" (textChanged)="onTextChanged($event)"
                              (tokenAdded)="onTokenAdded($event)" (tokenRemoved)="onTokenRemoved($event)"
                              (tokenSelected)="onTokenSelected($event)" (tokenDeselected)="onTokenDeselected($event)">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">

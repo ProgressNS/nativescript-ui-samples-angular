@@ -86,6 +86,10 @@ export class AutoCompleteEventsComponent {
         this.logEvent("DidAutoComplete with text: " + args.text);
     }
 
+    public onTextChanged(args) {
+        this.logEvent("Text Changed: " + args.text);
+    }
+
     public onSuggestionViewBecameVisible(args) {
         this.logEvent("Suggestion View Became Visible");
     }
