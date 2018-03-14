@@ -1,5 +1,5 @@
+import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
@@ -21,12 +21,12 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
 @NgModule({
     schemas: [NO_ERRORS_SCHEMA],
     imports: [
-        NativeScriptModule,        
         CommonDirectivesModule,
         NativeScriptUICalendarModule,
         NativeScriptUIListViewModule,
         NativeScriptRouterModule,
-        NativeScriptRouterModule.forChild(routes)
+        NativeScriptRouterModule.forChild(routes),
+        NativeScriptCommonModule,
     ],
     declarations: [
         CalendarLocalizationComponent,
