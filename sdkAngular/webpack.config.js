@@ -1,10 +1,11 @@
-const { resolve, join  } = require("path");
+const { relative, resolve, join  } = require("path");
 
+const { RawSource } = require("webpack-sources");
 const webpack = require("webpack");
 const nsWebpack = require("nativescript-dev-webpack");
 const nativescriptTarget = require("nativescript-dev-webpack/nativescript-target");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const { NativeScriptWorkerPlugin } = require("nativescript-worker-loader/NativeScriptWorkerPlugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -14,27 +15,79 @@ module.exports = env => {
     if (!platform) {
         throw new Error("You need to provide a target platform!");
     }
-    const platforms = ["ios", "android"];
-    const { snapshot, uglify, report, aot } = env;
-    const ngToolsWebpackOptions = { tsConfigPath: "tsconfig.json" };
 
-    const nativeClassExtenders = [
-        join(__dirname, "app/main-activity.android.ts"),
-    ];
+    const platforms = ["ios", "android"];
+    const projectRoot = __dirname;
+    // Default destination inside platforms/<platform>/...
+    const dist = resolve(projectRoot, nsWebpack.getAppPath(platform));
+    const appResourcesPlatformDir = platform === "android" ? "Android" : "iOS";
+
+    const androidManifestComponents = platform === "android" ? [
+      "tns-core-modules/ui/frame",
+      "tns-core-modules/ui/frame/activity",
+      join(__dirname, "app/main-activity.android.ts"),
+    ] : [];
+ 
+
+    const {
+        // The 'appPath' and 'appResourcesPath' values are fetched from
+        // the nsconfig.json configuration file
+        // when bundling with `tns run android|ios --bundle`.
+        appPath = "app",
+        appResourcesPath = "app/App_Resources",
+
+        // Aot, snapshot, uglify and report can be enabled by providing
+        // the `--env.snapshot`, `--env.uglify` or `--env.report` flags
+        // when running 'tns run android|ios'
+        aot,
+        snapshot,
+        uglify,
+        report,
+    } = env;
+    const ngToolsWebpackOptions = { tsConfigPath: join(__dirname, "tsconfig.json") };
+
+    const appFullPath = resolve(projectRoot, appPath);
+    const appResourcesFullPath = resolve(projectRoot, appResourcesPath);
+    const entryModule = aot ?
+        nsWebpack.getAotEntryModule(appFullPath):
+        nsWebpack.getEntryModule(appFullPath);
+    const entryPath = `./${entryModule}`;
 
     const config = {
-        context: resolve("./app"),
-        target: nativescriptTarget,
-        entry: {
-            bundle: aot ? "./main.aot.ts" : "./main.ts",
-            vendor: "./vendor",
+        mode: "development",
+        devtool: "none",
+        optimization: {
+            runtimeChunk: { name: "vendor" },
+            splitChunks: {
+                cacheGroups: {
+                    common: {
+                        name: "commons",
+                        chunks: "all",
+                        test: /vendor/,
+                        enforce: true,
+                    },
+                }
+            },
         },
+        context: appFullPath,
+        watchOptions: {
+            ignored: [
+                appResourcesFullPath,
+                // Don't watch hidden files
+                "**/.*",
+            ]
+        },
+        entry: {
+            "bundle": entryPath,
+            "vendor": "./vendor",
+        },
+        target: nativescriptTarget,
         output: {
             pathinfo: true,
-            // Default destination inside platforms/<platform>/...
-            path: resolve(nsWebpack.getAppPath(platform)),
+            path: dist,
             libraryTarget: "commonjs2",
             filename: "[name].js",
+            globalObject: "global",
         },
         resolve: {
             extensions: [".ts", ".js", ".scss", ".css"],
@@ -44,7 +97,7 @@ module.exports = env => {
                 "node_modules",
             ],
             alias: {
-                '~': resolve("./app")
+                '~': appFullPath
             },
             // don't resolve symlinks to symlinked modules
             symlinks: false
@@ -62,49 +115,77 @@ module.exports = env => {
         },
         module: {
             rules: [
+
+                { test: new RegExp(entryPath), use: {
+                      loader: "nativescript-dev-webpack/android-app-components-loader",
+                   options: { modules: androidManifestComponents }
+                }},
+
+
                 { test: /\.html$|\.xml$/, use: "raw-loader" },
 
                 // tns-core-modules reads the app.css and its imports using css-loader
-                { test: /\/app\.css$/, use: "css-loader?url=false" },
-                { test: /\/app\.scss$/, use: ["css-loader?url=false", "sass-loader"] },
+                {
+                    test: /[\/|\\]app\.css$/,
+                    use: {
+                        loader: "css-loader",
+                        options: { minimize: false, url: false },
+                    }
+                },
+                {
+                    test: /[\/|\\]app\.scss$/,
+                    use: [
+                        { loader: "css-loader", options: { minimize: false, url: false } },
+                        "sass-loader"
+                    ]
+                },
 
                 // Angular components reference css files and their imports using raw-loader
-                { test: /\.css$/, exclude: /\/app\.css$/, use: "raw-loader" },
-                { test: /\.scss$/, exclude: /\/app\.scss$/, use: ["raw-loader", "resolve-url-loader", "sass-loader"] },
+                { test: /\.css$/, exclude: /[\/|\\]app\.css$/, use: "raw-loader" },
+                { test: /\.scss$/, exclude: /[\/|\\]app\.scss$/, use: ["raw-loader", "resolve-url-loader", "sass-loader"] },
 
                 // Compile TypeScript files with ahead-of-time compiler.
-                { test: /.ts$/, use: ["nativescript-dev-webpack/moduleid-compat-loader", "@ngtools/webpack"] },
+                { test: /.ts$/, use: [
+                    "nativescript-dev-webpack/moduleid-compat-loader",
+                    { loader: "@ngtools/webpack", options: ngToolsWebpackOptions },
+                ]},
             ],
         },
         plugins: [
-            // Vendor libs go to the vendor.js chunk
-            new webpack.optimize.CommonsChunkPlugin({
-                name: ["vendor"],
-            }),
             // Define useful constants like TNS_WEBPACK
             new webpack.DefinePlugin({
                 "global.TNS_WEBPACK": "true",
             }),
+            // Remove all files from the out dir.
+          // new CleanWebpackPlugin([ `${dist}/**/*` ]),
+            // Copy native app resources to out dir.
+            new CopyWebpackPlugin([
+              {
+                from: `${appResourcesFullPath}/${appResourcesPlatformDir}`,
+                to: `${dist}/App_Resources/${appResourcesPlatformDir}`,
+                context: projectRoot
+              },
+            ]),
             // Copy assets to out dir. Add your own globs as needed.
             new CopyWebpackPlugin([
-                { from: "App_Resources/**" },
                 { from: "fonts/**" },
                 { from: "**/*.jpg" },
                 { from: "**/*.png" },
                 { from: "**/*.xml" },
-                { from: "**/person-model.json" },
-                { from: "**/person-metadata.json" },
-            ]),
-            // Generate a bundle starter script and activate it in package.json
-            new nsWebpack.GenerateBundleStarterPlugin([
+            ], { ignore: [`${relative(appPath, appResourcesFullPath)}/**`] }),
+
+           new nsWebpack.GenerateBundleStarterPlugin([
                 "./vendor",
+                "./commons",
                 "./bundle",
             ]),
+
             // Support for web workers since v3.2
             new NativeScriptWorkerPlugin(),
             // AngularCompilerPlugin with augmented NativeScript filesystem to handle platform specific resource resolution.
             new nsWebpack.NativeScriptAngularCompilerPlugin(
                 Object.assign({
+                    nameLazyFiles: true,
                     entryModule: resolve(__dirname, "app/app.module#AppModule"),
                     skipCodeGeneration: !aot,
                     platformOptions: {
@@ -124,20 +205,16 @@ module.exports = env => {
             analyzerMode: "static",
             openAnalyzer: false,
             generateStatsFile: true,
-            reportFilename: join(__dirname, "report", `report.html`),
-            statsFilename: join(__dirname, "report", `stats.json`),
+            reportFilename: resolve(projectRoot, "report", `report.html`),
+            statsFilename: resolve(projectRoot, "report", `stats.json`),
         }));
     }
     if (snapshot) {
         config.plugins.push(new nsWebpack.NativeScriptSnapshotPlugin({
-            chunk: "vendor",
-            projectRoot: __dirname,
+            chunks: [ "vendor", "commons" ],
+            projectRoot,
             webpackConfig: config,
             targetArchs: ["arm", "arm64", "ia32"],
-            tnsJavaClassesOptions: {
-                packages: ["tns-core-modules" ],
-                modules: nativeClassExtenders,
-            },
             useLibs: false
         }));
     }
@@ -148,17 +225,9 @@ module.exports = env => {
         const compress = platform !== "android";
         config.plugins.push(new UglifyJsPlugin({
             uglifyOptions: {
-                mangle: {
-                    reserved: [
-                        ...nsWebpack.uglifyMangleExcludes,
-                        "org.nativescript.sdkAngular.MainActivity",
-                        "AutoCompleteAdapter",
-                    ],
-                },
                 compress,
             }
         }));
     }
-
     return config;
 };

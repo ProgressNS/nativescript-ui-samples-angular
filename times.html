@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profiling</title>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.trace {
+    position: absolute;
+    border: 1px solid black;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #DDD;
+    cursor: default;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.trace.Modules {
+    background-color: #BFF;
+}
+.trace.Runtime {
+    background-color: #FFB;
+}
+.trace:hover {
+    background-color: #FFF;
+    border-color: orange;
+    z-index: 1;
+    box-shadow: 0px 1px 5px black;
+}
+</style>
+</head>
+<body>
+  <script>
+var timeline = [{"from":null,"to":null,"name":"ALL"}];
+var background = document.createElement('canvas');
+var context = background.getContext("2d");
+var rulerBackgroundPattern = document.createElement('canvas');
+var rulerBackgroundPatternContext = rulerBackgroundPattern.getContext("2d");
+var timelineBackgroundPattern = document.createElement('canvas');
+var timelineBackgroundPatternContext = timelineBackgroundPattern.getContext("2d");
+var chart = document.createElement('div');
+chart.id = "chart";
+chart.appendChild(background);
+var tracesDiv = document.createElement('div');
+tracesDiv.id = "traces";
+chart.appendChild(tracesDiv);
+document.body.appendChild(chart);
+function createStackTraces(traces) {
+    traces = traces.slice(0).sort(function (a, b) {
+        if (a.from < b.from) {
+            return -1;
+        }
+        else if (a.from === b.from) {
+            if (a.to > b.to) {
+                return -1;
+            }
+            else if (a.to === b.to) {
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        }
+        else {
+            return 1;
+        }
+    });
+    var traceAtDepth = [];
+    var stackedTraces = traces.map(function (original) {
+        var from = original.from, to = original.to, name = original.name, domain = original.domain;
+        var trace = { from: from, to: to };
+        var depth;
+        for (var i = 0; i <= traceAtDepth.length; i++) {
+            if (traceAtDepth[i] === undefined || traceAtDepth[i].to <= from) {
+                depth = i;
+                traceAtDepth[i] = trace;
+                break;
+            }
+        }
+        var parent;
+        for (var i = depth - 1; i >= 0; i--) {
+            var potentialParent = traceAtDepth[i];
+            if (potentialParent.from <= trace.from && potentialParent.to >= trace.to) {
+                trace.parent = parent = potentialParent;
+                break;
+            }
+        }
+        var importance;
+        if (parent) {
+            // If it is very big, or very small - it does not matter, if it is about half its parent then it is important.
+            var ratio = (trace.to - trace.from) / (parent.to - parent.from);
+            importance = depth <= 1 ? 1 : 0.5 - Math.cos(2 * Math.PI * ratio) * 0.5;
+        }
+        else {
+            importance = 1;
+        }
+        var innerText = name + " " + Math.round(to - from) + "ms";
+        var title = name + " " + (to - from) + "ms " + importance;
+        var visible = false;
+        var div = document.createElement('div');
+        div.className = "trace " + domain;
+        tracesDiv.appendChild(div);
+        div.title = title;
+        div.innerText = innerText;
+        div.style.visibility = "hidden";
+        div.style.top = 30 + depth * 21 + "px";
+        div.addEventListener("click", focusTrace);
+        Object.assign(trace, { from: from, to: to, name: name, domain: domain, depth: depth, innerText: innerText, title: title, div: div, visible: visible, leftPx: 0, rightPx: 0, parent: parent, importance: importance });
+        div.trace = trace;
+        return trace;
+    }).sort(function (a, b) { return b.importance - a.importance; });
+    return stackedTraces;
+}
+var stackTraces = createStackTraces(timeline);
+var visibleStackTraces = new Set();
+var min = stackTraces.reduce(function (min, trace) { return Math.min(min, trace.from); }, Number.POSITIVE_INFINITY);
+var max = stackTraces.reduce(function (max, trace) { return Math.max(max, trace.to); }, Number.NEGATIVE_INFINITY);
+var left = min;
+var pixelPerMs = 0.0000001;
+var levelOfDetail = 0 /* High */;
+var debounceLODTimeout;
+function highLOD() {
+    if (debounceLODTimeout) {
+        clearTimeout(debounceLODTimeout);
+    }
+    levelOfDetail = 0 /* High */;
+    tracesDiv.style.pointerEvents = "auto";
+    updateStackTraces();
+}
+function lowLOD() {
+    levelOfDetail = 1 /* Low */;
+    if (debounceLODTimeout) {
+        clearTimeout(debounceLODTimeout);
+    }
+    debounceLODTimeout = setTimeout(highLOD, 1000);
+    tracesDiv.style.pointerEvents = "none";
+}
+function updateStackTraces() {
+    var windowWidth = window.innerWidth;
+    var right = left + (windowWidth / pixelPerMs);
+    var nextVisible = new Set();
+    var showTraces = levelOfDetail === 1 /* Low */ ? 64 : 512;
+    for (var i = 0; i < stackTraces.length && nextVisible.size < showTraces; i++) {
+        var trace = stackTraces[i];
+        trace.leftPx = (trace.from - left) * pixelPerMs;
+        trace.rightPx = (trace.to - left) * pixelPerMs;
+        if (trace.rightPx >= 0 && trace.leftPx <= windowWidth && (trace.rightPx - trace.leftPx >= 2)) {
+            nextVisible.add(trace);
+        }
+    }
+    visibleStackTraces.forEach(function (trace) {
+        if (nextVisible.has(trace)) {
+            return;
+        }
+        trace.div.style.visibility = "collapse";
+    });
+    nextVisible.forEach(function (trace) {
+        var div = trace.div, leftPx = trace.leftPx, rightPx = trace.rightPx;
+        div.style.left = Math.max(-5, leftPx) + "px";
+        div.style.right = Math.max(-5, windowWidth - rightPx) + "px";
+        if (!visibleStackTraces.has(trace)) {
+            div.style.visibility = "visible";
+        }
+    });
+    visibleStackTraces = nextVisible;
+}
+function snap(px) {
+    return Math.floor(px) + 0.5;
+}
+function redrawBackground() {
+    rulerBackgroundPatternContext.fillStyle = "#DDD";
+    rulerBackgroundPatternContext.fillRect(0, 0, rulerBackgroundPattern.width, rulerBackgroundPattern.height);
+    timelineBackgroundPatternContext.fillStyle = "#FFF";
+    timelineBackgroundPatternContext.fillRect(0, 0, timelineBackgroundPattern.width, timelineBackgroundPattern.height);
+    rulerBackgroundPatternContext.lineWidth = 1;
+    rulerBackgroundPatternContext.strokeStyle = "#BBB";
+    rulerBackgroundPatternContext.beginPath();
+    rulerBackgroundPatternContext.moveTo(snap(0), 0);
+    rulerBackgroundPatternContext.lineTo(snap(0), rulerBackgroundPattern.height);
+    rulerBackgroundPatternContext.stroke();
+    timelineBackgroundPatternContext.lineWidth = 1;
+    timelineBackgroundPatternContext.strokeStyle = "#EEE";
+    timelineBackgroundPatternContext.beginPath();
+    timelineBackgroundPatternContext.moveTo(snap(0), 0);
+    timelineBackgroundPatternContext.lineTo(snap(0), timelineBackgroundPattern.height);
+    timelineBackgroundPatternContext.stroke();
+    // timeline horizontal lines
+    timelineBackgroundPatternContext.lineWidth = 1;
+    timelineBackgroundPatternContext.strokeStyle = "#EEE";
+    timelineBackgroundPatternContext.beginPath();
+    timelineBackgroundPatternContext.moveTo(0, snap(timelineBackgroundPattern.height - 1));
+    timelineBackgroundPatternContext.lineTo(timelineBackgroundPattern.width, snap(timelineBackgroundPattern.height - 1));
+    timelineBackgroundPatternContext.stroke();
+    rulerBackgroundPatternContext.strokeStyle = "#CCC";
+    timelineBackgroundPatternContext.strokeStyle = "#EEE";
+    for (var i = 1; i < 10; i++) {
+        var x = rulerBackgroundPattern.width / 1000 * i * 100;
+        rulerBackgroundPatternContext.beginPath();
+        rulerBackgroundPatternContext.moveTo(snap(x), rulerBackgroundPattern.height - rulerBackgroundPattern.height * 0.25);
+        rulerBackgroundPatternContext.lineTo(snap(x), rulerBackgroundPattern.height);
+        rulerBackgroundPatternContext.stroke();
+        timelineBackgroundPatternContext.beginPath();
+        timelineBackgroundPatternContext.moveTo(snap(x), 0);
+        timelineBackgroundPatternContext.lineTo(snap(x), timelineBackgroundPattern.height);
+        timelineBackgroundPatternContext.stroke();
+    }
+    var rulerOffset = -Math.round((left - Math.floor(left / 1000) * 1000) * pixelPerMs);
+    var rulerPattern = context.createPattern(rulerBackgroundPattern, "repeat");
+    context.fillStyle = rulerPattern;
+    context.translate(rulerOffset, 0);
+    context.fillRect(-rulerOffset, 0, background.width, 30);
+    context.translate(-rulerOffset, 0);
+    var timelinePattern = context.createPattern(timelineBackgroundPattern, "repeat");
+    context.fillStyle = timelinePattern;
+    context.translate(rulerOffset, 31);
+    context.fillRect(-rulerOffset, 0, background.width, background.height - 30);
+    context.translate(-rulerOffset, -31);
+    // Separators
+    context.lineWidth = 1;
+    context.strokeStyle = "#666";
+    context.beginPath();
+    context.moveTo(0, snap(30));
+    context.lineTo(background.width, snap(30));
+    context.stroke();
+}
+function resize() {
+    background.width = window.innerWidth;
+    background.height = window.innerHeight;
+}
+function resizeRulers() {
+    // Lets try major rules on seconds and minor rules on 100ms.
+    var width = 1000 * pixelPerMs;
+    rulerBackgroundPattern.width = width;
+    rulerBackgroundPattern.height = 30;
+    timelineBackgroundPattern.width = width;
+    timelineBackgroundPattern.height = 21;
+}
+function clampViewPort() {
+    pixelPerMs = Math.max(window.innerWidth / (max - min), pixelPerMs);
+    left = Math.min(Math.max(min, left), max - window.innerWidth / pixelPerMs);
+}
+function focusTrace(ev) {
+    if (suspendClicks) {
+        return;
+    }
+    var trace = this.trace;
+    pixelPerMs = window.innerWidth / (trace.to - trace.from);
+    left = trace.from;
+    clampViewPort();
+    resizeRulers();
+    redrawBackground();
+    updateStackTraces();
+}
+window.addEventListener("resize", function () {
+    resize();
+    resizeRulers();
+    clampViewPort();
+    updateStackTraces();
+    redrawBackground();
+});
+window.addEventListener("mousewheel", function (e) {
+    var mousePoint = left + e.clientX / pixelPerMs;
+    pixelPerMs = Math.pow(2, Math.log2(pixelPerMs) + Math.max(-0.25, Math.min(0.25, e.wheelDelta)));
+    left = mousePoint - e.clientX / pixelPerMs;
+    lowLOD();
+    clampViewPort();
+    resizeRulers();
+    redrawBackground();
+    updateStackTraces();
+});
+var dragging = false;
+var suspendClicks = false;
+var mouseDown = false;
+var dragOriginXms; // The millisecond at which the chart was grabbed
+var dragOriginXpx;
+window.addEventListener("mousedown", function (e) {
+    dragOriginXms = left + e.clientX / pixelPerMs;
+    dragOriginXpx = e.clientX;
+    mouseDown = true;
+}, true);
+window.addEventListener("mouseup", function (e) {
+    if (dragging) {
+        dragging = false;
+        // Cant find a way to prevent the click action
+        suspendClicks = true;
+        setTimeout(function () { return suspendClicks = false; }, 1);
+    }
+    mouseDown = false;
+});
+window.addEventListener("mousemove", function (e) {
+    if (mouseDown && !dragging && Math.abs(e.clientX - dragOriginXpx) > 8) {
+        dragging = true;
+    }
+    if (dragging) {
+        left = dragOriginXms - e.clientX / pixelPerMs;
+        lowLOD();
+        clampViewPort();
+        redrawBackground();
+        updateStackTraces();
+    }
+});
+clampViewPort();
+resize();
+resizeRulers();
+redrawBackground();
+updateStackTraces();
+
+  </script>
+</body>
+</html>

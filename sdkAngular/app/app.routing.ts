@@ -5,7 +5,6 @@ import { ExamplesListDepth1Component, ExamplesListDepth2Component, ExamplesListD
 import { OptionsComponent } from "./navigation/options/options.component";
 
 var excludedComponents = [];
-
 let APP_ROUTES: Routes = [
     { path: "", redirectTo: "examples-depth-1/root/root", pathMatch: 'full' },
     { path: "examples-depth-1/:parentTitle/:tappedTitle", component: ExamplesListDepth1Component },
