@@ -11,7 +11,7 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-ios": {
-      "version": "3.4.0"
+      "version": "4.0.1-rc-2018-03-22-01"
     },
     "tns-android": {
       "version": "4.0.0-rc-2018.3.22.1"
@@ -42,8 +42,9 @@
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
+    "@angular-devkit/core": "~0.4.8",
     "@angular/compiler-cli": "~6.0.0-rc.0",
-    "@ngtools/webpack": "~6.0.0-beta.5",
+    "@ngtools/webpack": "~6.0.0-beta.8",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
     "babylon": "6.17.0",
@@ -68,7 +69,7 @@
     "resolve-url-loader": "~2.2.1",
     "tns-platform-declarations": "3.4.0",
     "tslib": "1.7.1",
-    "typescript": "^2.7.2",
+    "typescript": "~2.7.2",
     "uglifyjs-webpack-plugin": "~1.2.4",
     "webpack": "^4.3.0",
     "webpack-bundle-analyzer": "^2.9.1",
