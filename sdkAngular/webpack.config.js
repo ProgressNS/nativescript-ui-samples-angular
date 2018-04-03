@@ -42,10 +42,10 @@ module.exports = env => {
     const appResourcesFullPath = resolve(projectRoot, appResourcesPath);
 
     const entryModule = aot ?
-        nsWebpack.getAotEntryModule(appFullPath) :
+        nsWebpack.getAotEntryModule(appFullPath) : 
         `${nsWebpack.getEntryModule(appFullPath)}.ts`;
     const entryPath = `./${entryModule}`;
-    const vendorPath = `./vendor`;
+    const vendorPath = `./vendor.ts`;
 
     const config = {
         mode: "development",
@@ -106,6 +106,15 @@ module.exports = env => {
                     },
                 }
             },
+            minimize: !!uglify,
+            minimizer: [
+                // Override default minimizer to work around an Android issue by setting compress = false
+                new UglifyJsPlugin({
+                    uglifyOptions: {
+                        compress: platform !== "android"
+                    }
+                })
+            ],
         },
         module: {
             rules: [
@@ -197,7 +206,7 @@ module.exports = env => {
         // Require all Android app components
         // in the entry module (bundle.ts) and the vendor module (vendor.ts).
         config.module.rules.unshift({
-            test: new RegExp(`${entryPath}|${vendorPath}.ts`),
+            test: new RegExp(`${entryPath}|${vendorPath}`),
             use: {
                 loader: "nativescript-dev-webpack/android-app-components-loader",
                 options: { modules: appComponents }
@@ -223,18 +232,6 @@ module.exports = env => {
             webpackConfig: config,
             targetArchs: ["arm", "arm64", "ia32"],
             useLibs: false
-        }));
-    }
-
-    if (uglify) {
-        config.plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
-
-        // Work around an Android issue by setting compress = false
-        const compress = platform !== "android";
-        config.plugins.push(new UglifyJsPlugin({
-            uglifyOptions: {
-                compress,
-            }
         }));
     }
 
