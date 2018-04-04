@@ -37,7 +37,7 @@
     "nativescript-ui-listview": "^3.5.0",
     "nativescript-ui-sidedrawer": "^3.5.0",
     "nativescript-unit-test-runner": "^0.3.2",
-    "rxjs": "~6.0.0-beta.0",
+    "rxjs": "~6.0.0-rc.0",
     "tns-core-modules": "^4.0.0-rc-2018.3.12.2",
     "zone.js": "~0.8.2"
   },
@@ -66,7 +66,7 @@
     "nativescript-dev-webpack": "github:nativescript/nativescript-dev-webpack#sis0k0/webpack4",
     "nativescript-worker-loader": "~0.8.1",
     "raw-loader": "~0.5.1",
-    "resolve-url-loader": "~2.2.1",
+    "resolve-url-loader": "~2.3.0",
     "tns-platform-declarations": "3.4.0",
     "tslib": "1.7.1",
     "typescript": "~2.7.2",
