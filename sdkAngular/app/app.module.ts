@@ -2,7 +2,6 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 // >> using-global-directives
 // --- The built-in 'nativescript-pro-ui' modules, if you are not using 'lazy' loading, uncomment and import the below modules into the 'imports' of the first ngModule (AppModule) of the app. 
-// import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 // import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 // import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
 // import { NativeScriptUIChartModule } from "nativescript-ui-chart/angular";
@@ -11,6 +10,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 // import { NativeScriptUIGaugesModule } from "nativescript-pro-ui/gauges/angular";
 
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
 // Not required imports, these are used by the nativescript-samples-angular SDK examples - https://github.com/telerik/nativescript-ui-samples-angular
 import { NativeScriptRouterModule, NSModuleFactoryLoader } from "nativescript-angular/router";
@@ -54,6 +54,7 @@ if (applicationModule.android) {
         CommonDirectivesModule,
         TNSFrescoModule,
         NativeScriptUIListViewModule,
+        NativeScriptUISideDrawerModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         routing
