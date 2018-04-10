@@ -26,7 +26,7 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "nativescript-angular": "next",
+    "nativescript-angular": "5.3.0",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
     "nativescript-theme-core": "^1.0.4",
@@ -39,7 +39,7 @@
     "nativescript-ui-sidedrawer": "^4.0.0",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "^5.5.2",
-    "tns-core-modules": "next",
+    "tns-core-modules": "4.0.0",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
