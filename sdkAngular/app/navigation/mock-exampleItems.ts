@@ -441,11 +441,6 @@ export var EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Events",
                         "path": "SideDrawerEventsComponent/SideDrawerEventsComponent",
                         "subItems": []
-                    },
-                    {
-                        "title": "Drawer Over Navigation",
-                        "path": "SideDrawerOverNavigationComponent/SideDrawerOverNavigationComponent",
-                        "subItems": []
                     }
                 ]
             },
