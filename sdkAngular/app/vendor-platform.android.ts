@@ -8,4 +8,3 @@ if (!global["__snapshot"]) {
     require("ui/frame/activity");
     require("./main-activity.android.ts");
 }
-
