@@ -1,5 +1,9 @@
 import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 import { AppModule } from "./app.module";
-require("./main-activity.android.ts");
+import * as application from "tns-core-modules/application";
+
+if (application.android) {
+    require("./main-activity.android.ts");
+}
 
 platformNativeScriptDynamic().bootstrapModule(AppModule);
