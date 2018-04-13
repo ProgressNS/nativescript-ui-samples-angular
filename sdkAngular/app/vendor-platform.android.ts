@@ -6,5 +6,4 @@ if (!global["__snapshot"]) {
     // This way, they will be evaluated on app start as early as possible.
     require("ui/frame");
     require("ui/frame/activity");
-    require("./main-activity.android.ts");
 }
