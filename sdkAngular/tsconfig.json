@@ -23,12 +23,12 @@
             "*": [
                 "./node_modules/tns-core-modules/*",
                 "./node_modules/*"
+            ],
+            "~/*": [
+                "app/*"
             ]
         }
     },
-    "filesGlob": [
-        "./**/*.ts"
-    ],
     "exclude": [
         "node_modules",
         "platforms"

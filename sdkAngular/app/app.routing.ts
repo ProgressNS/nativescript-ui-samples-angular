@@ -188,20 +188,6 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "SideDrawerOverNavigationComponent",
-        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
-        data: {
-            "title": "Over Navigation"
-        }
-    },
-    {
-        path: "SecondSideDrawerOverNavigationComponent",
-        loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
-        data: {
-            "title": "Over Navigation Second"
-        }
-    },
-    {
         path: "SideDrawerEventsComponent",
         loadChildren: './sidedrawer/sidedrawer-examples.module#SideDrawerExamplesModule',
         data: {

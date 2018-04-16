@@ -6,8 +6,6 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 
 import { SideDrawerEventsComponent } from './events/events.component';
 import { SideDrawerGettingStartedComponent } from './getting-started/getting-started.component';
-import { SideDrawerOverNavigationComponent } from './over-navigation/over-navigation.component';
-import { SecondSideDrawerOverNavigationComponent } from './over-navigation/second-page/second-over-navigation.component';
 import { SideDrawerPositionComponent } from './position/position.component';
 import { SideDrawerTransitionsComponent } from './transitions/transitions.component';
 
@@ -26,8 +24,6 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
     declarations: [
         SideDrawerEventsComponent,
         SideDrawerGettingStartedComponent,
-        SideDrawerOverNavigationComponent,
-        SecondSideDrawerOverNavigationComponent,
         SideDrawerPositionComponent,
         SideDrawerTransitionsComponent
     ]
