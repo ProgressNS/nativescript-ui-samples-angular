@@ -2,7 +2,6 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 // >> using-global-directives
 // --- The built-in 'nativescript-pro-ui' modules, if you are not using 'lazy' loading, uncomment and import the below modules into the 'imports' of the first ngModule (AppModule) of the app. 
-// import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 // import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
 // import { NativeScriptUIChartModule } from "nativescript-ui-chart/angular";
 // import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
