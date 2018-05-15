@@ -2,7 +2,6 @@
     "name": "nativescript-ui-angular2",
     "main": "main.js",
     "version": "1.0.0",
-    "profiling": "timeline",
     "author": {
         "name": "Progress",
         "email": "support@telerik.com"
@@ -27,11 +26,7 @@
         "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
     },
     "homepage": "https://github.com/telerik/nativescript-ui-samples-angular",
-    "android": {
-        "v8Flags": "--expose_gc",
-        "heapSnapshotBlob": "./blobs"
-
-    },
+    "android": { "v8Flags": "--expose_gc" },
     "readme": "ERROR: No README data found!",
     "_id": "tns-template-hello-world@1.6.0",
     "_from": "tns-template-hello-world@1.6.0"

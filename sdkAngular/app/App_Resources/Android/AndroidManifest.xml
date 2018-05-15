@@ -41,3 +41,4 @@
 		<activity android:name="com.tns.ErrorReportActivity"/>
 	</application>
 </manifest>
+

@@ -3,7 +3,7 @@ import { Component, ViewChild, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { TokenModel } from "nativescript-ui-autocomplete";
 import { RadAutoCompleteTextViewComponent } from "nativescript-ui-autocomplete/angular";
-import http = require("tns-core-modules/http");
+import { getJSON } from "tns-core-modules/http";
 
 @Component({
     moduleId: module.id,
@@ -21,7 +21,7 @@ export class AutoCompleteRemoteComponent implements OnInit {
     ngOnInit() {
         this.autocmp.autoCompleteTextView.loadSuggestionsAsync = function (text) {
             var promise = new Promise(function (resolve, reject) {
-                http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function (r: any) {
+                getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function (r: any) {
                     var airportsCollection = r.airports;
                     var items: Array<TokenModel> = new Array();
                     for (var i = 0; i < airportsCollection.length; i++) {
