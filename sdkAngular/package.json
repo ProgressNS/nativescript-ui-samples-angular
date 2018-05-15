@@ -11,10 +11,10 @@
   "nativescript": {
     "id": "org.nativescript.sdkAngular",
     "tns-android": {
-      "version": "4.0.0-rc-2018.4.2.1"
+      "version": "next"
     },
     "tns-ios": {
-      "version": "4.0.1-rc-2018-04-02-01"
+      "version": "next"
     }
   },
   "dependencies": {
@@ -26,7 +26,7 @@
     "@angular/platform-browser": "~6.0.0-rc.0",
     "@angular/platform-browser-dynamic": "~6.0.0-rc.0",
     "@angular/router": "~6.0.0-rc.0",
-    "nativescript-angular": "file:nativescript-angular-6.0.0-rc.0.tgz",
+    "nativescript-angular": "^6.0.0-rc.0",
     "nativescript-fresco": "^3.0.2",
     "nativescript-intl": "^3.0.0",
     "nativescript-ui-autocomplete": "^3.6.0",
@@ -38,7 +38,7 @@
     "nativescript-ui-sidedrawer": "^3.5.0",
     "nativescript-unit-test-runner": "^0.3.2",
     "rxjs": "~6.0.0-rc.0",
-    "tns-core-modules": "^4.0.0-rc-2018.3.12.2",
+    "tns-core-modules": "next",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
@@ -63,7 +63,7 @@
     "mocha": "^3.3.0",
     "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-typescript": "~0.6.0",
-    "nativescript-dev-webpack": "github:nativescript/nativescript-dev-webpack#sis0k0/webpack4",
+    "nativescript-dev-webpack": "next",
     "nativescript-worker-loader": "~0.8.1",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.3.0",
