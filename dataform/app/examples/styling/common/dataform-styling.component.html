@@ -1,0 +1,54 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="person">
+	<TKPropertyGroup tkDataFormGroups name="Main Info" hidden="false">
+		<TKGroupTitleStyle tkPropertyGroupTitleStyle fillColor="#00695c" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif"
+			labelFontStyle="Bold" labelTextColor="White"></TKGroupTitleStyle>
+		<!-- >> angular-dataform-styling-html -->
+		<TKEntityProperty tkPropertyGroupProperties name="name">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Left" labelWidth="60" labelTextColor="#00695c"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+		<!-- << angular-dataform-styling-html -->
+		<TKEntityProperty tkPropertyGroupProperties name="age">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Left" labelWidth="60" labelTextColor="#00695c"></TKPropertyEditorStyle>
+			</TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="email">
+			<TKPropertyEditor tkEntityPropertyEditor type="Email">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Left" labelWidth="60" labelTextColor="#00695c"></TKPropertyEditorStyle>
+				</TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+	<TKPropertyGroup tkDataFormGroups name="Address" hidden="false">
+		<TKGroupTitleStyle tkPropertyGroupTitleStyle fillColor="#00695c" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif"
+			labelFontStyle="Bold" labelTextColor="White"></TKGroupTitleStyle>
+		<TKEntityProperty tkPropertyGroupProperties name="city">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Top" labelTextColor="#00695c"></TKPropertyEditorStyle>
+				</TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="street">
+			<TKPropertyEditor tkEntityPropertyEditor type="Text">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Top" labelTextColor="#00695c"></TKPropertyEditorStyle>
+				</TKPropertyEditor>
+		</TKEntityProperty>
+		<TKEntityProperty tkPropertyGroupProperties name="streetNumber">
+			<TKPropertyEditor tkEntityPropertyEditor type="Number">
+				<TKPropertyEditorStyle tkPropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false"
+					labelTextSize="18" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic"
+					labelPosition="Top" labelTextColor="#00695c"></TKPropertyEditorStyle>
+				</TKPropertyEditor>
+		</TKEntityProperty>
+	</TKPropertyGroup>
+</RadDataForm>

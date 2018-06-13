@@ -1,0 +1,17 @@
+<StackLayout tkExampleTitle tkToggleNavButton>
+    <RadDataForm #myValidationEventsDataForm [source]="registeringUser" 
+        (propertyValidate)="onPropertyValidate($event)" 
+        (propertyValidated)="onPropertyValidated($event)">
+        <TKEntityProperty tkDataFormProperty name="username" index="0">
+            <TKNonEmptyValidator tkEntityPropertyValidators></TKNonEmptyValidator>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="password" index="1">
+            <TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+            <TKMinimumLengthValidator tkEntityPropertyValidators length="6"></TKMinimumLengthValidator>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="password2" displayName="Confirm Password" index="2">
+            <TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+        </TKEntityProperty>
+    </RadDataForm>
+    <Label [text]="text" textWrap="true" margin="12"></Label>
+</StackLayout>

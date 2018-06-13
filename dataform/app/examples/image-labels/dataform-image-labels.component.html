@@ -1,0 +1,16 @@
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="employee">
+    <!-- >> angular-dataform-image-labels-html -->
+	<TKEntityProperty tkDataFormProperty name="name" displayName=""
+		imageResource="res://ic_dataform_guest"
+		hintText="name" index="0"></TKEntityProperty>
+    <!-- << angular-dataform-image-labels-html -->
+	<TKEntityProperty tkDataFormProperty name="phone" displayName="" imageResource="res://ic_dataform_phone" hintText="phone" index="1">
+		<TKPropertyEditor tkEntityPropertyEditor type="Phone"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="birthDate" displayName="" imageResource="res://ic_dataform_calendar" hintText="birth date" index="2">
+		<TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+	</TKEntityProperty>
+	<TKEntityProperty tkDataFormProperty name="employeeId" displayName="" imageResource="res://ic_dataform_table" hintText="employee id" index="3">
+		<TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+	</TKEntityProperty>
+</RadDataForm>
