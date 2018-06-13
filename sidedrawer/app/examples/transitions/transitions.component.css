@@ -1,0 +1,35 @@
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.mainStackLayout {
+    background-color: white;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
+}
+
+.mainContentlabel {
+    margin: 10;
+}
+
+.sideStackLayout {
+    background-color: gray;
+}
+
+.sideTitleStackLayout {
+    height: 56;
+    text-align: center;
+    vertical-align: center;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: lightgray;
+}
