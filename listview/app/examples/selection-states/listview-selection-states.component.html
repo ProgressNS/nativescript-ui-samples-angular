@@ -1,0 +1,17 @@
+<GridLayout rows="auto, *" tkExampleTitle tkToggleNavButton>
+    <Label text="Selection states"></Label>
+    <!-- >> angular-listview-howto-item-selection-events-html -->
+    <RadListView [items]="dataItems" row="1" multipleSelection="true" selectionBehavior="Press" (itemSelected)="itemSelected($event)"
+        (itemDeselected)="itemDeselected($event)">
+        <!-- << angular-listview-howto-item-selection-events-html -->
+        
+        <!-- >> angular-listview-howto-item-selection-template-html -->
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout [backgroundColor]="item.selected ? 'red' : 'white'">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <!-- << angular-listview-howto-item-selection-template-html -->
+    </RadListView>
+</GridLayout>

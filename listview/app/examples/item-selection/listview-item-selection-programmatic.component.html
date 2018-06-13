@@ -1,0 +1,26 @@
+<GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
+    <GridLayout rows="auto,70,70" backgroundColor="#f8f8f8" orientation="horizontal" row="0">
+        <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+            <Button text="Select all" (tap)="onSelectAllTap()" ios:class="selectAllButton" android:class="androidSelectAllButton"></Button>
+            <Button text="Deselect all" (tap)="onDeselectAllTap()"></Button>
+        </StackLayout>
+        <StackLayout orientation="horizontal" row="1" horizontalAlignment="center">
+            <Label text="Select item at:" verticalAlignment="center"></Label>
+            <TextField [(ngModel)]="txtSelectItemIndex" ios:class="iosSelectItemTextField" android:class="androidSelectItemTextField"></TextField>
+            <Button (tap)="onSelectItemAtTap()" ios:class="iosSelectItemButton" android:class="androidSelectItemButton" text="Done"></Button>
+        </StackLayout>
+        <StackLayout orientation="horizontal" row="2" horizontalAlignment="center">
+            <Label text="Deselect item at:" verticalAlignment="center"></Label>
+            <TextField [(ngModel)]="txtDeselectItemIndex" ios:class="iosSelectItemTextField" android:class="androidSelectItemTextField"></TextField>
+            <Button (tap)="onDeselectItemAtTap()" text="Done" ios:class="iosSelectItemButton" android:class="androidSelectItemButton"></Button>
+        </StackLayout>
+    </GridLayout>
+    <RadListView #myRadListView [items]="dataItems" row="1" multipleSelection="true" selectionBehavior="Press">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" ios:class="iosListItemStackLayout" android:class="androidListItemStackLayout">
+                <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>
+                <Label ios:class="iosDescriptionLabel" android:class="androidDescriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
