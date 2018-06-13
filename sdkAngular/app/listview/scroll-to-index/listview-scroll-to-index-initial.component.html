@@ -1,9 +1,0 @@
-<GridLayout rows="auto, *" backgroundColor="lightgray" tkExampleTitle tkToggleNavButton>
-    <Label class="topLabel" text="RadListView is initially scrolled so that 'item 20' is visible" textWrap="true"></Label>
-    <RadListView #myRadListView [items]="dataItems" row="1" (dataPopulated)="onDataPopulated($event)" android:backgroundColor="white">
-        <ng-template tkListItemTemplate let-item="item">
-            <Label class="labelNameInitialScroll" [text]="item.name" marginLeft="20"></Label>
-        </ng-template>
-        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="50"></ListViewLinearLayout>
-    </RadListView>
-</GridLayout>
