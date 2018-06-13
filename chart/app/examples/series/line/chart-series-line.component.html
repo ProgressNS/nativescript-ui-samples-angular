@@ -1,0 +1,9 @@
+<!-- >> chart-angular-line-series -->
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <!-- >> chart-line-axis -->
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    <!-- << chart-line-axis -->
+    <LineSeries tkCartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+</RadCartesianChart>
+<!-- << chart-angular-line-series -->

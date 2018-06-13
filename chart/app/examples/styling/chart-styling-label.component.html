@@ -1,0 +1,18 @@
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelSize="10" lineColor="Red" lineThickness="3"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Left" labelSize="10" lineColor="Red" lineThickness="3"></LinearAxis>
+
+    <!-- >> chart-angular-labels-styling -->
+    <LineSeries tkCartesianSeries legendTitle="Financial data" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country"
+        [items]="categoricalSource">
+        <PointLabelStyle tkLineLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White"></PointLabelStyle>
+    </LineSeries>
+
+    <LineSeries tkCartesianSeries legendTitle="Financial data" showLabels="true" seriesName="Bar" valueProperty="SecondVal" categoryProperty="Country"
+        [items]="categoricalSource">
+        <PointLabelStyle tkLineLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"></PointLabelStyle>
+    </LineSeries>
+    <!-- << chart-angular-labels-styling -->
+
+    <RadLegendView tkCartesianLegend position="Top" height="150"></RadLegendView>
+</RadCartesianChart>

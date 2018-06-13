@@ -1,0 +1,18 @@
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <LinearAxis tkCartesianHorizontalAxis minimum="0" maximum="80" id="hAxis"></LinearAxis>
+    <LinearAxis tkCartesianVerticalAxis id="vAxis"></LinearAxis>
+
+    <ScatterSeries tkCartesianSeries seriesName="SavingsSeries" [items]="scatterSource" xProperty="Age" yProperty="Savings"></ScatterSeries>
+    <ScatterSeries tkCartesianSeries seriesName="SalarySeries" [items]="scatterSource" xProperty="Age" yProperty="Salary"></ScatterSeries>
+    <ScatterSeries tkCartesianSeries seriesName="SpendingsSeries" [items]="scatterSource" xProperty="Age" yProperty="Spendings"></ScatterSeries>
+    <!-- >> chart-angular-grid-line-annotations -->
+    <ChartGridLineAnnotation tkCartesianAnnotations axisId="hAxis" hidden="false" value="50" zPosition="AboveSeries" strokeWidth="1"
+        strokeColor="#EB916580"></ChartGridLineAnnotation>
+    <ChartGridLineAnnotation tkCartesianAnnotations axisId="vAxis" hidden="false" value="10000" zPosition="AboveSeries" strokeWidth="1"
+        strokeColor="#65BFEB80"></ChartGridLineAnnotation>
+    <ChartPlotBandAnnotation tkCartesianAnnotations axisId="hAxis" hidden="false" value="20" zPosition="AboveSeries" minValue="60"
+        maxValue="70" fillColor="#A1FAC980" strokeColor="#A1FAC980"></ChartPlotBandAnnotation>
+    <ChartPlotBandAnnotation tkCartesianAnnotations axisId="vAxis" hidden="false" value="20000" zPosition="AboveSeries" minValue="2500"
+        maxValue="5000" fillColor="#AC74E880" strokeColor="#AC74E880"></ChartPlotBandAnnotation>
+    <!-- << chart-angular-grid-line-annotations -->
+</RadCartesianChart>

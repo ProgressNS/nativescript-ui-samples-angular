@@ -1,0 +1,13 @@
+<!-- >> chart-angular-axes-multiple -->
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Left"></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Down"></CategoricalAxis>
+
+    <LineSeries tkCartesianSeries seriesName="RateA" [items]="rateA" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <LineSeries tkCartesianSeries seriesName="RateB" [items]="rateB" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <LineSeries tkCartesianSeries seriesName="RateC" [items]="rateC" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <BarSeries tkCartesianSeries seriesName="Total" [items]="total" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+        <LinearAxis tkBarVerticalAxis horizontalLocation="Right"></LinearAxis>
+    </BarSeries>
+</RadCartesianChart>
+<!-- << chart-angular-axes-multiple -->

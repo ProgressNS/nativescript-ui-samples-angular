@@ -1,0 +1,20 @@
+<!-- >> chart-angular-series-styling -->
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+
+    <BarSeries tkCartesianSeries seriesName="Bar" [items]="categoricalSource" categoryProperty="Country" valueProperty="SecondVal" stackMode="None"></BarSeries>
+    <LineSeries tkCartesianSeries seriesName="Line" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount" stackMode="None"></LineSeries>
+    <SplineAreaSeries tkCartesianSeries seriesName="Area" [items]="categoricalSource" categoryProperty="Country" valueProperty="ThirdVal" stackMode="None"></SplineAreaSeries>
+
+    <Palette tkCartesianPalette seriesName="Bar">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="#80FCE49D" strokeColor="#80E2A1F8"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Area">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="#8060B3FC" strokeColor="#60B3FC"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Line">
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#FFCF40" strokeWidth="3"></PaletteEntry>
+    </Palette>
+</RadCartesianChart>
+<!-- << chart-angular-series-styling -->

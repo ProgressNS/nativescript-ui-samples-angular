@@ -8,12 +8,6 @@
             </StackLayout>
         </ng-template>
 
-        <ng-template tkGroupTemplate let-category="category">
-            <GridLayout ios:height="50" backgroundColor="pink">
-                <Label class="nameLabel" [text]="category" class="groupLabel"></Label>
-            </GridLayout>
-        </ng-template>
-
         <ng-template tkTemplateKey="start" let-item="item">
             <StackLayout orientation="vertical" class="blackStackLayout">
                 <Label [text]="item.name" class="nameLabel yellowText"></Label>
