@@ -1,0 +1,7 @@
+<StackLayout tkExampleTitle tkToggleNavButton>
+    <GridLayout rows="auto, auto, *">
+        <Button text="btn" text="hide title" (tap)="onTitleTap($event)"></Button>
+        <Button row="1" text="hide week" (tap)="onWeekTap($event)"></Button>
+        <RadCalendar row="2" #myCalendar [eventSource]="eventSource" (dayViewEventSelected)="onDayViewEventSelected($event)" viewMode="Day"></RadCalendar>
+    </GridLayout>
+</StackLayout>

@@ -1,0 +1,11 @@
+<GridLayout rows="*, auto" tkExampleTitle tkToggleNavButton>
+    <!-- >> angular-calendar-localization-html -->
+    <RadCalendar id="calendar" locale="ru-RU"></RadCalendar>
+    <!-- << angular-calendar-localization-html -->
+    <StackLayout row="1" orientation="horizontal">
+        <Button margin="5" (tap)="btnChangeLocaleTap($event)" text="de-DE"></Button>
+        <Button margin="5" (tap)="btnChangeLocaleTap($event)" text="bg-BG"></Button>
+        <Button margin="5" (tap)="btnChangeLocaleTap($event)" text="en-UK"></Button>
+        <Button margin="5" (tap)="btnChangeLocaleTap($event)" text="fr-FR"></Button>
+    </StackLayout>
+</GridLayout>

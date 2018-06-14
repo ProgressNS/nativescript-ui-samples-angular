@@ -1,0 +1,8 @@
+<GridLayout orientation="vertical" rows="*, auto" tkExampleTitle tkToggleNavButton>
+  <RadCalendar #myCalendar row="0"></RadCalendar>
+  <StackLayout row="1">
+    <Button text="Next month" (tap)="onNavigateForwardTap()"></Button>
+    <Button text="Prev month" (tap)="onNavigateBackTap()"></Button>
+    <Button text="Today" (tap)="onGoToDateTap()"></Button>
+  </StackLayout>
+</GridLayout>
