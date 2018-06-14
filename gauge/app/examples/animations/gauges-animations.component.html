@@ -1,0 +1,35 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="*, auto">
+    <!-- >> gauges-animations-angular-html -->
+    <RadRadialGauge id="gaugeView" title="km/h" row="0" margin="10">
+        <TitleStyle tkRadialGaugeTitleStyle textColor="black" ios:verticalOffset="20" android:verticalOffset="50"></TitleStyle>
+
+        <RadialScale tkRadialGaugeScales minimum="0" maximum="180" radius="0.98">
+            <ScaleStyle tkRadialScaleStyle lineThickness="0" labelsCount="10" majorTicksCount="19" minorTicksCount="1" ticksOffset="0.1"
+                majorTicksStrokeWidth="2" majorTicksStrokeColor="rgb(132, 132, 132)"></ScaleStyle>
+            <RadialBarIndicator tkRadialScaleIndicators minimum="0" maximum="60">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="rgb(132, 132, 132)" barWidth="0.02"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialBarIndicator tkRadialScaleIndicators minimum="61" maximum="120">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="rgb(54, 54, 54)" barWidth="0.02"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialBarIndicator tkRadialScaleIndicators minimum="121" maximum="180">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="rgb(198, 85, 90)" barWidth="0.02"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialNeedle #needle tkRadialScaleIndicators isAnimated="true" animationDuration="500">
+                <NeedleStyle tkRadialNeedleStyle length="0.8" android:topWidth="8" android:bottomWidth="8" ios:topWidth="2" ios:bottomWidth="2"></NeedleStyle>
+            </RadialNeedle>
+        </RadialScale>
+    </RadRadialGauge>
+    <!-- << gauges-animations-angular-html -->
+
+    <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+        <Button *ngFor="let value of values"
+            [text]="value"
+            (tap)="onValueChange(value)"
+            verticalAlignment="center"
+        ></Button>
+    </StackLayout>
+</GridLayout>
