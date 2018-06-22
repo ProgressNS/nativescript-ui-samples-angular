@@ -5,7 +5,6 @@
 *.js.map
 *.esm.json 
 *.log
-*.d.ts
 !*/karma.conf.js
 !*/app/tests/*.js
 !*/references.d.ts
