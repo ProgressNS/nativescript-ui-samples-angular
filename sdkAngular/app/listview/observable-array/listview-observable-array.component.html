@@ -1,0 +1,18 @@
+<GridLayout orientation="vertical" rows="50, *" tkExampleTitle tkToggleNavButton>
+    <StackLayout orientation="vertical" ios:class="iosButtonsStacklayout" android:class="androidButtonsStacklayout">
+        <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
+            <Button ios:class="iosButton" text="Add" (tap)="onAddItemClick()"></Button>
+            <Button ios:class="iosButton" text="Del" (tap)="onRemoveItemClick()"></Button>
+            <Button ios:class="iosButton" text="Update" (tap)="onUpdateItemClick()"></Button>
+            <Button ios:class="iosButton" text="Reset" (tap)="onResetClick()"></Button>
+        </StackLayout>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>
+                <Label ios:class="iosDescriptionLabel" android:class="androidDescriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

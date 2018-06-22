@@ -13,25 +13,32 @@ The `master` branch contains code currently under development and is not meant t
 The `release` branch is the default one and is tested with the latest NativeScript UI plugins available.
 
 ## Issues
-Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository.
+Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository. Please do not use this repository to log issues.
 
 ## Overview
-Progress NativeScript UI samples app resides at root repository level. The source code of the samples resides in a folder named after each component available as independent plugin. The currently available components are:
+The Progress NativeScript UI samples app resides in the **sdkAngular** folder at root repository level. The folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/angular/tutorial/ng-chapter-0.html). The source code of the samples resides in the folders named after each component available as independent plugin. The currently available components are:
 
-- AutoCompleteTextView
 - Calendar
 - Chart
 - DataForm
-- Gauge
 - ListView
 - SideDrawer
-
-Each of the above-mentioned folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/getting-started#directory-structure). 
+- Gauges
+- AutoCompleteTextView
 
 ## Running **Progress NativeScript UI** sample app
-Make sure you are using the latest NativeScript CLI version by running `npm i nativescript -g`.
+Make sure you are using NativeScript 3.0+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
 
 Steps to run the sample:
 
-1. `cd listview`
+1. `cd sdkAngular`
 2. `tns run android` or `tns run ios`
+
+
+## Release notes
+For more information about releases, features and breaking changes you can check out the release notes section in the online documentation:
+[Progress NativeScript UI release notes](http://docs.telerik.com/devtools/nativescript-ui/release-notes)
+
+## Enable codelyzer
+The project takes advantage of the [codelyzer](https://www.npmjs.com/package/codelyzer) library and its set of tslint rules for static code analysis of the Angular TypeScript projects. In order to enable the codelyzer in Visual Studio Code you need to:
+- Install tslint extension in VS code IDE by running the `ext install tslint`

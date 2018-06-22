@@ -1,0 +1,17 @@
+<ActionBar title="In vertical direction">
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"></NavigationButton>
+    <ActionItem *tkIfIOS text="Options" ios.position="right" (tap)="onOptionsTapped()"></ActionItem>
+    <ActionItem *tkIfAndroid text="Auto" android.position="popup" (tap)="onOptionsTapped($event)" ></ActionItem>
+    <ActionItem *tkIfAndroid text="Start" android.position="popup" (tap)="onOptionsTapped($event)"></ActionItem>
+    <ActionItem *tkIfAndroid text="Center" android.position="popup" (tap)="onOptionsTapped($event)"></ActionItem>
+    <ActionItem *tkIfAndroid text="End" android.position="popup" (tap)="onOptionsTapped($event)" ></ActionItem>
+</ActionBar>
+<GridLayout rows="auto, *">
+    <Button text="Scroll to index 50" (tap)="onTap()"></Button>
+    <RadListView #myRadListView [items]="dataItems" [scrollPosition]="myScrollPosition" row="1">
+        <ng-template tkListItemTemplate let-item="item">
+            <Label class="labelName" [text]="item.name"></Label>
+        </ng-template>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemHeight="50"></ListViewLinearLayout>
+    </RadListView>
+</GridLayout>

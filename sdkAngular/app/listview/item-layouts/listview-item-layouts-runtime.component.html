@@ -1,0 +1,21 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button text="Linear" class="menu-button" (tap)="changeToLinear($event)"></Button>
+        <Button text="Grid" class="menu-button" (tap)="changeToGrid($event)"></Button>
+        <Button text="Staggered" class="menu-button" (tap)="changeToStaggered($event)"></Button>
+    </StackLayout>
+    <RadListView [items]="dataItems" #myListView row="1">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItem-template-grid">
+                <Image *tkIfIOS [src]="item.image" stretch="aspectFill"></Image>
+                <FrescoDrawee *tkIfAndroid height="250" [imageUri]="item.image"></FrescoDrawee>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labels-stack-layout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

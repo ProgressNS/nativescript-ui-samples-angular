@@ -1,0 +1,29 @@
+/* ios styles */
+.iosButtonsStacklayout {
+    background-color: #f8f8f8;
+}
+
+.iosButton {
+    margin: 10;
+}
+
+.iosNameLabel {
+    font-size: 20
+}
+
+.iosDescriptionLabel {
+    font-size: 14;
+}
+
+/* Android styles */
+.androidButtonsStacklayout {
+    background-color: #f8f8f8;
+}
+
+.androidNameLabel {
+    font-size: 20
+}
+
+.androidDescriptionLabel {
+    font-size: 14;
+}
