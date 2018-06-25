@@ -17,7 +17,8 @@
         "avd":"Emulator-Api24-Google",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appium-version": "1.7.1",
+        "appium-version": "1.8.0",
+        "appActivity": "com.tns.NativeScriptActivity",
         "noReset": true,
         "fullReset": false,
         "app": ""

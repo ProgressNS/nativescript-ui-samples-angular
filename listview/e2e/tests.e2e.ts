@@ -478,6 +478,7 @@ describe("ListView", () => {
                 const wd = driver.wd();
                 const action = new wd.TouchAction(driver.driver);
                 action.press({x: centerX, y: centerY})
+                    .wait(100)
                     .moveTo({x: centerX, y: centerY + 200})
                     .release();
                 await action.perform();
@@ -508,6 +509,7 @@ describe("ListView", () => {
                 await navigateToHome(driver);
                 const selection = await driver.findElementByText("Selection", SearchOptions.exact);
                 await selection.click();
+                driver.wait(1000);
                 const singleSelection = await driver.findElementByText("Single Selection", SearchOptions.exact);
                 await singleSelection.click();
     
@@ -530,6 +532,7 @@ describe("ListView", () => {
                 await navigateToHome(driver);
                 const selection = await driver.findElementByText("Selection", SearchOptions.exact);
                 await selection.click();
+                driver.wait(1000);
                 const multipleSelection = await driver.findElementByText("Multiple Selection", SearchOptions.exact);
                 await multipleSelection.click();
     
@@ -541,7 +544,7 @@ describe("ListView", () => {
                 await item.click();
                 const locator = isAndroid ? "android.view.ViewGroup" : "XCUIElementTypeCell"
                 const items  = await driver.findElementsByClassName(locator);
-                const selected = isAndroid ? await items[4] : await items[0];
+                const selected = isAndroid ? await items[2] : await items[0];
                 expect(selected).to.exist;
                 const selection = await driver.compareElement(selected, "selectedItem");
                 expect(selection).to.equal(true);
@@ -553,6 +556,7 @@ describe("ListView", () => {
                 await navigateToHome(driver);
                 const selection = await driver.findElementByText("Selection", SearchOptions.exact);
                 await selection.click();
+                driver.wait(1000);
                 const progSelection = await driver.findElementByText("Programmatic Selection", SearchOptions.exact);
                 await progSelection.click();
     
@@ -565,7 +569,7 @@ describe("ListView", () => {
 
                 const locator = isAndroid ? "android.view.ViewGroup" : "XCUIElementTypeCell"
                 const items  = await driver.findElementsByClassName(locator);
-                const selected = isAndroid ? await items[8] : await items[0];
+                const selected = isAndroid ? await items[5] : await items[0];
                 expect(selected).to.exist;
                 const selection = await driver.compareElement(selected, "programmaticSelectedItem");
                 expect(selection).to.equal(true);
@@ -603,14 +607,14 @@ describe("ListView", () => {
             await item0.click();
             const locator = isAndroid ? "android.view.ViewGroup" : "XCUIElementTypeCell"
             const items  = await driver.findElementsByClassName(locator);
-            const selected = isAndroid ? await items[4] : await items[0];
+            const selected = isAndroid ? await items[2] : await items[0];
             expect(selected).to.exist;
             const selection = await driver.compareElement(selected, "selectedState");
             expect(selection).to.equal(true);
         });
     });
 
-     describe("Load on demand", () =>{
+    describe("Load on demand", () =>{
         describe("Manual with fixed size", () =>{
             it("Navigate to example", async () => {
                 await navigateToHome(driver);
@@ -832,20 +836,21 @@ describe("ListView", () => {
             expect(resetBtn).to.exist;
 
             await addBtn.click();
-            let itemNew = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains) 
+            const itemNew = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains) 
                 : await driver.findElementByAccessibilityId("This is the new item's description.", SearchOptions.exact);
             expect(itemNew).to.exist;
             await delBtn.click();
-            itemNew = isAndroid ? await driver.findElementByTextIfExists("the new item", SearchOptions.contains)
+            driver.wait(1000);
+            const itemDeleted = isAndroid ? await driver.findElementByTextIfExists("the new item", SearchOptions.contains)
                 : await driver.findElementByAccessibilityIdIfExists("This is the new item's description.");
-            expect(itemNew).to.be.undefined;
+            expect(itemDeleted).to.be.undefined;
 
             await addBtn.click();
-            let item1 = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains)
+            const item1 = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains)
                 : await driver.findElementByAccessibilityId("This is the new item's description.");
             expect(item1).to.exist;
             await updateBtn.click();
-            let itemUpdated = isAndroid ? await driver.findElementByText("an updated item", SearchOptions.contains) 
+            const itemUpdated = isAndroid ? await driver.findElementByText("an updated item", SearchOptions.contains) 
                 : await driver.findElementByAccessibilityId("This is an updated item");
             expect(itemUpdated).to.exist;
         });
@@ -909,7 +914,8 @@ describe("ListView", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({x:  centerX, y: centerY})
-                        .moveTo({x: centerX - 80 , y: centerY})
+                        .wait(100)
+                        .moveTo({x: 0 , y: centerY})
                         .release();
                     await action.perform();
                 }
@@ -938,7 +944,8 @@ describe("ListView", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({x: centerX, y: centerY})
-                        .moveTo({x: centerX + 80, y: centerY})
+                        .wait(100)
+                        .moveTo({x: centerX + centerX / 2, y: centerY})
                         .release();
                     await action.perform();
                 }
@@ -983,7 +990,8 @@ describe("ListView", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({x: centerX, y: centerY})
-                        .moveTo({x: centerX - 80, y: centerY})
+                        .wait(100)
+                        .moveTo({x: 0, y: centerY})
                         .release();
                     await action.perform();
                 }
@@ -1013,7 +1021,8 @@ describe("ListView", () => {
                     const centerY = rectangle.y + rectangle.height / 2;
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
-                    action.press({x: centerX - 80, y: centerY})
+                    action.press({x: centerX / 2 , y: centerY})
+                        .wait(100)
                         .moveTo({x: centerX, y: centerY})
                         .release();
                     await action.perform();
@@ -1063,7 +1072,8 @@ describe("ListView", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({x: centerX, y: centerY})
-                        .moveTo({x: centerX - 100, y: centerY})
+                        .wait(100)
+                        .moveTo({x: 0, y: centerY})
                         .release();
                     await action.perform();
                 }
@@ -1095,7 +1105,8 @@ describe("ListView", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({x: centerX, y: centerY})
-                        .moveTo({x: centerX - 100, y: centerY})
+                        .wait(100)
+                        .moveTo({x: 0, y: centerY})
                         .release();
                     await action.perform();
                     const selection = await driver.compareElement(item, "item");

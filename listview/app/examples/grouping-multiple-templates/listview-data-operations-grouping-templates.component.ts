@@ -1,4 +1,3 @@
-// >> listview-multiple-templates-angular
 import { Component, OnInit } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
