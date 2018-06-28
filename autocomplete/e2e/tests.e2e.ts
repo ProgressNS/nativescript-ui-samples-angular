@@ -95,6 +95,11 @@ describe("Autocomplete", () => {
 
             if (isAndroid) {
                 await driver.wait(pastePopUp);
+                const returnButton = await driver.findElementByTextIfExists("return");
+                if (returnButton !== undefined) {
+                    await driver.driver.hideDeviceKeyboard("return");
+                    await driver.wait(1000);
+                }
                 const isTrue = await driver.compareScreen("completion-starts-with");
                 expect(isTrue).to.be.true;
                 await clickBelowElement(textField, driver);
@@ -287,6 +292,11 @@ describe("Autocomplete", () => {
             await textField.sendKeys("B");
             if (isAndroid) {
                 await driver.wait(pastePopUp);
+                const returnButton = await driver.findElementByTextIfExists("return");
+                if (returnButton !== undefined) {
+                    await driver.driver.hideDeviceKeyboard("return");
+                    await driver.wait(1000);
+                }
                 const isTrue = await driver.compareScreen("suggest-append");
                 expect(isTrue).to.be.true;
             } else {
