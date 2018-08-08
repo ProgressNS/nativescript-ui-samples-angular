@@ -26,6 +26,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewGettingStartedHorizontalComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Getting Started Horizontal"
+        }
+    },
+    {
         path: "ListViewDataOperationsFilteringComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
@@ -71,7 +78,21 @@ let APP_ROUTES: Routes = [
         path: "ListViewHeaderFooterComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Header and Footer"
+            "title": "Auto height"
+        }
+    },
+    {
+        path: "ListViewBigFooterComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Big footer"
+        }
+    },
+    {
+        path: "ListViewBigHeaderComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Big header"
         }
     },
     {
@@ -92,7 +113,7 @@ let APP_ROUTES: Routes = [
         path: "ListViewSelectionStatesComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Selection states"
+            "title": "Selection States"
         }
     },
     {
@@ -261,6 +282,20 @@ let APP_ROUTES: Routes = [
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Disable\\Enable"
+        }
+    },
+    {
+        path: "ListViewWithBigDataComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Initially load  10 000 items"
+        }
+    },
+    {
+        path: "ListviewHorizontalWithVariableItemWidthComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Horizontal with Variable item's width"
         }
     }
 ];

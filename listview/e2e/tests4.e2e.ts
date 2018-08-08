@@ -1,0 +1,151 @@
+import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescript-dev-appium";
+import { expect } from "chai";
+import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
+import { navigateBackToHome, scrollToElement, navigateBackToView } from "./helper";
+
+const isSauceRun = isSauceLab;
+const isAndroid: boolean = runType.includes("android");
+
+describe("ListView4", () => {
+    let driver: AppiumDriver;
+
+    before(async () => {
+        driver = await createDriver();
+        driver.defaultWaitTime = 15000;
+    });
+
+    after(async () => {
+        if (isSauceRun) {
+            driver.sessionId().then(function (sessionId) {
+                console.log("Report https://saucelabs.com/beta/tests/" + sessionId);
+            });
+        }
+        await driver.quit();
+        console.log("Quit driver!");
+    });
+
+    afterEach(async function () {
+        if (this.currentTest.state === "failed") {
+            await driver.logScreenshot(this.currentTest.title);
+        }
+    });
+
+    const loadOnDemand = "Load on Demand";
+    describe(loadOnDemand, () => {
+        describe("Manual with fixed size", () => {
+            it("Navigate to example", async () => {
+                await navigateBackToHome(driver);
+                const listItem = await scrollToElement(driver, loadOnDemand);
+                expect(listItem).to.exist;
+                await listItem.click();
+
+                const manualFixed = await driver.findElementByText("Manual with Fixed Item Size", SearchOptions.exact);
+                expect(manualFixed).to.exist;
+                await manualFixed.click();
+
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                expect(item).to.exist;
+
+            });
+
+            it("Scroll to load more button and load more items", async () => {
+                const loadMore = await scrollToElement(driver, "Load More");
+                await loadMore.click();
+                const newItem = await scrollToElement(driver, "Leland Warner");
+                expect(newItem).to.exist;
+            });
+        });
+
+        describe("Manual with variable size", () => {
+            it("Navigate to example", async () => {
+                await navigateBackToView(driver, loadOnDemand);
+                const manualFixed = await driver.findElementByText("Manual with Variable Item Size", SearchOptions.exact);
+                expect(manualFixed).to.exist;
+                await manualFixed.click();
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                expect(item).to.exist;
+            });
+
+            it("Scroll to load more button and load more items", async () => {
+                const loadMore = await scrollToElement(driver, "Load More");
+                await loadMore.click();
+                const newItem = await scrollToElement(driver, "Leland Warner");
+                expect(newItem).to.exist;
+            });
+        });
+
+        describe("Auto with fixed size", () => {
+            it("Navigate to example", async () => {
+                await navigateBackToView(driver, loadOnDemand);
+                const manualFixed = await driver.findElementByText("Auto with Fixed Item Size", SearchOptions.exact);
+                expect(manualFixed).to.exist;
+                await manualFixed.click();
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                expect(item).to.exist;
+
+            });
+
+            it("Scroll down and load more items", async () => {
+                const newItem = await scrollToElement(driver, "Leland Warner");
+                expect(newItem).to.exist;
+            });
+        });
+
+        describe("Auto with variable size", () => {
+            it("Navigate to example", async () => {
+                await navigateBackToView(driver, loadOnDemand);
+                const manualFixed = await driver.findElementByText("Auto with Variable Item Size", SearchOptions.exact);
+                expect(manualFixed).to.exist;
+                await manualFixed.click();
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                expect(item).to.exist;
+
+            });
+
+            it("Scroll down and load more items", async () => {
+                const newItem = await scrollToElement(driver, "Leland Warner");
+                expect(newItem).to.exist;
+            });
+        });
+    });
+
+    const observableArrayText = "Observable Array";
+    describe(observableArrayText, () => {
+        it("Navigate to Observable array example", async () => {
+            await navigateBackToHome(driver);
+            const listItem = await scrollToElement(driver, observableArrayText);
+            await listItem.click();
+            const addBtn = await driver.findElementByText("ADD", SearchOptions.exact);
+            expect(addBtn).to.exist;
+        });
+
+        it("Verify Buttons on the page are responsive", async () => {
+            const addBtn = await driver.findElementByText("ADD", SearchOptions.exact);
+            expect(addBtn).to.exist;
+            const delBtn = await driver.findElementByText("DEL", SearchOptions.exact);
+            expect(delBtn).to.exist;
+            const updateBtn = await driver.findElementByText("UPDATE", SearchOptions.exact);
+            expect(updateBtn).to.exist;
+            const resetBtn = await driver.findElementByText("RESET", SearchOptions.exact);
+            expect(resetBtn).to.exist;
+
+            await addBtn.click();
+            const itemNew = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains)
+                : await driver.findElementByAccessibilityId("This is the new item's description.", SearchOptions.exact);
+            expect(itemNew).to.exist;
+            await delBtn.click();
+            await driver.wait(1000);
+            const itemDeleted = await driver.findElementByTextIfExists("the new item", SearchOptions.contains);
+            expect(itemDeleted).to.be.undefined;
+
+            await addBtn.click();
+            const item1 = isAndroid ? await driver.findElementByText("the new item", SearchOptions.contains)
+                : await driver.findElementByAccessibilityId("This is the new item's description.");
+            expect(item1).to.exist;
+            await updateBtn.click();
+            const itemUpdated = isAndroid ? await driver.findElementByText("an updated item", SearchOptions.contains)
+                : await driver.findElementByAccessibilityId("This is an updated item");
+            expect(itemUpdated).to.exist;
+        });
+    });
+});
