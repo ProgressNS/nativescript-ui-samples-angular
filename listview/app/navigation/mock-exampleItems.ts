@@ -18,6 +18,16 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": []
             },
             {
+                "title": "Getting Started Horizontal",
+                "path": "ListViewGettingStartedHorizontalComponent/ListViewGettingStartedHorizontalComponent",
+                "subItems": []
+            },
+            {
+                "title": "Initially load 10 000 items",
+                "path": "ListViewWithBigDataComponent/ListViewWithBigDataComponent",
+                "subItems": []
+            },
+            {
                 "title": "Data Operations",
                 "path": "",
                 "subItems": [
@@ -126,7 +136,7 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 ]
             },
             {
-                "title": "Selection states",
+                "title": "Selection States",
                 "path": "ListViewSelectionStatesComponent/ListViewSelectionStatesComponent",
                 "subItems": []
             },
@@ -194,8 +204,24 @@ export let EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "Header and Footer",
-                "path": "ListViewHeaderFooterComponent/ListViewHeaderFooterComponent",
-                "subItems": []
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Auto height",
+                        "path": "ListViewHeaderFooterComponent/ListViewHeaderFooterComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Big header",
+                        "path": "ListViewBigHeaderComponent/ListViewBigHeaderComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Big footer",
+                        "path": "ListViewBigFooterComponent/ListViewBigFooterComponent",
+                        "subItems": []
+                    }
+                ]
             },
             {
                 "title": "Item separators",
@@ -228,37 +254,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 "path": "ListViewScrollEventsComponent/ListViewScrollEventsComponent",
                 "subItems": []
             },
-        ]
-    },
-    {
-        "title": "SideDrawer",
-        "path": "",
-        "subItems": [
             {
-                "title": "Getting Started",
-                "path": "SideDrawerGettingStartedComponent/SideDrawerGettingStartedComponent",
+                "title": "Horizontal with Variable item's width",
+                "path": "ListviewHorizontalWithVariableItemWidthComponent/ListviewHorizontalWithVariableItemWidthComponent",
                 "subItems": []
             },
-            {
-                "title": "Position",
-                "path": "SideDrawerPositionComponent/SideDrawerPositionComponent",
-                "subItems": []
-            },
-            {
-                "title": "Transitions",
-                "path": "SideDrawerTransitionsComponent/SideDrawerTransitionsComponent",
-                "subItems": []
-            },
-            {
-                "title": "Events",
-                "path": "SideDrawerEventsComponent/SideDrawerEventsComponent",
-                "subItems": []
-            },
-            {
-                "title": "Drawer Over Navigation",
-                "path": "SideDrawerOverNavigationComponent/SideDrawerOverNavigationComponent",
-                "subItems": []
-            }
         ]
     }
 ];

@@ -2,7 +2,10 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ListViewGettingStartedComponent } from './getting-started/listview-getting-started.component';
-import { ListViewHeaderFooterComponent } from './header-footer/listview-header-footer.component';
+import { ListViewGettingStartedHorizontalComponent } from './getting-started-horizontal/listview-getting-started-horizontal.component';
+import { ListViewHeaderFooterComponent } from './header-footer/auto-size/listview-auto-size.component';
+import { ListViewBigFooterComponent } from './header-footer/big-footer/listview-big-footer.component';
+import { ListViewBigHeaderComponent } from './header-footer/big-header/listview-big-header.component';
 import { ListViewItemAnimationsComponent } from './item-animations/listview-item-animations.component';
 import { ListViewItemLayoutsGridComponent } from './item-layouts/listview-item-layouts-grid.component';
 import { ListViewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
@@ -37,10 +40,15 @@ import { ListViewDataOperationsGroupingTemplatesComponent } from './grouping-mul
 import { ListviewDataOperationsGroupingCollapsibleComponent } from './grouping-collapsible/listview-data-operations-grouping-collapsible.component';
 import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
+import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-data.component';
+import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
 
 export const routes: Routes = [
   { path: 'ListViewGettingStartedComponent', component: ListViewGettingStartedComponent },
+  { path: 'ListViewGettingStartedHorizontalComponent', component: ListViewGettingStartedHorizontalComponent },
   { path: 'ListViewHeaderFooterComponent', component: ListViewHeaderFooterComponent },
+  { path: 'ListViewBigFooterComponent', component: ListViewBigFooterComponent },
+  { path: 'ListViewBigHeaderComponent', component: ListViewBigHeaderComponent },
   { path: 'ListViewItemAnimationsComponent', component: ListViewItemAnimationsComponent },
   { path: 'ListViewItemLayoutsGridComponent', component: ListViewItemLayoutsGridComponent },
   { path: 'ListViewItemLayoutsLinearComponent', component: ListViewItemLayoutsLinearComponent },
@@ -74,5 +82,7 @@ export const routes: Routes = [
   { path: 'ListViewDataOperationsGroupingTemplatesComponent', component: ListViewDataOperationsGroupingTemplatesComponent },
   { path: 'ListviewDataOperationsGroupingCollapsibleComponent', component: ListviewDataOperationsGroupingCollapsibleComponent },
   { path: 'ListViewDataOperationsMultipleComponent', component: ListViewDataOperationsMultipleComponent },
-  { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent }
+  { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent },
+  { path: 'ListViewWithBigDataComponent', component: ListViewWithBigDataComponent },
+  { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent }
 ];

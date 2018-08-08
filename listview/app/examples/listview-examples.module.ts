@@ -6,7 +6,10 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
 import { ListViewGettingStartedComponent } from './getting-started/listview-getting-started.component';
-import { ListViewHeaderFooterComponent } from './header-footer/listview-header-footer.component';
+import { ListViewGettingStartedHorizontalComponent } from './getting-started-horizontal/listview-getting-started-horizontal.component';
+import { ListViewHeaderFooterComponent } from './header-footer/auto-size/listview-auto-size.component';
+import { ListViewBigFooterComponent } from './header-footer/big-footer/listview-big-footer.component';
+import { ListViewBigHeaderComponent } from './header-footer/big-header/listview-big-header.component';
 import { ListViewItemAnimationsComponent } from './item-animations/listview-item-animations.component';
 import { ListViewItemLayoutsGridComponent } from './item-layouts/listview-item-layouts-grid.component';
 import { ListViewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
@@ -41,6 +44,8 @@ import { ListViewDataOperationsGroupingTemplatesComponent } from './grouping-mul
 import { ListviewDataOperationsGroupingCollapsibleComponent } from './grouping-collapsible/listview-data-operations-grouping-collapsible.component';
 import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
+import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-data.component';
+import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
 
 import { routes } from './listview-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -57,7 +62,10 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
     ],
     declarations: [
         ListViewGettingStartedComponent,
+        ListViewGettingStartedHorizontalComponent,
         ListViewHeaderFooterComponent,
+        ListViewBigFooterComponent,
+        ListViewBigHeaderComponent,
         ListViewItemAnimationsComponent,
         ListViewItemLayoutsGridComponent,
         ListViewItemLayoutsLinearComponent,
@@ -91,7 +99,9 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewDataOperationsGroupingTemplatesComponent,
         ListviewDataOperationsGroupingCollapsibleComponent,
         ListViewDataOperationsMultipleComponent,
-        ListViewDataOperationsSortingComponent
+        ListViewDataOperationsSortingComponent,
+        ListViewWithBigDataComponent,
+        ListviewHorizontalWithVariableItemWidthComponent
     ]
 })
 export class ListViewExamplesModule { }
