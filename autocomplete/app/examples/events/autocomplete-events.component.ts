@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, RadAutoCompleteTextView } from "nativescript-ui-autocomplete";
 import { RadAutoCompleteTextViewComponent } from "nativescript-ui-autocomplete/angular";
 
 @Component({
@@ -91,7 +91,13 @@ export class AutoCompleteEventsComponent {
     }
 
     public onSuggestionViewBecameVisible(args) {
-        this.logEvent("Suggestion View Became Visible");
+        let autoComplete: RadAutoCompleteTextView = args.object;
+        let numberOfItems = autoComplete.filteredItems.length;
+        let eventText = numberOfItems + " Suggestions Visible";
+        if (numberOfItems > 0) {
+            eventText += " - First is " + autoComplete.filteredItems[0].text;
+        }
+        this.logEvent(eventText);
     }
     // << angular-autocomplete-events
 

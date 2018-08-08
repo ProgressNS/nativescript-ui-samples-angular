@@ -12,16 +12,13 @@ import * as http from "tns-core-modules/http";
 })
 export class AutoCompleteRemoteComponent implements OnInit {
     private _items: ObservableArray<TokenModel>;
-    private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
-        "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
-        "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
-        "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
-        "Vatican City", "Chad", "China", "Chile"];
+    private jsonUrl = "https://raw.githubusercontent.com/telerik/nativescript-ui-samples/master/examples-data/airports.json";
 
     ngOnInit() {
+        let that = this;
         this.autocomplete.autoCompleteTextView.loadSuggestionsAsync = function (text) {
             const promise = new Promise(function (resolve, reject) {
-                http.getJSON("https://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function (r: any) {
+                http.getJSON(that.jsonUrl).then(function (r: any) {
                     const airportsCollection = r.airports;
                     const items: Array<TokenModel> = new Array();
                     for (let i = 0; i < airportsCollection.length; i++) {
@@ -29,7 +26,10 @@ export class AutoCompleteRemoteComponent implements OnInit {
                     }
 
                     resolve(items);
-                }, function (e) {
+                }).catch((err) => {
+                    const message = 'Error fetching remote data from ' + that.jsonUrl + ': ' + err.message;
+                    console.log(message);
+                    alert(message);
                     reject();
                 });
             });
@@ -42,14 +42,6 @@ export class AutoCompleteRemoteComponent implements OnInit {
 
     get dataItems(): ObservableArray<TokenModel> {
         return this._items;
-    }
-
-    private initDataItems() {
-        this._items = new ObservableArray<TokenModel>();
-
-        for (let i = 0; i < this.countries.length; i++) {
-            this._items.push(new TokenModel(this.countries[i], undefined));
-        }
     }
 }
 // << angular-autocomplete-getting-started-component

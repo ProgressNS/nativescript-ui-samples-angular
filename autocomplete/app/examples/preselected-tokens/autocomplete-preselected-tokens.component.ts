@@ -16,6 +16,7 @@ export class AutocompletePreselectedTokensComponent implements AfterViewInit {
         "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
         "Vatican City", "Chad", "China", "Chile"];
     private lastIndex: number;
+    private isLoaded: boolean;
 
     constructor() {
         this.initDataItems();
@@ -38,12 +39,15 @@ export class AutocompletePreselectedTokensComponent implements AfterViewInit {
         }
     }
 
-
     public onLoaded() {
+        if (this.isLoaded) {
+            return;
+        }
         this.autocomplete.autoCompleteTextView.addToken(this._items.getItem(0));
         this.autocomplete.autoCompleteTextView.addToken(this._items.getItem(1));
         this.autocomplete.autoCompleteTextView.addToken(this._items.getItem(2));
         this.lastIndex = 3;
+        this.isLoaded = true;
     }
 
     public onAddToken(args) {

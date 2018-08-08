@@ -2,6 +2,7 @@ import { AppiumDriver, createDriver, SearchOptions, Locator, Direction } from "n
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { expect } from "chai";
 import { navigateBackToView, navigateBackToHome, clickBelowElement } from "./helper";
+import { ImageOptions } from "../node_modules/nativescript-dev-appium/lib/image-options";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -73,6 +74,10 @@ describe("Autocomplete", () => {
 
             if (isAndroid) {
                 await driver.wait(pastePopUp);
+                try {
+                    await driver.driver.hideDeviceKeyboard();
+                } catch (error) {
+                }
                 const isTrue = await driver.compareScreen("completion-contains");
                 expect(isTrue).to.be.true;
                 await clickBelowElement(textField, driver);
@@ -95,6 +100,15 @@ describe("Autocomplete", () => {
 
             if (isAndroid) {
                 await driver.wait(pastePopUp);
+                try {
+                    await driver.driver.hideDeviceKeyboard();
+                } catch (error) {
+                }
+                const returnButton = await driver.findElementByTextIfExists("return");
+                if (returnButton !== undefined) {
+                    await driver.driver.hideDeviceKeyboard("return");
+                    await driver.wait(1000);
+                }
                 const isTrue = await driver.compareScreen("completion-starts-with");
                 expect(isTrue).to.be.true;
                 await clickBelowElement(textField, driver);
@@ -135,7 +149,7 @@ describe("Autocomplete", () => {
                 expect(crossButton).to.exist;
             } else {
                 const labels = await driver.findElementsByClassName(driver.locators.getElementByName("label"));
-                expect(labels.length).to.equal(3);
+                expect(labels.length).to.equal(4);
             }
         });
 
@@ -146,15 +160,16 @@ describe("Autocomplete", () => {
             await plainButton.click();
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys(input);
-
+            let labelsCount = 3;
             if (isAndroid) {
                 await clickBelowElement(textField, driver);
+                labelsCount = 2;
             }
 
             const bulgariaToken = await driver.findElementByText("Bulgaria");
             expect(bulgariaToken).to.exist;
             const labels = await driver.findElementsByClassName(driver.locators.getElementByName("label"));
-            expect(labels.length).to.equal(2);
+            expect(labels.length).to.equal(labelsCount);
         });
     });
 
@@ -269,8 +284,13 @@ describe("Autocomplete", () => {
             await textField.sendKeys("B");
             if (isAndroid) {
                 await driver.wait(pastePopUp);
+                try {
+                    await driver.driver.hideDeviceKeyboard();
+                } catch (error) {
+                }
                 const isTrue = await driver.compareScreen("suggest");
                 expect(isTrue).to.be.true;
+
             } else {
                 const belgiumSuggestion = await driver.findElementByText("Belgium");
                 expect(belgiumSuggestion).to.exist;
@@ -287,7 +307,12 @@ describe("Autocomplete", () => {
             await textField.sendKeys("B");
             if (isAndroid) {
                 await driver.wait(pastePopUp);
-                const isTrue = await driver.compareScreen("suggest-append");
+                try {
+                    await driver.driver.hideDeviceKeyboard();
+                } catch (error) {
+                }
+                
+                const isTrue = await driver.compareScreen("suggest-append", 10, 500, ImageOptions.pixel);
                 expect(isTrue).to.be.true;
             } else {
                 const bulgariaRecords = await driver.findElementsByText("Bulgaria");
@@ -335,17 +360,30 @@ describe("Autocomplete", () => {
             const token = await driver.findElementByText(input);
             expect(token).to.exist;
 
-            if (isAndroid) {
-                const flagImage = await driver.findElementByClassName(driver.locators.image);
-                isTrue = await driver.compareElement(flagImage, "customization-token");
-                expect(isTrue).to.be.true;
-            }
+            
+            const flagImage = await driver.findElementByClassName(driver.locators.image);
+            isTrue = await driver.compareElement(flagImage, "customization-token");
+            expect(isTrue).to.be.true;
         });
     });
 
     describe(eventsText, () => {
         it("should open Events view", async () => {
             await navigateBackToHome(driver);
+
+            let listView;
+            if (isAndroid) {
+                listView = await driver.findElementByClassName("android.widget.FrameLayout");
+            }
+            else {
+                listView = await driver.findElementByClassName("XCUIElementTypeTable");
+            }
+            const listItem = await listView.scrollTo(
+                Direction.down,
+                () => driver.findElementByText(preselectedItemsText, SearchOptions.exact),
+                1000
+            )
+
             const eventsButton = await driver.findElementByText(eventsText);
             await eventsButton.click();
             const eventsTitle = await driver.findElementByText(eventsText);
@@ -364,7 +402,7 @@ describe("Autocomplete", () => {
             expect(bulgariaToken).to.exist;
             const event1 = await driver.findElementByText("Text Changed: B");
             expect(event1).to.exist;
-            const event2 = await driver.findElementByText("Suggestion View Became Visible");
+            const event2 = await driver.findElementByText("2 Suggestions Visible - First is Bulgaria");
             expect(event2).to.exist;
             const event3 = await driver.findElementByText("DidAutoComplete with text: Bulgaria");
             expect(event3).to.exist;
@@ -373,7 +411,7 @@ describe("Autocomplete", () => {
         });
     });
 
-    describe(asyncDataFetchText, () => {
+    describe.skip(asyncDataFetchText, () => {
         it("should open Async Data Fetch view", async () => {
             await navigateBackToHome(driver);
             const asyncDataFetchButton = await driver.findElementByText(asyncDataFetchText);
@@ -456,14 +494,6 @@ describe("Autocomplete", () => {
             //     async () => {
             //         await driver.findElementByText(hintText, SearchOptions.exact);
             //     })
-
-            const wd = driver.wd();
-            const action = new wd.TouchAction(driver.driver);
-            action.press({ x: 52, y: 499 })
-                .moveTo({ x: -2, y: -294 })
-                .release();
-            await action.perform();
-            await driver.wait(500);
 
             const hintButton = await driver.findElementByText(hintText, SearchOptions.exact);
             await hintButton.click();
