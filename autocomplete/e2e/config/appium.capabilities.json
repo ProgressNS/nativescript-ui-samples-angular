@@ -43,9 +43,12 @@
         "deviceName": "Emulator-Api24-Google",
         "lt": 60000,
         "newCommandTimeout": 720,
+        "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "",
+        "density": 3.2,
+        "offsetPixels": 51
     },
     "android24.sauce": {
         "platformName": "Android",
@@ -53,10 +56,14 @@
         "deviceName": "Android GoogleAPI Emulator",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appium-version": "1.7.1",
+        "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "automationName": "Appium"
+
     },
     "android25": {
         "platformName": "Android",
@@ -91,14 +98,27 @@
         "platformName": "iOS",
         "platformVersion": "11.0",
         "deviceName": "iPhone 8 110",
+        "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
         "app": ""
+    },
+    "sim.iPhoneX.ios11": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
+        "app": "",
+        "density": 3,
+        "offsetPixels": 87,
+        "automationName": "Appium"
     },
     "sim.iPhoneX.iOS110": {
         "platformName": "iOS",
         "platformVersion": "11.0",
         "deviceName": "iPhone X",
+        "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
         "app": ""
@@ -107,9 +127,9 @@
         "platformName": "iOS",
         "platformVersion": "11.2",
         "deviceName": "iPhone 8",
+        "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "appium-version": "1.7.1",
         "app": ""
     }
 }
