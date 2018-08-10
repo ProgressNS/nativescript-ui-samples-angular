@@ -1,7 +1,7 @@
 // >> dataform-custom-editors-component
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { PersonBase } from "../../data-services/person";
-import { ButtonEditorHelper } from "../../data-services/helper";
+import { ButtonEditorHelper } from "../../data-services/helper/button-editor-helper";
 import { FontStyles, PropertyEditor, RadDataForm } from "nativescript-ui-dataform";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 import { android as androidApplication } from "tns-core-modules/application";

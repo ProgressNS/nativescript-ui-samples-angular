@@ -1,2 +1,4 @@
 { "name" : "button-editor-helper",
-  "main" : "button-editor-helper" }
+  "main" : "button-editor-helper",
+  "types": "button-editor-helper"
+}
