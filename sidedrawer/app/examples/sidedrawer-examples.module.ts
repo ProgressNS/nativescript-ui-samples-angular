@@ -7,6 +7,7 @@ import { SideDrawerEventsComponent } from './events/events.component';
 import { SideDrawerGettingStartedComponent } from './getting-started/getting-started.component';
 import { SideDrawerPositionComponent } from './position/position.component';
 import { SideDrawerTransitionsComponent } from './transitions/transitions.component';
+import { SideDrawerShadowComponent } from '~/examples/shadow/shadow.component';
 
 import { routes } from './sidedrawer-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -23,6 +24,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         SideDrawerEventsComponent,
         SideDrawerGettingStartedComponent,
         SideDrawerPositionComponent,
+        SideDrawerShadowComponent,
         SideDrawerTransitionsComponent
     ]
 })

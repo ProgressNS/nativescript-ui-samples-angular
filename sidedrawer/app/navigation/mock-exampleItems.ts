@@ -24,6 +24,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Events",
                 "path": "SideDrawerEventsComponent/SideDrawerEventsComponent",
                 "subItems": []
+            },
+            {
+                "title": "Shadow",
+                "path": "SideDrawerShadowComponent/SideDrawerShadowComponent",
+                "subItems": []
             }
         ]
     }

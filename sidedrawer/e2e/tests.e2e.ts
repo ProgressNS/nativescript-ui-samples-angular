@@ -6,7 +6,7 @@ import { goBack } from "./helper";
 
 const isSauceRun = isSauceLab;
 
-describe("Side Drawer", () => {
+describe("SideDrawer", () => {
     const gettingStartedText = "Getting Started";
     const positionText = "Position";
     const eventsText = "Events";
