@@ -111,5 +111,13 @@
         "fullReset": false,
         "appiumVersion": "1.7.1",
         "app": ""
+    },
+    "sim.iPhoneX.ios11": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
     }
 }
