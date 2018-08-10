@@ -54,6 +54,13 @@ let APP_ROUTES: Routes = [
             "title": "Transitions"
         }
     },
+    {
+        path: "SideDrawerShadowComponent",
+        loadChildren: './examples/sidedrawer-examples.module#SideDrawerExamplesModule',
+        data: {
+            "title": "Shadow"
+        }
+    },
 ];
 
 export const routing = NativeScriptRouterModule.forRoot(APP_ROUTES);
