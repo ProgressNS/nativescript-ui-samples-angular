@@ -5,12 +5,12 @@ import { DataItemService } from "../dataItem.service";
 
 @Component({
     moduleId: module.id,
-    selector: "tk-listview-header-footer",
+    selector: "tk-listview-getting-started-horizontal",
     providers: [DataItemService],
-    templateUrl: "listview-header-footer.component.html",
-    styleUrls: ["listview-header-footer.component.css"]
+    templateUrl: "listview-getting-started-horizontal.component.html",
+    styleUrls: ["listview-getting-started-horizontal.component.css"]
 })
-export class ListViewHeaderFooterComponent implements OnInit {
+export class ListViewGettingStartedHorizontalComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
 
     constructor(private _dataItemService: DataItemService) {
@@ -21,6 +21,6 @@ export class ListViewHeaderFooterComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray(this._dataItemService.getIdenticalDataItems(10));
+        this._dataItems = new ObservableArray(this._dataItemService.getDataItems());
     }
 }
