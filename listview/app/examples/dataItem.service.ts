@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DATAITEMS } from "./mock-dataItems";
 import { DataItem } from "./dataItem";
-import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 const namesAndEmails = require("./NamesAndEmails.json");
 const posts = require("./posts.json");
 const listItems = require("./item-layouts/listItems.json");
@@ -85,6 +84,19 @@ export class DataItemService {
             new DataItem(80, "Item 80", "This is item category is: Category 1", null, null, null, false, null, "Category 1"),
             new DataItem(54, "Item 54", "This is item category is: Category 3", null, null, null, false, null, "Category 3"),
         ];
+    }
+
+    getVariableWidthItems(): DataItem[] {
+        const result = new Array<DataItem>();
+        for (let i = 0; i < 10; i++) {
+            if (i % 2 === 0) {
+                result.push(new DataItem(i, "Item " + i, "This is item description.", null, null, null, false, null, null, 200, "green"));
+            } else {
+                result.push(new DataItem(i, "Item " + i, "This is item description.", null, null, null, false, null, null, 100, "red"));
+            }
+        }
+
+        return result;
     }
 
     private getRandomLengthString() {

@@ -1,0 +1,16 @@
+<GridLayout>
+    <RadListView [items]="dataItems" tkExampleTitle tkToggleNavButton>
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkListViewHeader>
+            <Label text="This is list header with height 50" height="50" class="header"></Label>
+        </ng-template>
+        <ng-template tkListViewFooter>
+            <Label text="This is list footer with height 100" height="100" class="footer"></Label>
+        </ng-template>
+    </RadListView>
+</GridLayout>

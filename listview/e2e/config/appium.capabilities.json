@@ -17,11 +17,12 @@
         "avd":"Emulator-Api24-Google",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appium-version": "1.8.0",
+        "appium-version": "1.8.1",
         "appActivity": "com.tns.NativeScriptActivity",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "",
+        "automationName": "Appium"
     },
     "android24.sauce": {
         "platformName": "Android",
@@ -29,10 +30,12 @@
         "deviceName": "Android GoogleAPI Emulator",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appium-version": "1.8.0",
+        "appium-version": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "",
+        "idleTimeout": 120,
+        "automationName": "Appium"
     },
     "android25": {
         "platformName": "Android",
@@ -77,5 +80,40 @@
         "noReset": true,
         "fullReset": false,
         "app": ""
+    },
+    "sim.iPhoneX.ios11": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "appium-version": "1.8.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": "",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "sim.iPhoneX.ios11.aws": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "appium-version": "1.8.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/ns-pro-ui/listview-ng-ios.zip",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android24.aws": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.8.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/ns-pro-ui/listview-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
     }
 }

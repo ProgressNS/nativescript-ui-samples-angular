@@ -1,0 +1,12 @@
+Label {
+    margin: 16;
+}
+
+.nameLabel {
+    font-size: 20;
+    font-weight: bold;
+}
+
+.descriptionLabel {
+    font-size: 14;
+}

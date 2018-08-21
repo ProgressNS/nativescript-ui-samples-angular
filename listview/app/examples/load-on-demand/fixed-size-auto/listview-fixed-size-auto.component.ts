@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../../dataItem";
-import { ListViewLinearLayout, ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "nativescript-ui-listview";
+import { ListViewLinearLayout, ListViewEventData, RadListView, LoadOnDemandListViewEventData } from "nativescript-ui-listview";
 import { android as androidApplication } from "tns-core-modules/application";
 import { setTimeout } from "tns-core-modules/timer";
 const posts = require("../../../examples/posts.json");
@@ -15,7 +15,7 @@ const posts = require("../../../examples/posts.json");
 
 export class ListViewFixedSizeAutoComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
-    private _numberOfAddedItems;
+    private _sourceDataItems: ObservableArray<DataItem>;
     private layout: ListViewLinearLayout;
 
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
@@ -26,43 +26,41 @@ export class ListViewFixedSizeAutoComponent implements OnInit {
         this.layout.scrollDirection = "Vertical";
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
+        this._dataItems = new ObservableArray<DataItem>();
+        this.addMoreItemsFromSource(6);
     }
 
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
 
-    public onLoadMoreItemsRequested(args: ListViewEventData) {
+    public addMoreItemsFromSource(chunkSize: number) {
+        let newItems = this._sourceDataItems.splice(0, chunkSize);
+        this.dataItems.push(newItems);
+    }
+
+    public onLoadMoreItemsRequested(args: LoadOnDemandListViewEventData) {
         const that = new WeakRef(this);
-        setTimeout(function () {
-            const listView: RadListView = args.object;
-            const initialNumberOfItems = that.get()._numberOfAddedItems;
-            for (let i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
-                if (i > posts.names.length - 1) {
-                    listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
-                    break;
-                }
-
-                const imageUri = androidApplication ? posts.images[i].toLowerCase() : posts.images[i];
-                that.get()._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
-                that.get()._numberOfAddedItems++;
-            }
-
-            listView.notifyLoadOnDemandFinished();
-        }, 1000);
-        args.returnValue = true;
+        if (this._sourceDataItems.length > 0) {
+            setTimeout(function () {
+                const listView: RadListView = args.object;
+                that.get().addMoreItemsFromSource(2);
+                listView.notifyLoadOnDemandFinished();
+            }, 1000);
+            args.returnValue = true;
+        } else {
+            args.returnValue = false;
+        }
     }
 
     private initDataItems() {
-        this._dataItems = new ObservableArray<DataItem>();
-        this._numberOfAddedItems = 0;
-        for (let i = 0; i < posts.names.length - 15; i++) {
-            this._numberOfAddedItems++;
+        this._sourceDataItems = new ObservableArray<DataItem>();
+        for (let i = 0; i < posts.names.length; i++) {
             if (androidApplication) {
-                this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
+                this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
             }
             else {
-                this._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+                this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));
             }
         }
     }

@@ -1,0 +1,25 @@
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.headerLayout {
+    background-color: #65a565;
+}
+
+.footerLayout {
+    background-color: #7fff7f;
+}
+
+.whiteLabel {
+    background-color: green;
+    color: white;
+}
+
+.redLabel {
+    background-color: red;
+    color: white;
+}
