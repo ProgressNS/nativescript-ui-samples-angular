@@ -22,6 +22,7 @@ import { ListViewItemSeparatorComponent } from './item-separator/listview-item-s
 import { ListViewDynamicSizeAutoComponent } from './load-on-demand/dynamic-size-auto/listview-dynamic-size-auto.component';
 import { ListViewDynamicSizeManualComponent } from './load-on-demand/dynamic-size-manual/listview-dynamic-size-manual.component';
 import { ListViewFixedSizeAutoComponent } from './load-on-demand/fixed-size-auto/listview-fixed-size-auto.component';
+import { ListViewFixedSizeAutoWithSmallSourceComponent } from './load-on-demand/fixed-size-auto-with-small-source/listview-fixed-size-auto-with-small-source.component';
 import { ListViewFixedSizeManualComponent } from './load-on-demand/fixed-size-manual/listview-fixed-size-manual.component';
 import { ListViewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
 import { ListViewObservableArrayComponent } from './observable-array/listview-observable-array.component';
@@ -40,6 +41,7 @@ import { ListViewDataOperationsGroupingComponent } from './grouping/listview-dat
 import { ListViewDataOperationsGroupingTemplatesComponent } from './grouping-multiple-templates/listview-data-operations-grouping-templates.component';
 import { ListviewDataOperationsGroupingCollapsibleComponent } from './grouping-collapsible/listview-data-operations-grouping-collapsible.component';
 import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
+import { ListViewDataOperationsMultipleWithSwipeComponent } from './multiple-operations-with-swipe/listview-multiple-operations-with-swipe.component';
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
 import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-data.component';
 import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
@@ -66,6 +68,7 @@ export const routes: Routes = [
   { path: 'ListViewDynamicSizeAutoComponent', component: ListViewDynamicSizeAutoComponent },
   { path: 'ListViewDynamicSizeManualComponent', component: ListViewDynamicSizeManualComponent },
   { path: 'ListViewFixedSizeAutoComponent', component: ListViewFixedSizeAutoComponent },
+  { path: 'ListViewFixedSizeAutoWithSmallSourceComponent', component: ListViewFixedSizeAutoWithSmallSourceComponent },
   { path: 'ListViewFixedSizeManualComponent', component: ListViewFixedSizeManualComponent },
   { path: 'ListViewMultipleTemplatesComponent', component: ListViewMultipleTemplatesComponent },
   { path: 'ListViewObservableArrayComponent', component: ListViewObservableArrayComponent },
@@ -84,6 +87,7 @@ export const routes: Routes = [
   { path: 'ListViewDataOperationsGroupingTemplatesComponent', component: ListViewDataOperationsGroupingTemplatesComponent },
   { path: 'ListviewDataOperationsGroupingCollapsibleComponent', component: ListviewDataOperationsGroupingCollapsibleComponent },
   { path: 'ListViewDataOperationsMultipleComponent', component: ListViewDataOperationsMultipleComponent },
+  { path: 'ListViewDataOperationsMultipleWithSwipeComponent', component: ListViewDataOperationsMultipleWithSwipeComponent },
   { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent },
   { path: 'ListViewWithBigDataComponent', component: ListViewWithBigDataComponent },
   { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent }

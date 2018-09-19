@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../../dataItem";
-import { ListViewLinearLayout, ListViewEventData, RadListView, LoadOnDemandListViewEventData } from "nativescript-ui-listview";
+import { ListViewLinearLayout, RadListView, LoadOnDemandListViewEventData } from "nativescript-ui-listview";
 import { android as androidApplication } from "tns-core-modules/application";
 import { setTimeout } from "tns-core-modules/timer";
 const posts = require("../../../examples/posts.json");
@@ -40,15 +40,16 @@ export class ListViewDynamicSizeManualComponent implements OnInit {
 
     public onLoadMoreItemsRequested(args: LoadOnDemandListViewEventData) {
         const that = new WeakRef(this);
+        const listView: RadListView = args.object;
         if (this._sourceDataItems.length > 0) {
             setTimeout(function () {
-                const listView: RadListView = args.object;
                 that.get().addMoreItemsFromSource(2);
                 listView.notifyLoadOnDemandFinished();
             }, 1000);
             args.returnValue = true;
         } else {
             args.returnValue = false;
+            listView.notifyLoadOnDemandFinished(true);
         }
     }
 

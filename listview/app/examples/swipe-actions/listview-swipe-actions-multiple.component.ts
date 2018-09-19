@@ -6,6 +6,7 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { RadListViewComponent } from "nativescript-ui-listview/angular";
 import { View } from "tns-core-modules/ui/core/view";
 import { layout } from "tns-core-modules/utils/utils";
+import { EventData } from "tns-core-modules/data/observable";
 
 @Component({
     moduleId: module.id,
@@ -16,7 +17,6 @@ import { layout } from "tns-core-modules/utils/utils";
 })
 export class ListViewSwipeActionsMultipleComponent implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
-    private animationApplied = false;
     private leftItem: View;
     private rightItem: View;
     private mainView: View;
@@ -94,16 +94,17 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
         } else if (args.data.x < -200) {
             console.log("Perform right action");
         }
-        this.animationApplied = false;
     }
 
-    public onLeftSwipeClick(args: ListViewEventData) {
-        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+    public onLeftSwipeClick(args: EventData) {
+        let itemView = args.object as View;
+        console.log("Button clicked: " + itemView.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(itemView.bindingContext));
         this.listViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
-    public onRightSwipeClick(args) {
-        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+    public onRightSwipeClick(args: EventData) {
+        let itemView = args.object as View;
+        console.log("Button clicked: " + itemView.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(itemView.bindingContext));
         this.listViewComponent.listView.notifySwipeToExecuteFinished();
     }
 }

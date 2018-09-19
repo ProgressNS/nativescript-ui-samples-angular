@@ -61,6 +61,12 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                         "path": "ListViewDataOperationsMultipleComponent/ListViewDataOperationsMultipleComponent",
                         "subItems": []
                     }
+                    ,
+                    {
+                        "title": "With Swipe",
+                        "path": "ListViewDataOperationsMultipleWithSwipeComponent/ListViewDataOperationsMultipleWithSwipeComponent",
+                        "subItems": []
+                    }
                 ]
             },
             {
@@ -162,6 +168,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Auto with Variable Item Size",
                         "path": "ListViewDynamicSizeAutoComponent/ListViewDynamicSizeAutoComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "With small source and pull to refresh",
+                        "path": "ListViewFixedSizeAutoWithSmallSourceComponent/ListViewFixedSizeAutoWithSmallSourceComponent",
                         "subItems": []
                     }
                 ]

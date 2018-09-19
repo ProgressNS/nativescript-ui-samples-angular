@@ -1,7 +1,7 @@
 import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescript-dev-appium";
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
-import { navigateBackToHome, navigateBackToView, scrollToElement } from "./helper";
+import { navigateBackToHome, navigateBackToView, scrollToElement, swipe } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -160,6 +160,29 @@ describe("ListView1", () => {
             });
         });
 
+        if (isAndroid) {
+            describe("Collapsible Grouping", () => {
+                it("Navigate to Collapsible Grouping example", async () => {
+                    await navigateBackToView(driver, dataOperationsText);
+                    const groupingItem = await driver.findElementByText("Collapsible Grouping", SearchOptions.exact);
+                    await groupingItem.click();
+
+                    const categoryTitle = await driver.findElementsByText("Category 1", SearchOptions.contains);
+                    expect(categoryTitle).to.exist;
+                });
+                it("Verify list view is collapsible", async () => {
+                    let categoryTitle = await driver.findElementByText("Category 1", SearchOptions.exact);
+                    await categoryTitle.click();
+                    categoryTitle = await driver.findElementByText("Category 2", SearchOptions.exact);
+                    await categoryTitle.click();
+                    categoryTitle = await driver.findElementByText("Category 3", SearchOptions.exact);
+                    await categoryTitle.click();
+                    const item = await driver.findElementByTextIfExists("Item");
+                    expect(item).not.to.exist;
+                });
+            });
+        }
+
         describe("Multiple operations", () => {
             it("Navigate to multiple operations example", async () => {
                 await navigateBackToView(driver, dataOperationsText);
@@ -186,6 +209,64 @@ describe("ListView1", () => {
 
                 const categoryTitle2 = await driver.findElementsByText("Category 2", SearchOptions.exact);
                 expect(categoryTitle2).to.exist;
+            });
+        });
+
+        describe("With Swipe", () => {
+            it("Navigate to With Swipe example", async () => {
+                await navigateBackToView(driver, dataOperationsText);
+                const multipleItem = await driver.findElementByText("With Swipe", SearchOptions.exact);
+                await multipleItem.click();
+
+                const firstItem = await driver.findElementByText("Special Item 89", SearchOptions.exact);
+                expect(firstItem).to.exist;
+            });
+
+            it("Verify list view events", async () => {
+                const categoryTitle = await driver.findElementByText("Category 1", SearchOptions.exact);
+                expect(categoryTitle).to.exist;
+                let item = await driver.findElementByText("Special Item 111", SearchOptions.exact);
+                let event;
+                if (isAndroid) {
+                    await item.hold();
+                    event = await driver.findElementByText("onItemSelected for: Special Item 111");
+                    expect(event).to.exist;
+                    await item.hold();
+                    event = await driver.findElementByText("onItemDeselected for: Special Item 111");
+                    expect(event).to.exist;
+                }
+
+                await item.click();
+                event = await driver.findElementByText("onItemTap for: Special Item 111");
+                expect(event).to.exist;
+
+                item = await driver.findElementByText("Special Item 111", SearchOptions.exact);
+                await swipe(driver, item, Direction.right);
+                const onSwipeEvent = isAndroid ? "onSwipeCellStarted item: Special Item 111" : "onSwipeCellFinished item: Special Item 111";
+                event = await driver.findElementByText(onSwipeEvent, SearchOptions.contains);
+                expect(event).to.exist;
+                const markButtons = await driver.findElementsByText("mark");
+                let alert, okButton;
+                if (!isAndroid) {
+
+                    await markButtons[0].click();
+                    alert = await driver.findElementByText("Left swipe click for: Special Item 111", SearchOptions.contains);
+                    expect(alert).to.exist;
+                    okButton = await driver.findElementByText("OK", SearchOptions.exact);
+                    await okButton.click();
+                }
+
+                await swipe(driver, item, Direction.left);
+                event = await driver.findElementByText(onSwipeEvent, SearchOptions.contains);
+                expect(event).to.exist;
+
+                if (!isAndroid) {
+                    const deleteButtons = await driver.findElementsByText("delete");
+                    await deleteButtons[0].click();
+                    alert = await driver.findElementByText("Right swipe click for: Special Item 111", SearchOptions.contains);
+                    expect(alert).to.exist;
+                    await okButton.click();
+                }
             });
         });
 

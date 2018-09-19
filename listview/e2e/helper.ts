@@ -1,4 +1,4 @@
-import { AppiumDriver, SearchOptions, Direction } from "nativescript-dev-appium";
+import { AppiumDriver, SearchOptions, Direction, UIElement } from "nativescript-dev-appium";
 import { runType } from "nativescript-dev-appium/lib/parser";
 
 const isAndroid: boolean = runType.includes("android");
@@ -31,4 +31,36 @@ export async function scrollToElement(driver: AppiumDriver, element: string, dir
         600
     );
     return listItem;
+}
+
+export async function swipe(driver: AppiumDriver, item: any, direction: Direction) {
+    const rectangle = await item.getRectangle();
+    const centerX = rectangle.x + rectangle.width / 2;
+    const centerY = rectangle.y + rectangle.height / 2;
+    let swipeX;
+    if (direction === Direction.right) {
+        const windowSize = await driver.driver.getWindowSize();
+        swipeX = windowSize.width - 10;
+    } else if (direction === Direction.left) {
+        swipeX = 10;
+    }
+
+    if (isAndroid) {
+        const wd = driver.wd();
+        const action = new wd.TouchAction(driver.driver);
+        action.press({ x: centerX, y: centerY })
+            .wait(100)
+            .moveTo({ x: swipeX, y: centerY })
+            .release();
+        await action.perform();
+    }
+    else {
+        await driver.driver.execute('mobile: dragFromToForDuration', {
+            duration: 2.0,
+            fromX: centerX,
+            fromY: centerY,
+            toX: swipeX,
+            toY: centerY
+        });
+    }
 }

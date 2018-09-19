@@ -75,6 +75,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewDataOperationsMultipleWithSwipeComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "With Swipe"
+        }
+    },
+    {
         path: "ListViewHeaderFooterComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
@@ -212,6 +219,13 @@ let APP_ROUTES: Routes = [
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {
             "title": "Auto with Fixed Item Size"
+        }
+    },
+    {
+        path: "ListViewFixedSizeAutoWithSmallSourceComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "With small source and pull to refresh"
         }
     },
     {
