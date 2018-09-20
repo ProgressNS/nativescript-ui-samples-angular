@@ -1,7 +1,7 @@
 <GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
     <!-- >> angular-listview-swipe-actions-set-enabled-html -->
     <RadListView #myListView [items]="dataItems" row="1" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
-        (itemSwipeProgressStarted)="onSwipeCellStarted($event)" (itemSwipeProgressChanged)="onCellSwiping($event)" swipeActions="true">
+    (itemSwipeProgressStarted)="onSwipeCellStarted($event)" (itemSwipeProgressChanged)="onCellSwiping($event)" swipeActions="true">
     <!-- >> (hide) -->
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="listItemStackLayout" orientation="vertical">
@@ -13,10 +13,10 @@
     <!-- >> angular-listview-swipe-actions-template-html -->
         <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="gridLayoutLayout">
              <StackLayout id="mark-view" col="0" class="markViewStackLayout" (tap)="onLeftSwipeClick($event)">
-                <Label text="mark" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                <Label text="mark" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout id="delete-view" col="2" class="deleteViewStackLayout" (tap)="onRightSwipeClick($event)">
-                <Label text="delete" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                <Label text="delete" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
         </GridLayout>
     <!-- << angular-listview-swipe-actions-template-html -->

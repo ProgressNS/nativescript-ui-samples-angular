@@ -45,7 +45,7 @@ export class ListViewItemSelectionComponent implements OnInit {
         }
 
         this._selectedItems = selectedTitles;
-        console.log("Item selected.");
+        console.log("Item selected: " + this.dataItems.getItem(args.index).name);
     }
 
     public onItemDeselected(args: ListViewEventData) {
@@ -66,7 +66,7 @@ export class ListViewItemSelectionComponent implements OnInit {
             this._selectedItems = "No Selected items.";
         }
 
-        console.log("Item deselected.");
+        console.log("Item deselected: " + this.dataItems.getItem(args.index).name);
     }
 }
 // << angular-listview-selection-component

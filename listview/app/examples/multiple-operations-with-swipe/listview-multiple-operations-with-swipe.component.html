@@ -1,0 +1,31 @@
+<GridLayout rows="*, auto" tkExampleTitle tkToggleNavButton>
+    <RadListView selectionBehavior="LongPress"
+                [items]="dataItems"
+                #myListView 
+                swipeActions="true"
+                [sortingFunction]="mySortingFunc" 
+                [filteringFunction]="myFilteringFunc"
+                [groupingFunction]="myGroupingFunc" 
+                (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+                (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+                (itemSwipeProgressChanged)="onCellSwiping($event)"
+                (itemSelected)="onItemSelected($event)"
+                (itemDeselected)="onItemDeselected($event)"
+                (itemTap)="onItemTap($event)" >
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" class="itemStackLayout" [backgroundColor]="item.selected ? 'gray' : 'white'">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto" class="swipeItemGridLayout">
+            <StackLayout id="mark-view" col="0" class="markViewStackLayout" (tap)="onLeftSwipeClick($event)">
+               <Label text="mark" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+           </StackLayout>
+           <StackLayout id="delete-view" col="2" class="deleteViewStackLayout" (tap)="onRightSwipeClick($event)">
+               <Label text="delete" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+           </StackLayout>
+       </GridLayout>
+    </RadListView>
+    <Label [text]="event" textWrap="true" row="1"></Label>
+</GridLayout>
