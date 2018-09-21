@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { CitiesList } from "../data-services/city-model";
+import { CitiesList } from "../../data-services/city-model";
 
 @Component({
     moduleId: module.id,
-    selector: "tk-dataform-value-providers",
-    templateUrl: "dataform-value-providers.component.html"
+    selector: "tk-dataform-value-providers-types",
+    templateUrl: "dataform-value-providers-types.component.html"
 })
-export class DataFormValueProvidersComponent implements OnInit {
+export class DataFormValueProvidersTypesComponent implements OnInit {
     private _cities: CitiesList;
     private _cityProvider1: any;
     private _cityProvider2: any;

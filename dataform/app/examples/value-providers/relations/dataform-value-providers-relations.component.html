@@ -1,0 +1,16 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto,auto,*">
+    <Label text="{{ info }}" horizontalAlignment="center"></Label>
+    <Label row="1" text="Saved Address: { {{ address.country }}, {{ address.city }} }" horizontalAlignment="center"></Label>
+    <RadDataForm  #myValuesDataForm [source]="address"
+    (propertyCommit)="onPropertyCommit($event)"
+    (propertyCommitted)="onPropertyCommitted($event)"
+    (propertyValidate)="onPropertyValidate($event)"
+    (propertyValidated)="onPropertyValidated($event)" row="2">
+        <TKEntityProperty tkDataFormProperty name="country" index="0" [valuesProvider]="countryProvider">
+            <TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="city" index="1" [valuesProvider]="cityProvider">
+            <TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+        </TKEntityProperty>
+    </RadDataForm>
+</GridLayout>

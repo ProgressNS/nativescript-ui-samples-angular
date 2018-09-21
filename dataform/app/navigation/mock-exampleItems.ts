@@ -2,7 +2,7 @@ import { ExampleItem } from './exampleItem';
 
 export const EXAMPLEITEMS: ExampleItem[] = [
     {
-        "title": "DataForm",
+        "title": "DataForm Angular",
         "path": "",
         "subItems": [
             {
@@ -176,8 +176,19 @@ export const EXAMPLEITEMS: ExampleItem[] = [
             },
             {
                 "title": "Value Providers",
-                "path": "DataFormValueProvidersComponent/DataFormValueProvidersComponent",
-                "subItems": []
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Types",
+                        "path": "DataFormValueProvidersTypesComponent/DataFormValueProvidersTypesComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Relations",
+                        "path": "DataFormValueProvidersRelationsComponent/DataFormValueProvidersRelationsComponent",
+                        "subItems": []
+                    }
+                ]
             },
             {
                 "title": "Scrollable Form",
