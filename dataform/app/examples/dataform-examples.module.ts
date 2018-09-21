@@ -34,7 +34,8 @@ import { DataFormValidationMetadataComponent } from './validation/metadata/dataf
 import { DataFormValidationEventsComponent } from './validation/validation-events/dataform-validation-events.component';
 import { DataFormValidationModesComponent } from './validation/validation-modes/dataform-validation-modes.component';
 import { DataFormValidationComponent } from './validation/dataform-validation.component';
-import { DataFormValueProvidersComponent } from './value-providers/dataform-value-providers.component';
+import { DataFormValueProvidersTypesComponent } from './value-providers/types/dataform-value-providers-types.component';
+import { DataFormValueProvidersRelationsComponent } from './value-providers/relations/dataform-value-providers-relations.component';
 
 import { routes } from './dataform-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -79,7 +80,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         DataFormValidationEventsComponent,
         DataFormValidationModesComponent,
         DataFormValidationComponent,
-        DataFormValueProvidersComponent,
+        DataFormValueProvidersTypesComponent,
+        DataFormValueProvidersRelationsComponent,
     ]
 })
 export class DataFormExamplesModule { }

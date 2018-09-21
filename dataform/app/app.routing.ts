@@ -132,10 +132,17 @@ let APP_ROUTES: Routes = [
         }
     },
     {
-        path: "DataFormValueProvidersComponent",
+        path: "DataFormValueProvidersTypesComponent",
         loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
         data: {
-            "title": "Value Providers"
+            "title": "Types"
+        }
+    },
+    {
+        path: "DataFormValueProvidersRelationsComponent",
+        loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
+        data: {
+            "title": "Relations"
         }
     },
     {

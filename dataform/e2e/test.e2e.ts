@@ -4,7 +4,7 @@ import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { navigateToHome } from "./helper";
 
 const isSauceRun = isSauceLab;
-const isAndroid: string = runType.includes("android");
+const isAndroid: Boolean = runType.includes("android");
 
 describe("DataForm", () => {
     let driver: AppiumDriver;
@@ -380,7 +380,7 @@ describe("DataForm", () => {
     });
 
     describe("Validation", () => {
-        it("Navigate to Validators page", async() => {
+        it("Navigate to Validators page", async () => {
             await navigateToHome(driver);
             const validationTitle = await driver.findElementByText("Validation", SearchOptions.exact);
             await validationTitle.click();
@@ -390,7 +390,7 @@ describe("DataForm", () => {
             expect(usernameLabel).to.exist;
         });
 
-        it("Verify data-form components are visible", async() =>{
+        it("Verify data-form components are visible", async () => {
             let usernameLabel = await driver.findElementByText("Username", SearchOptions.exact);
             expect(usernameLabel).to.exist;
 
@@ -407,14 +407,14 @@ describe("DataForm", () => {
             expect(enterPinLabel).to.exist;
         });
 
-        it("Verify validation of components", async() =>{
+        it("Verify validation of components", async () => {
             let fields;
             let username;
             let password;
             let email;
             let phone;
             let pin;
-            if(isAndroid){
+            if (isAndroid) {
                 fields = await driver.findElementsByClassName("android.widget.EditText");
                 username = fields[0];
                 password = fields[1];
@@ -422,7 +422,7 @@ describe("DataForm", () => {
                 phone = fields[4];
                 pin = fields[5];
             }
-            else{
+            else {
                 fields = await driver.findElementsByClassName("TextField");
                 password = await driver.findElementByClassName("SecureTextField");
                 username = fields[0];
@@ -433,7 +433,7 @@ describe("DataForm", () => {
 
             await username.click();
             await username.sendKeys("usernamevalidation");
-            if(isAndroid){
+            if (isAndroid) {
                 await driver.driver.hideDeviceKeyboard("Done");
             }
             const userNameValidation = await driver.findElementByText("Username can be at most 12 characters.", SearchOptions.exact);
@@ -441,7 +441,7 @@ describe("DataForm", () => {
 
             await password.click();
             await password.sendKeys("pass");
-            if(isAndroid){
+            if (isAndroid) {
                 await driver.driver.hideDeviceKeyboard("Done");
             }
             const passwordValidation = await driver.findElementByText("Password must be at least 6 characters long.", SearchOptions.exact);
@@ -450,30 +450,30 @@ describe("DataForm", () => {
             await email.click();
             await email.sendKeys("email");
             let emailValidation;
-            if(isAndroid){
+            if (isAndroid) {
                 await driver.driver.hideDeviceKeyboard("Done");
                 emailValidation = await driver.findElementByText("This email is invalid.", SearchOptions.exact);
             }
-            else{
+            else {
                 emailValidation = await driver.findElementByText("Incorrect e-mail!", SearchOptions.exact);
             }
             expect(emailValidation).to.exist;
-            
-            if(!isAndroid){
+
+            if (!isAndroid) {
                 await phone.sendKeys("08");
                 const phoneValidation = await driver.findElementByText("Incorrect phone number", SearchOptions.exact);
                 expect(phoneValidation).to.exist;
 
-                
+
                 await pin.sendKeys("00");
                 const pinValidation = await driver.findElementByText("PIN number should contain 4 digits.", SearchOptions.exact);
                 expect(pinValidation).to.exist;
             }
-            
+
             let switchButton;
             let switchValidation;
-            
-            if(isAndroid){
+
+            if (isAndroid) {
                 switchButton = await driver.findElementByClassName("android.widget.Switch");
                 await switchButton.click();
                 await switchButton.click();
@@ -485,7 +485,7 @@ describe("DataForm", () => {
                 await action.perform();
                 switchValidation = await driver.findElementByText("You must agree with the terms.", SearchOptions.exact);
             }
-            else{
+            else {
                 switchButton = await driver.findElementByClassName("Switch");
                 await switchButton.click();
                 await switchButton.click();

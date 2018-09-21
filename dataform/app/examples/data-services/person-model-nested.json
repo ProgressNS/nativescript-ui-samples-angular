@@ -1,0 +1,12 @@
+{
+  "name": "John",
+  "age": 23,
+  "email": "john@company.com",
+  "city": "New York",
+  "street": "5th Avenue",
+  "streetNumber": 11,
+  "nested": {  
+    "testInfo": "test"
+  },
+  "date": "2016-04-06"
+}

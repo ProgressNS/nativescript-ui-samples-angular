@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Person } from "../data-services/person";
-import { knownFolders } from "file-system";
-const person = require('../data-services/person-model.json');
+
+const personNested = require('../data-services/person-model-nested.json');
 const personMetadata = require('../data-services/person-metadata.json');
 
 @Component({
@@ -14,7 +14,7 @@ export class DataformPropertiesJsonComponent {
     private _person: Person;
 
     constructor() {
-        this._person = JSON.parse(JSON.stringify(person));
+        this._person = JSON.parse(JSON.stringify(personNested));
         this._personMetadata = JSON.parse(JSON.stringify(personMetadata));
     }
 

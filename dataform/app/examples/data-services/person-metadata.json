@@ -38,6 +38,18 @@
       "displayName": "Street Number",
       "index": 5,
       "editor": "Number"
+    },
+    {
+      "name": "nested",
+      "displayName": "Nested",
+      "index": 6,
+      "ignore": true
+    },
+    {
+      "name": "date",
+      "displayName": "Date",
+      "editor": "DatePicker",
+      "index": 7
     }
   ]
 }
