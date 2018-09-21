@@ -13,6 +13,7 @@ import { ChartBehaviorsDatapointSelectionComponent } from './behaviors/chart-beh
 import { ChartBehaviorsPanZoomComponent } from './behaviors/chart-behaviors-pan-zoom.component';
 import { ChartBehaviorsSeriesSelectionComponent } from './behaviors/chart-behaviors-series-selection.component';
 import { ChartBehaviorsTrackballComponent } from './behaviors/chart-behaviors-trackball.component';
+import { ChartBehaviorsTrackballContentComponent } from './behaviors/chart-behaviors-trackball-content.component';
 import { ChartLegendComponent } from './legend/chart-legend.component';
 import { ChartSeriesAreaComponent } from './series/area/chart-series-area.component';
 import { ChartSeriesStackedAreaComponent } from './series/area/chart-series-stacked-area.component';
@@ -34,6 +35,7 @@ import { ChartStylingLabelComponent } from './styling/chart-styling-label.compon
 import { ChartStylingPieSeriesComponent } from './styling/chart-styling-pie-series.component';
 import { ChartStylingSelectionComponent } from './styling/chart-styling-selection.component';
 import { ChartStylingSeriesComponent } from './styling/chart-styling-series.component';
+import { ChartStylingTicksComponent } from './styling/chart-styling-ticks.component';
 
 export const routes: Routes = [
   { path: 'ChartAnnotationsGridLineComponent', component: ChartAnnotationsGridLineComponent },
@@ -47,6 +49,7 @@ export const routes: Routes = [
   { path: 'ChartBehaviorsPanZoomComponent', component: ChartBehaviorsPanZoomComponent },
   { path: 'ChartBehaviorsSeriesSelectionComponent', component: ChartBehaviorsSeriesSelectionComponent },
   { path: 'ChartBehaviorsTrackballComponent', component: ChartBehaviorsTrackballComponent },
+  { path: 'ChartBehaviorsTrackballContentComponent', component: ChartBehaviorsTrackballContentComponent },
   { path: 'ChartLegendComponent', component: ChartLegendComponent },
   { path: 'ChartSeriesAreaComponent', component: ChartSeriesAreaComponent },
   { path: 'ChartSeriesStackedAreaComponent', component: ChartSeriesStackedAreaComponent },
@@ -68,5 +71,6 @@ export const routes: Routes = [
   { path: 'ChartStylingPieSeriesComponent', component: ChartStylingPieSeriesComponent },
   { path: 'ChartStylingSelectionComponent', component: ChartStylingSelectionComponent },
   { path: 'ChartStylingSeriesComponent', component: ChartStylingSeriesComponent },
+  { path: 'ChartStylingTicksComponent', component: ChartStylingTicksComponent },
   { path: 'ChartLabelVisibilityComponent', component: ChartLabelVisibilityComponent }
 ];

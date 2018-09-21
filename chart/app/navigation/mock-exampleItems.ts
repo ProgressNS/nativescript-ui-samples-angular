@@ -112,6 +112,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Styling ticks",
+                        "path": "ChartStylingTicksComponent/ChartStylingTicksComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Styling series selection",
                         "path": "ChartStylingSelectionComponent/ChartStylingSelectionComponent",
                         "subItems": []
@@ -140,6 +145,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                     {
                         "title": "Trackball",
                         "path": "ChartBehaviorsTrackballComponent/ChartBehaviorsTrackballComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Trackball Content",
+                        "path": "ChartBehaviorsTrackballContentComponent/ChartBehaviorsTrackballContentComponent",
                         "subItems": []
                     },
                     {
