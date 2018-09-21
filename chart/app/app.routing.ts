@@ -158,6 +158,13 @@ const APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ChartBehaviorsTrackballContentComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Trackball Content"
+        }
+    },
+    {
         path: "ChartLegendComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
@@ -239,6 +246,13 @@ const APP_ROUTES: Routes = [
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
             "title": "Styling Pie Chart series"
+        }
+    },
+    {
+        path: "ChartStylingTicksComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Styling Ticks"
         }
     }
 ];

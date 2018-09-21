@@ -3,11 +3,20 @@
     <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
     <LinearAxis tkCartesianVerticalAxis maximum="50"></LinearAxis>
 
-    <BarSeries tkCartesianSeries legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
-    <LineSeries tkCartesianSeries legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
-    <AreaSeries tkCartesianSeries legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
+    <BarSeries tkCartesianSeries seriesName="Bar" legendTitle="Bar series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal" legendLabel="Series type"></BarSeries>
+    <LineSeries tkCartesianSeries seriesName="Line" legendTitle="Line series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" legendLabel="Series type"></LineSeries>
+    <AreaSeries tkCartesianSeries seriesName="Area" legendTitle="Area series" [items]="categoricalSource" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal" legendLabel="Series type"></AreaSeries>
     <!-- >> chart-legend-angular-definition -->
     <RadLegendView tkCartesianLegend position="Top" title="Series type" height="150" enableSelection="true"></RadLegendView>
     <!-- << chart-legend-angular-definition -->
+    <Palette tkCartesianPalette seriesName="Bar">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="#ff6699" strokeColor="#ff6699"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Line">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="#4d88ff" strokeColor="#4d88ff"></PaletteEntry>
+    </Palette>
+    <Palette tkCartesianPalette seriesName="Area">
+        <PaletteEntry tkCartesianPaletteEntry fillColor="#8033cc33" strokeColor="#33cc33"></PaletteEntry>
+    </Palette>
 </RadCartesianChart>
 <!-- << chart-legend-example-angular -->

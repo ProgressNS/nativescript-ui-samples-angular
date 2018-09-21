@@ -40,13 +40,14 @@
     "android24": {
         "platformName": "Android",
         "platformVersion": "7.0",
-        "deviceName": "Emulator Api24 Google",
+        "deviceName": "Emulator-Api24-Google",
         "lt": 60000,
         "appActivity": "com.tns.NativeScriptActivity",
         "newCommandTimeout": 720,
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "",
+        "automationName": "Appium"
     },
     "android24.sauce": {
         "platformName": "Android",
@@ -57,7 +58,10 @@
         "appium-version": "1.7.1",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "sauce-storage:chart-ng-android-release.apk",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "automationName": "Appium"
     },
     "android25": {
         "platformName": "Android",
@@ -119,6 +123,36 @@
         "deviceName": "iPhone X",
         "noReset": true,
         "fullReset": false,
-        "app": ""
+        "app": "sauce-storage:chart-ng-ios.zip",
+        "density": 3,
+        "offsetPixels": 87
+    },
+    "sim.iPhoneX.ios11.aws": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "appium-version": "1.8.1",
+        "density": 3,
+        "offsetPixels": 87,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/ns-pro-ui/chart-ng-ios.zip",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android24.aws": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.8.1",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/ns-pro-ui/chart-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
     }
 }

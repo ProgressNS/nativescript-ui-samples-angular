@@ -1,0 +1,25 @@
+<GridLayout rows="auto, *">
+    <Label text="Tap and hold to display the Trackball for the closest category. Drag horizontally to update the Trackball position." textWrap="true"></Label>
+    <RadCartesianChart row="1" marginTop="20" tkExampleTitle tkToggleNavButton>
+        <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+
+        <SplineSeries tkCartesianSeries legendTitle="Bangkok" seriesName="Line1" [items]="categoricalSource" categoryProperty="Month" valueProperty="Bangkok"></SplineSeries>
+        <SplineSeries tkCartesianSeries legendTitle="Paris" seriesName="Line2" [items]="categoricalSource" categoryProperty="Month" valueProperty="Paris"></SplineSeries>
+        <SplineSeries tkCartesianSeries legendTitle="Ulaanbaatar" seriesName="Line3" [items]="categoricalSource" categoryProperty="Month" valueProperty="Ulaanbaatar"></SplineSeries>
+
+        <Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true" (trackBallContentRequested)="onTrackBallContentRequested($event)"></Trackball>
+
+        <RadLegendView tkCartesianLegend position="Top" title="Monthly Averages (&#8451;)"></RadLegendView>
+
+        <Palette tkCartesianPalette seriesName="Line1">
+            <PaletteEntry tkCartesianPaletteEntry fillColor="#E11B01" strokeColor="#E11B01"></PaletteEntry>
+        </Palette>
+        <Palette tkCartesianPalette seriesName="Line2">
+            <PaletteEntry tkCartesianPaletteEntry fillColor="#FFBEA7" strokeColor="#FFBEA7"></PaletteEntry>
+        </Palette>
+        <Palette tkCartesianPalette seriesName="Line3">
+            <PaletteEntry tkCartesianPaletteEntry fillColor="#03A9F4" strokeColor="#03A9F4"></PaletteEntry>
+        </Palette>
+    </RadCartesianChart>
+</GridLayout>

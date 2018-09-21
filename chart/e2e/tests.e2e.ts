@@ -2,7 +2,7 @@ import { AppiumDriver, createDriver, SearchOptions, Direction, UIElement, Point 
 import { isSauceLab, runType, capabilitiesName } from "nativescript-dev-appium/lib/parser";
 import { expect } from "chai";
 import "./helper";
-import { navigateToView, navigateToHome } from "./helper";
+import { navigateToView, navigateToHome, scrollToElement } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -111,14 +111,7 @@ describe("Chart1", () => {
         });
         it("should open Scatter Bubble series", async () => {
             await navigateToView(driver, seriesText);
-            const wd = driver.wd();
-            const action = new wd.TouchAction(driver.driver);
-            action.press({ x: 52, y: 499 })
-                .moveTo({ x: -2, y: -294 })
-                .release();
-            await action.perform();
-            await driver.wait(1000);
-            const scatterBubbleSeriesButton = await driver.findElementByText("Scatter Bubble series");
+            const scatterBubbleSeriesButton = await scrollToElement(driver, "Scatter Bubble series");
             await scatterBubbleSeriesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("scatter-bubble-series");
@@ -126,7 +119,7 @@ describe("Chart1", () => {
         });
         it("should open Candlestick series", async () => {
             await navigateToView(driver, seriesText);
-            const candlestickSeriesButton = await driver.findElementByText("Candlestick series");
+            const candlestickSeriesButton = await scrollToElement(driver, "Candlestick series");
             await candlestickSeriesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("candlestick-series");
@@ -134,7 +127,7 @@ describe("Chart1", () => {
         });
         it("should open Ohlc series", async () => {
             await navigateToView(driver, seriesText);
-            const ohlcSeriesButton = await driver.findElementByText("Ohlc series");
+            const ohlcSeriesButton = await scrollToElement(driver, "Ohlc series");
             await ohlcSeriesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("ohlc-series");
@@ -142,7 +135,7 @@ describe("Chart1", () => {
         });
         it("should open Pie series", async () => {
             await navigateToView(driver, seriesText);
-            const pieSeriesButton = await driver.findElementByText("Pie series");
+            const pieSeriesButton = await scrollToElement(driver, "Pie series");
             await pieSeriesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("pie-series");
@@ -150,7 +143,7 @@ describe("Chart1", () => {
         });
         it("should open Scatter series", async () => {
             await navigateToView(driver, seriesText);
-            const scatterSeriesButton = await driver.findElementByText("Scatter series");
+            const scatterSeriesButton = await scrollToElement(driver, "Scatter series");
             await scatterSeriesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("scatter-series");
@@ -193,6 +186,14 @@ describe("Chart1", () => {
             await stylingLabelsButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("styling-labels");
+            expect(isTrue).to.be.true;
+        });
+        it("should open Styling ticks", async () => {
+            await navigateToView(driver, stylingText);
+            const stylingTicksButton = await driver.findElementByText("Styling ticks");
+            await stylingTicksButton.click();
+            await driver.wait(animationTime);
+            const isTrue = await driver.compareScreen("styling-ticks");
             expect(isTrue).to.be.true;
         });
         it("should open Styling series selection", async () => {
