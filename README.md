@@ -8,10 +8,6 @@ This repository contains the source code of the Progress NativeScript UI samples
 - `nativescript-ui-dataform` [![npm](https://img.shields.io/npm/v/nativescript-ui-dataform.svg)](https://www.npmjs.com/package/nativescript-ui-dataform)
 - `nativescript-ui-gauge` [![npm](https://img.shields.io/npm/v/nativescript-ui-gauge.svg)](https://www.npmjs.com/package/nativescript-ui-gauge)
 
-The `master` branch contains code currently under development and is not meant to be used with the officially released versions of the plugins.
-
-The `release` branch is the default one and is tested with the latest NativeScript UI plugins available.
-
 ## Issues
 Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository.
 
