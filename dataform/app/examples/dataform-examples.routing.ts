@@ -22,6 +22,8 @@ import { DataFormScrollingComponent } from './scrolling/dataform-scrolling.compo
 import { DataformStylingAdvancedComponent } from './styling/advanced/dataform-styling-advanced.component';
 import { DataFormStylingComponent } from './styling/common/dataform-styling.component';
 import { DataFormEditorBackgroundComponent } from './styling/editor-background/dataform-editor-background.component';
+import { DataFormCssFormComponent } from './styling/css-form/dataform-css-form.component';
+import { DataFormCssEditorsComponent } from './styling/css-editors/dataform-css-editors.component';
 import { DataformEditorStyleComponent } from './styling/editor-style/dataform-editor-style.component';
 import { DataFormAsyncValidationComponent } from './validation/async-validation/dataform-async-validation.component';
 import { DataformCheckErrorsComponent } from './validation/check-errors/dataform-check-errors.component';
@@ -56,6 +58,8 @@ export const routes: Routes = [
   { path: 'DataformStylingAdvancedComponent', component: DataformStylingAdvancedComponent },
   { path: 'DataFormStylingComponent', component: DataFormStylingComponent },
   { path: 'DataFormEditorBackgroundComponent', component: DataFormEditorBackgroundComponent },
+  { path: 'DataFormCssFormComponent', component: DataFormCssFormComponent },
+  { path: 'DataFormCssEditorsComponent', component: DataFormCssEditorsComponent },
   { path: 'DataformEditorStyleComponent', component: DataformEditorStyleComponent },
   { path: 'DataFormAsyncValidationComponent', component: DataFormAsyncValidationComponent },
   { path: 'DataformCheckErrorsComponent', component: DataformCheckErrorsComponent },

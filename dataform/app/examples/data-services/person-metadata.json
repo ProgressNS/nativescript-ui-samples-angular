@@ -50,6 +50,12 @@
       "displayName": "Date",
       "editor": "DatePicker",
       "index": 7
+    },
+    {
+      "name": "time",
+      "displayName": "Time",
+      "editor": "TimePicker",
+      "index": 8
     }
   ]
 }

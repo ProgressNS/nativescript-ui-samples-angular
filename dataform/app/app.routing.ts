@@ -202,6 +202,20 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "DataFormCssFormComponent",
+        loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
+        data: {
+            "title": "CSS Form"
+        }
+    },
+    {
+        path: "DataFormCssEditorsComponent",
+        loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
+        data: {
+            "title": "CSS Editors"
+        }
+    },
+    {
         path: "DataformCheckErrorsComponent",
         loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
         data: {

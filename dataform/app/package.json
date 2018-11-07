@@ -1,6 +1,9 @@
 {
   "android": {
-    "v8Flags": "--expose_gc"
+    "v8Flags": "--expose_gc",
+    "requireModules": [
+      "nativescript-ui-dataform"
+    ]
   },
   "main": "main.js",
   "name": "tns-template-hello-world-ng",
