@@ -52,13 +52,11 @@ export class DataFormEditorBackgroundComponent implements OnInit {
             const coreEditorInsets = new UIEdgeInsets({ top: this._coreEditorPaddingVertical, left: this._coreEditorPaddingHorizontal, bottom: this._coreEditorPaddingVertical, right: this._coreEditorPaddingHorizontal });
             if (this._editorHasValueLabel(editorType)) {
                 editor.showAccessoryImage = false;
-                editor.editorValueLabel.textInsets = coreEditorInsets;
-            } else if (this._editorIsTextField(editorType)) {
-                editor.editor.textInsets = coreEditorInsets;
             }
+            editor.editorCore.insets = coreEditorInsets;
 
             // Update core editor background
-            const layer = this._editorHasValueLabel(editorType) ? editor.editorValueLabel.layer : editor.editor.layer;
+            const layer = editor.editorCore.layer;
             layer.borderColor = this._strokeColor.ios.CGColor;
             layer.borderWidth = this._strokeWidth;
             layer.cornerRadius = this._cornerRadius;

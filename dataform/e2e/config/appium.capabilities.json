@@ -95,7 +95,7 @@
         "offsetPixels": 87,
         "noReset": true,
         "fullReset": false,
-        "app": "https://s3.amazonaws.com/ns-pro-ui/dataform-ng-ios.zip",
+        "app": "https://s3.amazonaws.com/pro-ui-apps/dataform-ng-ios.zip",
         "idleTimeout": 120,
         "automationName": "Appium"
     },
@@ -110,7 +110,7 @@
         "offsetPixels": 51,
         "noReset": true,
         "fullReset": false,
-        "app": "https://s3.amazonaws.com/ns-pro-ui/dataform-ng-android-release.apk",
+        "app": "https://s3.amazonaws.com/pro-ui-apps/dataform-ng-android-release.apk",
         "idleTimeout": 120,
         "automationName": "Appium"
     }

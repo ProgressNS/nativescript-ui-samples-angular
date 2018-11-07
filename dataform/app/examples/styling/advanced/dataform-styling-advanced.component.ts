@@ -140,12 +140,8 @@ export class DataformStylingAdvancedComponent implements OnInit {
                 (<UIButton>coreEditor.subviews[i]).imageView.tintColor = colorDark.ios;
             }
         }
-
-        const labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
-        labelDef.contentOffset = {
-            horizontal: -64,
-            vertical: 0
-        };
+        const editorView = editor.editorCore;
+        editorView.labelAlignment = TKGridLayoutAlignment.Left;
     }
 
     public editorSetupSegmentedEditorIOS(editor) {

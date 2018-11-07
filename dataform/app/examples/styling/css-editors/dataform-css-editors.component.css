@@ -1,0 +1,42 @@
+PropertyEditor {
+    background-color: #00BCD4;
+    color: #303F9F;
+    border-color: #303F9F;
+    border-width: 5;
+    border-radius: 5;
+    margin: 10;
+    padding: 10;
+    font-size: 14;
+}
+
+DataFormEditorLabel {
+    color:#212121;
+    background-color: white;
+    font-style: italic;
+    padding: 10;
+    margin: 10;
+    border-color: #303F9F;
+    border-width: 5;
+    border-radius: 5;
+    width: 150;
+    position: left;
+}
+
+DataFormEditorCore {
+    margin: 10;
+    padding: 10;
+    background-color: white;
+    border-color: #303F9F;
+    border-width: 5;
+    border-radius: 5;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+PropertyEditor[type='Email'] {
+    font-weight: bold;
+}
+
+EntityProperty[name='name'] DataFormEditorLabel {
+    width: 0;
+    visibility: collapsed;
+}

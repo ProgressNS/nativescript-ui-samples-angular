@@ -1,7 +1,7 @@
-import { AppiumDriver, createDriver, SearchOptions } from "nativescript-dev-appium";
+import { AppiumDriver, createDriver, SearchOptions, UIElement } from "nativescript-dev-appium";
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
-import { navigateToHome } from "./helper";
+import { navigateToHome, clickBelowElementCenter } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: Boolean = runType.includes("android");
@@ -190,6 +190,13 @@ describe("DataForm", () => {
             expect(streetName).to.exist;
             let streetNameValue = await driver.findElementByText("5th Avenue", SearchOptions.exact);
             expect(streetNameValue).to.exist;
+
+            let date = isAndroid ? "Wed, 06.04" : "Apr 6, 2016"
+            let dateValue = await driver.findElementByText(date, SearchOptions.contains);
+            expect(dateValue).to.exist;
+            let time = isAndroid ? "06:00 PM" : "18:00"
+            let timeValue = await driver.findElementByText(time, SearchOptions.contains);
+            expect(timeValue).to.exist;
         });
     });
 
@@ -213,10 +220,9 @@ describe("DataForm", () => {
         });
 
         it("Verify data-form components are visible and responsive", async () => {
-            let movieName;
             let date;
             let month;
-            let day;
+            let day: UIElement;
             if (isAndroid) {
                 date = await driver.findElementByText("Wed, 06.04", SearchOptions.exact);
                 await date.click();
@@ -240,8 +246,14 @@ describe("DataForm", () => {
             expect(month).to.exist;
 
             if (isAndroid) {
-                // closing the datepicker with navBack action
-                driver.navBack();
+                const seven = await driver.findElementByText("7", SearchOptions.exact);
+                await seven.click();
+                const ok = await driver.findElementByText("OK", SearchOptions.exact);
+                await ok.click();
+            } else {
+                await clickBelowElementCenter(day, driver);
+                date = await driver.findElementByAccessibilityId("Apr 7, 2016", SearchOptions.exact);
+                await date.click();
             }
             driver.navBack();
         });

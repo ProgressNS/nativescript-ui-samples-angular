@@ -44,11 +44,12 @@ export class SuperUser extends User {
     public gender: string;
     public firstName: string;
     public lastName: string;
-    public birthDate: string;
+    public lastLoginDate: Date;
+    public lastLoginTime: Date;
     public company: string;
     public webSite: string;
 
-    constructor(firstName, lastName, username, password, email, birthDate, gender, company, website, phone, country, city, streetName, streetNumber, postalCode, additionalInfo) {
+    constructor(firstName, lastName, username, password, email, lastLoginDate, lastLoginTime, gender, company, website, phone, country, city, streetName, streetNumber, postalCode, additionalInfo) {
         super();
 
         this.firstName = firstName;
@@ -56,7 +57,8 @@ export class SuperUser extends User {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.birthDate = birthDate;
+        this.lastLoginDate = lastLoginDate;
+        this.lastLoginTime = lastLoginTime;
         this.gender = gender;
         this.company = company;
         this.webSite = website;
@@ -75,7 +77,8 @@ export class SuperUser extends User {
             "Username: " + this.username + "\n" +
             "Password: " + "*".repeat(this.password.length) + "\n" +
             "E-mail: " + this.email + "\n" +
-            "BirthDate: " + this.birthDate + "\n" +
+            "LastLoginDate: " + this.lastLoginDate.toDateString() + "\n" +
+            "LastLoginTime: " + this.lastLoginTime.toTimeString() + "\n" +
             "Gender: " + this.gender + "\n" +
             "Company: " + this.company + "\n" +
             "WebSite: " + this.webSite + "\n" +
@@ -85,6 +88,6 @@ export class SuperUser extends User {
             "Street Name: " + this.streetName + "\n" +
             "Street Number: " + this.streetNumber + "\n" +
             "Postal Code: " + this.postalCode + "\n" +
-            "Additonal Info: " + this.additionalInfo + "\n";
+            "Additional Info: " + this.additionalInfo + "\n";
     }
 }

@@ -132,6 +132,16 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "CSS Form",
+                        "path": "DataFormCssFormComponent/DataFormCssFormComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "CSS Editors",
+                        "path": "DataFormCssEditorsComponent/DataFormCssEditorsComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "At runtime",
                         "path": "DataformEditorStyleComponent/DataformEditorStyleComponent",
                         "subItems": []

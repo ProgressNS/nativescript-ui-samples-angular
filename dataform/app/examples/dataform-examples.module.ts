@@ -25,6 +25,8 @@ import { DataFormScrollingComponent } from './scrolling/dataform-scrolling.compo
 import { DataformStylingAdvancedComponent } from './styling/advanced/dataform-styling-advanced.component';
 import { DataFormStylingComponent } from './styling/common/dataform-styling.component';
 import { DataFormEditorBackgroundComponent } from './styling/editor-background/dataform-editor-background.component';
+import { DataFormCssFormComponent } from './styling/css-form/dataform-css-form.component';
+import { DataFormCssEditorsComponent } from './styling/css-editors/dataform-css-editors.component';
 import { DataformEditorStyleComponent } from './styling/editor-style/dataform-editor-style.component';
 import { DataFormAsyncValidationComponent } from './validation/async-validation/dataform-async-validation.component';
 import { DataformCheckErrorsComponent } from './validation/check-errors/dataform-check-errors.component';
@@ -71,6 +73,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         DataformStylingAdvancedComponent,
         DataFormStylingComponent,
         DataFormEditorBackgroundComponent,
+        DataFormCssFormComponent,
+        DataFormCssEditorsComponent,
         DataformEditorStyleComponent,
         DataFormAsyncValidationComponent,
         DataformCheckErrorsComponent,

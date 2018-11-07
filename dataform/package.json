@@ -41,7 +41,7 @@
     "karma-nativescript-launcher": "^0.4.0",
     "mocha": "^3.3.0",
     "nativescript-css-loader": "~0.26.0",
-    "nativescript-dev-appium": "next",
+    "nativescript-dev-appium": "4.0.9",
     "nativescript-dev-typescript": "~0.7.1",
     "nativescript-dev-webpack": "~0.15.0",
     "tns-platform-declarations": "^4.2.1",
