@@ -1,7 +1,7 @@
 import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescript-dev-appium";
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
-import { navigateBackToHome, navigateBackToView, scrollToElement, swipe } from "./helper";
+import { navigateBackToHome, navigateBackToView, scrollToElement, swipe, swipeToElement } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -62,6 +62,53 @@ describe("ListView1", () => {
 
             const descriptionLabels = await driver.findElementsByText("This is item description.", SearchOptions.exact);
             expect(descriptionLabels.length).to.equal(10);
+        });
+    });
+
+    const gettingStartedHorizontalText = "Getting Started Horizontal";
+    describe(gettingStartedHorizontalText, () => {
+        it("Navigate to Getting Started Horizontal example", async () => {
+            await navigateBackToHome(driver);
+            await scrollToElement(driver, gettingStartedHorizontalText);
+            const gettingStartedHorizontal = await driver.findElementByText(gettingStartedHorizontalText, SearchOptions.exact);
+            await gettingStartedHorizontal.click();
+
+            const item1 = await driver.findElementByText("Item 1", SearchOptions.exact);
+            expect(item1).to.exist;
+            const description = await driver.findElementByText("This is item description", SearchOptions.contains);
+            expect(description).to.exist;
+        });
+
+        it("Scroll to Item 5", async () => {
+            let direction = Direction.left;
+            let item = "Item 5";
+            if(isAndroid){
+                direction = Direction.right;
+                item = "Item 9"
+            }
+            const expectedItem = await swipeToElement(driver, item, direction);
+            expect(expectedItem).to.exist;
+        });
+    });
+
+    const initialLoad = "Initially load 10 000 items";
+    describe(initialLoad, () => {
+        it("Navigate to Initially load example", async () => {
+            await navigateBackToHome(driver);
+            await scrollToElement(driver, initialLoad);
+            const initialButton = await driver.findElementByText(initialLoad, SearchOptions.exact);
+            await initialButton.click();
+
+            const item1 = await driver.findElementByText("Item 1", SearchOptions.exact);
+            expect(item1).to.exist;
+            const description = await driver.findElementByText("Description for item 1", SearchOptions.contains);
+            expect(description).to.exist;
+        });
+
+        it("Scroll to Item 7", async () => {
+            await scrollToElement(driver, "Item 7", Direction.down);
+            const item7 = await driver.findElementByText("Item 7", SearchOptions.exact);
+            expect(item7).to.exist;
         });
     });
 
@@ -247,6 +294,7 @@ describe("ListView1", () => {
                 expect(event).to.exist;
                 const markButtons = await driver.findElementsByText("mark");
                 let alert, okButton;
+                // Alert causes UI tree to become empty on Android
                 if (!isAndroid) {
 
                     await markButtons[0].click();

@@ -27,10 +27,28 @@ export async function scrollToElement(driver: AppiumDriver, element: string, dir
     }
     const listItem = await listView.scrollTo(
         direction,
-        () => driver.findElementByText(element, SearchOptions.exact),
+        () => driver.findElementByText(element, SearchOptions.contains),
         600
     );
     return listItem;
+}
+
+export async function swipeToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down) {
+    let listView;
+    if (isAndroid) {
+        listView = await driver.findElementByClassName("android.widget.FrameLayout");
+    }
+    else {
+        listView = await driver.findElementByClassName("XCUIElementTypeCollectionView");
+    }
+    
+    let item = await driver.findElementByTextIfExists(element, SearchOptions.exact);
+    while (item === undefined) {
+        await listView.swipe(direction);
+        await driver.wait(500);
+        item = await driver.findElementByTextIfExists(element, SearchOptions.exact);
+    }
+    return item;
 }
 
 export async function swipe(driver: AppiumDriver, item: any, direction: Direction) {

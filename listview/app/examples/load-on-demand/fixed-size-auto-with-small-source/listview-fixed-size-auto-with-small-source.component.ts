@@ -61,7 +61,7 @@ export class ListViewFixedSizeAutoWithSmallSourceComponent implements OnInit {
                     thatInstance._itemsLoading = false;
 
                     listView.notifyLoadOnDemandFinished();
-                }, 1000);
+                }, 1500);
             } else {
                 console.log("Load More Data Requested CANNOT LOAD");
 

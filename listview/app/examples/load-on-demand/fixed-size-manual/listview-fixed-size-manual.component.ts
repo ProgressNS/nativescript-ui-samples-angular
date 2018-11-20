@@ -47,7 +47,7 @@ export class ListViewFixedSizeManualComponent implements OnInit {
             setTimeout(function () {
                 that.get().addMoreItemsFromSource(2);
                 listView.notifyLoadOnDemandFinished();
-            }, 1000);
+            }, 1500);
         } else {
             args.returnValue = false;
             listView.notifyLoadOnDemandFinished(true);
