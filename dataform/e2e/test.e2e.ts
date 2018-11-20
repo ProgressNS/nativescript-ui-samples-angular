@@ -191,10 +191,10 @@ describe("DataForm", () => {
             let streetNameValue = await driver.findElementByText("5th Avenue", SearchOptions.exact);
             expect(streetNameValue).to.exist;
 
-            let date = isAndroid ? "Wed, 06.04" : "Apr 6, 2016"
+            let date = isAndroid ? "Wed, 06.04" : "Apr 6, 2016";
             let dateValue = await driver.findElementByText(date, SearchOptions.contains);
             expect(dateValue).to.exist;
-            let time = isAndroid ? "06:00 PM" : "18:00"
+            let time = isAndroid ? "06:00 PM" : "18:00";
             let timeValue = await driver.findElementByText(time, SearchOptions.contains);
             expect(timeValue).to.exist;
         });
@@ -411,7 +411,7 @@ describe("DataForm", () => {
             let usernameLabel = await driver.findElementByText("Username", SearchOptions.exact);
             expect(usernameLabel).to.exist;
 
-            let passwordLabel = await driver.findElementByText("Password", SearchOptions.exact)
+            let passwordLabel = await driver.findElementByText("Password", SearchOptions.exact);
             expect(passwordLabel).to.exist;
 
             let emailLabel = await driver.findElementByText("E-mail", SearchOptions.exact);
