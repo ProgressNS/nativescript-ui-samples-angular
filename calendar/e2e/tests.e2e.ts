@@ -1,7 +1,7 @@
-import { AppiumDriver, createDriver, SearchOptions, Direction, UIElement, Point } from "nativescript-dev-appium";
-import { isSauceLab, runType, capabilitiesName } from "nativescript-dev-appium/lib/parser";
+import { AppiumDriver, createDriver, SearchOptions } from "nativescript-dev-appium";
+import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { expect } from "chai";
-import { getMonth, getYear, getMonthBG, getNextMonthOfYear, getDate } from "./helper";
+import { getMonth, getYear, getMonthBG, getNextMonthOfYear, getDate, scrollToElement, navigateBackToHome, getOptionsButton } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -18,9 +18,7 @@ describe("Calendar", () => {
     const stylingTitleText = "Styling";
     const eventViewModesText = "Events view modes";
     const dayViewText = "Day view";
-    const optionsText = "Options";
     const okButtonText = "OK";
-    const moreOptionsID = "More options";
     const defaultWaitTime = 5000;
     let driver: AppiumDriver;
 
@@ -50,159 +48,125 @@ describe("Calendar", () => {
             await gettingStartedButton.click();
             const gettingStartedTitle = await driver.findElementByText(gettingStartedText);
             expect(gettingStartedTitle).to.exist;
-            if (!isAndroid) {
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-            }
-
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
         });
     });
     describe(localizationText, () => {
         it("should open Bulgarian and English localizations", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const localizationButton = await driver.findElementByText(localizationText);
             await localizationButton.click();
             const localizationTitle = await driver.findElementByText(localizationText);
             expect(localizationTitle).to.exist;
-            if (!isAndroid) {
-                const bulgarianButton = await driver.findElementByText("bg-BG");
-                await bulgarianButton.click();
-                const currentMonthBG = await driver.findElementByText(getMonthBG() + " " + getYear());
-                expect(currentMonthBG).to.exist;
-                const englishButton = await driver.findElementByText("en-UK");
-                await englishButton.click();
-                const currentMonthUK = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonthUK).to.exist;
-            }
+            const bulgarianButton = await driver.findElementByText("BG", SearchOptions.contains);
+            await bulgarianButton.click();
+            const currentMonthBG = await driver.findElementByText(getMonthBG() + " " + getYear());
+            expect(currentMonthBG).to.exist;
+            const englishButton = await driver.findElementByText("UK", SearchOptions.contains);
+            await englishButton.click();
+            const currentMonthUK = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonthUK).to.exist;
         });
     });
     describe(populatingDataText, () => {
         it("should open a day with two events", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const populatingDataButton = await driver.findElementByText(populatingDataText);
             await populatingDataButton.click();
             const populatingDataTitle = await driver.findElementByText(populatingDataText);
             expect(populatingDataTitle).to.exist;
-            if (!isAndroid) {
-                const twelfthDay = await driver.findElementByText("12");
-                await twelfthDay.click();
-                const firstEvent = await driver.findElementByText("event 6");
-                expect(firstEvent).to.exist;
-                const secondEvent = await driver.findElementByText("second 6");
-                expect(secondEvent).to.exist;
-            }
+            const twelfthDay = await driver.findElementByText("12");
+            await twelfthDay.click();
+            const firstEvent = await driver.findElementByText("event 6");
+            expect(firstEvent).to.exist;
+            const secondEvent = await driver.findElementByText("second 6");
+            expect(secondEvent).to.exist;
         });
     });
     describe(programmaticControlText, () => {
         it("should open next month", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const programmaticControlButton = await driver.findElementByText(programmaticControlText);
             await programmaticControlButton.click();
             const programmaticControlTitle = await driver.findElementByText(programmaticControlText);
             expect(programmaticControlTitle).to.exist;
-            if (!isAndroid) {
-                const nextMonthButton = await driver.findElementByText("Next month");
-                await nextMonthButton.click();
-                const nextMonth = await driver.findElementByText(getNextMonthOfYear());
-                expect(nextMonth).to.exist;
-            }
+            const nextMonthButton = await driver.findElementByText("Next month");
+            await nextMonthButton.click();
+            const nextMonth = await driver.findElementByText(getNextMonthOfYear());
+            expect(nextMonth).to.exist;
         });
-        if (!isAndroid) {
-            it("should open previous month", async () => {
-                const previousMonthButton = await driver.findElementByText("Prev month");
-                await previousMonthButton.click();
-                const previousMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(previousMonth).to.exist;
-            });
-            it("should open today", async () => {
-                const previousMonthButton = await driver.findElementByText("Prev month");
-                await previousMonthButton.click();
-                const todayButton = await driver.findElementByText("Today");
-                await todayButton.click();
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-            });
-        }
+        it("should open previous month", async () => {
+            const previousMonthButton = await driver.findElementByText("Prev month");
+            await previousMonthButton.click();
+            const previousMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(previousMonth).to.exist;
+        });
+        it("should open today", async () => {
+            const previousMonthButton = await driver.findElementByText("Prev month");
+            await previousMonthButton.click();
+            const todayButton = await driver.findElementByText("Today");
+            await todayButton.click();
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+        });
     });
     describe(viewModesText, () => {
         it("should open week mode", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const viewModesButton = await driver.findElementByText(viewModesText);
             await viewModesButton.click();
-            if (!isAndroid) {
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-                const weekButton = await driver.findElementByText("Week");
-                await weekButton.click();
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-                const currentDay = await driver.findElementByText(getDate().toString());
-                expect(currentDay).to.exist;
-            } else {
-                const optionsButton = await driver.findElementByAccessibilityId(moreOptionsID);
-                await optionsButton.click();
-                const week = await driver.findElementByText("Week");
-                expect(week).to.exist;
-                const month = await driver.findElementByText("Month");
-                expect(month).to.exist;
-                const monthNames = await driver.findElementByText("Month names");
-                expect(monthNames).to.exist;
-                const year = await driver.findElementByText("Year");
-                expect(year).to.exist;
-                const day = await driver.findElementByText("Day");
-                expect(day).to.exist;
-                await day.click();
-            }
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
+            const weekButton = await driver.findElementByText("Week");
+            await weekButton.click();
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+            const currentDay = await driver.findElementByText(getDate().toString());
+            expect(currentDay).to.exist;
         });
-        if (!isAndroid) {
-            it("should open month names mode", async () => {
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-                const monthNamesButton = await driver.findElementByText("Month names");
-                await monthNamesButton.click();
-                const monday = await driver.findElementByTextIfExists("Mon");
-                expect(monday).to.not.exist;
-            });
-            it("should open year mode", async () => {
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-                const yearButton = await driver.findElementByText("Year");
-                await yearButton.click();
-                const monday = await driver.findElementByTextIfExists("Mon");
-                expect(monday).to.not.exist;
-                const currentYear = await driver.findElementByText(getYear().toString());
-                expect(currentYear).to.exist;
-            });
-            it("should open day mode", async () => {
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-                const dayButton = await driver.findElementByText("Day");
-                await dayButton.click();
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-                const currentDay = await driver.findElementByText(getDate().toString());
-                expect(currentDay).to.exist;
-                const monday = await driver.findElementByText("Mon");
-                expect(monday).to.exist;
-            });
-        }
+        it("should open month names mode", async () => {
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
+            const monthNamesButton = await driver.findElementByText("Month names");
+            await monthNamesButton.click();
+            const monday = await driver.findElementByTextIfExists("Mon");
+            expect(monday).to.not.exist;
+        });
+        it("should open year mode", async () => {
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
+            const yearButton = await driver.findElementByText("Year");
+            await yearButton.click();
+            const monday = await driver.findElementByTextIfExists("Mon");
+            expect(monday).to.not.exist;
+            const currentYear = await driver.findElementByText(getYear().toString());
+            expect(currentYear).to.exist;
+        });
+        it("should open day mode", async () => {
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
+            const dayButton = await driver.findElementByText("Day");
+            await dayButton.click();
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+            const currentDay = await driver.findElementByText(getDate().toString());
+            expect(currentDay).to.exist;
+            const monday = await driver.findElementByText("Mon");
+            expect(monday).to.exist;
+        });
     });
     describe(selectionModesText, () => {
         it("should open Selection modes view", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const selectionModesButton = await driver.findElementByText(selectionModesText);
             await selectionModesButton.click();
             const selectionModesTitle = await driver.findElementByText(selectionModesText);
             expect(selectionModesTitle).to.exist;
-            if (!isAndroid) {
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-            } else {
-                const optionsButton = await driver.findElementByAccessibilityId(moreOptionsID);
-                await optionsButton.click();
-            }
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
             const noneOption = await driver.findElementByText("None");
             expect(noneOption).to.exist;
             const singleOption = await driver.findElementByText("Single");
@@ -216,20 +180,15 @@ describe("Calendar", () => {
     });
     describe(transitionModesText, () => {
         it("should open Transition modes view", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const transitionModesButton = await driver.findElementByText(transitionModesText);
             await transitionModesButton.click();
             const transitionModesTitle = await driver.findElementByText(transitionModesText);
             expect(transitionModesTitle).to.exist;
-            if (!isAndroid) {
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-            } else {
-                const optionsButton = await driver.findElementByAccessibilityId(moreOptionsID);
-                await optionsButton.click();
-            }
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
             const noneOption = await driver.findElementByText("None");
             expect(noneOption).to.exist;
             const slideOption = await driver.findElementByText("Slide");
@@ -261,66 +220,49 @@ describe("Calendar", () => {
     });
     describe(stylingText, () => {
         it("should open Styling view", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
             const stylingButton = await driver.findElementByText(stylingText);
             await stylingButton.click();
             const stylingTitle = await driver.findElementByText(stylingTitleText);
             expect(stylingTitle).to.exist;
-            if (!isAndroid) {
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-            }
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
         });
     });
     describe(eventViewModesText, () => {
         it("should open a day with two events", async () => {
-            await driver.navBack();
-            if (isAndroid) {
-                const wd = driver.wd();
-                const action = new wd.TouchAction(driver.driver);
-                action.press({ x: 52, y: 499 })
-                    .moveTo({ x: -2, y: -294 })
-                    .release();
-                await action.perform();
-            }
+            await navigateBackToHome(driver);
+            await scrollToElement(driver, eventViewModesText);
             const eventViewModesButton = await driver.findElementByText(eventViewModesText);
             await eventViewModesButton.click();
             const eventViewModesTitle = await driver.findElementByText(eventViewModesText);
             expect(eventViewModesTitle).to.exist;
-            if (isAndroid) {
-                const optionsButton = await driver.findElementByAccessibilityId(moreOptionsID);
-                await optionsButton.click();
-            } else {
-                const optionsButton = await driver.findElementByText(optionsText);
-                await optionsButton.click();
-            }
+            const optionsButton = await getOptionsButton(driver);
+            await optionsButton.click();
             const inlineButton = await driver.findElementByText("Inline");
             await inlineButton.click();
-            if (!isAndroid) {
-                const twelfthDay = await driver.findElementByText("12");
-                await twelfthDay.click();
-                const firstEvent = await driver.findElementByText("event 6");
-                expect(firstEvent).to.exist;
-                const secondEvent = await driver.findElementByText("second 6");
-                expect(secondEvent).to.exist;
-            }
+            const twelfthDay = await driver.findElementByText("12");
+            await twelfthDay.click();
+            const firstEvent = await driver.findElementByText("event 6");
+            expect(firstEvent).to.exist;
+            const secondEvent = await driver.findElementByText("second 6");
+            expect(secondEvent).to.exist;
         });
     });
     describe(dayViewText, () => {
         it("should open day mode", async () => {
-            await driver.navBack();
+            await navigateBackToHome(driver);
+            await scrollToElement(driver, dayViewText);
             const dayViewButton = await driver.findElementByText(dayViewText);
             await dayViewButton.click();
             const dayViewTitle = await driver.findElementByText(dayViewText);
             expect(dayViewTitle).to.exist;
-            if (!isAndroid) {
-                const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
-                expect(currentMonth).to.exist;
-                const currentDay = await driver.findElementByText(getDate().toString());
-                expect(currentDay).to.exist;
-                const monday = await driver.findElementByText("Mon");
-                expect(monday).to.exist;
-            }
+            const currentMonth = await driver.findElementByText(getMonth() + " " + getYear());
+            expect(currentMonth).to.exist;
+            const currentDay = await driver.findElementByText(getDate().toString());
+            expect(currentDay).to.exist;
+            const monday = await driver.findElementByText("Mon");
+            expect(monday).to.exist;
             const note = await driver.findElementByText("Very important meeting");
             await note.click();
             const event = await driver.findElementByText("Event Selected");

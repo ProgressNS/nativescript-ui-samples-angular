@@ -1,4 +1,9 @@
-import { AppiumDriver } from "nativescript-dev-appium";
+import { AppiumDriver, SearchOptions, Direction, UIElement } from "nativescript-dev-appium";
+import { runType } from "nativescript-dev-appium/lib/parser";
+
+const isAndroid: boolean = runType.includes("android");
+const optionsText = "Options";
+const moreOptionsID = "More options";
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -61,4 +66,36 @@ export function getYear() {
 export function getDate() {
     const date = new Date();
     return date.getDate();
+}
+
+export async function scrollToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down) {
+    let listView;
+    if (isAndroid) {
+        listView = await driver.findElementByClassName("android.widget.FrameLayout");
+    }
+    else {
+        listView = await driver.findElementByClassName("XCUIElementTypeTable");
+    }
+    const listItem = await listView.scrollTo(
+        direction,
+        () => driver.findElementByText(element, SearchOptions.exact),
+        600
+    );
+    return listItem;
+}
+
+export async function navigateBackToHome(driver: AppiumDriver, view?: string) {
+    let location = view !== undefined ? view : "Calendar Angular";
+    let homeTitle = await driver.findElementByTextIfExists(location, SearchOptions.exact);
+    while (homeTitle === undefined) {
+        await driver.navBack();
+        await driver.wait(1000);
+        homeTitle = await driver.findElementByTextIfExists(location, SearchOptions.exact);
+    }
+}
+
+export function getOptionsButton(driver: AppiumDriver): Promise<UIElement> {
+    return isAndroid ?
+        driver.findElementByAccessibilityId(moreOptionsID) :
+        driver.findElementByText(optionsText);
 }
