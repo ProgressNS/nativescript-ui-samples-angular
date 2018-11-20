@@ -1,8 +1,7 @@
 import { AppiumDriver, createDriver, SearchOptions, Locator, Direction } from "nativescript-dev-appium";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { expect } from "chai";
-import { navigateBackToView, navigateBackToHome, clickBelowElement } from "./helper";
-import { ImageOptions } from "../node_modules/nativescript-dev-appium/lib/image-options";
+import { navigateBackToView, navigateBackToHome, clickBelowElement, scrollToElement } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -45,18 +44,23 @@ describe("Autocomplete", () => {
 
     describe(gettingStartedText, () => {
         it("should open Getting started", async () => {
-            const input = isAndroid ? "Bulgaria" : "Bulgaria "
             const gettingStartedButton = await driver.findElementByText(gettingStartedText);
             await gettingStartedButton.click();
+            await driver.wait(1000);
             const gettingStartedTitle = await driver.findElementByText(gettingStartedText);
             expect(gettingStartedTitle).to.exist;
+
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            await textField.sendKeys(input);
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-            }
+            await textField.sendKeys("Bul");
+            const suggestion = await driver.findElementByText("Bulgaria");
+            await suggestion.click();
             const record = await driver.findElementByText("Bulgaria");
             expect(record).to.exist;
+
+            const clearButton = await driver.findElementByClassName(driver.locators.getElementByName("button"));
+            await clearButton.click();
+            const record2 = await driver.findElementByTextIfExists("Bulgaria");
+            expect(record2).not.to.exist;
         });
     });
 
@@ -65,29 +69,19 @@ describe("Autocomplete", () => {
             await navigateBackToHome(driver);
             const completionModesButton = await driver.findElementByText(completionModesText);
             await completionModesButton.click();
+            await driver.wait(1000);
             const completionModesTitle = await driver.findElementByText(completionModesText);
             expect(completionModesTitle).to.exist;
+
             const containsButton = await driver.findElementByText("Contains");
             await containsButton.click();
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys("gar");
+            const hungaryItem = await driver.findElementByText("Hungary");
+            expect(hungaryItem).to.exist;
 
-            if (isAndroid) {
-                await driver.wait(pastePopUp);
-                try {
-                    await driver.driver.hideDeviceKeyboard();
-                } catch (error) {
-                }
-                const isTrue = await driver.compareScreen("completion-contains");
-                expect(isTrue).to.be.true;
-                await clickBelowElement(textField, driver);
-            } else {
-                const hungaryItem = await driver.findElementByText("Hungary");
-                expect(hungaryItem).to.exist;
-                const bulgariaItem = await driver.findElementByText("Bulgaria");
-                await bulgariaItem.click();
-            }
-
+            const bulgariaItem = await driver.findElementByText("Bulgaria");
+            await bulgariaItem.click();
             const bulgariaField = await driver.findElementByText("Bulgaria");
             expect(bulgariaField).to.exist;
         });
@@ -95,30 +89,14 @@ describe("Autocomplete", () => {
             await navigateBackToView(driver, completionModesText);
             const startsWithButton = await driver.findElementByText("Starts with");
             await startsWithButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys("Sl");
+            const slovakiaItem = await driver.findElementByText("Slovakia");
+            expect(slovakiaItem).to.exist;
 
-            if (isAndroid) {
-                await driver.wait(pastePopUp);
-                try {
-                    await driver.driver.hideDeviceKeyboard();
-                } catch (error) {
-                }
-                const returnButton = await driver.findElementByTextIfExists("return");
-                if (returnButton !== undefined) {
-                    await driver.driver.hideDeviceKeyboard("return");
-                    await driver.wait(1000);
-                }
-                const isTrue = await driver.compareScreen("completion-starts-with");
-                expect(isTrue).to.be.true;
-                await clickBelowElement(textField, driver);
-            } else {
-                const slovakiaItem = await driver.findElementByText("Slovakia");
-                expect(slovakiaItem).to.exist;
-                const sloveniaItem = await driver.findElementByText("Slovenia");
-                await sloveniaItem.click();
-            }
-
+            const sloveniaItem = await driver.findElementByText("Slovenia");
+            await sloveniaItem.click();
             const sloveniaField = await driver.findElementByText("Slovenia");
             expect(sloveniaField).to.exist;
         });
@@ -127,49 +105,33 @@ describe("Autocomplete", () => {
     describe(displayModesText, () => {
         it("should open Tokens view", async () => {
             await navigateBackToHome(driver);
-            const input = isAndroid ? "Bulgaria" : "Bulgaria "
             const displayModesButton = await driver.findElementByText(displayModesText);
             await displayModesButton.click();
+            await driver.wait(1000);
             const displayModesTitle = await driver.findElementByText(displayModesText);
             expect(displayModesTitle).to.exist;
+
             const tokensButton = await driver.findElementByText("Tokens");
             await tokensButton.click();
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            await textField.sendKeys(input);
-
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-            }
-
-            const bulgariaToken = await driver.findElementByText("Bulgaria");
-            expect(bulgariaToken).to.exist;
-
-            if (isAndroid) {
-                const crossButton = await driver.findElementByClassName(driver.locators.image);
-                expect(crossButton).to.exist;
-            } else {
-                const labels = await driver.findElementsByClassName(driver.locators.getElementByName("label"));
-                expect(labels.length).to.equal(4);
-            }
+            await textField.sendKeys("Bul");
+            const suggestion = await driver.findElementByText("Bulgaria");
+            await suggestion.click();
+            const record = await driver.findElementByText("Bulgaria");
+            expect(record).to.exist;
         });
 
         it("should open Plain view", async () => {
             await navigateBackToView(driver, displayModesText);
-            const input = isAndroid ? "Bulgaria" : "Bulgaria "
             const plainButton = await driver.findElementByText("Plain");
             await plainButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            await textField.sendKeys(input);
-            let labelsCount = 3;
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-                labelsCount = 2;
-            }
-
-            const bulgariaToken = await driver.findElementByText("Bulgaria");
-            expect(bulgariaToken).to.exist;
-            const labels = await driver.findElementsByClassName(driver.locators.getElementByName("label"));
-            expect(labels.length).to.equal(labelsCount);
+            await textField.sendKeys("Bul");
+            const suggestion = await driver.findElementByText("Bulgaria");
+            await suggestion.click();
+            const record = await driver.findElementByText("Bulgaria");
+            expect(record).to.exist;
         });
     });
 
@@ -178,87 +140,62 @@ describe("Autocomplete", () => {
             await navigateBackToHome(driver);
             const tokenLayoutsButton = await driver.findElementByText(tokenLayoutsText);
             await tokenLayoutsButton.click();
+            await driver.wait(1000);
             const tokenLayoutsTitle = await driver.findElementByText(tokenLayoutsText);
             expect(tokenLayoutsTitle).to.exist;
+
             const runtimeSwitchButton = await driver.findElementByText("Switch at runtime");
             await runtimeSwitchButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            if (isAndroid) {
-                const addNextTokenButton = await driver.findElementByText("ADD NEXT TOKEN");
-                for (let i = 0; i < 5; i++) {
-                    await addNextTokenButton.click();
-                }
-                await textField.click();
-            } else {
-                await textField.sendKeys("Australia ");
-                await textField.sendKeys("Finland ");
-                await textField.sendKeys("France ");
-                await textField.sendKeys("Germany ");
+            await textField.click();
+            const addNextTokenButton = await driver.findElementByText("Add next token");
+            for (let i = 0; i < 5; i++) {
+                await addNextTokenButton.click();
             }
-
             const australiaToken = await driver.findElementByText("Australia");
-            expect(await australiaToken.isDisplayed()).to.be.true;
+            expect((await australiaToken.location()).x).to.be.least(0);
+
             const horizontalButton = await driver.findElementByText("Horizontal");
             await horizontalButton.click();
             const australiaTokenHorizontal = await driver.findElementByTextIfExists("Australia");
-            if (isAndroid) {
-                expect(australiaTokenHorizontal).not.to.exist;
-            } else {
-                expect(await australiaTokenHorizontal.isDisplayed()).to.be.false;
-            }
+            expect((await australiaTokenHorizontal.location()).x).to.be.lessThan(0);
         });
 
         it("should open Horizontal view", async () => {
             await navigateBackToView(driver, tokenLayoutsText);
             const horizontalButton = await driver.findElementByText("Horizontal");
             await horizontalButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-
-            if (isAndroid) {
-                await textField.click();
-                const addNextTokenButton = await driver.findElementByText("ADD NEXT TOKEN");
-                for (let i = 0; i < 5; i++) {
-                    await addNextTokenButton.click();
-                }
-            } else {
-                await textField.sendKeys("Australia ");
-                await textField.sendKeys("Finland ");
-                await textField.sendKeys("France ");
-                await textField.sendKeys("Maldives ");
+            await textField.click();
+            const addNextTokenButton = await driver.findElementByText("Add next token");
+            for (let i = 0; i < 5; i++) {
+                await addNextTokenButton.click();
             }
-
             const maldivesToken = await driver.findElementByText("Maldives");
-            expect(await maldivesToken.isDisplayed()).to.be.true;
+            expect((await maldivesToken.location()).x).to.be.least(0);
+
             const australiaToken = await driver.findElementByTextIfExists("Australia");
-            if (isAndroid) {
-                expect(australiaToken).not.to.exist;
-            } else {
-                expect(await australiaToken.isDisplayed()).to.be.false;
-            }
+            expect((await australiaToken.location()).x).to.be.lessThan(0);
         });
 
         it("should open Wrap view", async () => {
             await navigateBackToView(driver, tokenLayoutsText);
             const horizontalButton = await driver.findElementByText("Wrap");
             await horizontalButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-
-            if (isAndroid) {
-                const addNextTokenButton = await driver.findElementByText("ADD NEXT TOKEN");
-                for (let i = 0; i < 5; i++) {
-                    await addNextTokenButton.click();
-                }
-            } else {
-                await textField.sendKeys("Australia ");
-                await textField.sendKeys("Finland ");
-                await textField.sendKeys("France ");
-                await textField.sendKeys("Maldives ");
+            await textField.click();
+            const addNextTokenButton = await driver.findElementByText("Add next token");
+            for (let i = 0; i < 5; i++) {
+                await addNextTokenButton.click();
             }
-
             const australiaToken = await driver.findElementByText("Australia");
-            expect(await australiaToken.isDisplayed()).to.be.true;
+            expect((await australiaToken.location()).x).to.be.least(0);
+
             const maldivesToken = await driver.findElementByText("Maldives");
-            expect(await maldivesToken.isDisplayed()).to.be.true;
+            expect((await maldivesToken.location()).x).to.be.least(0);
         });
     });
 
@@ -269,10 +206,12 @@ describe("Autocomplete", () => {
             await suggestModeButton.click();
             const suggestModeTitle = await driver.findElementByText(suggestModeText);
             expect(suggestModeTitle).to.exist;
+
             const appendButton = await driver.findElementByText("Append");
             await appendButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            await textField.sendKeys("B");
+            await textField.sendKeys("B ");
             const bulgaria = await driver.findElementByText("Bulgaria");
             expect(bulgaria).to.exist;
         });
@@ -280,132 +219,84 @@ describe("Autocomplete", () => {
             await navigateBackToView(driver, suggestModeText);
             const suggestButton = await driver.findElementByText("Suggest");
             await suggestButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys("B");
-            if (isAndroid) {
-                await driver.wait(pastePopUp);
-                try {
-                    await driver.driver.hideDeviceKeyboard();
-                } catch (error) {
-                }
-                const isTrue = await driver.compareScreen("suggest");
-                expect(isTrue).to.be.true;
+            const belgiumSuggestion = await driver.findElementByText("Belgium");
+            expect(belgiumSuggestion).to.exist;
 
-            } else {
-                const belgiumSuggestion = await driver.findElementByText("Belgium");
-                expect(belgiumSuggestion).to.exist;
-                const bulgariaSuggestion = await driver.findElementByText("Bulgaria");
-                expect(bulgariaSuggestion).to.exist;
-                await bulgariaSuggestion.click();
-            }
+            const bulgariaSuggestion = await driver.findElementByText("Bulgaria");
+            await bulgariaSuggestion.click();
+            const bulgaria = await driver.findElementByText("Bulgaria");
+            expect(bulgaria).to.exist;
         });
         it("should open 'Suggest and Append' view", async () => {
             await navigateBackToView(driver, suggestModeText);
             const suggestAndAppendButton = await driver.findElementByText("Suggest & Append");
             await suggestAndAppendButton.click();
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys("B");
-            if (isAndroid) {
-                await driver.wait(pastePopUp);
-                try {
-                    await driver.driver.hideDeviceKeyboard();
-                } catch (error) {
-                }
-                
-                const isTrue = await driver.compareScreen("suggest-append", 10, 500, ImageOptions.pixel);
-                expect(isTrue).to.be.true;
-            } else {
-                const bulgariaRecords = await driver.findElementsByText("Bulgaria");
-                expect(bulgariaRecords.length).to.equal(2);
-                await bulgariaRecords[1].click();
-            }
+            const bulgariaRecords = await driver.findElementsByText("Bulgaria");
+            expect(bulgariaRecords.length).to.equal(2);
+
+            await bulgariaRecords[1].click();
+            const bulgaria = await driver.findElementByText("Bulgaria");
+            expect(bulgaria).to.exist;
         });
     });
 
     describe(customizationText, () => {
         it("should open Customization view", async () => {
             await navigateBackToHome(driver);
-            const input = isAndroid ? "Belgium" : "Bulgaria"
             const customizationButton = await driver.findElementByText(customizationText);
             await customizationButton.click();
             const customizationTitle = await driver.findElementByText(customizationText);
             expect(customizationTitle).to.exist;
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            if (isAndroid) {
-                await textField.click();
-            }
-            await textField.sendKeys("B");
-            await driver.wait(pastePopUp);
+            await textField.sendKeys("Bul");
+            const suggestionImage = isAndroid ?
+                await driver.findElementByClassName("com.telerik.widget.autocomplete.SuggestionItemViewHolder") :
+                await driver.findElementByAccessibilityId("bulgaria");
+            const compareSuggestion = await driver.compareElement(suggestionImage, "customization-suggestion");
+            expect(compareSuggestion).to.be.true;
 
-            if (!isAndroid) {
-                const returnButton = await driver.findElementByTextIfExists("return");
-                if (returnButton !== undefined) {
-                    await driver.driver.hideDeviceKeyboard("return");
-                    await driver.wait(1000);
-                }
-            } else {
-                await driver.driver.hideDeviceKeyboard();
-                await driver.wait(500);
-            }
-
-            let isTrue = await driver.compareScreen("customization-suggestions");
-            expect(isTrue).to.be.true;
-
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-            } else {
-                await textField.sendKeys("ulgaria ");
-            }
-
-            const token = await driver.findElementByText(input);
-            expect(token).to.exist;
-
-            
-            const flagImage = await driver.findElementByClassName(driver.locators.image);
-            isTrue = await driver.compareElement(flagImage, "customization-token");
-            expect(isTrue).to.be.true;
+            const suggestionText = await driver.findElementByText("Bulgaria");
+            await suggestionText.click();
+            const autoCompleteClassName = isAndroid ? "com.telerik.widget.autocomplete.RadAutoCompleteTextView" : driver.locators.getElementByName("scrollview");
+            const autoComplete = await driver.findElementByClassName(autoCompleteClassName);
+            const compareToken = await driver.compareElement(autoComplete, "customization-tokens");
+            expect(compareToken).to.be.true;
         });
     });
 
     describe(eventsText, () => {
         it("should open Events view", async () => {
             await navigateBackToHome(driver);
-
-            let listView;
-            if (isAndroid) {
-                listView = await driver.findElementByClassName("android.widget.FrameLayout");
-            }
-            else {
-                listView = await driver.findElementByClassName("XCUIElementTypeTable");
-            }
-            const listItem = await listView.scrollTo(
-                Direction.down,
-                () => driver.findElementByText(preselectedItemsText, SearchOptions.exact),
-                1000
-            )
-
+            await scrollToElement(driver, preselectedItemsText);
             const eventsButton = await driver.findElementByText(eventsText);
             await eventsButton.click();
+            await driver.wait(1000);
             const eventsTitle = await driver.findElementByText(eventsText);
             expect(eventsTitle).to.exist;
+
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             await textField.sendKeys("B");
-
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-            } else {
-                const bulgariaSuggestion = await driver.findElementByText("Bulgaria");
-                await bulgariaSuggestion.click();
-            }
-
+            const bulgariaSuggestion = await driver.findElementByText("Bulgaria");
+            await bulgariaSuggestion.click();
             const bulgariaToken = await driver.findElementByText("Bulgaria", SearchOptions.exact);
             expect(bulgariaToken).to.exist;
+
             const event1 = await driver.findElementByText("Text Changed: B");
             expect(event1).to.exist;
+
             const event2 = await driver.findElementByText("2 Suggestions Visible - First is Bulgaria");
             expect(event2).to.exist;
+
             const event3 = await driver.findElementByText("DidAutoComplete with text: Bulgaria");
             expect(event3).to.exist;
+
             const event4 = await driver.findElementByText("Added Token: Bulgaria");
             expect(event4).to.exist;
         });
@@ -416,10 +307,11 @@ describe("Autocomplete", () => {
             await navigateBackToHome(driver);
             const asyncDataFetchButton = await driver.findElementByText(asyncDataFetchText);
             await asyncDataFetchButton.click();
+            await driver.wait(1000);
             const asyncDataFetchTitle = await driver.findElementByText(asyncDataFetchText);
             expect(asyncDataFetchTitle).to.exist;
-            const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
 
+            const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
             if (isAndroid) {
                 await textField.sendKeys("a");
                 // await clickBelowElement(textField, driver);
@@ -450,34 +342,22 @@ describe("Autocomplete", () => {
     describe(readOnlyText, () => {
         it("should open Read Only view", async () => {
             await navigateBackToHome(driver);
-            const input = isAndroid ? "Bulgaria" : "Bulgaria "
             const readOnlyButton = await driver.findElementByText(readOnlyText);
             await readOnlyButton.click();
             const readOnlyTitle = await driver.findElementByText(readOnlyText);
             expect(readOnlyTitle).to.exist;
+            await driver.wait(1000);
             const textField = await driver.findElementByClassName(driver.locators.getElementByName("textfield"));
-            await textField.sendKeys(input);
-
-            if (isAndroid) {
-                await clickBelowElement(textField, driver);
-            }
+            await textField.sendKeys("Bul");
+            const bulgariaSuggestion = await driver.findElementByText("Bulgaria");
+            await bulgariaSuggestion.click();
+            const isEnabled = await textField.getAttribute("enabled") === 'true';
+            expect(isEnabled).to.be.true;
 
             const setTrueButton = await driver.findElementByText("Set true");
             await setTrueButton.click();
-
-            if (isAndroid) {
-                let button;
-                await driver.wait(1000);
-                try {
-                    button = await driver.findElementByClassName(driver.locators.image);
-                } catch {
-                    button = undefined;
-                }
-                expect(button).not.to.exist;
-            } else {
-                const buttons = await driver.findElementsByClassName(driver.locators.button);
-                await buttons[3].click();
-            }
+            const isEnabledChanged = await textField.getAttribute("enabled") === 'true';
+            expect(isEnabledChanged).to.be.false;
 
             const bulgariaToken = await driver.findElementByText("Bulgaria");
             expect(bulgariaToken).to.exist;
@@ -487,18 +367,12 @@ describe("Autocomplete", () => {
     describe(hintText, () => {
         it("should open Hint view", async () => {
             await navigateBackToHome(driver);
-            // This scroll is buggy for android so I comment it for now
-            // const listview = await driver.findElementByClassName(driver.locators.getElementByName("listview"));
-            // const scroll = await listview.scrollTo(
-            //     Direction.down,
-            //     async () => {
-            //         await driver.findElementByText(hintText, SearchOptions.exact);
-            //     })
-
             const hintButton = await driver.findElementByText(hintText, SearchOptions.exact);
             await hintButton.click();
+            await driver.wait(1000);
             const hintTitle = await driver.findElementByText(hintText);
             expect(hintTitle).to.exist;
+
             const textFieldHint = await driver.findElementByText("select country");
             expect(textFieldHint).to.exist;
         });
@@ -509,12 +383,16 @@ describe("Autocomplete", () => {
             await navigateBackToHome(driver);
             const preselectedItemsButton = await driver.findElementByText(preselectedItemsText);
             await preselectedItemsButton.click();
+            await driver.wait(1000);
             const preselectedItemsTitle = await driver.findElementByText(preselectedItemsText);
             expect(preselectedItemsTitle).to.exist;
+
             const australia = await driver.findElementByText("Australia");
             expect(australia).to.exist;
+
             const austria = await driver.findElementByText("Austria");
             expect(austria).to.exist;
+
             const addNextTokenButton = await driver.findElementByText("Add next token");
             await addNextTokenButton.click();
             const argentina = await driver.findElementByText("Argentina");
