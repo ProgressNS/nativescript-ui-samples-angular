@@ -1,9 +1,6 @@
 // >> sidedrawer-getting-started-angular
 import { Component, ViewChild, OnInit, AfterViewInit, ChangeDetectorRef } from "@angular/core";
-import { Page } from "ui/page";
-import { ActionItem } from "ui/action-bar";
-import { Observable } from "data/observable";
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-ui-sidedrawer/angular";
+import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Component({

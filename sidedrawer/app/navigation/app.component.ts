@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { RouterExtensions } from "nativescript-angular/router";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { ExampleItem } from "./exampleItem";
 import { ExampleItemService } from "./exampleItemService.service";
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { View } from "tns-core-modules/ui/frame";
 
 @Component({
   moduleId: module.id,
@@ -33,11 +33,27 @@ export class AppComponent implements OnInit {
     const itemIndex = args.index;
     const tappedItem = this._currentExample.subItems[itemIndex];
     const sideDrawer = <RadSideDrawer>app.getRootView();
+
+    if (args.object.id === "root-drawer-list") {
+      // deselect all items
+      args.object.eachChildView(childView => {
+        this._toggleItemSelected(childView.getViewById("item-container"), false);
+      });
+
+      // select tapped item
+      this._toggleItemSelected(args.view.getViewById("item-container"), true);
+    }
+
     sideDrawer.closeDrawer();
     if (tappedItem.subItems.length === 0) {
       this._router.navigateByUrl(tappedItem.path);
     } else {
       this._router.navigate(['/examples-depth-2', this._currentExample.title, tappedItem.title]);
     }
+  }
+
+  private _toggleItemSelected(view: View, isSelected: boolean): any {
+    // using css styles from theme
+    view.className = isSelected ? "sidedrawer-list-item active" : "sidedrawer-list-item";
   }
 }

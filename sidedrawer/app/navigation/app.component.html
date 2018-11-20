@@ -3,11 +3,11 @@
         <StackLayout>
             <Label [text]="currentExample.title" class="h1 text-center"></Label>
         </StackLayout>
-        <ListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" class="root-drawer-content">
+        <ListView id="root-drawer-list" row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" class="root-drawer-content">
             <ng-template let-item="item">
-                <StackLayout class="root-item-stack-layout">
-                    <Label [text]="item.title" textWrap="true" class="btn btn-primary btn-active"></Label>
-                    <StackLayout height="1" class="root-drawer-content"></StackLayout>
+                <StackLayout id="item-container" class="root-item-stack-layout sidedrawer-list-item">
+                    <Label [text]="item.title" textWrap="true"></Label>
+                    <!-- <StackLayout height="1" class="root-drawer-content"></StackLayout> -->
                 </StackLayout>
             </ng-template>
         </ListView>
