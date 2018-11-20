@@ -33,9 +33,11 @@
     "android23": {
         "platformName": "Android",
         "platformVersion": "6.0",
-        "deviceName": "Android Emulator",
-        "appium-version": "1.7.1",
-        "noReset": true
+        "deviceName": "Emulator-Api23-Google",
+        "appium-version": "1.9.1",
+        "noReset": true,
+        "density": 3.2,
+        "offsetPixels": 51
     },
     "android24": {
         "platformName": "Android",
@@ -43,12 +45,13 @@
         "deviceName": "Emulator-Api24-Google",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appiumVersion": "1.8.1",
+        "appiumVersion": "1.9.1",
         "noReset": true,
         "fullReset": false,
         "app": "",
         "density": 3.2,
-        "offsetPixels": 51
+        "offsetPixels": 51,
+        "automationName": "Appium"
     },
     "android24.sauce": {
         "platformName": "Android",
@@ -59,7 +62,7 @@
         "appiumVersion": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "app": "",
+        "app": "sauce-storage:autocomplete-ng-android-release.apk",
         "density": 3.2,
         "offsetPixels": 51,
         "automationName": "Appium"
@@ -109,6 +112,17 @@
         "deviceName": "iPhone X",
         "noReset": true,
         "fullReset": false,
+        "app": "sauce-storage:autocomplete-ng-ios.zip",
+        "density": 3,
+        "offsetPixels": 87,
+        "automationName": "Appium"
+    },
+    "sim.iPhoneX.ios12": {
+        "platformName": "iOS",
+        "platformVersion": "12.0",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
         "app": "",
         "density": 3,
         "offsetPixels": 87,
@@ -131,5 +145,61 @@
         "noReset": true,
         "fullReset": false,
         "app": ""
+    },
+    "sim.iPhoneX.ios11.aws": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "appium-version": "1.9.1",
+        "density": 3,
+        "offsetPixels": 87,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/autocomplete-ng-ios.zip",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "sim.iPhoneX.ios12.aws": {
+        "platformName": "iOS",
+        "platformVersion": "12.0",
+        "deviceName": "iPhone X",
+        "appium-version": "1.9.1",
+        "density": 3,
+        "offsetPixels": 87,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/autocomplete-ng-ios.zip",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android24.aws": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.9.1",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/autocomplete-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android23.aws": {
+        "platformName": "Android",
+        "platformVersion": "6.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.9.1",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/autocomplete-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
     }
 }
