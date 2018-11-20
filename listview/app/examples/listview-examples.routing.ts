@@ -45,6 +45,7 @@ import { ListViewDataOperationsMultipleWithSwipeComponent } from './multiple-ope
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
 import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-data.component';
 import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
+import { ListViewGroupSwipeLoadPullComponent } from './group-swipe-load-pull/listview-group-swipe-load-pull.component';
 
 export const routes: Routes = [
   { path: 'ListViewGettingStartedComponent', component: ListViewGettingStartedComponent },
@@ -90,5 +91,6 @@ export const routes: Routes = [
   { path: 'ListViewDataOperationsMultipleWithSwipeComponent', component: ListViewDataOperationsMultipleWithSwipeComponent },
   { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent },
   { path: 'ListViewWithBigDataComponent', component: ListViewWithBigDataComponent },
-  { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent }
+  { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent },
+  { path: 'ListViewGroupSwipeLoadPullComponent', component: ListViewGroupSwipeLoadPullComponent }
 ];

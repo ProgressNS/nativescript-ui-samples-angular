@@ -318,6 +318,13 @@ let APP_ROUTES: Routes = [
         data: {
             "title": "Horizontal with Variable item's width"
         }
+    },
+    {
+        path: "ListViewGroupSwipeLoadPullComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Group, Swipe, Load and Pull"
+        }
     }
 ];
 

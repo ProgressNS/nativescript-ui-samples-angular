@@ -412,4 +412,15 @@ describe("ListView3", () => {
 
     });
 
+    const horizontalWithVariableText = "Horizontal with Variable item's width";
+    describe(horizontalWithVariableText, () => {
+        it("Navigate to scroll events", async () => {
+            await navigateBackToHome(driver);
+            const listItem = await scrollToElement(driver, "Horizontal with Variable");
+            await listItem.click();
+            const result = await driver.compareScreen("horizontalVariable");
+            expect(result).to.equal(true);
+        });
+    });
+
 });

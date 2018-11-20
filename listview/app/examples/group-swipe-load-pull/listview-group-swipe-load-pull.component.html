@@ -1,0 +1,26 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="blogPosts" #myListView
+        [groupingFunction]="groupByDay"
+        pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)"
+        loadOnDemandMode="Manual" (loadMoreDataRequested)="onLoadMoreDataRequested($event)" 
+        selectionBehavior="None" swipeActions="true"
+        (itemSwipeProgressStarted)="onItemSwipeProgressStarted($event)" 
+        (itemSwipeProgressChanged)="onItemSwipeProgressChanged($event)" 
+        (itemSwipeProgressEnded)="onItemSwipeProgressEnded($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout padding="16" orientation="vertical" background="#F0F6FF">
+                <Label fontSize="24" [text]="item.title" textWrap="true" color="#0A255A"></Label>
+                <Label padding="8,0" [text]="item.content" textWrap="true" color="#B3B6C8"></Label>
+                <Label [text]="item.publishText" color="#3D57FE"></Label>
+            </StackLayout>
+        </ng-template>
+        <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto">
+            <GridLayout id="comment-view" col="0" background="#2340CB" (tap)="onLeftSwipeClick($event)">
+               <Label text="comment" padding="12" color="white" verticalAlignment="center"></Label>
+           </GridLayout>
+           <GridLayout id="delete-view" col="2" background="#2340CB" (tap)="onRightSwipeClick($event)">
+               <Label text="delete" padding="12" color="white" verticalAlignment="center"></Label>
+           </GridLayout>
+       </GridLayout>
+    </RadListView>
+</GridLayout>

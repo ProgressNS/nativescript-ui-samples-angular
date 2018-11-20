@@ -275,6 +275,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 "path": "ListviewHorizontalWithVariableItemWidthComponent/ListviewHorizontalWithVariableItemWidthComponent",
                 "subItems": []
             },
+            {
+                "title": "Group, Swipe, Load and Pull",
+                "path": "ListViewGroupSwipeLoadPullComponent/ListViewGroupSwipeLoadPullComponent",
+                "subItems": []
+            }
         ]
     }
 ];
