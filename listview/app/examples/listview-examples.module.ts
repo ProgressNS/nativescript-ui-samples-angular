@@ -49,6 +49,7 @@ import { ListViewDataOperationsMultipleWithSwipeComponent } from './multiple-ope
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
 import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-data.component';
 import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
+import { ListViewGroupSwipeLoadPullComponent } from './group-swipe-load-pull/listview-group-swipe-load-pull.component';
 
 import { routes } from './listview-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -107,7 +108,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewDataOperationsSortingComponent,
         ListViewWithBigDataComponent,
         ListviewHorizontalWithVariableItemWidthComponent,
-        ListViewDataOperationsMultipleWithSwipeComponent
+        ListViewDataOperationsMultipleWithSwipeComponent,
+        ListViewGroupSwipeLoadPullComponent
     ]
 })
 export class ListViewExamplesModule { }

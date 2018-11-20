@@ -107,6 +107,41 @@ describe("ListView4", () => {
                 expect(newItem).to.exist;
             });
         });
+
+        const smallSrc = "With small source and pull to refresh";
+        describe(smallSrc, () => {
+            const loadButton = isAndroid ? "Load more" : "Load more items";
+            it("Navigate to example", async () => {
+                await navigateBackToView(driver, loadOnDemand);
+                const smallSrcButton = await driver.findElementByText(smallSrc, SearchOptions.exact);
+                expect(smallSrcButton).to.exist;
+                await smallSrcButton.click();
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                expect(item).to.exist;
+
+            });
+
+            it("Load more should disappear if no more items", async () => {
+                let loadMoreButton = await driver.findElementByText(loadButton, SearchOptions.exact);
+                await loadMoreButton.click();
+                loadMoreButton = await driver.findElementByTextIfExists(loadButton, SearchOptions.exact);
+                expect(loadMoreButton).to.be.undefined;
+            });
+
+            it("Pull the listView down to refresh items", async () => {
+                const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
+                await item.scroll(Direction.up, 600);
+                const itemNew = await driver.findElementByText("Sherman Martin", SearchOptions.exact);
+                expect(itemNew).to.exist;
+            });
+
+            it("Load more should appear and load more items", async () => {
+                const loadMoreButton = await driver.findElementByText(loadButton, SearchOptions.exact);
+                await loadMoreButton.click();
+                const itemNew = await driver.findElementByText("Joel Robertson", SearchOptions.exact);
+                expect(itemNew).to.exist;
+            });
+        });
     });
 
     const observableArrayText = "Observable Array";

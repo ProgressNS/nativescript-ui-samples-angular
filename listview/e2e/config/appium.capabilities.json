@@ -2,7 +2,7 @@
     "android23": {
         "platformName": "Android",
         "platformVersion": "6.0",
-        "deviceName": "Android",
+        "deviceName": "Emulator-Api23-Google",
         "lt": 60000,
         "appActivity": "com.tns.NativeScriptActivity",
         "newCommandTimeout": 720,
@@ -22,7 +22,9 @@
         "noReset": true,
         "fullReset": false,
         "app": "",
-        "automationName": "Appium"
+        "automationName": "Appium",
+        "density": 3.2,
+        "offsetPixels": 51
     },
     "android24.sauce": {
         "platformName": "Android",
@@ -92,6 +94,17 @@
         "idleTimeout": 120,
         "automationName": "Appium"
     },
+    "sim.iPhoneX.ios12": {
+        "platformName": "iOS",
+        "platformVersion": "12.0",
+        "deviceName": "iPhone X",
+        "appium-version": "1.9.0",
+        "noReset": true,
+        "fullReset": false,
+        "app": "",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
     "sim.iPhoneX.ios11.aws": {
         "platformName": "iOS",
         "platformVersion": "11.2",
@@ -99,7 +112,7 @@
         "appium-version": "1.8.1",
         "noReset": true,
         "fullReset": false,
-        "app": "https://s3.amazonaws.com/ns-pro-ui/listview-ng-ios.zip",
+        "app": "https://s3.amazonaws.com/pro-ui-apps/listview-ng-ios.zip",
         "idleTimeout": 120,
         "automationName": "Appium"
     },
@@ -109,10 +122,36 @@
         "deviceName": "Android GoogleAPI Emulator",
         "lt": 60000,
         "newCommandTimeout": 720,
-        "appium-version": "1.8.1",
+        "appium-version": "1.9.1",
         "noReset": true,
         "fullReset": false,
-        "app": "https://s3.amazonaws.com/ns-pro-ui/listview-ng-android-release.apk",
+        "app": "https://s3.amazonaws.com/pro-ui-apps/listview-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android23.aws": {
+        "platformName": "Android",
+        "platformVersion": "6.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.9.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/listview-ng-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "sim.iPhoneX.ios12.aws": {
+        "platformName": "iOS",
+        "platformVersion": "12.0",
+        "deviceName": "iPhone X",
+        "appium-version": "1.9.1",
+        "noReset": true,
+        "fullReset": false,
+        "density": 3,
+        "offsetPixels": 87,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/listview-ng-ios.zip",
         "idleTimeout": 120,
         "automationName": "Appium"
     }

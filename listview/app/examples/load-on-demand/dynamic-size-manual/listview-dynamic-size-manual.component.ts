@@ -45,7 +45,7 @@ export class ListViewDynamicSizeManualComponent implements OnInit {
             setTimeout(function () {
                 that.get().addMoreItemsFromSource(2);
                 listView.notifyLoadOnDemandFinished();
-            }, 1000);
+            }, 1500);
             args.returnValue = true;
         } else {
             args.returnValue = false;
