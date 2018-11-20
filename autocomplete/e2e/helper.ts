@@ -1,5 +1,7 @@
-import { AppiumDriver, SearchOptions, UIElement } from "nativescript-dev-appium";
+import { AppiumDriver, SearchOptions, UIElement, Direction } from "nativescript-dev-appium";
+import { runType } from "nativescript-dev-appium/lib/parser";
 
+const isAndroid: boolean = runType.includes("android");
 
 export async function navigateBackToHome(driver: AppiumDriver, view?: string) {
     let location = view !== undefined ? view : "AutoComplete Angular";
@@ -25,4 +27,20 @@ export async function clickBelowElement(element: UIElement, driver: AppiumDriver
 export async function inputRecord(autocompleteField: UIElement, record: string, driver) {
     await autocompleteField.sendKeys(record);
     await clickBelowElement(autocompleteField, driver);
+}
+
+export async function scrollToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down) {
+    let listView;
+    if (isAndroid) {
+        listView = await driver.findElementByClassName("android.widget.FrameLayout");
+    }
+    else {
+        listView = await driver.findElementByClassName("XCUIElementTypeTable");
+    }
+    const listItem = await listView.scrollTo(
+        direction,
+        () => driver.findElementByText(element, SearchOptions.exact),
+        600
+    );
+    return listItem;
 }

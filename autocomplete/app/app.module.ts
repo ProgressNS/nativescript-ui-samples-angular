@@ -3,22 +3,16 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { routing } from "./app.routing";
 import { AppComponent } from "./navigation/app.component";
 
-import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
-import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-ui-autocomplete/angular";
-import { NativeScriptRouterModule, NSModuleFactoryLoader } from "nativescript-angular/router";
+import { NativeScriptRouterModule} from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { OptionsService } from "./navigation/options/options.service";
 import { ExampleItemService } from "./navigation/exampleItemService.service";
 import { ExamplesListDepthComponents } from "./navigation/examples-list/examples-list.component";
 import { OptionsComponent } from "./navigation/options/options.component";
-import { COMMON_DIRECTIVES } from './navigation/directives';
 import { CommonDirectivesModule } from './navigation/directives/common-directives.module';
-
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
 // import { NativeScriptHttpModule } from "nativescript-angular/http";
@@ -47,8 +41,7 @@ import { CommonDirectivesModule } from './navigation/directives/common-directive
     ],
     providers: [
         OptionsService,
-        ExampleItemService,
-        { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader }
+        ExampleItemService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -1,12 +1,12 @@
 <StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
     <Label text="Select countries:"></Label>
-    <RadAutoCompleteTextView [items]="dataItems" noResultsText="Nothing found!" suggestMode="Suggest" displayMode="Tokens" closeButtonImageSrc="res://clear">
+    <RadAutoCompleteTextView [items]="dataItems" noResultsText="Nothing found!" suggestMode="Suggest" displayMode="Tokens">
         <SuggestionView tkAutoCompleteSuggestionView suggestionViewHeight="300">
             <ng-template tkSuggestionItemTemplate let-item="item">
-                <StackLayout orientation="horizontal" padding="5">
+                <GridLayout columns="auto, *" padding="5">
                     <Image [src]="item.image" width="50"></Image>
-                    <Label [text]="item.text" marginLeft="5" android:marginTop="15"></Label>
-                </StackLayout>
+                    <Label [text]="item.text" marginLeft="5" android:marginTop="15" col="2"></Label>
+                </GridLayout>
             </ng-template>
         </SuggestionView>
     </RadAutoCompleteTextView>
