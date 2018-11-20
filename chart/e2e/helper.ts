@@ -18,18 +18,18 @@ export async function navigateToView(driver: AppiumDriver, view: string) {
     await navigateToHome(driver, view);
 }
 
-export async function scrollToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down){
+export async function scrollToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down) {
     let listView;
-    if(isAndroid){
+    if (isAndroid) {
         listView = await driver.findElementByClassName("android.widget.FrameLayout");
     }
-    else{
+    else {
         listView = await driver.findElementByClassName("XCUIElementTypeTable");
     }
     const listItem = await listView.scrollTo(
         direction,
         () => driver.findElementByText(element, SearchOptions.exact),
         600
-    )
+    );
     return listItem;
 }
