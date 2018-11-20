@@ -1,0 +1,40 @@
+{
+    "propertyAnnotations":
+    [
+      {
+        "name": "city",
+        "index": 3,
+        "groupName": "Address",
+        "editor": "Picker",
+        "valuesProvider": ["New York", "Washington", "Los Angeles"]
+      },
+      {
+        "name": "street",
+        "index": 4,
+        "groupName": "Address"
+      },
+      {
+        "name": "streetNumber",
+        "index": 5,
+        "editor": "Number",
+        "groupName": "Address"
+      },
+      {
+        "name": "age",
+        "index": 1,
+        "editor": "Number",
+        "groupName": "Main Info"
+      },
+      {
+        "name": "email",
+        "index": 2,
+        "editor": "Email",
+        "groupName": "Main Info"
+      },
+      {
+        "name": "name",
+        "index": 0,
+        "groupName": "Main Info"
+      }
+    ]
+  }

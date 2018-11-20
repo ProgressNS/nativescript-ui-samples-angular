@@ -1,0 +1,4 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *" orientation="vertical">
+    <Button [text]="btnText" horizontalAlignment="stretch" (tap)="onTap($event)" ></Button>
+    <RadDataForm row="1" [source]="person" [metadata]="personMetadata" (groupUpdate)="onGroupUpdate($event)"></RadDataForm>
+</GridLayout>

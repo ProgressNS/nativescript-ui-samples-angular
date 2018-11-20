@@ -15,6 +15,7 @@ import { DataFormEventsComponent } from './events/dataform-events.component';
 import { DataFormGettingStartedComponent } from './getting-started/dataform-getting-started.component';
 import { DataformGettingStartedJsonComponent } from './getting-started-json/dataform-getting-started-json.component';
 import { DataFormGroupsComponent } from './groups/dataform-groups.component';
+import { DataFormGroupsJsonComponent } from './groups-json/dataform-groups-json.component';
 import { DataformImageLabelsComponent } from './image-labels/dataform-image-labels.component';
 import { DataformGridLayoutComponent } from './layouts/dataform-grid-layout.component';
 import { DataformStackLayoutComponent } from './layouts/dataform-stack-layout.component';
@@ -63,6 +64,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         DataFormGettingStartedComponent,
         DataformGettingStartedJsonComponent,
         DataFormGroupsComponent,
+        DataFormGroupsJsonComponent,
         DataformImageLabelsComponent,
         DataformGridLayoutComponent,
         DataformStackLayoutComponent,

@@ -226,7 +226,7 @@ describe("DataForm", () => {
             if (isAndroid) {
                 date = await driver.findElementByText("Wed, 06.04", SearchOptions.exact);
                 await date.click();
-                if (runType.includes("android27")) {
+                if (runType.includes("android27") || runType.includes("android23")) {
                     month = await driver.findElementByText("Apr", SearchOptions.exact);
                     day = await driver.findElementByText("06", SearchOptions.exact);
                 }
@@ -246,8 +246,13 @@ describe("DataForm", () => {
             expect(month).to.exist;
 
             if (isAndroid) {
-                const seven = await driver.findElementByText("7", SearchOptions.exact);
-                await seven.click();
+                if (runType.includes("android23")) {
+                    const seven = await driver.findElementByText("07", SearchOptions.exact);
+                    await seven.click();
+                } else {
+                    const seven = await driver.findElementByText("7", SearchOptions.exact);
+                    await seven.click();
+                }
                 const ok = await driver.findElementByText("OK", SearchOptions.exact);
                 await ok.click();
             } else {

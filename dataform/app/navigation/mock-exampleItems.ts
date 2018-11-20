@@ -108,6 +108,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": []
             },
             {
+                "title": "Groups JSON",
+                "path": "DataFormGroupsJsonComponent/DataFormGroupsJsonComponent",
+                "subItems": []
+            },
+            {
                 "title": "Events",
                 "path": "DataFormEventsComponent/DataFormEventsComponent",
                 "subItems": []

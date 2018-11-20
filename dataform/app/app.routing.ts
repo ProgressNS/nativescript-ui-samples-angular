@@ -62,6 +62,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "DataFormGroupsJsonComponent",
+        loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
+        data: {
+            "title": "Groups JSON"
+        }
+    },
+    {
         path: "DataFormPlatformSpecificsComponent",
         loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
         data: {
