@@ -1,7 +1,4 @@
 import { Component, ElementRef, ViewChild, Injectable, AfterViewInit, OnInit, ChangeDetectorRef } from "@angular/core";
-import { View } from "tns-core-modules/ui/core/view";
-import { Page } from "ui/page";
-import { ActionItem } from "ui/action-bar";
 import { DrawerTransitionBase, PushTransition, RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-ui-sidedrawer';
 import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 
