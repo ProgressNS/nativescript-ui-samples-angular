@@ -1,0 +1,32 @@
+.itemTemplateStackLayout {
+    padding: 5 10 5 10;
+    background-color: #7fff7f;
+}
+
+.innerOtemTemplateStackLayout {
+    padding: 10;
+    background-color: #65a565;
+}
+
+.labelsStackLayout {
+    margin-left: 15;
+}
+
+.labelName {
+    font-size: 20;
+    margin-bottom: 8;
+}
+
+.labelTitle {
+    font-size: 14;
+    font-weight: bold;
+}
+
+.labelText {
+    font-size: 12;
+    color: white;
+}
+
+.listView {
+    background-color: blue;
+}

@@ -138,6 +138,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewPullToRefreshCustomizeComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Customize"
+        }
+    },
+    {
         path: "ListViewItemLayoutsGridComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {

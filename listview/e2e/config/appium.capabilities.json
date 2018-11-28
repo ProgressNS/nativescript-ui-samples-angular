@@ -96,11 +96,13 @@
     },
     "sim.iPhoneX.ios12": {
         "platformName": "iOS",
-        "platformVersion": "12.0",
+        "platformVersion": "12.1",
         "deviceName": "iPhone X",
         "appium-version": "1.9.0",
         "noReset": true,
         "fullReset": false,
+        "density": 3,
+        "offsetPixels": 87,
         "app": "",
         "idleTimeout": 120,
         "automationName": "Appium"

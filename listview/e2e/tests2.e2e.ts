@@ -1,7 +1,7 @@
-import { AppiumDriver, createDriver, SearchOptions } from "nativescript-dev-appium";
+import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescript-dev-appium";
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
-import { navigateBackToHome, scrollToElement, navigateBackToView } from "./helper";
+import { navigateBackToHome, scrollToElement, navigateBackToView, swipe } from "./helper";
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
@@ -197,7 +197,6 @@ describe("ListView2", () => {
     describe(selectionStatesText, () => {
         it("Navigate to selection states example", async () => {
             await navigateBackToHome(driver);
-            await scrollToElement(driver, selectionStatesText);
             const listItem = await scrollToElement(driver, selectionStatesText);
             expect(listItem).to.exist;
             await listItem.click();
@@ -215,6 +214,49 @@ describe("ListView2", () => {
             expect(selected).to.exist;
             const selection = await driver.compareElement(selected, "selectedState");
             expect(selection).to.equal(true);
+        });
+    });
+
+    const allInOne = "Group, Swipe, Load and Pull";
+    describe(allInOne, () => {
+        it("Navigate to comlplex example", async () => {
+            await navigateBackToHome(driver);
+            const listItem = await scrollToElement(driver, allInOne);
+            expect(listItem).to.exist;
+            await listItem.click();
+
+            const item0 = await driver.findElementByText("Today", SearchOptions.exact);
+            expect(item0).to.exist;
+        });
+
+        it("Pull to refresh", async () => {
+            await driver.wait(2000);
+            const item = await driver.findElementByText("NativeScript First-Time", SearchOptions.contains);
+            await item.scroll(Direction.up, 600);
+            const itemNew = await driver.findElementByText("Simple Dialog", SearchOptions.contains);
+            expect(itemNew).to.exist;
+        });
+
+        it("Delete item", async () => {
+            let item = await driver.findElementByText("NativeScript First-Time", SearchOptions.contains);
+            await swipe(driver, item, Direction.left);
+            if (isAndroid) {
+                const deleteButtons = await driver.findElementsByText("delete", SearchOptions.exact);
+                await deleteButtons[2].click();
+            } else {
+                const deleteButton = await driver.findElementByText("delete", SearchOptions.exact);
+                await deleteButton.click();
+            }
+            item = await driver.findElementByTextIfExists("NativeScript First-Time", SearchOptions.contains);
+            expect(item).to.be.undefined;
+        });
+
+        it("Load more items", async () => {
+            const loadMore = "Load more";
+            const listItem = await scrollToElement(driver, loadMore);
+            await listItem.click();
+            const itemNew = await scrollToElement(driver, "Renderless");
+            expect(itemNew).to.exist;
         });
     });
 });

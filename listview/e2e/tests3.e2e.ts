@@ -36,6 +36,8 @@ describe("ListView3", () => {
             await navigateBackToHome(driver);
             const listItem = await scrollToElement(driver, pullToRefreshText);
             await listItem.click();
+            const pullToRefreshGettingStarted = await driver.findElementByText("Getting Started", SearchOptions.exact);
+            await pullToRefreshGettingStarted.click();
             const item = await driver.findElementByText("Joyce Dean", SearchOptions.exact);
             expect(item).to.exist;
         });
