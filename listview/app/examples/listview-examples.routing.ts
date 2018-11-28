@@ -26,7 +26,8 @@ import { ListViewFixedSizeAutoWithSmallSourceComponent } from './load-on-demand/
 import { ListViewFixedSizeManualComponent } from './load-on-demand/fixed-size-manual/listview-fixed-size-manual.component';
 import { ListViewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
 import { ListViewObservableArrayComponent } from './observable-array/listview-observable-array.component';
-import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-to-refresh.component';
+import { ListViewPullToRefreshComponent } from './pull-to-refresh/getting-started/listview-pull-to-refresh.component';
+import { ListViewPullToRefreshCustomizeComponent } from './pull-to-refresh/customize/listview-pull-to-refresh-customize.component';
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
 import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
 import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
@@ -74,6 +75,7 @@ export const routes: Routes = [
   { path: 'ListViewMultipleTemplatesComponent', component: ListViewMultipleTemplatesComponent },
   { path: 'ListViewObservableArrayComponent', component: ListViewObservableArrayComponent },
   { path: 'ListViewPullToRefreshComponent', component: ListViewPullToRefreshComponent },
+  { path: 'ListViewPullToRefreshCustomizeComponent', component: ListViewPullToRefreshCustomizeComponent },
   { path: 'ListViewScrollEventsComponent', component: ListViewScrollEventsComponent },
   { path: 'ListViewScrollToIndexHorizontalComponent', component: ListViewScrollToIndexHorizontalComponent },
   { path: 'ListViewScrollToIndexVerticalComponent', component: ListViewScrollToIndexVerticalComponent },
@@ -92,5 +94,5 @@ export const routes: Routes = [
   { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent },
   { path: 'ListViewWithBigDataComponent', component: ListViewWithBigDataComponent },
   { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent },
-  { path: 'ListViewGroupSwipeLoadPullComponent', component: ListViewGroupSwipeLoadPullComponent }
+  { path: 'ListViewGroupSwipeLoadPullComponent', component: ListViewGroupSwipeLoadPullComponent },
 ];

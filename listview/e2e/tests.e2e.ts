@@ -82,9 +82,9 @@ describe("ListView1", () => {
         it("Scroll to Item 5", async () => {
             let direction = Direction.left;
             let item = "Item 5";
-            if(isAndroid){
+            if (isAndroid) {
                 direction = Direction.right;
-                item = "Item 9"
+                item = "Item 9";
             }
             const expectedItem = await swipeToElement(driver, item, direction);
             expect(expectedItem).to.exist;

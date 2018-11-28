@@ -41,7 +41,7 @@ export async function swipeToElement(driver: AppiumDriver, element: string, dire
     else {
         listView = await driver.findElementByClassName("XCUIElementTypeCollectionView");
     }
-    
+
     let item = await driver.findElementByTextIfExists(element, SearchOptions.exact);
     while (item === undefined) {
         await listView.swipe(direction);

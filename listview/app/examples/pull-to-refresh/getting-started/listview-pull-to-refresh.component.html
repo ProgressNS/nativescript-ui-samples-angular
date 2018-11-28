@@ -1,6 +1,6 @@
 <GridLayout orientation="vertical" tkExampleTitle tkToggleNavButton>
      <!-- >> angular-listview-pull-to-refresh -->
-    <RadListView [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+    <RadListView #listView [items]="dataItems" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
      <!-- << angular-listview-pull-to-refresh -->
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">

@@ -1,10 +1,11 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { DataItem } from "../dataItem";
+import { DataItem } from "../../dataItem";
 import { ListViewEventData } from "nativescript-ui-listview";
 import { android as androidApplication } from "tns-core-modules/application";
 import { setTimeout } from "tns-core-modules/timer";
-const posts = require("../../examples/posts.json");
+
+const posts = require("../../../examples/posts.json");
 
 @Component({
     moduleId: module.id,

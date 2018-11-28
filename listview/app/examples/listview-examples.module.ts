@@ -30,7 +30,8 @@ import { ListViewFixedSizeAutoWithSmallSourceComponent } from './load-on-demand/
 import { ListViewFixedSizeManualComponent } from './load-on-demand/fixed-size-manual/listview-fixed-size-manual.component';
 import { ListViewMultipleTemplatesComponent } from './multiple-templates/listview-multiple-templates.component';
 import { ListViewObservableArrayComponent } from './observable-array/listview-observable-array.component';
-import { ListViewPullToRefreshComponent } from './pull-to-refresh/listview-pull-to-refresh.component';
+import { ListViewPullToRefreshComponent } from './pull-to-refresh/getting-started/listview-pull-to-refresh.component';
+import { ListViewPullToRefreshCustomizeComponent } from './pull-to-refresh/customize/listview-pull-to-refresh-customize.component';
 import { ListViewScrollEventsComponent } from './scroll-events/listview-scroll-events.component';
 import { ListViewScrollToIndexHorizontalComponent } from './scroll-to-index/listview-scroll-to-index-horizontal.component';
 import { ListViewScrollToIndexVerticalComponent } from './scroll-to-index/listview-scroll-to-index-vertical.component';
@@ -91,6 +92,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewMultipleTemplatesComponent,
         ListViewObservableArrayComponent,
         ListViewPullToRefreshComponent,
+        ListViewPullToRefreshCustomizeComponent,
         ListViewScrollEventsComponent,
         ListViewScrollToIndexHorizontalComponent,
         ListViewScrollToIndexVerticalComponent,

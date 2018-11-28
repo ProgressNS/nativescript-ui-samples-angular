@@ -185,7 +185,18 @@ export let EXAMPLEITEMS: ExampleItem[] = [
             {
                 "title": "Pull to Refresh",
                 "path": "ListViewPullToRefreshComponent/ListViewPullToRefreshComponent",
-                "subItems": []
+                "subItems": [
+                    {
+                        "title": "Getting Started",
+                        "path": "ListViewPullToRefreshComponent/ListViewPullToRefreshComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Customize indicator/background",
+                        "path": "ListViewPullToRefreshCustomizeComponent/ListViewPullToRefreshCustomizeComponent",
+                        "subItems": []
+                    },
+                ]
             },
             {
                 "title": "Swipe actions",
