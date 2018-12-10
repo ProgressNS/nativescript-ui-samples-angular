@@ -254,6 +254,13 @@ const APP_ROUTES: Routes = [
         data: {
             "title": "Styling Ticks"
         }
+    },
+    {
+        path: "ChartStylingBarSeriesComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Styling Bar Series"
+        }
     }
 ];
 

@@ -172,6 +172,14 @@ describe("Chart1", () => {
             const isTrue = await driver.compareScreen("styling-series");
             expect(isTrue).to.be.true;
         });
+        it("should open Styling Bar series", async () => {
+            await navigateToView(driver, stylingText);
+            const stylingSeriesButton = await driver.findElementByText("Styling Bar Series");
+            await stylingSeriesButton.click();
+            await driver.wait(animationTime);
+            const isTrue = await driver.compareScreen("styling-bar-series");
+            expect(isTrue).to.be.true;
+        });
         it("should open Styling grid", async () => {
             await navigateToView(driver, stylingText);
             const stylingGridButton = await driver.findElementByText("Styling grid");

@@ -39,6 +39,7 @@ import { ChartStylingPieSeriesComponent } from './styling/chart-styling-pie-seri
 import { ChartStylingSelectionComponent } from './styling/chart-styling-selection.component';
 import { ChartStylingSeriesComponent } from './styling/chart-styling-series.component';
 import { ChartStylingTicksComponent } from './styling/chart-styling-ticks.component';
+import { ChartStylingBarSeriesComponent } from './styling/chart-styling-bar-series.component';
 
 import { routes } from './chart-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -87,7 +88,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ChartStylingSelectionComponent,
         ChartStylingSeriesComponent,
         ChartStylingTicksComponent,
-        ChartLabelVisibilityComponent
+        ChartLabelVisibilityComponent,
+        ChartStylingBarSeriesComponent
     ]
 })
 export class ChartExamplesModule { }

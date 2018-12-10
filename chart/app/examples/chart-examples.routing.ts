@@ -36,6 +36,7 @@ import { ChartStylingPieSeriesComponent } from './styling/chart-styling-pie-seri
 import { ChartStylingSelectionComponent } from './styling/chart-styling-selection.component';
 import { ChartStylingSeriesComponent } from './styling/chart-styling-series.component';
 import { ChartStylingTicksComponent } from './styling/chart-styling-ticks.component';
+import { ChartStylingBarSeriesComponent } from './styling/chart-styling-bar-series.component';
 
 export const routes: Routes = [
   { path: 'ChartAnnotationsGridLineComponent', component: ChartAnnotationsGridLineComponent },
@@ -72,5 +73,6 @@ export const routes: Routes = [
   { path: 'ChartStylingSelectionComponent', component: ChartStylingSelectionComponent },
   { path: 'ChartStylingSeriesComponent', component: ChartStylingSeriesComponent },
   { path: 'ChartStylingTicksComponent', component: ChartStylingTicksComponent },
-  { path: 'ChartLabelVisibilityComponent', component: ChartLabelVisibilityComponent }
+  { path: 'ChartLabelVisibilityComponent', component: ChartLabelVisibilityComponent },
+  { path: 'ChartStylingBarSeriesComponent', component: ChartStylingBarSeriesComponent }
 ];
