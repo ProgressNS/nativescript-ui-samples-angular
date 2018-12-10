@@ -102,6 +102,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Styling Bar Series",
+                        "path": "ChartStylingBarSeriesComponent/ChartStylingBarSeriesComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Styling grid",
                         "path": "ChartStylingGridComponent/ChartStylingGridComponent",
                         "subItems": []

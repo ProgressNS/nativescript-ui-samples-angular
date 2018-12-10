@@ -1,0 +1,14 @@
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    <!-- >> chart-angular-styling-bars -->
+    <BarSeries tkCartesianSeries paletteMode="Item" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+    <!-- << chart-angular-styling-bars -->
+    <Palette tkCartesianPalette>
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#2CACE1" fillColor="#2CACE1"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#A05BC5" fillColor="#A05BC5"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#8FC502" fillColor="#8FC502"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#FF3B3C" fillColor="#FF3B3C"></PaletteEntry>
+        <PaletteEntry tkCartesianPaletteEntry strokeColor="#476BEF" fillColor="#476BEF"></PaletteEntry>
+    </Palette>
+</RadCartesianChart>
