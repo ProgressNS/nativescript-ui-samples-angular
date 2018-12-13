@@ -1,26 +1,25 @@
 <!-- >> angular-sidedrawer-callbacks -->
-<RadSideDrawer (drawerOpening)="onDrawerOpening($event)" 
-               (drawerOpened)="onDrawerOpened($event)" 
-               (drawerClosing)="onDrawerClosing($event)"
-               (drawerClosed)="onDrawerClosed($event)" 
-               (drawerPan)="onDrawerPan($event)" 
-               [transition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
+<RadSideDrawer (drawerOpening)="onDrawerOpening($event)" (drawerOpened)="onDrawerOpened($event)" (drawerClosing)="onDrawerClosing($event)"
+    (drawerClosed)="onDrawerClosed($event)" (drawerPan)="onDrawerPan($event)" [transition]="sideDrawerTransition"
+    tkExampleTitle tkToggleNavButton>
     <!-- << angular-sidedrawer-callbacks -->
     <StackLayout tkDrawerContent class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
         </StackLayout>
-        <StackLayout class="sideStackLayout">
-            <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
-            <Label text="Social" class="sideLabel"></Label>
-            <Label text="Promotions" class="sideLabel"></Label>
-            <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
-            <Label text="Important" class="sideLabel"></Label>
-            <Label text="Starred" class="sideLabel"></Label>
-            <Label text="Sent Mail" class="sideLabel"></Label>
-            <Label text="Drafts" class="sideLabel"></Label>
-        </StackLayout>
-        <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
+        <ScrollView>
+            <StackLayout class="sideStackLayout">
+                <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Social" class="sideLabel"></Label>
+                <Label text="Promotions" class="sideLabel"></Label>
+                <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Important" class="sideLabel"></Label>
+                <Label text="Starred" class="sideLabel"></Label>
+                <Label text="Sent Mail" class="sideLabel"></Label>
+                <Label text="Drafts" class="sideLabel"></Label>
+                <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
     <StackLayout tkMainContent>
         <Button text="OPEN DRAWER" class="drawerContentButton" (tap)=openDrawer()></Button>
