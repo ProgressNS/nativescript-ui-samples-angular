@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Person } from "../data-services/person";
-import { knownFolders } from "file-system";
+import { knownFolders } from "tns-core-modules/file-system";
 const person = require('../data-services/person-model.json');
 
 @Component({
