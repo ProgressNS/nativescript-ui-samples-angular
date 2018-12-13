@@ -13,7 +13,7 @@ export class BlogPostsService {
         for (let i = 0; i < ALL_POSTS.length; i++) {
             let date;
             if (i < ALL_POSTS.length / 2) {
-                let offset = i < this._firstToLoad ? (i - this._firstToLoad) * 3000 : (i - this._firstToLoad + 1) * 1000 * 60 * 50;
+                let offset = i < this._firstToLoad ? (i - this._firstToLoad) * 3000 : (i - this._firstToLoad) * 1000 * 60 * 50;
                 date = new Date(this._now.getTime() - offset);
             } else {
                 date = new Date(this._now.getFullYear(), this._now.getMonth(), this._now.getDate() - 1);
@@ -30,7 +30,7 @@ export class BlogPostsService {
         let startingIndex = proceed ? this._nextToLoad : this._firstToLoad;
         for (let i = startingIndex; i < ALL_POSTS.length && result.length < count; i++) {
             let nextBlogPost = ALL_POSTS[i];
-            if (!nextBlogPost.deleted && nextBlogPost.publishDate < this._now) {
+            if (!nextBlogPost.deleted && nextBlogPost.publishDate <= this._now) {
                 nextBlogPost.publishText = this.dateLabel(nextBlogPost.publishDate);
                 result.push(nextBlogPost);
             }
