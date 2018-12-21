@@ -5,7 +5,7 @@ import { ad } from "tns-core-modules/utils/utils";
 import { NavigationButton } from "tns-core-modules/ui/action-bar";
 import { Page } from "tns-core-modules/ui/page";
 import { RouterExtensions } from 'nativescript-angular/router';
-import { android } from "application";
+import { android } from "tns-core-modules/application";
 
 @Directive({
     selector: "[tkToggleNavButton]"

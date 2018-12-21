@@ -6,6 +6,7 @@ import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 
 import { GaugesAnimationsComponent } from './animations/gauges-animations.component';
 import { GaugesCustomizationComponent } from './customization/gauges-customization.component';
+import { GaugesStyleBindingsComponent } from './style-bindings/gauges-style-bindings.component';
 import { GaugesGettingStartedComponent } from './getting-started/gauges-getting-started.component';
 import { GaugesScalesComponent } from './scales/gauges-scales.component';
 
@@ -24,6 +25,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
     declarations: [
         GaugesAnimationsComponent,
         GaugesCustomizationComponent,
+        GaugesStyleBindingsComponent,
         GaugesGettingStartedComponent,
         GaugesScalesComponent
     ]
