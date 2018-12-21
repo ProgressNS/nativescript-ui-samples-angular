@@ -77,8 +77,11 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
 
     public onUpdateItemClick() {
         for (let index = 0; index < this._dataItems.length; index++) {
-            this._dataItems.getItem(index).name = "This is an updated item";
-            this._dataItems.getItem(index).description = "This is the updated item's description.";
+            const item = this._dataItems.getItem(index);
+            if (item) {
+                item.name = "This is an updated item";
+                item.description = "This is the updated item's description.";
+            }
         }
     }
 
