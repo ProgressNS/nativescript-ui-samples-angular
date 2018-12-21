@@ -1,0 +1,37 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="*, auto">
+    <RadRadialGauge #myGauge class="gauge" row="0" (loaded)="onLoaded()" [title]="model.title" [subtitle]="model.subtitle">
+        <TitleStyle tkRadialGaugeTitleStyle [textColor]="model.titleTextColor" [textSize]="model.titleTextSize"
+            [verticalOffset]="model.titleVerticalOffset"  [horizontalOffset]="model.titleHorizontalOffset"></TitleStyle>
+        <SubtitleStyle tkRadialGaugeSubtitleStyle [textColor]="model.subtitleTextColor" [textSize]="model.subtitleTextSize"
+            [verticalOffset]="model.subtitleVerticalOffset" [horizontalOffset]="model.subtitleHorizontalOffset"></SubtitleStyle>
+        <RadialScale #myScale tkRadialGaugeScales minimum="0" maximum="180" radius="0.9">
+            <ScaleStyle tkRadialScaleStyle
+                [majorTicksCount]="model.majorTicksCount" [minorTicksCount]="model.minorTicksCount" [majorTicksWidth]="model.majorTicksWidth" [minorTicksWidth]="model.minorTicksWidth"
+                [lineThickness]="model.lineThickness" [lineColor]="model.lineColor"
+                [labelsColor]="model.labelsColor" [labelsCount]="model.labelsCount" ios:labelsSize="15" android:labelsSize="60" [labelsVisible]="model.labelsVisible"></ScaleStyle>
+
+            <RadialBarIndicator tkRadialScaleIndicators minimum="0" [maximum]="model.firstPoint" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle [fillColor]="model.firstColor"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialBarIndicator tkRadialScaleIndicators [minimum]="model.firstPoint" [maximum]="model.secondPoint" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle [fillColor]="model.secondColor"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialBarIndicator tkRadialScaleIndicators [minimum]="model.secondPoint" maximum="180" location="0.97">
+                <BarIndicatorStyle tkRadialBarIndicatorStyle fillColor="#A7010E" [barWidth]="model.barWidth"></BarIndicatorStyle>
+            </RadialBarIndicator>
+
+            <RadialNeedle tkRadialScaleIndicators [value]="model.needleValue">
+                <NeedleStyle tkRadialNeedleStyle [length]="model.needleLength" [circleRadius]="model.circleRadius" [circleFillColor]="model.fillColor" [circleStrokeColor]="model.strokeColor" [circleStrokeWidth]="model.strokeWidth"
+                [fillColor]="model.fillColor" [strokeColor]="model.strokeColor" [strokeWidth]="model.strokeWidth" [topWidth]="model.topWidth" [bottomWidth]="model.bottomWidth"></NeedleStyle>
+            </RadialNeedle>
+        </RadialScale>
+    </RadRadialGauge>
+
+    <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+        <Button text="Update Binding" (tap)="model.onUpdate()" verticalAlignment="center" marginBottom="10" marginTop="0"></Button>
+        <Button text="Update Properties" (tap)="onUpdate()" verticalAlignment="center" marginLeft="10" marginBottom="10"></Button>
+        <Button text="Reset" (tap)="onReset()" verticalAlignment="center" marginLeft="10" marginBottom="10"></Button>
+    </StackLayout>
+</GridLayout>

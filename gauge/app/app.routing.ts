@@ -33,6 +33,13 @@ const APP_ROUTES: Routes = [
         }
     },
     {
+        path: "GaugesStyleBindingsComponent",
+        loadChildren: './examples/gauges-examples.module#GaugesExamplesModule',
+        data: {
+            "title": "Style bindings"
+        }
+    },
+    {
         path: "GaugesScalesComponent",
         loadChildren: './examples/gauges-examples.module#GaugesExamplesModule',
         data: {

@@ -21,6 +21,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "subItems": []
             },
             {
+                "title": "Style bindings",
+                "path": "GaugesStyleBindingsComponent/GaugesStyleBindingsComponent",
+                "subItems": []
+            },
+            {
                 "title": "Animations",
                 "path": "GaugesAnimationsComponent/GaugesAnimationsComponent",
                 "subItems": []

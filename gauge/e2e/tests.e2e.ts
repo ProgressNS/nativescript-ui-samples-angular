@@ -10,6 +10,7 @@ describe("Gauge", () => {
     const gettingStartedText = "Getting started";
     const scalesText = "Scales";
     const customizationText = "Customization";
+    const styleBindingsText = "Style bindings";
     const animationsText = "Animations";
     let driver: AppiumDriver;
 
@@ -61,6 +62,17 @@ describe("Gauge", () => {
         expect(customizationTitle).to.exist;
         await driver.wait(5000);
         const isTrue = await driver.compareScreen("customization");
+        expect(isTrue).to.be.true;
+    });
+
+    it("should open Style bindings", async () => {
+        await navigateBackToHome(driver);
+        const styleBindingsButton = await driver.findElementByText(styleBindingsText);
+        await styleBindingsButton.click();
+        const styleBindingsTitle = await driver.findElementByText(styleBindingsText);
+        expect(styleBindingsTitle).to.exist;
+        await driver.wait(5000);
+        const isTrue = await driver.compareScreen("style-bindings");
         expect(isTrue).to.be.true;
     });
 
