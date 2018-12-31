@@ -33,7 +33,7 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
             return res;
         };
         this.myFilteringFunc = (item: DataItem) => {
-            return item.name.includes("Special Item");
+            return item && item.name.includes("Special Item");
         };
         this.isFilteringEnabled = true;
         this.isSortingEnabled = true;

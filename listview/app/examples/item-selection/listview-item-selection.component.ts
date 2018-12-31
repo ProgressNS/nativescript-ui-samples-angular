@@ -37,7 +37,7 @@ export class ListViewItemSelectionComponent implements OnInit {
         const selectedItems = listview.getSelectedItems() as Array<DataItem>;
         let selectedTitles = "Selected items: ";
         for (let i = 0; i < selectedItems.length; i++) {
-            selectedTitles += selectedItems[i].name;
+            selectedTitles += selectedItems[i] ? selectedItems[i].name : "";
 
             if (i < selectedItems.length - 1) {
                 selectedTitles += ", ";
@@ -45,7 +45,8 @@ export class ListViewItemSelectionComponent implements OnInit {
         }
 
         this._selectedItems = selectedTitles;
-        console.log("Item selected: " + this.dataItems.getItem(args.index).name);
+        const selectedItem = this.dataItems.getItem(args.index);
+        console.log("Item selected: " + (selectedItem && selectedItem.name));
     }
 
     public onItemDeselected(args: ListViewEventData) {
@@ -54,7 +55,7 @@ export class ListViewItemSelectionComponent implements OnInit {
         if (selectedItems.length > 0) {
             let selectedTitles = "Selected items: ";
             for (let i = 0; i < selectedItems.length; i++) {
-                selectedTitles += selectedItems[i].name;
+                selectedTitles += selectedItems[i] ? selectedItems[i].name : "";
 
                 if (i < selectedItems.length - 1) {
                     selectedTitles += ", ";
@@ -66,7 +67,8 @@ export class ListViewItemSelectionComponent implements OnInit {
             this._selectedItems = "No Selected items.";
         }
 
-        console.log("Item deselected: " + this.dataItems.getItem(args.index).name);
+        const deselectedItem = this.dataItems.getItem(args.index);
+        console.log("Item deselected: " + (deselectedItem && deselectedItem.name));
     }
 }
 // << angular-listview-selection-component

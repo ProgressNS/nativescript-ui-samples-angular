@@ -21,7 +21,7 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
         // >> listview-data-operations-filtering-angular
         this.myFilteringFunc = (item: DataItem) => {
-            return item.name.includes("Special Item");
+            return item && item.name.includes("Special Item");
         };
         // << listview-data-operations-filtering-angular
         this.isEnabled = true;
