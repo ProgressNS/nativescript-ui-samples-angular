@@ -35,7 +35,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
             return res;
         };
         this.myFilteringFunc = (item: DataItem) => {
-            return item.name.includes("Special Item");
+            return item && item.name.includes("Special Item");
         };
         this.isFilteringEnabled = true;
         this.isSortingEnabled = true;
@@ -104,7 +104,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
     }
 
     public onCellSwiping(args: ListViewEventData) {
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         if (args.data.x > 200) {
             console.log("Notify perform left action on: " + item.name);
         } else if (args.data.x < -200) {
@@ -120,14 +120,14 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
         swipeLimits.left = leftItem.getMeasuredWidth();
         swipeLimits.right = rightItem.getMeasuredWidth();
         swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         const message = ">>> onSwipeCellStarted item: " + item.name;
         console.log(message);
         this._event = message;
     }
 
     public onSwipeCellFinished(args: ListViewEventData) {
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         const message = ">>> onSwipeCellFinished item: " + item.name;
         console.log(message);
         this._event = message;
@@ -136,7 +136,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
     public onLeftSwipeClick(args: EventData) {
         let itemView = args.object as View;
         let itemIndex = this.myListViewComponent.listView.items.indexOf(itemView.bindingContext);
-        let item = this.dataItems.getItem(itemIndex);
+        let item = this.dataItems.getItem(itemIndex) || {};
         const message = "Left swipe click for: " + item.name;
         console.log(message);
         this._event = message;
@@ -146,8 +146,8 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
 
     public onRightSwipeClick(args: EventData) {
         let swipeView = args.object as View;
-        let itemIndex = this.myListViewComponent.listView.items.indexOf(swipeView.bindingContext);
-        const message = "Right swipe click for: " + swipeView.bindingContext.name;
+        const context = swipeView.bindingContext || {};
+        const message = "Right swipe click for: " + context.name;
         console.log(message);
         this._event = message;
         alert(message);
@@ -158,7 +158,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
     }
 
     public onItemSelected(args: ListViewEventData) {
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         item.selected = true;
         const message = "onItemSelected for: " + item.name;
         console.log(message);
@@ -166,7 +166,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
     }
 
     public onItemDeselected(args: ListViewEventData) {
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         item.selected = false;
         const message = "onItemDeselected for: " + item.name;
         console.log(message);
@@ -174,7 +174,7 @@ export class ListViewDataOperationsMultipleWithSwipeComponent implements OnInit 
     }
 
     public onItemTap(args: ListViewEventData) {
-        let item = this.dataItems.getItem(args.index);
+        let item = this.dataItems.getItem(args.index) || {};
         const message = "onItemTap for: " + item.name;
         console.log(message);
         this._event = message;

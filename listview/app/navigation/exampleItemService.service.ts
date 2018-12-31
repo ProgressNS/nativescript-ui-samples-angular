@@ -9,7 +9,7 @@ export class ExampleItemService {
         let res = true;
         EXCLUDED_EXAMPLEITEMS.forEach(excludedItem => {
             const exclude = isIOS && excludedItem.platform === "ios" || !isIOS && excludedItem.platform === "android";
-            if (item.title === excludedItem.title && exclude) {
+            if (!item || (item.title === excludedItem.title && exclude)) {
                 res = false;
             }
         });

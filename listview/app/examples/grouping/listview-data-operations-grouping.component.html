@@ -9,10 +9,12 @@
                 <Label class="descriptionLabel" [text]="item.description"></Label>
             </StackLayout>
         </ng-template>
+        <!-- >> listview-data-operations-grouping-template-angular -->
         <ng-template tkGroupTemplate let-category="category">
             <GridLayout ios:height="50">
                 <Label class="nameLabel" [text]="category" class="groupLabel"></Label>
             </GridLayout>
         </ng-template>
-    </RadListView>
+        <!-- << listview-data-operations-grouping-template-angular -->
+    </RadListView>   
 </GridLayout>
