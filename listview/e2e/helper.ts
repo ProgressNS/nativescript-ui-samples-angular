@@ -67,7 +67,7 @@ export async function swipe(driver: AppiumDriver, item: any, direction: Directio
         const wd = driver.wd();
         const action = new wd.TouchAction(driver.driver);
         action.press({ x: centerX, y: centerY })
-            .wait(100)
+            .wait(150)
             .moveTo({ x: swipeX, y: centerY })
             .release();
         await action.perform();
