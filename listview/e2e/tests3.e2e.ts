@@ -73,7 +73,7 @@ describe("ListView3", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({ x: centerX, y: centerY })
-                        .wait(100)
+                        .wait(150)
                         .moveTo({ x: 10, y: centerY })
                         .release();
                     await action.perform();
@@ -119,6 +119,20 @@ describe("ListView3", () => {
                 }
                 let markBtn = await driver.findElementByText("mark", SearchOptions.exact);
                 expect(markBtn).to.exist;
+            });
+
+            it("Click description", async () => {
+                const title = await driver.findElementByText("IT help desk");
+                await title.click();
+                const tapTitleText = await driver.findElementByText("Tap on Layout for item: Sherman Martin", SearchOptions.contains);
+                expect(tapTitleText).to.exist;
+            });
+
+            it("Click title", async () => {
+                const title = await driver.findElementByText("Sherman Martin");
+                await title.click();
+                const tapTitleText = await driver.findElementByText("Tap on Title: Sherman Martin", SearchOptions.contains);
+                expect(tapTitleText).to.exist;
             });
         });
 
@@ -217,7 +231,7 @@ describe("ListView3", () => {
                     const wd = driver.wd();
                     const action = new wd.TouchAction(driver.driver);
                     action.press({ x: centerX, y: centerY })
-                        .wait(100)
+                        .wait(150)
                         .moveTo({ x: 10, y: centerY })
                         .release();
                     await action.perform();

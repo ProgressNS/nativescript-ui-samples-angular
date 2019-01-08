@@ -1,11 +1,11 @@
-<GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
+<GridLayout orientation="vertical" rows="*, auto" tkExampleTitle tkToggleNavButton>
     <!-- >> angular-listview-swipe-actions-set-enabled-html -->
-    <RadListView #myListView [items]="dataItems" row="1" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+    <RadListView #myListView [items]="dataItems" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
     (itemSwipeProgressStarted)="onSwipeCellStarted($event)" (itemSwipeProgressChanged)="onCellSwiping($event)" swipeActions="true">
     <!-- >> (hide) -->
         <ng-template tkListItemTemplate let-item="item">
-            <StackLayout class="listItemStackLayout" orientation="vertical">
-                <Label class="labelName" [text]="item.name"></Label>
+            <StackLayout (tap)="onLayoutTap($event)" class="listItemStackLayout" orientation="vertical">
+                <Label (tap)="onLabelTap($event)" class="labelName" [text]="item.name"></Label>
                 <Label class="labelTitle" [text]="item.title"></Label>
                 <Label class="labelText" [text]="item.text"></Label>
             </StackLayout>
@@ -22,5 +22,6 @@
     <!-- << angular-listview-swipe-actions-template-html -->
     <!-- << (hide) -->
     </RadListView>
+    <Label id="lbl" textWrap="true" row="1"></Label>
 <!-- << angular-listview-swipe-actions-set-enabled-html -->
 </GridLayout>
