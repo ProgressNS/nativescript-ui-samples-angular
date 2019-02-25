@@ -2,7 +2,9 @@ import { AppiumDriver, createDriver, SearchOptions, Locator, Direction } from "n
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { expect } from "chai";
 import { navigateBackToView, navigateBackToHome, clickBelowElement, scrollToElement } from "./helper";
-
+const fs = require('fs');
+const rimraf = require('rimraf');
+const addContext = require('mochawesome/addContext');
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
 
@@ -24,6 +26,11 @@ describe("Autocomplete", () => {
     before(async () => {
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
+        let dir = "mochawesome-report";
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        rimraf('mochawesome-report/*', function () { });
     });
 
     after(async () => {
@@ -37,8 +44,15 @@ describe("Autocomplete", () => {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state === "failed") {
-            await driver.logScreenshot(this.currentTest.title);
+        if (this.currentTest.state && this.currentTest.state === "failed") {
+            let png = await driver.logScreenshot(this.currentTest.title);
+            fs.copyFile(png, './mochawesome-report/' + this.currentTest.title + '.png', function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log('Screenshot saved.');
+            });
+            addContext(this, './' + this.currentTest.title + '.png');
         }
     });
 
