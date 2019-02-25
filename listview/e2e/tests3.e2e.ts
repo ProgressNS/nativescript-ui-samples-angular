@@ -2,9 +2,12 @@ import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescri
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { navigateBackToHome, scrollToElement, navigateBackToView } from "./helper";
-
+const fs = require('fs');
+const addContext = require('mochawesome/addContext');
+const rimraf = require('rimraf');
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
+const PR = " #PR3";
 
 describe("ListView3", () => {
     let driver: AppiumDriver;
@@ -12,6 +15,11 @@ describe("ListView3", () => {
     before(async () => {
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
+        let dir = "mochawesome-report";
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        rimraf('mochawesome-report/*', function () { });
     });
 
     after(async () => {
@@ -25,13 +33,20 @@ describe("ListView3", () => {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state === "failed") {
-            await driver.logScreenshot(this.currentTest.title);
+        if (this.currentTest.state && this.currentTest.state === "failed") {
+            let png = await driver.logScreenshot(this.currentTest.title);
+            fs.copyFile(png, './mochawesome-report/' + this.currentTest.title + '.png', function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log('Screenshot saved.');
+            });
+            addContext(this, './' + this.currentTest.title + '.png');
         }
     });
 
     const pullToRefreshText = "Pull to Refresh";
-    describe(pullToRefreshText, () => {
+    describe(pullToRefreshText + PR, () => {
         it("Navigate to Pull to Refresh example", async () => {
             await navigateBackToHome(driver);
             const listItem = await scrollToElement(driver, pullToRefreshText);
@@ -51,7 +66,7 @@ describe("ListView3", () => {
     });
 
     const swipeActionText = "Swipe actions";
-    describe(swipeActionText, () => {
+    describe(swipeActionText + PR, () => {
         describe("Getting Started", () => {
             it("Navigate to getting started swipe actions example", async () => {
                 await navigateBackToHome(driver);
@@ -429,7 +444,7 @@ describe("ListView3", () => {
     });
 
     const horizontalWithVariableText = "Horizontal with Variable item's width";
-    describe(horizontalWithVariableText, () => {
+    describe(horizontalWithVariableText + PR, () => {
         it("Navigate to scroll events", async () => {
             await navigateBackToHome(driver);
             const listItem = await scrollToElement(driver, "Horizontal with Variable");

@@ -2,9 +2,13 @@ import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescri
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { navigateBackToHome, scrollToElement, navigateBackToView, swipe } from "./helper";
+const fs = require('fs');
+const addContext = require('mochawesome/addContext');
+const rimraf = require('rimraf');
 
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
+const PR = " #PR2";
 
 describe("ListView2", () => {
     let driver: AppiumDriver;
@@ -12,6 +16,11 @@ describe("ListView2", () => {
     before(async () => {
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
+        let dir = "mochawesome-report";
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        rimraf('mochawesome-report/*', function () { });
     });
 
     after(async () => {
@@ -25,13 +34,20 @@ describe("ListView2", () => {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state === "failed") {
-            await driver.logScreenshot(this.currentTest.title);
+        if (this.currentTest.state && this.currentTest.state === "failed") {
+            let png = await driver.logScreenshot(this.currentTest.title);
+            fs.copyFile(png, './mochawesome-report/' + this.currentTest.title + '.png', function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log('Screenshot saved.');
+            });
+            addContext(this, './' + this.currentTest.title + '.png');
         }
     });
 
     const itemReorderText = "Item Reorder";
-    describe(itemReorderText, () => {
+    describe(itemReorderText + PR, () => {
         it("Navigate to item reorder example", async () => {
             await navigateBackToHome(driver);
             await scrollToElement(driver, itemReorderText);
@@ -78,7 +94,7 @@ describe("ListView2", () => {
     });
 
     const itemReorderWithHandleText = "Item Reorder with handle";
-    describe(itemReorderWithHandleText, () => {
+    describe(itemReorderWithHandleText + PR, () => {
         it("Navigate to reorder with Handle example", async () => {
             await navigateBackToHome(driver);
             await scrollToElement(driver, itemReorderWithHandleText);
@@ -218,7 +234,7 @@ describe("ListView2", () => {
     });
 
     const allInOne = "Group, Swipe, Load and Pull";
-    describe(allInOne, () => {
+    describe(allInOne + PR, () => {
         it("Navigate to comlplex example", async () => {
             await navigateBackToHome(driver);
             const listItem = await scrollToElement(driver, allInOne);

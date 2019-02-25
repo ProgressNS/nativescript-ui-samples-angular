@@ -2,9 +2,12 @@ import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescri
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
 import { navigateBackToHome, navigateBackToView, scrollToElement, swipe, swipeToElement } from "./helper";
-
+const fs = require('fs');
+const addContext = require('mochawesome/addContext');
+const rimraf = require('rimraf');
 const isSauceRun = isSauceLab;
 const isAndroid: boolean = runType.includes("android");
+const PR = " #PR1";
 
 describe("ListView1", () => {
     let driver: AppiumDriver;
@@ -12,6 +15,11 @@ describe("ListView1", () => {
     before(async () => {
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
+        let dir = "mochawesome-report";
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        rimraf('mochawesome-report/*', function () { });
     });
 
     after(async () => {
@@ -25,8 +33,15 @@ describe("ListView1", () => {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state === "failed") {
-            await driver.logScreenshot(this.currentTest.title);
+        if (this.currentTest.state && this.currentTest.state === "failed") {
+            let png = await driver.logScreenshot(this.currentTest.title);
+            fs.copyFile(png, './mochawesome-report/' + this.currentTest.title + '.png', function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log('Screenshot saved.');
+            });
+            addContext(this, './' + this.currentTest.title + '.png');
         }
     });
 
@@ -376,7 +391,7 @@ describe("ListView1", () => {
     });
 
     const itemAnimationsText = "Item Animations";
-    describe(itemAnimationsText, () => {
+    describe(itemAnimationsText + PR, () => {
         it("Navigate to Item Animations example", async () => {
             await navigateBackToHome(driver);
             await scrollToElement(driver, itemAnimationsText);
@@ -416,7 +431,7 @@ describe("ListView1", () => {
     });
 
     const itemLayoutsText = "Item Layouts";
-    describe(itemLayoutsText, () => {
+    describe(itemLayoutsText + PR, () => {
         describe("Linear", () => {
             it("Navigate to Linear layout example", async () => {
                 await navigateBackToHome(driver);

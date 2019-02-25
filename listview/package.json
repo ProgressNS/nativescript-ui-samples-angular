@@ -29,14 +29,19 @@
     "nativescript-ui-listview": "*",
     "rxjs": "^6.3.3",
     "tns-core-modules": "^5.1.0",
-    "tns-platform-declarations": "^5.1.2",
+    "tns-platform-declarations": "^5.2.1",
     "zone.js": "~0.8.18"
   },
   "devDependencies": {
     "@types/chai": "^4.0.2",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.5",
-    "nativescript-dev-appium": "4.0.9",
+    "markdown-snippet-injector": "^0.2.4",
+    "nativescript-dev-appium": "5.0.0",
+    "mocha": "^3.3.0",
+    "mocha-junit-reporter": "^1.18.0",
+    "mocha-multi": "^1.0.1",
+    "mochawesome": "^3.1.1",
     "nativescript-dev-typescript": "~0.7.0",
     "nativescript-dev-webpack": "~0.18.0",
     "tslint": "~5.11.0"
