@@ -1,7 +1,7 @@
 import { AppiumDriver, createDriver, SearchOptions, Direction } from "nativescript-dev-appium";
 import { expect } from "chai";
 import { isSauceLab, runType } from "nativescript-dev-appium/lib/parser";
-import { navigateBackToHome, scrollToElement, navigateBackToView } from "./helper";
+import { navigateBackToHome, scrollToElement, navigateBackToView, QUEUE_WAIT_TIME } from "./helper";
 const fs = require('fs');
 const addContext = require('mochawesome/addContext');
 const rimraf = require('rimraf');
@@ -12,7 +12,8 @@ const PR = " #PR4";
 describe("ListView4", () => {
     let driver: AppiumDriver;
 
-    before(async () => {
+    before(async function () {
+        this.timeout(QUEUE_WAIT_TIME);
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
         let dir = "mochawesome-report";

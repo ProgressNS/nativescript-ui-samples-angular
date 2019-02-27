@@ -2,6 +2,7 @@ import { AppiumDriver, SearchOptions, Direction, UIElement } from "nativescript-
 import { runType } from "nativescript-dev-appium/lib/parser";
 
 const isAndroid: boolean = runType.includes("android");
+export const QUEUE_WAIT_TIME: number = 600000; // Sometimes SauceLabs threads are not available and the tests wait in a queue to start. Wait 10 min before timeout.
 
 export async function navigateBackToHome(driver: AppiumDriver, view?: string) {
     let location = view !== undefined ? view : "ListView Angular";
