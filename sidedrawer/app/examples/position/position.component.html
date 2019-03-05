@@ -1,11 +1,11 @@
 <!-- >> angular-sidedrawer-location -->
 <RadSideDrawer [drawerLocation]="currentLocation" tkExampleTitle tkToggleNavButton>
     <!-- << angular-sidedrawer-location -->
-    <StackLayout tkDrawerContent class="sideStackLayout">
+    <GridLayout tkDrawerContent rows="auto, *" class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
         </StackLayout>
-        <ScrollView>
+        <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
                 <Label text="Social" class="sideLabel"></Label>
@@ -15,20 +15,20 @@
                 <Label text="Starred" class="sideLabel"></Label>
                 <Label text="Sent Mail" class="sideLabel"></Label>
                 <Label text="Drafts" class="sideLabel"></Label>
-                <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
+                <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center"
+                    (tap)="onCloseDrawerTap()"></Label>
             </StackLayout>
         </ScrollView>
-    </StackLayout>
-    <StackLayout tkMainContent class="mainContent">
-        <ScrollView>
-            <StackLayout>
-                <Label text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom."
-                    textWrap="true" class="drawerContentText"></Label>
-                <Button text="Left" (tap)="onLeftLocationTap()" class="drawerContentButton"></Button>
-                <Button text="Top" (tap)="onTopLocationTap()" class="drawerContentButton"></Button>
-                <Button text="Right" (tap)="onRightLocationTap()" class="drawerContentButton"></Button>
-                <Button text="Bottom" (tap)="onBottomLocationTap()" class="drawerContentButton"></Button>
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+    </GridLayout>
+    <ScrollView tkMainContent class="mainContent">
+        <StackLayout>
+            <Label
+                text="SideDrawer for NativeScript is shown from the left side of the app window by default.You can change this behavior by setting the drawerLocation property to Left, Top, Right or Bottom."
+                textWrap="true" class="drawerContentText"></Label>
+            <Button text="Left" (tap)="onLeftLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Top" (tap)="onTopLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Right" (tap)="onRightLocationTap()" class="drawerContentButton"></Button>
+            <Button text="Bottom" (tap)="onBottomLocationTap()" class="drawerContentButton"></Button>
+        </StackLayout>
+    </ScrollView>
 </RadSideDrawer>

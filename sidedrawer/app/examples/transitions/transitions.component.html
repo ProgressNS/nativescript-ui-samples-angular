@@ -1,11 +1,11 @@
 <!-- >> angular-sidedrawer-transitions -->
 <RadSideDrawer [drawerTransition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
     <!-- << angular-sidedrawer-transitions -->
-    <StackLayout tkDrawerContent class="sideStackLayout">
+    <GridLayout tkDrawerContent rows="auto, *" class="sideStackLayout">
         <StackLayout class="sideTitleStackLayout">
             <Label text="Navigation Menu"></Label>
         </StackLayout>
-        <ScrollView>
+        <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
                 <Label text="Social" class="sideLabel"></Label>
@@ -15,10 +15,10 @@
                 <Label text="Starred" class="sideLabel"></Label>
                 <Label text="Sent Mail" class="sideLabel"></Label>
                 <Label text="Drafts" class="sideLabel"></Label>
-                <Button text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
+                <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" (tap)="onCloseDrawerTap()"></Label>
             </StackLayout>
         </ScrollView>
-    </StackLayout>
+    </GridLayout>
     <ScrollView tkMainContent>
         <StackLayout class="mainStackLayout">
             <Button text="Fade Transition" (tap)="onFadeTransitionTap()" class="drawerContentButton"></Button>

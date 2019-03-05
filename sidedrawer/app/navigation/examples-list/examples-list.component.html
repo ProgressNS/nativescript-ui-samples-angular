@@ -1,8 +1,8 @@
 <ActionBar [title]="currentExample.title">
     <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()" [visibility]="hasBack ? 'visible' : 'collapsed'"></NavigationButton>
 </ActionBar>
-<GridLayout rows="auto, *">
-    <ListView row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
+<GridLayout>
+    <ListView [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
         <ng-template let-item="item">
             <StackLayout class="itemStackLayout">
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
