@@ -3,6 +3,9 @@ import { isSauceLab, runType, capabilitiesName } from "nativescript-dev-appium/l
 import { expect } from "chai";
 import "./helper";
 import { goBack } from "./helper";
+const addContext = require('mochawesome/addContext');
+const fs = require('fs');
+const rimraf = require('rimraf');
 
 const isSauceRun = isSauceLab;
 
@@ -19,6 +22,11 @@ describe("SideDrawer", () => {
     before(async () => {
         driver = await createDriver();
         driver.defaultWaitTime = 15000;
+        let dir = "mochawesome-report";
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        rimraf('mochawesome-report/*', function () { });
     });
 
     after(async () => {
@@ -32,8 +40,13 @@ describe("SideDrawer", () => {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state === "failed") {
-            await driver.logScreenshot(this.currentTest.title);
+        if (this.currentTest.state && this.currentTest.state === "failed") {
+            let png = await driver.logScreenshot(this.currentTest.title);
+            fs.copyFile(png, "./mochawesome-report/" + this.currentTest.title + ".png", (err) => {
+                if (err) throw err;
+                console.log("Image saved");
+            });
+            addContext(this, "./" + this.currentTest.title + ".png");
         }
     });
     describe("Getting started", () => {

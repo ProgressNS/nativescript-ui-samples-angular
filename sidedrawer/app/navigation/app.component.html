@@ -5,10 +5,9 @@
         </StackLayout>
         <ListView id="root-drawer-list" row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" class="root-drawer-content">
             <ng-template let-item="item">
-                <StackLayout id="item-container" class="root-item-stack-layout sidedrawer-list-item">
+                <GridLayout id="item-container" class="root-item-stack-layout sidedrawer-list-item">
                     <Label [text]="item.title" textWrap="true"></Label>
-                    <!-- <StackLayout height="1" class="root-drawer-content"></StackLayout> -->
-                </StackLayout>
+                </GridLayout>
             </ng-template>
         </ListView>
     </GridLayout>
