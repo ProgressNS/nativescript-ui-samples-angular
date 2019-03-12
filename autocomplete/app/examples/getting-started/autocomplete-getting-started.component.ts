@@ -1,7 +1,7 @@
 // >> angular-autocomplete-getting-started
 import { Component, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, AutoCompleteCompletionMode, AutoCompleteDisplayMode, AutoCompleteSuggestMode } from "nativescript-ui-autocomplete";
 import { RadAutoCompleteTextViewComponent } from "nativescript-ui-autocomplete/angular";
 
 @Component({
@@ -36,41 +36,41 @@ export class AutoCompleteGettingStartedComponent {
     }
 // >> (hide)
     public onSuggestSelected(args) {
-        this.autocomplete.autoCompleteTextView.suggestMode = "Suggest";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.suggestMode = AutoCompleteSuggestMode.Suggest;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onAppendSelected(args) {
-        this.autocomplete.autoCompleteTextView.suggestMode = "Append";
-        this.autocomplete.autoCompleteTextView.completionMode = "StartsWith";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.suggestMode = AutoCompleteSuggestMode.Append;
+        this.autocomplete.autoCompleteTextView.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onSuggestAppendSelected(args) {
-        this.autocomplete.autoCompleteTextView.suggestMode = "SuggestAppend";
-        this.autocomplete.autoCompleteTextView.completionMode = "StartsWith";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.suggestMode = AutoCompleteSuggestMode.SuggestAppend;
+        this.autocomplete.autoCompleteTextView.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onStartsWithSelected(args) {
-        this.autocomplete.autoCompleteTextView.completionMode = "StartsWith";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onContainsSelected(args) {
-        this.autocomplete.autoCompleteTextView.completionMode = "Contains";
-        this.autocomplete.autoCompleteTextView.suggestMode = "Suggest";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.completionMode = AutoCompleteCompletionMode.Contains;
+        this.autocomplete.autoCompleteTextView.suggestMode = AutoCompleteSuggestMode.Suggest;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onPlainSelected(args) {
-        this.autocomplete.autoCompleteTextView.displayMode = "Plain";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.displayMode = AutoCompleteDisplayMode.Plain;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
 
     public onTokensSelected(args) {
-        this.autocomplete.autoCompleteTextView.displayMode = "Tokens";
-        this.autocomplete.autoCompleteTextView.resetAutocomplete();
+        this.autocomplete.autoCompleteTextView.displayMode = AutoCompleteDisplayMode.Tokens;
+        this.autocomplete.autoCompleteTextView.resetAutoComplete();
     }
     // << (hide)
 }

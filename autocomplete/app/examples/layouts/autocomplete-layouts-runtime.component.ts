@@ -1,6 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, AutoCompleteLayoutMode } from "nativescript-ui-autocomplete";
 import { RadAutoCompleteTextViewComponent } from "nativescript-ui-autocomplete/angular";
 
 @Component({
@@ -36,11 +36,11 @@ export class AutoCompleteLayoutsRuntimeComponent {
     }
 
     public onHorizontalSelected(args) {
-        this.autocomplete.autoCompleteTextView.layoutMode = "Horizontal";
+        this.autocomplete.autoCompleteTextView.layoutMode = AutoCompleteLayoutMode.Horizontal;
     }
 
     public onWrapSelected(args) {
-        this.autocomplete.autoCompleteTextView.layoutMode = "Wrap";
+        this.autocomplete.autoCompleteTextView.layoutMode = AutoCompleteLayoutMode.Wrap;
     }
 
     public onAddToken(args) {
