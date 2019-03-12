@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../../dataItem";
-import { ListViewLinearLayout, RadListView, LoadOnDemandListViewEventData } from "nativescript-ui-listview";
+import { ListViewLinearLayout, RadListView, LoadOnDemandListViewEventData, ListViewScrollDirection } from "nativescript-ui-listview";
 import { android as androidApplication } from "tns-core-modules/application";
 import { setTimeout } from "tns-core-modules/timer";
 const posts = require("../../../examples/posts.json");
@@ -23,7 +23,7 @@ export class ListViewFixedSizeAutoComponent implements OnInit {
 
     ngOnInit() {
         this.layout = new ListViewLinearLayout();
-        this.layout.scrollDirection = "Vertical";
+        this.layout.scrollDirection = ListViewScrollDirection.Vertical;
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
         this._dataItems = new ObservableArray<DataItem>();

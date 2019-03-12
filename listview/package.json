@@ -29,7 +29,7 @@
     "nativescript-ui-listview": "*",
     "rxjs": "^6.3.3",
     "tns-core-modules": "^5.2.0",
-    "tns-platform-declarations": "^5.2.1",
+    "tns-platform-declarations": "^5.2.2",
     "zone.js": "~0.8.18"
   },
   "devDependencies": {

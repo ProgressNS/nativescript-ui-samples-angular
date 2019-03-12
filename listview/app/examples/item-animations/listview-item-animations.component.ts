@@ -4,7 +4,7 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { OptionsExampleBase } from "../../options-example-base";
 import { Page } from "tns-core-modules/ui/page";
-import { ListViewEventData } from "nativescript-ui-listview";
+import { ListViewEventData, ListViewItemAnimation } from "nativescript-ui-listview";
 import { OptionsService } from "../../navigation/options/options.service";
 import { ios } from "tns-core-modules/application";
 
@@ -18,8 +18,8 @@ import { ios } from "tns-core-modules/application";
 @Injectable()
 export class ListViewItemAnimationsComponent extends OptionsExampleBase implements OnInit {
     private _dataItems: ObservableArray<DataItem>;
-    private _itemInsertAnimation: string;
-    private _itemDeleteAnimation: string;
+    private _itemInsertAnimation: ListViewItemAnimation;
+    private _itemDeleteAnimation: ListViewItemAnimation;
     private _optionsParamName: string;
     private _itemsCount;
 
@@ -47,19 +47,19 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
         return this._dataItems;
     }
 
-    get itemInsertAnimation(): string {
+    get itemInsertAnimation(): ListViewItemAnimation {
         return this._itemInsertAnimation;
     }
 
-    set itemInsertAnimation(value: string) {
+    set itemInsertAnimation(value: ListViewItemAnimation) {
         this._itemInsertAnimation = value;
     }
 
-    get itemDeleteAnimation(): string {
+    get itemDeleteAnimation(): ListViewItemAnimation {
         return this._itemDeleteAnimation;
     }
 
-    set itemDeleteAnimation(value: string) {
+    set itemDeleteAnimation(value: ListViewItemAnimation) {
         this._itemDeleteAnimation = value;
     }
 
@@ -90,23 +90,23 @@ export class ListViewItemAnimationsComponent extends OptionsExampleBase implemen
     }
 
     public onDefaultTap() {
-        this.itemInsertAnimation = "Default";
-        this.itemDeleteAnimation = "Default";
+        this.itemInsertAnimation = ListViewItemAnimation.Default;
+        this.itemDeleteAnimation = ListViewItemAnimation.Default;
     }
 
     public onFadeTap() {
-        this.itemInsertAnimation = "Fade";
-        this.itemDeleteAnimation = "Fade";
+        this.itemInsertAnimation = ListViewItemAnimation.Fade;
+        this.itemDeleteAnimation = ListViewItemAnimation.Fade;
     }
 
     public onScaleTap() {
-        this.itemInsertAnimation = "Scale";
-        this.itemDeleteAnimation = "Scale";
+        this.itemInsertAnimation = ListViewItemAnimation.Scale;
+        this.itemDeleteAnimation = ListViewItemAnimation.Scale;
     }
 
     public onSlideTap() {
-        this.itemInsertAnimation = "Slide";
-        this.itemDeleteAnimation = "Slide";
+        this.itemInsertAnimation = ListViewItemAnimation.Slide;
+        this.itemDeleteAnimation = ListViewItemAnimation.Slide;
     }
 
     public onNavigatingTo(args) {
