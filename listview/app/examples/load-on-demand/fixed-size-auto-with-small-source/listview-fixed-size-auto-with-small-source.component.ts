@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "~/examples/dataItem";
-import { ListViewLinearLayout, ListViewEventData, RadListView, LoadOnDemandListViewEventData, ListViewLoadOnDemandMode } from "nativescript-ui-listview";
+import { ListViewLinearLayout, ListViewEventData, RadListView, LoadOnDemandListViewEventData, ListViewLoadOnDemandMode, ListViewScrollDirection } from "nativescript-ui-listview";
 import { android as androidApplication } from "tns-core-modules/application";
 import { setTimeout } from "tns-core-modules/timer";
 import { RadListViewComponent } from "nativescript-ui-listview/angular";
@@ -30,7 +30,7 @@ export class ListViewFixedSizeAutoWithSmallSourceComponent implements OnInit {
 
     ngOnInit() {
         this.layout = new ListViewLinearLayout();
-        this.layout.scrollDirection = "Vertical";
+        this.layout.scrollDirection = ListViewScrollDirection.Vertical;
         this._sourceDataItems = new ObservableArray<DataItem>();
         this.initSourceDataItems(1);
         this._dataItems = new ObservableArray<DataItem>();
