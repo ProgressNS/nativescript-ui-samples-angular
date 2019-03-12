@@ -19,7 +19,7 @@ import * as platform from "tns-core-modules/platform";
 export class CalendarEventsViewModesComponent extends OptionsExampleBase implements OnInit {
     private _events: Array<CalendarEvent>;
     private _optionsParamName: string;
-    private _eventsViewMode;
+    private _eventsViewMode: CalendarEventsViewMode;
     constructor(private _page: Page, private _calendarService: CalendarEventsService,
         private _optionsService: OptionsService, private _router: Router) {
         super();

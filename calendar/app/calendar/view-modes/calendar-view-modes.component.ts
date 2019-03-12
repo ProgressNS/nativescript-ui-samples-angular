@@ -1,10 +1,9 @@
 import { OptionsExampleBase } from "../../options-example-base";
-import { Component, OnInit, Injectable } from "@angular/core";
+import { Component, Injectable } from "@angular/core";
 import { Router } from '@angular/router';
-import { Page, NavigatedData } from "tns-core-modules/ui/page";
+import { Page } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
-import { RadCalendar, CalendarViewMode } from "nativescript-ui-calendar";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { CalendarViewMode } from "nativescript-ui-calendar";
 import * as applicationModule from "tns-core-modules/application";
 
 @Component({
@@ -15,7 +14,7 @@ import * as applicationModule from "tns-core-modules/application";
 @Injectable()
 export class CalendarViewModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
-    private _viewMode;
+    private _viewMode: CalendarViewMode;
 
     constructor(private _page: Page,
         private _optionsService: OptionsService, private _router: Router) {

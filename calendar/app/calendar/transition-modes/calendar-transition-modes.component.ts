@@ -1,6 +1,6 @@
 import { Component, Injectable } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page";
-import { RadCalendar, CalendarTransitionMode } from "nativescript-ui-calendar";
+import { CalendarTransitionMode } from "nativescript-ui-calendar";
 import { OptionsService } from "../../navigation/options/options.service";
 import * as applicationModule from "tns-core-modules/application";
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ import { OptionsExampleBase } from "../../options-example-base";
 @Injectable()
 export class CalendarTransitionModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
-    private _transitionMode;
+    private _transitionMode: CalendarTransitionMode;
     constructor(private _page: Page, private _optionsService: OptionsService, private _router: Router) {
         super();
         if (applicationModule.ios) {
