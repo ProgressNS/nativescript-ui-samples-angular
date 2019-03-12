@@ -2,8 +2,7 @@ import { OptionsExampleBase } from "../../options-example-base";
 import { Component, Injectable, ViewChild } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page";
-import { RadCalendar, CalendarSelectionMode } from "nativescript-ui-calendar";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { CalendarSelectionMode } from "nativescript-ui-calendar";
 import * as applicationModule from "tns-core-modules/application";
 import { OptionsService } from "../../navigation/options/options.service";
 import { RadCalendarComponent } from "nativescript-ui-calendar/angular";
@@ -17,7 +16,7 @@ import { RadCalendarComponent } from "nativescript-ui-calendar/angular";
 // >> angular-calendar-selection-modes
 export class CalendarSelectionModesComponent extends OptionsExampleBase {
     private _optionsParamName: string;
-    private _selectionMode;
+    private _selectionMode: CalendarSelectionMode;
     constructor(private _page: Page, private _router: Router, private _optionsService: OptionsService) {
         super();
         if (applicationModule.ios) {
