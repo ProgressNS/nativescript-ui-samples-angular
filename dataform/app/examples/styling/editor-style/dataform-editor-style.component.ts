@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { PersonBase } from "../../data-services/person";
-import { FontStyles, PropertyEditor, RadDataForm } from "nativescript-ui-dataform";
+import { DataFormFontStyle, PropertyEditor } from "nativescript-ui-dataform";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
+import { Color } from "tns-core-modules/color";
 
 @Component({
     moduleId: module.id,
@@ -35,9 +36,9 @@ export class DataformEditorStyleComponent implements OnInit, AfterViewInit {
     }
 
     public onSet(args) {
-        this._nameEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
-        this._ageEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
-        this._birthDateEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
+        this._nameEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
+        this._ageEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
+        this._birthDateEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
 
         this._nameEditor.propertyEditorStyle.labelFontName = "Times New Roman";
         this._ageEditor.propertyEditorStyle.labelFontName = "Times New Roman";
@@ -47,8 +48,8 @@ export class DataformEditorStyleComponent implements OnInit, AfterViewInit {
         this._ageEditor.propertyEditorStyle.labelTextSize = 20;
         this._birthDateEditor.propertyEditorStyle.labelTextSize = 20;
 
-        this._nameEditor.propertyEditorStyle.labelTextColor = "orange";
-        this._ageEditor.propertyEditorStyle.labelTextColor = "purple";
-        this._birthDateEditor.propertyEditorStyle.labelTextColor = "lime";
+        this._nameEditor.propertyEditorStyle.labelTextColor = new Color("orange");
+        this._ageEditor.propertyEditorStyle.labelTextColor = new Color("purple");
+        this._birthDateEditor.propertyEditorStyle.labelTextColor = new Color("lime");
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { CommitMode } from "nativescript-ui-dataform";
+import { DataFormCommitMode } from "nativescript-ui-dataform";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 import { SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 import { User } from "../data-services/user";
@@ -67,15 +67,15 @@ export class DataFormCommitModesComponent implements OnInit {
     public onSelectedIndexChanged(eventData: SelectedIndexChangedEventData) {
         switch (eventData.newIndex) {
             case 0:
-                this._commitMode = CommitMode.Immediate;
+                this._commitMode = DataFormCommitMode.Immediate;
                 this._isEnabled = false;
                 break;
             case 1:
-                this._commitMode = CommitMode.OnLostFocus;
+                this._commitMode = DataFormCommitMode.OnLostFocus;
                 this._isEnabled = false;
                 break;
             case 2:
-                this._commitMode = CommitMode.Manual;
+                this._commitMode = DataFormCommitMode.Manual;
                 this._isEnabled = true;
                 break;
         }

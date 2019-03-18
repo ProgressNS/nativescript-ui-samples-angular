@@ -3,7 +3,7 @@ import { Employee } from "../../data-services/employee";
 import { layout } from "tns-core-modules/utils/utils";
 import { ios } from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";
-import { RadDataForm, DataFormEventData } from "nativescript-ui-dataform";
+import { RadDataForm, DataFormEventData, DataFormEditorType, EntityProperty } from "nativescript-ui-dataform";
 
 @Component({
     moduleId: module.id,
@@ -34,7 +34,8 @@ export class DataFormEditorBackgroundComponent implements OnInit {
 
 
     public dfEditorUpdate(args: DataFormEventData) {
-        const entityProperty = (<RadDataForm>args.object).getPropertyByName(args.propertyName);
+        const dataForm = <RadDataForm>args.object;
+        const entityProperty = <EntityProperty>dataForm.getPropertyByName(args.propertyName);
         const editor = args.editor;
         const editorType = entityProperty.editor.type;
 
@@ -82,22 +83,22 @@ export class DataFormEditorBackgroundComponent implements OnInit {
         // << angular-dataform-background-update
     }
 
-    private _editorNeedsUpdate(type) {
+    private _editorNeedsUpdate(type: DataFormEditorType) {
         return this._editorHasValueLabel(type) || this._editorIsTextField(type);
     }
 
-    private _editorHasValueLabel(type) {
-        return type === "DatePicker" ||
-            type === "TimePicker" ||
-            type === "Picker";
+    private _editorHasValueLabel(type: DataFormEditorType) {
+        return type === DataFormEditorType.DatePicker ||
+            type === DataFormEditorType.TimePicker ||
+            type === DataFormEditorType.Picker;
     }
 
-    private _editorIsTextField(type) {
-        return type === "Text" ||
-            type === "Email" ||
-            type === "Password" ||
-            type === "Phone" ||
-            type === "Number" ||
-            type === "Decimal";
+    private _editorIsTextField(type: DataFormEditorType) {
+        return type === DataFormEditorType.Text ||
+            type === DataFormEditorType.Email ||
+            type === DataFormEditorType.Password ||
+            type === DataFormEditorType.Phone ||
+            type === DataFormEditorType.Number ||
+            type === DataFormEditorType.Decimal;
     }
 }

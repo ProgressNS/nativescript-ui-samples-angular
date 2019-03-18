@@ -1,0 +1,25 @@
+<GridLayout rows="auto, auto, *" columns="*, *" tkExampleTitle tkToggleNavButton>
+    <Button text="load defaults values" (tap)="onSetDefaults()"></Button>
+    <Button col="1" text="load null values" (tap)="onSetEmpty()"></Button>
+    <Button row="1" colSpan="2" text="log dates" (tap)="onLogDates()"></Button>
+	<RadDataForm #dataform row="2" colSpan="2"  [source]="datesCollection">
+        <TKEntityProperty tkDataFormProperty name="stringDate" index="0">
+            <TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="dateDate" index="1">
+            <TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="timestampDate" index="2" [converter]="timestampConverter">
+            <TKPropertyEditor tkEntityPropertyEditor type="DatePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="stringTime" index="3">
+            <TKPropertyEditor tkEntityPropertyEditor type="TimePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="dateTime" index="4">
+            <TKPropertyEditor tkEntityPropertyEditor type="TimePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="timestampTime" index="5" [converter]="timestampConverter">
+            <TKPropertyEditor tkEntityPropertyEditor type="TimePicker"></TKPropertyEditor>
+        </TKEntityProperty>
+	</RadDataForm>
+</GridLayout>

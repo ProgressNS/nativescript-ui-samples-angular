@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Button } from "tns-core-modules/ui/button";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
-import { PropertyEditor } from "nativescript-ui-dataform";
+import { PropertyEditor, DataFormEditorType } from "nativescript-ui-dataform";
 import { Person } from "../data-services/person";
+import { Color } from "tns-core-modules/color";
 
 @Component({
     moduleId: module.id,
@@ -99,7 +100,7 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
     public changeEditor() {
         const property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("age");
         const propertyEditor = new PropertyEditor();
-        propertyEditor.type = "Slider";
+        propertyEditor.type = DataFormEditorType.Slider;
         property.editor = propertyEditor;
     }
     // << angular-dataform-editors-code
@@ -107,14 +108,14 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
     // >> angular-dataform-getting-started-runtime-change
     public changeEditorFill() {
         const property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
-        property.editor.propertyEditorStyle.fillColor = "LightBlue";
+        property.editor.propertyEditorStyle.fillColor = new Color("LightBlue");
     }
     // << angular-dataform-getting-started-runtime-change
 
     public changeEditorStroke() {
         const property = this.myRuntimeDataFormComp.dataForm.getPropertyByName("name");
         property.editor.propertyEditorStyle.strokeWidth = 4;
-        property.editor.propertyEditorStyle.strokeColor = "Yellow";
+        property.editor.propertyEditorStyle.strokeColor = new Color("Yellow");
     }
 
     public changeGroupCollapsible(value) {
@@ -130,7 +131,7 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
     // >> angular-dataform-groups-code
     public changeGroupLabelTextColor() {
         const group = this.myRuntimeDataFormComp.dataForm.getGroupByName("Main Info");
-        group.titleStyle.labelTextColor = "Blue";
+        group.titleStyle.labelTextColor = new Color("Blue");
     }
     // << angular-dataform-groups-code
 

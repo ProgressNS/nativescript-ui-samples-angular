@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { ValidationMode } from "nativescript-ui-dataform";
+import { DataFormValidationMode } from "nativescript-ui-dataform";
 import { User } from "../../data-services/user";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 import { SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
@@ -59,15 +59,15 @@ export class DataFormValidationModesComponent implements OnInit {
     public onSelectedIndexChanged(eventData: SelectedIndexChangedEventData) {
         switch (eventData.newIndex) {
             case 0:
-                this._validationMode = ValidationMode.Immediate;
+                this._validationMode = DataFormValidationMode.Immediate;
                 this._isEnabled = false;
                 break;
             case 1:
-                this._validationMode = ValidationMode.OnLostFocus;
+                this._validationMode = DataFormValidationMode.OnLostFocus;
                 this._isEnabled = false;
                 break;
             case 2:
-                this._validationMode = ValidationMode.Manual;
+                this._validationMode = DataFormValidationMode.Manual;
                 this._isEnabled = true;
                 break;
         }

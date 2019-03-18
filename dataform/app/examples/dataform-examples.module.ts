@@ -8,6 +8,7 @@ import { DataFormAdjustmentComponent } from './adjustment/dataform-adjustment.co
 import { DataFormCommitModesComponent } from './commit-modes/dataform-commit-modes.component';
 import { DataFormaAutoCompleteComponent } from './editors/autocomplete/dataform-autocomplete.component';
 import { DataformCustomEditorsComponent } from './editors/custom-editors/dataform-custom-editors.component';
+import { DataFormDateTimeComponent } from './editors/datetime/dataform-datetime.component';
 import { DataFormLabelsComponent } from './editors/labels/dataform-labels.component';
 import { DataformReadOnlyComponent } from './editors/readonly/dataform-read-only.component';
 import { DataFormEditorsComponent } from './editors/dataform-editors.component';
@@ -57,6 +58,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         DataFormCommitModesComponent,
         DataFormaAutoCompleteComponent,
         DataformCustomEditorsComponent,
+        DataFormDateTimeComponent,
         DataFormLabelsComponent,
         DataformReadOnlyComponent,
         DataFormEditorsComponent,
