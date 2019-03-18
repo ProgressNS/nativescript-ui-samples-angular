@@ -45,6 +45,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Date Time",
+                        "path": "DataFormDateTimeComponent/DataFormDateTimeComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Custom Editors",
                         "path": "DataformCustomEditorsComponent/DataformCustomEditorsComponent",
                         "subItems": []

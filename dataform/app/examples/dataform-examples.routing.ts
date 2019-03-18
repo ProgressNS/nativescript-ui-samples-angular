@@ -5,6 +5,7 @@ import { DataFormAdjustmentComponent } from './adjustment/dataform-adjustment.co
 import { DataFormCommitModesComponent } from './commit-modes/dataform-commit-modes.component';
 import { DataFormaAutoCompleteComponent } from './editors/autocomplete/dataform-autocomplete.component';
 import { DataformCustomEditorsComponent } from './editors/custom-editors/dataform-custom-editors.component';
+import { DataFormDateTimeComponent } from './editors/datetime/dataform-datetime.component';
 import { DataFormLabelsComponent } from './editors/labels/dataform-labels.component';
 import { DataformReadOnlyComponent } from './editors/readonly/dataform-read-only.component';
 import { DataFormEditorsComponent } from './editors/dataform-editors.component';
@@ -42,6 +43,7 @@ export const routes: Routes = [
   { path: 'DataFormCommitModesComponent', component: DataFormCommitModesComponent },
   { path: 'DataFormaAutoCompleteComponent', component: DataFormaAutoCompleteComponent },
   { path: 'DataformCustomEditorsComponent', component: DataformCustomEditorsComponent },
+  { path: 'DataFormDateTimeComponent', component: DataFormDateTimeComponent },
   { path: 'DataFormLabelsComponent', component: DataFormLabelsComponent },
   { path: 'DataformReadOnlyComponent', component: DataformReadOnlyComponent },
   { path: 'DataFormEditorsComponent', component: DataFormEditorsComponent },

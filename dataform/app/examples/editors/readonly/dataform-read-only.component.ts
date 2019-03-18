@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Booking } from "../../data-services/booking";
 import { MovieConverter } from "../../data-services/movie-converter";
 const data = require("../../data-services/airports.json");
 

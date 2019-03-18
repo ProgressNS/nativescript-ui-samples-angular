@@ -256,6 +256,13 @@ let APP_ROUTES: Routes = [
         data: {
             "title": "Custom Editors"
         }
+    },
+    {
+        path: "DataFormDateTimeComponent",
+        loadChildren: './examples/dataform-examples.module#DataFormExamplesModule',
+        data: {
+            "title": "Date Time Editors"
+        }
     }
 ];
 

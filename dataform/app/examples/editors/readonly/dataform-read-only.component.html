@@ -3,10 +3,10 @@
 	<!-- >> angular-dataform-form-readonly-html -->
 	<RadDataForm [source]="booking" row="1" [isReadOnly]="isReadOnly">
 	<!-- << angular-dataform-form-readonly-html -->
-		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" [valuesProvider]="fromProviders">
+		<TKEntityProperty tkDataFormProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="Tokens" [valuesProvider]="fromProviders">
 			<TKPropertyEditor tkEntityPropertyEditor id="1" type="AutoCompleteInline"></TKPropertyEditor>
 		</TKEntityProperty>
-		<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
+		<TKEntityProperty tkDataFormProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="Plain" valuesProvider="New York, Washington, Los Angeles">
 			<TKPropertyEditor tkEntityPropertyEditor id="2" type="AutoCompleteInline"></TKPropertyEditor>
 		</TKEntityProperty>
 		<TKEntityProperty tkDataFormProperty name="movie" displayName="Movie Name" index="2" [converter]="movieConverter" [valuesProvider]="movieNames">
