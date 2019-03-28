@@ -1,15 +1,16 @@
 import { Observable } from 'tns-core-modules/data/observable';
+import { Color } from "tns-core-modules/color";
 
 export class StyleBindingsModel extends Observable {
 
     public title: string;
-    public titleTextColor: string;
+    public titleTextColor: Color;
     public titleTextSize: number;
     public titleVerticalOffset: number;
     public titleHorizontalOffset: number;
 
     public subtitle: string;
-    public subtitleTextColor: string;
+    public subtitleTextColor: Color;
     public subtitleTextSize: number;
     public subtitleVerticalOffset: number;
     public subtitleHorizontalOffset: number;
@@ -19,8 +20,8 @@ export class StyleBindingsModel extends Observable {
     public majorTicksWidth: number;
     public minorTicksWidth: number;
     public lineThickness: number;
-    public lineColor: string;
-    public labelsColor: string;
+    public lineColor: Color;
+    public labelsColor: Color;
     public labelsCount: number;
     public androidLabelsSize: number;
     public iosLabelsSize: number;
@@ -29,16 +30,16 @@ export class StyleBindingsModel extends Observable {
     public needleValue: number;
     public needleLength: number;
     public circleRadius: number;
-    public fillColor: string;
-    public strokeColor: string;
+    public fillColor: Color;
+    public strokeColor: Color;
     public strokeWidth: number;
     public bottomWidth: number;
     public topWidth: number;
 
     public firstPoint: number;
     public secondPoint: number;
-    public firstColor: string;
-    public secondColor: string;
+    public firstColor: Color;
+    public secondColor: Color;
     public barWidth: number;
 
     constructor() {
@@ -79,14 +80,14 @@ export class StyleBindingsModel extends Observable {
 
     public onUpdate() {
         this.set("needleValue", 136);
-        this.set("titleTextColor", "DarkRed");
-        this.set("subtitleTextColor", "Red");
-        this.set("fillColor", "Red");
-        this.set("firstColor", "LightGray");
-        this.set("labelsColor", "DarkRed");
-        this.set("lineColor", "SlateGray");
-        this.set("secondColor", "Black");
-        this.set("strokeColor", "DarkGray");
+        this.set("titleTextColor", new Color("DarkRed"));
+        this.set("subtitleTextColor", new Color("Red"));
+        this.set("fillColor", new Color("Red"));
+        this.set("firstColor", new Color("LightGray"));
+        this.set("labelsColor", new Color("DarkRed"));
+        this.set("lineColor", new Color("SlateGray"));
+        this.set("secondColor", new Color("Black"));
+        this.set("strokeColor", new Color("DarkGray"));
     }
 
     public onReset() {
@@ -99,13 +100,13 @@ export class StyleBindingsModel extends Observable {
     }
 
     resetColors() {
-        this.set("titleTextColor", "DarkGreen");
-        this.set("subtitleTextColor", "Green");
-        this.set("labelsColor", "Green");
-        this.set("lineColor", "Orange");
-        this.set("fillColor", "#9DCA56");
-        this.set("firstColor", "#9DCA56");
-        this.set("secondColor", "#F0C44D");
-        this.set("strokeColor", "Gray");
+        this.set("titleTextColor", new Color("DarkGreen"));
+        this.set("subtitleTextColor", new Color("Green"));
+        this.set("labelsColor", new Color("Green"));
+        this.set("lineColor", new Color("Orange"));
+        this.set("fillColor", new Color("#9DCA56"));
+        this.set("firstColor", new Color("#9DCA56"));
+        this.set("secondColor", new Color("#F0C44D"));
+        this.set("strokeColor", new Color("Gray"));
     }
 }
