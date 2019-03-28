@@ -4,7 +4,7 @@ import { Component, AfterViewInit, OnInit, Injectable, ChangeDetectorRef } from 
 import { Router } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page";
 import * as applicationModule from "tns-core-modules/application";
-import { RadCartesianChart } from "nativescript-ui-chart";
+import { ChartSeriesStackMode } from "nativescript-ui-chart";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Country } from '../../data-services/country';
 import { DataService } from '../../data-services/data.service';
@@ -62,15 +62,15 @@ export class ChartSeriesStackedAreaComponent extends OptionsExampleBase implemen
     }
 
     onNoneStackModeSelected() {
-        this.set("stackMode", "None");
+        this.set("stackMode", ChartSeriesStackMode.None);
     }
 
     onStackModeSelected() {
-        this.set("stackMode", "Stack");
+        this.set("stackMode", ChartSeriesStackMode.Stack);
     }
 
     onStack100ModeSelected() {
-        this.set("stackMode", "Stack100");
+        this.set("stackMode", ChartSeriesStackMode.Stack100);
     }
 
     public onNavigatingTo(args) {

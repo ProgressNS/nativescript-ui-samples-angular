@@ -7,6 +7,7 @@ import * as applicationModule from "tns-core-modules/application";
 import { DataService } from '../../data-services/data.service';
 import { Country } from '../../data-services/country';
 import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { ChartSeriesStackMode } from "nativescript-ui-chart";
 
 @Component({
     moduleId: module.id,
@@ -50,15 +51,15 @@ export class ChartSeriesStackedBarComponent extends OptionsExampleBase implement
     }
 
     onNoneStackModeSelected() {
-        this.set("stackMode", "None");
+        this.set("stackMode", ChartSeriesStackMode.None);
     }
 
     onStackModeSelected() {
-        this.set("stackMode", "Stack");
+        this.set("stackMode", ChartSeriesStackMode.Stack);
     }
 
     onStack100ModeSelected() {
-        this.set("stackMode", "Stack100");
+        this.set("stackMode", ChartSeriesStackMode.Stack100);
     }
 
     public onNavigatingTo(args) {
