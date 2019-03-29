@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
 import { TitleStyle, SubtitleStyle, BarIndicatorStyle, ScaleStyle, NeedleStyle,
     RadRadialGauge, RadialScale, BarIndicator, RadialNeedle } from "nativescript-ui-gauge";
 import { StyleBindingsModel } from "./gauges-style-bindings-model";
+import { Color } from "tns-core-modules/color";
 
 @Component({
     moduleId: module.id,
@@ -42,16 +43,16 @@ export class GaugesStyleBindingsComponent implements OnInit {
 
     public onUpdate() {
         this._needle.value = 136;
-        this._titleStyle.textColor = "DarkRed";
-        this._subtitleStyle.textColor = "Red";
-        this._needleStyle.fillColor = "Red";
-        this._needleStyle.circleFillColor = "Red";
-        this._needleStyle.strokeColor = "DarkGray";
-        this._needleStyle.circleStrokeColor = "DarkGray";
-        this._firstIndicatorStyle.fillColor = "LightGray";
-        this._secondIndicatorStyle.fillColor = "Black";
-        this._scaleStyle.lineColor = "SlateGray";
-        this._scaleStyle.labelsColor = "DarkRed";
+        this._titleStyle.textColor = new Color("DarkRed");
+        this._subtitleStyle.textColor = new Color("Red");
+        this._needleStyle.fillColor = new Color("Red");
+        this._needleStyle.circleFillColor = new Color("Red");
+        this._needleStyle.strokeColor = new Color("DarkGray");
+        this._needleStyle.circleStrokeColor = new Color("DarkGray");
+        this._firstIndicatorStyle.fillColor = new Color("LightGray");
+        this._secondIndicatorStyle.fillColor = new Color("Black");
+        this._scaleStyle.lineColor = new Color("SlateGray");
+        this._scaleStyle.labelsColor = new Color("DarkRed");
     }
 
     public onReset() {
