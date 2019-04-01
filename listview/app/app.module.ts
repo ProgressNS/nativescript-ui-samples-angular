@@ -12,15 +12,15 @@ import { OptionsComponent } from "./navigation/options/options.component";
 import { COMMON_DIRECTIVES } from './navigation/directives';
 import { CommonDirectivesModule } from './navigation/directives/common-directives.module';
 
-import { TNSFrescoModule } from "nativescript-fresco/angular";
+import { TNSImageModule } from "nativescript-image/angular";
 
 // >> (hide)
 import * as applicationModule from "tns-core-modules/application";
-import * as frescoModule from "nativescript-fresco";
+import * as imageModule from "nativescript-image";
 
 if (applicationModule.android) {
     applicationModule.on("launch", () => {
-        frescoModule.initialize();
+        imageModule.initialize();
     });
 }
 // << (hide)
@@ -37,7 +37,7 @@ if (applicationModule.android) {
     imports: [
         NativeScriptModule,
         CommonDirectivesModule,
-        TNSFrescoModule,
+        TNSImageModule,
         NativeScriptFormsModule,
         NativeScriptUIListViewModule,
         NativeScriptRouterModule,
