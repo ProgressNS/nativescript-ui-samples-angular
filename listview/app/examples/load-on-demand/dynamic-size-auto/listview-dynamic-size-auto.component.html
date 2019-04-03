@@ -3,8 +3,7 @@
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
                 <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
-                    <Image *tkIfIOS [src]="item.image" stretch="aspectFit" width="100"></Image>
-                    <FrescoDrawee *tkIfAndroid height="100" width="100" [imageUri]="item.image"></FrescoDrawee>
+                    <NSImg height="100" width="100" [src]="item.image"></NSImg>
 
                     <StackLayout class="labelsStackLayout" orientation="vertical">
                         <Label class="labelName" [text]="item.name"></Label>

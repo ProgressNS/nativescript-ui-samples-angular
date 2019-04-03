@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "nativescript-angular": "~7.2.0",
-    "nativescript-fresco": "^5.1.0",
+    "nativescript-image": "~2.1.0",
     "nativescript-theme-core": "~1.0.4",
     "nativescript-ui-core": "*",
     "nativescript-ui-listview": "*",
