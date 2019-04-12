@@ -41,6 +41,7 @@ import { ListViewDataOperationsFilteringComponent } from './filtering/listview-d
 import { ListViewDataOperationsGroupingComponent } from './grouping/listview-data-operations-grouping.component';
 import { ListViewDataOperationsGroupingTemplatesComponent } from './grouping-multiple-templates/listview-data-operations-grouping-templates.component';
 import { ListviewDataOperationsGroupingCollapsibleComponent } from './grouping-collapsible/listview-data-operations-grouping-collapsible.component';
+import { ListViewDataOperationsGroupingScrollToComponent } from './grouping-scroll-to/grouping-scroll-to.component';
 import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
 import { ListViewDataOperationsMultipleWithSwipeComponent } from './multiple-operations-with-swipe/listview-multiple-operations-with-swipe.component';
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
@@ -89,6 +90,7 @@ export const routes: Routes = [
   { path: 'ListViewDataOperationsGroupingComponent', component: ListViewDataOperationsGroupingComponent },
   { path: 'ListViewDataOperationsGroupingTemplatesComponent', component: ListViewDataOperationsGroupingTemplatesComponent },
   { path: 'ListviewDataOperationsGroupingCollapsibleComponent', component: ListviewDataOperationsGroupingCollapsibleComponent },
+  { path: 'ListViewDataOperationsGroupingScrollToComponent', component: ListViewDataOperationsGroupingScrollToComponent },
   { path: 'ListViewDataOperationsMultipleComponent', component: ListViewDataOperationsMultipleComponent },
   { path: 'ListViewDataOperationsMultipleWithSwipeComponent', component: ListViewDataOperationsMultipleWithSwipeComponent },
   { path: 'ListViewDataOperationsSortingComponent', component: ListViewDataOperationsSortingComponent },

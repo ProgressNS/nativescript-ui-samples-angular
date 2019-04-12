@@ -68,6 +68,13 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ListViewDataOperationsGroupingScrollToComponent",
+        loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Grouping with Scroll to Index"
+        }
+    },
+    {
         path: "ListViewDataOperationsMultipleComponent",
         loadChildren: './examples/listview-examples.module#ListViewExamplesModule',
         data: {

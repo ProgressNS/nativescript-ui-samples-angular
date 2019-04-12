@@ -47,6 +47,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
+                        "title": "Grouping with Scroll to Index",
+                        "path": "ListViewDataOperationsGroupingScrollToComponent/ListViewDataOperationsGroupingScrollToComponent",
+                        "subItems": []
+                    },
+                    {
                         "title": "Grouping with multiple templates",
                         "path": "ListViewDataOperationsGroupingTemplatesComponent/ListViewDataOperationsGroupingTemplatesComponent",
                         "subItems": []

@@ -45,6 +45,7 @@ import { ListViewDataOperationsFilteringComponent } from './filtering/listview-d
 import { ListViewDataOperationsGroupingComponent } from './grouping/listview-data-operations-grouping.component';
 import { ListViewDataOperationsGroupingTemplatesComponent } from './grouping-multiple-templates/listview-data-operations-grouping-templates.component';
 import { ListviewDataOperationsGroupingCollapsibleComponent } from './grouping-collapsible/listview-data-operations-grouping-collapsible.component';
+import { ListViewDataOperationsGroupingScrollToComponent } from './grouping-scroll-to/grouping-scroll-to.component';
 import { ListViewDataOperationsMultipleComponent } from './multiple-operations/listview-data-operations-multiple.component';
 import { ListViewDataOperationsMultipleWithSwipeComponent } from './multiple-operations-with-swipe/listview-multiple-operations-with-swipe.component';
 import { ListViewDataOperationsSortingComponent } from './sorting/listview-data-operations-sorting.component';
@@ -106,6 +107,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewDataOperationsGroupingComponent,
         ListViewDataOperationsGroupingTemplatesComponent,
         ListviewDataOperationsGroupingCollapsibleComponent,
+        ListViewDataOperationsGroupingScrollToComponent,
         ListViewDataOperationsMultipleComponent,
         ListViewDataOperationsSortingComponent,
         ListViewWithBigDataComponent,

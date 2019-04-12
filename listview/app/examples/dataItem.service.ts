@@ -86,6 +86,15 @@ export class DataItemService {
         ];
     }
 
+    getGroupedIndexOfSize(size: number) {
+        let items = [];
+        for (let i = 0; i < size; i++) {
+            items.push(new DataItem(i, "item " + i, "description " + i, null, null, null, false, null, i % 2 === 0 ? "Group 1" : "Group 2"));
+        }
+
+        return items;
+    }
+
     getVariableWidthItems(): DataItem[] {
         const result = new Array<DataItem>();
         for (let i = 0; i < 10; i++) {
