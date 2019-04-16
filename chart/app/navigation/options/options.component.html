@@ -1,5 +1,5 @@
 <GridLayout tkExampleTitle tkToggleNavButton>
-    <ListView #optionsListView selectionBehavior="Press" [items]="dataItems" (itemTap)="onItemTap($event)">
+    <ListView #optionsListView [items]="dataItems" (itemTap)="onItemTap($event)">
         <ng-template let-item="item">
             <StackLayout>
                 <Label class="titleLabel" [text]="item" textWrap="true"></Label>
