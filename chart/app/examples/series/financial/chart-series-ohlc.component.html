@@ -3,7 +3,13 @@
     <DateTimeCategoricalAxis tkCartesianHorizontalAxis dateFormat="yyyy-MM-dd" verticalLocation="Bottom"></DateTimeCategoricalAxis>
     <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-    <OhlcSeries tkCartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close"
-        [items]="ohlcSourceItems"></OhlcSeries>
+    <OhlcSeries tkCartesianSeries
+        categoryProperty="Date"
+        openPropertyName="Open"
+        highPropertyName="High"
+        lowPropertyName="Low"
+        closePropertyName="Close"
+        [items]="ohlcSourceItems">
+    </OhlcSeries>
 </RadCartesianChart>
 <!-- << chart-angular-ohlc-series -->

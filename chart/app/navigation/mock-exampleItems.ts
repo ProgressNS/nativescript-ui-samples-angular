@@ -11,17 +11,17 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "path": "",
                 "subItems": [
                     {
-                        "title": "Bar series",
+                        "title": "Bar Series",
                         "path": "ChartSeriesBarComponent/ChartSeriesBarComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Range Bar series",
+                        "title": "Range Bar Series",
                         "path": "ChartSeriesRangeBarComponent/ChartSeriesRangeBarComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Stacked Bar series",
+                        "title": "Stacked Bar Series",
                         "path": "ChartSeriesStackedBarComponent/ChartSeriesStackedBarComponent",
                         "subItems": []
                     },
@@ -36,47 +36,47 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Line series",
+                        "title": "Line Series",
                         "path": "ChartSeriesLineComponent/ChartSeriesLineComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Spline series",
+                        "title": "Spline Series",
                         "path": "ChartSeriesSplineComponent/ChartSeriesSplineComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Spline Area series",
+                        "title": "Spline Area Series",
                         "path": "ChartSeriesSplineAreaComponent/ChartSeriesSplineAreaComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Bubble series",
+                        "title": "Bubble Series",
                         "path": "ChartSeriesBubbleComponent/ChartSeriesBubbleComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Scatter Bubble series",
+                        "title": "Scatter Bubble Series",
                         "path": "ChartSeriesScatterBubbleComponent/ChartSeriesScatterBubbleComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Candlestick series",
+                        "title": "Candlestick Series",
                         "path": "ChartSeriesCandlestickComponent/ChartSeriesCandlestickComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Ohlc series",
+                        "title": "Ohlc Series",
                         "path": "ChartSeriesOhlcComponent/ChartSeriesOhlcComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Pie series",
+                        "title": "Pie Series",
                         "path": "ChartSeriesPieComponent/ChartSeriesPieComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Scatter series",
+                        "title": "Scatter Series",
                         "path": "ChartSeriesScatterComponent/ChartSeriesScatterComponent",
                         "subItems": []
                     }
@@ -87,17 +87,17 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "path": "",
                 "subItems": [
                     {
-                        "title": "Styling axes",
+                        "title": "Styling Axes",
                         "path": "ChartStylingAxesComponent/ChartStylingAxesComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Styling series",
+                        "title": "Styling Series",
                         "path": "ChartStylingSeriesComponent/ChartStylingSeriesComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Styling Pie Chart series",
+                        "title": "Styling Pie Series",
                         "path": "ChartStylingPieSeriesComponent/ChartStylingPieSeriesComponent",
                         "subItems": []
                     },
@@ -107,22 +107,22 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Styling grid",
+                        "title": "Styling Grid",
                         "path": "ChartStylingGridComponent/ChartStylingGridComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Styling labels",
+                        "title": "Styling Labels",
                         "path": "ChartStylingLabelComponent/ChartStylingLabelComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Styling ticks",
+                        "title": "Styling Ticks",
                         "path": "ChartStylingTicksComponent/ChartStylingTicksComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Styling series selection",
+                        "title": "Styling Series Selection",
                         "path": "ChartStylingSelectionComponent/ChartStylingSelectionComponent",
                         "subItems": []
                     },
@@ -143,11 +143,6 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Pie selection",
-                        "path": "ChartBehaviorsChartPieSelectionComponent/ChartBehaviorsChartPieSelectionComponent",
-                        "subItems": []
-                    },
-                    {
                         "title": "Trackball",
                         "path": "ChartBehaviorsTrackballComponent/ChartBehaviorsTrackballComponent",
                         "subItems": []
@@ -158,12 +153,17 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Series selection",
+                        "title": "Pie Selection",
+                        "path": "ChartBehaviorsChartPieSelectionComponent/ChartBehaviorsChartPieSelectionComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Series Selection",
                         "path": "ChartBehaviorsSeriesSelectionComponent/ChartBehaviorsSeriesSelectionComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Datapoint selection",
+                        "title": "Datapoint Selection",
                         "path": "ChartBehaviorsDatapointSelectionComponent/ChartBehaviorsDatapointSelectionComponent",
                         "subItems": []
                     }
@@ -179,22 +179,22 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Multiple axes",
+                        "title": "Multiple Axes",
                         "path": "ChartAxesMultipleComponent/ChartAxesMultipleComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Negative values",
+                        "title": "Negative Values",
                         "path": "ChartAxesNegativeValuesComponent/ChartAxesNegativeValuesComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Date time axis",
+                        "title": "DateTime Axis",
                         "path": "ChartAxesDateTimeComponent/ChartAxesDateTimeComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Label visibility",
+                        "title": "Label Visibility",
                         "path": "ChartLabelVisibilityComponent/ChartLabelVisibilityComponent",
                         "subItems": []
                     }
@@ -205,12 +205,12 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "path": "",
                 "subItems": [
                     {
-                        "title": "Plot band",
+                        "title": "Plot Band",
                         "path": "ChartAnnotationsPlotBandComponent/ChartAnnotationsPlotBandComponent",
                         "subItems": []
                     },
                     {
-                        "title": "Grid line",
+                        "title": "Grid Line",
                         "path": "ChartAnnotationsGridLineComponent/ChartAnnotationsGridLineComponent",
                         "subItems": []
                     }

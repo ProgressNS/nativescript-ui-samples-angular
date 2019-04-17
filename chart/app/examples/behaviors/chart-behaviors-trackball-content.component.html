@@ -4,11 +4,16 @@
         <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
         <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-        <SplineSeries tkCartesianSeries legendTitle="Bangkok" seriesName="Line1" [items]="categoricalSource" categoryProperty="Month" valueProperty="Bangkok"></SplineSeries>
-        <SplineSeries tkCartesianSeries legendTitle="Paris" seriesName="Line2" [items]="categoricalSource" categoryProperty="Month" valueProperty="Paris"></SplineSeries>
-        <SplineSeries tkCartesianSeries legendTitle="Ulaanbaatar" seriesName="Line3" [items]="categoricalSource" categoryProperty="Month" valueProperty="Ulaanbaatar"></SplineSeries>
+        <SplineSeries tkCartesianSeries legendTitle="Bangkok" seriesName="Line1"
+            [items]="categoricalSource" categoryProperty="Month" valueProperty="Bangkok"></SplineSeries>
+        <SplineSeries tkCartesianSeries legendTitle="Paris" seriesName="Line2"
+            [items]="categoricalSource" categoryProperty="Month" valueProperty="Paris"></SplineSeries>
+        <SplineSeries tkCartesianSeries legendTitle="Ulaanbaatar" seriesName="Line3"
+            [items]="categoricalSource" categoryProperty="Month" valueProperty="Ulaanbaatar"></SplineSeries>
 
-        <Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true" (trackBallContentRequested)="onTrackBallContentRequested($event)"></Trackball>
+        <Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"
+            (trackBallContentRequested)="onTrackBallContentRequested($event)">
+        </Trackball>
 
         <RadLegendView tkCartesianLegend position="Top" title="Monthly Averages (&#8451;)"></RadLegendView>
 
