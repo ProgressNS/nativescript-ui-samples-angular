@@ -1,11 +1,20 @@
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
-    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
-    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    <!-- >> chart-angular-grid-styling -->
+    <RadCartesianChartGrid tkCartesianGrid
+        horizontalLinesVisible="true"
+        verticalLinesVisible="true"
+        horizontalStripLinesVisible="true"
+        verticalStripLinesVisible="true"
+        horizontalStrokeColor="#ffffcc80"
+        verticalStrokeColor="#804d0026"
+        horizontalStrokeWidth="2"
+        verticalStrokeWidth="3"
+        horizontalStripLineColor="#8059005c, #804d0026">
+    </RadCartesianChartGrid>
+    <!-- << chart-angular-grid-styling -->
 
     <BarSeries tkCartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></BarSeries>
-    <!-- >> chart-angular-grid-styling -->
-    <RadCartesianChartGrid tkCartesianGrid horizontalLinesVisible="true" verticalLinesVisible="true" horizontalStripLinesVisible="true"
-        verticalStripLinesVisible="true" verticalStrokeColor="#804d0026" horizontalStrokeColor="#ffffcc80" horizontalStrokeWidth="2"
-        verticalStrokeWidth="3" horizontalStripLineColor="#8059005c, #804d0026"></RadCartesianChartGrid>
-    <!-- << chart-angular-grid-styling -->
+
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 </RadCartesianChart>

@@ -34,6 +34,11 @@ export class OptionsComponent implements OnInit, OnDestroy {
                 }
             }
         );
+        const listView = this._listView.nativeElement;
+        const index = this._selectedIndex;
+        setTimeout(function () {
+            listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(index, 0), false, 0);
+        }, 0);
     }
 
     ngOnDestroy() {

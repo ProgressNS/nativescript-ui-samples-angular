@@ -28,105 +28,105 @@ const APP_ROUTES: Routes = [
         path: "ChartSeriesBarComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Bar series"
+            "title": "Bar Series"
         }
     },
     {
         path: "ChartSeriesRangeBarComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Range Bar series"
+            "title": "Range Bar Series"
         }
     },
     {
         path: "ChartSeriesStackedBarComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Stacked Bar series"
+            "title": "Stacked Bar Series"
         }
     },
     {
         path: "ChartSeriesBubbleComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Bubble series"
+            "title": "Bubble Series"
         }
     },
     {
         path: "ChartSeriesScatterBubbleComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Scatter Bubble series"
+            "title": "Scatter Bubble Series"
         }
     },
     {
         path: "ChartSeriesCandlestickComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Candlestick series"
+            "title": "Candlestick Series"
         }
     },
     {
         path: "ChartSeriesOhlcComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Ohlc series"
+            "title": "Ohlc Series"
         }
     },
     {
         path: "ChartSeriesLineComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Line series"
+            "title": "Line Series"
         }
     },
     {
         path: "ChartSeriesPieComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Pie series"
+            "title": "Pie Series"
         }
     },
     {
         path: "ChartSeriesScatterComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Scatter series"
+            "title": "Scatter Series"
         }
     },
     {
         path: "ChartSeriesSplineComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Spline series"
+            "title": "Spline Series"
         }
     },
     {
         path: "ChartSeriesSplineAreaComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Spline Area series"
+            "title": "Spline Area Series"
         }
     },
     {
         path: "ChartAnnotationsGridLineComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Grid line"
+            "title": "Grid Line"
         }
     },
     {
         path: "ChartAnnotationsPlotBandComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Plot band"
+            "title": "Plot Band"
         }
     },
     {
         path: "ChartBehaviorsDatapointSelectionComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Datapoint selection"
+            "title": "Datapoint Selection"
         }
     },
     {
@@ -140,14 +140,14 @@ const APP_ROUTES: Routes = [
         path: "ChartBehaviorsChartPieSelectionComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Pie selection"
+            "title": "Pie Selection"
         }
     },
     {
         path: "ChartBehaviorsSeriesSelectionComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Series selection"
+            "title": "Series Selection"
         }
     },
     {
@@ -182,70 +182,70 @@ const APP_ROUTES: Routes = [
         path: "ChartAxesDateTimeComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Date time axis"
+            "title": "DateTime Axis"
         }
     },
     {
         path: "ChartLabelVisibilityComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Label visibility"
+            "title": "Label Visibility"
         }
     },
     {
         path: "ChartAxesMultipleComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Multiple axes"
+            "title": "Multiple Axes"
         }
     },
     {
         path: "ChartAxesNegativeValuesComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Negative values"
+            "title": "Negative Values"
         }
     },
     {
         path: "ChartStylingAxesComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling axes"
+            "title": "Styling Axes"
         }
     },
     {
         path: "ChartStylingGridComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling grid"
+            "title": "Styling Grid"
         }
     },
     {
         path: "ChartStylingLabelComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling labels"
+            "title": "Styling Labels"
         }
     },
     {
         path: "ChartStylingSelectionComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling series selection"
+            "title": "Styling Series Selection"
         }
     },
     {
         path: "ChartStylingSeriesComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling series"
+            "title": "Styling Series"
         }
     },
     {
         path: "ChartStylingPieSeriesComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {
-            "title": "Styling Pie Chart series"
+            "title": "Styling Pie Series"
         }
     },
     {

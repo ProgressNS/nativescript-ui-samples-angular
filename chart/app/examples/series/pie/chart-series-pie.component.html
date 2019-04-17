@@ -1,15 +1,27 @@
 <!-- >> chart-angular-pie-series -->
-<GridLayout orientation="vertical" rows="*, *" tkExampleTitle tkToggleNavButton>
-    <RadPieChart height="300" allowAnimation="true" row="0">
-        <PieSeries tkPieSeries selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource" valueProperty="Amount"
-            legendLabel="Brand"></PieSeries>
+<GridLayout rows="*, *" tkExampleTitle tkToggleNavButton>
+    <RadPieChart allowAnimation="true" row="0">
+        <PieSeries tkPieSeries
+            selectionMode="DataPoint"
+            expandRadius="0.4"
+            outerRadiusFactor="0.7"
+            valueProperty="Amount"
+            legendLabel="Brand"
+            [items]="pieSource">
+        </PieSeries>
 
         <RadLegendView tkPieLegend position="Right" title="Brands" offsetOrigin="TopRight" width="110" enableSelection="true"></RadLegendView>
     </RadPieChart>
 
-    <RadPieChart height="300" allowAnimation="true" row="1">
-        <DonutSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
-            [items]="pieSource" valueProperty="Amount" legendLabel="Brand"></DonutSeries>
+    <RadPieChart allowAnimation="true" row="1">
+        <DonutSeries tkPieSeries
+            selectionMode="DataPoint"
+            expandRadius="0.4"
+            outerRadiusFactor="0.7"
+            innerRadiusFactor="0.4"
+            valueProperty="Amount"
+            legendLabel="Brand"
+            [items]="pieSource"></DonutSeries>
 
         <RadLegendView tkPieLegend position="Right" title="Brands" offsetOrigin="TopRight" width="110" enableSelection="true"></RadLegendView>
     </RadPieChart>

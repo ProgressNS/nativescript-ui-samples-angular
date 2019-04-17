@@ -1,8 +1,13 @@
 <!-- >> chart-angular-behaviors-chart-pie-selection -->
 <RadPieChart tkExampleTitle tkToggleNavButton>
     <!-- >> angular-datapoint-selection -->
-    <PieSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="0.2" showLabels="true" [items]="sourceItems"
-         valueProperty="Sales">
+    <PieSeries tkPieSeries
+        selectionMode="DataPoint"
+        outerRadiusFactor="0.8"
+        expandRadius="0.2"
+        showLabels="true"
+        [items]="sourceItems"
+        valueProperty="Sales">
         <PointLabelStyle tkPieLabelStyle margin="15"></PointLabelStyle>
     </PieSeries>
     <!-- << angular-datapoint-selection -->

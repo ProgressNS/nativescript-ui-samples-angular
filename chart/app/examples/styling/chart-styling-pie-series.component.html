@@ -1,7 +1,14 @@
-<GridLayout orientation="vertical" rows="*, *" tkExampleTitle tkToggleNavButton>
-	<RadPieChart height="300" allowAnimation="true" row="0">
-		<PieSeries tkPieSeries seriesName="myPieSeries" selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" [items]="pieSource"
-			valueProperty="Amount" legendLabel="Brand"></PieSeries>
+<GridLayout rows="*, *" tkExampleTitle tkToggleNavButton>
+	<RadPieChart allowAnimation="true" row="0">
+		<PieSeries tkPieSeries
+			seriesName="myPieSeries"
+			selectionMode="DataPoint"
+			expandRadius="0.4"
+			outerRadiusFactor="0.7"
+			[items]="pieSource"
+			valueProperty="Amount"
+			legendLabel="Brand">
+		</PieSeries>
 
 		<Palette tkPiePalette seriesName="myPieSeries">
 			<PaletteEntry tkPiePaletteEntry strokeWidth="5" fillColor="Orange"></PaletteEntry>
@@ -14,7 +21,7 @@
 		<RadLegendView tkPieLegend position="Floating" offsetOrigin="TopRight" width="110"></RadLegendView>
 	</RadPieChart>
 
-	<RadPieChart height="300" allowAnimation="true" row="1">
+	<RadPieChart allowAnimation="true" row="1">
 		<DonutSeries tkPieSeries seriesName="myDonutSeries" selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4"
 			outerRadiusFactor="0.7" innerRadiusFactor="0.4" [items]="pieSource" valueProperty="Amount" legendLabel="Brand"></DonutSeries>
 

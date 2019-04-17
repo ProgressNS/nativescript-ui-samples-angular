@@ -1,10 +1,10 @@
-<!-- >> chart-angular-grid-line-annotations -->
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
-    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Left" labelTextColor="Green" labelSize="10" lineColor="Red" lineThickness="1"></LinearAxis>
-    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelTextColor="Red" labelSize="10" lineColor="Red" lineThickness="1"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
 
-    <BarSeries tkCartesianSeries selectionMode="DataPoint" seriesName="Bars" legendTitle="Bar series" valueProperty="Sales" categoryProperty="Name" [items]="sourceItems"></BarSeries>
+    <BarSeries tkCartesianSeries legendTitle="Bar series" selectionMode="DataPoint"
+        [items]="sourceItems"categoryProperty="Name" valueProperty="Sales">
+    </BarSeries>
 
     <RadLegendView tkCartesianLegend position="Top" title="Financial data" height="150"></RadLegendView>
 </RadCartesianChart>
-<!-- << chart-angular-grid-line-annotations -->

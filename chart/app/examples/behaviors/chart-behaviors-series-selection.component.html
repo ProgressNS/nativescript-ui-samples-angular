@@ -1,11 +1,13 @@
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
-    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Right" allowPan="true"></LinearAxis>
-    <CategoricalAxis tkCartesianHorizontalAxis allowPan="true" allowZoom="true"></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis horizontalLocation="Right"></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
 
-    <BarSeries tkCartesianSeries selectionMode="Series" seriesName="Bar" [items]="bubbleCategoricalSource" stackMode="Stack" categoryProperty="Country"
-        valueProperty="Impact"></BarSeries>
+    <BarSeries tkCartesianSeries selectionMode="Series"
+        [items]="bubbleCategoricalSource" categoryProperty="Country" valueProperty="Impact">
+    </BarSeries>
     <!-- >> chart-angular-series-selection -->
-    <LineSeries tkCartesianSeries selectionMode="Series" showLabels="true" seriesName="Line" [items]="categoricalSource" stackMode="Stack"
-        categoryProperty="Country" valueProperty="Amount"></LineSeries>
+    <LineSeries tkCartesianSeries selectionMode="Series" showLabels="true"
+        [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount">
+    </LineSeries>
     <!-- << chart-angular-series-selection -->Î
 </RadCartesianChart>

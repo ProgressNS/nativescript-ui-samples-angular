@@ -33,7 +33,7 @@ export class ChartSeriesStackedBarComponent extends OptionsExampleBase implement
             this._optionsService.paramName = this._optionsParamName;
             this.router = _router;
             this._optionsItems = ["Stack", "Stack 100", "None"];
-            this.navigationParameters = { selectedIndex: 1, paramName: this._optionsParamName, items: this._optionsItems };
+            this.navigationParameters = { selectedIndex: 0, paramName: this._optionsParamName, items: this._optionsItems };
         }
     }
 
@@ -43,7 +43,7 @@ export class ChartSeriesStackedBarComponent extends OptionsExampleBase implement
 
     ngOnInit() {
         this._categoricalSource = new ObservableArray(this._dataService.getCategoricalSource());
-        this.onStack100ModeSelected();
+        this.onStackModeSelected();
     }
 
     ngAfterViewInit() {

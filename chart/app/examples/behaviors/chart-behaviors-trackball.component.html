@@ -7,7 +7,10 @@
         <!-- >> chart-trackball-directive-angular-html -->
         <Trackball tkCartesianTrackball></Trackball>
         <!-- << chart-trackball-directive-angular-html -->
-        <CandlestickSeries tkCartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close" [items]="candleStickSourceItems"></CandlestickSeries>
+        <CandlestickSeries tkCartesianSeries
+            categoryProperty="Date" [items]="candleStickSourceItems"
+            openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close">
+        </CandlestickSeries>
     </RadCartesianChart>
     <!-- << chart-trackball-angular-html -->
 </GridLayout>

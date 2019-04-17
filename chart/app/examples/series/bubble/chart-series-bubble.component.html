@@ -1,7 +1,7 @@
 <!-- >> chart-angular-bubble-series -->
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
-    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"></CategoricalAxis>
     <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    <CategoricalAxis tkCartesianHorizontalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"></CategoricalAxis>
 
     <BubbleSeries tkCartesianSeries [items]="highDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>
     <BubbleSeries tkCartesianSeries [items]="middleDataModel" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact"></BubbleSeries>

@@ -3,7 +3,13 @@
   <DateTimeCategoricalAxis tkCartesianHorizontalAxis dateFormat="yyyy-MM-dd" verticalLocation="Bottom"></DateTimeCategoricalAxis>
   <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-  <CandlestickSeries tkCartesianSeries categoryProperty="Date" openPropertyName="Open" highPropertyName="High" lowPropertyName="Low"
-    closePropertyName="Close" [items]="candleStickSourceItems"></CandlestickSeries>
+  <CandlestickSeries tkCartesianSeries
+    categoryProperty="Date"
+    openPropertyName="Open"
+    highPropertyName="High"
+    lowPropertyName="Low"
+    closePropertyName="Close"
+    [items]="candleStickSourceItems">
+  </CandlestickSeries>
 </RadCartesianChart>
 <!-- << chart-angular-candlestick-series -->
