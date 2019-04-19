@@ -1,0 +1,24 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button [text]="isEnabled ? 'Disable grouping' : 'Enable grouping'" (tap)="toggleGrouping()"></Button>
+    </StackLayout>
+    <RadListView [items]="dataItems" row="1" #myListView [groupingFunction]="myGroupingFunc">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout>
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkGroupTemplate let-category="category">
+            <GridLayout ios:height="50">
+                <Label class="nameLabel" [text]="category" class="groupLabel"></Label>
+            </GridLayout>
+        </ng-template>
+        <ng-template tkListViewHeader>
+            <Label text="This is list header with height 100" class="header"></Label>
+        </ng-template>
+        <ng-template tkListViewFooter>
+            <Label text="This is list footer with height 50" class="footer"></Label>
+        </ng-template>
+    </RadListView>   
+</GridLayout>

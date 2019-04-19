@@ -1,0 +1,19 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <NSImg [src]="item.image" height="250" ios:stretch="aspectFill"></NSImg>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.title"></Label>
+                        <Label [text]="item.name"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+        
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+</GridLayout>

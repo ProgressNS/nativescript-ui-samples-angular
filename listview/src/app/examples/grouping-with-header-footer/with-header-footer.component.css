@@ -1,0 +1,21 @@
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.groupLabel {
+    background-color: lightblue;
+    padding: 15;
+}
+
+.header {
+    background-color: #65a565;
+    font-size: 45;
+}
+
+.footer {
+    background-color: #7fff7f;
+}
