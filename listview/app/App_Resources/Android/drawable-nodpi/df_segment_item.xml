@@ -1,4 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true" android:drawable="@color/ns_color_accent_custom"/>
-    <item android:drawable="@color/ns_transparent"/>
-</selector>

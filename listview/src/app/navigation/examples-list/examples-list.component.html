@@ -1,0 +1,12 @@
+<ActionBar [title]="currentExample.title">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="onNavigationButtonTap()" [visibility]="hasBack ? 'visible' : 'collapsed'"></NavigationButton>
+</ActionBar>
+<GridLayout>
+    <RadListView [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="itemStackLayout">
+                <Label class="titleLabel" [text]="item.title" textWrap="true" ></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

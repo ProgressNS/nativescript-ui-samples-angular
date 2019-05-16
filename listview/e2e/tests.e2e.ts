@@ -540,12 +540,12 @@ describe("ListView1", () => {
                     const listView = await driver.findElementByClassName("android.widget.FrameLayout");
                     iceCream = await listView.scrollTo(
                         Direction.down,
-                        () => driver.findElementByText("Ice-cream Sandwich", SearchOptions.exact),
+                        () => driver.findElementByText("Item 8", SearchOptions.exact),
                         600
                     );
                 }
                 else {
-                    iceCream = await driver.findElementByText("Ice-cream Sandwich", SearchOptions.exact);
+                    iceCream = await driver.findElementByText("Item 8", SearchOptions.exact);
                 }
                 expect(iceCream).to.exist;
             });
@@ -558,12 +558,12 @@ describe("ListView1", () => {
                     const listView = await driver.findElementByClassName("android.widget.FrameLayout");
                     caramelItem = await listView.scrollTo(
                         Direction.down,
-                        () => driver.findElementByText("Creme Caramel", SearchOptions.exact),
+                        () => driver.findElementByText("Item 0", SearchOptions.exact),
                         800
                     );
                 }
                 else {
-                    caramelItem = await driver.findElementByText("Creme Caramel", SearchOptions.exact);
+                    caramelItem = await driver.findElementByText("Item 0", SearchOptions.exact);
                 }
                 expect(caramelItem).to.exist;
             });

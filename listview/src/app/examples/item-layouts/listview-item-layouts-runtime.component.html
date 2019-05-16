@@ -1,0 +1,15 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button text="LINEAR" class="menu-button" (tap)="changeToLinear($event)"></Button>
+        <Button text="GRID" class="menu-button" (tap)="changeToGrid($event)"></Button>
+        <Button text="STAGGERED" class="menu-button" (tap)="changeToStaggered($event)"></Button>
+    </StackLayout>
+    <RadListView [items]="dataItems" #myListView row="1">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout rows="auto, *" class="listItem-template-grid">
+                <Label row="0" [text]="item.name"></Label>
+                <Label row="1" [text]="item.description" textWrap="true"></Label>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
