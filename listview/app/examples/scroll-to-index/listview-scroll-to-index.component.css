@@ -1,0 +1,18 @@
+.labelName {
+    font-size: 20;
+    margin-left: 20;
+}
+
+.labelNameInitialScroll {
+    font-size: 20;
+    margin-left: 20;
+    height: 50;
+}
+
+.labelNameHorizontal {
+    margin-left: 5;
+}
+
+.topLabel {
+    margin: 10;
+}

@@ -1,0 +1,29 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+            <Button text="Auto" (tap)="onChangeAuto()" class="action-button"></Button>
+            <Button text="Manual" (tap)="onChangeManual()" class="action-button"></Button>
+            <Button text="None" (tap)="onChangeNone()" class="action-button"></Button>
+    </StackLayout>
+    
+    <RadListView #myListView 
+                row="1" 
+                [items]="dataItems" 
+                loadOnDemandMode="Manual" 
+                (loadMoreDataRequested)="onLoadMoreDataRequested($event)" 
+                pullToRefresh="true" 
+                (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="itemTemplateStackLayout" orientation="vertical">
+                <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
+                    <NSImg height="100" width="100" [src]="item.image"></NSImg>
+                    <StackLayout class="labelsStackLayout" orientation="vertical">
+                        <Label class="labelName" [text]="item.name"></Label>
+                        <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        <Label class="labelText" [text]="item.text" textWrap="true"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ng-template>
+        <ListViewLinearLayout *tkIfIOS tkListViewLayout itemHeight="120" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"></ListViewLinearLayout>
+    </RadListView>
+</GridLayout>

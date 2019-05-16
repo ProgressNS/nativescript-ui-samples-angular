@@ -1,0 +1,10 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.size" [backgroundColor]="item.color" [width]="item.size"></Label>
+            </StackLayout>
+        </ng-template>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Horizontal"></ListViewLinearLayout>
+    </RadListView>
+</GridLayout>

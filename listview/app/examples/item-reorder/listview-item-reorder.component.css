@@ -1,0 +1,13 @@
+.nameLabel {
+    font-size: 20;
+    margin-left: 10;
+}
+
+.listItemGridLayout {
+    padding-top: 5;
+    padding-bottom: 5;
+}
+
+.listItemGridLayout StackLayout {
+    vertical-align: center;
+}

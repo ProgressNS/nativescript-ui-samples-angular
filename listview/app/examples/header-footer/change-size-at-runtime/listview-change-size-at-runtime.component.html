@@ -1,0 +1,25 @@
+<GridLayout rows="auto, *">
+    <Button text="Update header/footer with third label" (tap)="tabUpdate()"></Button>
+    <RadListView [items]="dataItems" tkExampleTitle tkToggleNavButton row="1" #listView>
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkListViewHeader>
+            <StackLayout class="headerLayout">
+                <Label text="This is list header"></Label>
+                <Label text="Second header label" [visibility]="isSecondVisible ? 'visible' : 'collapse'" height="50" class="whiteLabel"></Label>
+                <Label text="Third header label" [visibility]="isThirdVisible ? 'visible' : 'collapse'" height="50" class="redLabel"></Label>
+            </StackLayout>
+        </ng-template>
+        <ng-template tkListViewFooter>
+            <StackLayout class="footerLayout">
+                <Label text="This is list footer"></Label>
+                <Label text="Second footer label" [visibility]="isSecondVisible ? 'visible' : 'collapse'" height="50" class="whiteLabel"></Label>
+                <Label text="Third footer label" [visibility]="isThirdVisible ? 'visible' : 'collapse'" height="50"  class="redLabel"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

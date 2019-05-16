@@ -1,0 +1,18 @@
+<GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
+    <Label text="Drag an item by the handle to reorder"></Label>
+
+    <RadListView (itemReordered)="onItemReordered($event)" [items]="dataItems" row="1" itemReorder="true" reorderMode="Drag">
+        <!-- >> angular-listview-item-reorder-handle -->
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemGridLayout" columns="*, auto">
+                <StackLayout orientation="vertical" col="0" verticalAlignment="center">
+                    <Label class="nameLabel" [text]="item.name"></Label>
+                </StackLayout>
+                <ReorderHandle col="1" verticalAlignment="center">
+                    <Image src="res://reorder_icon" class="handleImage" stretch="none" verticalAlignment="stretch"></Image>
+                </ReorderHandle>
+            </GridLayout>
+        </ng-template>
+        <!-- << angular-listview-item-reorder-handle -->
+    </RadListView>
+</GridLayout>

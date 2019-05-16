@@ -1,0 +1,52 @@
+.listItemStackLayout {
+    background-color: white;
+    padding-left: 5;
+}
+
+.labelName {
+    font-size: 20;
+    margin-bottom: 8;
+}
+
+.labelTitle {
+    font-size: 14;
+    font-weight: bold;
+}
+
+.labelText {
+    font-size: 12;
+}
+
+.markGridLayout {
+    background-color: #0099ff;
+    padding: 16;
+}
+
+.archiveGridLayout {
+    background-color: #ffcc99;
+    padding: 16;
+}
+
+.unreadGridLayout {
+    background-color: #ff3300;
+    padding: 16;
+}
+
+.deleteGridLayout {
+    background-color: red;
+    padding: 16;
+}
+
+.readGridLayout {
+    background-color: #ff66ff;
+    padding: 16;
+}
+
+.forwardGridLayout {
+    background-color: #9966ff;
+    padding: 16;
+}
+
+.swipeTemplateLabel {
+    font-size: 15;
+}

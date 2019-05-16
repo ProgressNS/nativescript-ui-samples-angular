@@ -1,0 +1,29 @@
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 14;
+}
+
+.swipeItemGridLayout {
+    background-color: white;
+}
+
+.itemStackLayout {
+    background-color: white;
+}
+
+.markViewStackLayout {
+    background-color: blue;
+    padding: 10;
+}
+
+.swipeTemplateLabel {
+    size: 20;
+}
+
+.deleteViewStackLayout {
+    background-color: red;
+    padding: 10;
+}

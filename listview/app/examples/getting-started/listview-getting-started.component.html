@@ -1,0 +1,12 @@
+<!-- >> listview-getting-started-angular-xml -->
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
+<!-- << listview-getting-started-angular-xml -->

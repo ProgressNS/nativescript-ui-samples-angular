@@ -1,0 +1,23 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems" loadOnDemandMode="Manual" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="itemTemplateStackLayout" orientation="vertical">
+                <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
+                    <NSImg height="100" width="100" [src]="item.image"></NSImg>
+
+                    <StackLayout class="labelsStackLayout" orientation="vertical">
+                        <Label class="labelName" [text]="item.name"></Label>
+                        <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        <Label class="labelText" text="{{item.text}} + {{item.text}} + {{item.text}}" textWrap="true"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ng-template>
+
+        <div *tkIfIOS>
+            <GridLayout *tkListLoadOnDemandTemplate class="loadOnDemandItemGridLayout">
+                <Label text="Load More" horizontalAlignment="center" verticalAlignment="center"></Label>
+            </GridLayout>
+        </div>
+    </RadListView>
+</GridLayout>

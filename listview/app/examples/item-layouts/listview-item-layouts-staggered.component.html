@@ -1,0 +1,14 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="staggeredItems">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" class="item-template-style">
+                <Label [text]="item.name"></Label>
+                <Label [text]="item.description" textWrap="true"></Label>
+            </StackLayout>
+        </ng-template>
+
+        <!-- >> angular-listview-item-layouts-staggered -->
+        <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical" spanCount="3"></ListViewStaggeredLayout>
+        <!-- << angular-listview-item-layouts-staggered -->
+    </RadListView>
+</GridLayout>

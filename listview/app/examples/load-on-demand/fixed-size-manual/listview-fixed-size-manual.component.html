@@ -1,0 +1,29 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <!-- >> angular-listview-load-on-demand -->
+    <RadListView [items]="dataItems" loadOnDemandMode="Manual" (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+    <!-- << angular-listview-load-on-demand -->
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="itemTemplateStackLayout" orientation="vertical">
+                <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
+                    <NSImg height="100" width="80" [src]="item.image"></NSImg>
+
+                    <StackLayout class="labelsStackLayout" orientation="vertical">
+                        <Label class="labelName" [text]="item.name"></Label>
+                        <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        <Label class="labelText" [text]="item.text" textWrap="true"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ng-template>
+
+        <ListViewLinearLayout *tkIfIOS tkListViewLayout itemHeight="120"></ListViewLinearLayout>
+
+        <div *tkIfIOS>
+            <!-- >> listview-load-on-demand-custom-view -->
+            <GridLayout *tkListLoadOnDemandTemplate class="loadOnDemandItemGridLayout">
+                <Label text="Load More" horizontalAlignment="center" verticalAlignment="center"></Label>
+            </GridLayout>
+            <!-- << listview-load-on-demand-custom-view -->
+        </div>
+    </RadListView>
+</GridLayout>

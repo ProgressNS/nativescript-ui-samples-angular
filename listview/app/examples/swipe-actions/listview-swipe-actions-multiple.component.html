@@ -1,0 +1,39 @@
+<GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
+    <RadListView #myListView [items]="dataItems" row="1" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+        (itemSwipeProgressStarted)="onSwipeCellStarted($event)" (itemSwipeProgressChanged)="onCellSwiping($event)" swipeActions="true">
+
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="listItemStackLayout" orientation="vertical">
+                <Label class="labelName" [text]="item.name"></Label>
+                <Label class="labelTitle" [text]="item.title"></Label>
+                <Label class="labelText" [text]="item.text"></Label>
+            </StackLayout>
+        </ng-template>
+        <!-- >> angular-listview-swipe-actions-multiple-template-html -->
+        <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto">
+            <GridLayout columns="*, *, *" col="0" id="left-stack">
+                <GridLayout col="0" class="markGridLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
+                    <Label text="mark" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+                <GridLayout col="1" class="archiveGridLayout" (tap)="onLeftSwipeClick($event)" id="btnArchive">
+                    <Label text="archive" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+                <GridLayout col="2" class="unreadGridLayout" (tap)="onLeftSwipeClick($event)" id="btnUnread">
+                    <Label text="unread" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+            </GridLayout>
+            <GridLayout columns="*, *, *" col="2" id="right-stack">
+                <GridLayout col="0" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
+                    <Label text="delete" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+                <GridLayout col="1" class="readGridLayout" (tap)="onRightSwipeClick($event)" id="btnRead">
+                    <Label text="read" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+                <GridLayout col="2" class="forwardGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                    <Label text="forward" class="swipeTemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+        <!-- << angular-listview-swipe-actions-multiple-template-html -->
+    </RadListView>
+</GridLayout>
