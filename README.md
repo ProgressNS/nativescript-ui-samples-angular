@@ -9,7 +9,7 @@ This repository contains the source code of the Progress NativeScript UI samples
 - `nativescript-ui-gauge` [![npm](https://img.shields.io/npm/v/nativescript-ui-gauge.svg)](https://www.npmjs.com/package/nativescript-ui-gauge)
 
 ## Issues
-Issues related to Progress NativeScript UI are logged in the https://github.com/telerik/nativescript-ui-feedback repository.
+Issues related to Progress NativeScript UI are logged in the https://github.com/NativeScript/nativescript-ui-feedback repository.
 
 ## Overview
 Progress NativeScript UI samples app resides at root repository level. The source code of the samples resides in a folder named after each component available as independent plugin. The currently available components are:

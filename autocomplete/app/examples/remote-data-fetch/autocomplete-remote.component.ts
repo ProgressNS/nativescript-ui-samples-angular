@@ -12,7 +12,7 @@ import * as http from "tns-core-modules/http";
 })
 export class AutoCompleteRemoteComponent implements OnInit {
     private _items: ObservableArray<TokenModel>;
-    private jsonUrl = "https://raw.githubusercontent.com/telerik/nativescript-ui-samples/master/examples-data/airports.json";
+    private jsonUrl = "https://raw.githubusercontent.com/NativeScript/nativescript-ui-samples/master/examples-data/airports.json";
 
     ngOnInit() {
         let that = this;
