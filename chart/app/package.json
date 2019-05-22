@@ -2,9 +2,7 @@
   "android": {
     "v8Flags": "--expose_gc",
     "markingMode": "none",
-    "requireModules": [
-      "nativescript-ui-chart"
-    ]
+    "requireModules": ["nativescript-ui-chart"]
   },
   "main": "main.js",
   "name": "tns-template-hello-world-ng",
