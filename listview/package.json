@@ -30,7 +30,7 @@
     "reflect-metadata": "~0.1.12",
     "rxjs": "~6.3.3",
     "tns-core-modules": "^5.0.0",
-    "tns-platform-declarations": "^5.4.0",
+    "tns-platform-declarations": "^5.4.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
