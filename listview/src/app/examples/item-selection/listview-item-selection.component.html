@@ -1,6 +1,6 @@
 <GridLayout rows="*, auto" tkExampleTitle tkToggleNavButton>
     <!-- >> angular-listview-selection -->
-    <RadListView row="0" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemDeselected)="onItemDeselected($event)">
+    <RadListView row="0" [items]="dataItems" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" (itemSelecting)="onItemSelecting($event)" (itemDeselecting)="onItemDeselecting($event)" (itemDeselected)="onItemDeselected($event)">
         <!-- << angular-listview-selection -->
         <ng-template tkListItemTemplate let-item="item">
              <StackLayout class="listItemStackLayout" orientation="vertical">

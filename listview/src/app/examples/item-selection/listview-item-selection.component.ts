@@ -49,6 +49,38 @@ export class ListViewItemSelectionComponent implements OnInit {
         console.log("Item selected: " + (selectedItem && selectedItem.name));
     }
 
+    public onItemSelecting(args: ListViewEventData) {
+        const listview = args.object as RadListView;
+        const selectedItems = listview.getSelectedItems() as Array<DataItem>;
+        let selectedTitles = "Selecting item: ";
+        for (let i = 0; i < selectedItems.length; i++) {
+            selectedTitles += selectedItems[i] ? selectedItems[i].name : "";
+
+            if (i < selectedItems.length - 1) {
+                selectedTitles += ", ";
+            }
+        }
+
+        const selectedItem = this.dataItems.getItem(args.index);
+        console.log("Item selecting: " + (selectedItem && selectedItem.name));
+    }
+
+    public onItemDeselecting(args: ListViewEventData) {
+        const listview = args.object as RadListView;
+        const selectedItems = listview.getSelectedItems() as Array<DataItem>;
+        let selectedTitles = "Deselecting item: ";
+        for (let i = 0; i < selectedItems.length; i++) {
+            selectedTitles += selectedItems[i] ? selectedItems[i].name : "";
+
+            if (i < selectedItems.length - 1) {
+                selectedTitles += ", ";
+            }
+        }
+
+        const selectedItem = this.dataItems.getItem(args.index);
+        console.log("Item deselecting: " + (selectedItem && selectedItem.name));
+    }
+
     public onItemDeselected(args: ListViewEventData) {
         const listview = args.object as RadListView;
         const selectedItems = listview.getSelectedItems() as Array<DataItem>;
