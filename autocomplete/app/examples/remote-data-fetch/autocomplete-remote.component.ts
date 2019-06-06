@@ -38,7 +38,7 @@ export class AutoCompleteRemoteComponent implements OnInit {
         };
     }
 
-    @ViewChild("autocomplete") autocomplete: RadAutoCompleteTextViewComponent;
+    @ViewChild("autocomplete", { static: true }) autocomplete: RadAutoCompleteTextViewComponent;
 
     get dataItems(): ObservableArray<TokenModel> {
         return this._items;

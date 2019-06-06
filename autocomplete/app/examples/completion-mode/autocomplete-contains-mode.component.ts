@@ -1,5 +1,5 @@
 // >> angular-autocomplete-contains-mode
-import { Component, ViewChild } from "@angular/core";
+import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { TokenModel } from "nativescript-ui-autocomplete";
 

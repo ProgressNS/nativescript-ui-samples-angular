@@ -130,7 +130,14 @@ let APP_ROUTES: Routes = [
         data: {
             "title": "Read Only"
         }
-    }
+    },
+    {
+        path: "AutoCompleteCustomTokenComponent",
+        loadChildren: './examples/autocomplete-examples.module#AutoCompleteExamplesModule',
+        data: {
+            "title": "Custom Token Model"
+        }
+    },
 ];
 
 export const routing = NativeScriptRouterModule.forRoot(APP_ROUTES);
