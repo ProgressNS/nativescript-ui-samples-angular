@@ -24,7 +24,7 @@ export class GaugesStyleBindingsComponent implements OnInit {
         this.model = new StyleBindingsModel();
     }
 
-    @ViewChild("myGauge") gaugeElement: ElementRef;
+    @ViewChild("myGauge", { static: false }) gaugeElement: ElementRef;
 
     ngOnInit() {
     }

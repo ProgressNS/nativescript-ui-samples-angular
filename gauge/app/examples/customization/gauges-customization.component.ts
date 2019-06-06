@@ -12,7 +12,7 @@ export class GaugesCustomizationComponent implements AfterViewInit {
     constructor() {
     }
 
-    @ViewChild("myScale") scaleElement: ElementRef;
+    @ViewChild("myScale", { static: false }) scaleElement: ElementRef;
 
     ngAfterViewInit() {
         let scale = this.scaleElement.nativeElement as RadialScale;

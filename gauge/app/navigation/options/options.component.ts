@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Injectable, ViewChild } from "@angular/core";
+import { Component, OnInit, OnDestroy, Injectable } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
 import * as frameModule from "tns-core-modules/ui/frame";
