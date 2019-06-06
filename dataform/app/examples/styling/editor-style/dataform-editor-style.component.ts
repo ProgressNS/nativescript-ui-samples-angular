@@ -19,7 +19,7 @@ export class DataformEditorStyleComponent implements OnInit, AfterViewInit {
     constructor() {
     }
 
-    @ViewChild("myDataForm") dataFormComponent: RadDataFormComponent;
+    @ViewChild("myDataForm", { static: false }) dataFormComponent: RadDataFormComponent;
 
     ngOnInit() {
         this._person = new PersonBase("John", 23, "1993-05-16");

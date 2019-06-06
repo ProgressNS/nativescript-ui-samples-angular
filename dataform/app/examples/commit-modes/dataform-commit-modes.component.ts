@@ -34,7 +34,7 @@ export class DataFormCommitModesComponent implements OnInit {
         this._segmentedBarItems = items;
     }
 
-    @ViewChild('myCommitDataForm') myCommitDataFormComp: RadDataFormComponent;
+    @ViewChild('myCommitDataForm', { static: false }) myCommitDataFormComp: RadDataFormComponent;
 
     get commitMode() {
         return this._commitMode;

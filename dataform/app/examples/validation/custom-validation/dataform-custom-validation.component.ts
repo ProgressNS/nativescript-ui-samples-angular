@@ -27,7 +27,7 @@ export class DataFormCustomValidationComponent implements OnInit {
         return this._text;
     }
 
-    @ViewChild('myCustomValidationDataForm') myCustomDataFormComp: RadDataFormComponent;
+    @ViewChild('myCustomValidationDataForm', { static: false }) myCustomDataFormComp: RadDataFormComponent;
 
 // >> angular-dataform-custom-validation
     public onTap() {

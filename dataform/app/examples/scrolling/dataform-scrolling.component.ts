@@ -18,7 +18,7 @@ export class DataFormScrollingComponent implements OnInit {
         this._user = new SuperUser("John", "Doe", "john_doe", "jdpass", "jd@company.com", new Date(2008, 7, 1), new Date(2008, 7, 1, 13, 21), "male", "Company Inc.", "www.company.com", "555-5325", "Gargantua", "Metropolis", "South Street", 1, 11111, "None");
     }
 
-    @ViewChild('myScrollingDataForm') myCommitDataFormComp: RadDataFormComponent;
+    @ViewChild('myScrollingDataForm', { static: false }) myCommitDataFormComp: RadDataFormComponent;
 
     get user(): SuperUser {
         return this._user;

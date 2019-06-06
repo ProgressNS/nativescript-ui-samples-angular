@@ -1,9 +1,7 @@
 // >> dataform-custom-editors-component
-import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { PersonBase } from "../../data-services/person";
 import { ButtonEditorHelper } from "../../data-services/helper/button-editor-helper";
-import { PropertyEditor } from "nativescript-ui-dataform";
-import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 import { android as androidApplication } from "tns-core-modules/application";
 
 @Component({
@@ -14,16 +12,10 @@ import { android as androidApplication } from "tns-core-modules/application";
 })
 export class DataformCustomEditorsComponent implements OnInit, AfterViewInit {
     private _person: PersonBase;
-    private _nameEditor: PropertyEditor;
-    private _ageEditor: PropertyEditor;
-    private _birthDateEditor: PropertyEditor;
-    private _buttonValue: any;
     private _buttonEditorHelper;
 
     constructor() {
     }
-
-    @ViewChild("myDataForm") dataFormComponent: RadDataFormComponent;
 
     ngOnInit() {
         this._person = new PersonBase("John", 23, "1993-05-16");

@@ -34,7 +34,7 @@ export class DataFormValidationModesComponent implements OnInit {
         this._segmentedBarItems = items;
     }
 
-    @ViewChild('myValidationModesDataForm') myValidateDataFormComp: RadDataFormComponent;
+    @ViewChild('myValidationModesDataForm', { static: false }) myValidateDataFormComp: RadDataFormComponent;
 
     get user(): User {
         return this._user;
