@@ -20,7 +20,7 @@ export class ListViewItemLayoutsRuntimeComponent implements OnInit {
     constructor(private _changeDetectionRef: ChangeDetectorRef, private _dataItemService: DataItemService) {
     }
 
-    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this._dataItems = new ObservableArray<DataItem>(this._dataItemService.getStaggeredItems());
@@ -33,7 +33,7 @@ export class ListViewItemLayoutsRuntimeComponent implements OnInit {
 
     public changeToLinear(args) {
         const layout = new ListViewLinearLayout();
-        this.listViewComponent.listView.listViewLayout = layout;
+        this.myListViewComponent.listView.listViewLayout = layout;
     }
 
     public changeToGrid(args) {
@@ -43,12 +43,12 @@ export class ListViewItemLayoutsRuntimeComponent implements OnInit {
         }
 
         layout.spanCount = 2;
-        this.listViewComponent.listView.listViewLayout = layout;
+        this.myListViewComponent.listView.listViewLayout = layout;
     }
 
     public changeToStaggered(args) {
         const layout = new ListViewStaggeredLayout();
         layout.spanCount = 3;
-        this.listViewComponent.listView.listViewLayout = layout;
+        this.myListViewComponent.listView.listViewLayout = layout;
     }
 }

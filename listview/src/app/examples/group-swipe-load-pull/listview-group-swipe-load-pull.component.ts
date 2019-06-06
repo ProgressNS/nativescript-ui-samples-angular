@@ -19,7 +19,7 @@ export class ListViewGroupSwipeLoadPullComponent implements OnInit {
     private _loadMoreItemsCount = 2;
     private _groupByDay: (item: any) => any;
 
-    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) listViewComponent: RadListViewComponent;
 
     constructor(private _blogPostsService: BlogPostsService) {
     }

@@ -42,7 +42,7 @@ export class ListViewSwipeDisableComponent implements OnInit {
         this._currentStatus = value;
     }
 
-    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
@@ -75,7 +75,7 @@ export class ListViewSwipeDisableComponent implements OnInit {
 
     public onLeftSwipeClick(args: ListViewEventData) {
         console.log("Left swipe click");
-        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+        this.myListViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
     public onRightSwipeClick(args) {

@@ -39,10 +39,10 @@ export class ListViewScrollToIndexVerticalComponent extends OptionsExampleBase i
     }
 
     // >> angular-listview-scroll-to-index
-    @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
+    @ViewChild('myRadListView', { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     public onTap() {
-        this.listViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
+        this.myListViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
     }
     // << angular-listview-scroll-to-index
 

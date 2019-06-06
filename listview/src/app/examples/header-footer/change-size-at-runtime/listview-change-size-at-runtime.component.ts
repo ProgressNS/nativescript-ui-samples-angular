@@ -33,7 +33,7 @@ export class ListviewChangeSizeAtRuntimeComponent implements OnInit {
         }, 2000);
     }
 
-    @ViewChild("listView") listViewComponent: RadListViewComponent;
+    @ViewChild("listView", { read: RadListViewComponent, static: true }) listViewComponent: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;

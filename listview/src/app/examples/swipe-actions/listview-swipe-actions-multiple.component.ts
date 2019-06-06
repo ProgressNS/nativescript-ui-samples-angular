@@ -28,7 +28,7 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
         return this._dataItems;
     }
 
-    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
@@ -98,13 +98,13 @@ export class ListViewSwipeActionsMultipleComponent implements OnInit {
 
     public onLeftSwipeClick(args: EventData) {
         let itemView = args.object as View;
-        console.log("Button clicked: " + itemView.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(itemView.bindingContext));
-        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+        console.log("Button clicked: " + itemView.id + " for item with index: " + this.myListViewComponent.listView.items.indexOf(itemView.bindingContext));
+        this.myListViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
     public onRightSwipeClick(args: EventData) {
         let itemView = args.object as View;
-        console.log("Button clicked: " + itemView.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(itemView.bindingContext));
-        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+        console.log("Button clicked: " + itemView.id + " for item with index: " + this.myListViewComponent.listView.items.indexOf(itemView.bindingContext));
+        this.myListViewComponent.listView.notifySwipeToExecuteFinished();
     }
 }

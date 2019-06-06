@@ -22,7 +22,7 @@ export class OptionsComponent implements OnInit, OnDestroy {
         this._dataItems = new ObservableArray<string>();
     }
 
-    @ViewChild("optionsListView") _listView: RadListViewComponent;
+    @ViewChild("optionsListView", { read: RadListViewComponent, static: false }) optionsListView: RadListViewComponent;
 
     ngOnInit() {
         this._sub = this._route.queryParams.subscribe(
@@ -47,8 +47,8 @@ export class OptionsComponent implements OnInit, OnDestroy {
     }
 
     private tryUpdateListViewSelection() {
-        if (this._selectedIndex >= 0 && this._listView && this._listView.nativeElement) {
-            this._listView.nativeElement.selectItemAt(this._selectedIndex);
+        if (this._selectedIndex >= 0 && this.optionsListView && this.optionsListView.nativeElement) {
+            this.optionsListView.nativeElement.selectItemAt(this._selectedIndex);
         }
     }
 
@@ -58,7 +58,7 @@ export class OptionsComponent implements OnInit, OnDestroy {
 
 
     public onItemTap(args) {
-        const selectedItems = this._listView.nativeElement.getSelectedItems() as Array<string>;
+        const selectedItems = this.optionsListView.nativeElement.getSelectedItems() as Array<string>;
         this._optionsService.paramValue = selectedItems[0];
         frameModule.topmost().goBack();
     }

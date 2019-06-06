@@ -26,7 +26,7 @@ export class ListViewFixedSizeAutoWithSmallSourceComponent implements OnInit {
         this._allItems = serverPeopleCollection.people.slice();
     }
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: true }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this.layout = new ListViewLinearLayout();

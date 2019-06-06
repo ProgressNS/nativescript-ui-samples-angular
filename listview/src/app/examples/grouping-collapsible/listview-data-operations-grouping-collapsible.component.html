@@ -1,5 +1,5 @@
 <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
-    <RadListView [items]="dataItems" row="1" #myListView [groupingFunction]="myGroupingFunc" enableCollapsibleGroups="true" >
+    <RadListView [items]="dataItems" row="1" [groupingFunction]="myGroupingFunc" enableCollapsibleGroups="true" >
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout>
                 <Label class="nameLabel" [text]="item.name"></Label>
