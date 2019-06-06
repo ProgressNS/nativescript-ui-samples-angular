@@ -33,7 +33,7 @@ export class SideDrawerPositionComponent implements AfterViewInit, OnInit {
         this.currentLocation = SideDrawerLocation.Left;
     }
 
-    @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
+    @ViewChild(RadSideDrawerComponent, { static: false }) public drawerComponent: RadSideDrawerComponent;
     private drawer: RadSideDrawer;
 
     ngAfterViewInit() {

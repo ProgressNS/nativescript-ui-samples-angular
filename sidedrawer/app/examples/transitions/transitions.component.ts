@@ -20,7 +20,7 @@ export class SideDrawerTransitionsComponent implements AfterViewInit, OnInit {
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
-    @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
+    @ViewChild(RadSideDrawerComponent, { static: false }) public drawerComponent: RadSideDrawerComponent;
 
     private drawer: RadSideDrawer;
 
