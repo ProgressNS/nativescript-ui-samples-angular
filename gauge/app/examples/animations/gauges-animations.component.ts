@@ -18,7 +18,7 @@ export class GaugesAnimationsComponent implements AfterViewInit {
         this._needle = this.needleElement.nativeElement as RadialNeedle;
     }
 
-    @ViewChild("needle") needleElement: ElementRef;
+    @ViewChild("needle", { static: false }) needleElement: ElementRef;
 
     public onValueChange(value: number) {
         this._needle.value = value;
