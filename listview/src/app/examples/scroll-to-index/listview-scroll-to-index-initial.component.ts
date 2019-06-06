@@ -28,8 +28,6 @@ export class ListViewScrollToIndexInitialComponent extends OptionsExampleBase im
         super();
     }
 
-    @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
-
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }

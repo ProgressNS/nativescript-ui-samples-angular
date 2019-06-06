@@ -16,7 +16,7 @@ export class ListViewDataOperationsGroupingComponent implements OnInit {
     private _isEnabled: boolean;
     private _myGroupingFunc: (item: any) => any;
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
         // >> listview-data-operations-grouping-angular

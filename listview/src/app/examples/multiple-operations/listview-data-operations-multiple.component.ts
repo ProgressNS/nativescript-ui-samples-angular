@@ -22,7 +22,7 @@ export class ListViewDataOperationsMultipleComponent implements OnInit {
     private _mySortingFunc: (item: any, otherItem: any) => number;
     private _myFilteringFunc: (item: any) => any;
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
         this.myGroupingFunc = (item: DataItem) => {

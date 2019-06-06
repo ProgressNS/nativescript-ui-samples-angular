@@ -20,7 +20,7 @@ export class ListViewItemSelectionProgrammaticComponent implements OnInit {
     constructor(private _dataItemService: DataItemService) {
     }
 
-    @ViewChild('myRadListView') listView: RadListViewComponent;
+    @ViewChild('myRadListView', { read: RadListViewComponent, static: false }) listViewComponent: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
@@ -47,19 +47,19 @@ export class ListViewItemSelectionProgrammaticComponent implements OnInit {
     }
 
     public onSelectItemAtTap() {
-        this.listView.listView.selectItemAt(Number(this.txtSelectItemIndex));
+        this.listViewComponent.listView.selectItemAt(Number(this.txtSelectItemIndex));
     }
 
     public onDeselectItemAtTap() {
-        this.listView.listView.deselectItemAt(Number(this.txtDeselectItemIndex));
+        this.listViewComponent.listView.deselectItemAt(Number(this.txtDeselectItemIndex));
     }
 
     public onSelectAllTap() {
-        this.listView.listView.selectAll();
+        this.listViewComponent.listView.selectAll();
     }
 
     public onDeselectAllTap() {
-        this.listView.listView.deselectAll();
+        this.listViewComponent.listView.deselectAll();
     }
 }
 // << angular-listview-item-selection-programmatic-component

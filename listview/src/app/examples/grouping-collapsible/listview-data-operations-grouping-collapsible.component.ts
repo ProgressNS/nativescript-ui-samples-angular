@@ -15,8 +15,6 @@ export class ListviewDataOperationsGroupingCollapsibleComponent implements OnIni
     private _dataItems: ObservableArray<DataItem>;
     private _myGroupingFunc: (item: any) => any;
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
-
     constructor(private _dataItemService: DataItemService) {
         this.myGroupingFunc = (item: DataItem) => {
             return item.category;

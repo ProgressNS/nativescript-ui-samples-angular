@@ -22,7 +22,7 @@ export class ListViewDataOperationsSortingComponent implements OnInit {
     private _isEnabled: boolean;
     private _mySortingFunc: (item: any, otherItem: any) => number;
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
         // >> listview-data-operations-sorting-angular

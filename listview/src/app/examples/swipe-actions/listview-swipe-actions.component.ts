@@ -25,7 +25,7 @@ export class ListViewSwipeActionsComponent implements OnInit {
         return this._dataItems;
     }
 
-    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this._dataItems = new ObservableArray(this._dataItemService.getPostDataItems());
@@ -64,7 +64,7 @@ export class ListViewSwipeActionsComponent implements OnInit {
     // >> angular-listview-swipe-action-handlers
     public onLeftSwipeClick(args: ListViewEventData) {
         console.log("Left swipe click");
-        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+        this.myListViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
     public onRightSwipeClick(args) {
@@ -76,7 +76,7 @@ export class ListViewSwipeActionsComponent implements OnInit {
     public onLayoutTap(args) {
         const message = "Tap on Layout for item: " + (<DataItem>args.object.bindingContext).name;
         console.log(message);
-        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+        this.myListViewComponent.listView.notifySwipeToExecuteFinished();
         let lbl = <Label>topmost().getViewById("lbl");
         lbl.text += " \n" + message;
     }

@@ -22,16 +22,16 @@ export class ListViewPullToRefreshCustomizeComponent implements OnInit {
     constructor(private _changeDetectionRef: ChangeDetectorRef) {
     }
 
-    @ViewChild("listView") listViewComponent: RadListViewComponent;
+    @ViewChild("listView", { read: RadListViewComponent, static: true }) myListViewComponent: RadListViewComponent;
 
     ngOnInit() {
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
-        if (this.listViewComponent && this.listViewComponent.listView) {
+        if (this.myListViewComponent && this.myListViewComponent.listView) {
             let style = new PullToRefreshStyle();
             style.indicatorColor = new Color("red");
             style.indicatorBackgroundColor = new Color("blue");
-            this.listViewComponent.listView.pullToRefreshStyle = style;
+            this.myListViewComponent.listView.pullToRefreshStyle = style;
         }
     }
 

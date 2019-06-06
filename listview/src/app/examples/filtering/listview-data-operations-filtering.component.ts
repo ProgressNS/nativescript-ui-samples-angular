@@ -16,7 +16,7 @@ export class ListViewDataOperationsFilteringComponent implements OnInit {
     private _isEnabled: boolean;
     private _myFilteringFunc: (item: any) => any;
 
-    @ViewChild("myListView") myListViewComponent: RadListViewComponent;
+    @ViewChild("myListView", { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     constructor(private _dataItemService: DataItemService) {
         // >> listview-data-operations-filtering-angular

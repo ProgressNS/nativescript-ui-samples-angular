@@ -36,7 +36,7 @@ export class ListViewScrollToIndexHorizontalComponent extends OptionsExampleBase
         this.set("myScrollPosition", this._options[selectedIndex]);
     }
 
-    @ViewChild('myRadListView') listViewComponent: RadListViewComponent;
+    @ViewChild('myRadListView', { read: RadListViewComponent, static: false }) myListViewComponent: RadListViewComponent;
 
     get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
@@ -47,7 +47,7 @@ export class ListViewScrollToIndexHorizontalComponent extends OptionsExampleBase
     }
 
     public onTap() {
-        this.listViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
+        this.myListViewComponent.listView.scrollToIndex(50, false, this.get('myScrollPosition'));
     }
 
     public onNavigatingTo(args) {
