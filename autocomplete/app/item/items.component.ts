@@ -23,7 +23,7 @@ export class ItemsComponent {
         this.initDataItems();
     }
 
-    @ViewChild("autocomplete") autocomplete: RadAutoCompleteTextViewComponent;
+    @ViewChild("autocomplete", { static: false }) autocomplete: RadAutoCompleteTextViewComponent;
 
     get dataItems(): ObservableArray<TokenModel> {
         return this._items;

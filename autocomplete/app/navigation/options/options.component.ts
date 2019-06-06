@@ -21,7 +21,7 @@ export class OptionsComponent implements OnInit, OnDestroy {
         this._dataItems = new ObservableArray<string>();
     }
 
-    @ViewChild("optionsListView") _listView: any;
+    @ViewChild("optionsListView", { static: false }) _listView: any;
 
     ngOnInit() {
         this._sub = this._route.queryParams.subscribe(

@@ -20,8 +20,8 @@ export class AutoCompleteReadOnlyComponent {
         this.initDataItems();
     }
 
-    @ViewChild("autoToken") autoToken: RadAutoCompleteTextViewComponent;
-    @ViewChild("autoPlain") autoPlain: RadAutoCompleteTextViewComponent;
+    @ViewChild("autoToken", { static: false }) autoToken: RadAutoCompleteTextViewComponent;
+    @ViewChild("autoPlain", { static: false }) autoPlain: RadAutoCompleteTextViewComponent;
 
     get dataItems(): ObservableArray<TokenModel> {
         return this._items;

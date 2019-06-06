@@ -111,6 +111,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Preselected items",
                 "path": "AutocompletePreselectedTokensComponent/AutocompletePreselectedTokensComponent",
                 "subItems": []
+            },
+            {
+                "title": "Custom Token Model",
+                "path": "AutoCompleteCustomTokenComponent/AutoCompleteCustomTokenComponent",
+                "subItems": []
             }]
     }
 ];

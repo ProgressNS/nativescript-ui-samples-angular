@@ -1,0 +1,18 @@
+<StackLayout tkExampleTitle tkToggleNavButton ios:backgroundColor="#CDCECE" padding="5">
+    <Label text="Type city or country name:"></Label>
+    <RadAutoCompleteTextView
+        (tokenAdded)="onTokenAdded($event)" (tokenRemoved)="onTokenRemoved($event)"
+        (tokenSelected)="onTokenSelected($event)" (tokenDeselected)="onTokenDeselected($event)"
+        [items]="dataItems" noResultsText="Nothing found!"
+        completionMode="Contains" suggestMode="Suggest" displayMode="Tokens">
+        <SuggestionView tkAutoCompleteSuggestionView>
+            <ng-template tkSuggestionItemTemplate let-item="item">
+                <GridLayout columns="auto, *">
+                    <Image [src]="item.image" marginLeft="10" width="50" verticalAlignment="center"></Image>
+                    <Label [text]="item.city" marginLeft="10" col="1" verticalAlignment="center"></Label>
+                    <Label [text]="item.country" marginRight="10" col="1" verticalAlignment="center" textAlignment="right"></Label>
+                </GridLayout>
+            </ng-template>
+        </SuggestionView>
+    </RadAutoCompleteTextView>
+</StackLayout>
