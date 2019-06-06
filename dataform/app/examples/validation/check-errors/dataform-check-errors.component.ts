@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { AdvancedUser } from "../../data-services/user";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
-import { Label } from "tns-core-modules/ui/label";
 
 @Component({
     moduleId: module.id,
@@ -19,8 +18,8 @@ export class DataformCheckErrorsComponent implements OnInit {
         this._user = new AdvancedUser();
     }
 
-    @ViewChild("myDataForm") dataFormComp: RadDataFormComponent;
-    @ViewChild("resultLabel") resultLabel: ElementRef;
+    @ViewChild("myDataForm", { static: false }) dataFormComp: RadDataFormComponent;
+    @ViewChild("resultLabel", { static: false }) resultLabel: ElementRef;
 
     get user(): AdvancedUser {
         return this._user;

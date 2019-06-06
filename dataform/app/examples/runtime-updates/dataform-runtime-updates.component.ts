@@ -23,7 +23,7 @@ export class DataFormRuntimeUpdatesComponent implements OnInit {
     }
 
     // >> angular-runtime-viewchild-code
-    @ViewChild('myRuntimeDataFormComp') myRuntimeDataFormComp: RadDataFormComponent;
+    @ViewChild('myRuntimeDataFormComp', { static: false }) myRuntimeDataFormComp: RadDataFormComponent;
     // << angular-runtime-viewchild-code
 
     get person(): Person {

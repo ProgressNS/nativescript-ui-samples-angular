@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Booking } from "../../data-services/booking";
-import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-ui-dataform";
+import { DataFormEventData, EntityProperty } from "nativescript-ui-dataform";
 import { RadDataFormComponent } from "nativescript-ui-dataform/angular";
 const data = require("../../data-services/airports.json");
 
@@ -15,7 +15,7 @@ export class DataFormaAutoCompleteComponent implements OnInit {
 
     constructor() { }
 
-    @ViewChild("dataform") dataformComponent: RadDataFormComponent;
+    @ViewChild("dataform", { static: false }) dataformComponent: RadDataFormComponent;
 
     get booking() {
         return this._booking;
