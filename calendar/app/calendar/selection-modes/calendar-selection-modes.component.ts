@@ -33,7 +33,7 @@ export class CalendarSelectionModesComponent extends OptionsExampleBase {
         return this._selectionMode;
     }
 
-    @ViewChild("myCalendar") _calendar: RadCalendarComponent;
+    @ViewChild("myCalendar", { static: false }) _calendar: RadCalendarComponent;
 
     onNoneTap() {
         this._selectionMode = CalendarSelectionMode.None;

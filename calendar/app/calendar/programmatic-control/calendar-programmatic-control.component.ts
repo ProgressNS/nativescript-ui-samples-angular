@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit, ViewChild } from "@angular/core";
+import { Component, Injectable, ViewChild } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page";
 import { RadCalendar } from "nativescript-ui-calendar";
 import { RadCalendarComponent } from "nativescript-ui-calendar/angular";
@@ -13,7 +13,7 @@ export class CalendarProgrammaticControlComponent {
     constructor() {
     }
 
-    @ViewChild("myCalendar") _calendar: RadCalendarComponent;
+    @ViewChild("myCalendar", { static: false }) _calendar: RadCalendarComponent;
 
     onNavigateForwardTap() {
         this._calendar.nativeElement.navigateForward();

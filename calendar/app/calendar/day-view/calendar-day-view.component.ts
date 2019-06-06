@@ -16,7 +16,7 @@ export class CalendarDayViewComponent implements OnInit {
     private _style: CalendarDayViewStyle;
     private _weekVisible: boolean;
     private _titleVisible: boolean;
-    @ViewChild("myCalendar") _calendar: RadCalendarComponent;
+    @ViewChild("myCalendar", { static: true }) _calendar: RadCalendarComponent;
 
     constructor(private _calendarService: CalendarDayEventsService) {
 
