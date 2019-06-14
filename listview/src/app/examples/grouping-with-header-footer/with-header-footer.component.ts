@@ -46,7 +46,7 @@ export class ListViewDataOperationsGroupingHeaderFooterComponent implements OnIn
     }
 
     ngOnInit() {
-        this._dataItems = new ObservableArray(this._dataItemService.getDataOperationsItems());
+        this._dataItems = new ObservableArray(this._dataItemService.getGeneratedDataOperationsItems());
     }
 
     public toggleGrouping() {

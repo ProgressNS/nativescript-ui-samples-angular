@@ -5,6 +5,31 @@ const namesAndEmails = require("./NamesAndEmails.json");
 const posts = require("./posts.json");
 const listItems = require("./item-layouts/listItems.json");
 
+const GENERATED_ITEMS_COUNT = 50;
+const GROUPS_COUNT = 3;
+const SPECIAL_ITEM_INTERVAL = 4;
+const generateItems = () => {
+    let items = [];
+
+    for (let i = 1; i <= GENERATED_ITEMS_COUNT; i++) {
+        items.push(new DataItem(
+            i,
+            i % SPECIAL_ITEM_INTERVAL === 0 ? `Special Item ${i}` : `Item ${i}`,
+            `This is an item, category is: Category ${i % GROUPS_COUNT}`,
+            null,
+            null,
+            null,
+            false,
+            null,
+            `Category ${i % GROUPS_COUNT}`
+        ));
+    }
+
+    return items;
+};
+
+const items: DataItem[] = generateItems();
+
 @Injectable()
 export class DataItemService {
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
@@ -67,6 +92,7 @@ export class DataItemService {
         return result;
     }
 
+
     getDataOperationsItems(): DataItem[] {
         return [
             new DataItem(89, "Special Item 89", "This is item category is: Category 1", null, null, null, false, null, "Category 1"),
@@ -84,6 +110,10 @@ export class DataItemService {
             new DataItem(80, "Item 80", "This is item category is: Category 1", null, null, null, false, null, "Category 1"),
             new DataItem(54, "Item 54", "This is item category is: Category 3", null, null, null, false, null, "Category 3"),
         ];
+    }
+
+    getGeneratedDataOperationsItems(): DataItem[] {
+        return generateItems();
     }
 
     getGroupedIndexOfSize(size: number) {
