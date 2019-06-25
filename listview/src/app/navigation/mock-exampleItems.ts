@@ -300,6 +300,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Group, Swipe, Load and Pull",
                 "path": "ListViewGroupSwipeLoadPullComponent/ListViewGroupSwipeLoadPullComponent",
                 "subItems": []
+            },
+            {
+                "title": "Get first visible index",
+                "path": "ListViewFirstVisibleIndexComponent/ListViewFirstVisibleIndexComponent",
+                "subItems": []
             }
         ]
     }

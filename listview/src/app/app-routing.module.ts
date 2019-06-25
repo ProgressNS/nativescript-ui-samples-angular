@@ -348,6 +348,13 @@ let APP_ROUTES: Routes = [
         data: {
             "title": "Group, Swipe, Load and Pull"
         }
+    },
+    {
+        path: "ListViewFirstVisibleIndexComponent",
+        loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Get first visible index"
+        }
     }
 ];
 
