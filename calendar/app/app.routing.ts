@@ -39,6 +39,13 @@ const APP_ROUTES: Routes = [
         }
     },
     {
+        path: "CalendarProgrammaticSelectionComponent",
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
+        data: {
+            "title": "Programmatic selection"
+        }
+    },
+    {
         path: "CalendarViewModesComponent",
         loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
@@ -78,6 +85,13 @@ const APP_ROUTES: Routes = [
         loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
         data: {
             "title": "Transition modes"
+        }
+    },
+    {
+        path: "CalendarCustomEventsComponent",
+        loadChildren: './calendar/calendar-examples.module#CalendarExamplesModule',
+        data: {
+            "title": "Custom events"
         }
     }
 ];

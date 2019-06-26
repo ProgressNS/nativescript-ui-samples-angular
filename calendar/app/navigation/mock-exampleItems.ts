@@ -54,6 +54,16 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Day view",
                 "path": "CalendarDayViewComponent/day-view",
                 "subItems": []
+            },
+            {
+                "title": "Programmatic selection",
+                "path": "CalendarProgrammaticSelectionComponent/programmatic-selection",
+                "subItems": []
+            },
+            {
+                "title": "Custom events",
+                "path": "CalendarCustomEventsComponent/custom-events",
+                "subItems": []
             }
         ]
     }

@@ -1,0 +1,32 @@
+.event-container {
+    padding: 12;
+}
+
+.event-id {
+    margin: 0 6;
+    min-width: 36;
+    vertical-align: center;
+}
+
+.event-color {
+    margin: 0 6;
+    width: 15;
+    height: 15;
+    border-radius: 10;
+    vertical-align: center;
+}
+
+.event-title {
+    margin: 0 6;
+    font-size: 20;
+}
+
+.event-location {
+    margin: 0 6;
+    opacity: 0.5;
+}
+
+.event-time {
+    margin: 0 6;
+    vertical-align: center;
+}
