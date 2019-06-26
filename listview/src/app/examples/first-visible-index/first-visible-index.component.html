@@ -1,0 +1,12 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, auto, *">
+    <Label class="margin-label" [text]="'First visible item: ' + firstVisibleIndex"></Label>
+    <Button row="1" class="big-button" text="Get first visible" (tap)="getFirstVisiblePosition()"></Button>
+    <RadListView #myList row="2" [items]="dataItems">
+        <ng-template tkListItemTemplate let-item="item" let-odd="odd">
+            <StackLayout orientation="vertical" [backgroundColor]="odd ? 'lightgreen' : 'lightblue'">
+                <Label class="nameLabel" [text]="item.name"></Label>
+                <Label class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
