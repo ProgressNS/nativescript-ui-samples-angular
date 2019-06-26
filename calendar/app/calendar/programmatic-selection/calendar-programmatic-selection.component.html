@@ -1,0 +1,8 @@
+<GridLayout rows="auto,auto,*" columns="*,*,*" tkExampleTitle tkToggleNavButton>
+    <Button text="single" (tap)="onSingleSelectionTap()"></Button>
+    <Button text="multiple" (tap)="onMultipleSelectionTap()" col="1"></Button>
+    <Button text="range" (tap)="onRangeSelectionTap()" col="2"></Button>
+    <Button text="clear selection" (tap)="onClearSelectionTap()" row="1" colSpan="3"></Button>
+
+    <RadCalendar #myCalendar row="2" selectionMode="Single" colSpan="3"></RadCalendar>
+</GridLayout>

@@ -1,0 +1,14 @@
+<GridLayout rows="*, 140" tkExampleTitle tkToggleNavButton>
+    <RadCalendar [eventSource]="eventSource" (cellTap)="onCellTap($event)"></RadCalendar>
+    <ListView [items]="myItems" row="1" >
+        <ng-template let-item="item">
+            <GridLayout columns="auto, auto, *, auto" rows="auto,auto" class="event-container">
+                <Label text="id: {{ item.id }}" col="0" rowSpan="2" class="event-id" ></Label>
+                <Label backgroundColor="{{ item.eventColor }}" col="1" rowSpan="2" class="event-color"></Label>
+                <Label text="what: {{ item.title }}" col="2" class="event-title"></Label>
+                <Label text="where: {{ item.location }}" row="1" col="2" class="event-location"></Label>
+                <Label text="when: {{ item.formattedTime }}" col="3" rowSpan="2" class="event-time"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

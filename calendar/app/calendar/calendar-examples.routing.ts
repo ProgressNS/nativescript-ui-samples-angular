@@ -11,6 +11,8 @@ import { CalendarSelectionModesComponent } from './selection-modes/calendar-sele
 import { CalendarTransitionModesComponent } from './transition-modes/calendar-transition-modes.component';
 import { CalendarViewModesComponent } from './view-modes/calendar-view-modes.component';
 import { CalendarDayViewComponent } from './day-view/calendar-day-view.component';
+import { CalendarProgrammaticSelectionComponent } from './programmatic-selection/calendar-programmatic-selection.component';
+import { CalendarCustomEventsComponent } from './custom-events/calendar-custom-events.component';
 
 export const routes: Routes = [
   { path: 'localization', component: CalendarLocalizationComponent },
@@ -22,5 +24,7 @@ export const routes: Routes = [
   { path: 'selection-modes', component: CalendarSelectionModesComponent },
   { path: 'transition-modes', component: CalendarTransitionModesComponent },
   { path: 'view-modes', component: CalendarViewModesComponent },
-  { path: 'day-view', component: CalendarDayViewComponent }
+  { path: 'day-view', component: CalendarDayViewComponent },
+  { path: 'programmatic-selection', component: CalendarProgrammaticSelectionComponent },
+  { path: 'custom-events', component: CalendarCustomEventsComponent}
 ];
