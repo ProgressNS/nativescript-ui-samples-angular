@@ -5,6 +5,7 @@
         (tokenSelected)="onTokenSelected($event)" (tokenDeselected)="onTokenDeselected($event)"
         [items]="dataItems" noResultsText="Nothing found!"
         completionMode="Contains" suggestMode="Suggest" displayMode="Tokens">
+        <!-- >> angular-autocomplete-custom-tokens-template-html -->
         <SuggestionView tkAutoCompleteSuggestionView>
             <ng-template tkSuggestionItemTemplate let-item="item">
                 <GridLayout columns="auto, *">
@@ -14,5 +15,6 @@
                 </GridLayout>
             </ng-template>
         </SuggestionView>
+        <!-- << angular-autocomplete-custom-tokens-template-html -->
     </RadAutoCompleteTextView>
 </StackLayout>

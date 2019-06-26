@@ -19,6 +19,7 @@ export class AutoCompleteCustomTokenComponent {
         return this._items;
     }
 
+    // >> angular-autocomplete-custom-tokens-items-ts
     private initDataItems() {
         if (!this._items) {
             this._items = new ObservableArray<CityModel>();
@@ -29,6 +30,7 @@ export class AutoCompleteCustomTokenComponent {
             }
         }
     }
+    // << angular-autocomplete-custom-tokens-items-ts
 
     public onTokenAdded(args: AutoCompleteEventData) {
         console.log("Added Token: " + args.token);
@@ -47,6 +49,7 @@ export class AutoCompleteCustomTokenComponent {
     }
 }
 
+// >> angular-autocomplete-custom-token-model-ts
 export class CityModel extends TokenModel {
     public id: number;
     public city: string;
@@ -63,3 +66,4 @@ export class CityModel extends TokenModel {
         return this.id + ": " + this.city + ", " + this.country;
     }
 }
+// << angular-autocomplete-custom-token-model-ts
