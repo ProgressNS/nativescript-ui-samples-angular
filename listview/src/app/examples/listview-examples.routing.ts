@@ -9,6 +9,7 @@ import { ListviewChangeSizeAtRuntimeComponent } from './header-footer/change-siz
 import { ListViewBigHeaderComponent } from './header-footer/big-header/listview-big-header.component';
 import { ListViewItemAnimationsComponent } from './item-animations/listview-item-animations.component';
 import { ListViewItemLayoutsGridComponent } from './item-layouts/listview-item-layouts-grid.component';
+import { ListViewItemLayoutsGridNoHeightComponent } from './item-layouts/listview-item-layouts-grid-no-height.component';
 import { ListViewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
 import { ListViewItemLayoutsRuntimeComponent } from './item-layouts/listview-item-layouts-runtime.component';
 import { ListViewItemLayoutsStaggeredComponent } from './item-layouts/listview-item-layouts-staggered.component';
@@ -60,6 +61,7 @@ export const routes: Routes = [
   { path: 'ListViewBigHeaderComponent', component: ListViewBigHeaderComponent },
   { path: 'ListViewItemAnimationsComponent', component: ListViewItemAnimationsComponent },
   { path: 'ListViewItemLayoutsGridComponent', component: ListViewItemLayoutsGridComponent },
+  { path: 'ListViewItemLayoutsGridNoHeightComponent', component: ListViewItemLayoutsGridNoHeightComponent },
   { path: 'ListViewItemLayoutsLinearComponent', component: ListViewItemLayoutsLinearComponent },
   { path: 'ListViewItemLayoutsRuntimeComponent', component: ListViewItemLayoutsRuntimeComponent },
   { path: 'ListViewItemLayoutsStaggeredComponent', component: ListViewItemLayoutsStaggeredComponent },

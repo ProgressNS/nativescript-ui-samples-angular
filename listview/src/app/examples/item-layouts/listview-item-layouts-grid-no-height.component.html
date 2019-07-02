@@ -1,0 +1,12 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems">
+        <ng-template tkListItemTemplate let-item="item" let-odd="odd">
+            <GridLayout rows="auto, auto" [backgroundColor]="odd ? 'lightgreen' : 'lightblue'">
+                <Label row="0" [text]="item.name"></Label>
+                <Label row="1" [text]="item.description" textWrap="true"></Label>
+            </GridLayout>
+        </ng-template>
+
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="2"></ListViewGridLayout>
+    </RadListView>
+</GridLayout>

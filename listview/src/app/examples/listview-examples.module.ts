@@ -13,6 +13,7 @@ import { ListViewBigHeaderComponent } from './header-footer/big-header/listview-
 import { ListviewChangeSizeAtRuntimeComponent } from './header-footer/change-size-at-runtime/listview-change-size-at-runtime.component';
 import { ListViewItemAnimationsComponent } from './item-animations/listview-item-animations.component';
 import { ListViewItemLayoutsGridComponent } from './item-layouts/listview-item-layouts-grid.component';
+import { ListViewItemLayoutsGridNoHeightComponent } from './item-layouts/listview-item-layouts-grid-no-height.component';
 import { ListViewItemLayoutsLinearComponent } from './item-layouts/listview-item-layouts-linear.component';
 import { ListViewItemLayoutsRuntimeComponent } from './item-layouts/listview-item-layouts-runtime.component';
 import { ListViewItemLayoutsStaggeredComponent } from './item-layouts/listview-item-layouts-staggered.component';
@@ -77,6 +78,7 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListviewChangeSizeAtRuntimeComponent,
         ListViewItemAnimationsComponent,
         ListViewItemLayoutsGridComponent,
+        ListViewItemLayoutsGridNoHeightComponent,
         ListViewItemLayoutsLinearComponent,
         ListViewItemLayoutsRuntimeComponent,
         ListViewItemLayoutsStaggeredComponent,
