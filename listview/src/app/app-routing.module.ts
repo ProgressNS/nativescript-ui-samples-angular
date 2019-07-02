@@ -164,7 +164,14 @@ let APP_ROUTES: Routes = [
         path: "ListViewItemLayoutsGridComponent",
         loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
         data: {
-            "title": "Grid"
+            "title": "Grid with item height"
+        }
+    },
+    {
+        path: "ListViewItemLayoutsGridNoHeightComponent",
+        loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Grid without item height"
         }
     },
     {

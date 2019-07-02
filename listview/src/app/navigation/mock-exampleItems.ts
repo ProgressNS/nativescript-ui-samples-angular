@@ -104,8 +104,13 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                         "subItems": []
                     },
                     {
-                        "title": "Grid",
+                        "title": "Grid with item height",
                         "path": "ListViewItemLayoutsGridComponent/ListViewItemLayoutsGridComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Grid without item height",
+                        "path": "ListViewItemLayoutsGridNoHeightComponent/ListViewItemLayoutsGridNoHeightComponent",
                         "subItems": []
                     },
                     {
