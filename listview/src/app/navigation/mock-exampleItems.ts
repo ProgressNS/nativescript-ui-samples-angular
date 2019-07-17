@@ -310,6 +310,11 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Get first visible index",
                 "path": "ListViewFirstVisibleIndexComponent/ListViewFirstVisibleIndexComponent",
                 "subItems": []
+            },
+            {
+                "title": "Custom Angular comp in template",
+                "path": "ListviewCompTemplateComponent/ListviewCompTemplateComponent",
+                "subItems": []
             }
         ]
     }

@@ -1,0 +1,9 @@
+<GridLayout class="listItemTemplateGrid">
+    <NSImg [src]="item.image" height="200" ios:stretch="aspectFill"></NSImg>
+    <GridLayout verticalAlignment="bottom">
+        <StackLayout class="labelsStackLayout">
+            <Label [text]="item.title"></Label>
+            <Label [text]="item.name"></Label>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>

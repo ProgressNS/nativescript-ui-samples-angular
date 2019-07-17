@@ -5,6 +5,9 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
+import { CustomImageTemplateComponent } from "./custom-angular-comp/custom-image-template.component";
+import { CustomSwipeTemplateComponent } from "./custom-angular-comp/custom-swipe-template.component";
+
 import { ListViewGettingStartedComponent } from './getting-started/listview-getting-started.component';
 import { ListViewGettingStartedHorizontalComponent } from './getting-started-horizontal/listview-getting-started-horizontal.component';
 import { ListViewHeaderFooterComponent } from './header-footer/auto-size/listview-auto-size.component';
@@ -55,6 +58,7 @@ import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-
 import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
 import { ListViewGroupSwipeLoadPullComponent } from './group-swipe-load-pull/listview-group-swipe-load-pull.component';
 import { ListViewFirstVisibleIndexComponent } from './first-visible-index/first-visible-index.component';
+import { ListviewCompTemplateComponent } from "./custom-angular-comp/listview-comp-template.component";
 
 import { routes } from './listview-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -70,6 +74,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         NativeScriptRouterModule.forChild(routes)
     ],
     declarations: [
+        CustomImageTemplateComponent,
+        CustomSwipeTemplateComponent,
         ListViewGettingStartedComponent,
         ListViewGettingStartedHorizontalComponent,
         ListViewHeaderFooterComponent,
@@ -119,7 +125,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListviewHorizontalWithVariableItemWidthComponent,
         ListViewDataOperationsMultipleWithSwipeComponent,
         ListViewGroupSwipeLoadPullComponent,
-        ListViewFirstVisibleIndexComponent
+        ListViewFirstVisibleIndexComponent,
+        ListviewCompTemplateComponent
     ]
 })
 export class ListViewExamplesModule { }
