@@ -1,0 +1,10 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="dataItems" swipeActions="true">
+        <ng-template tkListItemTemplate let-item="item">
+            <custom-image-template [item]="item"></custom-image-template>
+        </ng-template>
+        <GridLayout *tkListItemSwipeTemplate>
+            <custom-swipe-template></custom-swipe-template>
+        </GridLayout>
+    </RadListView>
+</GridLayout>

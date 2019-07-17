@@ -51,6 +51,7 @@ import { ListViewWithBigDataComponent } from './with-big-data/listview-with-big-
 import { ListviewHorizontalWithVariableItemWidthComponent } from './horizontal-with-variable-item-width/listview-horizontal-with-variable-item-width.component';
 import { ListViewGroupSwipeLoadPullComponent } from './group-swipe-load-pull/listview-group-swipe-load-pull.component';
 import { ListViewFirstVisibleIndexComponent } from './first-visible-index/first-visible-index.component';
+import { ListviewCompTemplateComponent } from "./custom-angular-comp/listview-comp-template.component";
 
 export const routes: Routes = [
   { path: 'ListViewGettingStartedComponent', component: ListViewGettingStartedComponent },
@@ -102,5 +103,6 @@ export const routes: Routes = [
   { path: 'ListViewWithBigDataComponent', component: ListViewWithBigDataComponent },
   { path: 'ListviewHorizontalWithVariableItemWidthComponent', component: ListviewHorizontalWithVariableItemWidthComponent },
   { path: 'ListViewGroupSwipeLoadPullComponent', component: ListViewGroupSwipeLoadPullComponent },
-  { path: 'ListViewFirstVisibleIndexComponent', component: ListViewFirstVisibleIndexComponent }
+  { path: 'ListViewFirstVisibleIndexComponent', component: ListViewFirstVisibleIndexComponent },
+  { path: 'ListviewCompTemplateComponent', component: ListviewCompTemplateComponent }
 ];

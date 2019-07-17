@@ -362,6 +362,13 @@ let APP_ROUTES: Routes = [
         data: {
             "title": "Get first visible index"
         }
+    },
+    {
+        path: "ListviewCompTemplateComponent",
+        loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Custom Angular comp in template"
+        }
     }
 ];
 
