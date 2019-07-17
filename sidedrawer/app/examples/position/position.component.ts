@@ -3,9 +3,7 @@ import { Page } from "tns-core-modules/ui/page";
 import { SideDrawerLocation } from 'nativescript-ui-sidedrawer';
 import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataService } from "../data.service";
-import { DependencyObservable, Property, PropertyMetadataSettings } from "tns-core-modules/ui/core/dependency-observable";
 
 @Component({
     moduleId: module.id,
