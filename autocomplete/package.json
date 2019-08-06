@@ -50,7 +50,7 @@
     "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-appium": "5.2.0",
     "nativescript-dev-webpack": "~1.0.0",
-    "tns-platform-declarations": "^6.0.3",
+    "tns-platform-declarations": "^6.0.5",
     "tslib": "~1.9.2",
     "tslint": "~5.11.0",
     "typescript": "~3.4.5"
