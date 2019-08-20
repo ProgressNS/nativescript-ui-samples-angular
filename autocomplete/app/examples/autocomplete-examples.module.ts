@@ -22,6 +22,7 @@ import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-su
 import { AutoCompleteHintComponent } from './hint/autocomplete-hint.component';
 import { AutocompletePreselectedTokensComponent } from './preselected-tokens/autocomplete-preselected-tokens.component';
 import { AutoCompleteCustomTokenComponent } from './custom-token/autocomplete-custom-token.component';
+import { AutoCompleteCssComponent } from './css/autocomplete-css.component';
 
 import { routes } from './autocomplete-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -53,7 +54,8 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         AutocompleteSuggestModeComponent,
         AutoCompleteHintComponent,
         AutocompletePreselectedTokensComponent,
-        AutoCompleteCustomTokenComponent
+        AutoCompleteCustomTokenComponent,
+        AutoCompleteCssComponent
     ]
 })
 export class AutoCompleteExamplesModule { }
