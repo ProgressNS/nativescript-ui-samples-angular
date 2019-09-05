@@ -19,6 +19,7 @@ import { AutocompleteSuggestModeComponent } from './suggest-mode/autocomplete-su
 import { AutoCompleteHintComponent } from './hint/autocomplete-hint.component';
 import { AutocompletePreselectedTokensComponent } from './preselected-tokens/autocomplete-preselected-tokens.component';
 import { AutoCompleteCustomTokenComponent } from './custom-token/autocomplete-custom-token.component';
+import { AutoCompleteCssComponent } from './css/autocomplete-css.component';
 
 export const routes: Routes = [
   { path: 'AutoCompleteContainsModeComponent', component: AutoCompleteContainsModeComponent },
@@ -38,5 +39,6 @@ export const routes: Routes = [
   { path: 'AutocompleteSuggestModeComponent', component: AutocompleteSuggestModeComponent },
   { path: 'AutoCompleteHintComponent', component: AutoCompleteHintComponent },
   { path: 'AutocompletePreselectedTokensComponent', component: AutocompletePreselectedTokensComponent },
-  { path: 'AutoCompleteCustomTokenComponent', component: AutoCompleteCustomTokenComponent }
+  { path: 'AutoCompleteCustomTokenComponent', component: AutoCompleteCustomTokenComponent },
+  { path: 'AutoCompleteCssComponent', component: AutoCompleteCssComponent }
 ];

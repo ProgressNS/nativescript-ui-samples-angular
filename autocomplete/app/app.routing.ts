@@ -138,6 +138,13 @@ let APP_ROUTES: Routes = [
             "title": "Custom Token Model"
         }
     },
+    {
+        path: "AutoCompleteCssComponent",
+        loadChildren: './examples/autocomplete-examples.module#AutoCompleteExamplesModule',
+        data: {
+            "title": "CSS"
+        }
+    },
 ];
 
 export const routing = NativeScriptRouterModule.forRoot(APP_ROUTES);

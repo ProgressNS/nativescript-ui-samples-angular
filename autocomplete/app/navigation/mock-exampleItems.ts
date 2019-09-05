@@ -116,6 +116,11 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 "title": "Custom Token Model",
                 "path": "AutoCompleteCustomTokenComponent/AutoCompleteCustomTokenComponent",
                 "subItems": []
+            },
+            {
+                "title": "CSS",
+                "path": "AutoCompleteCssComponent/AutoCompleteCssComponent",
+                "subItems": []
             }]
     }
 ];
