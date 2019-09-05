@@ -1,7 +1,7 @@
 <RadSideDrawer>
     <GridLayout tkDrawerContent rows="auto, *" class="root-drawer-content">
         <StackLayout>
-            <Label [text]="currentExample.title" class="h1 text-center"></Label>
+            <Label [text]="currentExample.titleRoot" class="h1 text-center"></Label>
         </StackLayout>
         <ListView id="root-drawer-list" row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" class="root-drawer-content">
             <ng-template let-item="item">
