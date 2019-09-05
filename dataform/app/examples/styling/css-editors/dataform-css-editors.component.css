@@ -9,6 +9,10 @@ PropertyEditor {
     font-size: 14;
 }
 
+PropertyEditor:focus {
+    background-color: #303F9F;
+}
+
 DataFormEditorLabel {
     color:#212121;
     background-color: white;
