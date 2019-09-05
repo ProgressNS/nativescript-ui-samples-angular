@@ -3,6 +3,7 @@ import { ExampleItem } from './exampleItem';
 export const EXAMPLEITEMS: ExampleItem[] = [
     {
         "title": "SideDrawer Angular",
+        "titleRoot": "SideDrawerRoot",
         "path": "",
         "subItems": [
             {
