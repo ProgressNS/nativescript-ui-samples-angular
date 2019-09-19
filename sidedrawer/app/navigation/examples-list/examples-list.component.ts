@@ -1,8 +1,11 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
 import * as frameModule from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
+import { RadSideDrawer, FadeTransition, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from "nativescript-ui-sidedrawer";
+import { getRootView } from "tns-core-modules/application";
+import { Page } from "tns-core-modules/ui/page";
 
 @Component({
     moduleId: module.id,
@@ -10,12 +13,13 @@ import { ActivatedRoute, Router } from '@angular/router';
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth1Component implements OnInit, OnDestroy {
+export class ExamplesListDepth1Component implements OnInit, AfterViewInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
+    private _rootDrawer: RadSideDrawer;
 
-    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
+    constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService, private page: Page) {
 
     }
 
@@ -26,10 +30,19 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
             this.hasBack = false;
             this._currentExample = this._exampleItemsService.getParentExampleItem(0);
         });
+        this.page.on(Page.loadedEvent, this.onPageLoaded.bind(this));
     }
 
     ngOnDestroy() {
         this._sub.unsubscribe();
+    }
+
+    ngAfterViewInit() {
+        this._rootDrawer = getRootView() as RadSideDrawer;
+    }
+
+    private onPageLoaded(args) {
+        this._rootDrawer = getRootView() as RadSideDrawer;
     }
 
     public get currentExample(): ExampleItem {
@@ -58,6 +71,45 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
         }
     }
 
+    public onChangeTransition(transition: string) {
+        switch (transition) {
+            case "SlideInOnTopTransition":
+                this._rootDrawer.drawerTransition = new SlideInOnTopTransition();
+                break;
+            case "FadeTransition":
+                this._rootDrawer.drawerTransition = new FadeTransition();
+                break;
+            case "PushTransition":
+                this._rootDrawer.drawerTransition = new PushTransition();
+                break;
+            case "RevealTransition":
+                this._rootDrawer.drawerTransition = new RevealTransition();
+                break;
+            case "ReverseSlideOutTransition":
+                this._rootDrawer.drawerTransition = new ReverseSlideOutTransition();
+                break;
+            case "ScaleDownPusherTransition":
+                this._rootDrawer.drawerTransition = new ScaleDownPusherTransition();
+                break;
+            case "ScaleUpTransition":
+                this._rootDrawer.drawerTransition = new ScaleUpTransition();
+                break;
+            case "SlideAlongTransition":
+                this._rootDrawer.drawerTransition = new SlideAlongTransition();
+                break;
+            default:
+                break;
+        }
+
+        console.log("Changed drawer transition to", transition);
+    }
+
+    public onNavBtnTap() {
+        if (this._rootDrawer) {
+            this._rootDrawer.toggleDrawerState();
+        }
+    }
+
     public onNavigationButtonTap() {
         frameModule.topmost().goBack();
     }
@@ -70,10 +122,11 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth2Component implements OnInit, OnDestroy {
+export class ExamplesListDepth2Component implements OnInit, AfterViewInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
+    private _rootDrawer: RadSideDrawer;
 
     constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
 
@@ -87,6 +140,10 @@ export class ExamplesListDepth2Component implements OnInit, OnDestroy {
             this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
         });
 
+    }
+
+    ngAfterViewInit() {
+        this._rootDrawer = getRootView() as RadSideDrawer;
     }
 
     ngOnDestroy() {
@@ -122,6 +179,46 @@ export class ExamplesListDepth2Component implements OnInit, OnDestroy {
     public onNavigationButtonTap() {
         frameModule.topmost().goBack();
     }
+
+
+    public onChangeTransition(transition: string) {
+        switch (transition) {
+            case "SlideInOnTopTransition":
+                this._rootDrawer.drawerTransition = new SlideInOnTopTransition();
+                break;
+            case "FadeTransition":
+                this._rootDrawer.drawerTransition = new FadeTransition();
+                break;
+            case "PushTransition":
+                this._rootDrawer.drawerTransition = new PushTransition();
+                break;
+            case "RevealTransition":
+                this._rootDrawer.drawerTransition = new RevealTransition();
+                break;
+            case "ReverseSlideOutTransition":
+                this._rootDrawer.drawerTransition = new ReverseSlideOutTransition();
+                break;
+            case "ScaleDownPusherTransition":
+                this._rootDrawer.drawerTransition = new ScaleDownPusherTransition();
+                break;
+            case "ScaleUpTransition":
+                this._rootDrawer.drawerTransition = new ScaleUpTransition();
+                break;
+            case "SlideAlongTransition":
+                this._rootDrawer.drawerTransition = new SlideAlongTransition();
+                break;
+            default:
+                break;
+        }
+
+        console.log("Changed drawer transition to", transition);
+    }
+
+    public onNavBtnTap() {
+        if (this._rootDrawer) {
+            this._rootDrawer.toggleDrawerState();
+        }
+    }
 }
 
 @Component({
@@ -130,10 +227,11 @@ export class ExamplesListDepth2Component implements OnInit, OnDestroy {
     templateUrl: "examples-list.component.html",
     styleUrls: ["examples-list.component.css"]
 })
-export class ExamplesListDepth3Component implements OnInit, OnDestroy {
+export class ExamplesListDepth3Component implements OnInit, AfterViewInit, OnDestroy {
     private _currentExample: ExampleItem;
     private _hasBack: boolean;
     private _sub: any;
+    private _rootDrawer: RadSideDrawer;
 
     constructor(private _router: Router, private _route: ActivatedRoute, private _exampleItemsService: ExampleItemService) {
 
@@ -147,6 +245,10 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
             this._currentExample = this._exampleItemsService.getChildExampleItem(parentTitle, tappedTitle, this._exampleItemsService.getAllExampleItems());
         });
 
+    }
+
+    ngAfterViewInit() {
+        this._rootDrawer = getRootView() as RadSideDrawer;
     }
 
     ngOnDestroy() {
@@ -177,6 +279,46 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
 
     public onNavigationButtonTap() {
         frameModule.topmost().goBack();
+    }
+
+
+    public onChangeTransition(transition: string) {
+        switch (transition) {
+            case "SlideInOnTopTransition":
+                this._rootDrawer.drawerTransition = new SlideInOnTopTransition();
+                break;
+            case "FadeTransition":
+                this._rootDrawer.drawerTransition = new FadeTransition();
+                break;
+            case "PushTransition":
+                this._rootDrawer.drawerTransition = new PushTransition();
+                break;
+            case "RevealTransition":
+                this._rootDrawer.drawerTransition = new RevealTransition();
+                break;
+            case "ReverseSlideOutTransition":
+                this._rootDrawer.drawerTransition = new ReverseSlideOutTransition();
+                break;
+            case "ScaleDownPusherTransition":
+                this._rootDrawer.drawerTransition = new ScaleDownPusherTransition();
+                break;
+            case "ScaleUpTransition":
+                this._rootDrawer.drawerTransition = new ScaleUpTransition();
+                break;
+            case "SlideAlongTransition":
+                this._rootDrawer.drawerTransition = new SlideAlongTransition();
+                break;
+            default:
+                break;
+        }
+
+        console.log("Changed drawer transition to", transition);
+    }
+
+    public onNavBtnTap() {
+        if (this._rootDrawer) {
+            this._rootDrawer.toggleDrawerState();
+        }
     }
 }
 

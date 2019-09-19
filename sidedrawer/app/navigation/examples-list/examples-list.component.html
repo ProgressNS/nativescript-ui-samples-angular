@@ -1,8 +1,20 @@
 <ActionBar [title]="currentExample.title">
-    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()" [visibility]="hasBack ? 'visible' : 'collapsed'"></NavigationButton>
+    <ActionItem text="Root" (tap)="onNavBtnTap()" [visibility]="hasBack ? 'collapsed' : 'visible'"></ActionItem>
+    <NavigationButton text="Back" icon="res://ic_arrow_back_black_24dp" (tap)="onNavigationButtonTap()"
+        [visibility]="hasBack ? 'visible' : 'collapsed'"></NavigationButton>
 </ActionBar>
-<GridLayout>
-    <ListView [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)">
+<GridLayout rows="auto, *">
+    <GridLayout orientation="horizontal" columns="50*, 50*" rows="auto, auto, auto, auto" [visibility]="hasBack ? 'collapsed' : 'visible'">
+        <Button text="SlideInOnTop" (tap)="onChangeTransition('SlideInOnTopTransition')" row="0" col="0"></Button>
+        <Button text="Fade" (tap)="onChangeTransition('FadeTransition')" row="0" col="1"></Button>
+        <Button text="Push" (tap)="onChangeTransition('PushTransition')" row="1" col="0"></Button>
+        <Button text="Reveal" (tap)="onChangeTransition('RevealTransition')" row="1" col="1"></Button>
+        <Button text="ReverseSlideOut" (tap)="onChangeTransition('ReverseSlideOutTransition')" row="2" col="0"></Button>
+        <Button text="ScaleDownPusher" (tap)="onChangeTransition('ScaleDownPusherTransition')" row="2" col="1"></Button>
+        <Button text="ScaleUp" (tap)="onChangeTransition('ScaleUpTransition')" row="3" col="0"></Button>
+        <Button text="SlideAlong" (tap)="onChangeTransition('SlideAlongTransition')" row="3" col="1"></Button>
+    </GridLayout>
+    <ListView [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" row="1">
         <ng-template let-item="item">
             <StackLayout class="itemStackLayout">
                 <Label class="titleLabel" [text]="item.title" textWrap="true"></Label>
