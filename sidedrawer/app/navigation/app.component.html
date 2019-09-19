@@ -1,6 +1,6 @@
 <RadSideDrawer>
-    <GridLayout tkDrawerContent rows="auto, *" class="root-drawer-content">
-        <StackLayout>
+    <GridLayout tkDrawerContent rows="auto, *, auto" class="root-drawer-content">
+        <StackLayout row="0">
             <Label [text]="currentExample.titleRoot" class="h1 text-center"></Label>
         </StackLayout>
         <ListView id="root-drawer-list" row="1" [items]="currentExample.subItems" (itemTap)="onNavigationItemTap($event)" class="root-drawer-content">
@@ -10,6 +10,7 @@
                 </GridLayout>
             </ng-template>
         </ListView>
+        <Button row="2" text="Close Drawer" (tap)="onCloseDrawerTap()"></Button>
     </GridLayout>
 
     <page-router-outlet tkMainContent></page-router-outlet>
