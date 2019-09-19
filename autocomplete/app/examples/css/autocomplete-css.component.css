@@ -1,7 +1,7 @@
 RadAutoCompleteTextView.ac1 {
     color:#303F9F;
     background: #00BCD4;
-    padding: 0 6;
+    padding: 8;
     margin: 10 10 5 10;
     border-width: 3;
     border-color: #303F9F;
@@ -43,7 +43,7 @@ RadAutoCompleteTextView.ac1 SuggestionView Label {
 }
 
 RadAutoCompleteTextView.ac2 {
-    padding: 2 6;
+    padding: 10;
     margin: 5 10;
     background: white;
     token-item-spacing: 12;
@@ -89,7 +89,7 @@ RadAutoCompleteTextView.ac2 ClearButton {
 
 RadAutoCompleteTextView.ac3 {
     margin: 5 10;
-    padding: 0 6;
+    padding: 10;
     color: #00C147;
     background: white;
     token-item-spacing: 12;
@@ -127,7 +127,7 @@ RadAutoCompleteTextView.ac3 ClearButton {
 RadAutoCompleteTextView.ac4 {
     color:red;
     background: #FFFFFF;
-    padding: 5 10;
+    padding: 14;
     margin: 5 10;
     border-width: 3;
     border-color: red;
