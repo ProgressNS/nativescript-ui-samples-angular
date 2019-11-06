@@ -3,7 +3,6 @@ import { Component, OnInit, Injectable, ViewChild } from "@angular/core";
 import { Router } from '@angular/router';
 import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
-import { topmost } from "tns-core-modules/ui/frame";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { DataItem } from "../dataItem";
 import { DataItemService } from "../dataItem.service";

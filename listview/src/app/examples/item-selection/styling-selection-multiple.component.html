@@ -1,0 +1,10 @@
+<GridLayout backgroundColor="green" tkExampleTitle tkToggleNavButton>
+    <RadListView class="red-transparent-selection-list" [items]="dataItems" selectionBehavior="Press" multipleSelection="true">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout ios:class="iosListItemStackLayout" android:class="androidListItemStackLayout">
+                <Label ios:class="iosNameLabel" android:class="androidNameLabel" [text]="item.name"></Label>
+                <Label ios:class="iosDescriptionLabel" android:class="androidDescriptionLabel" class="descriptionLabel" [text]="item.description"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

@@ -147,6 +147,20 @@ let APP_ROUTES: Routes = [
         }
     },
     {
+        path: "StylingItemSelectionComponent",
+        loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Styling Single Selection"
+        }
+    },
+    {
+        path: "StylingSelectionMultipleComponent",
+        loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
+        data: {
+            "title": "Styling Multiple Selection"
+        }
+    },
+    {
         path: "ListViewPullToRefreshComponent",
         loadChildren: '~/app/examples/listview-examples.module#ListViewExamplesModule',
         data: {

@@ -6,7 +6,7 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { RadListViewComponent } from "nativescript-ui-listview/angular";
 import { View } from 'tns-core-modules/ui/core/view';
 import { Label } from 'tns-core-modules/ui/label';
-import { topmost } from "tns-core-modules/ui/frame/frame";
+import { Frame } from "tns-core-modules/ui/frame/frame";
 
 @Component({
     moduleId: module.id,
@@ -77,14 +77,14 @@ export class ListViewSwipeActionsComponent implements OnInit {
         const message = "Tap on Layout for item: " + (<DataItem>args.object.bindingContext).name;
         console.log(message);
         this.myListViewComponent.listView.notifySwipeToExecuteFinished();
-        let lbl = <Label>topmost().getViewById("lbl");
+        let lbl = <Label>Frame.topmost().getViewById("lbl");
         lbl.text += " \n" + message;
     }
 
     public onLabelTap(args) {
         const message = "Tap on Title: " + (<Label>args.object).text;
         console.log(message);
-        let lbl = <Label>topmost().getViewById("lbl");
+        let lbl = <Label>Frame.topmost().getViewById("lbl");
         lbl.text = message;
     }
 }
