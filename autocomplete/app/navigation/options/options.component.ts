@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Injectable, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { ActivatedRoute } from '@angular/router';
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { Page } from "tns-core-modules/ui/page";
 import { OptionsService } from "../../navigation/options/options.service";
 
@@ -59,6 +59,6 @@ export class OptionsComponent implements OnInit, OnDestroy {
     public onItemTap(args) {
         const selectedItems = this._listView.nativeElement.getSelectedItems() as Array<string>;
         this._optionsService.paramValue = selectedItems[0];
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
