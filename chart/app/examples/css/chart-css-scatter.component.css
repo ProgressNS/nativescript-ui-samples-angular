@@ -1,0 +1,77 @@
+Label.title {
+    font-size: 26;
+    margin: 12 16;
+    color:#212121;
+}
+
+Label.weight {
+    font-size: 14;
+    margin: 0 16;
+    color: #3C4044;
+}
+
+Label.height {
+    font-size: 14;
+    margin: 0 40;
+    color: #3C4044;
+}
+
+RadCartesianChart {
+    margin: 0 12;
+}
+
+LinearAxis {
+    ticks-hidden: true;
+    line-hidden: false;
+    line-thickness: 2;
+}
+
+LinearAxis.horizontal {
+    minimum: 160;
+    maximum: 205;
+    major-step: 15;
+}
+
+LinearAxis.vertical {
+    minimum: 60;
+    maximum: 100;
+    major-step: 10;
+}
+
+ChartAxisLabel {
+    color: #3C4044;
+    format: "%.0f";
+    margin: 12;
+    layout-mode: outer;
+}
+
+ScatterSeries {
+    fill-color: #6215EE;
+    stroke-color: white;
+    stroke-width: 1;
+}
+
+ScatterSeries[index=1] {
+    fill-color: #26A69A;
+}
+
+.legend {
+    color: #5F6368;
+    margin: 12;
+}
+
+.legend .symbol {
+    border-radius: 10;
+    width: 10;
+    height: 10;
+}
+
+.legend .symbol.first {
+    background: #6215EE;
+    margin: 0 4 0 30;
+}
+
+.legend .symbol.second {
+    background: #26A69A;
+    margin: 0 4 0 30;
+}

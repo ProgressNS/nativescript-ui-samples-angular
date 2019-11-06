@@ -1,0 +1,26 @@
+<GridLayout tkExampleTitle tkToggleNavButton class="root" rows="auto, auto, 300, auto">
+    <Label class="title" text="Smartphone Shipments"></Label>
+    <Label class="subtitle" row="1" text="(in millions)"></Label>
+    <RadCartesianChart row="2" allowAnimations="false">
+        <RadCartesianChartGrid tkCartesianGrid
+            horizontalLinesVisible="false"
+            verticalLinesVisible="false"
+            horizontalStripLinesVisible="false"
+            verticalStripLinesVisible="false"
+            horizontalStrokeColor="#00000000"
+            verticalStrokeColor="#00000000"
+            horizontalStripLineColor="#00000000, #00000000">
+        </RadCartesianChartGrid>
+        <BarSeries tkCartesianSeries [items]="salesData" categoryProperty="Vendor" valueProperty="Q12018"></BarSeries>
+        <BarSeries tkCartesianSeries index="1" [items]="salesData" categoryProperty="Vendor" valueProperty="Q12019"></BarSeries>
+
+        <LinearAxis tkCartesianHorizontalAxis ></LinearAxis>
+        <CategoricalAxis tkCartesianVerticalAxis></CategoricalAxis>
+    </RadCartesianChart>
+    <StackLayout class="legend" row="3" orientation="horizontal">
+        <StackLayout class="symbol first"></StackLayout>
+        <Label text="Q1 2019"></Label>
+        <StackLayout class="symbol second"></StackLayout>
+        <Label text="Q1 2018"></Label>
+    </StackLayout>
+</GridLayout>

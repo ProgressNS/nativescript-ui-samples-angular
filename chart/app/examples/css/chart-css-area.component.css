@@ -1,0 +1,102 @@
+RadCartesianChart {
+    margin: 12;
+    background: white;
+    border-color: #5F6368;
+    border-width: 2;
+    border-radius: 6;
+    padding: 46 16 6 26;
+}
+
+AreaSeries {
+    stack-mode: stack;
+    stroke-color: white;
+    stroke-width: 4;
+}
+
+AreaSeries[index=0] {
+    fill-color: #914DF3;
+}
+
+AreaSeries[index=1] {
+    fill-color: #3CAFA4;
+}
+
+AreaSeries[index=2] {
+    fill-color: #F5A067;
+}
+
+DateTimeContinuousAxis {
+    major-step: 6;
+    major-step-unit: day;
+    plot-mode: on-ticks;
+    stroke-color: #9AA0A6;
+    line-thickness: 2;
+    ticks-color: #9AA0A6;
+    ticks-thickness: 2;
+    ticks-length: 4;
+    ticks-offset: -1;
+    label-fit-mode: none;
+    date-format: "d/M";
+}
+
+LinearAxis {
+    horizontal-location: right;
+    line-hidden: true;
+    ticks-hidden: true;
+    label-fit-mode: none;
+}
+
+ChartAxisLabel {
+    padding: 6;
+    font-size: 14;
+    color:#5F6368;
+}
+
+DateTimeContinuousAxis ChartAxisLabel {
+    margin: 6;
+}
+
+LinearAxis ChartAxisLabel {
+    format: "%.0f";
+}
+
+Label.title {
+    font-size: 26;
+    margin: 12 12 0 12;
+    color:#212121;
+}
+
+Label.subtitle {
+    font-size: 14;
+    margin: 24 32 0 12;
+    color:#5F6368;
+    horizontal-align:right;
+    vertical-align: top;
+}
+
+.legend {
+    margin: 12;
+    color: #5F6368;
+}
+
+.legend .symbol {
+    border-radius: 16;
+    width: 16;
+    height: 16;
+    color: #5F6368;
+}
+
+.legend .symbol.first {
+    background: #914DF3;
+    margin: 0 4;
+}
+
+.legend .symbol.second {
+    background: #3CAFA4;
+    margin: 0 4;
+}
+
+.legend .symbol.third {
+    background: #F5A067;
+    margin: 0 4;
+}

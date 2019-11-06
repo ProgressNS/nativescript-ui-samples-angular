@@ -1,0 +1,27 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, 300, auto">
+    <Label class="title" text="Campaigns in June"></Label>
+    <RadCartesianChart row="1" allowAnimations="false">
+        <RadCartesianChartGrid tkCartesianGrid
+            horizontalLinesVisible="true"
+            verticalLinesVisible="false"
+            horizontalStrokeWidth="1"
+            horizontalStripLinesVisible="false"
+            verticalStripLinesVisible="false"
+            horizontalStrokeColor="#E8EAED"
+            verticalStrokeColor="#00000000"
+            horizontalStripLineColor="#00000000, #00000000">
+        </RadCartesianChartGrid>
+
+        <LineSeries tkCartesianSeries [items]="campaignData" categoryProperty="Date" valueProperty="Impressions"></LineSeries>
+        <LineSeries tkCartesianSeries index="1" [items]="campaignData" categoryProperty="Date" valueProperty="Clicks"></LineSeries>
+
+        <DateTimeContinuousAxis tkCartesianHorizontalAxis minimum="01/06/2019" maximum="30/06/2019"></DateTimeContinuousAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    </RadCartesianChart>
+    <StackLayout row="2" class="legend" orientation="horizontal">
+        <StackLayout class="symbol first"></StackLayout>
+        <Label text="Impressions"></Label>
+        <StackLayout class="symbol second"></StackLayout>
+        <Label text="Clicks"></Label>
+    </StackLayout>
+</GridLayout>

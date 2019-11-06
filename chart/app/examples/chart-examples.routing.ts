@@ -37,6 +37,12 @@ import { ChartStylingSelectionComponent } from './styling/chart-styling-selectio
 import { ChartStylingSeriesComponent } from './styling/chart-styling-series.component';
 import { ChartStylingTicksComponent } from './styling/chart-styling-ticks.component';
 import { ChartStylingBarSeriesComponent } from './styling/chart-styling-bar-series.component';
+import { ChartCssAreaComponent } from './css/chart-css-area.component';
+import { ChartCssBarComponent } from './css/chart-css-bar.component';
+import { ChartCssCandlestickComponent } from './css/chart-css-candlestick.component';
+import { ChartCssDonutComponent } from './css/chart-css-donut.component';
+import { ChartCssLineComponent } from './css/chart-css-line.component';
+import { ChartCssScatterComponent } from './css/chart-css-scatter.component';
 
 export const routes: Routes = [
   { path: 'ChartAnnotationsGridLineComponent', component: ChartAnnotationsGridLineComponent },
@@ -74,5 +80,11 @@ export const routes: Routes = [
   { path: 'ChartStylingSeriesComponent', component: ChartStylingSeriesComponent },
   { path: 'ChartStylingTicksComponent', component: ChartStylingTicksComponent },
   { path: 'ChartLabelVisibilityComponent', component: ChartLabelVisibilityComponent },
-  { path: 'ChartStylingBarSeriesComponent', component: ChartStylingBarSeriesComponent }
+  { path: 'ChartStylingBarSeriesComponent', component: ChartStylingBarSeriesComponent },
+  { path: 'ChartCssAreaComponent', component: ChartCssAreaComponent },
+  { path: 'ChartCssBarComponent', component: ChartCssBarComponent },
+  { path: 'ChartCssCandlestickComponent', component: ChartCssCandlestickComponent },
+  { path: 'ChartCssDonutComponent', component: ChartCssDonutComponent },
+  { path: 'ChartCssLineComponent', component: ChartCssLineComponent },
+  { path: 'ChartCssScatterComponent', component: ChartCssScatterComponent }
 ];

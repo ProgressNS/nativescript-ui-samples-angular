@@ -1,0 +1,32 @@
+<GridLayout tkExampleTitle tkToggleNavButton class="root" rows="auto, *, auto">
+    <Label class="title" text="Phone storage"></Label>
+    <WrapLayout class="legend" row="2" orientation="horizontal">
+        <StackLayout orientation="horizontal">
+            <Label class="symbol first"></Label>
+            <Label text="Photos & Videos"></Label>
+        </StackLayout>
+        <StackLayout orientation="horizontal">
+            <Label class="symbol second"></Label>
+            <Label text="Music & Audio"></Label>
+        </StackLayout>
+        <StackLayout orientation="horizontal">
+            <Label class="symbol third"></Label>
+            <Label text="Games"></Label>
+        </StackLayout>
+        <StackLayout orientation="horizontal">
+            <Label class="symbol fourth"></Label>
+            <Label text="Movies & TV"></Label>
+        </StackLayout>
+        <StackLayout orientation="horizontal">
+            <Label class="symbol fifth"></Label>
+            <Label text="Other apps"></Label>
+        </StackLayout>
+    </WrapLayout>
+    <RadPieChart row="1" allowAnimations="false">
+        <DonutSeries tkPieSeries startAngle="-90" endAngle="270" valueProperty="Value" [items]="phoneStorageData"></DonutSeries>
+    </RadPieChart>
+    <StackLayout row="1" class="chart-label">
+        <Label class="chart-title" text="84 %"></Label>
+        <Label class="chart-subtitle" text="used"></Label>
+    </StackLayout>
+</GridLayout>

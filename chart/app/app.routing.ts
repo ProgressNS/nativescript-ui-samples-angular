@@ -207,6 +207,48 @@ const APP_ROUTES: Routes = [
         }
     },
     {
+        path: "ChartCssBarComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Bar CSS"
+        }
+    },
+    {
+        path: "ChartCssLineComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Line CSS"
+        }
+    },
+    {
+        path: "ChartCssAreaComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Area CSS"
+        }
+    },
+    {
+        path: "ChartCssScatterComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Scatter CSS"
+        }
+    },
+    {
+        path: "ChartCssCandlestickComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Candlestick CSS"
+        }
+    },
+    {
+        path: "ChartCssDonutComponent",
+        loadChildren: './examples/chart-examples.module#ChartExamplesModule',
+        data: {
+            "title": "Donut CSS"
+        }
+    },
+    {
         path: "ChartStylingAxesComponent",
         loadChildren: './examples/chart-examples.module#ChartExamplesModule',
         data: {

@@ -1,0 +1,75 @@
+RadCartesianChart {
+    margin: 12;
+}
+
+DateTimeContinuousAxis {
+    date-format: "d";
+    plot-mode: on-ticks;
+    line-color: #DADCE0;
+    ticks-color: #DADCE0;
+    line-thickness: 2;
+    ticks-thickness: 2;
+    ticks-length: 4;
+    ticks-offset: -1;
+    major-step: 7;
+    major-step-unit: day;
+}
+
+LinearAxis {
+    line-hidden: true;
+    ticks-hidden: true;
+    label-layout-mode: outer;
+    major-step: 250;
+    horizontal-location: right;
+}
+
+ChartAxisLabel {
+    color: #3C4044;
+}
+
+LinearAxis ChartAxisLabel {
+    format: "%.0f";
+    padding: 12;
+}
+
+LineSeries {
+    stroke-width: 2;
+    stroke-color: #6215EE;
+}
+
+LineSeries[index=1] {
+    stroke-color: #26A69A;
+}
+
+Label.title {
+    font-size: 26;
+    margin: 12 12 0 24;
+    color:#212121;
+}
+
+Label.subtitle {
+    font-size: 14;
+    margin: 0 12 0 12;
+    color:#70212121;
+}
+
+.legend {
+    margin: 12;
+    color: #5F6368;
+}
+
+.legend .symbol {
+    width: 20;
+    height: 2;
+    color: #5F6368;
+}
+
+.legend .symbol.first {
+    background: #6215EE;
+    margin: 0 8;
+}
+
+.legend .symbol.second {
+    background: #26A69A;
+    margin: 0 8 0 30;
+}

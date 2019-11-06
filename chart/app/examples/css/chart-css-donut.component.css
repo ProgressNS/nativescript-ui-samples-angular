@@ -1,0 +1,70 @@
+.root {
+    background: white;
+}
+
+Label.title {
+    font-size: 26;
+    margin: 12 12 0 18;
+    color:#212121;
+}
+
+
+DonutSeries {
+    fill-colors: #3A15EA,#9926AE,#D01A5D,#FF9802,#C0CA33,#D7D7D7;
+    stroke-colors: white,white,white,white,white,white;
+    stroke-width: 2;
+    inner-radius-factor: 0.8;
+    outer-radius-factor: 0.7;
+}
+
+.chart-label {
+    vertical-align: center;
+}
+
+.chart-title {
+    horizontal-align: center;
+    color: #313337;
+    font-size: 24;
+}
+
+.chart-subtitle {
+    horizontal-align: center;
+    color: #787E83;
+    font-size: 16;
+}
+
+.legend {
+    color: #5F6368;
+    margin: 24 12;
+}
+
+.legend StackLayout {
+    margin: 6;
+}
+
+.legend .symbol {
+    border-radius: 12;
+    width: 12;
+    height: 12;
+    margin: 0 6;
+}
+
+.legend .first {
+    background: #3A15EA;
+}
+
+.legend .second {
+    background: #9926AE;
+}
+
+.legend .third {
+    background: #D01A5D;
+}
+
+.legend .fourth {
+    background: #FF9802;
+}
+
+.legend .fifth {
+    background: #C0CA33;
+}

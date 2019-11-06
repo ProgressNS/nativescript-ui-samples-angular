@@ -1,0 +1,24 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, auto, *">
+    <Label class="title" text="DIS Stock Price (USD)"></Label>
+    <Label class="subtitle" row="1" text="The Walt Disney Company"></Label>
+    <RadCartesianChart row="2" allowAnimations="false">
+        <RadCartesianChartGrid tkCartesianGrid
+            horizontalLinesVisible="true"
+            verticalLinesVisible="true"
+            horizontalStripLinesVisible="false"
+            verticalStripLinesVisible="false"
+            horizontalStrokeWidth="1"
+            horizontalStrokeColor="#EEEEEE"
+            verticalStrokeColor="#F8F8F8"
+            horizontalStripLineColor="#00000000, #00000000"
+            verticalStripLineColor="#00000000, #00000000">
+        </RadCartesianChartGrid>
+
+        <CandlestickSeries tkCartesianSeries [items]="stockData" categoryProperty="Date"
+            openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close">
+        </CandlestickSeries>
+
+        <DateTimeCategoricalAxis tkCartesianHorizontalAxis></DateTimeCategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+    </RadCartesianChart>
+</GridLayout>

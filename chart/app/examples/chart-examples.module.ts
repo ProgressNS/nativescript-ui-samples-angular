@@ -40,6 +40,12 @@ import { ChartStylingSelectionComponent } from './styling/chart-styling-selectio
 import { ChartStylingSeriesComponent } from './styling/chart-styling-series.component';
 import { ChartStylingTicksComponent } from './styling/chart-styling-ticks.component';
 import { ChartStylingBarSeriesComponent } from './styling/chart-styling-bar-series.component';
+import { ChartCssBarComponent } from './css/chart-css-bar.component';
+import { ChartCssLineComponent } from './css/chart-css-line.component';
+import { ChartCssAreaComponent } from './css/chart-css-area.component';
+import { ChartCssScatterComponent } from './css/chart-css-scatter.component';
+import { ChartCssCandlestickComponent } from './css/chart-css-candlestick.component';
+import { ChartCssDonutComponent } from './css/chart-css-donut.component';
 
 import { routes } from './chart-examples.routing';
 import { CommonDirectivesModule } from '../navigation/directives/common-directives.module';
@@ -89,7 +95,13 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ChartStylingSeriesComponent,
         ChartStylingTicksComponent,
         ChartLabelVisibilityComponent,
-        ChartStylingBarSeriesComponent
+        ChartStylingBarSeriesComponent,
+        ChartCssAreaComponent,
+        ChartCssBarComponent,
+        ChartCssCandlestickComponent,
+        ChartCssDonutComponent,
+        ChartCssLineComponent,
+        ChartCssScatterComponent
     ]
 })
 export class ChartExamplesModule { }
