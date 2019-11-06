@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
 import { RadSideDrawer, FadeTransition, PushTransition, RevealTransition, ReverseSlideOutTransition, ScaleDownPusherTransition, ScaleUpTransition, SlideAlongTransition, SlideInOnTopTransition } from "nativescript-ui-sidedrawer";
 import { getRootView } from "tns-core-modules/application";
@@ -111,7 +111,7 @@ export class ExamplesListDepth1Component implements OnInit, AfterViewInit, OnDes
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
 
@@ -177,7 +177,7 @@ export class ExamplesListDepth2Component implements OnInit, AfterViewInit, OnDes
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 
 
@@ -278,7 +278,7 @@ export class ExamplesListDepth3Component implements OnInit, AfterViewInit, OnDes
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 
 

@@ -4,12 +4,12 @@ button {
     horizontal-align: center;
 }
 
-.drawerContentText {
+RadSideDrawer .drawerContentText {
     font-size: 13;
     padding: 10;
 }
 
-.drawerContentButton {
+RadSideDrawer .drawerContentButton {
     margin: 10;
     horizontal-align: left;
 }
