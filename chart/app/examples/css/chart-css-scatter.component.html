@@ -1,0 +1,30 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, auto, 300, auto, auto">
+    <Label class="title" text="Players Stats"></Label>
+    <Label class="weight" row="1" text="Weight (kg)"></Label>
+    <RadCartesianChart row="2" allowAnimations="false">
+        <RadCartesianChartGrid tkCartesianGrid
+            horizontalLinesVisible="true"
+            verticalLinesVisible="true"
+            horizontalStrokeWidth="1"
+            verticalStrokeWidth="1"
+            horizontalStripLinesVisible="false"
+            verticalStripLinesVisible="false"
+            horizontalStrokeColor="#E8EAED"
+            verticalStrokeColor="#E8EAED"
+            horizontalStripLineColor="#00000000, #00000000">
+        </RadCartesianChartGrid>
+
+        <ScatterSeries tkCartesianSeries [items]="playersRealMadridData" xProperty="Height" yProperty="Weight"></ScatterSeries>
+        <ScatterSeries tkCartesianSeries index="1" [items]="playersBarcelonaData" xProperty="Height" yProperty="Weight"></ScatterSeries>
+
+        <LinearAxis tkCartesianHorizontalAxis class="horizontal"></LinearAxis>
+        <LinearAxis tkCartesianVerticalAxis class="vertical"></LinearAxis>
+    </RadCartesianChart>
+    <Label class="height" row="3" text="Height (cm)"></Label>
+    <GridLayout class="legend" row="4" columns="auto, *" rows="auto,auto">
+        <Label class="symbol first"></Label>
+        <Label column="1" text="Real Madrid Starting XI"></Label>
+        <Label row="1" class="symbol second"></Label>
+        <Label row="1" column="1" text="Barcelona Starting XI"></Label>
+    </GridLayout>
+</GridLayout>

@@ -83,6 +83,42 @@ export const EXAMPLEITEMS: ExampleItem[] = [
                 ]
             },
             {
+                "title": "CSS",
+                "path": "",
+                "subItems": [
+                    {
+                        "title": "Bar CSS",
+                        "path": "ChartCssBarComponent/ChartCssBarComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Line CSS",
+                        "path": "ChartCssLineComponent/ChartCssLineComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Area CSS",
+                        "path": "ChartCssAreaComponent/ChartCssAreaComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Scatter CSS",
+                        "path": "ChartCssScatterComponent/ChartCssScatterComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Candlestick CSS",
+                        "path": "ChartCssCandlestickComponent/ChartCssCandlestickComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Donut CSS",
+                        "path": "ChartCssDonutComponent/ChartCssDonutComponent",
+                        "subItems": []
+                    },
+                ]
+            },
+            {
                 "title": "Styling",
                 "path": "",
                 "subItems": [

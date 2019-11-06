@@ -1,0 +1,33 @@
+<GridLayout tkExampleTitle tkToggleNavButton rows="auto, 300, auto">
+    <Label class="title" text="Users in the last month"></Label>
+    <RadCartesianChart allowAnimations="false" row="1">
+        <RadCartesianChartGrid tkCartesianGrid
+            horizontalLinesVisible="false"
+            verticalLinesVisible="false"
+            horizontalStripLinesVisible="false"
+            verticalStripLinesVisible="false"
+            horizontalStrokeColor="#00000000"
+            verticalStrokeColor="#00000000"
+            horizontalStripLineColor="#00000000, #00000000">
+        </RadCartesianChartGrid>
+
+        <AreaSeries tkCartesianSeries index="0" [items]="usersData" categoryProperty="Date" valueProperty="CategoryA"></AreaSeries>
+        <AreaSeries tkCartesianSeries index="1" [items]="usersData" categoryProperty="Date" valueProperty="CategoryB"></AreaSeries>
+        <AreaSeries tkCartesianSeries index="2" [items]="usersData" categoryProperty="Date" valueProperty="CategoryC"></AreaSeries>
+
+        <DateTimeContinuousAxis tkCartesianHorizontalAxis minimum="04/11/2019" maximum="03/12/2019"></DateTimeContinuousAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+
+    </RadCartesianChart>
+
+    <Label class="subtitle" row="1" text="Users"></Label>
+
+    <GridLayout class="legend" row="2" columns="auto,*,auto,*,auto,*">
+        <StackLayout class="symbol first"></StackLayout>
+        <Label text="Category A" column="1"></Label>
+        <StackLayout class="symbol second" column="2"></StackLayout>
+        <Label text="Category B" column="3"></Label>
+        <StackLayout class="symbol third" column="4"></StackLayout>
+        <Label text="Category C" column="5"></Label>
+    </GridLayout>
+</GridLayout>
