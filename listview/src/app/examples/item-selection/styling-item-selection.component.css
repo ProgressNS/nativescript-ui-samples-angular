@@ -1,0 +1,17 @@
+.listItemStackLayout {
+    padding-left: 16;
+}
+
+.nameLabel {
+    font-size: 20
+}
+
+.descriptionLabel {
+    font-size: 13;
+}
+
+.red-transparent-selection-list {
+    item-selected-background-color: red;
+    background-color: transparent;
+    color: white;
+}

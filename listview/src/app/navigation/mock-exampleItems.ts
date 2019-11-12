@@ -153,6 +153,16 @@ export let EXAMPLEITEMS: ExampleItem[] = [
                         "title": "Programmatic Selection",
                         "path": "ListViewItemSelectionProgrammaticComponent/ListViewItemSelectionProgrammaticComponent",
                         "subItems": []
+                    },
+                    {
+                        "title": "Styling Single Selection",
+                        "path": "StylingItemSelectionComponent/StylingItemSelectionComponent",
+                        "subItems": []
+                    },
+                    {
+                        "title": "Styling Multiple Selection",
+                        "path": "StylingSelectionMultipleComponent/StylingSelectionMultipleComponent",
+                        "subItems": []
                     }
                 ]
             },
