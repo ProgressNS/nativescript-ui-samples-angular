@@ -6,10 +6,10 @@
   "nativescript": {
     "id": "org.nativescript.demoangular",
     "tns-ios": {
-      "version": "6.1.0"
+      "version": "6.2.0"
     },
     "tns-android": {
-      "version": "6.1.0"
+      "version": "6.2.0"
     }
   },
   "dependencies": {
@@ -21,12 +21,12 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
-    "nativescript-angular": "~8.2.0",
+    "nativescript-angular": "~8.20.0",
     "nativescript-theme-core": "~1.0.4",
     "nativescript-ui-calendar": "*",
     "reflect-metadata": "~0.1.10",
     "rxjs": "^6.4.0",
-    "tns-core-modules": "^6.0.0",
+    "tns-core-modules": "^6.2.0",
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@types/chai": "~4.1.3",
     "@types/mocha": "~5.2.1",
     "@types/node": "^7.0.5",
+    "chai": "~4.2.0",
     "codelyzer": "^4.5.0",
     "filewalker": "0.1.3",
     "karma": "^1.6.0",
@@ -42,14 +43,14 @@
     "karma-mocha": "^1.3.0",
     "karma-nativescript-launcher": "^0.4.0",
     "markdown-snippet-injector": "^0.2.4",
-    "mocha": "^3.3.0",
+    "mocha": "5.2.0",
     "mocha-junit-reporter": "^1.18.0",
-    "mocha-multi": "1.1.0",
+    "mocha-multi-reporters": "^1.1.0",
     "mochawesome": "^3.1.1",
     "nativescript-css-loader": "~0.26.0",
-    "nativescript-dev-appium": "5.2.0",
-    "nativescript-dev-webpack": "^1.0.0",
-    "tns-platform-declarations": "^6.1.0",
+    "nativescript-dev-appium": "^6.0.0",
+    "nativescript-dev-webpack": "^1.3.0",
+    "tns-platform-declarations": "^6.2.0",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
   }
