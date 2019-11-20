@@ -1,4 +1,4 @@
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { Router } from '@angular/router';
 import { Observable } from "tns-core-modules/data/observable";
 
@@ -14,6 +14,6 @@ export class OptionsExampleBase extends Observable {
     }
 
     public onNavigationButtonTap() {
-        topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
