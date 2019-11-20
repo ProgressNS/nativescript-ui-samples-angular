@@ -26,6 +26,8 @@ import { ListViewItemReorderHandleComponent } from './item-reorder/listview-item
 import { ListViewItemSelectionMultipleComponent } from './item-selection/listview-item-selection-multiple.component';
 import { ListViewItemSelectionProgrammaticComponent } from './item-selection/listview-item-selection-programmatic.component';
 import { ListViewItemSelectionComponent } from './item-selection/listview-item-selection.component';
+import { StylingSelectionMultipleComponent } from './item-selection/styling-selection-multiple.component';
+import { StylingItemSelectionComponent } from './item-selection/styling-item-selection.component';
 import { ListViewItemSeparatorComponent } from './item-separator/listview-item-separator.component';
 import { ListViewDynamicSizeAutoComponent } from './load-on-demand/dynamic-size-auto/listview-dynamic-size-auto.component';
 import { ListViewDynamicSizeManualComponent } from './load-on-demand/dynamic-size-manual/listview-dynamic-size-manual.component';
@@ -92,8 +94,10 @@ import { CommonDirectivesModule } from '../navigation/directives/common-directiv
         ListViewItemReorderComponent,
         ListViewItemReorderHandleComponent,
         ListViewItemSelectionMultipleComponent,
+        StylingSelectionMultipleComponent,
         ListViewItemSelectionProgrammaticComponent,
         ListViewItemSelectionComponent,
+        StylingItemSelectionComponent,
         ListViewItemSeparatorComponent,
         ListViewDynamicSizeAutoComponent,
         ListViewDynamicSizeManualComponent,

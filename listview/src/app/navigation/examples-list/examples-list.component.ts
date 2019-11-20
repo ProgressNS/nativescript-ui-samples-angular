@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ExampleItem } from "../exampleItem";
 import { ExampleItemService } from "../exampleItemService.service";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { ActivatedRoute, Router } from '@angular/router';
 import { ListViewEventData } from 'nativescript-ui-listview';
 
@@ -60,7 +60,7 @@ export class ExamplesListDepth1Component implements OnInit, OnDestroy {
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
 
@@ -121,7 +121,7 @@ export class ExamplesListDepth2Component implements OnInit, OnDestroy {
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
 
@@ -177,7 +177,7 @@ export class ExamplesListDepth3Component implements OnInit, OnDestroy {
     }
 
     public onNavigationButtonTap() {
-        frameModule.topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
 

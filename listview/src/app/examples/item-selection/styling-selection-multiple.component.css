@@ -1,0 +1,31 @@
+/* ios styles */
+.iosListItemStackLayout {
+    padding-left: 50;
+}
+
+.iosNameLabel {
+    font-size: 20
+}
+
+.iosDescriptionLabel {
+    font-size: 13;
+}
+
+/* Android styles */
+.androidListItemStackLayout {
+    padding-left: 16;
+}
+
+.androidNameLabel {
+    font-size: 20
+}
+
+.androidDescriptionLabel {
+    font-size: 13;
+}
+
+.red-transparent-selection-list {
+    item-selected-background-color: red;
+    background-color: transparent;
+    color: white;
+}
