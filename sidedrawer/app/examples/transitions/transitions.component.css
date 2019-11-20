@@ -7,12 +7,12 @@ button {
     background-color: white;
 }
 
-.drawerContentButton {
+RadSideDrawer .drawerContentButton {
     margin: 10;
     horizontal-align: left;
 }
 
-.mainContentlabel {
+RadSideDrawer .mainContentlabel {
     margin: 10;
 }
 
