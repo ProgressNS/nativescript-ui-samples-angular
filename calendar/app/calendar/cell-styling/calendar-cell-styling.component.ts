@@ -69,6 +69,16 @@ export class CalendarCellStylingComponent extends OptionsExampleBase implements 
         return this._dayViewStyle;
     }
 
+    get minDate(): Date {
+        // 80 days ago
+        return new Date(Date.now() - 1000 * 60 * 60 * 24 * 80);
+    }
+
+    get maxDate(): Date {
+        // in 10 days
+        return new Date(Date.now() + 1000 * 60 * 60 * 24 * 10);
+    }
+
     onYearTap() {
         this._viewMode = CalendarViewMode.Year;
     }
