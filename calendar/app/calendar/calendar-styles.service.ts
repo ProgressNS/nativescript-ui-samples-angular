@@ -51,7 +51,6 @@ export class CalendarStylesService {
         dayCellStyle.eventFontName = this._preferredFontName;
         dayCellStyle.eventFontStyle = CalendarFontStyle.BoldItalic;
         dayCellStyle.eventTextSize = 8;
-        dayCellStyle.cellAlignment = CalendarCellAlignment.VerticalCenter;
         dayCellStyle.cellPaddingHorizontal = 10;
         dayCellStyle.cellPaddingVertical = 5;
         dayCellStyle.cellBackgroundColor = this._lightGreenColor;
@@ -63,12 +62,45 @@ export class CalendarStylesService {
         dayCellStyle.cellTextSize = 10;
         monthViewStyle.dayCellStyle = dayCellStyle;
 
+        const anotherMonthCellStyle = new DayCellStyle();
+        anotherMonthCellStyle.showEventsText = true;
+        anotherMonthCellStyle.eventTextColor = this._lightGrayColor;
+        anotherMonthCellStyle.eventFontName = this._preferredFontName;
+        anotherMonthCellStyle.eventFontStyle = CalendarFontStyle.BoldItalic;
+        anotherMonthCellStyle.eventTextSize = 8;
+        anotherMonthCellStyle.cellPaddingHorizontal = 10;
+        anotherMonthCellStyle.cellPaddingVertical = 5;
+        anotherMonthCellStyle.cellBackgroundColor = this._lightGreenColor;
+        anotherMonthCellStyle.cellBorderWidth = 1;
+        anotherMonthCellStyle.cellBorderColor = this._lightYellowColor;
+        anotherMonthCellStyle.cellTextColor = this._darkBrownColor;
+        anotherMonthCellStyle.cellTextFontName = this._preferredFontName;
+        anotherMonthCellStyle.cellTextFontStyle = CalendarFontStyle.Bold;
+        anotherMonthCellStyle.cellTextSize = 10;
+        monthViewStyle.anotherMonthCellStyle = anotherMonthCellStyle;
+
+        const disabledCellStyle = new DayCellStyle();
+        disabledCellStyle.showEventsText = true;
+        disabledCellStyle.eventTextColor = this._lightGrayColor;
+        disabledCellStyle.eventFontName = this._preferredFontName;
+        disabledCellStyle.eventFontStyle = CalendarFontStyle.BoldItalic;
+        disabledCellStyle.eventTextSize = 8;
+        disabledCellStyle.cellPaddingHorizontal = 10;
+        disabledCellStyle.cellPaddingVertical = 5;
+        disabledCellStyle.cellBackgroundColor = this._lightGrayColor;
+        disabledCellStyle.cellBorderWidth = 1;
+        disabledCellStyle.cellBorderColor = this._lightYellowColor;
+        disabledCellStyle.cellTextColor = this._darkBrownColor;
+        disabledCellStyle.cellTextFontName = this._preferredFontName;
+        disabledCellStyle.cellTextFontStyle = CalendarFontStyle.Bold;
+        disabledCellStyle.cellTextSize = 10;
+        monthViewStyle.disabledCellStyle = disabledCellStyle;
+
         const weekendCellStyle = new DayCellStyle();
         weekendCellStyle.eventTextColor = this._blueVioletColor;
         weekendCellStyle.eventFontName = this._preferredFontName;
         weekendCellStyle.eventFontStyle = CalendarFontStyle.BoldItalic;
         weekendCellStyle.eventTextSize = 8;
-        weekendCellStyle.cellAlignment = CalendarCellAlignment.VerticalCenter;
         weekendCellStyle.cellPaddingHorizontal = 10;
         weekendCellStyle.cellPaddingVertical = 5;
         weekendCellStyle.cellBackgroundColor = this._orangeColor;
@@ -85,7 +117,6 @@ export class CalendarStylesService {
         selectedCellStyle.eventFontName = this._preferredFontName;
         selectedCellStyle.eventFontStyle = CalendarFontStyle.Bold;
         selectedCellStyle.eventTextSize = 8;
-        selectedCellStyle.cellAlignment = CalendarCellAlignment.VerticalCenter;
         selectedCellStyle.cellPaddingHorizontal = 10;
         selectedCellStyle.cellPaddingVertical = 5;
         selectedCellStyle.cellBackgroundColor = this._lightBrownColor;
