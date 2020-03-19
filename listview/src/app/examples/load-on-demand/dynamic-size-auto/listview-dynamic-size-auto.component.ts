@@ -27,15 +27,22 @@ export class ListViewDynamicSizeAutoComponent implements OnInit {
         this.initDataItems();
         this._changeDetectionRef.detectChanges();
         this._dataItems = new ObservableArray<DataItem>();
-        this.addMoreItemsFromSource(6);
+        this.addMoreItemsFromSource(6, null);
     }
 
     public get dataItems(): ObservableArray<DataItem> {
         return this._dataItems;
     }
-    public addMoreItemsFromSource(chunkSize: number) {
+    public addMoreItemsFromSource(chunkSize: number, listView: RadListView) {
         let newItems = this._sourceDataItems.splice(0, chunkSize);
         this.dataItems.push(newItems);
+
+        if (listView) {
+            // Call the optimized function for on-demand loading finished.
+            // (with 0 because the ObservableArray has already
+            // notified about the inserted items)
+            listView.notifyAppendItemsOnDemandFinished(0, this._sourceDataItems.length === 0);
+        }
     }
 
     public onLoadMoreItemsRequested(args: LoadOnDemandListViewEventData) {
@@ -43,23 +50,25 @@ export class ListViewDynamicSizeAutoComponent implements OnInit {
         const listView: RadListView = args.object;
         if (this._sourceDataItems.length > 0) {
             setTimeout(function () {
-                that.get().addMoreItemsFromSource(2);
-                listView.notifyLoadOnDemandFinished();
-            }, 1500);
+                that.get().addMoreItemsFromSource(20, listView);
+            }, 0);
         } else {
             args.returnValue = false;
-            listView.notifyLoadOnDemandFinished(true);
+            listView.notifyAppendItemsOnDemandFinished(0, true);
         }
     }
 
     private initDataItems() {
         this._sourceDataItems = new ObservableArray<DataItem>();
-        for (let i = 0; i < posts.names.length; i++) {
-            if (androidApplication) {
-                this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
-            }
-            else {
-                this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+        // Multiply items in JSON to simulate a far bigger data source
+        for (let mult = 0; mult < 100; mult++) {
+            for (let i = 0; i < posts.names.length; i++) {
+                if (androidApplication) {
+                    this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
+                }
+                else {
+                    this._sourceDataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+                }
             }
         }
     }
