@@ -4,6 +4,6 @@
         <ng-template tkListItemTemplate let-item="item">
             <Label class="labelNameInitialScroll" [text]="item.name" marginLeft="20"></Label>
         </ng-template>
-        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="50"></ListViewLinearLayout>
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="50" dynamicItemSize="false"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>

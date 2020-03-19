@@ -4,13 +4,13 @@
             <Button text="Manual" (tap)="onChangeManual()" class="action-button"></Button>
             <Button text="None" (tap)="onChangeNone()" class="action-button"></Button>
     </StackLayout>
-    
-    <RadListView #myListView 
-                row="1" 
-                [items]="dataItems" 
-                loadOnDemandMode="Manual" 
-                (loadMoreDataRequested)="onLoadMoreDataRequested($event)" 
-                pullToRefresh="true" 
+
+    <RadListView #myListView
+                row="1"
+                [items]="dataItems"
+                loadOnDemandMode="Manual"
+                (loadMoreDataRequested)="onLoadMoreDataRequested($event)"
+                pullToRefresh="true"
                 (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout class="itemTemplateStackLayout" orientation="vertical">
@@ -24,6 +24,6 @@
                 </StackLayout>
             </StackLayout>
         </ng-template>
-        <ListViewLinearLayout *tkIfIOS tkListViewLayout itemHeight="120" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"></ListViewLinearLayout>
+        <ListViewLinearLayout *tkIfIOS tkListViewLayout itemHeight="120" dynamicItemSize="false" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"></ListViewLinearLayout>
     </RadListView>
 </GridLayout>
