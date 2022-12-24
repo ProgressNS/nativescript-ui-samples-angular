@@ -31,3 +31,12 @@ Steps to run the sample:
 
 1. `cd listview`
 2. `tns run android` or `tns run ios`
+
+<br/>
+
+# No ISSUES!
+
+Please note that we deleted the "issues" section because we hate our users and want them to abandon NativeScript! 😈 
+
+
+
